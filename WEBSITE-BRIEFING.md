@@ -149,7 +149,7 @@ Navigation der App (exakt so benennen): **Home · Lexikon · Üben · Dialoge ·
 - App-Icons liegen im Repo: `public/icons/icon-192.png`, `icon-512.png`, `icon-512-maskable.png` (können als Logo-Basis dienen)
 - Screenshots am besten direkt aus der laufenden App im Phone-Format (390×844) erzeugen
 - Repo: https://github.com/onkelzwerg/swahili-pocket
-- App-URL: _folgt nach Cloudflare-Deploy_
+- App-URL: https://app.swahili-pocket.de
 - Die Website selbst sollte statisch und leichtgewichtig sein (passt zur
   Philosophie der App) — z. B. eine einzelne HTML-Seite auf Cloudflare Pages
 

@@ -4,19 +4,32 @@ Die App ist eine **rein lokale PWA**: kein Backend, keine Datenbank, keine
 API-Keys. Alle Lerndaten liegen in IndexedDB auf dem Gerät; Backup/Restore
 läuft über JSON-Export im Bereich „Mehr".
 
-## Build & Deploy (Cloudflare)
+**Live:** https://app.swahili-pocket.de
 
-Build-Target ist Cloudflare Workers (`wrangler.jsonc`, `@cloudflare/vite-plugin`).
+## Build & Deploy (Cloudflare Workers)
 
 ```sh
-npm run build        # Produktions-Build
-npx wrangler deploy  # Deploy auf Cloudflare (Free Plan reicht)
+npx wrangler login   # einmalig
+npm run deploy       # baut (vite build) und deployt in einem Schritt
 ```
 
-Alternativ: Git-Integration in der Cloudflare-Konsole (Push → Auto-Deploy).
-Custom Domain über Cloudflare → Workers → Settings → Domains & Routes.
+**Es sind keine Environment-Variablen nötig.** Der Cloudflare Free Plan reicht
+vollständig.
 
-**Es sind keine Environment-Variablen nötig.**
+### Warum zwei Wrangler-Configs?
+
+- `wrangler.jsonc` — für den **Vite-Build**. `main` zeigt auf den virtuellen
+  Entry `@tanstack/react-start/server-entry`, den nur der Vite-Build
+  (`@cloudflare/vite-plugin`) auflöst.
+- `wrangler.deploy.jsonc` — für **`wrangler deploy`**. `main` zeigt auf den
+  bereits gebauten Worker `dist/server/server.js`, statische Assets aus
+  `dist/client`. Diese Trennung ist nötig, weil der hier verwendete
+  Lovable-Vite-Wrapper den Cloudflare-Deploy nicht automatisch verdrahtet.
+
+Das `npm run deploy`-Script kombiniert beide Schritte korrekt.
+
+Custom Domain: Cloudflare-Dashboard → Workers & Pages → `swahili-pocket`
+→ Settings → Domains & Routes.
 
 ## Vokabel-Pool aktualisieren
 

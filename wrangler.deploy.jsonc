@@ -1,0 +1,18 @@
+{
+  // Deploy-Config für den bereits von `vite build` erzeugten Worker.
+  // Die Haupt-`wrangler.jsonc` nutzt den virtuellen Entry
+  // (@tanstack/react-start/server-entry), den nur der Vite-Build auflöst.
+  // Diese Datei zeigt dagegen auf das fertige Build-Ergebnis in dist/.
+  // Verwendung: npm run deploy  (siehe package.json)
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "swahili-pocket",
+  "compatibility_date": "2025-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "dist/server/server.js",
+  "assets": {
+    "directory": "dist/client",
+  },
+  "observability": {
+    "enabled": true,
+  },
+}
