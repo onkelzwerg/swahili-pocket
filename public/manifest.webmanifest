@@ -1,0 +1,20 @@
+{
+  "name": "Swahili Spark",
+  "short_name": "Swahili",
+  "description": "Dein digitaler Begleiter zum Swahili lernen — Lexikon, Lernkarten und Dialoge, auch offline.",
+  "lang": "de",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf5ed",
+  "theme_color": "#c2522a",
+  "categories": ["education"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
