@@ -141,7 +141,7 @@ Navigation der App (exakt so benennen): **Home · Lexikon · Üben · Dialoge ·
 
 ## 10. CTA & Installations-Hinweis
 
-- Primärer CTA: **„App öffnen"** → direkte App-URL (wird nach Deploy ergänzt)
+- Primärer CTA: **„App öffnen"** → https://app.swahili-pocket.de
 - Sekundär: „Zum Homescreen hinzufügen" erklären (PWA-Install auf iOS: Teilen → Zum Home-Bildschirm; Android/Chrome: Installieren-Prompt)
 
 ## 11. Assets & Technisches
@@ -149,7 +149,8 @@ Navigation der App (exakt so benennen): **Home · Lexikon · Üben · Dialoge ·
 - App-Icons liegen im Repo: `public/icons/icon-192.png`, `icon-512.png`, `icon-512-maskable.png` (können als Logo-Basis dienen)
 - Screenshots am besten direkt aus der laufenden App im Phone-Format (390×844) erzeugen
 - Repo: https://github.com/onkelzwerg/swahili-pocket
-- App-URL: https://app.swahili-pocket.de
+- App-URL: https://app.swahili-pocket.de (Custom Domain, in Einrichtung)
+- Website-Domain: https://swahili-pocket.de
 - Die Website selbst sollte statisch und leichtgewichtig sein (passt zur
   Philosophie der App) — z. B. eine einzelne HTML-Seite auf Cloudflare Pages
 

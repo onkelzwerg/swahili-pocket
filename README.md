@@ -1,6 +1,6 @@
 # Swahili Pocket 🌴
 
-**Live:** https://app.swahili-pocket.de
+**App:** https://app.swahili-pocket.de · **Website:** https://swahili-pocket.de
 
 Eine kostenlose, werbefreie **Progressive Web App** zum Swahili-Lernen für
 Deutschsprachige. Karteikarten mit Spaced Repetition, über 1.000 kuratierte

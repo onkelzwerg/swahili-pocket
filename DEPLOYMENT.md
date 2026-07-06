@@ -4,7 +4,13 @@ Die App ist eine **rein lokale PWA**: kein Backend, keine Datenbank, keine
 API-Keys. Alle Lerndaten liegen in IndexedDB auf dem Gerät; Backup/Restore
 läuft über JSON-Export im Bereich „Mehr".
 
-**Live:** https://app.swahili-pocket.de
+**App (Custom Domain, geplant):** https://app.swahili-pocket.de
+**Website (Bewerbung der PWA):** https://swahili-pocket.de
+
+> Die Custom Domain ist noch nicht in Cloudflare eingerichtet (TLD noch nicht
+> final bestätigt). Bis dahin läuft der Worker unter seiner internen
+> `*.workers.dev`-Preview-URL. Nach Domain-Einrichtung: `workers_dev` abschalten,
+> damit ausschließlich `app.swahili-pocket.de` ausgeliefert wird.
 
 ## Build & Deploy (Cloudflare Workers)
 
