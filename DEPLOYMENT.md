@@ -4,13 +4,16 @@ Die App ist eine **rein lokale PWA**: kein Backend, keine Datenbank, keine
 API-Keys. Alle Lerndaten liegen in IndexedDB auf dem Gerät; Backup/Restore
 läuft über JSON-Export im Bereich „Mehr".
 
-**App (Custom Domain, geplant):** https://app.swahili-pocket.de
+**App (live):** https://app.swahili-pocket.de
 **Website (Bewerbung der PWA):** https://swahili-pocket.de
 
-> Die Custom Domain ist noch nicht in Cloudflare eingerichtet (TLD noch nicht
-> final bestätigt). Bis dahin läuft der Worker unter seiner internen
-> `*.workers.dev`-Preview-URL. Nach Domain-Einrichtung: `workers_dev` abschalten,
-> damit ausschließlich `app.swahili-pocket.de` ausgeliefert wird.
+> Die Custom Domain ist in Cloudflare aktiv. `workers_dev: false` in
+> `wrangler.deploy.jsonc` schaltet die `*.workers.dev`-Preview-URL ab — die App
+> ist ausschließlich über `app.swahili-pocket.de` erreichbar.
+>
+> Custom Domains werden in `routes` nur mit dem **Hostnamen** angegeben
+> (`{ "pattern": "app.swahili-pocket.de", "custom_domain": true }`) — ohne
+> `/*`-Pfad und ohne `zone_name`; das ist die Syntax klassischer Worker-Routes.
 
 ## Build & Deploy (Cloudflare Workers)
 
