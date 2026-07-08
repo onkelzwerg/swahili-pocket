@@ -15,4 +15,8 @@
   "observability": {
     "enabled": true,
   },
+  // workers_dev: false schaltet die *.workers.dev-Preview-URL ab, damit die App
+  // ausschließlich über die Custom Domain erreichbar ist.
+  "workers_dev": false,
+  "routes": [{ "pattern": "app.swahili-pocket.de", "custom_domain": true }],
 }
