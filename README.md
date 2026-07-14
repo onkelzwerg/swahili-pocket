@@ -3,7 +3,7 @@
 **App:** https://app.swahili-pocket.de · **Website:** https://swahili-pocket.de
 
 Eine kostenlose, werbefreie **Progressive Web App** zum Swahili-Lernen für
-Deutschsprachige. Karteikarten mit Spaced Repetition, über 1.000 kuratierte
+Deutschsprachige. Karteikarten nach dem Leitner-System, über 1.000 kuratierte
 Vokabeln, Grammatik-Referenz und Alltagsdialoge — **ohne Konto, ohne Cloud,
 voll offline**. Alle Lerndaten bleiben auf dem Gerät.
 
@@ -11,8 +11,8 @@ voll offline**. Alle Lerndaten bleiben auf dem Gerät.
 
 ## Features
 
-- **Karteikarten (Leitner-System):** 5 Boxen mit Intervallen 1/2/4/7/30 Tage,
-  Swipe- oder Button-Bedienung, Karte zum Umdrehen antippen.
+- **Karteikarten (Leitner-System):** 5 Boxen — Wiederholung nach 1/2/4/7 Tagen,
+  Box 5 gilt als gemeistert. Swipe- oder Button-Bedienung, Karte zum Umdrehen antippen.
 - **1.000+ Vokabeln im Pool:** durchsuchbar, filterbar nach Wortart und
   Ngeli-Klasse, jede mit Beispielsätzen — per Klick als Lernkarte übernehmen.
 - **Gezieltes Kartenziehen:** Anzahl per Slider (5–20), Bereich als Freitext
