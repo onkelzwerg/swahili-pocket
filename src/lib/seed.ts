@@ -96,7 +96,7 @@ export function seedVocab(): VocabEntry[] {
       nounClass: "N",
       examples: [
         { sw: "Yeye ni rafiki yangu.", de: "Er/sie ist mein Freund." },
-        { sw: "Marafiki wangu wapo hapa.", de: "Meine Freunde sind hier." },
+        { sw: "Marafiki zangu wapo hapa.", de: "Meine Freunde sind hier." },
       ],
     },
     {
@@ -287,7 +287,7 @@ export const dialogues: Dialogue[] = [
       },
       {
         speaker: "B",
-        sw: "Karibuni. Tafadhali kaeni hapa. Naomba menyu.",
+        sw: "Karibuni. Tafadhali kaeni hapa. Hii hapa menyu.",
         de: "Willkommen. Bitte setzt euch hier. Hier ist die Speisekarte.",
       },
       {
@@ -306,7 +306,7 @@ export const dialogues: Dialogue[] = [
         de: "Ich nehme Ugali mit gegrilltem Fleisch, bitte.",
       },
       { speaker: "B", sw: "Sawa. Mnataka kunywa nini?", de: "Gut. Was möchtet ihr trinken?" },
-      { speaker: "A", sw: "Maji ya chupa mawili, baridi.", de: "Zwei Flaschen Wasser, kalt." },
+      { speaker: "A", sw: "Chupa mbili za maji baridi.", de: "Zwei Flaschen Wasser, kalt." },
       {
         speaker: "B",
         sw: "Chakula kitakuja baada ya dakika kumi na tano.",
