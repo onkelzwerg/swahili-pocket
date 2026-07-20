@@ -1,5 +1,21 @@
 # Vokabel-Review (Juli 2026)
 
+> **Nachtrag (2. Runde):** Aus dem Kiswahili-Deutsch-Wörterbuch-Scan (6 Seiten,
+> S. 292–297) wurden alle ~740 Einträge transkribiert und mit dem Pool
+> abgeglichen. **180 fehlende Vokabeln wurden ergänzt** (jeweils mit zwei
+> Beispielsätzen, Singular/Plural) — darunter überraschende Lücken wie *meza*
+> (Tisch), *tafadhali* (bitte), *samahani*, *Januari*, *Jumanne* (Dienstag),
+> *nyeupe* (weiß), die Grundzahlen (*moja, mbili, nne, sabini, laki*), alle
+> Personalpronomen und die Grußkultur (*shikamoo, marahaba, pole, hodi,
+> kwaheri*). Schreibvarianten des Wörterbuchs wurden NICHT doppelt angelegt
+> (z. B. arusi=harusi, ba(i)skeli=baisikeli, Disemba=Desemba, serekali=serikali,
+> tiketi=tikiti, sufuri=sifuri, dogo=mdogo, pya=mpya, salimia=kusalimu,
+> muhindi=mahindi, ukucha=kucha). Der Pool ist jetzt alphabetisch sortiert und
+> enthält 1197 Einträge; das versehentliche `kwenda`-Duplikat (aus der
+> kenda-Korrektur) wurde dabei entfernt. Für Supabase liegt
+> `scripts/add-vocab-2026-07.sql` (180 INSERTs) bereit — nach
+> `fix-grammar-2026-07.sql` ausführen.
+
 Anlass war das Feedback zu Grammatikfehlern in den Beispielsätzen (z. B.
 *marafiki wangu* statt korrekt **marafiki zangu**). Alle 1018 Einträge des
 Pools (`public/vocab-pool.json`, 2026 Beispielsätze) sowie die Seed-Vokabeln
