@@ -2,7 +2,7 @@
  * Handgeschrieben, keine Workbox. Drei Caches mit eigenen Strategien.
  * Beim Bump von SW_VERSION werden alte Caches beim activate-Event entfernt.
  */
-const SW_VERSION = "v2";
+const SW_VERSION = "v3";
 const HTML_CACHE = `html-${SW_VERSION}`;
 const ASSET_CACHE = `assets-${SW_VERSION}`;
 const OFFLINE_URL = "/offline.html";
