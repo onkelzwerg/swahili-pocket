@@ -17,10 +17,31 @@ läuft über JSON-Export im Bereich „Mehr".
 
 ## Build & Deploy (Cloudflare Workers)
 
+**Automatisch:** Jeder Push auf `main` deployt über GitHub Actions
+(`.github/workflows/deploy.yml`): `npm ci` → `npm run build` →
+`wrangler deploy -c wrangler.deploy.jsonc`. Der Workflow lässt sich in der
+Actions-Oberfläche auch manuell auslösen (`workflow_dispatch`).
+
+Dafür sind zwei Repository-Secrets nötig (Settings → Secrets and variables →
+Actions):
+
+| Secret | Wert |
+| --- | --- |
+| `CLOUDFLARE_API_TOKEN` | API-Token mit der Berechtigung *Edit Cloudflare Workers* |
+| `CLOUDFLARE_ACCOUNT_ID` | Account-ID aus dem Cloudflare-Dashboard |
+
+**Manuell (Fallback):**
+
 ```sh
 npx wrangler login   # einmalig
 npm run deploy       # baut (vite build) und deployt in einem Schritt
 ```
+
+> **Wichtig:** `package-lock.json` muss zu `package.json` passen, sonst bricht
+> `npm ci` im CI mit `EUSAGE … can only install packages when your package.json
+> and package-lock.json … are in sync` ab. Nach jeder Änderung an
+> `package.json` also `npm install` laufen lassen und die aktualisierte
+> `package-lock.json` mitcommitten.
 
 **Es sind keine Environment-Variablen nötig.** Der Cloudflare Free Plan reicht
 vollständig.

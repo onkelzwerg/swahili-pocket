@@ -1,0 +1,42 @@
+name: Deploy to Cloudflare Workers
+
+# Deployt bei jedem Push auf main. Ersetzt die Cloudflare-Git-Integration,
+# die am Standard-Deploy-Command scheitert: `wrangler deploy` ohne -c greift
+# wrangler.jsonc, deren `main` auf den virtuellen TanStack-Start-Entry zeigt,
+# den nur der Vite-Build auflöst. Hier wird deshalb erst gebaut und dann mit
+# wrangler.deploy.jsonc (main: dist/server/server.js) deployt.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # manuelles Auslösen über die Actions-Oberfläche
+
+# Nie zwei Deploys parallel; laufende Deploys nicht abbrechen.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # Schlägt fehl, wenn package.json und package-lock.json auseinanderlaufen —
+      # genau der Fehler, an dem der Cloudflare-Build hing.
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy -c wrangler.deploy.jsonc
