@@ -1243,4 +1243,35 @@ export const phraseOfDay: { sw: string; de: string }[] = [
     sw: "Mwenye pupa hadiriki kula tamu.",
     de: "Wer hastig ist, kommt nicht dazu, Süßes zu essen.",
   },
+  { sw: "Ahadi ni deni.", de: "Ein Versprechen ist eine Schuld." },
+  { sw: "Dawa ya moto ni moto.", de: "Das Mittel gegen Feuer ist Feuer." },
+  { sw: "Baada ya dhiki faraja.", de: "Nach der Not kommt der Trost." },
+  {
+    sw: "Elimu ni ufunguo wa maisha.",
+    de: "Bildung ist der Schlüssel zum Leben.",
+  },
+  {
+    sw: "Umoja ni nguvu, utengano ni udhaifu.",
+    de: "Einheit ist Stärke, Zwietracht ist Schwäche.",
+  },
+  {
+    sw: "Jina jema hung'ara gizani.",
+    de: "Ein guter Name leuchtet im Dunkeln.",
+  },
+  {
+    sw: "Mchagua jembe si mkulima.",
+    de: "Wer die Hacke lange aussucht, ist kein Bauer.",
+  },
+  {
+    sw: "Mtaka cha mvunguni sharti ainame.",
+    de: "Wer etwas unter dem Bett will, muss sich bücken.",
+  },
+  {
+    sw: "Usipoziba ufa utajenga ukuta.",
+    de: "Dichtest du den Riss nicht ab, baust du am Ende die ganze Mauer neu.",
+  },
+  {
+    sw: "Kizuri chajiuza, kibaya chajitembeza.",
+    de: "Gutes verkauft sich von selbst, Schlechtes muss hausieren gehen.",
+  },
 ];
