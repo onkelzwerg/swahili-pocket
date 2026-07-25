@@ -1194,7 +1194,6 @@ export const phraseOfDay: { sw: string; de: string }[] = [
     de: "Kleinvieh macht auch Mist (wörtl.: Kleines füllt das Maß).",
   },
   { sw: "Pole pole ndio mwendo.", de: "Langsam langsam ist der Weg." },
-  { sw: "Hakuna matata.", de: "Kein Problem." },
   { sw: "Mgeni njoo, mwenyeji apone.", de: "Komm Gast, der Gastgeber wird gestärkt." },
   {
     sw: "Asiyefunzwa na mamaye hufunzwa na ulimwengu.",
@@ -1202,4 +1201,46 @@ export const phraseOfDay: { sw: string; de: string }[] = [
   },
   { sw: "Penye nia pana njia.", de: "Wo ein Wille ist, ist ein Weg." },
   { sw: "Subira huvuta heri.", de: "Geduld bringt Glück." },
+
+  // Kanga-Sprüche (jina la khanga): die Botschaft, die auf den Tüchern
+  // aufgedruckt ist. Meist Sprichwörter oder pointierte Lebensweisheiten —
+  // an der Küste ein eigenes Kommunikationsmittel.
+  { sw: "Akili ni mali.", de: "Verstand ist Reichtum." },
+  { sw: "Heshima si utumwa.", de: "Respekt ist keine Sklaverei." },
+  { sw: "Majivuno hayafai.", de: "Angeberei taugt nichts." },
+  { sw: "Wivu ni sumu.", de: "Eifersucht ist Gift." },
+  { sw: "Mgeni ni baraka.", de: "Ein Gast ist ein Segen." },
+  { sw: "Fitina hazina faida.", de: "Intrigen bringen keinen Nutzen." },
+  {
+    sw: "Haraka haraka haina baraka.",
+    de: "Eile hat keinen Segen (Eile mit Weile).",
+  },
+  {
+    sw: "Mapenzi ni kikohozi, hayafichiki.",
+    de: "Liebe ist wie Husten — sie lässt sich nicht verbergen.",
+  },
+  {
+    sw: "Sisi sote abiria, dereva ni Mungu.",
+    de: "Wir alle sind Passagiere, der Fahrer ist Gott.",
+  },
+  {
+    sw: "Mkipendana mambo huwa sawa.",
+    de: "Wenn ihr einander liebt, wird alles gut.",
+  },
+  {
+    sw: "Mkono mtupu haulambwi.",
+    de: "Eine leere Hand wird nicht geleckt (ohne Gegenleistung nichts).",
+  },
+  {
+    sw: "Mvumilivu hula mbivu.",
+    de: "Der Geduldige isst die reife Frucht.",
+  },
+  {
+    sw: "Ukipenda boga, upende na ua lake.",
+    de: "Wenn du den Kürbis magst, liebe auch seine Blüte (nimm den Menschen ganz an).",
+  },
+  {
+    sw: "Mwenye pupa hadiriki kula tamu.",
+    de: "Wer hastig ist, kommt nicht dazu, Süßes zu essen.",
+  },
 ];
