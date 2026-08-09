@@ -13,6 +13,7 @@ import {
   getStats,
 } from "@/lib/store";
 import { speak } from "@/lib/tts";
+import { shuffle } from "@/lib/utils";
 import { isMonosyllabicVerb } from "@/lib/seed";
 import { PoolPickerSheet } from "@/components/PoolPickerSheet";
 
@@ -50,8 +51,7 @@ function Review() {
       const due = dueToday(v);
       const seen = new Set<string>();
       const unique = due.filter((e) => (seen.has(e.id) ? false : (seen.add(e.id), true)));
-      unique.sort(() => Math.random() - 0.5);
-      setQueue(unique);
+      setQueue(shuffle(unique));
       setIdx(0);
       setCorrect(0);
       setDone(false);
@@ -101,8 +101,7 @@ function Review() {
       // Dedupe defensively by id, then shuffle.
       const seen = new Set<string>();
       const unique = due.filter((e) => (seen.has(e.id) ? false : (seen.add(e.id), true)));
-      unique.sort(() => Math.random() - 0.5);
-      setQueue(unique);
+      setQueue(shuffle(unique));
       setStreak(s.streak);
       // Kein TTS-Prefetch – API wird erst beim Klick auf den Lautsprecher-Button aufgerufen.
     });

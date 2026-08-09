@@ -1,6 +1,10 @@
 import type { Example, NounClass, PartOfSpeech, VocabEntry } from "./types";
 import { getVocab, addVocab, newId } from "./store";
 import { seedVocab } from "./seed";
+import { shuffle } from "./utils";
+
+// Re-Export für Bestandsimporte: shuffle() lebt seit P0.3 in utils.ts.
+export { shuffle };
 
 // Statischer Vokabel-Pool: wird als JSON mit der App ausgeliefert
 // (public/vocab-pool.json, generiert via scripts/pool-from-csv.mjs).
@@ -90,15 +94,6 @@ const NOUN_CLASS_ALIASES: Record<string, NounClass> = {
   pakumu: "Pa-Ku-Mu",
   ku: "Ku",
 };
-
-function shuffle<T>(list: T[]): T[] {
-  const a = [...list];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
 
 /** Die häufigsten Themen im Pool (für Vorschlags-Chips). */
 export async function getTopTopics(n = 10): Promise<string[]> {
