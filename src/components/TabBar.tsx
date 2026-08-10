@@ -8,7 +8,7 @@ import {
   CloudOff,
   User,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { T } from "@/config/translations";
 
 const tabs = [
@@ -20,19 +20,29 @@ const tabs = [
   { to: "/account", label: T.nav.account, icon: User },
 ] as const;
 
+function subscribeOnline(onChange: () => void) {
+  window.addEventListener("online", onChange);
+  window.addEventListener("offline", onChange);
+  return () => {
+    window.removeEventListener("online", onChange);
+    window.removeEventListener("offline", onChange);
+  };
+}
+
+// `navigator.onLine` ist browser-only. Node und Workers definieren zwar ein
+// globales `navigator`, aber ohne `onLine` — ein `typeof navigator`-Check läuft
+// dort also ins Leere und liefert `undefined` (= "offline"). Der Server rendert
+// dann das Offline-Banner, der Browser nicht: Hydration-Mismatch auf *jeder*
+// Route, weil die TabBar im Root-Layout hängt.
+// useSyncExternalStore löst genau das: React nimmt für SSR *und* den
+// Hydration-Render den Server-Snapshot und wechselt erst danach auf den echten
+// Wert. Das Banner erscheint also frühestens nach der Hydration.
 function useOnlineStatus() {
-  const [online, setOnline] = useState(typeof navigator === "undefined" ? true : navigator.onLine);
-  useEffect(() => {
-    const up = () => setOnline(true);
-    const down = () => setOnline(false);
-    window.addEventListener("online", up);
-    window.addEventListener("offline", down);
-    return () => {
-      window.removeEventListener("online", up);
-      window.removeEventListener("offline", down);
-    };
-  }, []);
-  return online;
+  return useSyncExternalStore(
+    subscribeOnline,
+    () => navigator.onLine !== false,
+    () => true,
+  );
 }
 
 export function TabBar() {
