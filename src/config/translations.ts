@@ -36,8 +36,10 @@ export const T = {
 
   nav: {
     home: "Home",
-    lexicon: "Lexikon",
-    review: "Üben",
+    /** Seit W3.6 heißt der Tab „Wörter" — „Lexikon" bleibt der Seitentitel. */
+    lexicon: "Wörter",
+    review: "Lernen",
+    library: "Bibliothek",
     dialogues: "Dialoge",
     classes: "Ngeli",
     account: "Mehr",
@@ -281,6 +283,18 @@ export const T = {
       title: "Erste Geschichte",
       description: "Eine ganze Geschichte auf Swahili gelesen.",
     },
+    storyUnaided: {
+      title: "Ohne Hilfe gelesen",
+      description: "Eine Geschichte durchgelesen, ohne die Übersetzung einzublenden.",
+    },
+    retentionKept: {
+      title: "Es bleibt",
+      description: "Beim Langzeit-Check mindestens 80 % nach über zwei Monaten gewusst.",
+    },
+    dialoguePlayed: {
+      title: "Mitgeredet",
+      description: "Einen Dialog mitgespielt und dabei nichts falsch beantwortet.",
+    },
   },
 
   trainer: {
@@ -457,6 +471,30 @@ export const T = {
     reportLabel: (titleDe: string) => `Dialog: ${titleDe}`,
     playAllAria: "Ganzen Dialog abspielen",
     speaker: (id: string) => `Sprecher ${id}`,
+    notFound: "Diesen Dialog gibt es nicht.",
+    back: "Zu den Dialogen",
+    /** Rollenspiel (W3.4). */
+    playableBadge: "Mitspielbar",
+    modes: { read: "Lesen", play: "Mitspielen" },
+    roleLabel: "Deine Rolle",
+    roleHint: "Du antwortest an den Stellen dieser Person.",
+    start: "Losspielen",
+    yourTurn: "Du bist dran — was sagst du?",
+    showGerman: "Deutsch zeigen",
+    hideGerman: "Deutsch ausblenden",
+    wrong: "Nicht ganz.",
+    solution: (sw: string) => `Richtig wäre: ${sw}`,
+    /** Nachsprechen bleibt Selbstcheck — kein Mikrofon, keine Spracherkennung. */
+    repeatHint: "🎙 Hör es dir an und sprich es laut nach.",
+    replay: "Nochmal hören",
+    next: "Weiter",
+    done: {
+      headline: "Hongera!",
+      score: (firstTry: number, total: number) =>
+        `${firstTry} von ${total} gleich beim ersten Versuch`,
+      perfect: "Fehlerfrei — jede Antwort saß sofort.",
+      again: "Nochmal spielen",
+    },
   },
 
   classes: {
@@ -513,9 +551,106 @@ export const T = {
       `${sel} von ${total} ausgewählt — tippe, um ab-/anzuwählen.`,
     discard: "Verwerfen",
     saveCount: (n: number) => `${n} übernehmen`,
+    /** Vorbefüllte Auswahl (W3.3): die fehlenden Wörter einer Geschichte. */
+    eyebrowMissing: "Fehlende Wörter",
+    emptyPreselect:
+      "Diese Wörter stehen nicht im Lexikon. Du kannst sie beim Lesen einzeln antippen und als eigene Karte übernehmen.",
     toasts: {
       saved: (n: number) => `${n} Lernkarten hinzugefügt`,
       noneSelected: "Nichts ausgewählt",
+    },
+  },
+
+  stories: {
+    metaTitle: "Geschichten — Swahili Pocket",
+    metaDescription:
+      "Kurze Geschichten auf Swahili, die zu deinem Wortschatz passen — mit Glossar für jedes Wort.",
+    eyebrow: "Hadithi",
+    title: "Geschichten",
+    /** Erklärt die Kernschleife der Bibliothek in einem Satz. */
+    intro:
+      "Freigeschaltet wird, was du zu mindestens 95 % verstehst. Jedes neue Wort öffnet weitere Geschichten.",
+    empty:
+      "Noch keine Geschichten vorhanden. Sie werden mit der App ausgeliefert — schau nach einem Update noch einmal vorbei.",
+    band: (n: number) => `Stufe ${n}`,
+    words: (n: number) => `${n} Wörter`,
+    readBadge: "Gelesen",
+    /** Abdeckungs-Badge. */
+    coverage: (percent: number) => `${percent} % bekannt`,
+    newWords: (n: number) =>
+      n === 0 ? "kein neues Wort" : n === 1 ? "1 neues Wort" : `${n} neue Wörter`,
+    lockedProgress: (missing: number) =>
+      missing === 1
+        ? "Noch 1 Wort bis zur Freischaltung"
+        : `Noch ${missing} Wörter bis zur Freischaltung`,
+    learnMissing: "Diese Wörter lernen",
+    lockedAria: "Gesperrt",
+    reader: {
+      backAria: "Zurück zu den Geschichten",
+      showGerman: "Deutsch einblenden",
+      hideGerman: "Deutsch ausblenden",
+      /** Hinweis über dem Text — erst selbst verstehen, dann prüfen. */
+      hint: "Tippe ein Wort an, um es nachzuschlagen.",
+      playAria: "Absatz anhören",
+      finish: "Fertig gelesen",
+      finished: "Gelesen ✓",
+      notFound: "Diese Geschichte gibt es nicht.",
+      xp: (n: number) => `+${n} XP`,
+      newWordHint: "Neues Wort in dieser Geschichte",
+    },
+    gloss: {
+      baseForm: (lemma: string) => `Grundform: ${lemma}`,
+      properName: "Eigenname",
+      structure: "Grammatische Form — die lernst du im Grammatik-Gym, nicht als Vokabel.",
+      addCard: "Als Lernkarte übernehmen",
+      inCards: "Schon in deinen Karten",
+      added: "In Lernkarten übernommen",
+      listenAria: "Wort anhören",
+    },
+    done: {
+      headline: "Umemaliza!",
+      body: (title: string) => `„${title}" ist durch.`,
+      unaided: "Und das ganz ohne die Übersetzung einzublenden.",
+      back: "Zur Bibliothek",
+    },
+  },
+
+  library: {
+    metaTitle: "Bibliothek — Swahili Pocket",
+    metaDescription: "Geschichten, Dialoge und Grammatik an einem Ort.",
+    eyebrow: "Maktaba",
+    title: "Bibliothek",
+    stories: {
+      title: "Geschichten",
+      subtitle: (unlocked: number, total: number) =>
+        total === 0
+          ? "Noch keine Geschichten vorhanden"
+          : `${unlocked} von ${total} freigeschaltet`,
+    },
+    dialogues: {
+      title: "Dialoge",
+      subtitle: (playable: number, total: number) => `${total} Dialoge · ${playable} mitspielbar`,
+    },
+    grammar: {
+      title: "Grammatik",
+      subtitle: (classes: number) => `${classes} Nomenklassen · Grammatik-Gym`,
+    },
+  },
+
+  retention: {
+    /** Home-Karte. */
+    cardTitle: "Langzeit-Check",
+    cardBody: (n: number) =>
+      `${n} Wörter, die du seit über zwei Monaten nicht gesehen hast. Sitzen sie noch?`,
+    cardCta: "Check starten",
+    eyebrow: "Langzeit-Check",
+    done: {
+      headline: (percent: number) => `${percent} %`,
+      body: (days: number) =>
+        `nach durchschnittlich ${days} Tagen Pause. Das ist Langzeitgedächtnis.`,
+      historyHeading: "Frühere Checks",
+      /** Achsenbeschriftung des Verlaufs. */
+      chartLabel: "Trefferquote",
     },
   },
 

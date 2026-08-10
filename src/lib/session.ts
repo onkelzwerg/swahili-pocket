@@ -100,6 +100,12 @@ export interface BuildSessionOptions {
   cards?: VocabEntry[];
   /** Höchstzahl an Karten. Default: Tagesziel × SESSION_CAP_FACTOR. */
   limit?: number;
+  /**
+   * Modus-Auswahl für diese eine Runde, statt der Einstellung.
+   * Der Langzeit-Check (W3.5) misst Abruf, nicht Formatvielfalt — er läuft
+   * bewusst nur als Karte oder Tippen.
+   */
+  enabledModes?: Partial<Record<SessionModeId, boolean>>;
   rng?: () => number;
   now?: number;
 }
@@ -126,7 +132,7 @@ export async function buildSession(opts: BuildSessionOptions = {}): Promise<Sess
   return assignModes(queue, {
     vocab,
     hasAudio: (card) => audioIndex.has(card.swahili.trim()),
-    enabledModes: settings.enabledModes,
+    enabledModes: opts.enabledModes ?? settings.enabledModes,
     rng,
   });
 }

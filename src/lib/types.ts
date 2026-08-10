@@ -113,12 +113,34 @@ export interface ReviewLogEntry {
 
 export type DialogueSpeaker = "A" | "B" | "C";
 
+/**
+ * Eine Antwortmöglichkeit im Rollenspiel (W3.4). Distraktoren werden
+ * redaktionell gepflegt, nicht zur Laufzeit erzeugt — offline nutzbar und in
+ * der Qualität kontrollierbar. Sie sind *plausibel* falsch (falsche
+ * Höflichkeitsform, falsche Zeit, unpassende Antwort), und `feedback` sagt in
+ * einem Satz, warum.
+ */
+export interface DialogueChoice {
+  sw: string;
+  de: string;
+  correct: boolean;
+  feedback?: string;
+}
+
+export interface DialogueTurn {
+  speaker: DialogueSpeaker;
+  sw: string;
+  de: string;
+  /** Wenn gesetzt: Der Nutzer wählt an dieser Stelle (Rollenspiel-Modus). */
+  choices?: DialogueChoice[];
+}
+
 export interface Dialogue {
   id: string;
   title: string;
   titleDe: string;
   emoji: string;
-  turns: { speaker: DialogueSpeaker; sw: string; de: string }[];
+  turns: DialogueTurn[];
   /** Map Sprecher → VoiceProfile.id (siehe src/lib/voices.ts). */
   voiceMap?: Record<string, string>;
   level?: "beginner" | "intermediate" | "advanced";

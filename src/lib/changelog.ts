@@ -7,6 +7,19 @@ export type ChangelogEntry = {
 
 export const changelog: ChangelogEntry[] = [
   {
+    version: "0.6.0",
+    date: "2026-08-10",
+    title: "Lesen, mitspielen, nachprüfen",
+    changes: [
+      "Neu: Geschichten. Kurze Texte auf Swahili, zu jedem Wort ein Glossar — antippen genügt.",
+      "Eine Geschichte schaltet sich frei, sobald du 95 % ihrer Wörter kennst. Bei gesperrten steht, wie viele noch fehlen — und ein Tipp bringt dich direkt zu genau diesen Wörtern.",
+      "Dialoge kann man jetzt mitspielen: du übernimmst eine Rolle und wählst, was du sagst. Bei einer falschen Antwort erklärt ein Satz, warum sie nicht passt.",
+      "Neu: Langzeit-Check. Er erscheint von selbst, wenn genug Wörter über zwei Monate liegen, und sagt dir ehrlich, was davon noch sitzt.",
+      "Die untere Leiste hat statt sechs nur noch fünf Einträge. Dialoge und Ngeli findest du jetzt unter „Bibliothek“.",
+      "Vier neue Meilensteine — für die erste Geschichte, das Lesen ohne Übersetzung, einen bestandenen Langzeit-Check und einen fehlerfrei mitgespielten Dialog.",
+    ],
+  },
+  {
     version: "0.5.0",
     date: "2026-08-10",
     title: "Echte Abruf-Übungen: tippen, hören, Lücken füllen",
