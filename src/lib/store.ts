@@ -71,6 +71,18 @@ export async function recordReview(correct: boolean, now: number = Date.now()): 
 }
 
 /**
+ * XP gutschreiben, ohne den Review-Zähler oder die Streak zu berühren.
+ * Für den Morphologie-Trainer (W2.7): er übt Grammatik, keine Karten —
+ * `totalReviewed` und die Lerntage bleiben deshalb den Karten vorbehalten.
+ */
+export async function awardXp(amount: number): Promise<UserStats> {
+  const prev = (await readCachedStats()) ?? EMPTY_STATS;
+  const next: UserStats = { ...prev, xp: prev.xp + amount };
+  await cacheStats(next);
+  return next;
+}
+
+/**
  * Heute fällige Karten.
  *
  * Kein `box < 5`-Filter mehr: Box-5-Karten kehren nach ihrem 90-Tage-Intervall

@@ -10,14 +10,23 @@ import {
 import { readReviewLog, writeReviewLog, resetReviewLogCache } from "./review-log";
 import { getSettings, writeSettings, resetSettingsCache, type AppSettings } from "./settings";
 import { runMigrations, resetMigrationState, DATA_VERSION } from "./migrations";
+import {
+  getTrainerStats,
+  writeTrainerStats,
+  resetTrainerStatsCache,
+  normalizeTrainerStats,
+  type TrainerStats,
+} from "./trainer-stats";
+import { resetMilestoneCache } from "./milestones";
 import { APP_CONFIG } from "@/config/app.config";
 
 // JSON-Backup der Lerndaten. Schutz gegen IndexedDB-Verlust
 // (Browserdaten löschen, Gerätewechsel).
 //
-// v2 ergänzt Settings und Review-Log. v1-Dateien bleiben importierbar:
-// fehlende Felder werden mit Defaults gefüllt und die Migration läuft
-// anschließend darüber (Leitplanke 2 — keine stillen Datenverluste).
+// v2 ergänzt Settings und Review-Log, v3 den Trainer-Fortschritt.
+// v1- und v2-Dateien bleiben importierbar: fehlende Felder werden mit
+// Defaults gefüllt und die Migration läuft anschließend darüber
+// (Leitplanke 2 — keine stillen Datenverluste).
 
 const K_VERSION = "data:version";
 
@@ -42,32 +51,43 @@ interface BackupFileV2 {
   retentionChecks: { ts: number; correct: number; total: number }[];
 }
 
+interface BackupFileV3 extends Omit<BackupFileV2, "version"> {
+  version: 3;
+  /** Fortschritt im Morphologie-Trainer (W2.7). */
+  trainerStats: TrainerStats;
+}
+
 /**
- * Was der Importer entgegennimmt: v1 oder v2, jedes Feld optional.
+ * Was der Importer entgegennimmt: v1, v2 oder v3, jedes Feld optional.
  * (Kein `Partial<V1 & V2>` — die Versionsnummern schließen sich aus und
  * die Schnittmenge wäre `never`.)
  */
 type AnyBackup = Partial<Omit<BackupFileV1, "version">> &
-  Partial<Omit<BackupFileV2, "version">> & { version?: number };
+  Partial<Omit<BackupFileV3, "version">> & { version?: number };
+
+/** Aktuelle Backup-Formatversion. */
+const BACKUP_VERSION = 3;
 
 export async function exportBackup(): Promise<void> {
-  const [vocab, stats, settings, reviewLog] = await Promise.all([
+  const [vocab, stats, settings, reviewLog, trainerStats] = await Promise.all([
     readCachedVocab(),
     readCachedStats(),
     getSettings(),
     readReviewLog(),
+    getTrainerStats(),
   ]);
-  const payload: BackupFileV2 = {
+  const payload: BackupFileV3 = {
     app: APP_CONFIG.appName,
-    version: 2,
+    version: BACKUP_VERSION,
     exportedAt: new Date().toISOString(),
     vocab: vocab ?? [],
     stats,
     settings,
     reviewLog,
+    trainerStats,
     milestones: (await get<Record<string, number>>("milestones:achieved").catch(() => null)) ?? {},
     retentionChecks:
-      (await get<BackupFileV2["retentionChecks"]>("retention:checks").catch(() => null)) ?? [],
+      (await get<BackupFileV3["retentionChecks"]>("retention:checks").catch(() => null)) ?? [],
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], {
     type: "application/json",
@@ -103,9 +123,12 @@ export async function importBackup(file: File): Promise<{ vocabCount: number }> 
   // Caches leeren: die importierten Daten müssen frisch gelesen werden.
   resetSettingsCache();
   resetReviewLogCache();
+  resetTrainerStatsCache();
+  resetMilestoneCache();
 
   if (data.settings) await writeSettings(data.settings);
   await writeReviewLog(Array.isArray(data.reviewLog) ? data.reviewLog : []);
+  await writeTrainerStats(normalizeTrainerStats(data.trainerStats));
   if (data.milestones) await set("milestones:achieved", data.milestones).catch(() => {});
   if (Array.isArray(data.retentionChecks)) {
     await set("retention:checks", data.retentionChecks).catch(() => {});
@@ -113,8 +136,10 @@ export async function importBackup(file: File): Promise<{ vocabCount: number }> 
 
   // v1-Backup (oder eines ohne Settings) über die Migration schicken, damit
   // FSRS-Zustand, leitnerDue und maturedAt nachgezogen werden.
-  const isV2 = data.version === 2;
-  await set(K_VERSION, isV2 ? DATA_VERSION : 1).catch(() => {});
+  // Ab v2 ist das Datenmodell aktuell; v3 fügt nur neue Schlüssel hinzu,
+  // die eigene Defaults haben — deshalb kein Versionssprung nötig.
+  const modelIsCurrent = (data.version ?? 1) >= 2;
+  await set(K_VERSION, modelIsCurrent ? DATA_VERSION : 1).catch(() => {});
   resetMigrationState();
   await runMigrations();
 
@@ -126,6 +151,8 @@ export async function resetAllData(): Promise<void> {
   await clear();
   resetSettingsCache();
   resetReviewLogCache();
+  resetTrainerStatsCache();
+  resetMilestoneCache();
   resetMigrationState();
 }
 

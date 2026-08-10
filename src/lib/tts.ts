@@ -23,6 +23,17 @@ function loadManifest(): Promise<AudioManifest | null> {
   return manifestPromise;
 }
 
+/**
+ * Alle Texte, für die eine vorab generierte MP3 existiert.
+ * Der Session-Builder entscheidet damit, ob der Hör-Modus fair ist —
+ * die Web-Speech-Stimmen sprechen Swahili zu unzuverlässig aus, um darauf
+ * eine Verständnisfrage zu stellen.
+ */
+export async function loadAudioIndex(): Promise<Set<string>> {
+  const manifest = await loadManifest();
+  return new Set(Object.keys(manifest ?? {}));
+}
+
 let currentAudio: HTMLAudioElement | null = null;
 
 // Winzige stille WAV-Datei: einmaliges play() innerhalb der User-Geste

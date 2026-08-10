@@ -1,6 +1,6 @@
 import { get, set } from "idb-keyval";
 import { useEffect, useState } from "react";
-import type { ExerciseModeId, SchedulerId } from "./types";
+import type { SchedulerId, SessionModeId } from "./types";
 
 // Zentrale App-Einstellungen. Versioniert, damit spätere Felder migrierbar
 // bleiben; Zugriff ausschließlich über getSettings()/updateSettings().
@@ -13,8 +13,8 @@ export interface AppSettings {
   scheduler: SchedulerId;
   dailyGoalCards: 5 | 10 | 20;
   weeklyGoalDays: 3 | 4 | 5 | 6 | 7;
-  /** Nicht gesetzt = an. Wird erst ab Welle 2 wirksam. */
-  enabledModes: Partial<Record<ExerciseModeId, boolean>>;
+  /** Nicht gesetzt = an. „flip" ist immer an — es ist der Fallback. */
+  enabledModes: Partial<Record<SessionModeId, boolean>>;
 }
 
 /** Default für Neu-User. Bestandsdaten bekommen in der Migration "leitner". */

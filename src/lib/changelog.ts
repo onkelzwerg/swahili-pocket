@@ -7,6 +7,19 @@ export type ChangelogEntry = {
 
 export const changelog: ChangelogEntry[] = [
   {
+    version: "0.5.0",
+    date: "2026-08-10",
+    title: "Echte Abruf-Übungen: tippen, hören, Lücken füllen",
+    changes: [
+      "Eine Runde mischt jetzt vier Übungsarten: Karte, Tippen, Hören und Lückensatz — abschaltbar unter Einstellungen › Übungsarten.",
+      "Beim Tippen zählen Tippfehler nicht als Fehler: fehlende Apostrophe (ngombe für ng'ombe) und vertauschte Buchstaben werden erkannt und nur korrigiert.",
+      "Kanntest du eine andere richtige Übersetzung? „Meine Antwort war auch richtig“ wertet sie als gewusst.",
+      "Neu: Grammatik-Gym unter /trainer — Verbformen aus Bausteinen bauen und Ngeli-Kongruenz üben, mit Aufgaben aus deinem eigenen Wortschatz.",
+      "Der Abschluss einer Runde zeigt jetzt, was sie gebracht hat: Trefferquote, neu gefestigte Wörter und den Stand deines Wochenziels.",
+      "Meilensteine: zwölf Marken, die an Können hängen — nicht daran, wie oft du die App geöffnet hast. Sammelansicht in den Einstellungen.",
+    ],
+  },
+  {
     version: "0.4.0",
     date: "2026-08-09",
     title: "Ehrlicheres Wiederholen: vier Antwortstufen & Wochenziel",

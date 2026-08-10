@@ -167,6 +167,22 @@ function Dashboard() {
         freezes={stats?.freezes ?? 0}
       />
 
+      {/* Grammatik-Gym: eigener Einstieg, bewusst neben der Kartensession —
+          es ist ein anderes Mentalmodell (Formen bauen statt wiederholen). */}
+      <Link to="/trainer">
+        <motion.div
+          whileTap={{ scale: 0.97 }}
+          className="flex items-center gap-3 rounded-3xl border border-border bg-card p-5"
+        >
+          <span className="text-3xl">🏋️</span>
+          <div className="min-w-0 flex-1">
+            <p className="font-display text-lg font-bold leading-tight">{T.trainer.title}</p>
+            <p className="mt-0.5 text-xs text-muted-foreground">{T.trainer.subtitle}</p>
+          </div>
+          <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground" />
+        </motion.div>
+      </Link>
+
       <div className="rounded-3xl border border-border bg-card p-5">
         <div className="mb-1 flex items-center justify-between gap-2">
           <span className="flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
