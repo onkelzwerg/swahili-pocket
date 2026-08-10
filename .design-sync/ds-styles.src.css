@@ -1,0 +1,14 @@
+/* Stylesheet entry for the design-system bundle.
+ *
+ * The app's own Vite build compiles src/styles.css with `@source "../src"`, so
+ * it only contains the utilities the app itself happens to use. Design-system
+ * consumers need more than that, so this entry re-uses the exact same token and
+ * base layer and widens the scanned sources to include the preview compositions.
+ *
+ * Compiled by .design-sync/build-css.mjs → dist/ds-styles.css (cfg.cssEntry).
+ */
+
+@import "../src/styles.css";
+
+/* The preview compositions are part of the design system's surface. */
+@source "./previews";
