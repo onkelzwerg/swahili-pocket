@@ -7,6 +7,19 @@ export type ChangelogEntry = {
 
 export const changelog: ChangelogEntry[] = [
   {
+    version: "0.4.0",
+    date: "2026-08-09",
+    title: "Ehrlicheres Wiederholen: vier Antwortstufen & Wochenziel",
+    changes: [
+      "Statt Richtig/Falsch gibt es vier Stufen: Nochmal, Schwer, Gut, Einfach — mit Vorschau, wann die Karte wiederkommt.",
+      "Neue Lernmethode „Adaptiv (FSRS)“: passt die Abstände an jede einzelne Karte an. Umschaltbar in den Einstellungen, dein Fortschritt bleibt dabei erhalten.",
+      "Box-5-Karten kommen nach 90 Tagen zurück — gemeistert heißt lange Abstände, nicht nie wieder.",
+      "Das Sprachlevel zählt jetzt gefestigte Wörter: Wörter, die du nach mindestens einer Woche Pause noch konntest.",
+      "Wochenziel mit Mo–So-Ring, Streak-Joker für verpasste Tage und eine freundliche Rückkehr-Runde nach längeren Pausen.",
+      "Tagesziel (5/10/20 Karten) und Wochenziel (3–7 Tage) sind frei wählbar.",
+    ],
+  },
+  {
     version: "0.3.1",
     date: "2026-06-09",
     title: "Verbesserte Account-Verwaltung & Datenschutz",

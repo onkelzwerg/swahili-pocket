@@ -1,6 +1,10 @@
 import type { Example, NounClass, PartOfSpeech, VocabEntry } from "./types";
 import { getVocab, addVocab, newId } from "./store";
 import { seedVocab } from "./seed";
+import { shuffle } from "./utils";
+
+// Re-Export für Bestandsimporte: shuffle() lebt seit P0.3 in utils.ts.
+export { shuffle };
 
 // Statischer Vokabel-Pool: wird als JSON mit der App ausgeliefert
 // (public/vocab-pool.json, generiert via scripts/pool-from-csv.mjs).
@@ -91,15 +95,6 @@ const NOUN_CLASS_ALIASES: Record<string, NounClass> = {
   ku: "Ku",
 };
 
-function shuffle<T>(list: T[]): T[] {
-  const a = [...list];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 /** Die häufigsten Themen im Pool (für Vorschlags-Chips). */
 export async function getTopTopics(n = 10): Promise<string[]> {
   const pool = await loadPool();
@@ -162,6 +157,7 @@ export async function addPoolEntryToCards(entry: PoolEntry): Promise<{ added: bo
   if (mine.some((v) => v.swahili.toLowerCase() === entry.swahili.toLowerCase())) {
     return { added: false };
   }
+  const now = Date.now();
   const card: VocabEntry = {
     id: newId(),
     swahili: entry.swahili,
@@ -170,8 +166,11 @@ export async function addPoolEntryToCards(entry: PoolEntry): Promise<{ added: bo
     nounClass: entry.nounClass ?? undefined,
     examples: entry.examples ?? [],
     box: 1,
-    nextReview: Date.now(),
-    createdAt: Date.now(),
+    nextReview: now,
+    // Von Anfang an gesetzt, damit ein Scheduler-Wechsel die Fälligkeit
+    // neuer Karten nicht schätzen muss (siehe srs/index.ts recomputeDue).
+    leitnerDue: now,
+    createdAt: now,
     isPrivate: false,
   };
   await addVocab(card);

@@ -1,6 +1,8 @@
 import { get, set } from "idb-keyval";
 import type { VocabEntry, UserStats } from "./types";
 import { seedVocab } from "./seed";
+import { BOX_INTERVALS_DAYS } from "./box-intervals";
+import { runMigrations } from "./migrations";
 import {
   cacheVocab,
   readCachedVocab,
@@ -8,6 +10,8 @@ import {
   cacheStats,
   readCachedStats,
   applyReviewToStats,
+  expireStreak,
+  EMPTY_STATS,
 } from "./offline";
 
 // Rein lokale Datenschicht: IndexedDB ist die Single Source of Truth.
@@ -15,23 +19,15 @@ import {
 
 const K_SEEDED = "vocab:seeded";
 
-export const BOX_INTERVALS_DAYS: Record<number, number> = {
-  1: 1,
-  2: 2,
-  3: 4,
-  4: 7,
-  5: 30,
-};
-
-const EMPTY_STATS: UserStats = {
-  streak: 0,
-  lastReviewDate: "",
-  totalReviewed: 0,
-  xp: 0,
-};
+// Re-Export für Bestandsimporte; die Tabelle lebt seit W1.1 in box-intervals.ts,
+// damit Scheduler und Migration sie ohne Import-Zyklus nutzen können.
+export { BOX_INTERVALS_DAYS };
 
 /** Beim allerersten Start den kuratierten Seed-Wortschatz einspielen. */
 async function ensureSeeded(): Promise<VocabEntry[]> {
+  // Erster Datenzugriff der App — hier laufen ausstehende Migrationen,
+  // bevor irgendetwas anderes IndexedDB liest.
+  await runMigrations();
   const cached = await readCachedVocab();
   if (cached && cached.length > 0) return cached;
   const seeded = (await get<boolean>(K_SEEDED).catch(() => false)) ?? false;
@@ -61,40 +57,32 @@ export async function updateVocab(id: string, patch: Partial<VocabEntry>) {
 }
 
 export async function getStats(): Promise<UserStats> {
-  const s = (await readCachedStats()) ?? EMPTY_STATS;
-  // Streak ablaufen lassen, wenn der letzte Review-Tag >1 Tag zurückliegt.
-  if (s.lastReviewDate && s.streak > 0) {
-    const today = new Date().toISOString().slice(0, 10);
-    const diff =
-      (new Date(today + "T00:00:00").getTime() -
-        new Date(s.lastReviewDate + "T00:00:00").getTime()) /
-      86400000;
-    if (diff > 1) {
-      const expired = { ...s, streak: 0 };
-      await cacheStats(expired);
-      return expired;
-    }
-  }
-  return s;
+  const raw = (await readCachedStats()) ?? EMPTY_STATS;
+  const { stats, changed } = expireStreak(raw);
+  if (changed) await cacheStats(stats);
+  return stats;
 }
 
-export async function recordReview(
-  correct: boolean,
-  _ctx?: { vocabId: string; newBox: 1 | 2 | 3 | 4 | 5; nextReview: number },
-): Promise<UserStats> {
+export async function recordReview(correct: boolean, now: number = Date.now()): Promise<UserStats> {
   const prev = (await readCachedStats()) ?? EMPTY_STATS;
-  const next = applyReviewToStats(prev, correct);
+  const next = applyReviewToStats(prev, correct, now);
   await cacheStats(next);
   return next;
 }
 
-export function dueToday(list: VocabEntry[]): VocabEntry[] {
-  const now = Date.now();
-  return list.filter((e) => e.box < 5 && e.nextReview <= now);
+/**
+ * Heute fällige Karten.
+ *
+ * Kein `box < 5`-Filter mehr: Box-5-Karten kehren nach ihrem 90-Tage-Intervall
+ * bewusst zurück. "Gemeistert" heißt lange Abstände, nicht nie wieder —
+ * ohne Wiederholung ist auch eine Box-5-Karte irgendwann weg.
+ */
+export function dueToday(list: VocabEntry[], now: number = Date.now()): VocabEntry[] {
+  return list.filter((e) => e.nextReview <= now);
 }
 
 export function nextReviewDate(box: number): number {
-  const days = BOX_INTERVALS_DAYS[box] ?? 1;
+  const days = BOX_INTERVALS_DAYS[box as VocabEntry["box"]] ?? 1;
   return Date.now() + days * 86400000;
 }
 

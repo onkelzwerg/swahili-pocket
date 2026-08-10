@@ -3,22 +3,20 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 import confetti from "canvas-confetti";
-import { Check, X, Volume2, ArrowLeft, Flame, Loader2, Sparkles } from "lucide-react";
-import {
-  getVocab,
-  updateVocab,
-  dueToday,
-  nextReviewDate,
-  recordReview,
-  getStats,
-} from "@/lib/store";
+import { Volume2, ArrowLeft, Flame, Loader2, Sparkles } from "lucide-react";
+import { getVocab, dueToday, getStats } from "@/lib/store";
+import { applyReview, previewGrades } from "@/lib/srs";
+import { pickComebackCards } from "@/lib/comeback";
+import type { GradePreview } from "@/lib/srs/types";
 import { speak } from "@/lib/tts";
+import { shuffle } from "@/lib/utils";
 import { isMonosyllabicVerb } from "@/lib/seed";
 import { PoolPickerSheet } from "@/components/PoolPickerSheet";
+import { GradeButtons } from "@/components/exercises/GradeButtons";
 
 import { APP_CONFIG } from "@/config/app.config";
 import { T } from "@/config/translations";
-import type { VocabEntry } from "@/lib/types";
+import type { Grade, VocabEntry } from "@/lib/types";
 
 export const Route = createFileRoute("/_authenticated/review")({
   head: () => ({
@@ -27,11 +25,27 @@ export const Route = createFileRoute("/_authenticated/review")({
       { name: "description", content: T.review.metaDescription },
     ],
   }),
+  // ?comeback=true → Mini-Runde nach längerer Pause (siehe lib/comeback.ts).
+  validateSearch: (search: Record<string, unknown>): { comeback?: boolean } => ({
+    comeback: search.comeback === true || search.comeback === "true" ? true : undefined,
+  }),
   component: Review,
 });
 
+/**
+ * Queue einer Session: normal die fälligen Karten, im Comeback-Modus die
+ * fünf am längsten nicht gesehenen gefestigten Karten. Dedupliziert und
+ * Fisher-Yates-gemischt.
+ */
+function buildQueue(vocab: VocabEntry[], comeback?: boolean): VocabEntry[] {
+  const source = comeback ? pickComebackCards(vocab) : dueToday(vocab);
+  const seen = new Set<string>();
+  const unique = source.filter((e) => (seen.has(e.id) ? false : (seen.add(e.id), true)));
+  return shuffle(unique);
+}
+
 function Review() {
-  const [vocab, setVocab] = useState<VocabEntry[]>([]);
+  const { comeback } = Route.useSearch();
   const [queue, setQueue] = useState<VocabEntry[]>([]);
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -43,17 +57,15 @@ function Review() {
   const submittingRef = useRef<string | null>(null);
   const [speakingKey, setSpeakingKey] = useState<string | null>(null);
   const [pickerOpen, setPickerOpen] = useState(false);
+  const [preview, setPreview] = useState<GradePreview | null>(null);
+  const [matured, setMatured] = useState(0);
 
   function reloadQueue() {
     getVocab().then((v) => {
-      setVocab(v);
-      const due = dueToday(v);
-      const seen = new Set<string>();
-      const unique = due.filter((e) => (seen.has(e.id) ? false : (seen.add(e.id), true)));
-      unique.sort(() => Math.random() - 0.5);
-      setQueue(unique);
+      setQueue(buildQueue(v, comeback));
       setIdx(0);
       setCorrect(0);
+      setMatured(0);
       setDone(false);
       setFlipped(false);
     });
@@ -65,13 +77,17 @@ function Review() {
   const correctOpacity = useTransform(x, [15, 90], [0, 1]);
   const wrongOpacity = useTransform(x, [-90, -15], [1, 0]);
 
+  // Swipe bleibt bewusst zweistufig: links = Nochmal (1), rechts = Gut (3).
+  // Das ist der eingespielte Flow für schnelle Runden — "Schwer" und
+  // "Einfach" sind die bewusste Entscheidung und brauchen einen Button.
+  // Bitte nicht "vereinheitlichen".
   async function swipeOut(dir: 1 | -1) {
     if (isAnimating) return;
     setIsAnimating(true);
     await new Promise<void>((resolve) => {
       animate(x, dir * 600, { duration: 0.22, ease: "easeOut", onComplete: () => resolve() });
     });
-    handleAnswer(dir > 0);
+    handleAnswer(dir > 0 ? 3 : 1);
     x.set(0);
     setIsAnimating(false);
   }
@@ -96,17 +112,11 @@ function Review() {
 
   useEffect(() => {
     Promise.all([getVocab(), getStats()]).then(([v, s]) => {
-      setVocab(v);
-      const due = dueToday(v);
-      // Dedupe defensively by id, then shuffle.
-      const seen = new Set<string>();
-      const unique = due.filter((e) => (seen.has(e.id) ? false : (seen.add(e.id), true)));
-      unique.sort(() => Math.random() - 0.5);
-      setQueue(unique);
+      setQueue(buildQueue(v, comeback));
       setStreak(s.streak);
       // Kein TTS-Prefetch – API wird erst beim Klick auf den Lautsprecher-Button aufgerufen.
     });
-  }, []);
+  }, [comeback]);
 
   // Body-Scroll während des Reviews sperren, damit PWA/Browser
   // nicht versucht zu scrollen (Pull-to-Refresh, Adressleisten-Resize)
@@ -136,19 +146,32 @@ function Review() {
   const card = queue[idx];
   const progress = total === 0 ? 0 : (idx / total) * 100;
 
-  function handleAnswer(isCorrect: boolean) {
+  // Intervall-Vorschau für die aktuelle Karte laden (aktiver Scheduler).
+  useEffect(() => {
+    if (!card) {
+      setPreview(null);
+      return;
+    }
+    let alive = true;
+    void previewGrades(card).then((p) => {
+      if (alive) setPreview(p);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [card]);
+
+  function handleAnswer(grade: Grade) {
     if (!card) return;
     // Guard against double-tap / double-fire on the same card.
     if (submittingRef.current === card.id) return;
     submittingRef.current = card.id;
 
-    const newBox = (isCorrect ? Math.min(5, card.box + 1) : 1) as VocabEntry["box"];
-    const nextReview = nextReviewDate(newBox);
-    const cardId = card.id;
+    const isCorrect = grade >= 3;
+    const answered = card;
     const isLast = idx + 1 >= total;
 
     // --- Optimistic UI: advance immediately, no awaits in the click path. ---
-    setVocab((prev) => prev.map((v) => (v.id === cardId ? { ...v, box: newBox, nextReview } : v)));
     if (isCorrect) setCorrect((c) => c + 1);
     if (isLast) {
       setFlipped(false);
@@ -174,21 +197,22 @@ function Review() {
         requestAnimationFrame(() => setInstantReset(false));
       });
     }
-    if (isCorrect && newBox === 5) {
-      confetti({
-        particleCount: 80,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: [APP_CONFIG.primaryColor, APP_CONFIG.accentColor, APP_CONFIG.secondaryColor],
-      });
-    }
 
     // --- Background persistence (don't block UI). ---
+    // applyReview() ist die einzige Stelle, die Boxen/Fälligkeiten rechnet.
     void (async () => {
       try {
-        await updateVocab(cardId, { box: newBox, nextReview });
-        const stats = await recordReview(isCorrect, { vocabId: cardId, newBox, nextReview });
-        setStreak(stats.streak);
+        const result = await applyReview(answered, grade, "flip");
+        setStreak(result.stats.streak);
+        if (result.matured) {
+          setMatured((m) => m + 1);
+          confetti({
+            particleCount: 80,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: [APP_CONFIG.primaryColor, APP_CONFIG.accentColor, APP_CONFIG.secondaryColor],
+          });
+        }
       } catch (e) {
         console.error("[review] persist failed", e);
       }
@@ -367,30 +391,18 @@ function Review() {
       </div>
 
       {/* Buttons immer im Layout reservieren, damit Vorder- und Rückseite gleich groß bleiben. */}
-      <motion.div
-        animate={{ opacity: flipped ? 1 : 0, y: flipped ? 0 : 16 }}
-        initial={false}
-        transition={{ duration: 0.2 }}
-        aria-hidden={!flipped}
-        className="mt-6 flex gap-3"
-      >
-        <button
-          onClick={() => void swipeOut(-1)}
-          disabled={!flipped || isAnimating}
-          tabIndex={flipped ? 0 : -1}
-          className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-destructive py-4 text-base font-semibold text-destructive-foreground active:scale-95 disabled:pointer-events-none"
-        >
-          <X className="h-5 w-5" /> {T.review.wrong}
-        </button>
-        <button
-          onClick={() => void swipeOut(1)}
-          disabled={!flipped || isAnimating}
-          tabIndex={flipped ? 0 : -1}
-          className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-forest py-4 text-base font-semibold text-forest-foreground active:scale-95 disabled:pointer-events-none"
-        >
-          <Check className="h-5 w-5" /> {T.review.correct}
-        </button>
-      </motion.div>
+      <GradeButtons
+        preview={preview}
+        visible={flipped}
+        disabled={isAnimating}
+        // Nochmal/Gut laufen über die Wisch-Animation (gleiche Optik wie die
+        // Geste), Schwer/Einfach direkt.
+        onGrade={(grade) => {
+          if (grade === 1) void swipeOut(-1);
+          else if (grade === 3) void swipeOut(1);
+          else handleAnswer(grade);
+        }}
+      />
     </div>
   );
 }

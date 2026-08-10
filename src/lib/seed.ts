@@ -153,6 +153,9 @@ export function seedVocab(): VocabEntry[] {
     id: `seed-${i}`,
     box: 1,
     nextReview: now,
+    // Von Anfang an gesetzt, damit ein Scheduler-Wechsel die Fälligkeit
+    // neuer Karten nicht schätzen muss (siehe srs/index.ts recomputeDue).
+    leitnerDue: now,
     createdAt: now - i * 1000,
   }));
 }

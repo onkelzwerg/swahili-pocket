@@ -42,6 +42,7 @@ function NewEntry() {
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
     if (!sw.trim() || !de.trim()) return;
+    const now = Date.now();
     const entry: VocabEntry = {
       id: newId(),
       swahili: sw.trim(),
@@ -53,8 +54,11 @@ function NewEntry() {
         { sw: ex2Sw.trim(), de: ex2De.trim() },
       ].filter((x) => x.sw),
       box: 1,
-      nextReview: Date.now(),
-      createdAt: Date.now(),
+      nextReview: now,
+      // Von Anfang an gesetzt, damit ein Scheduler-Wechsel die Fälligkeit
+      // neuer Karten nicht schätzen muss (siehe srs/index.ts recomputeDue).
+      leitnerDue: now,
+      createdAt: now,
     };
     await addVocab(entry);
     nav({ to: "/lexicon" });

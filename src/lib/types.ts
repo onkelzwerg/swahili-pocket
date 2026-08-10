@@ -14,6 +14,31 @@ export interface Example {
   de: string;
 }
 
+/** Antwortstufen einer Wiederholung. 1 = Nochmal, 2 = Schwer, 3 = Gut, 4 = Einfach. */
+export type Grade = 1 | 2 | 3 | 4;
+
+/**
+ * Übungsmodus einer Wiederholung.
+ * Bis Welle 2 gibt es nur "flip"; die Registry in `lib/exercises/` re-exportiert
+ * diesen Typ später und ergänzt die weiteren Modi.
+ */
+export type ExerciseModeId = "flip" | "typed" | "audio" | "cloze";
+
+export type SchedulerId = "leitner" | "fsrs";
+
+/** FSRS-Zustand einer Karte. Wird parallel zum Leitner-Zustand immer mitgeführt. */
+export interface FsrsState {
+  /** Gedächtnisstabilität in Tagen. */
+  stability: number;
+  /** Schwierigkeit 1..10. */
+  difficulty: number;
+  reps: number;
+  lapses: number;
+  state: "new" | "learning" | "review" | "relearning";
+  /** FSRS-eigenes Fälligkeitsdatum (ms). */
+  due: number;
+}
+
 export interface VocabEntry {
   id: string;
   /** Reference to shared_vocab pool entry; undefined for private (manually added) vocab. */
@@ -26,11 +51,20 @@ export interface VocabEntry {
   nounClass?: NounClass;
   examples: Example[];
   box: 1 | 2 | 3 | 4 | 5;
+  /** Fälligkeit des AKTIVEN Schedulers (Invariante, siehe lib/srs/index.ts). */
   nextReview: number;
   createdAt: number;
   updatedAt?: number;
   /** False when the underlying pool entry has been deactivated by an admin. */
   sharedIsActive?: boolean;
+  /** FSRS-Parallelzustand. Fehlt bei nie reviewten Karten → aus box ableiten. */
+  fsrs?: FsrsState;
+  /** Leitner-eigenes Fälligkeitsdatum (ms). */
+  leitnerDue?: number;
+  /** Zeitpunkt des letzten Reviews (für elapsedDays). */
+  lastReviewAt?: number;
+  /** Gesetzt, sobald ein erfolgreicher Abruf mit ≥7 Tagen Abstand gelang ("gefestigt"). */
+  maturedAt?: number;
 }
 
 export interface UserStats {
@@ -38,6 +72,33 @@ export interface UserStats {
   lastReviewDate: string;
   totalReviewed: number;
   xp: number;
+  /** ISO-Daten (yyyy-mm-dd) der Lerntage der laufenden Woche (Mo–So). */
+  weekDays: string[];
+  /** Streak-Joker: 0..2. Ein verpasster Tag verbraucht automatisch einen. */
+  freezes: number;
+  /** Gesamtzahl der Tage mit mindestens einem Review (Basis für Freeze-Verdienst). */
+  totalDaysLearned: number;
+  /** Datum, an dem zuletzt ein Freeze verdient wurde (alle 7 Lerntage einer). */
+  lastFreezeEarned?: string;
+  /** Transient (nie persistiert): Rückkehr nach ≥7 Tagen Pause. */
+  comeback?: boolean;
+}
+
+/** Ein Eintrag im append-only Review-Log (`log:reviews`). */
+export interface ReviewLogEntry {
+  id: string;
+  cardId: string;
+  ts: number;
+  grade: Grade;
+  mode: ExerciseModeId;
+  /** Zeit seit letztem Review in Tagen (0 bei Erstreview). */
+  elapsedDays: number;
+  /** Aktiver Scheduler zum Zeitpunkt der Antwort. */
+  scheduler: SchedulerId;
+  /** Zustand NACH dem Review (Debug/Statistik). */
+  newBox: number;
+  newStability?: number;
+  newDue: number;
 }
 
 export type DialogueSpeaker = "A" | "B" | "C";
