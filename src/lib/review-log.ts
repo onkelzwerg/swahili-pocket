@@ -1,5 +1,5 @@
 import { get, set } from "idb-keyval";
-import type { ReviewLogEntry } from "./types";
+import type { ExerciseModeId, ReviewLogEntry, SchedulerId, TrainerModeId } from "./types";
 import { isoDay } from "./dates";
 
 // Append-only Log aller Antworten (Entscheidung A).
@@ -49,7 +49,44 @@ export function resetReviewLogCache() {
   cache = null;
 }
 
-/** Anzahl der Reviews an einem Tag (Default: heute) — Basis für das Tagesziel. */
+/** Modi, die als geübte Karte zählen — Trainer-Aufgaben sind keine Karten. */
+const CARD_MODES: ExerciseModeId[] = ["flip", "typed", "audio", "cloze"];
+
+/**
+ * Anzahl der geübten Karten an einem Tag (Default: heute) — Basis für das
+ * Tagesziel. Trainer-Aufgaben stehen zwar im selben Log (damit Meilensteine
+ * sie sehen), zählen hier aber bewusst nicht mit: sonst wäre „7 / 10 Karten
+ * heute" nach ein paar Verbformen erreicht, ohne dass eine Karte dran war.
+ */
 export function countReviewsOnDay(log: ReviewLogEntry[], day = isoDay(Date.now())): number {
-  return log.reduce((n, e) => (isoDay(e.ts) === day ? n + 1 : n), 0);
+  return log.reduce((n, e) => (isoDay(e.ts) === day && CARD_MODES.includes(e.mode) ? n + 1 : n), 0);
+}
+
+/**
+ * Eine Trainer-Aufgabe im Log vermerken. Kein Scheduling: der Trainer ändert
+ * weder Box noch Fälligkeit — die Felder spiegeln nur den unveränderten
+ * Zustand der Quellkarte.
+ */
+export async function appendTrainerResult(opts: {
+  /** Karte, aus der die Aufgabe erzeugt wurde. */
+  cardId: string;
+  mode: TrainerModeId;
+  correct: boolean;
+  scheduler: SchedulerId;
+  box: number;
+  nextReview: number;
+  now?: number;
+}): Promise<void> {
+  const now = opts.now ?? Date.now();
+  await appendReviewLog({
+    id: crypto.randomUUID(),
+    cardId: opts.cardId,
+    ts: now,
+    grade: opts.correct ? 3 : 1,
+    mode: opts.mode,
+    elapsedDays: 0,
+    scheduler: opts.scheduler,
+    newBox: opts.box,
+    newDue: opts.nextReview,
+  });
 }

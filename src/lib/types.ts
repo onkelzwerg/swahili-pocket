@@ -17,12 +17,17 @@ export interface Example {
 /** Antwortstufen einer Wiederholung. 1 = Nochmal, 2 = Schwer, 3 = Gut, 4 = Einfach. */
 export type Grade = 1 | 2 | 3 | 4;
 
+/** Übungsmodi einer Review-Session (Registry in `lib/exercises/`). */
+export type SessionModeId = "flip" | "typed" | "audio" | "cloze";
+
 /**
- * Übungsmodus einer Wiederholung.
- * Bis Welle 2 gibt es nur "flip"; die Registry in `lib/exercises/` re-exportiert
- * diesen Typ später und ergänzt die weiteren Modi.
+ * Aufgabentypen des Morphologie-Trainers (W2.7). Sie laufen nicht über den
+ * Scheduler — sie stehen nur im Log, damit Meilensteine sie sehen.
  */
-export type ExerciseModeId = "flip" | "typed" | "audio" | "cloze";
+export type TrainerModeId = "morph-verb" | "morph-ngeli";
+
+/** Übungsmodus eines Log-Eintrags. */
+export type ExerciseModeId = SessionModeId | TrainerModeId;
 
 export type SchedulerId = "leitner" | "fsrs";
 
@@ -99,6 +104,11 @@ export interface ReviewLogEntry {
   newBox: number;
   newStability?: number;
   newDue: number;
+  /**
+   * Der Nutzer hat eine als falsch geprüfte Antwort selbst als richtig
+   * markiert (W2.3). Macht Lücken in den Zielformen der Datenbank auffindbar.
+   */
+  override?: boolean;
 }
 
 export type DialogueSpeaker = "A" | "B" | "C";

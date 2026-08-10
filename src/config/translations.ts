@@ -166,7 +166,157 @@ export const T = {
       summary: (correct: number, total: number, streak: number) =>
         `${correct} von ${total} richtig · Streak: ${streak} 🔥`,
       back: "Zur Übersicht",
+      /** Trefferquote der Runde. */
+      accuracy: (correct: number, total: number) => `${correct}/${total} richtig`,
+      accuracyLabel: "Treffer",
+      /** Der eigentliche Erfolg — prominenter als XP. */
+      matured: (n: number) =>
+        n === 1
+          ? "1 Wort sitzt jetzt seit über einer Woche"
+          : `${n} Wörter sitzen jetzt seit über einer Woche`,
+      maturedLabel: "Gefestigt",
+      streakLabel: "Streak",
+      weekStatus: (day: string, done: number, goal: number) =>
+        `${day} erledigt — ${done} von ${goal} Tagen`,
+      weekReached: (goal: number) => `Wochenziel erreicht — ${goal} von ${goal} Tagen ✓`,
+      again: "Weiter üben",
     },
+  },
+
+  exercises: {
+    /** Kurzlabels für den Modus-Hinweis über der Aufgabe. */
+    modes: {
+      flip: "Karte",
+      typed: "Tippen",
+      audio: "Hören",
+      cloze: "Lückensatz",
+    },
+    typed: {
+      prompt: "Wie heißt das auf Swahili?",
+      placeholder: "Antwort tippen…",
+      check: "Prüfen",
+      dontKnow: "Weiß nicht",
+    },
+    cloze: {
+      prompt: "Welches Wort fehlt?",
+      translationLabel: "Bedeutung des Satzes",
+      playSentence: "Satz anhören",
+    },
+    audio: {
+      prompt: "Was hast du gehört?",
+      replay: "Nochmal hören",
+      replaySlow: "Langsam wiederholen",
+      listenAria: "Wort abspielen",
+    },
+    feedback: {
+      exact: "Sawa! ✓",
+      typo: "Fast — kleine Schreibkorrektur:",
+      wrong: "Nicht ganz.",
+      yourAnswer: (answer: string) => `Deine Antwort: ${answer}`,
+      noAnswer: "Keine Antwort",
+      /** Escape-Hatch für Übersetzungen, die die Datenbank nicht kennt. */
+      override: "Meine Antwort war auch richtig",
+      overridden: "Als richtig gewertet ✓",
+      next: "Weiter",
+      howEasy: "Wie leicht fiel es dir?",
+    },
+  },
+
+  /**
+   * Meilensteine (W2.8). Bewusst an Können geknüpft, nicht an Fleiß —
+   * die Texte sollen etwas über die Sprache aussagen, nicht über Disziplin.
+   */
+  milestones: {
+    heading: "Meilensteine",
+    hint: "Erreicht, wenn du etwas kannst — nicht, wenn du oft genug da warst.",
+    locked: "Noch nicht erreicht",
+    achievedOn: (date: string) => `Erreicht am ${date}`,
+    count: (done: number, total: number) => `${done} von ${total}`,
+    unlockedHeadline: "Meilenstein erreicht!",
+    firstSession: {
+      title: "Mwanzo",
+      description: "Deine erste Übungsrunde ist durch.",
+    },
+    sevenDays: {
+      title: "Sieben Tage",
+      description: "An sieben verschiedenen Tagen gelernt.",
+    },
+    firstWeekGoal: {
+      title: "Wochenziel",
+      description: "Zum ersten Mal dein selbstgesetztes Wochenziel erreicht.",
+    },
+    matured50: {
+      title: "50 gefestigt",
+      description: "50 Wörter nach mindestens einer Woche Pause noch gewusst.",
+    },
+    matured150: {
+      title: "150 gefestigt",
+      description: "150 gefestigte Wörter — Alltagswortschatz.",
+    },
+    matured350: {
+      title: "350 gefestigt",
+      description: "350 gefestigte Wörter — ein tragfähiger Grundwortschatz.",
+    },
+    typedPerfect: {
+      title: "Fehlerfrei getippt",
+      description: "Eine Runde mit mindestens fünf getippten Wörtern ohne Fehler.",
+    },
+    audioSession: {
+      title: "Gutes Ohr",
+      description: "25 Wörter allein am Klang erkannt.",
+    },
+    verb100: {
+      title: "100 Verbformen",
+      description: "100 Verbformen im Trainer selbst gebaut.",
+    },
+    ngeliMaster: {
+      title: "Ngeli sitzt",
+      description: "Jede geübte Nomenklasse mindestens zehnmal richtig.",
+    },
+    longRecall: {
+      title: "Langzeitgedächtnis",
+      description: "Ein Wort nach über zwei Monaten Pause noch abgerufen.",
+    },
+    firstStory: {
+      title: "Erste Geschichte",
+      description: "Eine ganze Geschichte auf Swahili gelesen.",
+    },
+  },
+
+  trainer: {
+    metaTitle: "Grammatik-Gym — Swahili Pocket",
+    metaDescription:
+      "Verbformen und Ngeli-Kongruenz üben — Aufgaben aus deinem eigenen Wortschatz.",
+    eyebrow: "Mazoezi ya sarufi",
+    title: "Grammatik-Gym",
+    subtitle: "Bausteine statt Vokabeln — hier übst du, Formen selbst zu bilden.",
+    homeCta: "Grammatik üben",
+    tabs: { verb: "Verbformen", ngeli: "Ngeli" },
+    difficulty: { chips: "Bausteine", typing: "Frei tippen" },
+    verb: {
+      prompt: (subject: string, tense: string, stem: string) => `${subject} + ${tense} + ${stem}`,
+      hint: "Setz die Form zusammen.",
+      monosyllabic: "Einsilbiges Verb — das ku- bleibt.",
+    },
+    ngeli: {
+      prompt: (noun: string, adjective: string) => `${noun} ___ (${adjective})`,
+      hint: "Welche Form passt zur Klasse?",
+      why: (nounClass: string) => `Warum ${nounClass}? Klasse ansehen`,
+    },
+    check: "Prüfen",
+    next: "Nächste Aufgabe",
+    clear: "Zurücksetzen",
+    correct: "Sawa! ✓",
+    wrong: (answer: string) => `Richtig wäre: ${answer}`,
+    run: (n: number) => `${n} richtig in Folge`,
+    typingUnlocked: "Fünf am Stück richtig — probier es frei getippt.",
+    empty: {
+      verb: "Noch keine Verben in deinen Lernkarten. Nimm ein paar aus dem Lexikon dazu.",
+      ngeli: "Noch keine Nomen mit Nomenklasse in deinen Lernkarten.",
+      cta: "Zum Lexikon",
+    },
+    stats: (verbs: number, ngeli: number, best: number) =>
+      `${verbs} Verbformen · ${ngeli} Ngeli-Aufgaben · beste Serie ${best}`,
   },
 
   lexicon: {
@@ -402,6 +552,16 @@ export const T = {
       /** Fünf Optionen nebeneinander — nur die Zahl, die Einheit steht im Hinweis. */
       weeklyGoalOption: (n: number) => `${n}`,
       saved: "Gespeichert",
+    },
+    modes: {
+      heading: "Übungsarten",
+      hint: "Was in einer Runde vorkommen darf. Gemischte Formate prägen sich besser ein als ein einziges — abschalten kostet also etwas.",
+      descriptions: {
+        typed:
+          "Wort selbst schreiben. Erst ab der zweiten Box — neue Wörter werden zuerst erkannt.",
+        audio: "Wort hören, Bedeutung wählen. Nur mit vorhandener Aufnahme.",
+        cloze: "Lückensatz mit Kontext. Nur bei passendem Beispielsatz.",
+      },
     },
     backup: {
       heading: "Backup",

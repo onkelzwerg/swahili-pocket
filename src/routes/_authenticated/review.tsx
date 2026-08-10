@@ -1,22 +1,27 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion } from "framer-motion";
 
 import confetti from "canvas-confetti";
-import { Volume2, ArrowLeft, Flame, Loader2, Sparkles } from "lucide-react";
-import { getVocab, dueToday, getStats } from "@/lib/store";
-import { applyReview, previewGrades } from "@/lib/srs";
+import { ArrowLeft, Flame, Sparkles } from "lucide-react";
+import { getVocab, getStats } from "@/lib/store";
+import { applyReview } from "@/lib/srs";
 import { pickComebackCards } from "@/lib/comeback";
-import type { GradePreview } from "@/lib/srs/types";
-import { speak } from "@/lib/tts";
-import { shuffle } from "@/lib/utils";
-import { isMonosyllabicVerb } from "@/lib/seed";
+import { buildSession, type SessionItem } from "@/lib/session";
+import { checkMilestones, type Milestone, type SessionSummary } from "@/lib/milestones";
+import { speak, createUnlockedAudio } from "@/lib/tts";
+import { useSettings } from "@/lib/settings";
+import { isoDay } from "@/lib/dates";
 import { PoolPickerSheet } from "@/components/PoolPickerSheet";
-import { GradeButtons } from "@/components/exercises/GradeButtons";
+import { FlipCard } from "@/components/exercises/FlipCard";
+import { TypedAnswer } from "@/components/exercises/TypedAnswer";
+import { AudioQuiz } from "@/components/exercises/AudioQuiz";
+import { ClozeSentence } from "@/components/exercises/ClozeSentence";
+import type { ExerciseProps, ExerciseResultMeta } from "@/lib/exercises/types";
 
 import { APP_CONFIG } from "@/config/app.config";
 import { T } from "@/config/translations";
-import type { Grade, VocabEntry } from "@/lib/types";
+import type { Grade, SessionModeId, VocabEntry } from "@/lib/types";
 
 export const Route = createFileRoute("/_authenticated/review")({
   head: () => ({
@@ -32,90 +37,67 @@ export const Route = createFileRoute("/_authenticated/review")({
   component: Review,
 });
 
-/**
- * Queue einer Session: normal die fälligen Karten, im Comeback-Modus die
- * fünf am längsten nicht gesehenen gefestigten Karten. Dedupliziert und
- * Fisher-Yates-gemischt.
- */
-function buildQueue(vocab: VocabEntry[], comeback?: boolean): VocabEntry[] {
-  const source = comeback ? pickComebackCards(vocab) : dueToday(vocab);
-  const seen = new Set<string>();
-  const unique = source.filter((e) => (seen.has(e.id) ? false : (seen.add(e.id), true)));
-  return shuffle(unique);
-}
+/** Modus-Id → Komponente. Neue Modi tragen sich hier und in der Registry ein. */
+const EXERCISE_COMPONENTS: Record<SessionModeId, (props: ExerciseProps) => React.ReactNode> = {
+  flip: FlipCard,
+  typed: TypedAnswer,
+  audio: AudioQuiz,
+  cloze: ClozeSentence,
+};
 
+const CONFETTI_COLORS = [
+  APP_CONFIG.primaryColor,
+  APP_CONFIG.accentColor,
+  APP_CONFIG.secondaryColor,
+];
+
+/**
+ * Session-Host (W2.1): hält Queue, Fortschritt und Statistik und rendert pro
+ * Item die Modus-Komponente. Er rechnet selbst nichts am Lernstand —
+ * das macht ausschließlich `applyReview()`.
+ */
 function Review() {
   const { comeback } = Route.useSearch();
-  const [queue, setQueue] = useState<VocabEntry[]>([]);
+  const settings = useSettings();
+  const [items, setItems] = useState<SessionItem[]>([]);
+  const [vocab, setVocab] = useState<VocabEntry[]>([]);
   const [idx, setIdx] = useState(0);
-  const [flipped, setFlipped] = useState(false);
   const [streak, setStreak] = useState(0);
+  const [weekDaysDone, setWeekDaysDone] = useState(0);
   const [done, setDone] = useState(false);
   const [correct, setCorrect] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [instantReset, setInstantReset] = useState(false);
-  const submittingRef = useRef<string | null>(null);
-  const [speakingKey, setSpeakingKey] = useState<string | null>(null);
-  const [pickerOpen, setPickerOpen] = useState(false);
-  const [preview, setPreview] = useState<GradePreview | null>(null);
   const [matured, setMatured] = useState(0);
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const [milestone, setMilestone] = useState<Milestone | null>(null);
+  const submittingRef = useRef<string | null>(null);
+  // Antworten je Modus — Grundlage für sessionbezogene Meilensteine.
+  const modeStatsRef = useRef<SessionSummary["modes"]>({});
 
-  function reloadQueue() {
-    getVocab().then((v) => {
-      setQueue(buildQueue(v, comeback));
+  function loadSession() {
+    void (async () => {
+      const all = await getVocab();
+      setVocab(all);
+      const built = await buildSession(comeback ? { cards: pickComebackCards(all) } : {});
+      setItems(built);
       setIdx(0);
       setCorrect(0);
       setMatured(0);
       setDone(false);
-      setFlipped(false);
-    });
-  }
-
-  const x = useMotionValue(0);
-  const rotate = useTransform(x, [-220, 0, 220], [-14, 0, 14]);
-  const scale = useTransform(x, [-200, 0, 200], [0.97, 1, 0.97]);
-  const correctOpacity = useTransform(x, [15, 90], [0, 1]);
-  const wrongOpacity = useTransform(x, [-90, -15], [1, 0]);
-
-  // Swipe bleibt bewusst zweistufig: links = Nochmal (1), rechts = Gut (3).
-  // Das ist der eingespielte Flow für schnelle Runden — "Schwer" und
-  // "Einfach" sind die bewusste Entscheidung und brauchen einen Button.
-  // Bitte nicht "vereinheitlichen".
-  async function swipeOut(dir: 1 | -1) {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    await new Promise<void>((resolve) => {
-      animate(x, dir * 600, { duration: 0.22, ease: "easeOut", onComplete: () => resolve() });
-    });
-    handleAnswer(dir > 0 ? 3 : 1);
-    x.set(0);
-    setIsAnimating(false);
-  }
-
-  function handleDragEnd(_: unknown, info: { offset: { x: number }; velocity: { x: number } }) {
-    if (isAnimating) return;
-    const dx = info.offset.x;
-    const vx = info.velocity.x;
-    if (dx > 80 || vx > 350) void swipeOut(1);
-    else if (dx < -80 || vx < -350) void swipeOut(-1);
-  }
-
-  async function playAudio(key: string, text: string) {
-    if (speakingKey) return;
-    setSpeakingKey(key);
-    try {
-      await speak(text);
-    } finally {
-      setSpeakingKey(null);
-    }
+      setMilestone(null);
+      modeStatsRef.current = {};
+      submittingRef.current = null;
+    })();
   }
 
   useEffect(() => {
-    Promise.all([getVocab(), getStats()]).then(([v, s]) => {
-      setQueue(buildQueue(v, comeback));
-      setStreak(s.streak);
-      // Kein TTS-Prefetch – API wird erst beim Klick auf den Lautsprecher-Button aufgerufen.
-    });
+    void (async () => {
+      const [all, stats] = await Promise.all([getVocab(), getStats()]);
+      setVocab(all);
+      setStreak(stats.streak);
+      setWeekDaysDone(stats.weekDays.length);
+      setItems(await buildSession(comeback ? { cards: pickComebackCards(all) } : {}));
+    })();
+    // Kein TTS-Prefetch – Audio wird erst beim Abspielen geladen.
   }, [comeback]);
 
   // Body-Scroll während des Reviews sperren, damit PWA/Browser
@@ -142,79 +124,80 @@ function Review() {
     };
   }, []);
 
-  const total = queue.length;
-  const card = queue[idx];
+  const total = items.length;
+  const item = items[idx];
   const progress = total === 0 ? 0 : (idx / total) * 100;
 
-  // Intervall-Vorschau für die aktuelle Karte laden (aktiver Scheduler).
-  useEffect(() => {
-    if (!card) {
-      setPreview(null);
-      return;
-    }
-    let alive = true;
-    void previewGrades(card).then((p) => {
-      if (alive) setPreview(p);
-    });
-    return () => {
-      alive = false;
-    };
-  }, [card]);
+  /** Sprachausgabe für alle Modi — eine Stelle, ein freigeschaltetes Element. */
+  async function speakText(text: string): Promise<void> {
+    await speak(text, createUnlockedAudio());
+  }
 
-  function handleAnswer(grade: Grade) {
-    if (!card) return;
-    // Guard against double-tap / double-fire on the same card.
+  function handleResult(grade: Grade, meta: ExerciseResultMeta = {}) {
+    if (!item) return;
+    const { card, mode } = item;
+    // Doppeltipp / doppeltes Feuern auf derselben Karte abfangen.
     if (submittingRef.current === card.id) return;
     submittingRef.current = card.id;
 
     const isCorrect = grade >= 3;
-    const answered = card;
     const isLast = idx + 1 >= total;
+    const perMode = modeStatsRef.current[mode] ?? { total: 0, correct: 0 };
+    modeStatsRef.current[mode] = {
+      total: perMode.total + 1,
+      correct: perMode.correct + (isCorrect ? 1 : 0),
+    };
 
-    // --- Optimistic UI: advance immediately, no awaits in the click path. ---
-    if (isCorrect) setCorrect((c) => c + 1);
+    // --- Optimistisches UI: sofort weiter, keine awaits im Klickpfad. ---
+    const nextCorrect = correct + (isCorrect ? 1 : 0);
+    if (isCorrect) setCorrect(nextCorrect);
     if (isLast) {
-      setFlipped(false);
       setDone(true);
       confetti({
         particleCount: 160,
         spread: 90,
         origin: { y: 0.6 },
-        colors: [
-          APP_CONFIG.primaryColor,
-          APP_CONFIG.accentColor,
-          APP_CONFIG.secondaryColor,
-          APP_CONFIG.backgroundColor,
-        ],
+        colors: [...CONFETTI_COLORS, APP_CONFIG.backgroundColor],
       });
     } else {
-      // Flip-Transition für den Kartenwechsel unterdrücken,
-      // damit die Rückseite (Übersetzung) der nächsten Karte nicht kurz aufblitzt.
-      setInstantReset(true);
-      setFlipped(false);
       setIdx((i) => i + 1);
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => setInstantReset(false));
-      });
+      submittingRef.current = null;
     }
 
-    // --- Background persistence (don't block UI). ---
+    // --- Persistenz im Hintergrund (blockiert das UI nicht). ---
     // applyReview() ist die einzige Stelle, die Boxen/Fälligkeiten rechnet.
     void (async () => {
+      let maturedNow = 0;
       try {
-        const result = await applyReview(answered, grade, "flip");
+        const result = await applyReview(card, grade, mode, Date.now(), meta);
         setStreak(result.stats.streak);
+        setWeekDaysDone(result.stats.weekDays.length);
         if (result.matured) {
+          maturedNow = 1;
           setMatured((m) => m + 1);
           confetti({
             particleCount: 80,
             spread: 70,
             origin: { y: 0.6 },
-            colors: [APP_CONFIG.primaryColor, APP_CONFIG.accentColor, APP_CONFIG.secondaryColor],
+            colors: CONFETTI_COLORS,
           });
         }
       } catch (e) {
         console.error("[review] persist failed", e);
+      }
+      // Meilensteine erst nach der letzten Antwort prüfen — nie mitten
+      // in der Runde (kein Unterbrechen des Flows).
+      if (!isLast) return;
+      try {
+        const fresh = await checkMilestones({
+          total,
+          correct: nextCorrect,
+          matured: matured + maturedNow,
+          modes: modeStatsRef.current,
+        });
+        if (fresh.length > 0) setMilestone(fresh[0]);
+      } catch (e) {
+        console.error("[review] milestone check failed", e);
       }
     })();
   }
@@ -230,7 +213,7 @@ function Review() {
         <PoolPickerSheet
           open={pickerOpen}
           onClose={() => setPickerOpen(false)}
-          onSaved={reloadQueue}
+          onSaved={loadSession}
         />
       </>
     );
@@ -238,26 +221,20 @@ function Review() {
 
   if (done) {
     return (
-      <div className="flex min-h-[80vh] flex-col items-center justify-center gap-4 px-6 text-center">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: "spring" }}
-          className="text-7xl"
-        >
-          🎉
-        </motion.div>
-        <h1 className="font-display text-3xl font-bold">{T.review.done.headline}</h1>
-        <p className="text-muted-foreground">{T.review.done.summary(correct, total, streak)}</p>
-        <Link
-          to="/"
-          className="mt-4 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
-        >
-          {T.review.done.back}
-        </Link>
-      </div>
+      <SessionSummaryScreen
+        correct={correct}
+        total={total}
+        matured={matured}
+        streak={streak}
+        weekDaysDone={weekDaysDone}
+        weeklyGoal={settings?.weeklyGoalDays ?? 4}
+        milestone={milestone}
+        onAgain={loadSession}
+      />
     );
   }
+
+  const Exercise = item ? EXERCISE_COMPONENTS[item.mode] : null;
 
   return (
     <div className="flex h-[100svh] flex-col px-5 pt-6 pb-[calc(env(safe-area-inset-bottom)+5.5rem)] overscroll-contain">
@@ -275,134 +252,141 @@ function Review() {
 
       <div className="mb-2 flex items-center justify-between text-xs font-semibold text-muted-foreground">
         <span>{T.review.progress(idx + 1, total)}</span>
-        <span>{card ? T.review.box(card.box) : ""}</span>
+        <span>{item ? T.exercises.modes[item.mode] : ""}</span>
       </div>
       <div className="mb-4 h-2 overflow-hidden rounded-full bg-muted">
         <motion.div
           className="h-full bg-gradient-to-r from-primary to-ochre"
+          initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
         />
       </div>
 
-      <div className="flex min-h-0 flex-1 flex-col">
-        <motion.div
-          className="flip-card mx-auto h-full w-full relative touch-none select-none"
-          style={{ x, rotate, scale }}
-          drag={flipped ? "x" : false}
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.7}
-          dragMomentum={false}
-          dragTransition={{ bounceStiffness: 600, bounceDamping: 30 }}
-          onDragEnd={handleDragEnd}
-          onClick={() => setFlipped(!flipped)}
-        >
-          {/* Swipe-Hints */}
-          <motion.div
-            style={{ opacity: correctOpacity }}
-            className="pointer-events-none absolute top-4 right-4 z-10 rounded-full bg-forest px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-forest-foreground shadow-lg"
-          >
-            {T.review.swipeHintCorrect}
-          </motion.div>
-          <motion.div
-            style={{ opacity: wrongOpacity }}
-            className="pointer-events-none absolute top-4 left-4 z-10 rounded-full bg-destructive px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-destructive-foreground shadow-lg"
-          >
-            {T.review.swipeHintWrong}
-          </motion.div>
-          <div
-            className={`flip-inner ${flipped ? "flipped" : ""}`}
-            data-instant={instantReset || undefined}
-          >
-            {/* FRONT */}
-            <div className="flip-face rounded-3xl bg-gradient-to-br from-primary to-ochre p-5 text-primary-foreground shadow-xl flex flex-col">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full bg-primary-foreground/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider">
-                  {card?.partOfSpeech}
-                  {card?.nounClass ? ` · ${card.nounClass}` : ""}
-                  {card && card.partOfSpeech === "verb" && isMonosyllabicVerb(card.swahili)
-                    ? ` · ${T.review.monosyllabic}`
-                    : ""}
-                </span>
-                <button
-                  type="button"
-                  disabled={speakingKey === "front"}
-                  aria-busy={speakingKey === "front"}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (card) void playAudio("front", card.swahili);
-                  }}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/20"
-                >
-                  {speakingKey === "front" ? (
-                    <Loader2 className="h-5 w-5 animate-spin" />
-                  ) : (
-                    <Volume2 className="h-5 w-5" />
-                  )}
-                </button>
-              </div>
-              <div className="flex min-h-0 flex-1 items-center justify-center text-center">
-                <h2 className="font-display text-5xl font-bold leading-tight">{card?.swahili}</h2>
-              </div>
-              <p className="text-center text-sm opacity-80">{T.review.flipHint}</p>
-            </div>
+      {item && Exercise && (
+        // key: jede Karte startet mit frischem Modus-Zustand (Flip, Eingabe,
+        // gewählte Option) — kein Aufblitzen der vorigen Antwort.
+        <Exercise
+          key={`${item.card.id}-${item.mode}`}
+          card={item.card}
+          vocab={vocab}
+          speak={speakText}
+          onResult={handleResult}
+        />
+      )}
+    </div>
+  );
+}
 
-            {/* BACK */}
-            <div className="flip-face flip-back rounded-3xl bg-card p-5 shadow-xl border border-border flex flex-col">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full bg-forest/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-forest">
-                  {T.review.translationLabel}
-                </span>
-              </div>
-              <div className="flex min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto text-center touch-pan-y">
-                <h2 className="font-display text-3xl font-bold">{card?.german}</h2>
-                {card?.examples?.[0] && (
-                  <div className="mt-4 w-full space-y-2 text-left">
-                    {card.examples.slice(0, 2).map((ex, i) => (
-                      <div key={i} className="rounded-xl bg-muted/50 p-3">
-                        <div className="flex items-start justify-between gap-2">
-                          <p className="text-sm font-medium">{ex.sw}</p>
-                          <button
-                            type="button"
-                            disabled={speakingKey === `ex-${i}`}
-                            aria-busy={speakingKey === `ex-${i}`}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              void playAudio(`ex-${i}`, ex.sw);
-                            }}
-                            className="shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-ochre/20 text-ochre-foreground"
-                          >
-                            {speakingKey === `ex-${i}` ? (
-                              <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                            ) : (
-                              <Volume2 className="h-3.5 w-3.5" />
-                            )}
-                          </button>
-                        </div>
-                        <p className="mt-0.5 text-xs text-muted-foreground">{ex.de}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <p className="text-center text-xs text-muted-foreground">{T.review.howDidYouKnow}</p>
-            </div>
-          </div>
-        </motion.div>
+/**
+ * Abschluss-Screen (W2.6). Feiert bewusst das Gefestigte, nicht die XP:
+ * „zwei Wörter sitzen jetzt seit über einer Woche" ist die Aussage, auf die
+ * es ankommt — die Punktzahl ist nur Beiwerk.
+ */
+function SessionSummaryScreen({
+  correct,
+  total,
+  matured,
+  streak,
+  weekDaysDone,
+  weeklyGoal,
+  milestone,
+  onAgain,
+}: {
+  correct: number;
+  total: number;
+  matured: number;
+  streak: number;
+  weekDaysDone: number;
+  weeklyGoal: number;
+  milestone: Milestone | null;
+  onAgain: () => void;
+}) {
+  // getDay(): 0 = Sonntag → auf die Montag-basierte Beschriftung umrechnen.
+  const dayLabel = T.home.week.dayLabels[(new Date().getDay() + 6) % 7];
+  const goalReached = weekDaysDone >= weeklyGoal;
+
+  return (
+    <div className="flex min-h-[80vh] flex-col items-center justify-center gap-4 px-6 text-center">
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ type: "spring" }}
+        className="text-7xl"
+      >
+        🎉
+      </motion.div>
+      <h1 className="font-display text-3xl font-bold">{T.review.done.headline}</h1>
+
+      {matured > 0 && (
+        <p className="max-w-[32ch] text-balance font-medium text-forest">
+          {T.review.done.matured(matured)}
+        </p>
+      )}
+
+      <div className="mt-2 grid w-full max-w-sm grid-cols-3 gap-2">
+        <SummaryTile
+          label={T.review.done.accuracyLabel}
+          value={`${correct}/${total}`}
+          tone="bg-forest/10 text-forest"
+        />
+        <SummaryTile
+          label={T.review.done.maturedLabel}
+          value={String(matured)}
+          tone="bg-teal/10 text-teal"
+        />
+        <SummaryTile
+          label={T.review.done.streakLabel}
+          value={String(streak)}
+          tone="bg-primary/10 text-primary"
+        />
       </div>
 
-      {/* Buttons immer im Layout reservieren, damit Vorder- und Rückseite gleich groß bleiben. */}
-      <GradeButtons
-        preview={preview}
-        visible={flipped}
-        disabled={isAnimating}
-        // Nochmal/Gut laufen über die Wisch-Animation (gleiche Optik wie die
-        // Geste), Schwer/Einfach direkt.
-        onGrade={(grade) => {
-          if (grade === 1) void swipeOut(-1);
-          else if (grade === 3) void swipeOut(1);
-          else handleAnswer(grade);
-        }}
-      />
+      <p className="text-sm text-muted-foreground">
+        {goalReached
+          ? T.review.done.weekReached(weeklyGoal)
+          : T.review.done.weekStatus(dayLabel, weekDaysDone, weeklyGoal)}
+      </p>
+
+      {milestone && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.15, type: "spring" }}
+          className="mt-2 w-full max-w-sm rounded-3xl border border-ochre/40 bg-ochre/10 p-5"
+        >
+          <p className="text-[10px] font-bold uppercase tracking-wider text-ochre-foreground">
+            {T.milestones.unlockedHeadline}
+          </p>
+          <div className="mt-2 text-4xl">{milestone.emoji}</div>
+          <h2 className="mt-1 font-display text-xl font-bold">{milestone.title}</h2>
+          <p className="mt-1 text-sm text-muted-foreground">{milestone.description}</p>
+        </motion.div>
+      )}
+
+      <div className="mt-4 flex flex-col items-center gap-2">
+        <Link
+          to="/"
+          className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
+        >
+          {T.review.done.back}
+        </Link>
+        <button
+          type="button"
+          onClick={onAgain}
+          className="text-sm font-medium text-muted-foreground underline underline-offset-4"
+        >
+          {T.review.done.again}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function SummaryTile({ label, value, tone }: { label: string; value: string; tone: string }) {
+  return (
+    <div className={`rounded-2xl p-3 ${tone}`}>
+      <div className="font-display text-2xl font-bold tabular-nums">{value}</div>
+      <div className="text-[10px] font-semibold uppercase tracking-wider opacity-80">{label}</div>
     </div>
   );
 }
@@ -425,7 +409,7 @@ function EmptyState({
         onClick={onAdd}
         className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground active:scale-95"
       >
-        <Sparkles className="h-4 w-4" /> Lernkarten aus dem Pool hinzufügen
+        <Sparkles className="h-4 w-4" /> {T.review.empty.cta}
       </button>
     </div>
   );

@@ -53,6 +53,7 @@ export async function applyReview(
   grade: Grade,
   mode: ExerciseModeId = "flip",
   now = Date.now(),
+  meta: { override?: boolean } = {},
 ): Promise<ApplyReviewResult> {
   const settings = await getSettings();
   const leitner = leitnerScheduler.next(card, grade, now);
@@ -86,6 +87,7 @@ export async function applyReview(
     newBox: leitner.box,
     newStability: fsrs.fsrs.stability,
     newDue: active.due,
+    ...(meta.override ? { override: true } : {}),
   };
   await appendReviewLog(entry);
 
