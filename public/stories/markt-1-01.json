@@ -1,0 +1,198 @@
+{
+ "id": "markt-1-01",
+ "title": "Dukani",
+ "titleDe": "Im Laden",
+ "band": 1,
+ "topic": "Markt",
+ "emoji": "🛒",
+ "lemmas": [
+  "asubuhi",
+  "bei",
+  "duka",
+  "ghali",
+  "kidogo",
+  "kula",
+  "kununua",
+  "kusaidia",
+  "kutaka",
+  "kutoa",
+  "kwa",
+  "kwenda",
+  "leo",
+  "maziwa",
+  "mkate",
+  "moja",
+  "mtoto",
+  "mtu",
+  "na",
+  "ni",
+  "nyumba",
+  "nzuri",
+  "pesa",
+  "sana",
+  "sasa",
+  "tu"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Leo asubuhi Neema alikwenda dukani. Alitaka kununua mkate na maziwa.",
+   "de": "Heute Morgen ging Neema zum Laden. Sie wollte Brot und Milch kaufen."
+  },
+  {
+   "sw": "Bei ya mkate ni ghali sana leo. Neema ana pesa kidogo tu.",
+   "de": "Der Preis für Brot ist heute sehr hoch. Neema hat nur wenig Geld."
+  },
+  {
+   "sw": "Mtu wa duka alisaidia. Alitoa mkate mmoja kwa bei nzuri.",
+   "de": "Der Mann aus dem Laden half. Er gab ihr ein Brot zu einem guten Preis."
+  },
+  {
+   "sw": "Sasa Neema anakwenda nyumbani. Watoto wake wanataka kula.",
+   "de": "Jetzt geht Neema nach Hause. Ihre Kinder wollen essen."
+  }
+ ],
+ "glosses": {
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "neema": {
+   "lemma": "neema",
+   "de": "Neema (Name)",
+   "proper": true
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "sie ging"
+  },
+  "dukani": {
+   "lemma": "duka",
+   "de": "zum Laden, im Laden"
+  },
+  "alitaka": {
+   "lemma": "kutaka",
+   "de": "sie wollte"
+  },
+  "kununua": {
+   "lemma": "kununua",
+   "de": "kaufen"
+  },
+  "mkate": {
+   "lemma": "mkate",
+   "de": "Brot"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "maziwa": {
+   "lemma": "maziwa",
+   "de": "Milch"
+  },
+  "bei": {
+   "lemma": "bei",
+   "de": "Preis"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "ghali": {
+   "lemma": "ghali",
+   "de": "teuer"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "ana": {
+   "lemma": "na",
+   "de": "sie hat"
+  },
+  "pesa": {
+   "lemma": "pesa",
+   "de": "Geld"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "wenig, ein bisschen"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "mtu": {
+   "lemma": "mtu",
+   "de": "Mensch, Mann"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "duka": {
+   "lemma": "duka",
+   "de": "Laden"
+  },
+  "alisaidia": {
+   "lemma": "kusaidia",
+   "de": "er half"
+  },
+  "alitoa": {
+   "lemma": "kutoa",
+   "de": "er gab heraus"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein, eins"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "zu, für"
+  },
+  "nzuri": {
+   "lemma": "nzuri",
+   "de": "gut, schön"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "anakwenda": {
+   "lemma": "kwenda",
+   "de": "sie geht"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause, zu Hause"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihre, seine",
+   "structure": true
+  },
+  "wanataka": {
+   "lemma": "kutaka",
+   "de": "sie wollen"
+  },
+  "kula": {
+   "lemma": "kula",
+   "de": "essen"
+  }
+ },
+ "audio": null
+}

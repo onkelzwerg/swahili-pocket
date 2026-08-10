@@ -7,6 +7,12 @@ import { phraseOfDay } from "@/lib/seed";
 import { readReviewLog, countReviewsOnDay } from "@/lib/review-log";
 import { useSettings } from "@/lib/settings";
 import { pickComebackCards } from "@/lib/comeback";
+import {
+  getRetentionChecks,
+  isRetentionCheckAvailable,
+  retentionCandidates,
+  RETENTION_SIZE,
+} from "@/lib/retention-check";
 import { SpeakButton } from "@/components/SpeakButton";
 import { WeekGoal } from "@/components/WeekGoal";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -36,6 +42,7 @@ function Dashboard() {
   const [stats, setStats] = useState<UserStats | null>(null);
   const [vocab, setVocab] = useState<VocabEntry[]>([]);
   const [reviewsToday, setReviewsToday] = useState(0);
+  const [retentionDue, setRetentionDue] = useState(0);
   const settings = useSettings();
   // Spruch des Tages rotiert über den Tag im Jahr.
   const [phrase] = useState<{ sw: string; de: string }>(() => {
@@ -45,11 +52,19 @@ function Dashboard() {
   });
 
   useEffect(() => {
-    Promise.all([getStats(), getVocab(), readReviewLog()]).then(([s, v, log]) => {
-      setStats(s);
-      setVocab(v);
-      setReviewsToday(countReviewsOnDay(log));
-    });
+    Promise.all([getStats(), getVocab(), readReviewLog(), getRetentionChecks()]).then(
+      ([s, v, log, checks]) => {
+        setStats(s);
+        setVocab(v);
+        setReviewsToday(countReviewsOnDay(log));
+        const candidates = retentionCandidates(v);
+        setRetentionDue(
+          isRetentionCheckAvailable(candidates, checks)
+            ? Math.min(candidates.length, RETENTION_SIZE)
+            : 0,
+        );
+      },
+    );
   }, []);
 
   const due = dueToday(vocab);
@@ -95,6 +110,26 @@ function Dashboard() {
             </p>
             <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-forest-foreground">
               {T.home.comeback.cta} <ArrowRight className="h-4 w-4" />
+            </span>
+          </motion.div>
+        </Link>
+      )}
+
+      {/* Langzeit-Check: erscheint von selbst, wenn genug Karten lange genug
+          liegen. Eine besondere Karte für eine besondere Runde — kein
+          Dauerangebot, sonst wäre es eine normale Session mit anderem Namen. */}
+      {retentionDue > 0 && (
+        <Link to="/review" search={{ retention: true }}>
+          <motion.div
+            whileTap={{ scale: 0.97 }}
+            className="rounded-3xl border border-teal/40 bg-teal/10 p-5"
+          >
+            <p className="font-display text-xl font-bold">🔬 {T.retention.cardTitle}</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {T.retention.cardBody(retentionDue)}
+            </p>
+            <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-teal px-4 py-2 text-sm font-semibold text-teal-foreground">
+              {T.retention.cardCta} <ArrowRight className="h-4 w-4" />
             </span>
           </motion.div>
         </Link>

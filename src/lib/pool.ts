@@ -151,6 +151,57 @@ export async function pickFromPool(opts: { query?: string; count: number }): Pro
     .map((x) => x.e);
 }
 
+/**
+ * Gezielt bestimmte Lemmata aus dem Pool holen (W3.3): der Weg von einer
+ * gesperrten Geschichte zu genau den Wörtern, die noch fehlen.
+ * Reihenfolge der Anfrage bleibt erhalten; Unbekanntes fällt still raus.
+ */
+export async function findInPool(lemmas: string[]): Promise<PoolEntry[]> {
+  const pool = await loadPool();
+  const byLemma = new Map(pool.map((e) => [e.swahili.toLowerCase(), e]));
+  const seen = new Set<string>();
+  const found: PoolEntry[] = [];
+  for (const lemma of lemmas) {
+    const key = lemma.trim().toLowerCase();
+    const entry = byLemma.get(key);
+    if (entry && !seen.has(key)) {
+      seen.add(key);
+      found.push(entry);
+    }
+  }
+  return found;
+}
+
+/**
+ * Ein Wort als eigene Karte anlegen, das der Pool nicht kennt (W3.3).
+ * Beim Lesen begegnen einem Formen, die es als Vokabel nicht gibt — der
+ * Lernfluss soll daran nicht enden.
+ */
+export async function addPrivateCard(entry: {
+  swahili: string;
+  german: string;
+  examples?: Example[];
+}): Promise<{ added: boolean }> {
+  const mine = await getVocab();
+  if (mine.some((v) => v.swahili.toLowerCase() === entry.swahili.toLowerCase())) {
+    return { added: false };
+  }
+  const now = Date.now();
+  await addVocab({
+    id: newId(),
+    swahili: entry.swahili,
+    german: entry.german,
+    partOfSpeech: "other",
+    examples: entry.examples ?? [],
+    box: 1,
+    nextReview: now,
+    leitnerDue: now,
+    createdAt: now,
+    isPrivate: true,
+  });
+  return { added: true };
+}
+
 /** Pool-Eintrag als Lernkarte übernehmen. */
 export async function addPoolEntryToCards(entry: PoolEntry): Promise<{ added: boolean }> {
   const mine = await getVocab();

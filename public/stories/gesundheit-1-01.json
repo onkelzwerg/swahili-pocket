@@ -1,0 +1,162 @@
+{
+ "id": "gesundheit-1-01",
+ "title": "Amina na daktari",
+ "titleDe": "Amina und der Arzt",
+ "band": 1,
+ "topic": "Gesundheit",
+ "emoji": "🩺",
+ "lemmas": [
+  "afya",
+  "asubuhi",
+  "chakula",
+  "daktari",
+  "dawa",
+  "kazi",
+  "kufanya",
+  "kuhisi",
+  "kuhitaji",
+  "kula",
+  "kupumzika",
+  "kutaka",
+  "kutoa",
+  "kuweza",
+  "kwa",
+  "kwenda",
+  "leo",
+  "mapema",
+  "mbaya",
+  "mbili",
+  "ni",
+  "nzuri",
+  "sasa",
+  "siku"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Leo Amina anahisi mbaya. Hataki kula chakula.",
+   "de": "Heute fühlt Amina sich schlecht. Sie will nichts essen."
+  },
+  {
+   "sw": "Anakwenda kwa daktari mapema asubuhi.",
+   "de": "Sie geht früh am Morgen zum Arzt."
+  },
+  {
+   "sw": "Daktari anatoa dawa nzuri. Amina anahitaji kupumzika siku mbili.",
+   "de": "Der Arzt gibt ihr ein gutes Medikament. Amina muss sich zwei Tage ausruhen."
+  },
+  {
+   "sw": "Sasa afya yake ni nzuri. Anaweza kufanya kazi.",
+   "de": "Jetzt geht es ihr gut. Sie kann arbeiten."
+  }
+ ],
+ "glosses": {
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "amina": {
+   "lemma": "amina",
+   "de": "Amina (Name)",
+   "proper": true
+  },
+  "anahisi": {
+   "lemma": "kuhisi",
+   "de": "sie fühlt sich"
+  },
+  "mbaya": {
+   "lemma": "mbaya",
+   "de": "schlecht"
+  },
+  "hataki": {
+   "lemma": "kutaka",
+   "de": "sie will nicht"
+  },
+  "kula": {
+   "lemma": "kula",
+   "de": "essen"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "anakwenda": {
+   "lemma": "kwenda",
+   "de": "sie geht"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "zu"
+  },
+  "daktari": {
+   "lemma": "daktari",
+   "de": "Arzt"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen"
+  },
+  "anatoa": {
+   "lemma": "kutoa",
+   "de": "er gibt heraus"
+  },
+  "dawa": {
+   "lemma": "dawa",
+   "de": "Medikament"
+  },
+  "nzuri": {
+   "lemma": "nzuri",
+   "de": "gut"
+  },
+  "anahitaji": {
+   "lemma": "kuhitaji",
+   "de": "sie braucht"
+  },
+  "kupumzika": {
+   "lemma": "kupumzika",
+   "de": "sich ausruhen"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tage"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "afya": {
+   "lemma": "afya",
+   "de": "Gesundheit"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "anaweza": {
+   "lemma": "kuweza",
+   "de": "sie kann"
+  },
+  "kufanya": {
+   "lemma": "kufanya",
+   "de": "machen"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  }
+ },
+ "audio": null
+}

@@ -36,6 +36,11 @@ dist-ssr
 .env.*
 !.env.example
 
+# Planungsdokumente (Implementierungsplan + Handover je Welle) — Arbeitsstand
+# der Umsetzung, kein Bestandteil der App.
+IMPLEMENTATION-PLAN.md
+docs/handover-*.md
+
 # /design-sync (staged converter + regenerated output + machine state)
 .ds-sync/
 ds-bundle/

@@ -17,6 +17,9 @@ function ctx(patch: Partial<MilestoneContext> = {}): MilestoneContext {
     log: [],
     settings: { ...DEFAULT_SETTINGS },
     trainer: { ...EMPTY_TRAINER_STATS, ngeliCorrectByClass: {} },
+    stories: {},
+    retention: [],
+    dialogues: {},
     ...patch,
   };
 }
@@ -126,7 +129,43 @@ describe("Kompetenz-Meilensteine", () => {
     ).toContain("ngeli-master");
   });
 
-  it("hält den Geschichten-Meilenstein bis Welle 3 gesperrt", () => {
+  it("erkennt die erste gelesene Geschichte", () => {
+    expect(ids(findNewMilestones(ctx(), {}))).not.toContain("first-story");
+    expect(ids(findNewMilestones(ctx({ stories: { "markt-1-01": NOW } }), {}))).toContain(
+      "first-story",
+    );
+  });
+
+  it("vergibt den Ohne-Hilfe-Meilenstein nur für die gerade gelesene Geschichte", () => {
+    // Aus dem Gelesen-Status allein ist das nicht rekonstruierbar — der
+    // Meilenstein hängt am Ereignis, nicht am Bestand.
+    const read = ctx({ stories: { "markt-1-01": NOW } });
+    expect(ids(findNewMilestones(read, {}))).not.toContain("story-unaided");
+
+    const withHelp = ctx({ story: { unaided: false } });
+    expect(ids(findNewMilestones(withHelp, {}))).not.toContain("story-unaided");
+
+    const unaided = ctx({ story: { unaided: true } });
+    expect(ids(findNewMilestones(unaided, {}))).toContain("story-unaided");
+  });
+
+  it("verlangt für den Langzeit-Check eine Trefferquote von 80 %", () => {
+    const weak = ctx({ retention: [{ ts: NOW, correct: 7, total: 10 }] });
+    expect(ids(findNewMilestones(weak, {}))).not.toContain("retention-kept");
+
+    const strong = ctx({ retention: [{ ts: NOW, correct: 8, total: 10 }] });
+    expect(ids(findNewMilestones(strong, {}))).toContain("retention-kept");
+  });
+
+  it("vergibt den Dialog-Meilenstein nur für eine fehlerfreie Runde", () => {
+    const almost = ctx({ dialogues: { greet: { ts: NOW, firstTry: 3, total: 4 } } });
+    expect(ids(findNewMilestones(almost, {}))).not.toContain("dialogue-played");
+
+    const perfect = ctx({ dialogues: { greet: { ts: NOW, firstTry: 4, total: 4 } } });
+    expect(ids(findNewMilestones(perfect, {}))).toContain("dialogue-played");
+  });
+
+  it("meldet einen komplett gefüllten Stand vollständig", () => {
     const everything = ctx({
       vocab: Array.from({ length: 400 }, (_, i) => makeCard({ id: `c${i}`, maturedAt: NOW })),
       stats: {
@@ -141,7 +180,16 @@ describe("Kompetenz-Meilensteine", () => {
         bestStreakRun: 50,
         ngeliCorrectByClass: Object.fromEntries(NGELI_TRAINABLE_CLASSES.map((c) => [c, 99])),
       },
+      stories: { "markt-1-01": NOW },
+      story: { unaided: true },
+      retention: [{ ts: NOW, correct: 10, total: 10 }],
+      dialogues: { greet: { ts: NOW, firstTry: 4, total: 4 } },
+      log: [logEntry({ elapsedDays: 91, newBox: 5, grade: 3 })],
+      session: { total: 6, correct: 6, matured: 0, modes: { typed: { total: 6, correct: 6 } } },
     });
-    expect(ids(findNewMilestones(everything, {}))).not.toContain("first-story");
+    // "audio-session" verlangt 25 Log-Einträge — hier bewusst nicht erfüllt.
+    const reached = ids(findNewMilestones(everything, {}));
+    expect(reached).toHaveLength(MILESTONES.length - 1);
+    expect(reached).not.toContain("audio-session");
   });
 });

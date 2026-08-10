@@ -1,0 +1,171 @@
+{
+ "id": "reisen-2-01",
+ "title": "Safari ya basi",
+ "titleDe": "Die Busfahrt",
+ "band": 2,
+ "topic": "Reisen",
+ "emoji": "🚌",
+ "lemmas": [
+  "asubuhi",
+  "barabara",
+  "basi",
+  "furaha",
+  "jana",
+  "kufika",
+  "kunyesha",
+  "kuondoka",
+  "kusafiri",
+  "kutaka",
+  "kutembelea",
+  "kutoka",
+  "kuwa",
+  "kwa",
+  "lakini",
+  "mapema",
+  "mbaya",
+  "mji",
+  "mvua",
+  "na",
+  "njia",
+  "rafiki",
+  "salama",
+  "sana",
+  "stesheni"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jana Juma alisafiri kwa basi. Alitaka kutembelea rafiki yake mjini.",
+   "de": "Gestern reiste Juma mit dem Bus. Er wollte seinen Freund in der Stadt besuchen."
+  },
+  {
+   "sw": "Basi liliondoka mapema asubuhi kutoka stesheni.",
+   "de": "Der Bus fuhr früh am Morgen vom Bahnhof ab."
+  },
+  {
+   "sw": "Njiani mvua ilinyesha sana. Barabara ilikuwa mbaya.",
+   "de": "Unterwegs regnete es stark. Die Straße war schlecht."
+  },
+  {
+   "sw": "Lakini Juma alifika salama. Rafiki yake alikuwa na furaha.",
+   "de": "Aber Juma kam sicher an. Sein Freund freute sich."
+  }
+ ],
+ "glosses": {
+  "jana": {
+   "lemma": "jana",
+   "de": "gestern"
+  },
+  "juma": {
+   "lemma": "juma",
+   "de": "Juma (Name)",
+   "proper": true
+  },
+  "alisafiri": {
+   "lemma": "kusafiri",
+   "de": "er reiste"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit"
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "Bus"
+  },
+  "alitaka": {
+   "lemma": "kutaka",
+   "de": "er wollte"
+  },
+  "kutembelea": {
+   "lemma": "kutembelea",
+   "de": "besuchen"
+  },
+  "rafiki": {
+   "lemma": "rafiki",
+   "de": "Freund"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "sein",
+   "structure": true
+  },
+  "mjini": {
+   "lemma": "mji",
+   "de": "in der Stadt"
+  },
+  "liliondoka": {
+   "lemma": "kuondoka",
+   "de": "er fuhr ab"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen"
+  },
+  "kutoka": {
+   "lemma": "kutoka",
+   "de": "von, aus"
+  },
+  "stesheni": {
+   "lemma": "stesheni",
+   "de": "Bahnhof, Haltestelle"
+  },
+  "njiani": {
+   "lemma": "njia",
+   "de": "unterwegs, auf dem Weg"
+  },
+  "mvua": {
+   "lemma": "mvua",
+   "de": "Regen"
+  },
+  "ilinyesha": {
+   "lemma": "kunyesha",
+   "de": "es regnete"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr, stark"
+  },
+  "barabara": {
+   "lemma": "barabara",
+   "de": "Straße"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "mbaya": {
+   "lemma": "mbaya",
+   "de": "schlecht"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "er kam an"
+  },
+  "salama": {
+   "lemma": "salama",
+   "de": "sicher, wohlbehalten"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "mit"
+  },
+  "furaha": {
+   "lemma": "furaha",
+   "de": "Freude"
+  }
+ },
+ "audio": null
+}

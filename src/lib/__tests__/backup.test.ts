@@ -12,6 +12,9 @@ const { importBackup } = await import("../backup");
 const { getSettings, resetSettingsCache } = await import("../settings");
 const { resetMigrationState, DATA_VERSION } = await import("../migrations");
 const { resetReviewLogCache, readReviewLog } = await import("../review-log");
+const { resetStoriesReadCache } = await import("../stories");
+const { resetDialogueStatsCache } = await import("../dialogue-stats");
+const { resetRetentionCache } = await import("../retention-check");
 const { makeCard } = await import("./helpers");
 
 /** File-Stub: der Importer braucht nur .text(). */
@@ -24,6 +27,9 @@ beforeEach(() => {
   resetSettingsCache();
   resetMigrationState();
   resetReviewLogCache();
+  resetStoriesReadCache();
+  resetDialogueStatsCache();
+  resetRetentionCache();
 });
 
 describe("importBackup", () => {
@@ -92,6 +98,33 @@ describe("importBackup", () => {
     expect(db.get("retention:checks")).toEqual([{ ts: 1, correct: 8, total: 10 }]);
     // v2 ist schon migriert: leitnerDue bleibt unangetastet.
     expect((db.get("vocab:list") as VocabEntry[])[0].leitnerDue).toBe(777);
+  });
+
+  it("stellt aus einem v4-Backup Geschichten und Dialoge wieder her", async () => {
+    await importBackup(
+      fileOf({
+        app: "Swahili Pocket",
+        version: 4,
+        vocab: [makeCard({ id: "a" })],
+        storiesRead: { "markt-1-01": 4242 },
+        dialogueStats: { greet: { ts: 99, firstTry: 3, total: 3 } },
+        retentionChecks: [{ ts: 7, correct: 12, total: 15 }],
+      }),
+    );
+
+    expect(db.get("stories:read")).toEqual({ "markt-1-01": 4242 });
+    expect(db.get("dialogues:played")).toEqual({ greet: { ts: 99, firstTry: 3, total: 3 } });
+    expect(db.get("retention:checks")).toEqual([{ ts: 7, correct: 12, total: 15 }]);
+  });
+
+  it("füllt die Welle-3-Schlüssel bei älteren Backups mit Defaults", async () => {
+    // Ein v3-Backup kennt weder Geschichten noch Dialoge — Import darf trotzdem
+    // nicht scheitern und muss die Schlüssel leer anlegen (Leitplanke 2).
+    await importBackup(fileOf({ app: "Swahili Pocket", version: 3, vocab: [makeCard()] }));
+
+    expect(db.get("stories:read")).toEqual({});
+    expect(db.get("dialogues:played")).toEqual({});
+    expect(db.get("retention:checks")).toEqual([]);
   });
 
   it("lehnt eine Datei ohne Vokabelbestand ab", async () => {

@@ -4,6 +4,9 @@ import { getVocab, getStats } from "./store";
 import { readReviewLog } from "./review-log";
 import { getSettings, type AppSettings } from "./settings";
 import { getTrainerStats, type TrainerStats } from "./trainer-stats";
+import { getStoriesRead, type StoriesRead } from "./stories";
+import { getRetentionChecks, type RetentionCheckEntry } from "./retention-check";
+import { getDialogueStats, type DialogueStats } from "./dialogue-stats";
 import { NGELI_TRAINABLE_CLASSES } from "./morphology";
 import { T } from "@/config/translations";
 
@@ -27,13 +30,24 @@ export interface SessionSummary {
   modes: Partial<Record<ExerciseModeId, { total: number; correct: number }>>;
 }
 
-export interface MilestoneContext {
+/** Was gerade abgeschlossen wurde — nur für die Prüfung dieser einen Runde. */
+export interface MilestoneEvent {
+  session?: SessionSummary;
+  /** Eine gerade fertig gelesene Geschichte (W3.3). */
+  story?: { unaided: boolean };
+  /** Ein gerade beendetes Dialog-Rollenspiel (W3.4). */
+  dialogue?: { firstTry: number; total: number };
+}
+
+export interface MilestoneContext extends MilestoneEvent {
   vocab: VocabEntry[];
   stats: UserStats;
   log: ReviewLogEntry[];
   settings: AppSettings;
   trainer: TrainerStats;
-  session?: SessionSummary;
+  stories: StoriesRead;
+  retention: RetentionCheckEntry[];
+  dialogues: DialogueStats;
 }
 
 export interface Milestone {
@@ -55,6 +69,8 @@ const LONG_RECALL_DAYS = 80;
 export const NGELI_MASTERY_PER_CLASS = 10;
 /** Mindestumfang einer getippten Runde, damit "fehlerfrei" etwas heißt. */
 const TYPED_PERFECT_MIN = 5;
+/** Ab dieser Trefferquote gilt ein Langzeit-Check als bestanden. */
+const RETENTION_KEPT_RATIO = 0.8;
 
 export const MILESTONES: Milestone[] = [
   {
@@ -134,9 +150,29 @@ export const MILESTONES: Milestone[] = [
     id: "first-story",
     emoji: "📖",
     ...T.milestones.firstStory,
-    // Geschichten kommen erst in Welle 3 — bis dahin bleibt der Meilenstein
-    // sichtbar gesperrt, statt ihn später nachträglich einzuführen.
-    check: () => false,
+    check: ({ stories }) => Object.keys(stories).length >= 1,
+  },
+  {
+    id: "story-unaided",
+    emoji: "🔍",
+    ...T.milestones.storyUnaided,
+    // Sessionbezogen: ob die Übersetzung offen war, weiß nur der Reader —
+    // aus dem Gelesen-Status ist das nicht zu rekonstruieren.
+    check: ({ story }) => story?.unaided === true,
+  },
+  {
+    id: "retention-kept",
+    emoji: "🔬",
+    ...T.milestones.retentionKept,
+    check: ({ retention }) =>
+      retention.some((c) => c.total > 0 && c.correct / c.total >= RETENTION_KEPT_RATIO),
+  },
+  {
+    id: "dialogue-played",
+    emoji: "🎭",
+    ...T.milestones.dialoguePlayed,
+    check: ({ dialogues }) =>
+      Object.values(dialogues).some((run) => run.total > 0 && run.firstTry === run.total),
   },
 ];
 
@@ -171,17 +207,24 @@ export function findNewMilestones(ctx: MilestoneContext, achieved: AchievedMap):
  * ein Meilenstein-Moment darf den Lernfluss nicht unterbrechen.
  * Gibt die neu erreichten Meilensteine zurück (der Screen zeigt einen davon).
  */
-export async function checkMilestones(session?: SessionSummary): Promise<Milestone[]> {
-  const [vocab, stats, log, settings, trainer, achieved] = await Promise.all([
-    getVocab(),
-    getStats(),
-    readReviewLog(),
-    getSettings(),
-    getTrainerStats(),
-    getAchieved(),
-  ]);
+export async function checkMilestones(event: MilestoneEvent = {}): Promise<Milestone[]> {
+  const [vocab, stats, log, settings, trainer, stories, retention, dialogues, achieved] =
+    await Promise.all([
+      getVocab(),
+      getStats(),
+      readReviewLog(),
+      getSettings(),
+      getTrainerStats(),
+      getStoriesRead(),
+      getRetentionChecks(),
+      getDialogueStats(),
+      getAchieved(),
+    ]);
 
-  const fresh = findNewMilestones({ vocab, stats, log, settings, trainer, session }, achieved);
+  const fresh = findNewMilestones(
+    { vocab, stats, log, settings, trainer, stories, retention, dialogues, ...event },
+    achieved,
+  );
   if (fresh.length > 0) {
     const now = Date.now();
     await writeAchieved({ ...achieved, ...Object.fromEntries(fresh.map((m) => [m.id, now])) });

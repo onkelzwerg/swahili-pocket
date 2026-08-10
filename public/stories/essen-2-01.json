@@ -1,0 +1,187 @@
+{
+ "id": "essen-2-01",
+ "title": "Mchuzi wa samaki",
+ "titleDe": "Fisch mit Soße",
+ "band": 2,
+ "topic": "Essen",
+ "emoji": "🍲",
+ "lemmas": [
+  "chakula",
+  "duka",
+  "familia",
+  "furaha",
+  "haraka",
+  "jioni",
+  "jumamosi",
+  "kisu",
+  "kuisha",
+  "kukata",
+  "kula",
+  "kununua",
+  "kupika",
+  "kusema",
+  "kuwa",
+  "kwa",
+  "kwenda",
+  "mama",
+  "mboga",
+  "mchuzi",
+  "moja",
+  "mtoto",
+  "mzuri",
+  "na",
+  "ni",
+  "nyanya",
+  "nyumba",
+  "pamoja",
+  "saa",
+  "samaki",
+  "sana"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jumamosi mama alikwenda dukani. Alinunua samaki, nyanya na mboga.",
+   "de": "Am Samstag ging die Mutter zum Laden. Sie kaufte Fisch, Tomaten und Gemüse."
+  },
+  {
+   "sw": "Nyumbani alikata nyanya kwa kisu. Alipika mchuzi kwa saa moja.",
+   "de": "Zu Hause schnitt sie die Tomaten mit dem Messer. Eine Stunde lang kochte sie die Soße."
+  },
+  {
+   "sw": "Watoto walikuwa na furaha. Walisema chakula ni kizuri sana.",
+   "de": "Die Kinder freuten sich. Sie sagten, das Essen sei sehr gut."
+  },
+  {
+   "sw": "Jioni familia ilikula pamoja. Mchuzi uliisha haraka.",
+   "de": "Am Abend aß die Familie zusammen. Die Soße war schnell aufgegessen."
+  }
+ ],
+ "glosses": {
+  "jumamosi": {
+   "lemma": "jumamosi",
+   "de": "Samstag"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter"
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "sie ging"
+  },
+  "dukani": {
+   "lemma": "duka",
+   "de": "zum Laden"
+  },
+  "alinunua": {
+   "lemma": "kununua",
+   "de": "sie kaufte"
+  },
+  "samaki": {
+   "lemma": "samaki",
+   "de": "Fisch"
+  },
+  "nyanya": {
+   "lemma": "nyanya",
+   "de": "Tomaten"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "mboga": {
+   "lemma": "mboga",
+   "de": "Gemüse"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "zu Hause"
+  },
+  "alikata": {
+   "lemma": "kukata",
+   "de": "sie schnitt"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit, für"
+  },
+  "kisu": {
+   "lemma": "kisu",
+   "de": "Messer"
+  },
+  "alipika": {
+   "lemma": "kupika",
+   "de": "sie kochte"
+  },
+  "mchuzi": {
+   "lemma": "mchuzi",
+   "de": "Soße"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunde"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "walikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "furaha": {
+   "lemma": "furaha",
+   "de": "Freude"
+  },
+  "walisema": {
+   "lemma": "kusema",
+   "de": "sie sagten"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "kizuri": {
+   "lemma": "mzuri",
+   "de": "gut (Ki-Vi-Klasse)"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "Abend"
+  },
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "ilikula": {
+   "lemma": "kula",
+   "de": "sie aß"
+  },
+  "pamoja": {
+   "lemma": "pamoja",
+   "de": "zusammen"
+  },
+  "uliisha": {
+   "lemma": "kuisha",
+   "de": "sie ging zu Ende"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  }
+ },
+ "audio": null
+}

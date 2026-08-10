@@ -12,14 +12,18 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
 import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
 import { Route as AuthenticatedTrainerRouteImport } from './routes/_authenticated/trainer'
+import { Route as AuthenticatedStoriesRouteImport } from './routes/_authenticated/stories'
 import { Route as AuthenticatedReviewRouteImport } from './routes/_authenticated/review'
+import { Route as AuthenticatedLibraryRouteImport } from './routes/_authenticated/library'
 import { Route as AuthenticatedLexiconRouteImport } from './routes/_authenticated/lexicon'
 import { Route as AuthenticatedDialoguesRouteImport } from './routes/_authenticated/dialogues'
 import { Route as AuthenticatedClassesRouteImport } from './routes/_authenticated/classes'
 import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
 import { Route as AuthenticatedWordsTodayRouteImport } from './routes/_authenticated/words.today'
 import { Route as AuthenticatedWordsMasteredRouteImport } from './routes/_authenticated/words.mastered'
+import { Route as AuthenticatedStoriesStoryIdRouteImport } from './routes/_authenticated/stories_.$storyId'
 import { Route as AuthenticatedLexiconNewRouteImport } from './routes/_authenticated/lexicon_.new'
+import { Route as AuthenticatedDialoguesDialogueIdRouteImport } from './routes/_authenticated/dialogues_.$dialogueId'
 
 const AuthenticatedRoute = AuthenticatedRouteImport.update({
   id: '/_authenticated',
@@ -35,9 +39,19 @@ const AuthenticatedTrainerRoute = AuthenticatedTrainerRouteImport.update({
   path: '/trainer',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
+const AuthenticatedStoriesRoute = AuthenticatedStoriesRouteImport.update({
+  id: '/stories',
+  path: '/stories',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
 const AuthenticatedReviewRoute = AuthenticatedReviewRouteImport.update({
   id: '/review',
   path: '/review',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedLibraryRoute = AuthenticatedLibraryRouteImport.update({
+  id: '/library',
+  path: '/library',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
 const AuthenticatedLexiconRoute = AuthenticatedLexiconRouteImport.update({
@@ -71,11 +85,23 @@ const AuthenticatedWordsMasteredRoute =
     path: '/words/mastered',
     getParentRoute: () => AuthenticatedRoute,
   } as any)
+const AuthenticatedStoriesStoryIdRoute =
+  AuthenticatedStoriesStoryIdRouteImport.update({
+    id: '/stories_/$storyId',
+    path: '/stories/$storyId',
+    getParentRoute: () => AuthenticatedRoute,
+  } as any)
 const AuthenticatedLexiconNewRoute = AuthenticatedLexiconNewRouteImport.update({
   id: '/lexicon_/new',
   path: '/lexicon/new',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
+const AuthenticatedDialoguesDialogueIdRoute =
+  AuthenticatedDialoguesDialogueIdRouteImport.update({
+    id: '/dialogues_/$dialogueId',
+    path: '/dialogues/$dialogueId',
+    getParentRoute: () => AuthenticatedRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof AuthenticatedIndexRoute
@@ -83,9 +109,13 @@ export interface FileRoutesByFullPath {
   '/classes': typeof AuthenticatedClassesRoute
   '/dialogues': typeof AuthenticatedDialoguesRoute
   '/lexicon': typeof AuthenticatedLexiconRoute
+  '/library': typeof AuthenticatedLibraryRoute
   '/review': typeof AuthenticatedReviewRoute
+  '/stories': typeof AuthenticatedStoriesRoute
   '/trainer': typeof AuthenticatedTrainerRoute
+  '/dialogues/$dialogueId': typeof AuthenticatedDialoguesDialogueIdRoute
   '/lexicon/new': typeof AuthenticatedLexiconNewRoute
+  '/stories/$storyId': typeof AuthenticatedStoriesStoryIdRoute
   '/words/mastered': typeof AuthenticatedWordsMasteredRoute
   '/words/today': typeof AuthenticatedWordsTodayRoute
 }
@@ -94,10 +124,14 @@ export interface FileRoutesByTo {
   '/classes': typeof AuthenticatedClassesRoute
   '/dialogues': typeof AuthenticatedDialoguesRoute
   '/lexicon': typeof AuthenticatedLexiconRoute
+  '/library': typeof AuthenticatedLibraryRoute
   '/review': typeof AuthenticatedReviewRoute
+  '/stories': typeof AuthenticatedStoriesRoute
   '/trainer': typeof AuthenticatedTrainerRoute
   '/': typeof AuthenticatedIndexRoute
+  '/dialogues/$dialogueId': typeof AuthenticatedDialoguesDialogueIdRoute
   '/lexicon/new': typeof AuthenticatedLexiconNewRoute
+  '/stories/$storyId': typeof AuthenticatedStoriesStoryIdRoute
   '/words/mastered': typeof AuthenticatedWordsMasteredRoute
   '/words/today': typeof AuthenticatedWordsTodayRoute
 }
@@ -108,10 +142,14 @@ export interface FileRoutesById {
   '/_authenticated/classes': typeof AuthenticatedClassesRoute
   '/_authenticated/dialogues': typeof AuthenticatedDialoguesRoute
   '/_authenticated/lexicon': typeof AuthenticatedLexiconRoute
+  '/_authenticated/library': typeof AuthenticatedLibraryRoute
   '/_authenticated/review': typeof AuthenticatedReviewRoute
+  '/_authenticated/stories': typeof AuthenticatedStoriesRoute
   '/_authenticated/trainer': typeof AuthenticatedTrainerRoute
   '/_authenticated/': typeof AuthenticatedIndexRoute
+  '/_authenticated/dialogues_/$dialogueId': typeof AuthenticatedDialoguesDialogueIdRoute
   '/_authenticated/lexicon_/new': typeof AuthenticatedLexiconNewRoute
+  '/_authenticated/stories_/$storyId': typeof AuthenticatedStoriesStoryIdRoute
   '/_authenticated/words/mastered': typeof AuthenticatedWordsMasteredRoute
   '/_authenticated/words/today': typeof AuthenticatedWordsTodayRoute
 }
@@ -123,9 +161,13 @@ export interface FileRouteTypes {
     | '/classes'
     | '/dialogues'
     | '/lexicon'
+    | '/library'
     | '/review'
+    | '/stories'
     | '/trainer'
+    | '/dialogues/$dialogueId'
     | '/lexicon/new'
+    | '/stories/$storyId'
     | '/words/mastered'
     | '/words/today'
   fileRoutesByTo: FileRoutesByTo
@@ -134,10 +176,14 @@ export interface FileRouteTypes {
     | '/classes'
     | '/dialogues'
     | '/lexicon'
+    | '/library'
     | '/review'
+    | '/stories'
     | '/trainer'
     | '/'
+    | '/dialogues/$dialogueId'
     | '/lexicon/new'
+    | '/stories/$storyId'
     | '/words/mastered'
     | '/words/today'
   id:
@@ -147,10 +193,14 @@ export interface FileRouteTypes {
     | '/_authenticated/classes'
     | '/_authenticated/dialogues'
     | '/_authenticated/lexicon'
+    | '/_authenticated/library'
     | '/_authenticated/review'
+    | '/_authenticated/stories'
     | '/_authenticated/trainer'
     | '/_authenticated/'
+    | '/_authenticated/dialogues_/$dialogueId'
     | '/_authenticated/lexicon_/new'
+    | '/_authenticated/stories_/$storyId'
     | '/_authenticated/words/mastered'
     | '/_authenticated/words/today'
   fileRoutesById: FileRoutesById
@@ -182,11 +232,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedTrainerRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
+    '/_authenticated/stories': {
+      id: '/_authenticated/stories'
+      path: '/stories'
+      fullPath: '/stories'
+      preLoaderRoute: typeof AuthenticatedStoriesRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
     '/_authenticated/review': {
       id: '/_authenticated/review'
       path: '/review'
       fullPath: '/review'
       preLoaderRoute: typeof AuthenticatedReviewRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/library': {
+      id: '/_authenticated/library'
+      path: '/library'
+      fullPath: '/library'
+      preLoaderRoute: typeof AuthenticatedLibraryRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
     '/_authenticated/lexicon': {
@@ -231,11 +295,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedWordsMasteredRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
+    '/_authenticated/stories_/$storyId': {
+      id: '/_authenticated/stories_/$storyId'
+      path: '/stories/$storyId'
+      fullPath: '/stories/$storyId'
+      preLoaderRoute: typeof AuthenticatedStoriesStoryIdRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
     '/_authenticated/lexicon_/new': {
       id: '/_authenticated/lexicon_/new'
       path: '/lexicon/new'
       fullPath: '/lexicon/new'
       preLoaderRoute: typeof AuthenticatedLexiconNewRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/dialogues_/$dialogueId': {
+      id: '/_authenticated/dialogues_/$dialogueId'
+      path: '/dialogues/$dialogueId'
+      fullPath: '/dialogues/$dialogueId'
+      preLoaderRoute: typeof AuthenticatedDialoguesDialogueIdRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
   }
@@ -246,10 +324,14 @@ interface AuthenticatedRouteChildren {
   AuthenticatedClassesRoute: typeof AuthenticatedClassesRoute
   AuthenticatedDialoguesRoute: typeof AuthenticatedDialoguesRoute
   AuthenticatedLexiconRoute: typeof AuthenticatedLexiconRoute
+  AuthenticatedLibraryRoute: typeof AuthenticatedLibraryRoute
   AuthenticatedReviewRoute: typeof AuthenticatedReviewRoute
+  AuthenticatedStoriesRoute: typeof AuthenticatedStoriesRoute
   AuthenticatedTrainerRoute: typeof AuthenticatedTrainerRoute
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
+  AuthenticatedDialoguesDialogueIdRoute: typeof AuthenticatedDialoguesDialogueIdRoute
   AuthenticatedLexiconNewRoute: typeof AuthenticatedLexiconNewRoute
+  AuthenticatedStoriesStoryIdRoute: typeof AuthenticatedStoriesStoryIdRoute
   AuthenticatedWordsMasteredRoute: typeof AuthenticatedWordsMasteredRoute
   AuthenticatedWordsTodayRoute: typeof AuthenticatedWordsTodayRoute
 }
@@ -259,10 +341,14 @@ const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
   AuthenticatedClassesRoute: AuthenticatedClassesRoute,
   AuthenticatedDialoguesRoute: AuthenticatedDialoguesRoute,
   AuthenticatedLexiconRoute: AuthenticatedLexiconRoute,
+  AuthenticatedLibraryRoute: AuthenticatedLibraryRoute,
   AuthenticatedReviewRoute: AuthenticatedReviewRoute,
+  AuthenticatedStoriesRoute: AuthenticatedStoriesRoute,
   AuthenticatedTrainerRoute: AuthenticatedTrainerRoute,
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
+  AuthenticatedDialoguesDialogueIdRoute: AuthenticatedDialoguesDialogueIdRoute,
   AuthenticatedLexiconNewRoute: AuthenticatedLexiconNewRoute,
+  AuthenticatedStoriesStoryIdRoute: AuthenticatedStoriesStoryIdRoute,
   AuthenticatedWordsMasteredRoute: AuthenticatedWordsMasteredRoute,
   AuthenticatedWordsTodayRoute: AuthenticatedWordsTodayRoute,
 }

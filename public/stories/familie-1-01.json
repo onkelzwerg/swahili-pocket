@@ -1,0 +1,180 @@
+{
+ "id": "familie-1-01",
+ "title": "Familia ya Juma",
+ "titleDe": "Jumas Familie",
+ "band": 1,
+ "topic": "Familie",
+ "emoji": "🏡",
+ "lemmas": [
+  "chakula",
+  "familia",
+  "jioni",
+  "katika",
+  "kazi",
+  "kesho",
+  "kila",
+  "kubwa",
+  "kucheza",
+  "kuishi",
+  "kula",
+  "kulala",
+  "kupenda",
+  "kwa",
+  "mapema",
+  "mji",
+  "moja",
+  "mtoto",
+  "mzuri",
+  "na",
+  "ni",
+  "pamoja",
+  "saa",
+  "sana",
+  "siku",
+  "usiku"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Juma ana familia kubwa. Wanaishi katika mji mzuri.",
+   "de": "Juma hat eine große Familie. Sie leben in einer schönen Stadt."
+  },
+  {
+   "sw": "Kila jioni familia inakula pamoja. Chakula ni kizuri sana.",
+   "de": "Jeden Abend isst die Familie zusammen. Das Essen ist sehr gut."
+  },
+  {
+   "sw": "Mtoto anapenda kucheza. Anacheza kila siku kwa saa moja.",
+   "de": "Das Kind spielt gern. Es spielt jeden Tag eine Stunde lang."
+  },
+  {
+   "sw": "Usiku familia inalala mapema. Kesho ni siku ya kazi.",
+   "de": "Nachts geht die Familie früh schlafen. Morgen ist ein Arbeitstag."
+  }
+ ],
+ "glosses": {
+  "juma": {
+   "lemma": "juma",
+   "de": "Juma (Name)",
+   "proper": true
+  },
+  "ana": {
+   "lemma": "na",
+   "de": "er hat"
+  },
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "wanaishi": {
+   "lemma": "kuishi",
+   "de": "sie leben"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "mji": {
+   "lemma": "mji",
+   "de": "Stadt"
+  },
+  "mzuri": {
+   "lemma": "mzuri",
+   "de": "schön, gut"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jeder, jede, jedes"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "Abend"
+  },
+  "inakula": {
+   "lemma": "kula",
+   "de": "sie isst"
+  },
+  "pamoja": {
+   "lemma": "pamoja",
+   "de": "zusammen"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "kizuri": {
+   "lemma": "mzuri",
+   "de": "gut (Ki-Vi-Klasse)"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "anapenda": {
+   "lemma": "kupenda",
+   "de": "es mag, liebt"
+  },
+  "kucheza": {
+   "lemma": "kucheza",
+   "de": "spielen"
+  },
+  "anacheza": {
+   "lemma": "kucheza",
+   "de": "es spielt"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, pro"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunde"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht"
+  },
+  "inalala": {
+   "lemma": "kulala",
+   "de": "sie schläft"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "kesho": {
+   "lemma": "kesho",
+   "de": "morgen"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  }
+ },
+ "audio": null
+}

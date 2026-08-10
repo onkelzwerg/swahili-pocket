@@ -3,10 +3,17 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import confetti from "canvas-confetti";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 import { ArrowLeft, Flame, Sparkles } from "lucide-react";
 import { getVocab, getStats } from "@/lib/store";
 import { applyReview } from "@/lib/srs";
 import { pickComebackCards } from "@/lib/comeback";
+import {
+  averagePauseDays,
+  pickRetentionCards,
+  recordRetentionCheck,
+  type RetentionCheckEntry,
+} from "@/lib/retention-check";
 import { buildSession, type SessionItem } from "@/lib/session";
 import { checkMilestones, type Milestone, type SessionSummary } from "@/lib/milestones";
 import { speak, createUnlockedAudio } from "@/lib/tts";
@@ -31,11 +38,24 @@ export const Route = createFileRoute("/_authenticated/review")({
     ],
   }),
   // ?comeback=true → Mini-Runde nach längerer Pause (siehe lib/comeback.ts).
-  validateSearch: (search: Record<string, unknown>): { comeback?: boolean } => ({
+  // ?retention=true → Langzeit-Check (siehe lib/retention-check.ts).
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): { comeback?: boolean; retention?: boolean } => ({
     comeback: search.comeback === true || search.comeback === "true" ? true : undefined,
+    retention: search.retention === true || search.retention === "true" ? true : undefined,
   }),
   component: Review,
 });
+
+/**
+ * Der Langzeit-Check läuft nur als Karte oder Tippen: gemessen wird der Abruf
+ * nach langer Pause, nicht die Auswahl aus vier Optionen.
+ */
+const RETENTION_MODES: Partial<Record<SessionModeId, boolean>> = {
+  audio: false,
+  cloze: false,
+};
 
 /** Modus-Id → Komponente. Neue Modi tragen sich hier und in der Registry ein. */
 const EXERCISE_COMPONENTS: Record<SessionModeId, (props: ExerciseProps) => React.ReactNode> = {
@@ -57,9 +77,11 @@ const CONFETTI_COLORS = [
  * das macht ausschließlich `applyReview()`.
  */
 function Review() {
-  const { comeback } = Route.useSearch();
+  const { comeback, retention } = Route.useSearch();
   const settings = useSettings();
   const [items, setItems] = useState<SessionItem[]>([]);
+  const [pauseDays, setPauseDays] = useState(0);
+  const [checks, setChecks] = useState<RetentionCheckEntry[]>([]);
   const [vocab, setVocab] = useState<VocabEntry[]>([]);
   const [idx, setIdx] = useState(0);
   const [streak, setStreak] = useState(0);
@@ -73,11 +95,22 @@ function Review() {
   // Antworten je Modus — Grundlage für sessionbezogene Meilensteine.
   const modeStatsRef = useRef<SessionSummary["modes"]>({});
 
+  /** Die Optionen dieser Runde: normal, Comeback oder Langzeit-Check. */
+  function sessionOptions(all: VocabEntry[]) {
+    if (retention) {
+      const cards = pickRetentionCards(all);
+      setPauseDays(averagePauseDays(cards));
+      return { cards, enabledModes: RETENTION_MODES };
+    }
+    if (comeback) return { cards: pickComebackCards(all) };
+    return {};
+  }
+
   function loadSession() {
     void (async () => {
       const all = await getVocab();
       setVocab(all);
-      const built = await buildSession(comeback ? { cards: pickComebackCards(all) } : {});
+      const built = await buildSession(sessionOptions(all));
       setItems(built);
       setIdx(0);
       setCorrect(0);
@@ -95,10 +128,11 @@ function Review() {
       setVocab(all);
       setStreak(stats.streak);
       setWeekDaysDone(stats.weekDays.length);
-      setItems(await buildSession(comeback ? { cards: pickComebackCards(all) } : {}));
+      setItems(await buildSession(sessionOptions(all)));
     })();
     // Kein TTS-Prefetch – Audio wird erst beim Abspielen geladen.
-  }, [comeback]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [comeback, retention]);
 
   // Body-Scroll während des Reviews sperren, damit PWA/Browser
   // nicht versucht zu scrollen (Pull-to-Refresh, Adressleisten-Resize)
@@ -188,12 +222,23 @@ function Review() {
       // Meilensteine erst nach der letzten Antwort prüfen — nie mitten
       // in der Runde (kein Unterbrechen des Flows).
       if (!isLast) return;
+      // Der Langzeit-Check wird festgehalten, bevor die Meilensteine laufen —
+      // „Es bleibt" prüft genau dieses Ergebnis.
+      if (retention) {
+        try {
+          setChecks(await recordRetentionCheck({ correct: nextCorrect, total }));
+        } catch (e) {
+          console.error("[review] retention check failed", e);
+        }
+      }
       try {
         const fresh = await checkMilestones({
-          total,
-          correct: nextCorrect,
-          matured: matured + maturedNow,
-          modes: modeStatsRef.current,
+          session: {
+            total,
+            correct: nextCorrect,
+            matured: matured + maturedNow,
+            modes: modeStatsRef.current,
+          },
         });
         if (fresh.length > 0) setMilestone(fresh[0]);
       } catch (e) {
@@ -216,6 +261,18 @@ function Review() {
           onSaved={loadSession}
         />
       </>
+    );
+  }
+
+  if (done && retention) {
+    return (
+      <RetentionSummaryScreen
+        correct={correct}
+        total={total}
+        pauseDays={pauseDays}
+        checks={checks}
+        milestone={milestone}
+      />
     );
   }
 
@@ -378,6 +435,99 @@ function SessionSummaryScreen({
           {T.review.done.again}
         </button>
       </div>
+    </div>
+  );
+}
+
+/**
+ * Ergebnis des Langzeit-Checks (W3.5). Die Kernaussage steht als ein Satz da:
+ * eine Prozentzahl und die mittlere Pause. Der Verlauf darunter zeigt, ob sie
+ * über die Checks hinweg hält — das ist die eigentliche Nachricht.
+ */
+function RetentionSummaryScreen({
+  correct,
+  total,
+  pauseDays,
+  checks,
+  milestone,
+}: {
+  correct: number;
+  total: number;
+  pauseDays: number;
+  checks: RetentionCheckEntry[];
+  milestone: Milestone | null;
+}) {
+  const percent = total === 0 ? 0 : Math.round((correct / total) * 100);
+  const history = checks.slice(-8).map((c) => ({
+    label: new Date(c.ts).toLocaleDateString("de-DE", { month: "short", year: "2-digit" }),
+    percent: c.total === 0 ? 0 : Math.round((c.correct / c.total) * 100),
+  }));
+
+  return (
+    <div className="flex min-h-[80vh] flex-col items-center justify-center gap-3 px-6 text-center">
+      <div className="text-6xl">🔬</div>
+      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+        {T.retention.eyebrow}
+      </p>
+      <h1 className="font-display text-6xl font-bold leading-none text-primary">
+        {T.retention.done.headline(percent)}
+      </h1>
+      <p className="max-w-[32ch] text-balance text-sm text-muted-foreground">
+        {T.retention.done.body(pauseDays)}
+      </p>
+      <p className="text-sm font-medium">{T.review.done.accuracy(correct, total)}</p>
+
+      {history.length > 1 && (
+        <div className="mt-3 w-full max-w-sm rounded-3xl border border-border bg-card p-4">
+          <p className="mb-2 text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            {T.retention.done.historyHeading}
+          </p>
+          <ResponsiveContainer width="100%" height={140}>
+            <BarChart data={history} margin={{ top: 4, right: 4, bottom: 0, left: 0 }}>
+              <XAxis dataKey="label" tickLine={false} axisLine={false} fontSize={10} />
+              {/* Nur drei Ticks: mehr passt in 375 px nicht, ohne abzuschneiden. */}
+              <YAxis
+                domain={[0, 100]}
+                ticks={[0, 50, 100]}
+                tickFormatter={(v: number) => `${v}%`}
+                tickLine={false}
+                axisLine={false}
+                fontSize={10}
+                width={34}
+              />
+              <Bar
+                dataKey="percent"
+                name={T.retention.done.chartLabel}
+                fill={APP_CONFIG.primaryColor}
+                radius={[4, 4, 0, 0]}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+
+      {milestone && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.15, type: "spring" }}
+          className="mt-2 w-full max-w-sm rounded-3xl border border-ochre/40 bg-ochre/10 p-5"
+        >
+          <p className="text-[10px] font-bold uppercase tracking-wider text-ochre-foreground">
+            {T.milestones.unlockedHeadline}
+          </p>
+          <div className="mt-2 text-4xl">{milestone.emoji}</div>
+          <h2 className="mt-1 font-display text-xl font-bold">{milestone.title}</h2>
+          <p className="mt-1 text-sm text-muted-foreground">{milestone.description}</p>
+        </motion.div>
+      )}
+
+      <Link
+        to="/"
+        className="mt-4 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
+      >
+        {T.review.done.back}
+      </Link>
     </div>
   );
 }

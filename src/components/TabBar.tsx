@@ -1,22 +1,15 @@
 import { Link } from "@tanstack/react-router";
-import {
-  Home,
-  BookOpen,
-  Layers,
-  MessagesSquare,
-  GraduationCap,
-  CloudOff,
-  User,
-} from "lucide-react";
+import { Home, BookOpen, Layers, Library, CloudOff, User } from "lucide-react";
 import { useSyncExternalStore } from "react";
 import { T } from "@/config/translations";
 
+// Fünf Tabs (W3.6). Dialoge und Ngeli sind in die Bibliothek gewandert —
+// als Routen bleiben sie bestehen, sie haben nur keinen eigenen Tab mehr.
 const tabs = [
   { to: "/", label: T.nav.home, icon: Home },
-  { to: "/lexicon", label: T.nav.lexicon, icon: BookOpen },
   { to: "/review", label: T.nav.review, icon: Layers },
-  { to: "/dialogues", label: T.nav.dialogues, icon: MessagesSquare },
-  { to: "/classes", label: T.nav.classes, icon: GraduationCap },
+  { to: "/lexicon", label: T.nav.lexicon, icon: BookOpen },
+  { to: "/library", label: T.nav.library, icon: Library },
   { to: "/account", label: T.nav.account, icon: User },
 ] as const;
 
