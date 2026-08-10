@@ -157,6 +157,7 @@ export async function addPoolEntryToCards(entry: PoolEntry): Promise<{ added: bo
   if (mine.some((v) => v.swahili.toLowerCase() === entry.swahili.toLowerCase())) {
     return { added: false };
   }
+  const now = Date.now();
   const card: VocabEntry = {
     id: newId(),
     swahili: entry.swahili,
@@ -165,8 +166,11 @@ export async function addPoolEntryToCards(entry: PoolEntry): Promise<{ added: bo
     nounClass: entry.nounClass ?? undefined,
     examples: entry.examples ?? [],
     box: 1,
-    nextReview: Date.now(),
-    createdAt: Date.now(),
+    nextReview: now,
+    // Von Anfang an gesetzt, damit ein Scheduler-Wechsel die Fälligkeit
+    // neuer Karten nicht schätzen muss (siehe srs/index.ts recomputeDue).
+    leitnerDue: now,
+    createdAt: now,
     isPrivate: false,
   };
   await addVocab(card);

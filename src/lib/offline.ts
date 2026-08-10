@@ -46,7 +46,8 @@ export function normalizeStats(raw: Partial<UserStats> | null | undefined): User
     xp: raw.xp ?? 0,
     weekDays: Array.isArray(raw.weekDays) ? raw.weekDays : [],
     freezes: typeof raw.freezes === "number" ? raw.freezes : 0,
-    totalDaysLearned: raw.totalDaysLearned ?? (raw.lastReviewDate ? Math.max(1, raw.streak ?? 1) : 0),
+    totalDaysLearned:
+      raw.totalDaysLearned ?? (raw.lastReviewDate ? Math.max(1, raw.streak ?? 1) : 0),
     ...(raw.lastFreezeEarned ? { lastFreezeEarned: raw.lastFreezeEarned } : {}),
   };
 }

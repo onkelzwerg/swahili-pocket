@@ -1,10 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Flame, Trophy, Sparkles, ArrowRight, BookMarked } from "lucide-react";
+import { Flame, Trophy, Sparkles, ArrowRight, BookMarked, Info } from "lucide-react";
 import { getStats, getVocab, dueToday } from "@/lib/store";
 import { phraseOfDay } from "@/lib/seed";
+import { readReviewLog, countReviewsOnDay } from "@/lib/review-log";
+import { useSettings } from "@/lib/settings";
+import { pickComebackCards } from "@/lib/comeback";
 import { SpeakButton } from "@/components/SpeakButton";
+import { WeekGoal } from "@/components/WeekGoal";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import type { UserStats, VocabEntry } from "@/lib/types";
 import { getLevelProgress } from "@/lib/levels";
 import { APP_CONFIG } from "@/config/app.config";
@@ -30,6 +35,8 @@ function greeting() {
 function Dashboard() {
   const [stats, setStats] = useState<UserStats | null>(null);
   const [vocab, setVocab] = useState<VocabEntry[]>([]);
+  const [reviewsToday, setReviewsToday] = useState(0);
+  const settings = useSettings();
   // Spruch des Tages rotiert über den Tag im Jahr.
   const [phrase] = useState<{ sw: string; de: string }>(() => {
     const start = new Date(new Date().getFullYear(), 0, 0).getTime();
@@ -38,9 +45,10 @@ function Dashboard() {
   });
 
   useEffect(() => {
-    Promise.all([getStats(), getVocab()]).then(([s, v]) => {
+    Promise.all([getStats(), getVocab(), readReviewLog()]).then(([s, v, log]) => {
       setStats(s);
       setVocab(v);
+      setReviewsToday(countReviewsOnDay(log));
     });
   }, []);
 
@@ -56,11 +64,15 @@ function Dashboard() {
       d.getDate() === today.getDate()
     );
   }).length;
-  // Sprachlevel basiert auf CEFR-Wortschatzforschung: jede Vokabel zählt
-  // als "gelerntes Wort" — Teilstufen halten die Fortschrittsschritte motivierend klein.
-  const knownWords = vocab.length;
+  // Das Level zählt gefestigte Wörter — Karten hinzufügen ist noch kein
+  // Fortschritt, sie nach einer Woche noch zu können schon (Nation/Milton).
+  const knownWords = vocab.filter((v) => v.maturedAt).length;
   const lvl = getLevelProgress(knownWords);
   const greet = greeting();
+
+  const dailyGoal = settings?.dailyGoalCards ?? 10;
+  const goalProgress = Math.min(1, reviewsToday / dailyGoal);
+  const comebackCards = stats?.comeback ? pickComebackCards(vocab) : [];
 
   return (
     <div className="flex flex-col gap-5 px-5 pt-8">
@@ -70,6 +82,23 @@ function Dashboard() {
           {greet.sw}!
         </h1>
       </header>
+
+      {comebackCards.length > 0 && (
+        <Link to="/review" search={{ comeback: true }}>
+          <motion.div
+            whileTap={{ scale: 0.97 }}
+            className="rounded-3xl border border-forest/30 bg-forest/10 p-5"
+          >
+            <p className="font-display text-xl font-bold">{T.home.comeback.title}</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {T.home.comeback.body(comebackCards.length)}
+            </p>
+            <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-forest px-4 py-2 text-sm font-semibold text-forest-foreground">
+              {T.home.comeback.cta} <ArrowRight className="h-4 w-4" />
+            </span>
+          </motion.div>
+        </Link>
+      )}
 
       <Link to="/review">
         <motion.div
@@ -83,6 +112,27 @@ function Dashboard() {
               <span className="font-display text-6xl font-bold leading-none">{due.length}</span>
               <span className="mb-1 text-sm opacity-90">{T.home.cards}</span>
             </div>
+
+            {/* Tagesziel-Fortschritt: die Zahl kommt aus dem Review-Log,
+                zählt also echte Antworten und nicht nur fällige Karten. */}
+            <div className="mt-4">
+              <div className="mb-1 flex items-center justify-between text-xs font-semibold opacity-90">
+                <span>
+                  {reviewsToday >= dailyGoal
+                    ? T.home.goal.reached
+                    : T.home.goal.progress(reviewsToday, dailyGoal)}
+                </span>
+              </div>
+              <div className="h-1.5 overflow-hidden rounded-full bg-primary-foreground/25">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${goalProgress * 100}%` }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="h-full rounded-full bg-primary-foreground"
+                />
+              </div>
+            </div>
+
             <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary-foreground/15 px-3 py-1.5 text-sm font-semibold">
               {due.length > 0 ? T.home.practiceNow : T.home.allDone}{" "}
               <ArrowRight className="h-4 w-4" />
@@ -111,10 +161,30 @@ function Dashboard() {
         />
       </div>
 
+      <WeekGoal
+        weekDays={stats?.weekDays ?? []}
+        goal={settings?.weeklyGoalDays ?? 4}
+        freezes={stats?.freezes ?? 0}
+      />
+
       <div className="rounded-3xl border border-border bg-card p-5">
-        <div className="mb-1 flex items-center justify-between">
-          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+        <div className="mb-1 flex items-center justify-between gap-2">
+          <span className="flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             {T.home.level.eyebrow(lvl.current.name)}
+            <Popover>
+              <PopoverTrigger
+                aria-label={T.home.level.infoAria}
+                className="inline-flex h-5 w-5 items-center justify-center rounded-full text-muted-foreground"
+              >
+                <Info className="h-3.5 w-3.5" />
+              </PopoverTrigger>
+              <PopoverContent className="w-72 text-left">
+                <p className="text-sm font-semibold">{T.home.level.infoTitle}</p>
+                <p className="mt-1 text-xs text-muted-foreground normal-case tracking-normal">
+                  {T.home.level.infoBody}
+                </p>
+              </PopoverContent>
+            </Popover>
           </span>
           <span className="text-xs font-semibold text-muted-foreground">
             {lvl.next
@@ -122,7 +192,10 @@ function Dashboard() {
               : T.home.level.total(lvl.knownWords)}
           </span>
         </div>
-        <p className="mb-3 text-sm font-medium text-foreground">{lvl.current.label}</p>
+        <p className="mb-1 text-sm font-medium text-foreground">{lvl.current.label}</p>
+        <p className="mb-3 text-xs text-muted-foreground">
+          {T.home.level.matured(knownWords, vocab.length)}
+        </p>
         <div className="h-3 overflow-hidden rounded-full bg-muted">
           <motion.div
             initial={{ width: 0 }}

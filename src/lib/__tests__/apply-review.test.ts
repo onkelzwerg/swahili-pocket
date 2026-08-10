@@ -199,4 +199,19 @@ describe("recomputeDue", () => {
     expect(saved.fsrs?.stability).toBe(8);
     expect(saved.nextReview).toBe(saved.fsrs!.due);
   });
+
+  it("schreibt eine rekonstruierte Leitner-Fälligkeit einmalig fest", async () => {
+    // Karte ohne leitnerDue (z. B. aus einem v1-Backup).
+    const lastReviewAt = NOW - 2 * DAY_MS;
+    await setup([makeCard({ id: "a", box: 4, lastReviewAt })], "fsrs");
+    await recomputeDue("leitner", NOW);
+    const first = storedCard("a").leitnerDue;
+    expect(first).toBe(lastReviewAt + 7 * DAY_MS);
+
+    // Mehrfaches Umschalten darf die Fälligkeit nicht verschieben.
+    await recomputeDue("fsrs", NOW + DAY_MS);
+    await recomputeDue("leitner", NOW + 2 * DAY_MS);
+    expect(storedCard("a").leitnerDue).toBe(first);
+    expect(storedCard("a").nextReview).toBe(first);
+  });
 });

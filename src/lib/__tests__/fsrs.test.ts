@@ -39,6 +39,12 @@ describe("boxToFsrsSeed", () => {
     const last = NOW - 3 * DAY_MS;
     expect(boxToFsrsSeed(3, NOW, last).due).toBe(last + 4 * DAY_MS);
   });
+
+  it("behält bei nie gelernten Karten die bestehende Fälligkeit", () => {
+    // Sonst würde ein Methodenwechsel heute fällige Neukarten wegschieben.
+    expect(boxToFsrsSeed(1, NOW, undefined, NOW).due).toBe(NOW);
+    expect(readFsrsState(makeCard({ box: 1, nextReview: NOW }), NOW).due).toBe(NOW);
+  });
 });
 
 describe("Mapping FsrsState ↔ ts-fsrs-Card", () => {

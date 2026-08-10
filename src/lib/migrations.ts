@@ -1,6 +1,12 @@
 import { get, set } from "idb-keyval";
 import type { UserStats, VocabEntry } from "./types";
-import { readCachedVocab, cacheVocab, readCachedStats, cacheStats, normalizeStats } from "./offline";
+import {
+  readCachedVocab,
+  cacheVocab,
+  readCachedStats,
+  cacheStats,
+  normalizeStats,
+} from "./offline";
 import { boxToFsrsSeed } from "./srs/fsrs";
 import { DEFAULT_SETTINGS, writeSettings, type AppSettings } from "./settings";
 

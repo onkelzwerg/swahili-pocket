@@ -50,7 +50,13 @@ const ID_TO_STATE: Record<FsrsState["state"], State> = {
  * Bewusst konservativ geschätzt: FSRS korrigiert sich nach wenigen Reviews
  * selbst, eine zu optimistische Stabilität würde dagegen echte Lücken reißen.
  */
-export function boxToFsrsSeed(box: VocabEntry["box"], now: number, lastReviewAt?: number): FsrsState {
+export function boxToFsrsSeed(
+  box: VocabEntry["box"],
+  now: number,
+  lastReviewAt?: number,
+  /** Fälligkeit für nie gelernte Karten — dort ist das bestehende Datum die Wahrheit. */
+  dueFallback?: number,
+): FsrsState {
   const table: Record<VocabEntry["box"], { stability: number; difficulty: number }> = {
     1: { stability: 0.5, difficulty: 6 },
     2: { stability: 2, difficulty: 5.5 },
@@ -59,7 +65,7 @@ export function boxToFsrsSeed(box: VocabEntry["box"], now: number, lastReviewAt?
     5: { stability: 30, difficulty: 4 },
   };
   const { stability, difficulty } = table[box];
-  const base = lastReviewAt ?? now;
+  const interval = BOX_INTERVALS_DAYS[box] * DAY_MS;
   return {
     stability,
     difficulty,
@@ -67,13 +73,16 @@ export function boxToFsrsSeed(box: VocabEntry["box"], now: number, lastReviewAt?
     lapses: 0,
     // Box 1 heißt: noch nicht sicher abgerufen — als "learning" führen.
     state: box === 1 ? "learning" : "review",
-    due: base + BOX_INTERVALS_DAYS[box] * DAY_MS,
+    // Nach einem Review: letztes Review + Box-Intervall. Ohne Review gibt es
+    // nichts zu schätzen — dann bleibt die bestehende Fälligkeit stehen,
+    // damit ein Methodenwechsel keine fälligen Karten wegschiebt.
+    due: lastReviewAt != null ? lastReviewAt + interval : (dueFallback ?? now + interval),
   };
 }
 
 /** Vorhandenen FsrsState lesen oder aus der Box seeden. */
 export function readFsrsState(card: VocabEntry, now: number): FsrsState {
-  return card.fsrs ?? boxToFsrsSeed(card.box, now, card.lastReviewAt);
+  return card.fsrs ?? boxToFsrsSeed(card.box, now, card.lastReviewAt, card.nextReview);
 }
 
 /** FsrsState → ts-fsrs-Card. `lastReviewAt` liefert elapsed_days. */

@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { exportBackup, importBackup, resetAllData } from "@/lib/backup";
 import { getStats, getVocab } from "@/lib/store";
 import { changelog } from "@/lib/changelog";
+import { LearningMethodSection } from "@/components/settings/LearningMethodSection";
 import { APP_CONFIG } from "@/config/app.config";
 import { T } from "@/config/translations";
 import type { UserStats } from "@/lib/types";
@@ -80,6 +81,8 @@ function SettingsPage() {
           label={T.settings.statXp}
         />
       </div>
+
+      <LearningMethodSection />
 
       <section className="rounded-3xl border border-border bg-card p-5">
         <div className="mb-1 flex items-center gap-2">

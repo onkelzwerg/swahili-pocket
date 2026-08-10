@@ -106,10 +106,13 @@ export async function recomputeDue(
   const scheduler = SCHEDULERS[target];
   const vocab = await getVocab();
   const next = vocab.map((card) => {
-    // Karten ohne FSRS-Zustand bekommen ihn beim Wechsel gleich mit,
-    // damit die Ableitung nicht bei jedem Aufruf neu geschätzt wird.
+    // Fehlende Teilzustände werden beim Wechsel einmalig festgeschrieben,
+    // statt sie bei jedem Aufruf neu zu schätzen — sonst wandert die
+    // Fälligkeit bei jedem Hin- und Herschalten.
     const fsrs = card.fsrs ?? readFsrsState(card, now);
-    return { ...card, fsrs, nextReview: scheduler.dueFromState({ ...card, fsrs }, now) };
+    const leitnerDue = card.leitnerDue ?? leitnerScheduler.dueFromState(card, now);
+    const filled = { ...card, fsrs, leitnerDue };
+    return { ...filled, nextReview: scheduler.dueFromState(filled, now) };
   });
   await cacheVocab(next);
   return { dueCount: next.filter((c) => c.nextReview <= now).length };

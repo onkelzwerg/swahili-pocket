@@ -107,6 +107,27 @@ export const T = {
       total: (known: number) => `${known} Wörter`,
       next: (remaining: number, name: string, label: string) =>
         `Noch ${Math.max(0, remaining)} Wörter bis ${name} · ${label}`,
+      matured: (matured: number, total: number) => `${matured} gefestigt · ${total} Karten gesamt`,
+      infoAria: "Was heißt gefestigt?",
+      infoTitle: "Gefestigte Wörter",
+      infoBody:
+        "Ein Wort gilt als gefestigt, wenn du es nach mindestens einer Woche Pause noch abrufen konntest. Neue Karten hinzuzufügen erhöht dein Level deshalb nicht — sie erst zu behalten, schon.",
+    },
+    week: {
+      eyebrow: "Wochenziel",
+      progress: (done: number, goal: number) => `${done} von ${goal} Tagen`,
+      reached: (goal: number) => `${goal} von ${goal} Tagen ✓`,
+      dayLabels: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
+      freezes: (n: number) => `${n} Streak-Joker`,
+    },
+    goal: {
+      progress: (done: number, goal: number) => `${done} / ${goal} Karten heute`,
+      reached: "Tagesziel erreicht 🎉",
+    },
+    comeback: {
+      title: "Karibu tena! 🌴",
+      body: (n: number) => `${n} Wörter zum Auffrischen — kein Druck, einfach weitermachen.`,
+      cta: "Auffrischen",
     },
     phrase: {
       eyebrow: "Methali ya leo · Phrase des Tages",
@@ -124,8 +145,17 @@ export const T = {
     wrong: "Falsch",
     correct: "Richtig",
     monosyllabic: "einsilbig",
-    swipeHintCorrect: "Richtig →",
-    swipeHintWrong: "← Falsch",
+    swipeHintCorrect: "Gut →",
+    swipeHintWrong: "← Nochmal",
+    grades: {
+      1: "Nochmal",
+      2: "Schwer",
+      3: "Gut",
+      4: "Einfach",
+      /** Erklärt die vier Stufen einmal unter den Buttons. */
+      hint: "Die Zeit darunter ist der nächste Abstand.",
+    },
+    goalProgress: (done: number, goal: number) => `${done} / ${goal} Karten heute`,
     empty: {
       title: "Hakuna kazi leo!",
       subtitle: "Keine Karten fällig. Hol dir neue Vokabeln aus dem Pool, um weiter zu üben.",
@@ -346,6 +376,33 @@ export const T = {
     statCards: "Karten",
     statStreak: "Streak",
     statXp: "XP",
+    method: {
+      heading: "Lernmethode",
+      hint: "Bestimmt, wann eine Karte wieder abgefragt wird. Dein Fortschritt bleibt bei jedem Wechsel vollständig erhalten.",
+      fsrs: {
+        label: "Adaptiv (FSRS)",
+        hint: "Passt die Abstände an jede einzelne Karte an. Empfohlen.",
+      },
+      leitner: {
+        label: "Klassisch (Leitner)",
+        hint: "Feste 5 Boxen mit festen Abständen (1/2/4/7/90 Tage).",
+      },
+      switchTitle: "Lernmethode wechseln?",
+      switchBody:
+        "Die Fälligkeiten werden neu berechnet — dein Fortschritt bleibt vollständig erhalten. Du kannst jederzeit zurückwechseln.",
+      switchConfirm: "Umstellen",
+      switched: (name: string, due: number) => `${name} aktiv — ${due} Karten fällig`,
+      switchFailed: "Umstellen fehlgeschlagen",
+      dailyGoal: "Tagesziel",
+      dailyGoalHint: "So viele Karten willst du an einem normalen Tag schaffen.",
+      dailyGoalOption: (n: number) => `${n} Karten`,
+      weeklyGoal: "Wochenziel",
+      weeklyGoalHint:
+        "Lerntage pro Woche. Das Wochenziel zählt, nicht die lückenlose Kette — Pausen sind erlaubt.",
+      /** Fünf Optionen nebeneinander — nur die Zahl, die Einheit steht im Hinweis. */
+      weeklyGoalOption: (n: number) => `${n}`,
+      saved: "Gespeichert",
+    },
     backup: {
       heading: "Backup",
       hint: "Exportiere deine Lernkarten und Statistiken als JSON-Datei. Beim Import wird der aktuelle Bestand ersetzt.",
