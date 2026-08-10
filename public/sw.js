@@ -97,12 +97,13 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // JS/CSS/Bilder/Fonts/Icons/Vokabel-Pool → stale-while-revalidate
+  // JS/CSS/Bilder/Fonts/Icons/Audio/Vokabel-Pool → stale-while-revalidate
   const dest = req.destination;
   if (
     ["script", "style", "image", "font", "manifest"].includes(dest) ||
     url.pathname.startsWith("/icons/") ||
     url.pathname.startsWith("/assets/") ||
+    url.pathname.startsWith("/audio/") ||
     url.pathname === "/vocab-pool.json"
   ) {
     event.respondWith(staleWhileRevalidate(req));
