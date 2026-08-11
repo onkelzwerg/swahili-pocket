@@ -132,8 +132,10 @@ ${lines}
 - **Lokativ auf -ni ist Beugung, kein eigenes Lemma:** dukani → "duka",
   nyumbani → "nyumba", kazini → "kazi", njiani → "njia".
 - **Kollokationen** ("kupiga simu = anrufen") bekommen ihre Grundform am
-  Kopfwort; die übrigen Bestandteile verweisen auf dieselbe Grundform, damit
-  das Wortpaar nicht doppelt gegen die Abdeckung zählt:
+  Kopfwort — das ist immer **das erste Wort** der Kollokation, gleich welcher
+  Wortart (kupiga simu → kupiga, bila shaka → bila, kwa sababu → kwa). Die
+  übrigen Bestandteile verweisen auf dieselbe Grundform, damit das Wortpaar
+  nicht doppelt gegen die Abdeckung zählt:
     {"anapiga": {"lemma": "kupiga simu", "de": "sie ruft an"}}
     {"simu":    {"lemma": "kupiga simu", "de": "(Teil von: anrufen)"}}
   Meinst du wirklich die Einzelwörter, glossierst du sie einzeln.

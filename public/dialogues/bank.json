@@ -1,0 +1,233 @@
+{
+ "id": "bank",
+ "lemmas": [
+  "aina",
+  "akaunti",
+  "akiba",
+  "angalau",
+  "anwani",
+  "asilimia",
+  "awali",
+  "benki",
+  "dola",
+  "gani",
+  "habari",
+  "hamsini",
+  "hapana",
+  "kadi",
+  "karibu",
+  "kiasi",
+  "kuchukua",
+  "kufaa",
+  "kufungua",
+  "kuhitaji",
+  "kupata",
+  "kupenda",
+  "kutaka",
+  "kutoa",
+  "kuweza",
+  "kwa",
+  "leo",
+  "makazi",
+  "mpya",
+  "mwaka",
+  "na",
+  "ni",
+  "nne",
+  "pasipoti",
+  "pesa",
+  "posta",
+  "riba",
+  "saba",
+  "siku",
+  "tafadhali",
+  "waraka",
+  "zipi"
+ ],
+ "glosses": {
+  "habari": {
+   "lemma": "habari",
+   "de": "Hallo / Wie geht's (wörtl. Neuigkeit)"
+  },
+  "ningependa": {
+   "lemma": "kupenda",
+   "de": "ich möchte (Konditional)"
+  },
+  "kufungua": {
+   "lemma": "kufungua",
+   "de": "eröffnen / öffnen"
+  },
+  "akaunti": {
+   "lemma": "akaunti",
+   "de": "Konto"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neu(es)"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "willkommen"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "aina": {
+   "lemma": "aina",
+   "de": "Art / Sorte"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s / was für"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "unayotaka": {
+   "lemma": "kutaka",
+   "de": "das/die Sie wollen (Relativform)"
+  },
+  "akiba": {
+   "lemma": "akiba",
+   "de": "Ersparnisse (akaunti ya akiba = Sparkonto)"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "riba": {
+   "lemma": "riba",
+   "de": "Zins / Zinssatz"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "sein/ihr (Possessiv, hier: davon)",
+   "structure": true
+  },
+  "kiasi": {
+   "lemma": "kiasi",
+   "de": "Betrag / Menge (kiasi gani = wie viel)"
+  },
+  "tunatoa": {
+   "lemma": "kutoa",
+   "de": "wir bieten (wörtl. wir geben)"
+  },
+  "asilimia": {
+   "lemma": "asilimia",
+   "de": "Prozent"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "pro / per"
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "inafaa": {
+   "lemma": "kufaa",
+   "de": "es passt / das ist in Ordnung"
+  },
+  "nahitaji": {
+   "lemma": "kuhitaji",
+   "de": "ich brauche"
+  },
+  "nyaraka": {
+   "lemma": "waraka",
+   "de": "Unterlagen / Dokumente (Plural)"
+  },
+  "zipi": {
+   "lemma": "zipi",
+   "de": "welche (Frageform, N-Klasse Plural)"
+  },
+  "pasipoti": {
+   "lemma": "pasipoti",
+   "de": "Pass / Reisepass"
+  },
+  "anwani": {
+   "lemma": "anwani",
+   "de": "Adresse"
+  },
+  "makazi": {
+   "lemma": "makazi",
+   "de": "Wohnsitz (anwani ya makazi = Wohnadresse)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "pesa": {
+   "lemma": "pesa",
+   "de": "Geld"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "awali": {
+   "lemma": "awali",
+   "de": "anfänglich / Anfangs- (pesa za awali = Ersteinlage)"
+  },
+  "dola": {
+   "lemma": "dola",
+   "de": "Dollar"
+  },
+  "hamsini": {
+   "lemma": "hamsini",
+   "de": "fünfzig"
+  },
+  "angalau": {
+   "lemma": "angalau",
+   "de": "mindestens / wenigstens"
+  },
+  "naweza": {
+   "lemma": "kuweza",
+   "de": "ich kann"
+  },
+  "kupata": {
+   "lemma": "kupata",
+   "de": "bekommen / erhalten"
+  },
+  "kadi": {
+   "lemma": "kadi",
+   "de": "Karte"
+  },
+  "benki": {
+   "lemma": "benki",
+   "de": "Bank"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "hapana": {
+   "lemma": "hapana",
+   "de": "nein"
+  },
+  "itachukua": {
+   "lemma": "kuchukua",
+   "de": "es wird dauern (wörtl. es wird nehmen)"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tage"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben"
+  },
+  "posta": {
+   "lemma": "posta",
+   "de": "Post / Postamt"
+  }
+ },
+ "choices": {}
+}
