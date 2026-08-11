@@ -1,0 +1,186 @@
+{
+ "id": "market",
+ "lemmas": [
+  "asante",
+  "asubuhi",
+  "basi",
+  "bei",
+  "elfu",
+  "embe",
+  "gani",
+  "ghali",
+  "habari",
+  "jumla",
+  "karibu",
+  "kidogo",
+  "kilo",
+  "kuchukua",
+  "kupa",
+  "kupunguza",
+  "kwa sababu",
+  "mia",
+  "moja",
+  "mteja",
+  "mzuri",
+  "na",
+  "ndizi",
+  "ni",
+  "nne",
+  "pia",
+  "sana",
+  "sawa",
+  "shilingi",
+  "tafadhali",
+  "tano",
+  "tatu",
+  "wewe"
+ ],
+ "glosses": {
+  "habari": {
+   "lemma": "habari",
+   "de": "Gruß: Wie geht's? (wörtl. Neuigkeit)"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "bei": {
+   "lemma": "bei",
+   "de": "Preis"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s, was für"
+  },
+  "embe": {
+   "lemma": "embe",
+   "de": "Mango"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins, eine"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "willkommen!"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist, sind (Kopula)"
+  },
+  "shilingi": {
+   "lemma": "shilingi",
+   "de": "Schilling (Währung)"
+  },
+  "mia": {
+   "lemma": "mia",
+   "de": "hundert"
+  },
+  "tano": {
+   "lemma": "tano",
+   "de": "fünf"
+  },
+  "ghali": {
+   "lemma": "ghali",
+   "de": "teuer"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen, etwas"
+  },
+  "punguza": {
+   "lemma": "kupunguza",
+   "de": "senke, verringere (Imperativ)"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "okay, in Ordnung"
+  },
+  "kwa": {
+   "lemma": "kwa sababu",
+   "de": "weil"
+  },
+  "sababu": {
+   "lemma": "kwa sababu",
+   "de": "(Teil von: weil)"
+  },
+  "wewe": {
+   "lemma": "wewe",
+   "de": "du"
+  },
+  "mteja": {
+   "lemma": "mteja",
+   "de": "Kunde, Kundin"
+  },
+  "mzuri": {
+   "lemma": "mzuri",
+   "de": "gut (M-Wa-Klasse)"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier"
+  },
+  "nipe": {
+   "lemma": "kupa",
+   "de": "gib mir"
+  },
+  "matano": {
+   "lemma": "tano",
+   "de": "fünf (Ma-Klasse: fünf Mangos)"
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "dann, also (Partikel)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "ndizi": {
+   "lemma": "ndizi",
+   "de": "Banane(n)"
+  },
+  "pia": {
+   "lemma": "pia",
+   "de": "auch"
+  },
+  "kilo": {
+   "lemma": "kilo",
+   "de": "Kilo"
+  },
+  "jumla": {
+   "lemma": "jumla",
+   "de": "Summe (hier: insgesamt)"
+  },
+  "elfu": {
+   "lemma": "elfu",
+   "de": "tausend"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei"
+  },
+  "chukua": {
+   "lemma": "kuchukua",
+   "de": "nimm (hier: bitte sehr)"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  }
+ },
+ "choices": {}
+}

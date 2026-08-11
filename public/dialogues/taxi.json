@@ -1,0 +1,197 @@
+{
+ "id": "taxi",
+ "lemmas": [
+  "bei",
+  "elfu",
+  "foleni",
+  "gani",
+  "hakuna",
+  "hasa",
+  "kama",
+  "kufika",
+  "kumi",
+  "kupeleka",
+  "kuweza",
+  "kwa",
+  "kwenda",
+  "leo",
+  "marahaba",
+  "mbaya",
+  "mji",
+  "muda",
+  "na",
+  "ndege",
+  "ni",
+  "nusu",
+  "nyingi",
+  "saa",
+  "sababu",
+  "sawa",
+  "shikamoo",
+  "shilingi",
+  "si",
+  "tafadhali",
+  "takriban",
+  "tano",
+  "trafiki",
+  "uwanja",
+  "wapi"
+ ],
+ "glosses": {
+  "shikamoo": {
+   "lemma": "shikamoo",
+   "de": "Ehrengruß an Ältere (etwa: Guten Tag!)"
+  },
+  "unaenda": {
+   "lemma": "kwenda",
+   "de": "du fährst / du gehst"
+  },
+  "mjini": {
+   "lemma": "mji",
+   "de": "in die Stadt (Lokativ von mji)"
+  },
+  "marahaba": {
+   "lemma": "marahaba",
+   "de": "Grüß dich (Antwort auf Shikamoo)"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (Bejahungspartikel)",
+   "structure": true
+  },
+  "wapi": {
+   "lemma": "wapi",
+   "de": "wohin, wo"
+  },
+  "hasa": {
+   "lemma": "hasa",
+   "de": "genau, insbesondere"
+  },
+  "nipeleke": {
+   "lemma": "kupeleka",
+   "de": "bring mich (Subjunktiv)"
+  },
+  "uwanja": {
+   "lemma": "uwanja",
+   "de": "Platz, Feld (hier in „uwanja wa ndege\" = Flughafen)"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, U-Klasse)",
+   "structure": true
+  },
+  "ndege": {
+   "lemma": "ndege",
+   "de": "Flugzeug"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "bei": {
+   "lemma": "bei",
+   "de": "Preis"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "shilingi": {
+   "lemma": "shilingi",
+   "de": "Schilling (Währung)"
+  },
+  "elfu": {
+   "lemma": "elfu",
+   "de": "tausend"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und (hier in der Zahl: kumi na tano = fünfzehn)"
+  },
+  "tano": {
+   "lemma": "tano",
+   "de": "fünf"
+  },
+  "nyingi": {
+   "lemma": "nyingi",
+   "de": "viel"
+  },
+  "inawezekana": {
+   "lemma": "kuweza",
+   "de": "ist es möglich? / geht das?"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "okay, in Ordnung"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, in (in „kwa sababu\" = weil; in „kwa muda gani\" = wie lange)"
+  },
+  "sababu": {
+   "lemma": "sababu",
+   "de": "Grund (in „kwa sababu\" = weil)"
+  },
+  "trafiki": {
+   "lemma": "trafiki",
+   "de": "Verkehr"
+  },
+  "si": {
+   "lemma": "si",
+   "de": "ist nicht (negative Kopula)"
+  },
+  "mbaya": {
+   "lemma": "mbaya",
+   "de": "schlimm, schlecht"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "twende": {
+   "lemma": "kwenda",
+   "de": "fahren wir! / lass uns gehen (Subjunktiv)"
+  },
+  "tutafika": {
+   "lemma": "kufika",
+   "de": "wir werden ankommen"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Zeitraum, Weile"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s (hier: kwa muda gani = wie lange)"
+  },
+  "takriban": {
+   "lemma": "takriban",
+   "de": "etwa, ungefähr"
+  },
+  "nusu": {
+   "lemma": "nusu",
+   "de": "halb, Hälfte"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunde"
+  },
+  "kama": {
+   "lemma": "kama",
+   "de": "wenn, falls"
+  },
+  "hakuna": {
+   "lemma": "hakuna",
+   "de": "es gibt kein"
+  },
+  "foleni": {
+   "lemma": "foleni",
+   "de": "Stau, Warteschlange"
+  }
+ },
+ "choices": {}
+}

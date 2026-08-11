@@ -1,0 +1,207 @@
+{
+ "id": "emergency",
+ "lemmas": [
+  "ajali",
+  "ambulensi",
+  "basi",
+  "dakika",
+  "duka",
+  "gani",
+  "hasa",
+  "karibu",
+  "kichwa",
+  "kituo",
+  "kuanguka",
+  "kubwa",
+  "kufika",
+  "kuita",
+  "kuna",
+  "kuomba",
+  "kuongea",
+  "kupiga simu",
+  "kusaidia",
+  "kutulia",
+  "kuumwa",
+  "kuwa na",
+  "kuweza",
+  "kwa",
+  "lakini",
+  "mbele",
+  "na",
+  "ndani",
+  "rafiki",
+  "shida",
+  "tafadhali",
+  "tano",
+  "wapi"
+ ],
+ "glosses": {
+  "nisaidie": {
+   "lemma": "kusaidia",
+   "de": "hilf mir! (Bitte/Imperativ)"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt, es hat gegeben"
+  },
+  "ajali": {
+   "lemma": "ajali",
+   "de": "Unfall"
+  },
+  "tulia": {
+   "lemma": "kutulia",
+   "de": "beruhige dich! (Imperativ)"
+  },
+  "una": {
+   "lemma": "kuwa na",
+   "de": "du hast"
+  },
+  "shida": {
+   "lemma": "shida",
+   "de": "Problem, Not (in „kwa shida\" = mit Mühe)"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "was für ein, welche/r"
+  },
+  "hasa": {
+   "lemma": "hasa",
+   "de": "genau, insbesondere"
+  },
+  "rafiki": {
+   "lemma": "rafiki",
+   "de": "Freund"
+  },
+  "yangu": {
+   "lemma": "-angu",
+   "de": "mein/meine",
+   "structure": true
+  },
+  "ameanguka": {
+   "lemma": "kuanguka",
+   "de": "er/sie ist gestürzt"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und (in „karibu na\" = nahe bei)"
+  },
+  "anaumwa": {
+   "lemma": "kuumwa",
+   "de": "ihm/ihr tut weh, er/sie hat Schmerzen"
+  },
+  "kichwa": {
+   "lemma": "kichwa",
+   "de": "Kopf"
+  },
+  "anaweza": {
+   "lemma": "kuweza",
+   "de": "er/sie kann"
+  },
+  "kuongea": {
+   "lemma": "kuongea",
+   "de": "sprechen, reden (Infinitiv)"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (bestätigende Partikel)",
+   "structure": true
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit, auf (Art und Weise; hier „kwa shida\" = mühsam)"
+  },
+  "naomba": {
+   "lemma": "kuomba",
+   "de": "ich bitte (darum)"
+  },
+  "uite": {
+   "lemma": "kuita",
+   "de": "dass du rufst, ruf (Konjunktiv)"
+  },
+  "ambulensi": {
+   "lemma": "ambulensi",
+   "de": "Krankenwagen"
+  },
+  "nimepiga": {
+   "lemma": "kupiga simu",
+   "de": "ich habe angerufen"
+  },
+  "simu": {
+   "lemma": "kupiga simu",
+   "de": "(Teil von: anrufen)"
+  },
+  "watafika": {
+   "lemma": "kufika",
+   "de": "sie werden ankommen"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "innen (in „ndani ya\" = innerhalb von)"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse; hier in „ndani ya\" und „mbele ya\")",
+   "structure": true
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "tano": {
+   "lemma": "tano",
+   "de": "fünf"
+  },
+  "mko": {
+   "lemma": "-ko",
+   "de": "ihr seid, ihr befindet euch (Lokativkopula, M-Wa-Klasse)",
+   "structure": true
+  },
+  "wapi": {
+   "lemma": "wapi",
+   "de": "wo"
+  },
+  "tuko": {
+   "lemma": "-ko",
+   "de": "wir sind, wir befinden uns (Lokativkopula, M-Wa-Klasse)",
+   "structure": true
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vorne (in „mbele ya\" = vor)"
+  },
+  "duka": {
+   "lemma": "duka",
+   "de": "Laden, Geschäft"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß (hier „duka kubwa\" = Supermarkt)"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "in der Nähe (in „karibu na\" = nahe bei)"
+  },
+  "kituo": {
+   "lemma": "kituo",
+   "de": "Haltestelle"
+  },
+  "cha": {
+   "lemma": "cha",
+   "de": "von (Genitiv, Ki-Klasse)",
+   "structure": true
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "Bus"
+  }
+ },
+ "choices": {}
+}

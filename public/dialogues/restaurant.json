@@ -1,0 +1,235 @@
+{
+ "id": "restaurant",
+ "lemmas": [
+  "asante",
+  "baada ya",
+  "baridi",
+  "chakula",
+  "chupa",
+  "dakika",
+  "hapa",
+  "hodi",
+  "karibu",
+  "kuchoma",
+  "kuchukua",
+  "kuja",
+  "kukaa",
+  "kumi",
+  "kuna",
+  "kunywa",
+  "kupaka",
+  "kutaka",
+  "kuwa na",
+  "kwa",
+  "leo",
+  "maji",
+  "mbili",
+  "menyu",
+  "meza",
+  "mimi",
+  "mtu",
+  "na",
+  "ni",
+  "nini",
+  "nyama",
+  "samaki",
+  "sana",
+  "sawa",
+  "tafadhali",
+  "tamu",
+  "tano",
+  "ugali",
+  "wali"
+ ],
+ "glosses": {
+  "hodi": {
+   "lemma": "hodi",
+   "de": "Hallo! (Ruf an der Tür: Darf ich eintreten?)"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "watu": {
+   "lemma": "mtu",
+   "de": "Leute, Personen"
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (M-Wa-Klasse)"
+  },
+  "karibuni": {
+   "lemma": "karibu",
+   "de": "willkommen! (an mehrere)"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "kaeni": {
+   "lemma": "kukaa",
+   "de": "setzt euch! (Imperativ Plural)"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier"
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "diese, hier ist (Demonstrativ, N-Klasse)",
+   "structure": true
+  },
+  "menyu": {
+   "lemma": "menyu",
+   "de": "Speisekarte"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  },
+  "mnao": {
+   "lemma": "kuwa na",
+   "de": "habt ihr (davon)"
+  },
+  "wali": {
+   "lemma": "wali",
+   "de": "Reis (gekocht)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "samaki": {
+   "lemma": "samaki",
+   "de": "Fisch"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (Bejahung)",
+   "structure": true
+  },
+  "tuna": {
+   "lemma": "kuwa na",
+   "de": "wir haben"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von/der (Genitiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "kupaka": {
+   "lemma": "kupaka",
+   "de": "bestreichen — samaki wa kupaka: Fisch in Kokossoße"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "tamu": {
+   "lemma": "tamu",
+   "de": "lecker, süß"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "nitachukua": {
+   "lemma": "kuchukua",
+   "de": "ich werde nehmen"
+  },
+  "ugali": {
+   "lemma": "ugali",
+   "de": "Ugali (fester Maisbrei)"
+  },
+  "nyama": {
+   "lemma": "nyama",
+   "de": "Fleisch"
+  },
+  "choma": {
+   "lemma": "kuchoma",
+   "de": "gegrillt (wörtl.: grillen)"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "gut, in Ordnung"
+  },
+  "mnataka": {
+   "lemma": "kutaka",
+   "de": "möchtet ihr, ihr wollt"
+  },
+  "kunywa": {
+   "lemma": "kunywa",
+   "de": "trinken"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was"
+  },
+  "chupa": {
+   "lemma": "chupa",
+   "de": "Flaschen"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von/der (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "kalt"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "das Essen"
+  },
+  "kitakuja": {
+   "lemma": "kuja",
+   "de": "es wird kommen (Ki-Vi-Klasse)"
+  },
+  "baada": {
+   "lemma": "baada ya",
+   "de": "nach (zeitlich)"
+  },
+  "ya": {
+   "lemma": "baada ya",
+   "de": "(Teil von: nach)"
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "tano": {
+   "lemma": "tano",
+   "de": "fünf"
+  }
+ },
+ "choices": {}
+}

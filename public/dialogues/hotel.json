@@ -1,0 +1,189 @@
+{
+ "id": "hotel",
+ "lemmas": [
+  "arobaini",
+  "asubuhi",
+  "bei",
+  "bure",
+  "chakula",
+  "chumba",
+  "dola",
+  "gani",
+  "habari",
+  "intaneti",
+  "karibu",
+  "kitanda",
+  "kuchukua",
+  "kujumuisha",
+  "kuna",
+  "kuomba",
+  "kuwa na",
+  "kwa",
+  "mbili",
+  "mgeni",
+  "moja",
+  "na",
+  "ni",
+  "pasipoti",
+  "usajili",
+  "usiku",
+  "vizuri",
+  "wifi"
+ ],
+ "glosses": {
+  "habari": {
+   "lemma": "habari",
+   "de": "Hallo, wie geht's? (wörtlich: Neuigkeit)"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "chumba": {
+   "lemma": "chumba",
+   "de": "Zimmer"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, pro"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht, Nächte"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei (N-Klasse)"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "willkommen!"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (Bejahungspartikel)",
+   "structure": true
+  },
+  "tunacho": {
+   "lemma": "kuwa na",
+   "de": "wir haben es (Ki-Klasse)"
+  },
+  "cha": {
+   "lemma": "cha",
+   "de": "von, mit (Genitiv, Ki-Klasse)",
+   "structure": true
+  },
+  "kitanda": {
+   "lemma": "kitanda",
+   "de": "Bett"
+  },
+  "kimoja": {
+   "lemma": "moja",
+   "de": "ein, eines (Ki-Klasse)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "vitanda": {
+   "lemma": "kitanda",
+   "de": "Betten"
+  },
+  "viwili": {
+   "lemma": "mbili",
+   "de": "zwei (Vi-Klasse)"
+  },
+  "bei": {
+   "lemma": "bei",
+   "de": "Preis"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s, was für (hier: bei gani = wie viel kostet)"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "eine, eines (M-Wa-/U-Klasse)"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist, kostet (Kopula)"
+  },
+  "dola": {
+   "lemma": "dola",
+   "de": "Dollar"
+  },
+  "arobaini": {
+   "lemma": "arobaini",
+   "de": "vierzig"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen (chakula cha asubuhi = Frühstück)"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "kimejumuishwa": {
+   "lemma": "kujumuisha",
+   "de": "es ist inbegriffen (Ki-Klasse, Passiv)"
+  },
+  "intaneti": {
+   "lemma": "intaneti",
+   "de": "Internet"
+  },
+  "chumbani": {
+   "lemma": "chumba",
+   "de": "im Zimmer"
+  },
+  "wifi": {
+   "lemma": "wifi",
+   "de": "WLAN"
+  },
+  "bure": {
+   "lemma": "bure",
+   "de": "kostenlos, gratis"
+  },
+  "wageni": {
+   "lemma": "mgeni",
+   "de": "Gäste"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle (M-Wa-Klasse Plural)",
+   "structure": true
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, schön"
+  },
+  "nitachukua": {
+   "lemma": "kuchukua",
+   "de": "ich werde nehmen"
+  },
+  "hicho": {
+   "lemma": "hicho",
+   "de": "dieses (Demonstrativ, Ki-Klasse)",
+   "structure": true
+  },
+  "naomba": {
+   "lemma": "kuomba",
+   "de": "ich bitte um, ich brauche"
+  },
+  "pasipoti": {
+   "lemma": "pasipoti",
+   "de": "Pass, Reisepass"
+  },
+  "yako": {
+   "lemma": "-ako",
+   "de": "dein/deine",
+   "structure": true
+  },
+  "usajili": {
+   "lemma": "usajili",
+   "de": "Anmeldung, Registrierung"
+  }
+ },
+ "choices": {}
+}

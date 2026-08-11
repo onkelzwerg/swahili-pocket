@@ -116,7 +116,14 @@ ${lines}
   Grundform zurück (hakujua → kujua).
 - **Die Grundform muss so geschrieben sein wie im Vokabelpool**, sonst zählt
   die App sie nie als gelernt. Schlag im Zweifel in public/vocab-pool.json nach
-  (Feld "swahili").
+  (Feld "swahili"). Groß- und Kleinschreibung ist dabei egal — der Abgleich
+  läuft kleingeschrieben, "Shilingi" im Pool und "shilingi" bei dir sind
+  derselbe Treffer.
+- **Bei Nomen ist der Singular die Grundform**, auch wenn der Pool den Plural
+  zusätzlich als eigene Karte führt (mtu/watu, mwalimu/walimu): watu → "mtu".
+- Führt der Pool für die gemeinte Sache ein **anderes Wort** als der Dialog
+  (menyu vs. orodha ya chakula, foleni vs. msongamano), ist das kein Treffer.
+  Bieg nicht um — nenn es als Lücke.
 - **Adjektive auf die Form, die der Pool führt.** Bei Kongruenz-Adjektiven ist
   das genau eine Klassenform: kizuri, nzuri, pazuri → alle "mzuri"; baya →
   "mbaya"; gumu → "ngumu". Ausnahme: lexikalisierte Adverbien behalten ihr

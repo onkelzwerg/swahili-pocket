@@ -57,6 +57,8 @@ export const CORE_BAND = new Map([
   ["mdogo", 1], // Gegenstück zu kubwa (Rang 46)
   ["hewa", 1],
   ["mbele", 1], // „vorn/vor" — nyuma („hinten") liegt ebenfalls tief
+  ["mbaya", 1], // Gegenstück zu mzuri (Rang 33)
+  ["kutoa", 1], // „geben/herausnehmen" — eines der häufigsten Verben überhaupt
   // Zahlen bis zehn. Der Pool kannte moja, mbili und nne — sonst nichts.
   // Neu aufgenommene Zahlen haben naturgemäß wenig Korpusbelege und lägen
   // ohne diese Zeilen in Band 3 und 4.
@@ -93,6 +95,10 @@ export const CORE_BAND = new Map([
   ["kupiga simu", 2], // die alltäglichste Kollokation überhaupt
   ["kuume", 2], // „rechts" — kushoto war da, das Gegenstück nicht
   ["kupinda", 2],
+  // Erstaunlich basale Lücken, die erst beim Glossieren der Dialoge auffielen.
+  ["kuongea", 2], // „reden" — nur kusema war da
+  ["kuita", 2], // der Pool kannte nur das Passiv kuitwa („heißen")
+  ["shida", 2], // „Problem" — tatizo und tabu waren da, das gängigste Wort nicht
   // Die Zehner. kumi und ishirini sind Band 1 bzw. 2, sabini lag als einzelner
   // Ausreißer schon im Bestand — dazwischen klaffte alles.
   ["thelathini", 2],
