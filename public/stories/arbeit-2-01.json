@@ -18,7 +18,6 @@
   "karibu",
   "katika",
   "kazi",
-  "kazini",
   "kila",
   "kitu",
   "kompyuta",
@@ -57,11 +56,11 @@
  "newLemmas": [],
  "paragraphs": [
   {
-   "sw": "Leo ilikuwa siku ya kwanza ya Bakari kazini. Kampuni ilikuwa katika jengo kubwa karibu na stesheni. Bakari alikuwa na furaha, lakini hakujua kila kitu bado.",
+   "sw": "Leo ilikuwa siku ya kwanza ya Bakari kazini. Kampuni ilikuwa katika jengo kubwa karibu na stesheni. Bakari alikuwa na furaha, lakini bado hakujua kila kitu.",
    "de": "Heute war Bakaris erster Arbeitstag. Die Firma lag in einem großen Gebäude nahe beim Bahnhof. Bakari freute sich, aber er kannte noch nicht alles."
   },
   {
-   "sw": "Rehema alimwonyesha meza yake na kompyuta moja. Alisema kazi si ngumu sana, lakini lazima kufanya kwa bidii.",
+   "sw": "Rehema alimwonyesha meza yake na kompyuta moja. Alisema kazi si ngumu sana, lakini lazima afanye kazi kwa bidii.",
    "de": "Rehema zeigte ihm seinen Tisch und einen Computer. Sie sagte, die Arbeit sei nicht besonders schwierig, man müsse sie aber fleißig machen."
   },
   {
@@ -101,7 +100,7 @@
    "proper": true
   },
   "kazini": {
-   "lemma": "kazini",
+   "lemma": "kazi",
    "de": "bei der Arbeit"
   },
   "kampuni": {
@@ -298,6 +297,10 @@
    "lemma": "hii",
    "de": "diese",
    "structure": true
+  },
+  "afanye": {
+   "lemma": "kufanya",
+   "de": "sie/er soll machen"
   }
  },
  "audio": null

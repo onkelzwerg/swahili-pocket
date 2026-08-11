@@ -19,15 +19,16 @@
   "kuangalia",
   "kubwa",
   "kuchukua",
+  "kufahamu",
   "kufika",
   "kuisha",
   "kujibu",
-  "kujua",
   "kulipa",
   "kupita",
   "kupunguza",
   "kurudi",
   "kusema",
+  "kuuliza",
   "kuuza",
   "kuwa",
   "kwa",
@@ -56,15 +57,15 @@
    "de": "Am Morgen kam Musa an der großen Straße an. Er hatte schöne Mangos zu verkaufen. Es waren viele Leute da, und es war laut."
   },
   {
-   "sw": "Mzee mmoja alipita polepole na kuangalia maembe. „Maembe ni shilingi ngapi?\" alisema. Musa alijibu, „Mawili ni shilingi mia mbili.\"",
+   "sw": "Mzee mmoja alipita polepole akaangalia maembe. „Maembe ni shilingi ngapi?“ aliuliza. Musa alijibu, „Mawili ni shilingi mia mbili.“",
    "de": "Ein alter Mann kam langsam vorbei und sah sich die Mangos an. „Was kosten die Mangos?\", sagte er. Musa antwortete: „Zwei kosten zweihundert Schilling.\""
   },
   {
-   "sw": "„Ni ghali sana,\" mzee alisema. „Punguza kidogo, tafadhali.\" Musa alimwangalia na alimjua. Mzee huyu ni jirani yake.",
+   "sw": "„Ni ghali sana,“ mzee alisema. „Punguza kidogo, tafadhali.“ Musa alimwangalia akamfahamu. Mzee huyu ni jirani yake.",
    "de": "„Das ist sehr teuer\", sagte der alte Mann. „Mach es bitte ein bisschen billiger.\" Musa sah ihn an und erkannte ihn. Dieser alte Mann war sein Nachbar."
   },
   {
-   "sw": "„Haya,\" Musa alisema. „Bei ni shilingi mia mbili, lakini kwa wewe ni mia moja.\" Mzee alilipa na alichukua maembe. „Wewe ni mtu mzuri,\" alisema. Jioni maembe yaliisha na Musa alirudi nyumbani.",
+   "sw": "„Haya,“ Musa alisema. „Bei ni shilingi mia mbili, lakini kwa wewe ni mia moja.“ Mzee alilipa na alichukua maembe. „Wewe ni mtu mzuri,“ alisema. Jioni maembe yaliisha na Musa alirudi nyumbani.",
    "de": "„Also gut\", sagte Musa. „Der Preis ist zweihundert Schilling, aber für dich sind es hundert.\" Der alte Mann bezahlte und nahm die Mangos mit. „Du bist ein guter Mensch\", sagte er. Am Abend waren die Mangos alle, und Musa ging nach Hause."
   }
  ],
@@ -147,10 +148,6 @@
    "lemma": "polepole",
    "de": "langsam"
   },
-  "kuangalia": {
-   "lemma": "kuangalia",
-   "de": "ansehen, betrachten"
-  },
   "ni": {
    "lemma": "ni",
    "de": "ist, sind"
@@ -206,10 +203,6 @@
   "alimwangalia": {
    "lemma": "kuangalia",
    "de": "er sah ihn an"
-  },
-  "alimjua": {
-   "lemma": "kujua",
-   "de": "er kannte ihn"
   },
   "huyu": {
    "lemma": "huyu",
@@ -281,6 +274,18 @@
   "nyumbani": {
    "lemma": "nyumba",
    "de": "nach Hause"
+  },
+  "aliuliza": {
+   "lemma": "kuuliza",
+   "de": "fragte er"
+  },
+  "akamfahamu": {
+   "lemma": "kufahamu",
+   "de": "und erkannte ihn"
+  },
+  "akaangalia": {
+   "lemma": "kuangalia",
+   "de": "und schaute sich an"
   }
  },
  "audio": null

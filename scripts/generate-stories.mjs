@@ -45,7 +45,12 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
 import Anthropic from "@anthropic-ai/sdk";
-import { BAND_LIMITS, allowedLemmas, poolByLemma } from "./lib/story-bands.mjs";
+import {
+  BAND_LIMITS,
+  allowedLemmas,
+  danglingCoreLemmas,
+  poolByLemma,
+} from "./lib/story-bands.mjs";
 import {
   MAX_NEW_LEMMAS,
   STRUCTURE_LEMMAS,
@@ -147,10 +152,35 @@ Feste Regeln:
 - Das Glossar muss JEDES Wort des Textes enthalten — jede gebeugte Form einzeln,
   kleingeschrieben, mit Grundform und deutscher Bedeutung dieser Form.
   Beispiel: {"token":"nilienda","lemma":"kwenda","de":"ich ging","proper":false}
+- Kollokationen stehen als Ganzes in der Wortliste ("kupiga simu = anrufen",
+  "baada ya = nach"). Benutzt du eine, bekommt **das Kopfwort** die Kollokation
+  als Grundform, und die übrigen Bestandteile bekommen gar keinen eigenen
+  Eintrag — sonst zählte das Wortpaar doppelt gegen die Abdeckung:
+    {"token":"anapiga","lemma":"kupiga simu","de":"sie ruft an"}
+    {"token":"simu","lemma":"kupiga simu","de":"(Teil von: anrufen)"}
+  Meinst du dagegen wirklich die Einzelwörter (das Telefon als Gegenstand),
+  glossierst du sie einzeln.
 - Schreibe Zahlen als Wörter aus, niemals als Ziffern.
 - Jeder Absatz bekommt eine natürliche deutsche Übersetzung (nicht Wort für Wort).
 - Erzähle eine kleine, konkrete Geschichte mit Anfang und Ende. Kein Lehrbuchton,
-  keine Aufzählung von Vokabeln, keine Anrede der Lesenden.`;
+  keine Aufzählung von Vokabeln, keine Anrede der Lesenden.
+
+Erzählstil — daran scheiterten die ersten zwanzig Geschichten:
+
+- **Benutze das -ka-Konsekutiv.** Aufeinanderfolgende Handlungen desselben
+  Subjekts stehen im Kiswahili nicht als Kette gleichrangiger Sätze, sondern
+  mit -ka- ab dem zweiten Verb: "Alilipa akachukua maembe akarudi nyumbani",
+  nicht "Alilipa na alichukua maembe na alirudi nyumbani". Ohne -ka- liest sich
+  ein Text wie eine Liste. Das erste Verb trägt die Zeit, die folgenden -ka-.
+- **Nie ein finites Verb mit "na" an einen Infinitiv hängen.** "Alikunywa chai
+  na kulala" ist falsch; richtig ist "Alikunywa chai akalala".
+- **Bleib in einer Zeit.** Eine Erzählung steht durchgehend im Präteritum
+  (li-) oder durchgehend im Präsens — nicht gemischt. Ausgenommen sind
+  Dauerzustände ("Bibi yake anakaa mbali") und wörtliche Rede.
+- **Nach "lazima" steht der Konjunktiv**, nicht der Infinitiv:
+  "lazima afanye kazi", nicht "lazima kufanya kazi".
+- **Anführungszeichen: immer „…"** (unten öffnend, oben schließend). Keine
+  geraden Zoll-Zeichen, kein englisches Format.`;
 
 function systemPrompt(allowedList) {
   return `${SYSTEM_INTRO}
@@ -165,8 +195,14 @@ function taskPrompt({ topic, band, id }) {
 
 - Id: ${id}
 - Länge: ${len.min}–${len.max} Wörter Swahili, verteilt auf ${len.paragraphs} Absätze.
+  Gezählt werden Token, also Wörter ohne Satzzeichen.
 - "title" ist der Swahili-Titel, "titleDe" die deutsche Entsprechung.
-- "emoji" ist ein einzelnes Emoji, das zur Geschichte passt.`;
+  Titel werden **nicht** geprüft: sie brauchen keine Glossareinträge und dürfen
+  Wörter außerhalb der Liste enthalten. Geprüft wird nur "paragraphs".
+- "emoji" ist ein einzelnes Emoji, das zur Geschichte passt.
+- Sieh im Verzeichnis public/stories/ nach, welche Titel und Motive es schon
+  gibt, und wähl etwas anderes. Verlass dich nicht auf eine mitgegebene Liste —
+  es entstehen Geschichten parallel.`;
 }
 
 /**
@@ -416,6 +452,17 @@ async function readExistingStories() {
  * Läuft ohne API-Key — auch handgeschriebene Geschichten müssen hier durch.
  */
 async function revalidateAll(pool, tokenize) {
+  // Eine kuratierte Bandzuordnung, die auf ein gelöschtes Wort zeigt, wäre ein
+  // stiller Fehler: sie sieht aus, als wäre das Wort erlaubt, und die Prüfung
+  // weist es trotzdem ab.
+  const dangling = danglingCoreLemmas(pool);
+  if (dangling.length > 0) {
+    console.error(
+      `Warnung: ${dangling.length} Einträge in CORE_BAND stehen nicht im Pool: ` +
+        dangling.join(", "),
+    );
+  }
+
   const stories = await readExistingStories();
   const allowedByBand = new Map(
     ALL_BANDS.map((b) => [b, allowedLemmas(pool, b)]),

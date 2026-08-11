@@ -159,5 +159,13 @@ export interface NounClassInfo {
     near: { sg: string; pl: string };
     far: { sg: string; pl: string };
   };
+  /**
+   * Lokativkopula „ist (da)" — die -ko/-po/-mo-Formen dieser Klasse.
+   *
+   * Sie kongruieren mit dem Subjekt, nicht mit dem Ort, und gehören deshalb
+   * auf jede Klasse: `kitabu kiko wapi?`, `watu wako nje`, `mtoto yumo ndani`.
+   * -po = an einer bestimmten Stelle, -ko = irgendwo/allgemein, -mo = darin.
+   */
+  locative: { sg: string; pl: string };
   examples: { sw: string; de: string }[];
 }

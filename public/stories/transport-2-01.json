@@ -47,11 +47,11 @@
   "mia",
   "mji",
   "mzigo",
+  "mzuri",
   "na",
   "ni",
   "njia",
   "nyumba",
-  "nzuri",
   "polepole",
   "rahisi",
   "shilingi",
@@ -145,7 +145,7 @@
    "de": "er/sie/es war (N-Klasse)"
   },
   "nzuri": {
-   "lemma": "nzuri",
+   "lemma": "mzuri",
    "de": "schön, gut (N-Klasse)"
   },
   "na": {

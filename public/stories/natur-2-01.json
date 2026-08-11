@@ -39,13 +39,13 @@
   "lakini",
   "mahali",
   "maji",
-  "mbali",
   "mbili",
   "mchana",
   "moja",
   "mti",
   "muda",
   "mzee",
+  "mzuri",
   "na",
   "ndege",
   "nguvu",
@@ -54,15 +54,15 @@
   "nyumba",
   "polepole",
   "pwani",
+  "refu",
   "sana",
   "sauti",
-  "yeye",
-  "zuri"
+  "yeye"
  ],
  "newLemmas": [],
  "paragraphs": [
   {
-   "sw": "Jumapili mchana jua lilikuwa na nguvu sana. Asha alitembea polepole kwenda pwani. Njia ilikuwa mbali kidogo, lakini yeye hakuwa na haraka.",
+   "sw": "Jumapili mchana jua lilikuwa na nguvu sana. Asha alitembea polepole kwenda pwani. Njia ilikuwa ndefu kidogo, lakini yeye hakuwa na haraka.",
    "de": "Am Sonntagmittag stand die Sonne stark am Himmel. Asha ging langsam zu Fuß zur Küste. Der Weg war ein Stück weit, aber sie hatte es nicht eilig."
   },
   {
@@ -70,7 +70,7 @@
    "de": "Nahe am Meer stand ein großer Baum. Asha setzte sich unter diesen Baum. Sie trank Wasser und schaute eine Weile aufs Meer."
   },
   {
-   "sw": "Ndege wawili walikuwa juu ya mti. Waliimba kwa sauti kubwa, lakini Asha hakujua majina yao. Mzee mmoja alipita na alisema: \"Habari za mchana?\" Asha alijibu kwa furaha.",
+   "sw": "Ndege wawili walikuwa juu ya mti. Waliimba kwa sauti kubwa, lakini Asha hakujua majina yao. Mzee mmoja alipita na alisema: „Habari za mchana?“ Asha alijibu kwa furaha.",
    "de": "Zwei Vögel saßen oben im Baum. Sie sangen laut, aber Asha kannte ihre Namen nicht. Ein alter Mann kam vorbei und sagte: \"Guten Tag!\" Asha antwortete fröhlich."
   },
   {
@@ -135,10 +135,6 @@
   "ilikuwa": {
    "lemma": "kuwa",
    "de": "er/sie war"
-  },
-  "mbali": {
-   "lemma": "mbali",
-   "de": "weit"
   },
   "kidogo": {
    "lemma": "kidogo",
@@ -321,7 +317,7 @@
    "de": "er (der Ort) war"
   },
   "pazuri": {
-   "lemma": "zuri",
+   "lemma": "mzuri",
    "de": "schön (Pa-Klasse)"
   },
   "kabisa": {
@@ -339,6 +335,10 @@
   "bila": {
    "lemma": "bila",
    "de": "ohne"
+  },
+  "ndefu": {
+   "lemma": "refu",
+   "de": "lang (N-Klasse)"
   }
  },
  "audio": null

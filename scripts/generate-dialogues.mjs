@@ -117,12 +117,19 @@ ${lines}
 - **Die Grundform muss so geschrieben sein wie im Vokabelpool**, sonst zählt
   die App sie nie als gelernt. Schlag im Zweifel in public/vocab-pool.json nach
   (Feld "swahili").
-- **Adjektive immer auf die m-Form**, auch wenn die gebeugte Form selbst im Pool
-  steht: kizuri, nzuri, vizuri-als-Adjektiv → alle "mzuri". Der Pool führt
-  mehrere Klassenformen als eigene Einträge; die Prüfung kann das nicht
-  entscheiden, also entscheidet diese Regel. Ausnahme: lexikalisierte Adverbien
-  behalten ihr eigenes Lemma — "vizuri" als „gut/ordentlich" (Art und Weise) ist
-  ein eigenes Wort, nicht die Vi-Form von mzuri.
+- **Adjektive auf die Form, die der Pool führt.** Bei Kongruenz-Adjektiven ist
+  das genau eine Klassenform: kizuri, nzuri, pazuri → alle "mzuri"; baya →
+  "mbaya"; gumu → "ngumu". Ausnahme: lexikalisierte Adverbien behalten ihr
+  eigenes Lemma — "vizuri" als „gut/ordentlich" (Art und Weise) ist ein eigenes
+  Wort, nicht die Vi-Form von mzuri.
+- **Lokativ auf -ni ist Beugung, kein eigenes Lemma:** dukani → "duka",
+  nyumbani → "nyumba", kazini → "kazi", njiani → "njia".
+- **Kollokationen** ("kupiga simu = anrufen") bekommen ihre Grundform am
+  Kopfwort; die übrigen Bestandteile verweisen auf dieselbe Grundform, damit
+  das Wortpaar nicht doppelt gegen die Abdeckung zählt:
+    {"anapiga": {"lemma": "kupiga simu", "de": "sie ruft an"}}
+    {"simu":    {"lemma": "kupiga simu", "de": "(Teil von: anrufen)"}}
+  Meinst du wirklich die Einzelwörter, glossierst du sie einzeln.
 - **Verbableitungen** (reziprok -ana, passiv -wa, applikativ -ia, kausativ -isha):
   nur dann ein eigenes Lemma, wenn der Pool die abgeleitete Form als eigenen
   Eintrag führt. Sonst auf das Grundverb. Beispiel: "tuonane" → der Pool kennt

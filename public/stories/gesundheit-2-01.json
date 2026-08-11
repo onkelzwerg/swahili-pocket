@@ -17,7 +17,6 @@
   "kama",
   "kawaida",
   "kazi",
-  "kazini",
   "kesho",
   "kidogo",
   "kuamka",
@@ -70,7 +69,7 @@
    "de": "Ihre Nachbarin stand mit heißem Tee vor der Tür. Sie sagte, Halima könne heute nicht arbeiten. Halima antwortete, so schlimm sei es gar nicht, aber die Nachbarin hörte gar nicht hin."
   },
   {
-   "sw": "Halima alijua jirani yake ni sahihi. Alikunywa chai polepole na kulala kwa saa mbili. Hakuhitaji dawa. Alihitaji tu kupumzika.",
+   "sw": "Halima alijua jirani yake ni sahihi. Alikunywa chai polepole akalala kwa saa mbili. Hakuhitaji dawa. Alihitaji tu kupumzika.",
    "de": "Halima wusste, dass die Nachbarin recht hatte. Sie trank den Tee langsam und schlief zwei Stunden. Ein Medikament brauchte sie nicht. Sie brauchte nur Ruhe."
   },
   {
@@ -134,7 +133,7 @@
    "de": "gehen"
   },
   "kazini": {
-   "lemma": "kazini",
+   "lemma": "kazi",
    "de": "zur Arbeit"
   },
   "kama": {
@@ -243,10 +242,6 @@
    "lemma": "polepole",
    "de": "langsam"
   },
-  "kulala": {
-   "lemma": "kulala",
-   "de": "schlafen"
-  },
   "kwa": {
    "lemma": "kwa",
    "de": "für (Zeitdauer)"
@@ -322,6 +317,10 @@
   "bora": {
    "lemma": "bora",
    "de": "beste"
+  },
+  "akalala": {
+   "lemma": "kulala",
+   "de": "und schlief"
   }
  },
  "audio": null

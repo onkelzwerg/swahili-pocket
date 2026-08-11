@@ -1201,6 +1201,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "huyu", pl: "hawa" },
       far: { sg: "yule", pl: "wale" },
     },
+    locative: { sg: "yuko / yupo / yumo", pl: "wako / wapo / wamo" },
     examples: [
       { sw: "mtu / watu", de: "Mensch / Menschen" },
       { sw: "mtoto / watoto", de: "Kind / Kinder" },
@@ -1221,6 +1222,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "huu", pl: "hii" },
       far: { sg: "ule", pl: "ile" },
     },
+    locative: { sg: "uko / upo / umo", pl: "iko / ipo / imo" },
     examples: [
       { sw: "mti / miti", de: "Baum / Bäume" },
       { sw: "mji / miji", de: "Stadt / Städte" },
@@ -1241,6 +1243,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "hiki", pl: "hivi" },
       far: { sg: "kile", pl: "vile" },
     },
+    locative: { sg: "kiko / kipo / kimo", pl: "viko / vipo / vimo" },
     examples: [
       { sw: "kitabu / vitabu", de: "Buch / Bücher" },
       { sw: "kiti / viti", de: "Stuhl / Stühle" },
@@ -1261,6 +1264,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "hii", pl: "hizi" },
       far: { sg: "ile", pl: "zile" },
     },
+    locative: { sg: "iko / ipo / imo", pl: "ziko / zipo / zimo" },
     examples: [
       { sw: "nyumba / nyumba", de: "Haus / Häuser" },
       { sw: "habari / habari", de: "Nachricht" },
@@ -1281,6 +1285,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "hili", pl: "haya" },
       far: { sg: "lile", pl: "yale" },
     },
+    locative: { sg: "liko / lipo / limo", pl: "yako / yapo / yamo" },
     examples: [
       { sw: "jicho / macho", de: "Auge / Augen" },
       { sw: "jina / majina", de: "Name / Namen" },
@@ -1301,6 +1306,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "huu", pl: "—" },
       far: { sg: "ule", pl: "—" },
     },
+    locative: { sg: "uko / upo / umo", pl: "ziko / zipo / zimo" },
     examples: [
       { sw: "uhuru", de: "Freiheit" },
       { sw: "upendo", de: "Liebe" },
@@ -1321,6 +1327,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "hapa / huku / humu", pl: "—" },
       far: { sg: "pale / kule / mle", pl: "—" },
     },
+    locative: { sg: "pako / papo / pamo", pl: "—" },
     examples: [
       { sw: "mahali", de: "Ort, Platz" },
       { sw: "nyumbani", de: "zu Hause" },
@@ -1341,6 +1348,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "huku", pl: "—" },
       far: { sg: "kule", pl: "—" },
     },
+    locative: { sg: "kuko / kupo / kumo", pl: "—" },
     examples: [
       { sw: "kusoma", de: "lesen / Lesen" },
       { sw: "kula", de: "essen" },

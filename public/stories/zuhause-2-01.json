@@ -53,7 +53,7 @@
    "de": "Ihre Mutter war drinnen. Tatu sagte: „Mama, ich sehe mein Buch nicht.“ Die Mutter antwortete: „Gestern hast du draußen gelesen, unter dem Baum.“"
   },
   {
-   "sw": "Tatu alikwenda nje. Aliona kitabu chake chini ya mti mkubwa, na majani yalikuwa juu ya kitabu. Alichukua kitabu chake na kurudi ndani.",
+   "sw": "Tatu alikwenda nje. Aliona kitabu chake chini ya mti mkubwa, na majani yalikuwa juu ya kitabu. Alichukua kitabu chake akarudi ndani.",
    "de": "Tatu ging nach draußen. Sie sah ihr Buch unter dem großen Baum, und Blätter lagen darauf. Sie nahm ihr Buch und ging wieder hinein."
   },
   {
@@ -203,10 +203,6 @@
    "lemma": "kuchukua",
    "de": "sie nahm"
   },
-  "kurudi": {
-   "lemma": "kurudi",
-   "de": "zurückgehen"
-  },
   "sasa": {
    "lemma": "sasa",
    "de": "jetzt"
@@ -251,6 +247,10 @@
    "lemma": "hiyo",
    "de": "diese (ya-Wörter)",
    "structure": true
+  },
+  "akarudi": {
+   "lemma": "kurudi",
+   "de": "und ging zurück"
   }
  },
  "audio": null

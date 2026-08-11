@@ -18,7 +18,7 @@
   "juu",
   "kabisa",
   "katika",
-  "kazini",
+  "kazi",
   "kenya",
   "kila",
   "kuangalia",
@@ -56,7 +56,7 @@
  "newLemmas": [],
  "paragraphs": [
   {
-   "sw": "Kila jioni Subira anaangalia kwenye mlango wa nyumba yake. Rafiki yake Halima anakaa mbali, katika nchi ya Kenya. Subira alituma barua kwake, na muda ulipita polepole.",
+   "sw": "Kila jioni Subira aliangalia kwenye mlango wa nyumba yake. Rafiki yake Halima anakaa mbali, katika nchi ya Kenya. Subira alituma barua kwake, na muda ulipita polepole.",
    "de": "Jeden Abend schaut Subira an der Tür ihres Hauses nach. Ihre Freundin Halima wohnt weit weg, in Kenia. Subira hatte ihr einen Brief geschickt, und die Zeit verging langsam."
   },
   {
@@ -85,10 +85,6 @@
    "lemma": "subira",
    "de": "Subira (Frauenname)",
    "proper": true
-  },
-  "anaangalia": {
-   "lemma": "kuangalia",
-   "de": "sie schaut nach"
   },
   "kwenye": {
    "lemma": "kwenye",
@@ -188,7 +184,7 @@
    "de": "von, aus"
   },
   "kazini": {
-   "lemma": "kazini",
+   "lemma": "kazi",
    "de": "von der Arbeit"
   },
   "meza": {
@@ -333,6 +329,10 @@
   "ilirudi": {
    "lemma": "kurudi",
    "de": "sie kam zurück"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "sie schaute"
   }
  },
  "audio": null

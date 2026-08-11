@@ -56,8 +56,6 @@ export const STRUCTURE_LEMMAS = new Set([
   "hili",
   "haya",
   "hizi",
-  "huo",
-  "hiyo",
   "huku",
   "humu",
   "yule",
@@ -69,6 +67,30 @@ export const STRUCTURE_LEMMAS = new Set([
   "lile",
   "yale",
   "zile",
+  // -o-Referenzreihe („jenes bereits Erwähnte"). Sie fehlte bis W4.10 fast
+  // ganz; ohne sie lässt sich nicht auf etwas zurückverweisen, was zwei Sätze
+  // vorher stand — in einer Erzählung also ständig.
+  "huyo",
+  "hao",
+  "huo",
+  "hiyo",
+  "hicho",
+  "hivyo",
+  "hilo",
+  "hayo",
+  "hizo",
+  "hapo",
+  "huko",
+  "humo",
+  // Lokativkopula. „Wo ist mein Buch?" (kitabu changu kiko wapi?) war ohne
+  // diese drei Formen nicht formulierbar; ein Schreibender musste die Szene
+  // umbauen. Sie sind geschlossene Wortklasse und gehören ins Grammatik-Gym,
+  // nicht auf eine Karteikarte — dieselbe Begründung wie bei den Konkordanzen.
+  "-ko",
+  "-po",
+  "-mo",
+  // Quantorenstamm mit Kongruenz: wote, yote, zote, chote, kote …
+  "-ote",
   // Relativ, Kopula-Varianten, Ortspräposition
   "amba-",
   "ndiyo",

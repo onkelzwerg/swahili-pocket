@@ -514,6 +514,11 @@ export const T = {
     demonstratives: "Demonstrativa",
     near: "Dieses (hier)",
     far: "Jenes (dort)",
+    locative: "Ortsangabe („ist da“)",
+    locativeHint:
+      "-po = genau an dieser Stelle · -ko = irgendwo, allgemein · -mo = darin. " +
+      "Die Form richtet sich nach der Klasse dessen, was sich irgendwo befindet: " +
+      "Kitabu kiko wapi? — Wo ist das Buch?",
     examples: "Beispiele",
     monosyllabic: {
       title: "Einsilbige Verben",

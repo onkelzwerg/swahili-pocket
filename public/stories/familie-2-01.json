@@ -28,7 +28,7 @@
   "kujua",
   "kukaa",
   "kuliko",
-  "kupiga",
+  "kupiga simu",
   "kusema",
   "kutafuta",
   "kutaka",
@@ -43,14 +43,13 @@
   "moja",
   "mtoto",
   "mwisho",
+  "mzuri",
   "na",
   "ngumu",
   "ni",
-  "nzuri",
   "sana",
   "sauti",
   "siku",
-  "simu",
   "tayari",
   "vizuri",
   "wiki"
@@ -58,7 +57,7 @@
  "newLemmas": [],
  "paragraphs": [
   {
-   "sw": "Jumapili mchana Fatuma alitafuta simu yake. Bibi yake anakaa mbali sana, katika mji mmoja karibu na bahari. Lakini kila wiki Fatuma anapiga simu, na leo alikuwa tayari.",
+   "sw": "Jumapili mchana Fatuma alitafuta simu yake. Bibi yake anakaa mbali sana, katika mji mmoja karibu na bahari. Lakini kila wiki Fatuma alipiga simu, na leo alikuwa tayari.",
    "de": "Am Sonntagmittag suchte Fatuma ihr Telefon. Ihre Großmutter wohnt sehr weit weg, in einer Stadt nahe am Meer. Aber jede Woche ruft Fatuma an, und heute war sie bereit."
   },
   {
@@ -93,8 +92,8 @@
    "de": "sie suchte"
   },
   "simu": {
-   "lemma": "simu",
-   "de": "Telefon"
+   "lemma": "kupiga simu",
+   "de": "(Teil von: anrufen)"
   },
   "yake": {
    "lemma": "-ake",
@@ -152,10 +151,6 @@
   "wiki": {
    "lemma": "wiki",
    "de": "Woche"
-  },
-  "anapiga": {
-   "lemma": "kupiga",
-   "de": "sie schlägt; (mit simu) sie ruft an"
   },
   "leo": {
    "lemma": "leo",
@@ -223,7 +218,7 @@
    "de": "Lage, Situation"
   },
   "nzuri": {
-   "lemma": "nzuri",
+   "lemma": "mzuri",
    "de": "gut, schön"
   },
   "wa": {
@@ -317,6 +312,10 @@
   "itakuwa": {
    "lemma": "kuwa",
    "de": "er/sie wird sein"
+  },
+  "alipiga": {
+   "lemma": "kupiga simu",
+   "de": "sie rief an"
   }
  },
  "audio": null
