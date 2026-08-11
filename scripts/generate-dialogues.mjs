@@ -130,6 +130,12 @@ ${lines}
     {"anapiga": {"lemma": "kupiga simu", "de": "sie ruft an"}}
     {"simu":    {"lemma": "kupiga simu", "de": "(Teil von: anrufen)"}}
   Meinst du wirklich die Einzelwörter, glossierst du sie einzeln.
+  **Vorrang:** kommt ein Bestandteil der Kollokation im selben Dialog auch
+  eigenständig vor ("na" als „und" neben "karibu na"), gewinnt die
+  eigenständige Bedeutung — pro Token gibt es nur einen Eintrag, und der muss
+  an jeder Fundstelle stimmen. Dann glossierst du beide Teile einzeln.
+- Zahlwörter mit Kongruenz kommen auf die Form, die der Pool führt, genau wie
+  Adjektive: wawili → "mbili", mitano → "tano", watatu → "tatu".
 - **Verbableitungen** (reziprok -ana, passiv -wa, applikativ -ia, kausativ -isha):
   nur dann ein eigenes Lemma, wenn der Pool die abgeleitete Form als eigenen
   Eintrag führt. Sonst auf das Grundverb. Beispiel: "tuonane" → der Pool kennt
@@ -144,6 +150,10 @@ ${lines}
 - Eigennamen (Personen, Orte) bekommen "proper": true und ihre Grundform ist
   das Wort selbst. Sie zählen nicht in die Abdeckung. Viele Dialoge haben keine
   — dann gibt es auch keinen solchen Eintrag.
+  **Ausnahme: steht der Name als eigene Vokabel im Pool** (Länder wie Tanzania
+  oder Ujerumani stehen dort mit deutscher Übersetzung), dann ist er eine
+  lernbare Karte und bekommt **kein** "proper". Die Regel meint Namen, die man
+  nicht lernen kann — Juma, Arusha, Halima —, nicht solche, die der Pool führt.
 - Geschlossene Wortklassen zählen nicht in die Abdeckung; die App unterrichtet
   sie im Grammatik-Gym. Ihre Grundform muss **genau** eine der folgenden sein:
   ${[...STRUCTURE_LEMMAS].join(", ")}
@@ -165,8 +175,11 @@ Schreib nach ${file}:
  }
 }
 
-Kein Feld "lemmas" — das leitet der Validator ab. public/dialogues/index.json
-fasst du nicht an; den baut ein späterer Lauf von "npm run dialogues:validate".
+Kein Feld "lemmas" und kein Feld "structure" — beides leitet der Validator ab.
+(In bestehenden Dateien steht "structure" drin, weil er es beim Zurückschreiben
+selbst gesetzt hat; von Hand gehört es nie hinein.)
+public/dialogues/index.json fasst du nicht an; den baut ein späterer Lauf von
+"npm run dialogues:validate".
 Auch kein Feld "choices": die Entscheidungspunkte fürs Rollenspiel entstehen in
 einem späteren Arbeitsgang. „0 Entscheidungspunkte" in der Prüfausgabe ist an
 dieser Stelle das richtige Ergebnis, kein Mangel.

@@ -1,0 +1,151 @@
+{
+ "id": "numbers",
+ "lemmas": [
+  "arobaini",
+  "gani",
+  "hamsini",
+  "ishirini",
+  "kujifunza",
+  "kumi",
+  "kuwa na",
+  "mbili",
+  "mia",
+  "moja",
+  "mwaka",
+  "na",
+  "namba",
+  "nane",
+  "nne",
+  "saba",
+  "sabini",
+  "sasa",
+  "sita",
+  "sitini",
+  "tano",
+  "tatu",
+  "thelathini",
+  "themanini",
+  "tisa",
+  "tisini",
+  "umri"
+ ],
+ "glosses": {
+  "tujifunze": {
+   "lemma": "kujifunza",
+   "de": "lernen wir, lasst uns lernen"
+  },
+  "namba": {
+   "lemma": "namba",
+   "de": "Zahlen (Zahl)"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier"
+  },
+  "tano": {
+   "lemma": "tano",
+   "de": "fünf"
+  },
+  "sita": {
+   "lemma": "sita",
+   "de": "sechs"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben"
+  },
+  "nane": {
+   "lemma": "nane",
+   "de": "acht"
+  },
+  "tisa": {
+   "lemma": "tisa",
+   "de": "neun"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt, nun"
+  },
+  "makumi": {
+   "lemma": "kumi",
+   "de": "die Zehner (Plural von zehn)"
+  },
+  "ishirini": {
+   "lemma": "ishirini",
+   "de": "zwanzig"
+  },
+  "thelathini": {
+   "lemma": "thelathini",
+   "de": "dreißig"
+  },
+  "arobaini": {
+   "lemma": "arobaini",
+   "de": "vierzig"
+  },
+  "hamsini": {
+   "lemma": "hamsini",
+   "de": "fünfzig"
+  },
+  "sitini": {
+   "lemma": "sitini",
+   "de": "sechzig"
+  },
+  "sabini": {
+   "lemma": "sabini",
+   "de": "siebzig"
+  },
+  "themanini": {
+   "lemma": "themanini",
+   "de": "achtzig"
+  },
+  "tisini": {
+   "lemma": "tisini",
+   "de": "neunzig"
+  },
+  "mia": {
+   "lemma": "mia",
+   "de": "hundert"
+  },
+  "una": {
+   "lemma": "kuwa na",
+   "de": "du hast"
+  },
+  "umri": {
+   "lemma": "umri",
+   "de": "Alter, Lebensalter"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s, was für ein"
+  },
+  "nina": {
+   "lemma": "kuwa na",
+   "de": "ich habe"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahre (Plural von Jahr)"
+  }
+ },
+ "choices": {}
+}

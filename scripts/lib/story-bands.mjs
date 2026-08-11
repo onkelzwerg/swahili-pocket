@@ -56,6 +56,7 @@ export const CORE_BAND = new Map([
   ["asante", 1],
   ["mdogo", 1], // Gegenstück zu kubwa (Rang 46)
   ["hewa", 1],
+  ["mbele", 1], // „vorn/vor" — nyuma („hinten") liegt ebenfalls tief
   // Zahlen bis zehn. Der Pool kannte moja, mbili und nne — sonst nichts.
   // Neu aufgenommene Zahlen haben naturgemäß wenig Korpusbelege und lägen
   // ohne diese Zeilen in Band 3 und 4.
@@ -90,6 +91,17 @@ export const CORE_BAND = new Map([
   ["refu", 2], // „lang" — kubwa und mdogo sind Band 1, das Gegenstück fehlte
   ["kufahamu", 2], // „erkennen" — sonst muss kujua dafür herhalten
   ["kupiga simu", 2], // die alltäglichste Kollokation überhaupt
+  ["kuume", 2], // „rechts" — kushoto war da, das Gegenstück nicht
+  ["kupinda", 2],
+  // Die Zehner. kumi und ishirini sind Band 1 bzw. 2, sabini lag als einzelner
+  // Ausreißer schon im Bestand — dazwischen klaffte alles.
+  ["thelathini", 2],
+  ["arobaini", 2],
+  ["hamsini", 2],
+  ["sitini", 2],
+  ["sabini", 2],
+  ["themanini", 2],
+  ["tisini", 2],
 
   // --- Band 3 --------------------------------------------------------------
   ["kushika", 3],

@@ -1,0 +1,145 @@
+{
+ "id": "family",
+ "lemmas": [
+  "familia",
+  "gani",
+  "karibu",
+  "kusoma",
+  "kuwa na",
+  "mbili",
+  "msichana",
+  "msingi",
+  "mtoto",
+  "mvulana",
+  "mwaka",
+  "mzuri",
+  "na",
+  "ngapi",
+  "ni",
+  "nyumba",
+  "saba",
+  "sana",
+  "shule",
+  "tano",
+  "umri"
+ ],
+ "glosses": {
+  "una": {
+   "lemma": "kuwa na",
+   "de": "du hast"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "wangapi": {
+   "lemma": "ngapi",
+   "de": "wie viele"
+  },
+  "nina": {
+   "lemma": "kuwa na",
+   "de": "ich habe"
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (M-Wa-Klasse)"
+  },
+  "msichana": {
+   "lemma": "msichana",
+   "de": "Mädchen"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und (in „karibu na“: bei, nahe)"
+  },
+  "mvulana": {
+   "lemma": "mvulana",
+   "de": "Junge"
+  },
+  "wana": {
+   "lemma": "kuwa na",
+   "de": "sie haben"
+  },
+  "umri": {
+   "lemma": "umri",
+   "de": "Alter"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s, was für ein"
+  },
+  "ana": {
+   "lemma": "kuwa na",
+   "de": "er/sie hat"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahre"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben"
+  },
+  "mitano": {
+   "lemma": "tano",
+   "de": "fünf (Mi-Klasse)"
+  },
+  "wanasoma": {
+   "lemma": "kusoma",
+   "de": "sie gehen zur Schule, sie lernen (wörtl.: sie lesen)"
+  },
+  "shule": {
+   "lemma": "shule",
+   "de": "Schule"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (bejahende Antwortpartikel)",
+   "structure": true
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle, beide (Allquantor, M-Wa-Klasse)",
+   "structure": true
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "msingi": {
+   "lemma": "msingi",
+   "de": "Grundlage, Fundament — hier: Grund- (shule ya msingi = Grundschule)"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe, in der Nähe"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "zu Hause, beim Haus"
+  },
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "yako": {
+   "lemma": "-ako",
+   "de": "dein/deine",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "schön, gut"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  }
+ },
+ "choices": {}
+}

@@ -1,0 +1,175 @@
+{
+ "id": "intro",
+ "lemmas": [
+  "gani",
+  "habari",
+  "jina",
+  "kazi",
+  "kufanya",
+  "kufurahi",
+  "kuishi",
+  "kukutana",
+  "kutoka",
+  "lakini",
+  "lugha",
+  "mimi",
+  "mwalimu",
+  "na",
+  "nani",
+  "ni",
+  "pia",
+  "sana",
+  "sasa",
+  "ujerumani",
+  "vizuri",
+  "wapi",
+  "wewe"
+ ],
+ "glosses": {
+  "habari": {
+   "lemma": "habari",
+   "de": "Hallo! / Wie geht's? (wörtl.: Neuigkeit)"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "lako": {
+   "lemma": "-ako",
+   "de": "dein/deine",
+   "structure": true
+  },
+  "nani": {
+   "lemma": "nani",
+   "de": "wer"
+  },
+  "langu": {
+   "lemma": "-angu",
+   "de": "mein/meine",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist / bin (Kopula)"
+  },
+  "maria": {
+   "lemma": "maria",
+   "de": "Maria (weiblicher Vorname)",
+   "proper": true
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "wewe": {
+   "lemma": "wewe",
+   "de": "du"
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "juma": {
+   "lemma": "juma",
+   "de": "Juma (männlicher Vorname)",
+   "proper": true
+  },
+  "nimefurahi": {
+   "lemma": "kufurahi",
+   "de": "ich habe mich gefreut — freut mich"
+  },
+  "kukutana": {
+   "lemma": "kukutana",
+   "de": "zu treffen, kennenzulernen"
+  },
+  "nawe": {
+   "lemma": "na",
+   "de": "mit dir (na + wewe)"
+  },
+  "nami": {
+   "lemma": "na",
+   "de": "und ich, mir auch (na + mimi)"
+  },
+  "pia": {
+   "lemma": "pia",
+   "de": "auch, ebenfalls"
+  },
+  "unatoka": {
+   "lemma": "kutoka",
+   "de": "du kommst (aus)"
+  },
+  "wapi": {
+   "lemma": "wapi",
+   "de": "wo, woher"
+  },
+  "natoka": {
+   "lemma": "kutoka",
+   "de": "ich komme (aus)"
+  },
+  "ujerumani": {
+   "lemma": "ujerumani",
+   "de": "Deutschland"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "ninaishi": {
+   "lemma": "kuishi",
+   "de": "ich lebe, ich wohne"
+  },
+  "dar": {
+   "lemma": "dar",
+   "de": "Dar (aus dem Ortsnamen Dar es Salaam)",
+   "proper": true
+  },
+  "es": {
+   "lemma": "es",
+   "de": "es (aus dem Ortsnamen Dar es Salaam)",
+   "proper": true
+  },
+  "salaam": {
+   "lemma": "salaam",
+   "de": "Salaam (aus dem Ortsnamen Dar es Salaam)",
+   "proper": true
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, schön"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "unafanya": {
+   "lemma": "kufanya",
+   "de": "du machst, du tust"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s, was für ein"
+  },
+  "mwalimu": {
+   "lemma": "mwalimu",
+   "de": "Lehrer"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "lugha": {
+   "lemma": "lugha",
+   "de": "Sprache"
+  }
+ },
+ "choices": {}
+}
