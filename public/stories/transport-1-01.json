@@ -1,0 +1,206 @@
+{
+ "id": "transport-1-01",
+ "title": "Basi la asubuhi",
+ "titleDe": "Der Bus am Morgen",
+ "band": 1,
+ "topic": "Transport",
+ "emoji": "🚌",
+ "lemmas": [
+  "asubuhi",
+  "barabara",
+  "basi",
+  "gari",
+  "haraka",
+  "karibu",
+  "katika",
+  "kazini",
+  "kidogo",
+  "kuanza",
+  "kubwa",
+  "kufika",
+  "kuharibika",
+  "kuhisi",
+  "kukaa",
+  "kupanda",
+  "kutaka",
+  "kutoa",
+  "kwa",
+  "kwenda",
+  "mapema",
+  "mji",
+  "mkutano",
+  "mtu",
+  "na",
+  "sasa",
+  "shilingi",
+  "vizuri",
+  "yeye"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Asubuhi hii gari la Baraka limeharibika. Yeye anataka kwenda kazini kwa basi.",
+   "de": "Heute Morgen ist Barakas Auto kaputtgegangen. Er will mit dem Bus zur Arbeit fahren."
+  },
+  {
+   "sw": "Baraka anakaa karibu na barabara. Basi linafika, na yeye anapanda haraka. Anatoa shilingi kwa mtu wa basi.",
+   "de": "Baraka sitzt am Straßenrand. Der Bus kommt, und er steigt schnell ein. Dem Mann im Bus zahlt er ein paar Schilling."
+  },
+  {
+   "sw": "Basi linakwenda katika barabara kubwa ya mji. Baraka anafika kazini mapema kidogo. Anahisi vizuri, na mkutano unaanza sasa.",
+   "de": "Der Bus fährt über die große Straße der Stadt. Baraka kommt ein bisschen zu früh bei der Arbeit an. Er fühlt sich gut, und das Meeting beginnt gerade."
+  }
+ ],
+ "glosses": {
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "diese (N-Klasse)",
+   "structure": true
+  },
+  "gari": {
+   "lemma": "gari",
+   "de": "Auto"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitiv, Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "baraka": {
+   "lemma": "baraka",
+   "de": "Baraka (Name)",
+   "proper": true
+  },
+  "limeharibika": {
+   "lemma": "kuharibika",
+   "de": "es ist kaputtgegangen"
+  },
+  "yeye": {
+   "lemma": "yeye",
+   "de": "er"
+  },
+  "anataka": {
+   "lemma": "kutaka",
+   "de": "er will"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "gehen, fahren"
+  },
+  "kazini": {
+   "lemma": "kazini",
+   "de": "zur Arbeit, am Arbeitsplatz"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit, für"
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "Bus"
+  },
+  "anakaa": {
+   "lemma": "kukaa",
+   "de": "er sitzt"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe, in der Nähe"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, bei"
+  },
+  "barabara": {
+   "lemma": "barabara",
+   "de": "Straße"
+  },
+  "linafika": {
+   "lemma": "kufika",
+   "de": "er kommt an (Bus)"
+  },
+  "anapanda": {
+   "lemma": "kupanda",
+   "de": "er steigt ein"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "anatoa": {
+   "lemma": "kutoa",
+   "de": "er gibt (heraus)"
+  },
+  "shilingi": {
+   "lemma": "shilingi",
+   "de": "Schilling"
+  },
+  "mtu": {
+   "lemma": "mtu",
+   "de": "Mann, Mensch"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "linakwenda": {
+   "lemma": "kwenda",
+   "de": "er fährt (Bus)"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "auf, in"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "mji": {
+   "lemma": "mji",
+   "de": "Stadt"
+  },
+  "anafika": {
+   "lemma": "kufika",
+   "de": "er kommt an"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen"
+  },
+  "anahisi": {
+   "lemma": "kuhisi",
+   "de": "er fühlt sich"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut"
+  },
+  "mkutano": {
+   "lemma": "mkutano",
+   "de": "Meeting"
+  },
+  "unaanza": {
+   "lemma": "kuanza",
+   "de": "es beginnt"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  }
+ },
+ "audio": null
+}

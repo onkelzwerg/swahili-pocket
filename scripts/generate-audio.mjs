@@ -5,9 +5,14 @@
  * Reihenfolge der Vertonung:
  *   1. Dialoge (seed.ts + dialogues-extra.ts) — Sprecher A/B/C bekommen je
  *      eine eigene Stimme (Default s.u., überschreibbar via Dialogue.voiceMap).
- *   2. Phrasen des Tages (seed.ts phraseOfDay)
- *   3. Seed-Vokabeln inkl. Beispiele (seed.ts seedVocab)
- *   4. Pool-Vokabeln (public/vocab-pool.json): erst Wörter, dann Beispielsätze.
+ *   2. Geschichten (public/stories/*.json), absatzweise, nach Band sortiert —
+ *      Band 1 zuerst. Vor den Vokabeln, weil eine halb vertonte Geschichte
+ *      unbenutzbar ist, eine halb vertonte Wortliste dagegen nicht: der Reader
+ *      fiele bei jedem fehlenden Absatz auf die Web-Speech-Stimme zurück, und
+ *      die spricht Swahili zu unzuverlässig aus, um einen Text zu tragen.
+ *   3. Phrasen des Tages (seed.ts phraseOfDay)
+ *   4. Seed-Vokabeln inkl. Beispiele (seed.ts seedVocab)
+ *   5. Pool-Vokabeln (public/vocab-pool.json): erst Wörter, dann Beispielsätze.
  *
  * - Ziel: public/audio/<hash>.mp3 + public/audio/manifest.json
  *   (Manifest: Text → Dateiname; wird von src/lib/tts.ts geladen).
@@ -22,7 +27,7 @@
  *   node scripts/generate-audio.mjs --dry-run   (zeigt nur, was passieren würde)
  */
 import { createHash } from "node:crypto";
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -30,6 +35,7 @@ import { build } from "esbuild";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const POOL_FILE = path.join(ROOT, "public", "vocab-pool.json");
+const STORIES_DIR = path.join(ROOT, "public", "stories");
 const AUDIO_DIR = path.join(ROOT, "public", "audio");
 const MANIFEST_FILE = path.join(AUDIO_DIR, "manifest.json");
 
@@ -129,9 +135,27 @@ async function loadAppData() {
   return import(`data:text/javascript;base64,${Buffer.from(code).toString("base64")}`);
 }
 
+/**
+ * Geschichten aus public/stories/, nach Band sortiert.
+ * Der Index bleibt außen vor: er wird aus den Einzeldateien gebaut und würde
+ * hier nur eine zweite Wahrheit über den Bestand aufmachen.
+ */
+async function loadStories() {
+  if (!existsSync(STORIES_DIR)) return [];
+  const files = (await readdir(STORIES_DIR)).filter(
+    (f) => f.endsWith(".json") && f !== "index.json",
+  );
+  const stories = [];
+  for (const file of files) {
+    stories.push(JSON.parse(await readFile(path.join(STORIES_DIR, file), "utf8")));
+  }
+  return stories.sort((a, b) => (a.band ?? 9) - (b.band ?? 9) || a.id.localeCompare(b.id));
+}
+
 async function main() {
   const pool = JSON.parse(await readFile(POOL_FILE, "utf8"));
   const { dialogues, extraDialogues, phraseOfDay, seedVocab } = await loadAppData();
+  const stories = await loadStories();
   const manifest = await loadManifest();
 
   // Aufgabenliste in Prioritäts-Reihenfolge (s. Kopfkommentar).
@@ -146,12 +170,22 @@ async function main() {
     }
   }
 
-  // 2. Phrasen des Tages.
+  // 2. Geschichten, absatzweise. Eine Geschichte = eine Stimme: sie ist ein
+  //    zusammenhängender Text, kein Wechselgespräch, und ein Sprecherwechsel
+  //    zwischen Absatz zwei und drei klänge nach Fehler.
+  for (const story of stories) {
+    const voice = voiceForWord(story.id);
+    for (const p of story.paragraphs ?? []) {
+      if (p?.sw) tasks.push({ text: p.sw.trim(), voice, kind: `Geschichte B${story.band}` });
+    }
+  }
+
+  // 3. Phrasen des Tages.
   for (const p of phraseOfDay) {
     if (p.sw) tasks.push({ text: p.sw.trim(), voice: voiceForWord(p.sw), kind: "Phrase" });
   }
 
-  // 3. Seed-Vokabeln inkl. Beispiele.
+  // 4. Seed-Vokabeln inkl. Beispiele.
   for (const v of seedVocab()) {
     const voice = voiceForWord(v.swahili);
     tasks.push({ text: v.swahili.trim(), voice, kind: "Seed-Wort" });
@@ -160,7 +194,7 @@ async function main() {
     }
   }
 
-  // 4. Pool: erst alle Wörter (billig, werden am häufigsten abgespielt),
+  // 5. Pool: erst alle Wörter (billig, werden am häufigsten abgespielt),
   //    dann alle Beispielsätze — jeweils in Pool-Reihenfolge.
   for (const entry of pool) {
     const voice = voiceForWord(entry.swahili);

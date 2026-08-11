@@ -1,0 +1,31 @@
+{
+ "version": 1,
+ "dialogues": [
+  {
+   "id": "greet",
+   "title": "Greetings",
+   "titleDe": "Begrüßung",
+   "level": null,
+   "lemmas": [
+    "asante",
+    "asubuhi",
+    "baadaye",
+    "habari",
+    "kabisa",
+    "kulala",
+    "kuona",
+    "mzuri",
+    "na",
+    "salama",
+    "sana",
+    "vizuri",
+    "wewe"
+   ],
+   "turnCount": 6,
+   "wordCount": 23,
+   "choicePoints": 0,
+   "playableSpeakers": [],
+   "hasAudio": true
+  }
+ ]
+}

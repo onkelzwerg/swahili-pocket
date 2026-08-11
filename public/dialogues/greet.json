@@ -1,0 +1,92 @@
+{
+ "id": "greet",
+ "lemmas": [
+  "asante",
+  "asubuhi",
+  "baadaye",
+  "habari",
+  "kabisa",
+  "kulala",
+  "kuona",
+  "mzuri",
+  "na",
+  "salama",
+  "sana",
+  "vizuri",
+  "wewe"
+ ],
+ "glosses": {
+  "habari": {
+   "lemma": "habari",
+   "de": "Neuigkeit(en) — als Gruß: Wie geht's?"
+  },
+  "yako": {
+   "lemma": "-ako",
+   "de": "dein/deine",
+   "structure": true
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "gut, schön"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "wewe": {
+   "lemma": "wewe",
+   "de": "du"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von/der (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "salama": {
+   "lemma": "salama",
+   "de": "friedlich, in Ordnung"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "völlig, ganz"
+  },
+  "umelala": {
+   "lemma": "kulala",
+   "de": "du hast geschlafen"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, schön"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja",
+   "structure": true
+  },
+  "nimelala": {
+   "lemma": "kulala",
+   "de": "ich habe geschlafen"
+  },
+  "tuonane": {
+   "lemma": "kuona",
+   "de": "wir wollen uns sehen (bis dann)"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später, nachher"
+  }
+ },
+ "choices": {}
+}

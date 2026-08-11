@@ -1,0 +1,223 @@
+{
+ "id": "emotionen-1-01",
+ "title": "Mvua ya Asubuhi",
+ "titleDe": "Regen am Morgen",
+ "band": 1,
+ "topic": "Emotionen",
+ "emoji": "🌧️",
+ "lemmas": [
+  "asubuhi",
+  "barua",
+  "chai",
+  "chumba",
+  "familia",
+  "katika",
+  "kesho",
+  "kidogo",
+  "kucheza",
+  "kuhisi",
+  "kukaa",
+  "kulia",
+  "kunyesha",
+  "kuoga",
+  "kupenda",
+  "kupika",
+  "kusoma",
+  "kutaka",
+  "kuvaa",
+  "kwenda",
+  "mbaya",
+  "mpya",
+  "mtoto",
+  "mvua",
+  "na",
+  "nguo",
+  "ni",
+  "pamoja",
+  "pwani",
+  "safari",
+  "sana",
+  "sasa",
+  "siku",
+  "vizuri"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Asubuhi Salim anaoga na anavaa nguo mpya. Anataka kwenda pwani na mtoto wake.",
+   "de": "Am Morgen wäscht Salim sich und zieht neue Kleidung an. Er will mit seinem Kind an die Küste fahren."
+  },
+  {
+   "sw": "Sasa mvua inanyesha sana. Salim anahisi vibaya kidogo, na mtoto wake analia.",
+   "de": "Jetzt regnet es stark. Salim ist ein bisschen niedergeschlagen, und sein Kind fängt an zu weinen."
+  },
+  {
+   "sw": "Salim anapika chai, na wanakaa pamoja katika chumba. Wanasoma barua ya familia yao na wanacheza. Mtoto anahisi vizuri sasa. Salim anapenda siku hii, na safari ya pwani ni kesho.",
+   "de": "Salim kocht Tee, und sie setzen sich zusammen ins Zimmer. Sie lesen einen Brief ihrer Familie und spielen. Dem Kind geht es jetzt wieder gut. Salim mag diesen Tag, und der Ausflug an die Küste ist eben morgen."
+  }
+ ],
+ "glosses": {
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen, vormittags"
+  },
+  "salim": {
+   "lemma": "salim",
+   "de": "Salim (Name)",
+   "proper": true
+  },
+  "anaoga": {
+   "lemma": "kuoga",
+   "de": "er wäscht sich, er badet"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "anavaa": {
+   "lemma": "kuvaa",
+   "de": "er zieht an"
+  },
+  "nguo": {
+   "lemma": "nguo",
+   "de": "Kleidung"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neu"
+  },
+  "anataka": {
+   "lemma": "kutaka",
+   "de": "er will"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "gehen, fahren"
+  },
+  "pwani": {
+   "lemma": "pwani",
+   "de": "Küste"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "sein (Possessiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "mvua": {
+   "lemma": "mvua",
+   "de": "Regen"
+  },
+  "inanyesha": {
+   "lemma": "kunyesha",
+   "de": "es regnet"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr, stark"
+  },
+  "anahisi": {
+   "lemma": "kuhisi",
+   "de": "er fühlt sich"
+  },
+  "vibaya": {
+   "lemma": "mbaya",
+   "de": "schlecht (adverbial)"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen"
+  },
+  "analia": {
+   "lemma": "kulia",
+   "de": "es weint"
+  },
+  "anapika": {
+   "lemma": "kupika",
+   "de": "er kocht"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "wanakaa": {
+   "lemma": "kukaa",
+   "de": "sie sitzen, sie bleiben"
+  },
+  "pamoja": {
+   "lemma": "pamoja",
+   "de": "zusammen"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "chumba": {
+   "lemma": "chumba",
+   "de": "Zimmer"
+  },
+  "wanasoma": {
+   "lemma": "kusoma",
+   "de": "sie lesen"
+  },
+  "barua": {
+   "lemma": "barua",
+   "de": "Brief"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "yao": {
+   "lemma": "-ao",
+   "de": "ihr (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "wanacheza": {
+   "lemma": "kucheza",
+   "de": "sie spielen"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut"
+  },
+  "anapenda": {
+   "lemma": "kupenda",
+   "de": "er mag, er liebt"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "diese (N-Klasse)",
+   "structure": true
+  },
+  "safari": {
+   "lemma": "safari",
+   "de": "Reise, Ausflug"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "kesho": {
+   "lemma": "kesho",
+   "de": "morgen"
+  }
+ },
+ "audio": null
+}

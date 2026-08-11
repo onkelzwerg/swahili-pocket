@@ -1,0 +1,282 @@
+{
+ "id": "reisen-1-01",
+ "title": "Siku ya kwanza pwani",
+ "titleDe": "Der erste Tag an der Küste",
+ "band": 1,
+ "topic": "Reisen",
+ "emoji": "🌊",
+ "lemmas": [
+  "barabara",
+  "chumba",
+  "duka",
+  "familia",
+  "hapa",
+  "hewa",
+  "jioni",
+  "joto",
+  "jua",
+  "kabisa",
+  "karibu",
+  "kesho",
+  "kidogo",
+  "kucheza",
+  "kufika",
+  "kuhisi",
+  "kukaa",
+  "kulala",
+  "kuna",
+  "kununua",
+  "kuoga",
+  "kuona",
+  "kupiga",
+  "kutaka",
+  "kuvaa",
+  "kwa",
+  "kwanza",
+  "kwenda",
+  "maji",
+  "mapema",
+  "matunda",
+  "mchana",
+  "moja",
+  "mtoto",
+  "na",
+  "nguo",
+  "ni",
+  "nzuri",
+  "pwani",
+  "sababu",
+  "safi",
+  "sana",
+  "simu",
+  "usiku",
+  "vizuri"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Rehema alifika pwani mchana. Kuna joto sana hapa, na hewa ya maji ni nzuri. Chumba chake ni kidogo, karibu na barabara.",
+   "de": "Am Mittag kam Rehema an der Küste an. Hier ist es sehr heiß, und die Luft vom Wasser tut gut. Ihr Zimmer ist klein und liegt nah an der Straße."
+  },
+  {
+   "sw": "Kwanza Rehema alioga na alivaa nguo safi. Alikwenda kwenye duka moja na alinunua matunda. Alikaa karibu na maji na aliona watoto wakicheza.",
+   "de": "Zuerst wusch sich Rehema und zog saubere Kleidung an. Sie ging zu einem Laden und kaufte Obst. Sie setzte sich ans Wasser und sah Kindern beim Spielen zu."
+  },
+  {
+   "sw": "Jioni Rehema alipiga simu kwa familia yake. Alihisi vizuri kabisa. Usiku alilala mapema, kwa sababu kesho anataka kuona jua mapema pwani.",
+   "de": "Am Abend rief Rehema ihre Familie an. Sie fühlte sich richtig gut. Nachts ging sie früh schlafen, denn morgen will sie die Sonne früh über der Küste sehen."
+  }
+ ],
+ "glosses": {
+  "rehema": {
+   "lemma": "rehema",
+   "de": "Rehema (Name)",
+   "proper": true
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "sie kam an"
+  },
+  "pwani": {
+   "lemma": "pwani",
+   "de": "Küste / an der Küste"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "am Mittag"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "joto": {
+   "lemma": "joto",
+   "de": "Hitze / Wärme"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und / mit"
+  },
+  "hewa": {
+   "lemma": "hewa",
+   "de": "Luft"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von / des",
+   "structure": true
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "nzuri": {
+   "lemma": "nzuri",
+   "de": "gut / angenehm"
+  },
+  "chumba": {
+   "lemma": "chumba",
+   "de": "Zimmer"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "ihr",
+   "structure": true
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "klein"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nah / neben"
+  },
+  "barabara": {
+   "lemma": "barabara",
+   "de": "Straße"
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "zuerst"
+  },
+  "alioga": {
+   "lemma": "kuoga",
+   "de": "sie wusch sich"
+  },
+  "alivaa": {
+   "lemma": "kuvaa",
+   "de": "sie zog an"
+  },
+  "nguo": {
+   "lemma": "nguo",
+   "de": "Kleidung"
+  },
+  "safi": {
+   "lemma": "safi",
+   "de": "sauber"
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "sie ging"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "zu / in",
+   "structure": true
+  },
+  "duka": {
+   "lemma": "duka",
+   "de": "Laden"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "ein"
+  },
+  "alinunua": {
+   "lemma": "kununua",
+   "de": "sie kaufte"
+  },
+  "matunda": {
+   "lemma": "matunda",
+   "de": "Obst"
+  },
+  "alikaa": {
+   "lemma": "kukaa",
+   "de": "sie setzte sich"
+  },
+  "aliona": {
+   "lemma": "kuona",
+   "de": "sie sah"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "wakicheza": {
+   "lemma": "kucheza",
+   "de": "wie sie spielten / beim Spielen"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "alipiga": {
+   "lemma": "kupiga",
+   "de": "sie rief an (alipiga simu)"
+  },
+  "simu": {
+   "lemma": "simu",
+   "de": "Telefon / Anruf"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "bei / wegen"
+  },
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "alihisi": {
+   "lemma": "kuhisi",
+   "de": "sie fühlte sich"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "ganz / richtig"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "nachts"
+  },
+  "alilala": {
+   "lemma": "kulala",
+   "de": "sie schlief / legte sich hin"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "sababu": {
+   "lemma": "sababu",
+   "de": "Grund (kwa sababu = weil)"
+  },
+  "kesho": {
+   "lemma": "kesho",
+   "de": "morgen"
+  },
+  "anataka": {
+   "lemma": "kutaka",
+   "de": "sie will"
+  },
+  "kuona": {
+   "lemma": "kuona",
+   "de": "sehen"
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  }
+ },
+ "audio": null
+}

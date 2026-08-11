@@ -1,0 +1,345 @@
+{
+ "id": "natur-2-01",
+ "title": "Mti na Bahari",
+ "titleDe": "Der Baum und das Meer",
+ "band": 2,
+ "topic": "Natur",
+ "emoji": "🌳",
+ "lemmas": [
+  "bahari",
+  "bila",
+  "chini",
+  "furaha",
+  "habari",
+  "hapa",
+  "haraka",
+  "jina",
+  "jioni",
+  "jua",
+  "jumapili",
+  "juu",
+  "kabisa",
+  "karibu",
+  "kidogo",
+  "kuangalia",
+  "kuanza",
+  "kubwa",
+  "kuimba",
+  "kujibu",
+  "kujua",
+  "kukaa",
+  "kunywa",
+  "kupita",
+  "kurudi",
+  "kusema",
+  "kutembea",
+  "kuwa",
+  "kwa",
+  "kwenda",
+  "lakini",
+  "mahali",
+  "maji",
+  "mbali",
+  "mbili",
+  "mchana",
+  "moja",
+  "mti",
+  "muda",
+  "mzee",
+  "na",
+  "ndege",
+  "nguvu",
+  "njia",
+  "nyekundu",
+  "nyumba",
+  "polepole",
+  "pwani",
+  "sana",
+  "sauti",
+  "yeye",
+  "zuri"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jumapili mchana jua lilikuwa na nguvu sana. Asha alitembea polepole kwenda pwani. Njia ilikuwa mbali kidogo, lakini yeye hakuwa na haraka.",
+   "de": "Am Sonntagmittag stand die Sonne stark am Himmel. Asha ging langsam zu Fuß zur Küste. Der Weg war ein Stück weit, aber sie hatte es nicht eilig."
+  },
+  {
+   "sw": "Karibu na bahari kulikuwa na mti mkubwa. Asha alikaa chini ya mti huo. Alikunywa maji na aliangalia bahari kwa muda.",
+   "de": "Nahe am Meer stand ein großer Baum. Asha setzte sich unter diesen Baum. Sie trank Wasser und schaute eine Weile aufs Meer."
+  },
+  {
+   "sw": "Ndege wawili walikuwa juu ya mti. Waliimba kwa sauti kubwa, lakini Asha hakujua majina yao. Mzee mmoja alipita na alisema: \"Habari za mchana?\" Asha alijibu kwa furaha.",
+   "de": "Zwei Vögel saßen oben im Baum. Sie sangen laut, aber Asha kannte ihre Namen nicht. Ein alter Mann kam vorbei und sagte: \"Guten Tag!\" Asha antwortete fröhlich."
+  },
+  {
+   "sw": "Jioni jua lilianza kwenda chini na maji ya bahari yalikuwa nyekundu. Mahali hapa palikuwa pazuri kabisa. Asha alirudi nyumbani polepole, bila haraka.",
+   "de": "Am Abend sank die Sonne, und das Wasser des Meeres wurde rot. Dieser Ort war einfach schön. Asha ging langsam nach Hause, ohne Eile."
+  }
+ ],
+ "glosses": {
+  "jumapili": {
+   "lemma": "jumapili",
+   "de": "Sonntag"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "Mittag, mittags"
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  },
+  "lilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie (die Sonne) war"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "nguvu": {
+   "lemma": "nguvu",
+   "de": "Kraft, stark"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "asha": {
+   "lemma": "asha",
+   "de": "Asha (Name)",
+   "proper": true
+  },
+  "alitembea": {
+   "lemma": "kutembea",
+   "de": "sie ging zu Fuß"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "gehen"
+  },
+  "pwani": {
+   "lemma": "pwani",
+   "de": "Küste, zur Küste"
+  },
+  "njia": {
+   "lemma": "njia",
+   "de": "Weg"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "er/sie war"
+  },
+  "mbali": {
+   "lemma": "mbali",
+   "de": "weit"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "yeye": {
+   "lemma": "yeye",
+   "de": "sie"
+  },
+  "hakuwa": {
+   "lemma": "kuwa",
+   "de": "sie war nicht"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "Eile"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe, in der Nähe"
+  },
+  "bahari": {
+   "lemma": "bahari",
+   "de": "Meer"
+  },
+  "kulikuwa": {
+   "lemma": "kuwa",
+   "de": "es gab, es stand"
+  },
+  "mti": {
+   "lemma": "mti",
+   "de": "Baum"
+  },
+  "mkubwa": {
+   "lemma": "kubwa",
+   "de": "groß (M-Mi-Klasse)"
+  },
+  "alikaa": {
+   "lemma": "kukaa",
+   "de": "sie setzte sich, sie saß"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "unten, unter"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "huo": {
+   "lemma": "huo",
+   "de": "dieser (M-Mi-Klasse)",
+   "structure": true
+  },
+  "alikunywa": {
+   "lemma": "kunywa",
+   "de": "sie trank"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "sie schaute"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, mit"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "ndege": {
+   "lemma": "ndege",
+   "de": "Vögel"
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (Wa-Klasse)"
+  },
+  "walikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "oben"
+  },
+  "waliimba": {
+   "lemma": "kuimba",
+   "de": "sie sangen"
+  },
+  "sauti": {
+   "lemma": "sauti",
+   "de": "Stimme"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß, laut"
+  },
+  "hakujua": {
+   "lemma": "kujua",
+   "de": "sie wusste nicht"
+  },
+  "majina": {
+   "lemma": "jina",
+   "de": "Namen"
+  },
+  "yao": {
+   "lemma": "-ao",
+   "de": "ihr, ihre (Plural)",
+   "structure": true
+  },
+  "mzee": {
+   "lemma": "mzee",
+   "de": "alter Mann"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein (M-Wa-Klasse)"
+  },
+  "alipita": {
+   "lemma": "kupita",
+   "de": "er kam vorbei"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "er sagte"
+  },
+  "habari": {
+   "lemma": "habari",
+   "de": "Nachricht, Gruß"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "sie antwortete"
+  },
+  "furaha": {
+   "lemma": "furaha",
+   "de": "Freude"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "lilianza": {
+   "lemma": "kuanza",
+   "de": "sie (die Sonne) begann"
+  },
+  "yalikuwa": {
+   "lemma": "kuwa",
+   "de": "sie (das Wasser) waren"
+  },
+  "nyekundu": {
+   "lemma": "nyekundu",
+   "de": "rot"
+  },
+  "mahali": {
+   "lemma": "mahali",
+   "de": "Ort"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier, dieser"
+  },
+  "palikuwa": {
+   "lemma": "kuwa",
+   "de": "er (der Ort) war"
+  },
+  "pazuri": {
+   "lemma": "zuri",
+   "de": "schön (Pa-Klasse)"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "ganz, völlig"
+  },
+  "alirudi": {
+   "lemma": "kurudi",
+   "de": "sie kehrte zurück"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  }
+ },
+ "audio": null
+}

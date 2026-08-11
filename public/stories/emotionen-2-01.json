@@ -1,0 +1,339 @@
+{
+ "id": "emotionen-2-01",
+ "title": "Barua Kutoka Mbali",
+ "titleDe": "Ein Brief von weit her",
+ "band": 2,
+ "topic": "Emotionen",
+ "emoji": "📬",
+ "lemmas": [
+  "barua",
+  "bili",
+  "chai",
+  "chini",
+  "furaha",
+  "haraka",
+  "jina",
+  "jioni",
+  "jirani",
+  "juu",
+  "kabisa",
+  "katika",
+  "kazini",
+  "kenya",
+  "kila",
+  "kuangalia",
+  "kuanza",
+  "kufika",
+  "kufungua",
+  "kukaa",
+  "kunywa",
+  "kuona",
+  "kupiga",
+  "kupita",
+  "kurudi",
+  "kusoma",
+  "kutoka",
+  "kutuma",
+  "kuwa",
+  "kwa",
+  "lakini",
+  "leo",
+  "mbali",
+  "meza",
+  "mlango",
+  "moyo",
+  "muda",
+  "na",
+  "nchi",
+  "neno",
+  "nyeupe",
+  "nyumba",
+  "polepole",
+  "rafiki",
+  "umeme",
+  "wakati"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Kila jioni Subira anaangalia kwenye mlango wa nyumba yake. Rafiki yake Halima anakaa mbali, katika nchi ya Kenya. Subira alituma barua kwake, na muda ulipita polepole.",
+   "de": "Jeden Abend schaut Subira an der Tür ihres Hauses nach. Ihre Freundin Halima wohnt weit weg, in Kenia. Subira hatte ihr einen Brief geschickt, und die Zeit verging langsam."
+  },
+  {
+   "sw": "Leo Subira alirudi kutoka kazini. Kwenye meza aliona barua nyeupe. Moyo wake ulianza kupiga haraka. Alifungua barua, lakini haikuwa ya Halima. Ilikuwa bili ya umeme.",
+   "de": "Heute kam Subira von der Arbeit zurück. Auf dem Tisch sah sie einen weißen Brief. Ihr Herz fing an, schneller zu schlagen. Sie öffnete den Brief, aber er war nicht von Halima. Es war die Stromrechnung."
+  },
+  {
+   "sw": "Subira alikaa chini na alikunywa chai yake polepole. Furaha yake ilipita kabisa.",
+   "de": "Subira setzte sich hin und trank langsam ihren Tee. Ihre Freude war ganz verflogen."
+  },
+  {
+   "sw": "Wakati huo jirani yake alifika mlangoni. Alikuwa na barua kwa Subira, na jina la Halima lilikuwa juu. Subira alisoma kila neno polepole, na furaha yake ilirudi.",
+   "de": "In dem Moment kam ihre Nachbarin an die Tür. Sie hatte einen Brief für Subira, und oben stand Halimas Name. Subira las jedes Wort langsam, und ihre Freude kam zurück."
+  }
+ ],
+ "glosses": {
+  "kila": {
+   "lemma": "kila",
+   "de": "jeden"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "Abend"
+  },
+  "subira": {
+   "lemma": "subira",
+   "de": "Subira (Frauenname)",
+   "proper": true
+  },
+  "anaangalia": {
+   "lemma": "kuangalia",
+   "de": "sie schaut nach"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "an, bei",
+   "structure": true
+  },
+  "mlango": {
+   "lemma": "mlango",
+   "de": "Tür"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (M-Mi-Klasse)",
+   "structure": true
+  },
+  "nyumba": {
+   "lemma": "nyumba",
+   "de": "Haus"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihr/ihre",
+   "structure": true
+  },
+  "rafiki": {
+   "lemma": "rafiki",
+   "de": "Freundin"
+  },
+  "halima": {
+   "lemma": "halima",
+   "de": "Halima (Frauenname)",
+   "proper": true
+  },
+  "anakaa": {
+   "lemma": "kukaa",
+   "de": "sie wohnt"
+  },
+  "mbali": {
+   "lemma": "mbali",
+   "de": "weit weg"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "nchi": {
+   "lemma": "nchi",
+   "de": "Land"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (N-Klasse)",
+   "structure": true
+  },
+  "kenya": {
+   "lemma": "kenya",
+   "de": "Kenia"
+  },
+  "alituma": {
+   "lemma": "kutuma",
+   "de": "sie schickte"
+  },
+  "barua": {
+   "lemma": "barua",
+   "de": "Brief"
+  },
+  "kwake": {
+   "lemma": "kwa",
+   "de": "an sie, zu ihr"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "die Zeit, eine Weile"
+  },
+  "ulipita": {
+   "lemma": "kupita",
+   "de": "sie verging (die Zeit)"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "alirudi": {
+   "lemma": "kurudi",
+   "de": "sie kam zurück"
+  },
+  "kutoka": {
+   "lemma": "kutoka",
+   "de": "von, aus"
+  },
+  "kazini": {
+   "lemma": "kazini",
+   "de": "von der Arbeit"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "aliona": {
+   "lemma": "kuona",
+   "de": "sie sah"
+  },
+  "nyeupe": {
+   "lemma": "nyeupe",
+   "de": "weiß"
+  },
+  "moyo": {
+   "lemma": "moyo",
+   "de": "Herz"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihr/ihres",
+   "structure": true
+  },
+  "ulianza": {
+   "lemma": "kuanza",
+   "de": "es fing an"
+  },
+  "kupiga": {
+   "lemma": "kupiga",
+   "de": "schlagen"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "alifungua": {
+   "lemma": "kufungua",
+   "de": "sie öffnete"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "haikuwa": {
+   "lemma": "kuwa",
+   "de": "er war nicht"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "es war"
+  },
+  "bili": {
+   "lemma": "bili",
+   "de": "Rechnung"
+  },
+  "umeme": {
+   "lemma": "umeme",
+   "de": "Strom"
+  },
+  "alikaa": {
+   "lemma": "kukaa",
+   "de": "sie setzte sich"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "unten, hin"
+  },
+  "alikunywa": {
+   "lemma": "kunywa",
+   "de": "sie trank"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "furaha": {
+   "lemma": "furaha",
+   "de": "Freude"
+  },
+  "ilipita": {
+   "lemma": "kupita",
+   "de": "sie verflog"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "ganz, völlig"
+  },
+  "wakati": {
+   "lemma": "wakati",
+   "de": "Zeit, Moment"
+  },
+  "huo": {
+   "lemma": "huo",
+   "de": "dieser, in dem",
+   "structure": true
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbarin"
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "sie kam an"
+  },
+  "mlangoni": {
+   "lemma": "mlango",
+   "de": "an der Tür"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war, sie hatte"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "lilikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "oben"
+  },
+  "alisoma": {
+   "lemma": "kusoma",
+   "de": "sie las"
+  },
+  "neno": {
+   "lemma": "neno",
+   "de": "Wort"
+  },
+  "ilirudi": {
+   "lemma": "kurudi",
+   "de": "sie kam zurück"
+  }
+ },
+ "audio": null
+}

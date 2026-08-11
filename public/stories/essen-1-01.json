@@ -1,0 +1,218 @@
+{
+ "id": "essen-1-01",
+ "title": "Chakula cha Jioni",
+ "titleDe": "Das Abendessen",
+ "band": 1,
+ "topic": "Essen",
+ "emoji": "🍲",
+ "lemmas": [
+  "bei",
+  "chai",
+  "chakula",
+  "duka",
+  "ghali",
+  "jioni",
+  "kidogo",
+  "kufika",
+  "kukaanga",
+  "kula",
+  "kununua",
+  "kunywa",
+  "kuosha",
+  "kupika",
+  "kupumzika",
+  "kutaka",
+  "kutoa",
+  "kwa",
+  "mafuta",
+  "maji",
+  "mapema",
+  "matunda",
+  "maziwa",
+  "mkate",
+  "moja",
+  "mtoto",
+  "mzuri",
+  "na",
+  "ni",
+  "nyama",
+  "nyumba",
+  "pamoja",
+  "safi",
+  "sana",
+  "si",
+  "zaidi"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jioni Amina ananunua mkate na matunda dukani. Bei si ghali sana, na ananunua maziwa kidogo.",
+   "de": "Am Abend kauft Amina im Laden Brot und Obst. Die Preise sind nicht besonders teuer, also nimmt sie noch etwas Milch mit."
+  },
+  {
+   "sw": "Nyumbani anapika chakula. Anakaanga nyama kwa mafuta na anaosha matunda kwa maji safi.",
+   "de": "Zu Hause kocht sie. Sie brät das Fleisch in etwas Fett und wäscht das Obst mit sauberem Wasser."
+  },
+  {
+   "sw": "Mtoto wake anafika mapema. Wanakula pamoja na wanakunywa chai. Chakula ni kizuri sana, na mtoto anataka zaidi. Amina anatoa mkate mmoja zaidi, na wanapumzika.",
+   "de": "Ihr Kind kommt früh nach Hause. Sie essen zusammen und trinken Tee. Das Essen ist sehr gut, und das Kind möchte mehr. Amina gibt ihm noch ein Brot, danach ruhen sie sich aus."
+  }
+ ],
+ "glosses": {
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "amina": {
+   "lemma": "amina",
+   "de": "Amina (Name)",
+   "proper": true
+  },
+  "ananunua": {
+   "lemma": "kununua",
+   "de": "sie kauft"
+  },
+  "mkate": {
+   "lemma": "mkate",
+   "de": "Brot"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "matunda": {
+   "lemma": "matunda",
+   "de": "Obst, Früchte"
+  },
+  "dukani": {
+   "lemma": "duka",
+   "de": "im Laden"
+  },
+  "bei": {
+   "lemma": "bei",
+   "de": "Preis, Preise"
+  },
+  "si": {
+   "lemma": "si",
+   "de": "ist nicht"
+  },
+  "ghali": {
+   "lemma": "ghali",
+   "de": "teuer"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr, besonders"
+  },
+  "maziwa": {
+   "lemma": "maziwa",
+   "de": "Milch"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "zu Hause"
+  },
+  "anapika": {
+   "lemma": "kupika",
+   "de": "sie kocht"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "anakaanga": {
+   "lemma": "kukaanga",
+   "de": "sie brät"
+  },
+  "nyama": {
+   "lemma": "nyama",
+   "de": "Fleisch"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit, in"
+  },
+  "mafuta": {
+   "lemma": "mafuta",
+   "de": "Fett, Öl"
+  },
+  "anaosha": {
+   "lemma": "kuosha",
+   "de": "sie wäscht"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "safi": {
+   "lemma": "safi",
+   "de": "sauber"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihr (Possessiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "anafika": {
+   "lemma": "kufika",
+   "de": "es kommt an"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "wanakula": {
+   "lemma": "kula",
+   "de": "sie essen"
+  },
+  "pamoja": {
+   "lemma": "pamoja",
+   "de": "zusammen"
+  },
+  "wanakunywa": {
+   "lemma": "kunywa",
+   "de": "sie trinken"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "kizuri": {
+   "lemma": "mzuri",
+   "de": "gut (Ki-Vi-Klasse)"
+  },
+  "anataka": {
+   "lemma": "kutaka",
+   "de": "es will"
+  },
+  "zaidi": {
+   "lemma": "zaidi",
+   "de": "mehr, noch"
+  },
+  "anatoa": {
+   "lemma": "kutoa",
+   "de": "sie gibt"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein (M-Mi-Klasse)"
+  },
+  "wanapumzika": {
+   "lemma": "kupumzika",
+   "de": "sie ruhen sich aus"
+  }
+ },
+ "audio": null
+}

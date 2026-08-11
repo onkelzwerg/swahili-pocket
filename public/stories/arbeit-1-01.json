@@ -1,0 +1,217 @@
+{
+ "id": "arbeit-1-01",
+ "title": "Asubuhi ya Zawadi",
+ "titleDe": "Zawadis Morgen",
+ "band": 1,
+ "topic": "Arbeit",
+ "emoji": "🚌",
+ "lemmas": [
+  "asubuhi",
+  "barabara",
+  "basi",
+  "chai",
+  "haraka",
+  "kabla",
+  "katika",
+  "kazini",
+  "kidogo",
+  "kuanza",
+  "kubwa",
+  "kuchelewa",
+  "kufika",
+  "kuharibika",
+  "kuna",
+  "kunywa",
+  "kuona",
+  "kupanda",
+  "kupenda",
+  "kupumzika",
+  "kutoka",
+  "kwenda",
+  "leo",
+  "mapema",
+  "mkutano",
+  "muhimu",
+  "na",
+  "nyumba",
+  "saa",
+  "sasa",
+  "siku",
+  "vizuri",
+  "yeye"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Asubuhi ya leo Zawadi alitoka nyumbani mapema. Leo kuna mkutano muhimu kazini, na yeye hapendi kuchelewa.",
+   "de": "Heute Morgen ging Zawadi früh aus dem Haus. Bei der Arbeit steht heute ein wichtiges Meeting an, und zu spät kommen mag sie nicht."
+  },
+  {
+   "sw": "Alipanda basi. Katika barabara kubwa basi liliharibika. Zawadi aliona saa yake na alianza kwenda haraka.",
+   "de": "Sie stieg in den Bus. Auf der großen Straße blieb der Bus liegen. Zawadi sah auf ihre Uhr und lief los."
+  },
+  {
+   "sw": "Alifika kazini kabla ya mkutano. Sasa anakunywa chai yake na anapumzika kidogo. Siku hii inaanza vizuri.",
+   "de": "Vor dem Meeting kam sie bei der Arbeit an. Jetzt trinkt sie ihren Tee und macht ein wenig Pause. Der Tag fängt gut an."
+  }
+ ],
+ "glosses": {
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "zawadi": {
+   "lemma": "zawadi",
+   "de": "Zawadi (Name)",
+   "proper": true
+  },
+  "alitoka": {
+   "lemma": "kutoka",
+   "de": "sie ging hinaus, verließ"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "im Haus, von zu Hause"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "mkutano": {
+   "lemma": "mkutano",
+   "de": "Meeting, Besprechung"
+  },
+  "muhimu": {
+   "lemma": "muhimu",
+   "de": "wichtig"
+  },
+  "kazini": {
+   "lemma": "kazini",
+   "de": "am Arbeitsplatz, bei der Arbeit"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "yeye": {
+   "lemma": "yeye",
+   "de": "sie, er"
+  },
+  "hapendi": {
+   "lemma": "kupenda",
+   "de": "sie mag nicht"
+  },
+  "kuchelewa": {
+   "lemma": "kuchelewa",
+   "de": "zu spät kommen"
+  },
+  "alipanda": {
+   "lemma": "kupanda",
+   "de": "sie stieg ein"
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "Bus"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "auf, in"
+  },
+  "barabara": {
+   "lemma": "barabara",
+   "de": "Straße"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "liliharibika": {
+   "lemma": "kuharibika",
+   "de": "er ging kaputt (Bus)"
+  },
+  "aliona": {
+   "lemma": "kuona",
+   "de": "sie sah"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihr, ihre",
+   "structure": true
+  },
+  "alianza": {
+   "lemma": "kuanza",
+   "de": "sie fing an"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "gehen, laufen"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "sie kam an"
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "vor, bevor"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "anakunywa": {
+   "lemma": "kunywa",
+   "de": "sie trinkt"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "anapumzika": {
+   "lemma": "kupumzika",
+   "de": "sie macht Pause"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein wenig"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "dieser, diese (N-Klasse)",
+   "structure": true
+  },
+  "inaanza": {
+   "lemma": "kuanza",
+   "de": "er fängt an (Tag)"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut"
+  }
+ },
+ "audio": null
+}

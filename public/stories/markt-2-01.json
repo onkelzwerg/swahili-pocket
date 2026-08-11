@@ -1,0 +1,287 @@
+{
+ "id": "markt-2-01",
+ "title": "Maembe ya Musa",
+ "titleDe": "Musas Mangos",
+ "band": 2,
+ "topic": "Markt",
+ "emoji": "🥭",
+ "lemmas": [
+  "asubuhi",
+  "barabara",
+  "bei",
+  "embe",
+  "ghali",
+  "jioni",
+  "jirani",
+  "karibu",
+  "kelele",
+  "kidogo",
+  "kuangalia",
+  "kubwa",
+  "kuchukua",
+  "kufika",
+  "kuisha",
+  "kujibu",
+  "kujua",
+  "kulipa",
+  "kupita",
+  "kupunguza",
+  "kurudi",
+  "kusema",
+  "kuuza",
+  "kuwa",
+  "kwa",
+  "lakini",
+  "mbili",
+  "mia",
+  "moja",
+  "mtu",
+  "mzee",
+  "mzuri",
+  "na",
+  "ngapi",
+  "ni",
+  "nyumba",
+  "polepole",
+  "sana",
+  "shilingi",
+  "tafadhali",
+  "watu",
+  "wewe"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Asubuhi Musa alifika karibu na barabara kubwa. Alikuwa na maembe mazuri ya kuuza. Kulikuwa na watu na kelele.",
+   "de": "Am Morgen kam Musa an der großen Straße an. Er hatte schöne Mangos zu verkaufen. Es waren viele Leute da, und es war laut."
+  },
+  {
+   "sw": "Mzee mmoja alipita polepole na kuangalia maembe. „Maembe ni shilingi ngapi?\" alisema. Musa alijibu, „Mawili ni shilingi mia mbili.\"",
+   "de": "Ein alter Mann kam langsam vorbei und sah sich die Mangos an. „Was kosten die Mangos?\", sagte er. Musa antwortete: „Zwei kosten zweihundert Schilling.\""
+  },
+  {
+   "sw": "„Ni ghali sana,\" mzee alisema. „Punguza kidogo, tafadhali.\" Musa alimwangalia na alimjua. Mzee huyu ni jirani yake.",
+   "de": "„Das ist sehr teuer\", sagte der alte Mann. „Mach es bitte ein bisschen billiger.\" Musa sah ihn an und erkannte ihn. Dieser alte Mann war sein Nachbar."
+  },
+  {
+   "sw": "„Haya,\" Musa alisema. „Bei ni shilingi mia mbili, lakini kwa wewe ni mia moja.\" Mzee alilipa na alichukua maembe. „Wewe ni mtu mzuri,\" alisema. Jioni maembe yaliisha na Musa alirudi nyumbani.",
+   "de": "„Also gut\", sagte Musa. „Der Preis ist zweihundert Schilling, aber für dich sind es hundert.\" Der alte Mann bezahlte und nahm die Mangos mit. „Du bist ein guter Mensch\", sagte er. Am Abend waren die Mangos alle, und Musa ging nach Hause."
+  }
+ ],
+ "glosses": {
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen, Vormittag"
+  },
+  "musa": {
+   "lemma": "musa",
+   "de": "Musa (Name)",
+   "proper": true
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "er kam an"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "in der Nähe"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "barabara": {
+   "lemma": "barabara",
+   "de": "Straße"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "maembe": {
+   "lemma": "embe",
+   "de": "Mangos"
+  },
+  "mazuri": {
+   "lemma": "mzuri",
+   "de": "schöne (Ma-Klasse)"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "zum, von (Genitiv, Ma-Klasse)",
+   "structure": true
+  },
+  "kuuza": {
+   "lemma": "kuuza",
+   "de": "verkaufen"
+  },
+  "kulikuwa": {
+   "lemma": "kuwa",
+   "de": "es gab, es war"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "kelele": {
+   "lemma": "kelele",
+   "de": "Lärm"
+  },
+  "mzee": {
+   "lemma": "mzee",
+   "de": "alter Mann"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein, einer"
+  },
+  "alipita": {
+   "lemma": "kupita",
+   "de": "er kam vorbei"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "kuangalia": {
+   "lemma": "kuangalia",
+   "de": "ansehen, betrachten"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist, sind"
+  },
+  "shilingi": {
+   "lemma": "shilingi",
+   "de": "Schilling"
+  },
+  "ngapi": {
+   "lemma": "ngapi",
+   "de": "wie viel"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "er sagte"
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "er antwortete"
+  },
+  "mawili": {
+   "lemma": "mbili",
+   "de": "zwei (Ma-Klasse)"
+  },
+  "mia": {
+   "lemma": "mia",
+   "de": "hundert"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "ghali": {
+   "lemma": "ghali",
+   "de": "teuer"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "punguza": {
+   "lemma": "kupunguza",
+   "de": "mach weniger, senke (Aufforderung)"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "alimwangalia": {
+   "lemma": "kuangalia",
+   "de": "er sah ihn an"
+  },
+  "alimjua": {
+   "lemma": "kujua",
+   "de": "er kannte ihn"
+  },
+  "huyu": {
+   "lemma": "huyu",
+   "de": "dieser (M-Wa-Klasse)",
+   "structure": true
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbar"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "sein, ihr",
+   "structure": true
+  },
+  "haya": {
+   "lemma": "haya",
+   "de": "also gut, in Ordnung",
+   "structure": true
+  },
+  "bei": {
+   "lemma": "bei",
+   "de": "Preis"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "wewe": {
+   "lemma": "wewe",
+   "de": "du, dich"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins"
+  },
+  "alilipa": {
+   "lemma": "kulipa",
+   "de": "er bezahlte"
+  },
+  "alichukua": {
+   "lemma": "kuchukua",
+   "de": "er nahm mit"
+  },
+  "mtu": {
+   "lemma": "mtu",
+   "de": "Mensch"
+  },
+  "mzuri": {
+   "lemma": "mzuri",
+   "de": "gut"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "yaliisha": {
+   "lemma": "kuisha",
+   "de": "sie gingen zu Ende (Ma-Klasse)"
+  },
+  "alirudi": {
+   "lemma": "kurudi",
+   "de": "er kehrte zurück"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  }
+ },
+ "audio": null
+}
