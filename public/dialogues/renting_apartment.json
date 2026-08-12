@@ -44,6 +44,7 @@
   "mwaka",
   "mwezi",
   "na",
+  "ndiyo",
   "ni",
   "nne",
   "nyumba",
@@ -100,8 +101,7 @@
   },
   "ndiyo": {
    "lemma": "ndiyo",
-   "de": "ja (bestätigende Kopula)",
-   "structure": true
+   "de": "ja (bestätigende Kopula)"
   },
   "bado": {
    "lemma": "bado",

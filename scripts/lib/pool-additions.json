@@ -1,0 +1,166 @@
+{
+  "_kommentar": [
+    "Aufteilung der 100 Grundformen, die beim Glossieren der 23 Dialoge im",
+    "Vokabelpool fehlten (W4.12). 'core' geht in public/vocab-pool.json und gilt",
+    "fuer alle; die Pakete liegen in public/vocab-packs/ und werden vom Nutzer",
+    "bei Bedarf aktiviert.",
+    "",
+    "Kriterium fuer 'core': das Wort begegnet einem im Alltag unabhaengig vom",
+    "Thema. Kriterium fuer ein Paket: man braucht es erst, wenn man ueber genau",
+    "dieses Thema sprechen will. Im Zweifel Paket — ein Anfaenger soll die",
+    "Sprache lernen koennen, ohne 'Erosion' und 'Zinssatz' im Stapel zu haben.",
+    "",
+    "Beispielsaetze fehlen noch; sie entstehen im naechsten Schritt und sind",
+    "Pflicht, weil die Bandzuordnung aus ihnen gerechnet wird."
+  ],
+
+  "core": [
+    { "sw": "pengine", "de": "vielleicht", "pos": "adverb" },
+    { "sw": "mpango", "de": "Plan / Vorhaben", "pos": "noun", "class": "M-Mi" },
+    { "sw": "angalau", "de": "mindestens / wenigstens", "pos": "adverb" },
+    { "sw": "miadi", "de": "Termin / Verabredung", "pos": "noun", "class": "N" },
+    { "sw": "halo", "de": "hallo (am Telefon)", "pos": "other" },
+    { "sw": "baadhi", "de": "einige / manche", "pos": "other" },
+    { "sw": "ajabu", "de": "erstaunlich / seltsam; Wunder", "pos": "noun", "class": "N" },
+    { "sw": "fulani", "de": "irgendein / ein gewisser", "pos": "adjective" },
+    { "sw": "tumaini", "de": "Hoffnung", "pos": "noun", "class": "Ji-Ma" },
+    { "sw": "hamu", "de": "Lust / Verlangen", "pos": "noun", "class": "N" },
+    { "sw": "hebu", "de": "sag mal / komm (auffordernd)", "pos": "other" },
+    { "sw": "kumbe", "de": "ach so! / also doch", "pos": "other" },
+    { "sw": "undani", "de": "Einzelheit / Tiefe (kwa undani = ausführlich)", "pos": "noun", "class": "U" },
+    { "sw": "kuketi", "de": "sitzen / sich setzen", "pos": "verb" },
+    { "sw": "kugusa", "de": "berühren / anrühren", "pos": "verb" },
+    { "sw": "kuvutia", "de": "anziehen / ansprechen", "pos": "verb" },
+    { "sw": "kuzuia", "de": "verhindern / abhalten", "pos": "verb" },
+    { "sw": "kutambua", "de": "erkennen / bemerken", "pos": "verb" },
+    { "sw": "kukaribia", "de": "sich nähern / herankommen", "pos": "verb" },
+    { "sw": "kushtuka", "de": "erschrecken / überrascht sein", "pos": "verb" },
+    { "sw": "kushangaza", "de": "erstaunen / verblüffen", "pos": "verb" },
+    { "sw": "kuumia", "de": "leiden / zu Schaden kommen", "pos": "verb" },
+    { "sw": "kuuma", "de": "schmerzen / weh tun", "pos": "verb" },
+    { "sw": "kuelekea", "de": "sich hinbewegen zu / unterwegs sein nach", "pos": "verb" },
+    { "sw": "kufaa", "de": "passen / taugen", "pos": "verb" },
+    { "sw": "kuwasiliana", "de": "sich melden / in Verbindung setzen", "pos": "verb" },
+    { "sw": "kuzungumza", "de": "sich unterhalten / sprechen", "pos": "verb" },
+    { "sw": "kueleza", "de": "erklären / schildern", "pos": "verb" },
+    { "sw": "kuandaa", "de": "vorbereiten", "pos": "verb" },
+    { "sw": "kuongeza", "de": "erhöhen / hinzufügen", "pos": "verb" },
+    { "sw": "kupaswa", "de": "sollen / müssen", "pos": "verb" },
+    { "sw": "kuwahi", "de": "je(mals) etwas getan haben; rechtzeitig kommen", "pos": "verb" },
+    { "sw": "mazungumzo", "de": "Gespräch / Unterhaltung", "pos": "noun", "class": "Ji-Ma" },
+    { "sw": "kumbukumbu", "de": "Erinnerung", "pos": "noun", "class": "N" },
+    { "sw": "uzoefu", "de": "Erfahrung / Erlebnis", "pos": "noun", "class": "U" },
+    { "sw": "changamoto", "de": "Herausforderung", "pos": "noun", "class": "N" },
+    { "sw": "athari", "de": "Auswirkung / Folge", "pos": "noun", "class": "N" },
+    { "sw": "mabadiliko", "de": "Veränderung / Wandel", "pos": "noun", "class": "Ji-Ma" },
+    { "sw": "elimu", "de": "Bildung", "pos": "noun", "class": "N" },
+    { "sw": "ipi", "de": "welche? (N-Klasse)", "pos": "other" },
+    { "sw": "zipi", "de": "welche? (N-Klasse Plural)", "pos": "other" }
+  ],
+
+  "packs": {
+    "arbeit-und-karriere": {
+      "title": "Arbeit & Bewerbung",
+      "emoji": "💼",
+      "description": "Vorstellungsgespräch, Projekte, Strategie — für job_interview und work_meeting.",
+      "words": [
+        { "sw": "mahojiano", "de": "Vorstellungsgespräch / Interview", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "fursa", "de": "Gelegenheit / Chance", "pos": "noun", "class": "N" },
+        { "sw": "uongozi", "de": "Leitung / Führung", "pos": "noun", "class": "U" },
+        { "sw": "mkakati", "de": "Strategie", "pos": "noun", "class": "M-Mi" },
+        { "sw": "matarajio", "de": "Erwartungen", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "jukumu", "de": "Aufgabe / Verantwortung", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "maono", "de": "Vision / Vorstellung", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "uvumbuzi", "de": "Innovation / Erfindung", "pos": "noun", "class": "U" },
+        { "sw": "tangazo", "de": "Anzeige / Ausschreibung", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "bajeti", "de": "Budget", "pos": "noun", "class": "N" },
+        { "sw": "asilimia", "de": "Prozent", "pos": "noun", "class": "N" },
+        { "sw": "mbunifu", "de": "Designer/in / Gestalter/in", "pos": "noun", "class": "M-Wa" },
+        { "sw": "kubuni", "de": "entwerfen / entwickeln", "pos": "verb" },
+        { "sw": "kuongoza", "de": "führen / leiten", "pos": "verb" },
+        { "sw": "kukabili", "de": "sich stellen / bewältigen", "pos": "verb" },
+        { "sw": "kujiunga", "de": "beitreten / sich anschließen", "pos": "verb" },
+        { "sw": "maendeleo", "de": "Entwicklung / Fortschritt", "pos": "noun", "class": "Ji-Ma" }
+      ]
+    },
+
+    "politik-und-gesellschaft": {
+      "title": "Politik & Gesellschaft",
+      "emoji": "🗳️",
+      "description": "Wahlen, Verwaltung, öffentliche Debatte — für politics_debate.",
+      "words": [
+        { "sw": "siasa", "de": "Politik", "pos": "noun", "class": "N" },
+        { "sw": "sera", "de": "politisches Programm / Leitlinie", "pos": "noun", "class": "N" },
+        { "sw": "rushwa", "de": "Korruption / Bestechung", "pos": "noun", "class": "N" },
+        { "sw": "uwazi", "de": "Transparenz / Offenheit", "pos": "noun", "class": "U" },
+        { "sw": "mgombea", "de": "Kandidat/in", "pos": "noun", "class": "M-Wa" },
+        { "sw": "suluhisho", "de": "Lösung", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "kikwazo", "de": "Hindernis", "pos": "noun", "class": "Ki-Vi" },
+        { "sw": "ukosefu", "de": "Mangel / Fehlen", "pos": "noun", "class": "U" },
+        { "sw": "sekta", "de": "Sektor / Bereich", "pos": "noun", "class": "N" },
+        { "sw": "kuahidi", "de": "versprechen", "pos": "verb" },
+        { "sw": "kushiriki", "de": "teilnehmen / sich beteiligen", "pos": "verb" }
+      ]
+    },
+
+    "umwelt-und-landwirtschaft": {
+      "title": "Umwelt & Landwirtschaft",
+      "emoji": "🌍",
+      "description": "Klima, Boden, Anbau — für environment.",
+      "words": [
+        { "sw": "mazingira", "de": "Umwelt", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "tabianchi", "de": "Klima", "pos": "noun", "class": "N" },
+        { "sw": "ukame", "de": "Dürre / Trockenheit", "pos": "noun", "class": "U" },
+        { "sw": "udongo", "de": "Boden / Erdreich", "pos": "noun", "class": "U" },
+        { "sw": "kilimo", "de": "Landwirtschaft", "pos": "noun", "class": "Ki-Vi" },
+        { "sw": "mmomonyoko", "de": "Erosion / Abtragung", "pos": "noun", "class": "M-Mi" },
+        { "sw": "umwagiliaji", "de": "Bewässerung", "pos": "noun", "class": "U" },
+        { "sw": "kizazi", "de": "Generation", "pos": "noun", "class": "Ki-Vi" },
+        { "sw": "endelevu", "de": "nachhaltig", "pos": "adjective" },
+        { "sw": "sambamba", "de": "parallel / gleichzeitig", "pos": "adverb" },
+        { "sw": "kuathiri", "de": "beeinflussen / beeinträchtigen", "pos": "verb" },
+        { "sw": "kutabiri", "de": "vorhersagen", "pos": "verb" },
+        { "sw": "kutekeleza", "de": "umsetzen / durchführen", "pos": "verb" }
+      ]
+    },
+
+    "geld-und-behoerden": {
+      "title": "Geld & Behörden",
+      "emoji": "🏦",
+      "description": "Bank, Mietvertrag, Formulare — für bank und renting_apartment.",
+      "words": [
+        { "sw": "akiba", "de": "Ersparnisse / Rücklage", "pos": "noun", "class": "N" },
+        { "sw": "riba", "de": "Zins", "pos": "noun", "class": "N" },
+        { "sw": "dhamana", "de": "Kaution / Bürgschaft", "pos": "noun", "class": "N" },
+        { "sw": "idhini", "de": "Genehmigung / Erlaubnis", "pos": "noun", "class": "N" },
+        { "sw": "maandishi", "de": "Schriftliches / Schriftform", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "sharti", "de": "Bedingung / Auflage", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "waraka", "de": "Dokument / Schriftstück", "pos": "noun", "class": "M-Wa" },
+        { "sw": "makazi", "de": "Wohnsitz / Wohngegend", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "matumizi", "de": "Verbrauch / Nutzung", "pos": "noun", "class": "Ji-Ma" },
+        { "sw": "awali", "de": "anfänglich / Anfangs-", "pos": "adjective" },
+        { "sw": "kulingana", "de": "entsprechen / je nach (mit na)", "pos": "verb" }
+      ]
+    },
+
+    "gesundheit-vertieft": {
+      "title": "Gesundheit vertieft",
+      "emoji": "🩺",
+      "description": "Beschwerden genauer beschreiben — für doctor.",
+      "words": [
+        { "sw": "dalili", "de": "Symptom / Anzeichen", "pos": "noun", "class": "N" },
+        { "sw": "digrii", "de": "Grad (Temperatur)", "pos": "noun", "class": "N" }
+      ]
+    },
+
+    "schule-und-bildung": {
+      "title": "Schule & Bildung",
+      "emoji": "🎓",
+      "description": "Schulstufen und Abschlüsse — für pool-kukutana-barabarani.",
+      "words": [
+        { "sw": "upili", "de": "Sekundarstufe (shule ya upili)", "pos": "noun", "class": "U" },
+        { "sw": "butwaa", "de": "Verblüffung (kupiga butwaa = verblüffen)", "pos": "noun", "class": "N" }
+      ]
+    }
+  }
+}

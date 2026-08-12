@@ -10,6 +10,7 @@
   "kuona",
   "mzuri",
   "na",
+  "ndiyo",
   "salama",
   "sana",
   "vizuri",
@@ -72,8 +73,7 @@
   },
   "ndiyo": {
    "lemma": "ndiyo",
-   "de": "ja",
-   "structure": true
+   "de": "ja"
   },
   "nimelala": {
    "lemma": "kulala",

@@ -22,6 +22,7 @@
   "muda",
   "na",
   "ndege",
+  "ndiyo",
   "ni",
   "nusu",
   "saa",
@@ -56,8 +57,7 @@
   },
   "ndiyo": {
    "lemma": "ndiyo",
-   "de": "ja (Bejahungspartikel)",
-   "structure": true
+   "de": "ja (Bejahungspartikel)"
   },
   "wapi": {
    "lemma": "wapi",

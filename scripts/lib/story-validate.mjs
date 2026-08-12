@@ -54,7 +54,6 @@ export const STRUCTURE_LEMMAS = new Set([
   "hiki",
   "hivi",
   "hili",
-  "haya",
   "hizi",
   "huku",
   "humu",
@@ -67,6 +66,10 @@ export const STRUCTURE_LEMMAS = new Set([
   "lile",
   "yale",
   "zile",
+  // Die Lokativformen der -le-Reihe. Sie fehlten, obwohl die übrige Reihe
+  // vollständig ist — `pale` bleibt draußen, weil der Pool es als Karte führt.
+  "kule",
+  "mle",
   // -o-Referenzreihe („jenes bereits Erwähnte"). Sie fehlte bis W4.10 fast
   // ganz; ohne sie lässt sich nicht auf etwas zurückverweisen, was zwei Sätze
   // vorher stand — in einer Erzählung also ständig.
@@ -91,11 +94,22 @@ export const STRUCTURE_LEMMAS = new Set([
   "-mo",
   // Quantorenstamm mit Kongruenz: wote, yote, zote, chote, kote …
   "-ote",
-  // Relativ, Kopula-Varianten, Ortspräposition
+  // Relativ und Ortspräposition
   "amba-",
-  "ndiyo",
-  "ndio",
   "kwenye",
+  // Die ndi-Kopula in ihren Konkordanzformen: „das ist genau der/die/das".
+  // `ndiyo` steht bewusst NICHT hier, obwohl es zur selben Reihe gehört: es ist
+  // zu „ja" lexikalisiert und der Pool führt es als eigene Karte. Ein Wort, das
+  // man als Vokabel lernen kann, darf nicht gleichzeitig von der Abdeckung
+  // ausgenommen sein — sonst zählt die Karte nie. `ndio` bleibt dagegen hier:
+  // in der hervorhebenden Lesart („sind es, die") ist es reine Grammatik.
+  "ndio",
+  "ndiye",
+  "ndivyo",
+  "ndilo",
+  "ndizo",
+  "ndicho",
+  "ndiwo",
 ]);
 
 function isNonEmptyString(v) {

@@ -42,7 +42,6 @@
   "mzee",
   "mzuri",
   "na",
-  "ndivyo",
   "ni",
   "nini",
   "pengine",
@@ -283,7 +282,8 @@
   },
   "ndivyo": {
    "lemma": "ndivyo",
-   "de": "genau so / so ist es"
+   "de": "genau so / so ist es",
+   "structure": true
   },
   "nilivyofikiri": {
    "lemma": "kufikiri",

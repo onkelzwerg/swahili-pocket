@@ -11,6 +11,7 @@
   "bei",
   "embe",
   "ghali",
+  "haya",
   "jioni",
   "jirani",
   "karibu",
@@ -220,8 +221,7 @@
   },
   "haya": {
    "lemma": "haya",
-   "de": "also gut, in Ordnung",
-   "structure": true
+   "de": "also gut, in Ordnung"
   },
   "bei": {
    "lemma": "bei",

@@ -24,6 +24,7 @@
   "mimi",
   "mteja",
   "na",
+  "ndiyo",
   "nini",
   "pia",
   "samaki",
@@ -67,8 +68,7 @@
   },
   "ndiyo": {
    "lemma": "ndiyo",
-   "de": "ja (Bejahungspartikel)",
-   "structure": true
+   "de": "ja (Bejahungspartikel)"
   },
   "tunataka": {
    "lemma": "kutaka",

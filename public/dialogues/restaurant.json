@@ -29,6 +29,7 @@
   "mimi",
   "mtu",
   "na",
+  "ndiyo",
   "ni",
   "nini",
   "nyama",
@@ -117,8 +118,7 @@
   },
   "ndiyo": {
    "lemma": "ndiyo",
-   "de": "ja (Bejahung)",
-   "structure": true
+   "de": "ja (Bejahung)"
   },
   "tuna": {
    "lemma": "kuwa na",

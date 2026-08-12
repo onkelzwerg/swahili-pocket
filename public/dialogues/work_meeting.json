@@ -41,6 +41,7 @@
   "mtu",
   "mwezi",
   "na",
+  "ndiyo",
   "programu",
   "sawa",
   "swali",
@@ -181,8 +182,7 @@
   },
   "ndiyo": {
    "lemma": "ndiyo",
-   "de": "ja (bejahende Antwortpartikel)",
-   "structure": true
+   "de": "ja (bejahende Antwortpartikel)"
   },
   "tunahitaji": {
    "lemma": "kuhitaji",

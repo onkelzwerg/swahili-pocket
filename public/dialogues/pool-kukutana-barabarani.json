@@ -19,7 +19,6 @@
   "kuingia",
   "kujiunga",
   "kukutana",
-  "kule",
   "kumbe",
   "kuona",
   "kupenda",
@@ -242,7 +241,7 @@
    "de": "sehr"
   },
   "ndiye": {
-   "lemma": "ndio",
+   "lemma": "ndiye",
    "de": "er/sie ist es, der ... (hervorhebende Kopula, M-Wa-Klasse Sg.)",
    "structure": true
   },
@@ -302,7 +301,8 @@
   },
   "kule": {
    "lemma": "kule",
-   "de": "dort, dort drüben (Demonstrativ, Ortsklasse)"
+   "de": "dort, dort drüben (Demonstrativ, Ortsklasse)",
+   "structure": true
   },
   "makazi": {
    "lemma": "makazi",

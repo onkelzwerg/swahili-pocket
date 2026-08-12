@@ -23,6 +23,7 @@
   "mgeni",
   "moja",
   "na",
+  "ndiyo",
   "ni",
   "pasipoti",
   "usajili",
@@ -61,8 +62,7 @@
   },
   "ndiyo": {
    "lemma": "ndiyo",
-   "de": "ja (Bejahungspartikel)",
-   "structure": true
+   "de": "ja (Bejahungspartikel)"
   },
   "tunacho": {
    "lemma": "kuwa na",

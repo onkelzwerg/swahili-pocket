@@ -29,6 +29,7 @@
   "mbele",
   "na",
   "ndani",
+  "ndiyo",
   "rafiki",
   "shida",
   "tafadhali",
@@ -107,8 +108,7 @@
   },
   "ndiyo": {
    "lemma": "ndiyo",
-   "de": "ja (bestätigende Partikel)",
-   "structure": true
+   "de": "ja (bestätigende Partikel)"
   },
   "lakini": {
    "lemma": "lakini",
