@@ -59,6 +59,10 @@ export const CORE_BAND = new Map([
   ["mbele", 1], // „vorn/vor" — nyuma („hinten") liegt ebenfalls tief
   ["mbaya", 1], // Gegenstück zu mzuri (Rang 33)
   ["kutoa", 1], // „geben/herausnehmen" — eines der häufigsten Verben überhaupt
+  ["kuhisi", 1], // „sich fühlen" — trägt in Band 1 jede Gefühlsbeschreibung
+  ["jua", 1], // die Sonne, in jeder zweiten Naturgeschichte
+  ["kuoga", 1],
+  ["meza", 2], // Tisch
   // Zahlen bis zehn. Der Pool kannte moja, mbili und nne — sonst nichts.
   // Neu aufgenommene Zahlen haben naturgemäß wenig Korpusbelege und lägen
   // ohne diese Zeilen in Band 3 und 4.

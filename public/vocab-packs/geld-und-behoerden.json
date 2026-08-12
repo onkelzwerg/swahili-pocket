@@ -1,0 +1,195 @@
+{
+ "id": "geld-und-behoerden",
+ "title": "Geld & Behörden",
+ "emoji": "🏦",
+ "description": "Bank, Mietvertrag, Formulare — für bank und renting_apartment.",
+ "entries": [
+  {
+   "swahili": "akiba",
+   "german": "Ersparnisse / Rücklage",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Ich habe ein wenig Erspartes auf der Bank.",
+     "sw": "Nina akiba kidogo benki."
+    },
+    {
+     "de": "Jeden Monat lege ich etwas zurück.",
+     "sw": "Kila mwezi ninaweka akiba."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "awali",
+   "german": "anfänglich / Anfangs-",
+   "partOfSpeech": "other",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Die Anzahlung beträgt fünfzigtausend Schilling.",
+     "sw": "Malipo ya awali ni shilingi elfu hamsini."
+    },
+    {
+     "de": "Früher habe ich in Arusha gewohnt.",
+     "sw": "Hapo awali nilikuwa nakaa Arusha."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "dhamana",
+   "german": "Kaution / Bürgschaft",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Ich habe die Kaution für das Haus bezahlt.",
+     "sw": "Nililipa dhamana ya nyumba."
+    },
+    {
+     "de": "Der Vermieter verlangt eine Kaution von einem Monat.",
+     "sw": "Mwenye nyumba anataka dhamana ya mwezi mmoja."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "idhini",
+   "german": "Genehmigung / Erlaubnis",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Wir haben die Genehmigung bekommen, ein Haus zu bauen.",
+     "sw": "Tulipata idhini ya kujenga nyumba."
+    },
+    {
+     "de": "Ohne Erlaubnis darfst du hier nicht hinein.",
+     "sw": "Huwezi kuingia hapa bila idhini."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kulingana",
+   "german": "entsprechen / je nach (mit na)",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Wir zahlen den Strom je nach Verbrauch.",
+     "sw": "Tunalipa umeme kulingana na matumizi."
+    },
+    {
+     "de": "Der Preis ändert sich je nach Jahreszeit.",
+     "sw": "Bei inabadilika kulingana na msimu."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "maandishi",
+   "german": "Schriftliches / Schriftform",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Bitte geben Sie mir die Antwort schriftlich.",
+     "sw": "Tafadhali nipe jibu kwa maandishi."
+    },
+    {
+     "de": "Dieser Vertrag liegt schriftlich vor.",
+     "sw": "Mkataba huu upo kwa maandishi."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "makazi",
+   "german": "Wohnsitz / Wohngegend",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Schreib deine Wohnanschrift auf das Formular.",
+     "sw": "Andika anwani ya makazi yako kwenye fomu."
+    },
+    {
+     "de": "Ich wohne in der Nähe des Marktes.",
+     "sw": "Makazi yangu yapo karibu na soko."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "matumizi",
+   "german": "Verbrauch / Nutzung",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Der Wasserverbrauch ist diesen Monat gestiegen.",
+     "sw": "Matumizi ya maji yameongezeka mwezi huu."
+    },
+    {
+     "de": "Schreib jeden Tag deine Ausgaben auf.",
+     "sw": "Andika matumizi yako kila siku."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "riba",
+   "german": "Zins",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Diese Bank zahlt nur wenig Zinsen.",
+     "sw": "Benki hii inalipa riba ndogo."
+    },
+    {
+     "de": "Ich möchte wissen, wie hoch die Zinsen für diesen Kredit sind.",
+     "sw": "Nataka kujua riba ya mkopo huu."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "sharti",
+   "german": "Bedingung / Auflage",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Der Vertrag hat nur eine Bedingung.",
+     "sw": "Mkataba una sharti moja tu."
+    },
+    {
+     "de": "Lies die Bedingungen, bevor du unterschreibst.",
+     "sw": "Soma masharti kabla ya kusaini."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "waraka",
+   "german": "Dokument / Schriftstück",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "Ich habe ein Schreiben vom Amt bekommen.",
+     "sw": "Nimepokea waraka kutoka ofisini."
+    },
+    {
+     "de": "Bewahre dieses Dokument an einem sicheren Ort auf.",
+     "sw": "Weka waraka huu mahali salama."
+    }
+   ],
+   "topics": []
+  }
+ ]
+}

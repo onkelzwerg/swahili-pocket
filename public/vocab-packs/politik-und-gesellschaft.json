@@ -1,0 +1,195 @@
+{
+ "id": "politik-und-gesellschaft",
+ "title": "Politik & Gesellschaft",
+ "emoji": "🗳️",
+ "description": "Wahlen, Verwaltung, öffentliche Debatte — für politics_debate.",
+ "entries": [
+  {
+   "swahili": "kikwazo",
+   "german": "Hindernis",
+   "partOfSpeech": "noun",
+   "nounClass": "Ki-Vi",
+   "examples": [
+    {
+     "de": "Korruption ist ein Hindernis für die Entwicklung.",
+     "sw": "Rushwa ni kikwazo kwa maendeleo."
+    },
+    {
+     "de": "Die schlechte Straße ist ein großes Hindernis für die Bauern.",
+     "sw": "Barabara mbaya ni kikwazo kikubwa kwa wakulima."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kuahidi",
+   "german": "versprechen",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Die Verantwortlichen haben eine neue Schule versprochen.",
+     "sw": "Viongozi waliahidi shule mpya."
+    },
+    {
+     "de": "Ich verspreche, früh zu kommen.",
+     "sw": "Ninaahidi kufika mapema."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kushiriki",
+   "german": "teilnehmen / sich beteiligen",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Viele Leute haben an der Wahl teilgenommen.",
+     "sw": "Watu wengi walishiriki katika uchaguzi."
+    },
+    {
+     "de": "Ich möchte an der Dorfversammlung teilnehmen.",
+     "sw": "Ninataka kushiriki katika mkutano wa kijiji."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "mgombea",
+   "german": "Kandidat/in",
+   "partOfSpeech": "noun",
+   "nounClass": "M-Wa",
+   "examples": [
+    {
+     "de": "Jeder Kandidat hat sein eigenes Programm.",
+     "sw": "Kila mgombea ana sera yake."
+    },
+    {
+     "de": "Die Kandidaten kamen alle zur Versammlung.",
+     "sw": "Wagombea wote walifika kwenye mkutano."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "rushwa",
+   "german": "Korruption / Bestechung",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Korruption bremst die Entwicklung.",
+     "sw": "Rushwa inazuia maendeleo."
+    },
+    {
+     "de": "Wir sprachen in der Versammlung über Korruption.",
+     "sw": "Tulizungumza kuhusu rushwa kwenye mkutano."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "sekta",
+   "german": "Sektor / Bereich",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Der Gesundheitssektor braucht mehr Geld.",
+     "sw": "Sekta ya afya inahitaji pesa zaidi."
+    },
+    {
+     "de": "Viele Leute arbeiten in der Landwirtschaft.",
+     "sw": "Watu wengi wanafanya kazi katika sekta ya kilimo."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "sera",
+   "german": "politisches Programm / Leitlinie",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Die Regierung hat ein neues Bildungsprogramm.",
+     "sw": "Serikali ina sera mpya ya elimu."
+    },
+    {
+     "de": "Diese Leitlinie hilft den Bauern.",
+     "sw": "Sera hii inasaidia wakulima."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "siasa",
+   "german": "Politik",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Viele Leute reden gern über Politik.",
+     "sw": "Watu wengi wanapenda kuzungumza kuhusu siasa."
+    },
+    {
+     "de": "Politik gehört zum Alltag.",
+     "sw": "Siasa ni sehemu ya maisha ya kila siku."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "suluhisho",
+   "german": "Lösung",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Wir suchen eine Lösung für dieses Problem.",
+     "sw": "Tunatafuta suluhisho la tatizo hili."
+    },
+    {
+     "de": "Jedes Problem hat eine Lösung.",
+     "sw": "Kila tatizo lina suluhisho lake."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "ukosefu",
+   "german": "Mangel / Fehlen",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "Arbeitslosigkeit ist ein großes Problem für junge Leute.",
+     "sw": "Ukosefu wa kazi ni tatizo kubwa kwa vijana."
+    },
+    {
+     "de": "Im Dorf fehlt es an sauberem Wasser.",
+     "sw": "Kijijini kuna ukosefu wa maji safi."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "uwazi",
+   "german": "Transparenz / Offenheit",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "Die Leute wünschen sich mehr Transparenz von der Regierung.",
+     "sw": "Watu wanataka uwazi zaidi kutoka serikalini."
+    },
+    {
+     "de": "Transparenz hilft den Bürgern, ihre Anführer zu verstehen.",
+     "sw": "Uwazi husaidia wananchi kuwaelewa viongozi wao."
+    }
+   ],
+   "topics": []
+  }
+ ]
+}

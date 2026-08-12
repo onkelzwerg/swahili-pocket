@@ -10,8 +10,14 @@
    "partOfSpeech": "noun",
    "nounClass": "N",
    "examples": [
-    { "de": "Ich habe Anzeichen von Fieber.", "sw": "Nina dalili za homa." },
-    { "de": "Der Arzt hat nach meinen Symptomen gefragt.", "sw": "Daktari aliuliza dalili zangu." }
+    {
+     "de": "Ich habe Anzeichen von Fieber.",
+     "sw": "Nina dalili za homa."
+    },
+    {
+     "de": "Der Arzt hat nach meinen Symptomen gefragt.",
+     "sw": "Daktari aliuliza dalili zangu."
+    }
    ],
    "topics": []
   },
@@ -21,8 +27,14 @@
    "partOfSpeech": "noun",
    "nounClass": "N",
    "examples": [
-    { "de": "Seine Temperatur beträgt achtunddreißig Grad.", "sw": "Joto lake ni digrii thelathini na nane." },
-    { "de": "Ihr Fieber ist auf vierzig Grad gestiegen.", "sw": "Homa yake imefika digrii arobaini." }
+    {
+     "de": "Seine Temperatur beträgt achtunddreißig Grad.",
+     "sw": "Joto lake ni digrii thelathini na nane."
+    },
+    {
+     "de": "Ihr Fieber ist auf vierzig Grad gestiegen.",
+     "sw": "Homa yake imefika digrii arobaini."
+    }
    ],
    "topics": []
   }

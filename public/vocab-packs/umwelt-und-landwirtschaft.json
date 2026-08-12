@@ -1,0 +1,229 @@
+{
+ "id": "umwelt-und-landwirtschaft",
+ "title": "Umwelt & Landwirtschaft",
+ "emoji": "🌍",
+ "description": "Klima, Boden, Anbau — für environment.",
+ "entries": [
+  {
+   "swahili": "endelevu",
+   "german": "nachhaltig",
+   "partOfSpeech": "adjective",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Nachhaltige Landwirtschaft schont den Boden.",
+     "sw": "Kilimo endelevu kinasaidia udongo."
+    },
+    {
+     "de": "Wir brauchen nachhaltige Anbaumethoden.",
+     "sw": "Tunahitaji njia endelevu za kulima."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kilimo",
+   "german": "Landwirtschaft",
+   "partOfSpeech": "noun",
+   "nounClass": "Ki-Vi",
+   "examples": [
+    {
+     "de": "Mein Vater liebt die Landwirtschaft.",
+     "sw": "Baba yangu anapenda kilimo."
+    },
+    {
+     "de": "Viele Leute in unserem Dorf leben von der Landwirtschaft.",
+     "sw": "Watu wengi kijijini kwetu wanaishi kwa kilimo."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kizazi",
+   "german": "Generation",
+   "partOfSpeech": "noun",
+   "nounClass": "Ki-Vi",
+   "examples": [
+    {
+     "de": "Wir pflanzen Bäume für die nächste Generation.",
+     "sw": "Tunapanda miti kwa ajili ya kizazi kijacho."
+    },
+    {
+     "de": "Kommende Generationen brauchen sauberes Wasser.",
+     "sw": "Vizazi vijavyo vinahitaji maji safi."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kuathiri",
+   "german": "beeinflussen / beeinträchtigen",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Die Dürre hat unsere Ernte beeinträchtigt.",
+     "sw": "Ukame umeathiri mazao yetu."
+    },
+    {
+     "de": "Viel Regen setzt den Dorfstraßen zu.",
+     "sw": "Mvua nyingi inaathiri barabara za kijijini."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kutabiri",
+   "german": "vorhersagen",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Heutzutage ist der Regen schwer vorherzusagen.",
+     "sw": "Siku hizi ni vigumu kutabiri mvua."
+    },
+    {
+     "de": "Mein Großvater sagt den Regen anhand der Wolken voraus.",
+     "sw": "Babu yangu anatabiri mvua kwa kuangalia mawingu."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kutekeleza",
+   "german": "umsetzen / durchführen",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Das Dorf setzt einen Plan zum Bäumepflanzen um.",
+     "sw": "Kijiji kinatekeleza mpango wa kupanda miti."
+    },
+    {
+     "de": "Wir haben alle Arbeiten auf dem Feld erledigt.",
+     "sw": "Tumetekeleza kazi zote shambani."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "mazingira",
+   "german": "Umwelt",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Wir müssen unsere Umwelt schützen.",
+     "sw": "Tunapaswa kutunza mazingira yetu."
+    },
+    {
+     "de": "Die Kinder machen das Schulgelände sauber.",
+     "sw": "Watoto wanasafisha mazingira ya shule."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "mmomonyoko",
+   "german": "Erosion / Abtragung",
+   "partOfSpeech": "noun",
+   "nounClass": "M-Mi",
+   "examples": [
+    {
+     "de": "Der starke Regen hat den Boden abgetragen.",
+     "sw": "Mvua kubwa imeleta mmomonyoko wa udongo."
+    },
+    {
+     "de": "Bäume helfen, die Erosion aufzuhalten.",
+     "sw": "Miti inasaidia kuzuia mmomonyoko."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "sambamba",
+   "german": "parallel / gleichzeitig",
+   "partOfSpeech": "adverb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Wir bearbeiten das Feld und pflanzen gleichzeitig Bäume.",
+     "sw": "Tunalima na kupanda miti sambamba."
+    },
+    {
+     "de": "Dieser Weg verläuft parallel zum Fluss.",
+     "sw": "Njia hii inakwenda sambamba na mto."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "tabianchi",
+   "german": "Klima",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Das Klima hier hat sich stark verändert.",
+     "sw": "Tabianchi ya hapa imebadilika sana."
+    },
+    {
+     "de": "Die Bauern reden viel über das Klima.",
+     "sw": "Wakulima wanaongea sana kuhusu tabianchi."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "udongo",
+   "german": "Boden / Erdreich",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "Der Boden auf unserem Feld ist gut.",
+     "sw": "Udongo wa shamba letu ni mzuri."
+    },
+    {
+     "de": "Nach dem Regen ist die Erde weich.",
+     "sw": "Baada ya mvua, udongo ni laini."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "ukame",
+   "german": "Dürre / Trockenheit",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "Dieses Jahr herrscht eine große Dürre.",
+     "sw": "Mwaka huu kuna ukame mkubwa."
+    },
+    {
+     "de": "Die Dürre hat unseren Mais vernichtet.",
+     "sw": "Ukame umeharibu mahindi yetu."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "umwagiliaji",
+   "german": "Bewässerung",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "In der Trockenzeit bewässern die Bauern ihre Felder.",
+     "sw": "Wakati wa kiangazi wakulima wanatumia umwagiliaji."
+    },
+    {
+     "de": "Bewässerung hilft den Pflanzen beim Wachsen.",
+     "sw": "Umwagiliaji unasaidia mazao kukua."
+    }
+   ],
+   "topics": []
+  }
+ ]
+}

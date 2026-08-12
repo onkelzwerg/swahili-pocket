@@ -283,7 +283,7 @@
         },
         {
           "sw": "uvumbuzi",
-          "de": "Innovation / Erfindung",
+          "de": "Erfindung / Entdeckung",
           "pos": "noun",
           "class": "U"
         },
@@ -307,7 +307,7 @@
         },
         {
           "sw": "mbunifu",
-          "de": "Designer/in / Gestalter/in",
+          "de": "Designer/in / Gestalter/in (auch: kreativ)",
           "pos": "noun",
           "class": "M-Wa"
         },
@@ -535,7 +535,7 @@
           "sw": "waraka",
           "de": "Dokument / Schriftstück",
           "pos": "noun",
-          "class": "M-Wa"
+          "class": "U"
         },
         {
           "sw": "makazi",
@@ -552,7 +552,7 @@
         {
           "sw": "awali",
           "de": "anfänglich / Anfangs-",
-          "pos": "adjective"
+          "pos": "other"
         },
         {
           "sw": "kulingana",
