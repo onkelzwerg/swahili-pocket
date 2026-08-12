@@ -1,0 +1,352 @@
+{
+ "id": "storytelling",
+ "lemmas": [
+  "ajabu",
+  "asubuhi",
+  "baba",
+  "familia",
+  "hadithi",
+  "hapana",
+  "hata",
+  "jambo",
+  "jana",
+  "jina",
+  "kidogo",
+  "kijiji",
+  "kuambia",
+  "kueleza",
+  "kuendelea",
+  "kufikiri",
+  "kugusa",
+  "kuita",
+  "kujua",
+  "kukaribia",
+  "kumbukumbu",
+  "kungoja",
+  "kununua",
+  "kuongea",
+  "kupa",
+  "kupata",
+  "kusema",
+  "kushangaza",
+  "kutafuta",
+  "kuwa",
+  "kwa",
+  "lazima",
+  "mdogo",
+  "mimi",
+  "moja",
+  "moyo",
+  "mtoto",
+  "muda",
+  "mzee",
+  "mzuri",
+  "na",
+  "ndivyo",
+  "ni",
+  "nini",
+  "pengine",
+  "picha",
+  "rafiki",
+  "refu",
+  "sana",
+  "soko",
+  "tangu",
+  "tena",
+  "tunda",
+  "undani",
+  "uzoefu",
+  "wakati",
+  "zamani"
+ ],
+ "glosses": {
+  "jana": {
+   "lemma": "jana",
+   "de": "gestern"
+  },
+  "nilipata": {
+   "lemma": "kupata",
+   "de": "ich bekam / ich hatte (ein Erlebnis)"
+  },
+  "uzoefu": {
+   "lemma": "uzoefu",
+   "de": "Erlebnis / Erfahrung"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv-Verbinder, M-Wa-/U-Klasse)",
+   "structure": true
+  },
+  "ajabu": {
+   "lemma": "ajabu",
+   "de": "seltsam / erstaunlich (wörtl.: Wunder)"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "sokoni": {
+   "lemma": "soko",
+   "de": "auf dem Markt"
+  },
+  "niambie": {
+   "lemma": "kuambia",
+   "de": "erzähl mir! / sag mir!"
+  },
+  "nimekuwa": {
+   "lemma": "kuwa",
+   "de": "ich bin gewesen (Perfekt-Hilfsverb: ich warte schon)"
+  },
+  "nikingoja": {
+   "lemma": "kungoja",
+   "de": "wartend / während ich warte"
+  },
+  "hadithi": {
+   "lemma": "hadithi",
+   "de": "Geschichte"
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "gute / schöne (N-Klasse)"
+  },
+  "tangu": {
+   "lemma": "tangu",
+   "de": "seit"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen / heute Morgen"
+  },
+  "nilikuwa": {
+   "lemma": "kuwa",
+   "de": "ich war (hier: ich war gerade dabei)"
+  },
+  "ninanunua": {
+   "lemma": "kununua",
+   "de": "ich kaufe (hier: ich kaufte gerade)"
+  },
+  "matunda": {
+   "lemma": "tunda",
+   "de": "Obst / Früchte (Plural)"
+  },
+  "wakati": {
+   "lemma": "wakati",
+   "de": "als / während (wörtl.: Zeit)"
+  },
+  "mzee": {
+   "lemma": "mzee",
+   "de": "alter Mann"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein (Zahlwort, M-Wa-Klasse)"
+  },
+  "alinikaribia": {
+   "lemma": "kukaribia",
+   "de": "er kam auf mich zu / näherte sich mir"
+  },
+  "akiniita": {
+   "lemma": "kuita",
+   "de": "und rief mich / mich rufend"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit / bei / für (hier: beim Namen, im Detail, für eine Weile)"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "langu": {
+   "lemma": "-angu",
+   "de": "mein/meine (Possessiv, Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "ulimjua": {
+   "lemma": "kujua",
+   "de": "kanntest du ihn?"
+  },
+  "hapana": {
+   "lemma": "hapana",
+   "de": "nein"
+  },
+  "hata": {
+   "lemma": "hata",
+   "de": "sogar; (in „hata kidogo\": auch nicht)"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen (in „hata kidogo\": nicht im Geringsten)"
+  },
+  "aliniambia": {
+   "lemma": "kuambia",
+   "de": "er sagte mir"
+  },
+  "ananijua": {
+   "lemma": "kujua",
+   "de": "er kennt mich"
+  },
+  "nilipokuwa": {
+   "lemma": "kuwa",
+   "de": "als ich war"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "mdogo": {
+   "lemma": "mdogo",
+   "de": "klein (M-Wa-Klasse)"
+  },
+  "kijijini": {
+   "lemma": "kijiji",
+   "de": "im Dorf"
+  },
+  "inashangaza": {
+   "lemma": "kushangaza",
+   "de": "es ist erstaunlich / das verblüfft"
+  },
+  "aliendelea": {
+   "lemma": "kuendelea",
+   "de": "er fuhr fort / machte weiter"
+  },
+  "kusema": {
+   "lemma": "kusema",
+   "de": "zu sagen / zu erzählen"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was"
+  },
+  "alielezea": {
+   "lemma": "kueleza",
+   "de": "er beschrieb / schilderte"
+  },
+  "kumbukumbu": {
+   "lemma": "kumbukumbu",
+   "de": "Erinnerungen"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "baba": {
+   "lemma": "baba",
+   "de": "Vater"
+  },
+  "yangu": {
+   "lemma": "-angu",
+   "de": "mein/meine (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "undani": {
+   "lemma": "undani",
+   "de": "Einzelheit / Tiefe (kwa undani: ausführlich)"
+  },
+  "mambo": {
+   "lemma": "jambo",
+   "de": "Dinge / Sachen (Plural)"
+  },
+  "ambayo": {
+   "lemma": "amba-",
+   "de": "die / welche (Relativpronomen, Ji-Ma-Klasse Plural)",
+   "structure": true
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "sikujua": {
+   "lemma": "kujua",
+   "de": "ich wusste nicht"
+  },
+  "pengine": {
+   "lemma": "pengine",
+   "de": "vielleicht"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "rafiki": {
+   "lemma": "rafiki",
+   "de": "Freund"
+  },
+  "zamani": {
+   "lemma": "zamani",
+   "de": "früher / von früher (wa zamani: alt)"
+  },
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "ndivyo": {
+   "lemma": "ndivyo",
+   "de": "genau so / so ist es"
+  },
+  "nilivyofikiri": {
+   "lemma": "kufikiri",
+   "de": "wie ich (es) dachte"
+  },
+  "tuliongea": {
+   "lemma": "kuongea",
+   "de": "wir unterhielten uns / wir sprachen"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Zeit / Weile"
+  },
+  "mrefu": {
+   "lemma": "refu",
+   "de": "lang (M-Klasse; kwa muda mrefu: lange)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "alinipa": {
+   "lemma": "kupa",
+   "de": "er gab mir"
+  },
+  "picha": {
+   "lemma": "picha",
+   "de": "Foto / Bild"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "diese (Demonstrativ, N-Klasse)",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "kugusa": {
+   "lemma": "kugusa",
+   "de": "berühren / anrühren (kugusa moyo: zu Herzen gehen)"
+  },
+  "moyo": {
+   "lemma": "moyo",
+   "de": "Herz"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "es ist nötig / du musst"
+  },
+  "umtafute": {
+   "lemma": "kutafuta",
+   "de": "dass du ihn suchst / such ihn"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "wieder / erneut"
+  }
+ },
+ "choices": {}
+}

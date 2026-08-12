@@ -1,0 +1,386 @@
+{
+ "id": "pool-kukutana-barabarani",
+ "lemmas": [
+  "basi",
+  "butwaa",
+  "bwana",
+  "dunia",
+  "fulani",
+  "habari",
+  "hapa",
+  "hapana",
+  "hasa",
+  "jina",
+  "jirani",
+  "kabisa",
+  "kuelekea",
+  "kufahamu",
+  "kufundisha",
+  "kuingia",
+  "kujiunga",
+  "kukutana",
+  "kule",
+  "kumbe",
+  "kuona",
+  "kupenda",
+  "kupiga",
+  "kupita",
+  "kushtuka",
+  "kusikia",
+  "kutambua",
+  "kuwa",
+  "kuzungumza",
+  "kwa",
+  "kwani",
+  "kweli",
+  "kwenda",
+  "lakini",
+  "leo",
+  "makazi",
+  "mazungumzo",
+  "mbili",
+  "mdogo",
+  "mimi",
+  "mji",
+  "mwaka",
+  "mwalimu",
+  "mzuri",
+  "na",
+  "ndugu",
+  "ni",
+  "rafiki",
+  "samahani",
+  "sana",
+  "sherehe",
+  "shule",
+  "si",
+  "tu",
+  "upande",
+  "upili",
+  "wazo",
+  "zamani"
+ ],
+ "glosses": {
+  "hadiyth": {
+   "lemma": "hadiyth",
+   "de": "Hadiyth (weiblicher Vorname, hier als Anrede)",
+   "proper": true
+  },
+  "naona": {
+   "lemma": "kuona",
+   "de": "ich sehe"
+  },
+  "umependeza": {
+   "lemma": "kupenda",
+   "de": "du siehst gut aus / hast dich schick gemacht (kupendeza = gefallen, zu kupenda)"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "kwani": {
+   "lemma": "kwani",
+   "de": "etwa? / denn (fragende Partikel)"
+  },
+  "unaelekea": {
+   "lemma": "kuelekea",
+   "de": "du bist unterwegs zu / du steuerst auf ... zu"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "zu / an / in (Ortspräposition)",
+   "structure": true
+  },
+  "sherehe": {
+   "lemma": "sherehe",
+   "de": "Feier, Fest"
+  },
+  "fulani": {
+   "lemma": "fulani",
+   "de": "irgendein, ein gewisser"
+  },
+  "hapana": {
+   "lemma": "hapana",
+   "de": "nein"
+  },
+  "bwana": {
+   "lemma": "bwana",
+   "de": "mein Freund (Anrede unter Männern; wörtlich: Herr)"
+  },
+  "naenda": {
+   "lemma": "kwenda",
+   "de": "ich gehe"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur, bloß"
+  },
+  "mjini": {
+   "lemma": "mji",
+   "de": "in die Stadt / in der Stadt (Lokativ von mji)"
+  },
+  "kukutana": {
+   "lemma": "kukutana",
+   "de": "sich treffen (Infinitiv: um zu treffen)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "mit; und"
+  },
+  "rafiki": {
+   "lemma": "rafiki",
+   "de": "Freund"
+  },
+  "yangu": {
+   "lemma": "-angu",
+   "de": "mein/meine (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, M-Wa-/M-Mi-Klasse)",
+   "structure": true
+  },
+  "zamani": {
+   "lemma": "zamani",
+   "de": "früher, alt (rafiki wa zamani = alter Freund)"
+  },
+  "juma": {
+   "lemma": "juma",
+   "de": "Juma (männlicher Vorname)",
+   "proper": true
+  },
+  "samahani": {
+   "lemma": "samahani",
+   "de": "Entschuldigung"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für (hier: Entschuldigung für)"
+  },
+  "kuingilia": {
+   "lemma": "kuingia",
+   "de": "das Hineinplatzen, Unterbrechen (kuingilia = sich einmischen, zu kuingia)"
+  },
+  "mazungumzo": {
+   "lemma": "mazungumzo",
+   "de": "Gespräch, Unterhaltung"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "nimesikia": {
+   "lemma": "kusikia",
+   "de": "ich habe gehört"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitiv, Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "mnamzungumzia": {
+   "lemma": "kuzungumza",
+   "de": "sprecht ihr über ihn? (kuzungumzia = reden über, zu kuzungumza)"
+  },
+  "yule": {
+   "lemma": "yule",
+   "de": "jener, der da (Demonstrativ, M-Wa-Klasse Sg.)",
+   "structure": true
+  },
+  "mwalimu": {
+   "lemma": "mwalimu",
+   "de": "Lehrer"
+  },
+  "haswa": {
+   "lemma": "hasa",
+   "de": "genau!, ganz besonders (Schreibvariante von hasa)"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist, sind (Kopula)"
+  },
+  "anayefundisha": {
+   "lemma": "kufundisha",
+   "de": "der unterrichtet"
+  },
+  "shule": {
+   "lemma": "shule",
+   "de": "Schule"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "upili": {
+   "lemma": "upili",
+   "de": "Sekundarstufe (shule ya upili = weiterführende Schule)"
+  },
+  "unamfahamu": {
+   "lemma": "kufahamu",
+   "de": "du kennst ihn"
+  },
+  "kumbe": {
+   "lemma": "kumbe",
+   "de": "also!, ach so! (Ausruf der Überraschung)"
+  },
+  "dunia": {
+   "lemma": "dunia",
+   "de": "Welt"
+  },
+  "ndogo": {
+   "lemma": "mdogo",
+   "de": "klein (N-Klasse)"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "ndiye": {
+   "lemma": "ndio",
+   "de": "er/sie ist es, der ... (hervorhebende Kopula, M-Wa-Klasse Sg.)",
+   "structure": true
+  },
+  "alitutambulisha": {
+   "lemma": "kutambua",
+   "de": "er hat uns einander vorgestellt (kutambulisha = bekannt machen, zu kutambua)"
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich, mich"
+  },
+  "huyu": {
+   "lemma": "huyu",
+   "de": "dieser hier (Demonstrativ, M-Wa-Klasse Sg.)",
+   "structure": true
+  },
+  "ndugu": {
+   "lemma": "ndugu",
+   "de": "Bruder, Verwandter"
+  },
+  "yetu": {
+   "lemma": "-etu",
+   "de": "unser/unsere (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier"
+  },
+  "kweli": {
+   "lemma": "kweli",
+   "de": "wahr, stimmt"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "ganz, völlig"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbar"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahre (Plural von mwaka)"
+  },
+  "miwili": {
+   "lemma": "mbili",
+   "de": "zwei (M-Mi-Klasse)"
+  },
+  "iliyopita": {
+   "lemma": "kupita",
+   "de": "vergangen, vorbei (miaka miwili iliyopita = vor zwei Jahren)"
+  },
+  "kule": {
+   "lemma": "kule",
+   "de": "dort, dort drüben (Demonstrativ, Ortsklasse)"
+  },
+  "makazi": {
+   "lemma": "makazi",
+   "de": "Siedlung, Wohngegend"
+  },
+  "upanga": {
+   "lemma": "upanga",
+   "de": "Upanga (Stadtteil von Daressalam)",
+   "proper": true
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "also, dann (Partikel)"
+  },
+  "tujiunge": {
+   "lemma": "kujiunga",
+   "de": "lasst uns zusammentun / uns anschließen"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle (Quantor, M-Wa-Klasse Pl.)",
+   "structure": true
+  },
+  "si": {
+   "lemma": "si",
+   "de": "nicht (hier: sind wir nicht ...? / oder?)"
+  },
+  "tunaelekea": {
+   "lemma": "kuelekea",
+   "de": "wir sind unterwegs zu / wir steuern auf ... zu"
+  },
+  "upande": {
+   "lemma": "upande",
+   "de": "Richtung, Seite"
+  },
+  "ule": {
+   "lemma": "ule",
+   "de": "jener (Demonstrativ, M-Mi-Klasse Sg.; ule ule = derselbe)",
+   "structure": true
+  },
+  "wazo": {
+   "lemma": "wazo",
+   "de": "Idee"
+  },
+  "zuri": {
+   "lemma": "mzuri",
+   "de": "gut, schön (Ji-Ma-Klasse)"
+  },
+  "twendeni": {
+   "lemma": "kwenda",
+   "de": "lasst uns gehen!"
+  },
+  "tukampige": {
+   "lemma": "kupiga",
+   "de": "und lasst uns ihn ... versetzen (kupiga butwaa = verblüffen)"
+  },
+  "butwaa": {
+   "lemma": "butwaa",
+   "de": "Verblüffung, Bestürzung (kupiga butwaa = verblüffen)"
+  },
+  "habari": {
+   "lemma": "habari",
+   "de": "Neuigkeiten"
+  },
+  "hizi": {
+   "lemma": "hizi",
+   "de": "diese (Demonstrativ, N-Klasse Pl.)",
+   "structure": true
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Pl.)",
+   "structure": true
+  },
+  "kushtukiza": {
+   "lemma": "kushtuka",
+   "de": "überraschend (kushtukiza = überraschen, zu kushtuka)"
+  }
+ },
+ "choices": {}
+}

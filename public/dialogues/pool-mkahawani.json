@@ -1,0 +1,179 @@
+{
+ "id": "pool-mkahawani",
+ "lemmas": [
+  "asante",
+  "baridi",
+  "chipsi",
+  "dirisha",
+  "hapa",
+  "jambo",
+  "je",
+  "karibu",
+  "kinywaji",
+  "kuketi",
+  "kuku",
+  "kula",
+  "kuleta",
+  "kupata",
+  "kupenda",
+  "kutaka",
+  "kuweza",
+  "maji",
+  "mbili",
+  "meza",
+  "mimi",
+  "mteja",
+  "na",
+  "nini",
+  "pia",
+  "samaki",
+  "sana",
+  "sawa",
+  "tafadhali",
+  "wali"
+ ],
+ "glosses": {
+  "karibuni": {
+   "lemma": "karibu",
+   "de": "willkommen! (an mehrere)"
+  },
+  "wateja": {
+   "lemma": "mteja",
+   "de": "Kunden"
+  },
+  "hamjambo": {
+   "lemma": "jambo",
+   "de": "Wie geht es euch? (wörtlich: euch fehlt nichts?)"
+  },
+  "hatujambo": {
+   "lemma": "jambo",
+   "de": "Uns geht es gut (wörtlich: uns fehlt nichts)"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "tunaweza": {
+   "lemma": "kuweza",
+   "de": "wir können"
+  },
+  "kupata": {
+   "lemma": "kupata",
+   "de": "bekommen"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (Bejahungspartikel)",
+   "structure": true
+  },
+  "tunataka": {
+   "lemma": "kutaka",
+   "de": "wir wollen / wir möchten"
+  },
+  "kuketi": {
+   "lemma": "kuketi",
+   "de": "sitzen / sich setzen"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe, in der Nähe"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und / mit (in „karibu na\": bei, an)"
+  },
+  "dirisha": {
+   "lemma": "dirisha",
+   "de": "Fenster"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "in Ordnung / einverstanden"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier"
+  },
+  "mngependa": {
+   "lemma": "kupenda",
+   "de": "ihr würdet gern / möchtet ihr"
+  },
+  "kula": {
+   "lemma": "kula",
+   "de": "essen (Infinitiv)"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was"
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "nitakula": {
+   "lemma": "kula",
+   "de": "ich werde essen"
+  },
+  "wali": {
+   "lemma": "wali",
+   "de": "Reis"
+  },
+  "kuku": {
+   "lemma": "kuku",
+   "de": "Hähnchen, Huhn"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "samaki": {
+   "lemma": "samaki",
+   "de": "Fisch"
+  },
+  "chipsi": {
+   "lemma": "chipsi",
+   "de": "Pommes"
+  },
+  "je": {
+   "lemma": "je",
+   "de": "Fragepartikel (leitet eine Ja/Nein-Frage ein)"
+  },
+  "mnataka": {
+   "lemma": "kutaka",
+   "de": "ihr wollt"
+  },
+  "vinywaji": {
+   "lemma": "kinywaji",
+   "de": "Getränke"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "kalt"
+  },
+  "pia": {
+   "lemma": "pia",
+   "de": "auch"
+  },
+  "tuletee": {
+   "lemma": "kuleta",
+   "de": "bring uns"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "mawili": {
+   "lemma": "mbili",
+   "de": "zwei (Ji-Ma-Klasse)"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  }
+ },
+ "choices": {}
+}

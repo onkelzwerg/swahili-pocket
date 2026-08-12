@@ -46,6 +46,7 @@ const value = (flag, fallback) => {
 };
 
 const validateOnly = has("--validate");
+const gapsOnly = has("--gaps");
 const briefId = has("--brief") ? value("--brief", null) : null;
 const checkFiles = has("--check") ? args.slice(args.indexOf("--check") + 1) : null;
 
@@ -283,6 +284,55 @@ async function main() {
       }
     }
     if (bad > 0) process.exitCode = 1;
+    return;
+  }
+
+  /**
+   * Welche Grundformen aller Dialoge kennt der Pool nicht?
+   *
+   * Das ist keine Fehlermeldung, sondern eine Arbeitsliste. Ein Lemma
+   * außerhalb des Pools kann nie als gelernt zählen und deckelt damit die
+   * erreichbare Abdeckung des Dialogs — steht der Deckel unter der
+   * Freischaltschwelle, bleibt der Dialog dauerhaft gesperrt. Genau das zeigt
+   * die Spalte „max." an.
+   */
+  if (gapsOnly) {
+    const poolLemmas = await loadPoolLemmas();
+    const perLemma = new Map();
+    const rows = [];
+
+    for (const raw of await readEntries()) {
+      const dialogue = byId.get(raw?.id);
+      if (!dialogue) continue;
+      const { entry, unknownLemmas } = validateDialogueGloss(raw, {
+        dialogue,
+        tokenize,
+        poolLemmas,
+      });
+      if (!entry) continue;
+      for (const l of unknownLemmas) {
+        if (!perLemma.has(l)) perLemma.set(l, []);
+        perLemma.get(l).push(entry.id);
+      }
+      const max = entry.lemmas.length
+        ? (entry.lemmas.length - unknownLemmas.length) / entry.lemmas.length
+        : 1;
+      rows.push({ id: entry.id, total: entry.lemmas.length, gaps: unknownLemmas.length, max });
+    }
+
+    console.log("Dialog                     Lemmata  Lücken   max.  freischaltbar");
+    for (const r of rows.sort((a, b) => a.max - b.max)) {
+      console.log(
+        `${r.id.padEnd(26)} ${String(r.total).padStart(4)}  ${String(r.gaps).padStart(6)}  ` +
+          `${(r.max * 100).toFixed(0).padStart(4)} %  ${r.max >= 0.95 ? "ja" : "NEIN"}`,
+      );
+    }
+
+    console.log(`\n${perLemma.size} verschiedene Grundformen fehlen im Pool:\n`);
+    const sorted = [...perLemma].sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+    for (const [lemma, ids] of sorted) {
+      console.log(`  ${lemma.padEnd(16)} ${ids.length}× — ${ids.join(", ")}`);
+    }
     return;
   }
 

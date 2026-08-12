@@ -83,8 +83,8 @@ export const CORE_BAND = new Map([
   ["kucheka", 2], // kulia war da, „lachen" nicht
   ["kufurahi", 2],
   ["hasira", 2], // Gegenstück zu furaha
-  ["nyingi", 2], // „viele" war gar nicht ausdrückbar
-  ["nyingine", 2],
+  ["ingi", 2], // „viele" war ohne Bandeintrag nicht erreichbar
+  ["ingine", 2],
   ["kushuka", 2], // Gegenrichtung zu kupanda
   ["kivuli", 2],
   ["ishirini", 2],

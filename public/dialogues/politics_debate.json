@@ -1,0 +1,290 @@
+{
+ "id": "politics_debate",
+ "lemmas": [
+  "afya",
+  "baadhi",
+  "badiliko",
+  "bado",
+  "elimu",
+  "habari",
+  "hasa",
+  "hata hivyo",
+  "inawezekana",
+  "ingi",
+  "jambo",
+  "katika",
+  "kijana",
+  "kikwazo",
+  "kuahidi",
+  "kubwa",
+  "kuja",
+  "kukubali",
+  "kukubaliana",
+  "kuleta",
+  "kuona",
+  "kupaswa",
+  "kushiriki",
+  "kusikia",
+  "kusoma",
+  "kwa",
+  "kwamba",
+  "kweli",
+  "lakini",
+  "lazima",
+  "maendeleo",
+  "mgombea",
+  "muhimu",
+  "na",
+  "ni",
+  "rushwa",
+  "sauti",
+  "sekta",
+  "sera",
+  "siasa",
+  "suluhisho",
+  "tatizo",
+  "uamuzi",
+  "uchaguzi",
+  "ukosefu",
+  "uwazi",
+  "zaidi"
+ ],
+ "glosses": {
+  "umesoma": {
+   "lemma": "kusoma",
+   "de": "hast du gelesen"
+  },
+  "habari": {
+   "lemma": "habari",
+   "de": "Nachrichten (wörtl. Neuigkeiten)"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "uchaguzi": {
+   "lemma": "uchaguzi",
+   "de": "Wahl"
+  },
+  "ujao": {
+   "lemma": "kuja",
+   "de": "kommend, nächste (wörtl. die kommt)"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (bejahende Antwortpartikel)",
+   "structure": true
+  },
+  "naona": {
+   "lemma": "kuona",
+   "de": "ich sehe, ich finde"
+  },
+  "wagombea": {
+   "lemma": "mgombea",
+   "de": "Kandidaten"
+  },
+  "wengi": {
+   "lemma": "ingi",
+   "de": "viele (M-Wa-Klasse)"
+  },
+  "wanaahidi": {
+   "lemma": "kuahidi",
+   "de": "sie versprechen"
+  },
+  "mambo": {
+   "lemma": "jambo",
+   "de": "Dinge, Sachen"
+  },
+  "yasiyowezekana": {
+   "lemma": "inawezekana",
+   "de": "die nicht möglich sind, unmögliche"
+  },
+  "ninakubaliana": {
+   "lemma": "kukubaliana",
+   "de": "ich stimme zu"
+  },
+  "tatizo": {
+   "lemma": "tatizo",
+   "de": "Problem"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "ukosefu": {
+   "lemma": "ukosefu",
+   "de": "Mangel, Fehlen"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, U-Klasse)",
+   "structure": true
+  },
+  "uwazi": {
+   "lemma": "uwazi",
+   "de": "Transparenz, Offenheit"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "sera": {
+   "lemma": "sera",
+   "de": "politische Programme, Politik(linien)"
+  },
+  "zao": {
+   "lemma": "-ao",
+   "de": "ihr/ihre (Possessiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "müssen (wörtl. notwendig)"
+  },
+  "tukubali": {
+   "lemma": "kukubali",
+   "de": "dass wir anerkennen (Konjunktiv)"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "baadhi": {
+   "lemma": "baadhi",
+   "de": "einige"
+  },
+  "yao": {
+   "lemma": "-ao",
+   "de": "ihr/ihre; hier: von ihnen",
+   "structure": true
+  },
+  "wameleta": {
+   "lemma": "kuleta",
+   "de": "sie haben gebracht"
+  },
+  "mabadiliko": {
+   "lemma": "badiliko",
+   "de": "Veränderungen"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, Ma-/N-Klasse)",
+   "structure": true
+  },
+  "kweli": {
+   "lemma": "kweli",
+   "de": "wahr, echt; allein stehend: stimmt"
+  },
+  "hasa": {
+   "lemma": "hasa",
+   "de": "besonders"
+  },
+  "sekta": {
+   "lemma": "sekta",
+   "de": "Sektor, Bereich"
+  },
+  "elimu": {
+   "lemma": "elimu",
+   "de": "Bildung"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "afya": {
+   "lemma": "afya",
+   "de": "Gesundheit"
+  },
+  "hata": {
+   "lemma": "hata hivyo",
+   "de": "trotzdem (erster Teil von „hata hivyo“)"
+  },
+  "hivyo": {
+   "lemma": "hata hivyo",
+   "de": "(Teil von: trotzdem)"
+  },
+  "rushwa": {
+   "lemma": "rushwa",
+   "de": "Korruption, Bestechung"
+  },
+  "bado": {
+   "lemma": "bado",
+   "de": "noch, immer noch"
+  },
+  "kikwazo": {
+   "lemma": "kikwazo",
+   "de": "Hindernis"
+  },
+  "kikubwa": {
+   "lemma": "kubwa",
+   "de": "groß (Ki-Klasse)"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "maendeleo": {
+   "lemma": "maendeleo",
+   "de": "Entwicklung, Fortschritt"
+  },
+  "suluhisho": {
+   "lemma": "suluhisho",
+   "de": "Lösung"
+  },
+  "vijana": {
+   "lemma": "kijana",
+   "de": "junge Leute, Jugendliche"
+  },
+  "kushiriki": {
+   "lemma": "kushiriki",
+   "de": "teilzunehmen, sich zu beteiligen"
+  },
+  "zaidi": {
+   "lemma": "zaidi",
+   "de": "mehr, stärker"
+  },
+  "siasa": {
+   "lemma": "siasa",
+   "de": "Politik"
+  },
+  "nakubali": {
+   "lemma": "kukubali",
+   "de": "ich stimme zu"
+  },
+  "sauti": {
+   "lemma": "sauti",
+   "de": "Stimmen"
+  },
+  "zinapaswa": {
+   "lemma": "kupaswa",
+   "de": "sie müssen, sie sollen"
+  },
+  "kusikika": {
+   "lemma": "kusikia",
+   "de": "gehört zu werden"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "bei, in (Ortspräposition)",
+   "structure": true
+  },
+  "maamuzi": {
+   "lemma": "uamuzi",
+   "de": "Entscheidungen"
+  },
+  "muhimu": {
+   "lemma": "muhimu",
+   "de": "wichtig"
+  }
+ },
+ "choices": {}
+}
