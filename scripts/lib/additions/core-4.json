@@ -1,0 +1,138 @@
+[
+ {
+  "swahili": "kumbukumbu",
+  "german": "Erinnerung",
+  "partOfSpeech": "noun",
+  "nounClass": "N",
+  "examples": [
+   {
+    "de": "Ich habe schöne Erinnerungen an meine Schule.",
+    "sw": "Nina kumbukumbu nzuri za shule yangu."
+   },
+   {
+    "de": "Dieses Foto ist eine Erinnerung an unsere Reise.",
+    "sw": "Picha hii ni kumbukumbu ya safari yetu."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "uzoefu",
+  "german": "Erfahrung / Routine",
+  "partOfSpeech": "noun",
+  "nounClass": "U",
+  "examples": [
+   {
+    "de": "Unser Lehrer hat viel Erfahrung.",
+    "sw": "Mwalimu wetu ana uzoefu mkubwa."
+   },
+   {
+    "de": "Ich habe Erfahrung mit dieser Arbeit.",
+    "sw": "Nina uzoefu wa kazi hii."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "changamoto",
+  "german": "Herausforderung",
+  "partOfSpeech": "noun",
+  "nounClass": "N",
+  "examples": [
+   {
+    "de": "Diese Arbeit ist eine große Herausforderung.",
+    "sw": "Kazi hii ni changamoto kubwa."
+   },
+   {
+    "de": "Wir haben viele Herausforderungen, aber wir arbeiten zusammen.",
+    "sw": "Tuna changamoto nyingi, lakini tunafanya kazi pamoja."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "athari",
+  "german": "Auswirkung / Folge",
+  "partOfSpeech": "noun",
+  "nounClass": "N",
+  "examples": [
+   {
+    "de": "Diese Nachricht hat große Auswirkungen auf viele Menschen.",
+    "sw": "Habari hii ina athari kubwa kwa watu wengi."
+   },
+   {
+    "de": "Rauchen hat schlechte Folgen für die Gesundheit.",
+    "sw": "Sigara ina athari mbaya kwa afya."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "mabadiliko",
+  "german": "Veränderung / Wandel",
+  "partOfSpeech": "noun",
+  "nounClass": "Ji-Ma",
+  "examples": [
+   {
+    "de": "In der Schule gibt es viele Veränderungen.",
+    "sw": "Kuna mabadiliko mengi shuleni."
+   },
+   {
+    "de": "Diese Veränderungen sind gut für uns.",
+    "sw": "Mabadiliko haya ni mazuri kwetu."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "elimu",
+  "german": "Bildung",
+  "partOfSpeech": "noun",
+  "nounClass": "N",
+  "examples": [
+   {
+    "de": "Bildung ist wichtig für alle Kinder.",
+    "sw": "Elimu ni muhimu kwa watoto wote."
+   },
+   {
+    "de": "Meine Schwester möchte eine gute Bildung bekommen.",
+    "sw": "Dada yangu anataka kupata elimu nzuri."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "ipi",
+  "german": "welche? (N-Klasse, auch M-Mi Plural)",
+  "partOfSpeech": "other",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Welcher Weg ist kürzer?",
+    "sw": "Njia ipi ni fupi?"
+   },
+   {
+    "de": "Welches Haus gefällt dir?",
+    "sw": "Unapenda nyumba ipi?"
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "zipi",
+  "german": "welche? (N-Klasse Plural)",
+  "partOfSpeech": "other",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Welche Kleider möchtest du?",
+    "sw": "Unataka nguo zipi?"
+   },
+   {
+    "de": "Welche Bilder sind schön?",
+    "sw": "Picha zipi ni nzuri?"
+   }
+  ],
+  "topics": []
+ }
+]

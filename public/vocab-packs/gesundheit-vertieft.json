@@ -1,0 +1,30 @@
+{
+ "id": "gesundheit-vertieft",
+ "title": "Gesundheit vertieft",
+ "emoji": "🩺",
+ "description": "Beschwerden genauer beschreiben — für doctor.",
+ "entries": [
+  {
+   "swahili": "dalili",
+   "german": "Symptom / Anzeichen",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    { "de": "Ich habe Anzeichen von Fieber.", "sw": "Nina dalili za homa." },
+    { "de": "Der Arzt hat nach meinen Symptomen gefragt.", "sw": "Daktari aliuliza dalili zangu." }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "digrii",
+   "german": "Grad (Temperatur)",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    { "de": "Seine Temperatur beträgt achtunddreißig Grad.", "sw": "Joto lake ni digrii thelathini na nane." },
+    { "de": "Ihr Fieber ist auf vierzig Grad gestiegen.", "sw": "Homa yake imefika digrii arobaini." }
+   ],
+   "topics": []
+  }
+ ]
+}
