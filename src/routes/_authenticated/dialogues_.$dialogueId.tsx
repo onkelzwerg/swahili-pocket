@@ -11,9 +11,12 @@ import {
   playableSpeakers,
 } from "@/lib/dialogues";
 import { recordDialogueRun } from "@/lib/dialogue-stats";
+import { loadDialogueData, type DialogueGloss } from "@/lib/dialogue-index";
+import { groupStorySegments, type StorySegment } from "@/lib/stories";
 import { checkMilestones, type Milestone } from "@/lib/milestones";
-import { awardXp } from "@/lib/store";
+import { awardXp, getVocab } from "@/lib/store";
 import { speak, speakSequence, cancelSpeech, createUnlockedAudio } from "@/lib/tts";
+import { GlossSheet } from "@/components/GlossSheet";
 import { APP_CONFIG } from "@/config/app.config";
 import { T } from "@/config/translations";
 import type { DialogueChoice, DialogueSpeaker, DialogueTurn } from "@/lib/types";
@@ -35,8 +38,16 @@ function DialoguePage() {
   const { dialogueId } = Route.useParams();
   const dialogue = findDialogue(dialogueId);
   const [mode, setMode] = useState<"read" | "play">("read");
+  const [glosses, setGlosses] = useState<Record<string, DialogueGloss>>({});
 
   useEffect(() => () => cancelSpeech(), []);
+
+  // Das Glossar liegt neben dem Dialog (public/dialogues/<id>.json) und kommt
+  // erst hier dazu — es steht bewusst nicht im JS-Bündel. Fehlt es, bleiben die
+  // Wörter eben nicht antippbar; der Dialog selbst funktioniert weiter.
+  useEffect(() => {
+    void loadDialogueData(dialogueId).then((data) => setGlosses(data?.glosses ?? {}));
+  }, [dialogueId]);
 
   if (!dialogue) {
     return (
@@ -101,47 +112,113 @@ function DialoguePage() {
       {mode === "play" && playable ? (
         <RolePlay dialogue={dialogue} />
       ) : (
-        <ReadView dialogue={dialogue} />
+        <ReadView dialogue={dialogue} glosses={glosses} />
       )}
     </div>
   );
 }
 
-function ReadView({ dialogue }: { dialogue: ReturnType<typeof findDialogue> & object }) {
+/** Reiner Leerraum zwischen zwei Wortgruppen — die einzige Umbruchstelle. */
+function isSpaceGroup(group: StorySegment[]): boolean {
+  return group.length === 1 && !group[0].word && /^\s+$/.test(group[0].text);
+}
+
+/**
+ * Lesemodus. Seit W4.4 ist jedes Wort antippbar — derselbe Tokenizer und
+ * dasselbe Nachschlage-Sheet wie im Story-Reader, damit ein Wort im Dialog
+ * nicht anders funktioniert als dasselbe Wort in einer Geschichte.
+ */
+function ReadView({
+  dialogue,
+  glosses,
+}: {
+  dialogue: NonNullable<ReturnType<typeof findDialogue>>;
+  glosses: Record<string, DialogueGloss>;
+}) {
+  const [openWord, setOpenWord] = useState<string | null>(null);
+  const [ownWords, setOwnWords] = useState<Set<string>>(new Set());
+  const hasGlosses = Object.keys(glosses).length > 0;
+
+  useEffect(() => {
+    void getVocab().then((vocab) =>
+      setOwnWords(new Set(vocab.map((v) => v.swahili.toLowerCase()))),
+    );
+  }, []);
+
+  const gloss = openWord ? (glosses[openWord] ?? null) : null;
+
   return (
-    <ul className="flex flex-col gap-3">
-      {dialogue.turns.map((turn, i) => (
-        <li key={i} className={`flex ${turn.speaker === "B" ? "justify-end" : "justify-start"}`}>
-          <div
-            className={`max-w-[85%] rounded-2xl px-4 py-3 ${
-              turn.speaker === "B"
-                ? "bg-forest text-forest-foreground rounded-br-sm"
-                : bubbleClass(turn.speaker, false)
-            }`}
-          >
-            <div className="flex items-start justify-between gap-2">
-              <div>
-                <p className="text-[10px] font-semibold opacity-70">
-                  {T.dialogues.speaker(turn.speaker)}
-                </p>
-                <p className="font-display text-base font-semibold">{turn.sw}</p>
-              </div>
-              <button
-                onClick={() => void speak(turn.sw, createUnlockedAudio())}
-                className="shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-background/25"
-              >
-                <Play className="h-3 w-3" />
-              </button>
-            </div>
-            <p
-              className={`mt-1 text-xs ${turn.speaker === "B" ? "opacity-80" : "text-muted-foreground"}`}
+    <>
+      {hasGlosses && <p className="mb-3 text-xs text-muted-foreground">{T.dialogues.readerHint}</p>}
+
+      <ul className="flex flex-col gap-3">
+        {dialogue.turns.map((turn, i) => (
+          <li key={i} className={`flex ${turn.speaker === "B" ? "justify-end" : "justify-start"}`}>
+            <div
+              className={`max-w-[85%] rounded-2xl px-4 py-3 ${
+                turn.speaker === "B"
+                  ? "bg-forest text-forest-foreground rounded-br-sm"
+                  : bubbleClass(turn.speaker, false)
+              }`}
             >
-              {turn.de}
-            </p>
-          </div>
-        </li>
-      ))}
-    </ul>
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <p className="text-[10px] font-semibold opacity-70">
+                    {T.dialogues.speaker(turn.speaker)}
+                  </p>
+                  {/* Gruppiert, damit ein Satzzeichen nicht ohne sein Wort umbricht. */}
+                  <p className="font-display text-base font-semibold">
+                    {hasGlosses
+                      ? groupStorySegments(turn.sw).map((group, g) =>
+                          isSpaceGroup(group) ? (
+                            <span key={g}>{group[0].text}</span>
+                          ) : (
+                            <span key={g} className="whitespace-nowrap">
+                              {group.map((segment, j) =>
+                                segment.word && glosses[segment.word] ? (
+                                  <button
+                                    key={j}
+                                    type="button"
+                                    onClick={() => setOpenWord(segment.word)}
+                                    className="rounded underline decoration-current/25 decoration-dotted underline-offset-4 transition-colors active:bg-background/25"
+                                  >
+                                    {segment.text}
+                                  </button>
+                                ) : (
+                                  <span key={j}>{segment.text}</span>
+                                ),
+                              )}
+                            </span>
+                          ),
+                        )
+                      : turn.sw}
+                  </p>
+                </div>
+                <button
+                  onClick={() => void speak(turn.sw, createUnlockedAudio())}
+                  className="shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-background/25"
+                >
+                  <Play className="h-3 w-3" />
+                </button>
+              </div>
+              <p
+                className={`mt-1 text-xs ${turn.speaker === "B" ? "opacity-80" : "text-muted-foreground"}`}
+              >
+                {turn.de}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <GlossSheet
+        token={openWord}
+        gloss={gloss}
+        inCards={!!gloss && ownWords.has(gloss.lemma)}
+        onClose={() => setOpenWord(null)}
+        onAdded={(lemma) => setOwnWords((prev) => new Set(prev).add(lemma))}
+      />
+    </>
   );
 }
 

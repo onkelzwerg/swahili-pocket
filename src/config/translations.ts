@@ -462,6 +462,11 @@ export const T = {
       "Alltagsdialoge auf Swahili: Begrüßung, Markt, Restaurant und mehr — mit Audio.",
     eyebrow: "Mazungumzo",
     title: "Dialoge",
+    /** Dieselbe Kernschleife wie bei den Geschichten, in einem Satz (W4.4). */
+    intro:
+      "Freigeschaltet wird, was du zu mindestens 95 % verstehst. Jedes neue Wort öffnet weitere Dialoge.",
+    /** Hinweis über dem Dialogtext — die Wörter sind antippbar (W4.4). */
+    readerHint: "Tippe ein Wort an, um es nachzuschlagen.",
     generateCta: "Generieren",
     aiBadge: "KI",
     deleteAria: "Dialog löschen",
@@ -580,16 +585,6 @@ export const T = {
     band: (n: number) => `Stufe ${n}`,
     words: (n: number) => `${n} Wörter`,
     readBadge: "Gelesen",
-    /** Abdeckungs-Badge. */
-    coverage: (percent: number) => `${percent} % bekannt`,
-    newWords: (n: number) =>
-      n === 0 ? "kein neues Wort" : n === 1 ? "1 neues Wort" : `${n} neue Wörter`,
-    lockedProgress: (missing: number) =>
-      missing === 1
-        ? "Noch 1 Wort bis zur Freischaltung"
-        : `Noch ${missing} Wörter bis zur Freischaltung`,
-    learnMissing: "Diese Wörter lernen",
-    lockedAria: "Gesperrt",
     reader: {
       backAria: "Zurück zu den Geschichten",
       showGerman: "Deutsch einblenden",
@@ -603,21 +598,40 @@ export const T = {
       xp: (n: number) => `+${n} XP`,
       newWordHint: "Neues Wort in dieser Geschichte",
     },
-    gloss: {
-      baseForm: (lemma: string) => `Grundform: ${lemma}`,
-      properName: "Eigenname",
-      structure: "Grammatische Form — die lernst du im Grammatik-Gym, nicht als Vokabel.",
-      addCard: "Als Lernkarte übernehmen",
-      inCards: "Schon in deinen Karten",
-      added: "In Lernkarten übernommen",
-      listenAria: "Wort anhören",
-    },
     done: {
       headline: "Umemaliza!",
       body: (title: string) => `„${title}" ist durch.`,
       unaided: "Und das ganz ohne die Übersetzung einzublenden.",
       back: "Zur Bibliothek",
     },
+  },
+
+  /**
+   * Abdeckung und Freischaltung — dieselben Sätze für Geschichten und Dialoge
+   * (W4.4). Die Kernschleife ist in beiden Listen dieselbe; sie zweimal leicht
+   * anders zu formulieren würde sie als zwei Mechaniken erscheinen lassen.
+   */
+  coverage: {
+    known: (percent: number) => `${percent} % bekannt`,
+    newWords: (n: number) =>
+      n === 0 ? "kein neues Wort" : n === 1 ? "1 neues Wort" : `${n} neue Wörter`,
+    lockedProgress: (missing: number) =>
+      missing === 1
+        ? "Noch 1 Wort bis zur Freischaltung"
+        : `Noch ${missing} Wörter bis zur Freischaltung`,
+    learnMissing: "Diese Wörter lernen",
+    lockedAria: "Gesperrt",
+  },
+
+  /** Wort-Nachschlag — im Lesetext wie im Dialog (components/GlossSheet). */
+  gloss: {
+    baseForm: (lemma: string) => `Grundform: ${lemma}`,
+    properName: "Eigenname",
+    structure: "Grammatische Form — die lernst du im Grammatik-Gym, nicht als Vokabel.",
+    addCard: "Als Lernkarte übernehmen",
+    inCards: "Schon in deinen Karten",
+    added: "In Lernkarten übernommen",
+    listenAria: "Wort anhören",
   },
 
   packs: {
@@ -649,7 +663,8 @@ export const T = {
     },
     dialogues: {
       title: "Dialoge",
-      subtitle: (playable: number, total: number) => `${total} Dialoge · ${playable} mitspielbar`,
+      subtitle: (unlocked: number, total: number, playable: number) =>
+        `${unlocked} von ${total} freigeschaltet · ${playable} mitspielbar`,
     },
     grammar: {
       title: "Grammatik",

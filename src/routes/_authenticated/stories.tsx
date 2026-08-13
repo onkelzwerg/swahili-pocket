@@ -97,7 +97,7 @@ function StoryCard({ item, onLearnMissing }: { item: StoryListItem; onLearnMissi
           </div>
           <Lock
             className="h-4 w-4 shrink-0 text-muted-foreground/60"
-            aria-label={T.stories.lockedAria}
+            aria-label={T.coverage.lockedAria}
           />
         </div>
 
@@ -108,14 +108,14 @@ function StoryCard({ item, onLearnMissing }: { item: StoryListItem; onLearnMissi
           />
         </div>
         <p className="mt-2 text-xs font-medium text-muted-foreground">
-          {T.stories.coverage(percent)} · {T.stories.lockedProgress(cov.unknown.length)}
+          {T.coverage.known(percent)} · {T.coverage.lockedProgress(cov.unknown.length)}
         </p>
 
         <button
           onClick={onLearnMissing}
           className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground active:scale-95"
         >
-          <Sparkles className="h-3.5 w-3.5" /> {T.stories.learnMissing}
+          <Sparkles className="h-3.5 w-3.5" /> {T.coverage.learnMissing}
         </button>
       </div>
     );
@@ -151,7 +151,7 @@ function StoryCard({ item, onLearnMissing }: { item: StoryListItem; onLearnMissi
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
           <span className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold ${tone}`}>
-            {T.stories.coverage(percent)} · {T.stories.newWords(cov.unknown.length)}
+            {T.coverage.known(percent)} · {T.coverage.newWords(cov.unknown.length)}
           </span>
           <span className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground">
             <BookOpen className="h-3 w-3" /> {T.stories.words(meta.wordCount)} ·{" "}

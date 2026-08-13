@@ -1,5 +1,7 @@
-// Listen-Index der Dialoge (public/dialogues/index.json, erzeugt von
-// scripts/generate-dialogues.mjs).
+import type { DialogueChoice } from "./types";
+
+// Erzeugte Dialogdaten unter public/dialogues/ (scripts/generate-dialogues.mjs):
+// der Listen-Index und die Glossardatei je Dialog.
 //
 // Der Dialogtext selbst steht in seed.ts und dialogues-extra.ts und ist Teil
 // des Bündels. Was hier dazukommt, ist alles, was aus den Glossaren abgeleitet
@@ -49,4 +51,58 @@ export function loadDialogueIndex(): Promise<DialogueMeta[]> {
 
 export async function dialogueMetaById(): Promise<Map<string, DialogueMeta>> {
   return new Map((await loadDialogueIndex()).map((d) => [d.id, d]));
+}
+
+// ---------------------------------------------------------------------------
+// Glossardatei je Dialog
+// ---------------------------------------------------------------------------
+
+/**
+ * Ein Glossareintrag — deckungsgleich mit `StoryGloss`, weil derselbe
+ * Validator-Kern beide schreibt und dasselbe Sheet beide anzeigt.
+ */
+export interface DialogueGloss {
+  /** Grundform, unter der das Wort im Wortschatz zählt. */
+  lemma: string;
+  de: string;
+  /** Eigenname — keine Vokabel, zählt nicht in die Abdeckung. */
+  proper?: boolean;
+  /** Geschlossene Wortklasse — Grammatik-Gym statt Karteikarte. */
+  structure?: boolean;
+}
+
+/** public/dialogues/<id>.json — Glossar und Entscheidungspunkte eines Dialogs. */
+export interface DialogueData {
+  id: string;
+  lemmas: string[];
+  /** Token (kleingeschrieben) → Glossareintrag. Deckt jedes Token jeder Zeile ab. */
+  glosses: Record<string, DialogueGloss>;
+  /** Zug-Index (als String) → Antwortoptionen. Leer, solange keine gepflegt sind. */
+  choices: Record<string, DialogueChoice[]>;
+}
+
+const dataCache = new Map<string, Promise<DialogueData | null>>();
+
+/**
+ * Glossar eines Dialogs laden. `null`, wenn die Datei fehlt — die Detailseite
+ * zeigt dann eben nicht antippbare Wörter statt gar keinen Dialog.
+ */
+export function loadDialogueData(id: string): Promise<DialogueData | null> {
+  let p = dataCache.get(id);
+  if (!p) {
+    // Die Id kommt aus dem Bestand, nie aus freier Nutzereingabe — trotzdem
+    // encodieren, damit die URL auch bei kaputtem Index gültig bleibt.
+    p = fetch(`/dialogues/${encodeURIComponent(id)}.json`)
+      .then((r) => (r.ok ? (r.json() as Promise<DialogueData>) : null))
+      .then((data) => (data && typeof data.glosses === "object" ? data : null))
+      .catch(() => null);
+    dataCache.set(id, p);
+  }
+  return p;
+}
+
+/** Nur für Tests: geladene Dateien vergessen. */
+export function resetDialogueIndexCache(): void {
+  indexPromise = null;
+  dataCache.clear();
 }

@@ -1,6 +1,9 @@
 import { dialogues as seedDialogues } from "./seed";
 import { extraDialogues } from "./dialogues-extra";
-import type { Dialogue, DialogueSpeaker, DialogueTurn } from "./types";
+import { isContentAvailable } from "./packs";
+import { UNLOCK_AT, coverage, knownLemmas, type CoverageResult } from "./coverage";
+import type { DialogueMeta } from "./dialogue-index";
+import type { Dialogue, DialogueSpeaker, DialogueTurn, VocabEntry } from "./types";
 
 // Zugriff auf den Dialogbestand — eine Stelle für Liste und Detailseite.
 // Die Reihenfolge ist Bestand: Pool-Dialoge zuerst, danach der Seed.
@@ -55,4 +58,64 @@ function hash(text: string): number {
     h = Math.imul(h, 16777619);
   }
   return h >>> 0;
+}
+
+// ---------------------------------------------------------------------------
+// Abdeckung & Sortierung (W4.4)
+// ---------------------------------------------------------------------------
+
+export interface DialogueListItem {
+  dialogue: Dialogue;
+  meta?: DialogueMeta;
+  cov: CoverageResult;
+  unlocked: boolean;
+  playable: boolean;
+}
+
+/**
+ * Freigeschaltete zuerst, danach die knapp verpassten — dieselbe Ordnung wie
+ * bei den Geschichten. Sie ersetzt die bisherige Bestandsreihenfolge
+ * (Pool-Dialoge, dann Seed): sobald die Hälfte der Liste gesperrt ist, ist
+ * „was kann ich jetzt?" die einzige Frage, die die Sortierung beantworten muss.
+ * Bei gleicher Abdeckung bleibt der Bestand die Reihenfolge.
+ */
+function compareDialogues(a: DialogueListItem, b: DialogueListItem): number {
+  if (a.unlocked !== b.unlocked) return a.unlocked ? -1 : 1;
+  return b.cov.ratio - a.cov.ratio;
+}
+
+/**
+ * Den Dialogbestand gegen den eigenen Wortschatz auswerten (W4.4).
+ *
+ * Zwei Filter, die nicht dasselbe tun: `activePacks` blendet Dialoge **aus**,
+ * deren Wörter außerhalb des aktiven Pools liegen — sie könnten die Schwelle
+ * nie erreichen (W4.13). Die Abdeckung **sperrt** danach, was erreichbar, aber
+ * noch nicht gelernt ist. Sperren heißt hier: sichtbar mit genauer Zahl, wie
+ * viele Wörter noch fehlen.
+ *
+ * Ein Dialog ohne Eintrag im Index (Datei fehlt, oder selbst hinzugefügt) gilt
+ * als offen. Eine Abdeckung von 0 % zu behaupten, weil die Lemma-Liste fehlt,
+ * wäre eine Aussage über Daten, nicht über den Nutzer.
+ */
+export function buildDialogueList(
+  dialogues: Dialogue[],
+  metaById: Map<string, DialogueMeta>,
+  vocab: VocabEntry[],
+  activePacks: string[] = [],
+): DialogueListItem[] {
+  const known = knownLemmas(vocab);
+  return dialogues
+    .filter((d) => isContentAvailable(metaById.get(d.id)?.requiresPacks, activePacks))
+    .map((dialogue) => {
+      const meta = metaById.get(dialogue.id);
+      const cov = coverage({ lemmas: meta?.lemmas ?? [] }, known);
+      return {
+        dialogue,
+        meta,
+        cov,
+        unlocked: cov.ratio >= UNLOCK_AT,
+        playable: isPlayable(dialogue),
+      };
+    })
+    .sort(compareDialogues);
 }

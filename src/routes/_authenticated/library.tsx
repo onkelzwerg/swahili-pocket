@@ -4,16 +4,10 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { getVocab } from "@/lib/store";
 import { buildStoryList, getStoriesRead, loadStoryIndex } from "@/lib/stories";
-import { allDialogues, isPlayable } from "@/lib/dialogues";
+import { allDialogues, buildDialogueList } from "@/lib/dialogues";
 import { nounClasses } from "@/lib/seed";
 import { dialogueMetaById } from "@/lib/dialogue-index";
-import {
-  activePacks,
-  isContentAvailable,
-  loadPackIndex,
-  setPackActive,
-  type PackMeta,
-} from "@/lib/packs";
+import { activePacks, loadPackIndex, setPackActive, type PackMeta } from "@/lib/packs";
 import { T } from "@/config/translations";
 
 export const Route = createFileRoute("/_authenticated/library")({
@@ -37,7 +31,11 @@ function LibraryPage() {
   const [stories, setStories] = useState({ unlocked: 0, total: 0 });
   // Der Dialogzähler muss dieselbe Auswahl zählen wie die Liste, sonst
   // verspricht die Kachel Inhalte, die dahinter nicht stehen.
-  const [dialogues, setDialogues] = useState({ playable: 0, total: allDialogues.length });
+  const [dialogues, setDialogues] = useState({
+    unlocked: 0,
+    playable: 0,
+    total: allDialogues.length,
+  });
   // Die Paketauswahl liegt hier oben, nicht in PackSection: die Zähler hängen
   // an ihr. Läge sie weiter unten, zeigte die Kachel nach dem Umschalten noch
   // die alte Zahl, bis man die Seite verlässt — es sähe aus, als hätte der
@@ -60,10 +58,12 @@ function LibraryPage() {
       const list = buildStoryList(index, vocab, read, active);
       setStories({ unlocked: list.filter((i) => i.unlocked).length, total: list.length });
 
-      const visible = allDialogues.filter((d) =>
-        isContentAvailable(meta.get(d.id)?.requiresPacks, active),
-      );
-      setDialogues({ playable: visible.filter(isPlayable).length, total: visible.length });
+      const visible = buildDialogueList(allDialogues, meta, vocab, active);
+      setDialogues({
+        unlocked: visible.filter((i) => i.unlocked).length,
+        playable: visible.filter((i) => i.playable).length,
+        total: visible.length,
+      });
     })();
   }, [active]);
 
@@ -88,7 +88,11 @@ function LibraryPage() {
             to="/dialogues"
             emoji="💬"
             title={T.library.dialogues.title}
-            subtitle={T.library.dialogues.subtitle(dialogues.playable, dialogues.total)}
+            subtitle={T.library.dialogues.subtitle(
+              dialogues.unlocked,
+              dialogues.total,
+              dialogues.playable,
+            )}
           />
         </li>
         <li>
