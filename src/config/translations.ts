@@ -295,6 +295,14 @@ export const T = {
       title: "Mitgeredet",
       description: "Einen Dialog mitgespielt und dabei nichts falsch beantwortet.",
     },
+    dialoguesUnlocked: {
+      title: "Zehn Dialoge offen",
+      description: "Zehn Dialoge freigeschaltet — von jedem verstehst du 95 % der Wörter.",
+    },
+    dialoguesPerfect: {
+      title: "Gesprächig",
+      description: "Fünf verschiedene Dialoge fehlerfrei mitgespielt.",
+    },
   },
 
   trainer: {

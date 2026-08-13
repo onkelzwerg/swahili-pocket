@@ -7,6 +7,9 @@ import { getTrainerStats, type TrainerStats } from "./trainer-stats";
 import { getStoriesRead, type StoriesRead } from "./stories";
 import { getRetentionChecks, type RetentionCheckEntry } from "./retention-check";
 import { getDialogueStats, type DialogueStats } from "./dialogue-stats";
+import { allDialogues, buildDialogueList } from "./dialogues";
+import { dialogueMetaById } from "./dialogue-index";
+import { activePacks } from "./packs";
 import { NGELI_TRAINABLE_CLASSES } from "./morphology";
 import { T } from "@/config/translations";
 
@@ -48,6 +51,16 @@ export interface MilestoneContext extends MilestoneEvent {
   stories: StoriesRead;
   retention: RetentionCheckEntry[];
   dialogues: DialogueStats;
+  /**
+   * Wie viele Dialoge gerade freigeschaltet sind (W4.7).
+   *
+   * Abgeleitet statt roh, und das mit Absicht: die Zahl entsteht in
+   * `checkMilestones()` aus derselben `buildDialogueList()` wie die Liste
+   * selbst. Beide Filter — ausgeblendete Paketinhalte und die 95 %-Schwelle —
+   * dürfen nicht zweimal formuliert werden, sonst feiert der Meilenstein
+   * irgendwann einen Dialog, den der Nutzer in der Liste gar nicht sieht.
+   */
+  unlockedDialogues: number;
 }
 
 export interface Milestone {
@@ -71,6 +84,16 @@ export const NGELI_MASTERY_PER_CLASS = 10;
 const TYPED_PERFECT_MIN = 5;
 /** Ab dieser Trefferquote gilt ein Langzeit-Check als bestanden. */
 const RETENTION_KEPT_RATIO = 0.8;
+/** So viele freigeschaltete Dialoge für den Abdeckungs-Meilenstein (W4.7). */
+const DIALOGUES_UNLOCKED_TARGET = 10;
+/** So viele fehlerfrei mitgespielte Dialoge für die Stufe über „Mitgeredet". */
+const DIALOGUES_PERFECT_TARGET = 5;
+
+/** Dialoge, in denen jeder Entscheidungspunkt beim ersten Versuch saß. */
+function perfectRuns(dialogues: DialogueStats): number {
+  return Object.values(dialogues).filter((run) => run.total > 0 && run.firstTry === run.total)
+    .length;
+}
 
 export const MILESTONES: Milestone[] = [
   {
@@ -171,8 +194,21 @@ export const MILESTONES: Milestone[] = [
     id: "dialogue-played",
     emoji: "🎭",
     ...T.milestones.dialoguePlayed,
-    check: ({ dialogues }) =>
-      Object.values(dialogues).some((run) => run.total > 0 && run.firstTry === run.total),
+    check: ({ dialogues }) => perfectRuns(dialogues) >= 1,
+  },
+  {
+    id: "dialogues-unlocked-10",
+    emoji: "🗝️",
+    ...T.milestones.dialoguesUnlocked,
+    check: ({ unlockedDialogues }) => unlockedDialogues >= DIALOGUES_UNLOCKED_TARGET,
+  },
+  {
+    id: "dialogues-perfect-5",
+    emoji: "🗣️",
+    ...T.milestones.dialoguesPerfect,
+    // Die Stufe über „Mitgeredet": einmal fehlerfrei kann Glück sein, fünfmal
+    // in fünf verschiedenen Dialogen ist es nicht mehr.
+    check: ({ dialogues }) => perfectRuns(dialogues) >= DIALOGUES_PERFECT_TARGET,
   },
 ];
 
@@ -208,21 +244,49 @@ export function findNewMilestones(ctx: MilestoneContext, achieved: AchievedMap):
  * Gibt die neu erreichten Meilensteine zurück (der Screen zeigt einen davon).
  */
 export async function checkMilestones(event: MilestoneEvent = {}): Promise<Milestone[]> {
-  const [vocab, stats, log, settings, trainer, stories, retention, dialogues, achieved] =
-    await Promise.all([
-      getVocab(),
-      getStats(),
-      readReviewLog(),
-      getSettings(),
-      getTrainerStats(),
-      getStoriesRead(),
-      getRetentionChecks(),
-      getDialogueStats(),
-      getAchieved(),
-    ]);
+  const [
+    vocab,
+    stats,
+    log,
+    settings,
+    trainer,
+    stories,
+    retention,
+    dialogues,
+    dialogueMeta,
+    packs,
+    achieved,
+  ] = await Promise.all([
+    getVocab(),
+    getStats(),
+    readReviewLog(),
+    getSettings(),
+    getTrainerStats(),
+    getStoriesRead(),
+    getRetentionChecks(),
+    getDialogueStats(),
+    dialogueMetaById(),
+    activePacks(),
+    getAchieved(),
+  ]);
+
+  const unlockedDialogues = buildDialogueList(allDialogues, dialogueMeta, vocab, packs).filter(
+    (d) => d.unlocked,
+  ).length;
 
   const fresh = findNewMilestones(
-    { vocab, stats, log, settings, trainer, stories, retention, dialogues, ...event },
+    {
+      vocab,
+      stats,
+      log,
+      settings,
+      trainer,
+      stories,
+      retention,
+      dialogues,
+      unlockedDialogues,
+      ...event,
+    },
     achieved,
   );
   if (fresh.length > 0) {

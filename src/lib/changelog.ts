@@ -7,6 +7,20 @@ export type ChangelogEntry = {
 
 export const changelog: ChangelogEntry[] = [
   {
+    version: "0.7.0",
+    date: "2026-08-13",
+    title: "Zwanzig Geschichten, dreiundzwanzig Dialoge zum Mitreden",
+    changes: [
+      "Fünfzehn neue Geschichten — jetzt sind es zwanzig, zehn auf der ersten und zehn auf der zweiten Stufe.",
+      "Alle Dialoge lassen sich mitspielen, nicht mehr nur drei: 85 Stellen, an denen du wählst, was du sagst. Jede falsche Antwort ist plausibel falsch — falsche Zeit, falsche Person, falsche Klasse — und sagt dir, woran es lag.",
+      "Im Dialog kannst du jetzt jedes Wort antippen und siehst, was es heißt — wie in den Geschichten.",
+      "Dialoge schalten sich frei wie Geschichten: ab 95 % bekannter Wörter. Bei gesperrten steht, wie viele noch fehlen, und ein Tipp bringt dich direkt zu genau diesen Wörtern.",
+      "Neu: Themenpakete in der Bibliothek. Sechs Wortschatzpakete — Arbeit, Umwelt, Geld & Behörden, Politik, Gesundheit, Schule — die du einzeln zuschaltest. Ein eingeschaltetes Paket bringt seine Wörter in deine Auswahl und macht die Inhalte sichtbar, die sie brauchen.",
+      "Der Grundwortschatz ist auf 1.268 Wörter gewachsen, dazu 56 in den Paketen. Neu dabei: Lokative, feste Wendungen und die Zehnerzahlen, die bisher fehlten.",
+      "Zwei neue Meilensteine — zehn freigeschaltete Dialoge und fünf fehlerfrei mitgespielte.",
+    ],
+  },
+  {
     version: "0.6.0",
     date: "2026-08-10",
     title: "Lesen, mitspielen, nachprüfen",
