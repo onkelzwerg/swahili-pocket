@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { buildDialogueList, choicePointCount, isPlayable, playableSpeakers } from "../dialogues";
+import {
+  buildDialogueList,
+  choicePointCount,
+  isPlayable,
+  orderedChoices,
+  playableSpeakers,
+} from "../dialogues";
 import type { DialogueMeta } from "../dialogue-index";
 import type { Dialogue, DialogueTurn } from "../types";
 import { makeCard } from "./helpers";
@@ -108,26 +114,66 @@ describe("buildDialogueList", () => {
     expect(list.map((i) => i.dialogue.id)).toEqual(["offen", "knapp", "fern"]);
   });
 
-  it("meldet mitspielbar aus dem Dialog selbst, nicht aus dem Index", () => {
-    // Der Index kann veraltet sein; die Entscheidungspunkte liegen am Zug.
-    const play = dialogue({
-      id: "play",
-      turns: [
-        turn(),
-        turn({
-          speaker: "B",
-          sw: "Bei gani?",
-          choices: [
-            { sw: "Bei gani?", de: "Welcher Preis?", correct: true },
-            { sw: "Asante", de: "Danke", correct: false, feedback: "Keine Frage." },
-          ],
-        }),
-      ],
-    });
-    const list = buildDialogueList([play], metaMap(meta({ id: "play", lemmas: [] })), []);
-    expect(list[0].playable).toBe(true);
-    expect(isPlayable(play)).toBe(true);
-    expect(choicePointCount(play)).toBe(1);
-    expect(playableSpeakers(play)).toEqual(["B"]);
+  it("nimmt mitspielbar aus dem Index statt 23 Dateien zu laden", () => {
+    // Seit W4.5 stehen die Entscheidungspunkte in der JSON-Datei, nicht am Zug.
+    // Für ein Abzeichen in der Liste reicht die Zahl aus dem Index.
+    const list = buildDialogueList(
+      [dialogue({ id: "still" }), dialogue({ id: "play" })],
+      metaMap(
+        meta({ id: "still", lemmas: [], choicePoints: 0 }),
+        meta({ id: "play", lemmas: [], choicePoints: 3 }),
+      ),
+      [],
+    );
+    expect(list.map((i) => [i.dialogue.id, i.playable])).toEqual([
+      ["still", false],
+      ["play", true],
+    ]);
+  });
+});
+
+describe("Entscheidungspunkte", () => {
+  const choices = {
+    "0": [
+      { sw: "Habari", de: "Hallo", correct: true },
+      { sw: "Kwaheri", de: "Tschüss", correct: false, feedback: "Das ist der Abschied." },
+      { sw: "Asante", de: "Danke", correct: false, feedback: "Passt nicht auf die Frage." },
+    ],
+    "2": [
+      { sw: "Bei gani?", de: "Wie teuer?", correct: true },
+      { sw: "Ni ghali", de: "Es ist teuer", correct: false, feedback: "Keine Frage." },
+      { sw: "Nipe", de: "Gib mir", correct: false, feedback: "Zu früh — erst der Preis." },
+    ],
+  };
+  const d = dialogue({
+    turns: [turn({ speaker: "A" }), turn({ speaker: "B" }), turn({ speaker: "A" })],
+  });
+
+  it("zählt die Punkte und meldet mitspielbar", () => {
+    expect(choicePointCount(choices)).toBe(2);
+    expect(isPlayable(choices)).toBe(true);
+    expect(choicePointCount(undefined)).toBe(0);
+    expect(isPlayable({})).toBe(false);
+  });
+
+  it("leitet die spielbaren Rollen aus den Zug-Indizes ab", () => {
+    expect(playableSpeakers(d, choices)).toEqual(["A"]);
+    expect(playableSpeakers(d, { "1": choices["0"] })).toEqual(["B"]);
+  });
+
+  it("überspringt einen Index außerhalb des Dialogs", () => {
+    // Der Validator schließt das aus, aber eine veraltete Datei im Cache darf
+    // die Rollenwahl nicht sprengen.
+    expect(playableSpeakers(d, { "99": choices["0"] })).toEqual([]);
+  });
+
+  it("mischt die Optionen stabil und ohne Verlust", () => {
+    const first = orderedChoices(choices, 0);
+    expect(first).toHaveLength(3);
+    expect([...first].map((c) => c.sw).sort()).toEqual(["Asante", "Habari", "Kwaheri"]);
+    // Zweimal gerendert heißt zweimal dieselbe Reihenfolge — sonst springt die
+    // richtige Antwort bei jedem Fehlversuch.
+    expect(orderedChoices(choices, 0)).toEqual(first);
+    expect(orderedChoices(choices, 1)).toEqual([]);
   });
 });

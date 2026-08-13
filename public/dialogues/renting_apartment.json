@@ -351,5 +351,101 @@
    "structure": true
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Nimeona tangazo lako mtandaoni kuhusu nyumba ya kupanga.",
+    "de": "Ich habe Ihre Online-Anzeige zur Mietwohnung gesehen.",
+    "correct": true
+   },
+   {
+    "sw": "Nitaona tangazo lako mtandaoni kuhusu nyumba ya kupanga.",
+    "de": "Ich werde Ihre Online-Anzeige zur Mietwohnung sehen.",
+    "correct": false,
+    "feedback": "„Nita-“ ist Zukunft. Gesehen hast du die Anzeige schon: „nimeona“."
+   },
+   {
+    "sw": "Nimeona tangazo langu mtandaoni kuhusu nyumba ya kupanga.",
+    "de": "Ich habe meine Online-Anzeige zur Mietwohnung gesehen.",
+    "correct": false,
+    "feedback": "„langu“ heißt meine. Die Anzeige ist von ihm: „lako“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Kodi ya mwezi imejumuisha maji na umeme?",
+    "de": "Ist die Monatsmiete inklusive Wasser und Strom?",
+    "correct": true
+   },
+   {
+    "sw": "Kodi wa mwezi imejumuisha maji na umeme?",
+    "de": "Ist die Monatsmiete inklusive Wasser und Strom?",
+    "correct": false,
+    "feedback": "„kodi“ gehört zur N-Klasse — der Genitiv heißt dort „ya“, nicht „wa“."
+   },
+   {
+    "sw": "Kodi ya mwaka imejumuisha maji na umeme?",
+    "de": "Ist die Jahresmiete inklusive Wasser und Strom?",
+    "correct": false,
+    "feedback": "„mwaka“ ist das Jahr. Miete zahlst du monatlich: „mwezi“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Mkataba ni wa muda gani na kuna dhamana?",
+    "de": "Wie lang läuft der Vertrag und gibt es eine Kaution?",
+    "correct": true
+   },
+   {
+    "sw": "Mkataba ni ya muda gani na kuna dhamana?",
+    "de": "Wie lang läuft der Vertrag und gibt es eine Kaution?",
+    "correct": false,
+    "feedback": "„mkataba“ gehört zur M-Mi-Klasse — der Genitiv heißt dort „wa“, nicht „ya“."
+   },
+   {
+    "sw": "Mkataba ni wa muda gani na hakuna dhamana?",
+    "de": "Wie lang läuft der Vertrag und gibt es keine Kaution?",
+    "correct": false,
+    "feedback": "„hakuna“ behauptet, es gebe keine. Du fragst danach: „kuna“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Je, naruhusiwa kubadilisha rangi za kuta au kuweka samani zangu?",
+    "de": "Darf ich die Wandfarben ändern oder eigene Möbel reinstellen?",
+    "correct": true
+   },
+   {
+    "sw": "Je, unaruhusiwa kubadilisha rangi za kuta au kuweka samani zangu?",
+    "de": "Dürfen Sie die Wandfarben ändern oder meine Möbel reinstellen?",
+    "correct": false,
+    "feedback": "„Una-“ fragt, was er darf. Du fragst nach dir: „naruhusiwa“."
+   },
+   {
+    "sw": "Je, naruhusiwa kubadilisha rangi za kuta au kuweka samani zako?",
+    "de": "Darf ich die Wandfarben ändern oder Ihre Möbel reinstellen?",
+    "correct": false,
+    "feedback": "„zako“ heißt seine. Es geht um deine eigenen Möbel: „zangu“."
+   }
+  ],
+  "8": [
+   {
+    "sw": "Nakubaliana na masharti. Tunaweza kukutana kesho kusaini?",
+    "de": "Ich bin mit den Bedingungen einverstanden. Können wir uns morgen zum Unterschreiben treffen?",
+    "correct": true
+   },
+   {
+    "sw": "Sikubaliani na masharti. Tunaweza kukutana kesho kusaini?",
+    "de": "Ich bin mit den Bedingungen nicht einverstanden. Können wir uns morgen zum Unterschreiben treffen?",
+    "correct": false,
+    "feedback": "Damit lehnst du die Bedingungen ab — und willst trotzdem unterschreiben."
+   },
+   {
+    "sw": "Nakubaliana na masharti. Tunaweza kukutana jana kusaini?",
+    "de": "Ich bin mit den Bedingungen einverstanden. Können wir uns gestern zum Unterschreiben treffen?",
+    "correct": false,
+    "feedback": "„jana“ ist gestern. Verabreden kannst du dich nur für morgen: „kesho“."
+   }
+  ]
+ }
 }

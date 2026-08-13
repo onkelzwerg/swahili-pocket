@@ -193,5 +193,82 @@
    "de": "Stau, Warteschlange"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Shikamoo! Unaenda mjini?",
+    "de": "Guten Tag! Fährst du in die Stadt?",
+    "correct": true
+   },
+   {
+    "sw": "Marahaba! Unaenda mjini?",
+    "de": "Grüß dich! Fährst du in die Stadt?",
+    "correct": false,
+    "feedback": "„Marahaba“ ist die Antwort auf „Shikamoo“ — sie steht dem Älteren zu, nicht dir."
+   },
+   {
+    "sw": "Shikamoo! Ninaenda mjini?",
+    "de": "Guten Tag! Fahre ich in die Stadt?",
+    "correct": false,
+    "feedback": "„Nina-“ ist die Ich-Form. Du fragst den Fahrer: „unaenda“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Nipeleke uwanja wa ndege, tafadhali.",
+    "de": "Bring mich zum Flughafen, bitte.",
+    "correct": true
+   },
+   {
+    "sw": "Nikupeleke uwanja wa ndege, tafadhali.",
+    "de": "Ich bringe dich zum Flughafen, bitte.",
+    "correct": false,
+    "feedback": "„Nikupeleke“ heißt „ich bringe dich“. Du willst gebracht werden: „nipeleke“."
+   },
+   {
+    "sw": "Nipeleke uwanja wa ndege, karibu.",
+    "de": "Bring mich zum Flughafen, willkommen.",
+    "correct": false,
+    "feedback": "„Karibu“ heißt willkommen. Eine Bitte machst du höflich mit „tafadhali“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Ni nyingi. Elfu kumi inawezekana?",
+    "de": "Das ist viel. Sind zehntausend möglich?",
+    "correct": true
+   },
+   {
+    "sw": "Ni chache. Elfu kumi inawezekana?",
+    "de": "Das ist wenig. Sind zehntausend möglich?",
+    "correct": false,
+    "feedback": "„chache“ heißt wenig — dann gäbe es nichts zu handeln."
+   },
+   {
+    "sw": "Ni nyingi. Elfu ishirini inawezekana?",
+    "de": "Das ist viel. Sind zwanzigtausend möglich?",
+    "correct": false,
+    "feedback": "Zwanzigtausend wäre mehr als sein Preis. Beim Handeln bietest du weniger."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Tutafika kwa muda gani?",
+    "de": "Wie lange brauchen wir?",
+    "correct": true
+   },
+   {
+    "sw": "Tulifika kwa muda gani?",
+    "de": "Wie lange haben wir gebraucht?",
+    "correct": false,
+    "feedback": "„Tuli-“ ist Vergangenheit. Ihr seid noch nicht losgefahren: „tuta-“."
+   },
+   {
+    "sw": "Tutafika wapi?",
+    "de": "Wo kommen wir an?",
+    "correct": false,
+    "feedback": "„wapi“ fragt nach dem Ort. Nach der Dauer fragst du mit „muda gani“."
+   }
+  ]
+ }
 }

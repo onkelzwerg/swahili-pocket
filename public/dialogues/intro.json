@@ -171,5 +171,82 @@
    "de": "Sprache"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari! Jina lako nani?",
+    "de": "Hallo! Wie heißt du?",
+    "correct": true
+   },
+   {
+    "sw": "Habari! Jina langu nani?",
+    "de": "Hallo! Wie heiße ich?",
+    "correct": false,
+    "feedback": "„langu“ heißt mein. Nach ihrem Namen fragst du mit „lako“."
+   },
+   {
+    "sw": "Habari! Jina lako wapi?",
+    "de": "Hallo! Wo ist dein Name?",
+    "correct": false,
+    "feedback": "„wapi“ fragt nach dem Ort. Nach dem Namen fragst du mit „nani“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Mimi ni Juma. Nimefurahi kukutana nawe.",
+    "de": "Ich bin Juma. Freut mich, dich kennenzulernen.",
+    "correct": true
+   },
+   {
+    "sw": "Mimi ni Juma. Nitafurahi kukutana nawe.",
+    "de": "Ich bin Juma. Ich werde mich freuen, dich kennenzulernen.",
+    "correct": false,
+    "feedback": "„Nita-“ ist Zukunft. Ihr trefft euch gerade: „nimefurahi“."
+   },
+   {
+    "sw": "Mimi ni Juma. Nimefurahi kukutana naye.",
+    "de": "Ich bin Juma. Freut mich, sie kennenzulernen.",
+    "correct": false,
+    "feedback": "„naye“ heißt mit ihm oder ihr. Dein Gegenüber sprichst du mit „nawe“ an."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Natoka Ujerumani, lakini ninaishi Dar es Salaam sasa.",
+    "de": "Ich komme aus Deutschland, aber ich lebe jetzt in Dar es Salaam.",
+    "correct": true
+   },
+   {
+    "sw": "Naenda Ujerumani, lakini ninaishi Dar es Salaam sasa.",
+    "de": "Ich fahre nach Deutschland, aber ich lebe jetzt in Dar es Salaam.",
+    "correct": false,
+    "feedback": "„Naenda“ heißt ich fahre hin. Woher du kommst, sagst du mit „natoka“."
+   },
+   {
+    "sw": "Natoka Ujerumani, lakini niliishi Dar es Salaam sasa.",
+    "de": "Ich komme aus Deutschland, aber ich lebte jetzt in Dar es Salaam.",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit und verträgt sich nicht mit „sasa“ (jetzt)."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Mimi ni mwalimu wa lugha.",
+    "de": "Ich bin Sprachlehrer.",
+    "correct": true
+   },
+   {
+    "sw": "Mimi ni mwalimu ya lugha.",
+    "de": "Ich bin Sprachlehrer.",
+    "correct": false,
+    "feedback": "„mwalimu“ gehört zur M-Wa-Klasse — der Genitiv heißt dort „wa“, nicht „ya“."
+   },
+   {
+    "sw": "Mimi ni mwanafunzi wa lugha.",
+    "de": "Ich bin Sprachschüler.",
+    "correct": false,
+    "feedback": "„mwanafunzi“ ist der Schüler. Gefragt war deine Arbeit — du unterrichtest."
+   }
+  ]
+ }
 }

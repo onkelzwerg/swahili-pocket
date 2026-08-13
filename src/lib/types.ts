@@ -119,6 +119,12 @@ export type DialogueSpeaker = "A" | "B" | "C";
  * der Qualität kontrollierbar. Sie sind *plausibel* falsch (falsche
  * Höflichkeitsform, falsche Zeit, unpassende Antwort), und `feedback` sagt in
  * einem Satz, warum.
+ *
+ * Seit W4.5 stehen sie **nicht mehr am Zug**, sondern in
+ * public/dialogues/<id>.json neben dem Glossar (`DialogueData.choices`).
+ * Text und Aufgabe sind zwei Dinge: der Text ist Bestand, die Aufgaben wachsen
+ * nach. Nebeneffekt: die Distraktoren landen nicht im JS-Bündel, sondern werden
+ * erst geladen, wenn jemand wirklich mitspielt.
  */
 export interface DialogueChoice {
   sw: string;
@@ -131,8 +137,6 @@ export interface DialogueTurn {
   speaker: DialogueSpeaker;
   sw: string;
   de: string;
-  /** Wenn gesetzt: Der Nutzer wählt an dieser Stelle (Rollenspiel-Modus). */
-  choices?: DialogueChoice[];
 }
 
 export interface Dialogue {

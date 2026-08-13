@@ -348,5 +348,101 @@
    "de": "wieder / erneut"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Jana nilipata uzoefu wa ajabu sana sokoni.",
+    "de": "Gestern hatte ich auf dem Markt ein sehr seltsames Erlebnis.",
+    "correct": true
+   },
+   {
+    "sw": "Jana nitapata uzoefu wa ajabu sana sokoni.",
+    "de": "Gestern werde ich auf dem Markt ein sehr seltsames Erlebnis haben.",
+    "correct": false,
+    "feedback": "„Nita-“ ist Zukunft und verträgt sich nicht mit „jana“ (gestern)."
+   },
+   {
+    "sw": "Jana nilipata uzoefu wa ajabu sana soko.",
+    "de": "Gestern hatte ich Markt ein sehr seltsames Erlebnis.",
+    "correct": false,
+    "feedback": "„auf dem Markt“ verlangt den Lokativ auf -ni: „sokoni“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Nilikuwa ninanunua matunda wakati mzee mmoja alinikaribia akiniita kwa jina langu.",
+    "de": "Ich kaufte gerade Obst, als ein alter Mann auf mich zukam und mich beim Namen rief.",
+    "correct": true
+   },
+   {
+    "sw": "Nilikuwa ninanunua matunda wakati mzee mmoja alinikaribia akiniita kwa jina lake.",
+    "de": "Ich kaufte gerade Obst, als ein alter Mann auf mich zukam und mich bei seinem Namen rief.",
+    "correct": false,
+    "feedback": "„lake“ heißt seinen. Er rief deinen Namen: „langu“."
+   },
+   {
+    "sw": "Nilikuwa ninanunua matunda wakati mzee mmoja alinikaribia akikuita kwa jina langu.",
+    "de": "Ich kaufte gerade Obst, als ein alter Mann auf mich zukam und dich beim Namen rief.",
+    "correct": false,
+    "feedback": "„akikuita“ hieße, er rief dich. Gerufen wurdest du selbst: „akiniita“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Hapana, hata kidogo. Aliniambia ananijua tangu nilipokuwa mtoto mdogo kijijini.",
+    "de": "Nein, überhaupt nicht. Er sagte, er kenne mich, seit ich klein im Dorf war.",
+    "correct": true
+   },
+   {
+    "sw": "Ndiyo, hata kidogo. Aliniambia ananijua tangu nilipokuwa mtoto mdogo kijijini.",
+    "de": "Ja, überhaupt nicht. Er sagte, er kenne mich, seit ich klein im Dorf war.",
+    "correct": false,
+    "feedback": "„Ndiyo“ hieße, du kanntest ihn. Du kanntest ihn nicht: „hapana“."
+   },
+   {
+    "sw": "Hapana, hata kidogo. Aliniambia ananijua tangu nilipokuwa mtoto mdogo kijiji.",
+    "de": "Nein, überhaupt nicht. Er sagte, er kenne mich, seit ich klein Dorf war.",
+    "correct": false,
+    "feedback": "„im Dorf“ verlangt den Lokativ auf -ni: „kijijini“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Alielezea kumbukumbu za baba yangu kwa undani sana, mambo ambayo hata mimi sikujua.",
+    "de": "Er beschrieb Erinnerungen an meinen Vater sehr detailliert, Dinge, die selbst ich nicht wusste.",
+    "correct": true
+   },
+   {
+    "sw": "Nilielezea kumbukumbu za baba yangu kwa undani sana, mambo ambayo hata mimi sikujua.",
+    "de": "Ich beschrieb Erinnerungen an meinen Vater sehr detailliert, Dinge, die selbst ich nicht wusste.",
+    "correct": false,
+    "feedback": "„Ni-“ ist die Ich-Form. Erzählt hat es der alte Mann: „alielezea“."
+   },
+   {
+    "sw": "Alielezea kumbukumbu za baba yangu kwa undani sana, mambo ambayo hata mimi nilijua.",
+    "de": "Er beschrieb Erinnerungen an meinen Vater sehr detailliert, Dinge, die selbst ich wusste.",
+    "correct": false,
+    "feedback": "„nilijua“ hieße, du wusstest sie. Gerade das Neue daran ist „sikujua“."
+   }
+  ],
+  "8": [
+   {
+    "sw": "Ndivyo nilivyofikiri. Tuliongea kwa muda mrefu na alinipa picha ya zamani ya baba.",
+    "de": "Genau das dachte ich. Wir unterhielten uns lange und er gab mir ein altes Foto meines Vaters.",
+    "correct": true
+   },
+   {
+    "sw": "Ndivyo nilivyofikiri. Tuliongea kwa muda mrefu na nilimpa picha ya zamani ya baba.",
+    "de": "Genau das dachte ich. Wir unterhielten uns lange und ich gab ihm ein altes Foto meines Vaters.",
+    "correct": false,
+    "feedback": "„nilimpa“ hieße, du gabst es ihm. Das Foto bekamst du: „alinipa“."
+   },
+   {
+    "sw": "Ndivyo nilivyofikiri. Tuliongea kwa muda mfupi na alinipa picha ya zamani ya baba.",
+    "de": "Genau das dachte ich. Wir unterhielten uns kurz und er gab mir ein altes Foto meines Vaters.",
+    "correct": false,
+    "feedback": "„mfupi“ heißt kurz. Ihr habt euch lange unterhalten: „mrefu“."
+   }
+  ]
+ }
 }

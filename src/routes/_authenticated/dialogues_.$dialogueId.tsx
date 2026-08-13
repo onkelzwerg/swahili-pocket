@@ -5,13 +5,19 @@ import confetti from "canvas-confetti";
 import { ArrowLeft, Eye, EyeOff, Play } from "lucide-react";
 import {
   choicePointCount,
+  choicesAt,
   findDialogue,
   isPlayable,
   orderedChoices,
   playableSpeakers,
 } from "@/lib/dialogues";
 import { recordDialogueRun } from "@/lib/dialogue-stats";
-import { loadDialogueData, type DialogueGloss } from "@/lib/dialogue-index";
+import {
+  loadDialogueData,
+  type DialogueChoices,
+  type DialogueData,
+  type DialogueGloss,
+} from "@/lib/dialogue-index";
 import { groupStorySegments, type StorySegment } from "@/lib/stories";
 import { checkMilestones, type Milestone } from "@/lib/milestones";
 import { awardXp, getVocab } from "@/lib/store";
@@ -19,7 +25,7 @@ import { speak, speakSequence, cancelSpeech, createUnlockedAudio } from "@/lib/t
 import { GlossSheet } from "@/components/GlossSheet";
 import { APP_CONFIG } from "@/config/app.config";
 import { T } from "@/config/translations";
-import type { DialogueChoice, DialogueSpeaker, DialogueTurn } from "@/lib/types";
+import type { DialogueChoice, DialogueSpeaker } from "@/lib/types";
 
 export const Route = createFileRoute("/_authenticated/dialogues_/$dialogueId")({
   component: DialoguePage,
@@ -38,15 +44,18 @@ function DialoguePage() {
   const { dialogueId } = Route.useParams();
   const dialogue = findDialogue(dialogueId);
   const [mode, setMode] = useState<"read" | "play">("read");
-  const [glosses, setGlosses] = useState<Record<string, DialogueGloss>>({});
+  const [data, setData] = useState<DialogueData | null>(null);
 
   useEffect(() => () => cancelSpeech(), []);
 
-  // Das Glossar liegt neben dem Dialog (public/dialogues/<id>.json) und kommt
-  // erst hier dazu — es steht bewusst nicht im JS-Bündel. Fehlt es, bleiben die
-  // Wörter eben nicht antippbar; der Dialog selbst funktioniert weiter.
+  // Glossar und Entscheidungspunkte liegen neben dem Dialog
+  // (public/dialogues/<id>.json) und kommen erst hier dazu — sie stehen bewusst
+  // nicht im JS-Bündel. Fehlt die Datei, bleiben die Wörter eben nicht
+  // antippbar und der Mitspielen-Modus aus; der Dialog selbst funktioniert.
   useEffect(() => {
-    void loadDialogueData(dialogueId).then((data) => setGlosses(data?.glosses ?? {}));
+    setData(null);
+    setMode("read");
+    void loadDialogueData(dialogueId).then(setData);
   }, [dialogueId]);
 
   if (!dialogue) {
@@ -60,7 +69,7 @@ function DialoguePage() {
     );
   }
 
-  const playable = isPlayable(dialogue);
+  const playable = isPlayable(data?.choices);
 
   return (
     <div className="px-5 pt-6 pb-8">
@@ -109,10 +118,10 @@ function DialoguePage() {
         </div>
       )}
 
-      {mode === "play" && playable ? (
-        <RolePlay dialogue={dialogue} />
+      {mode === "play" && playable && data ? (
+        <RolePlay dialogue={dialogue} choices={data.choices} />
       ) : (
-        <ReadView dialogue={dialogue} glosses={glosses} />
+        <ReadView dialogue={dialogue} glosses={data?.glosses ?? {}} />
       )}
     </div>
   );
@@ -230,8 +239,14 @@ function ReadView({
  * einen zweiten Anlauf, beim zweiten die Lösung. Gezählt wird, was beim
  * **ersten** Versuch saß — alles andere wäre eine Teilnahmeurkunde.
  */
-function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDialogue>> }) {
-  const speakers = useMemo(() => playableSpeakers(dialogue), [dialogue]);
+function RolePlay({
+  dialogue,
+  choices,
+}: {
+  dialogue: NonNullable<ReturnType<typeof findDialogue>>;
+  choices: DialogueChoices;
+}) {
+  const speakers = useMemo(() => playableSpeakers(dialogue, choices), [dialogue, choices]);
   const [role, setRole] = useState<DialogueSpeaker | null>(
     speakers.length === 1 ? speakers[0] : null,
   );
@@ -244,7 +259,7 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
   const [done, setDone] = useState(false);
   const [milestone, setMilestone] = useState<Milestone | null>(null);
 
-  const total = choicePointCount(dialogue);
+  const total = choicePointCount(choices);
 
   // Fremde Züge abspielen und weiterschalten, bis der eigene Zug kommt.
   useEffect(() => {
@@ -254,7 +269,7 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
       void finish();
       return;
     }
-    const isMine = turn.speaker === role && (turn.choices?.length ?? 0) > 0;
+    const isMine = turn.speaker === role && choicesAt(choices, index).length > 0;
     if (isMine) return;
 
     let alive = true;
@@ -266,7 +281,7 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
     };
     // finish() hängt an firstTry/total und würde den Effekt sonst neu starten.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, role, done, dialogue]);
+  }, [index, role, done, dialogue, choices]);
 
   async function finish() {
     setDone(true);
@@ -344,8 +359,8 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
     );
   }
 
-  const turn = dialogue.turns[index] as DialogueTurn | undefined;
-  const isMyTurn = !!turn && turn.speaker === role && (turn.choices?.length ?? 0) > 0;
+  const turn = dialogue.turns[index];
+  const isMyTurn = !!turn && turn.speaker === role && choicesAt(choices, index).length > 0;
 
   return (
     <div>
@@ -384,7 +399,7 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
           </div>
 
           <ul className="flex flex-col gap-2">
-            {orderedChoices(turn, index).map((choice) => (
+            {orderedChoices(choices, index).map((choice) => (
               <li key={choice.sw}>
                 <button
                   onClick={() => choose(choice)}

@@ -147,5 +147,63 @@
    "de": "Jahre (Plural von Jahr)"
   }
  },
- "choices": {}
+ "choices": {
+  "1": [
+   {
+    "sw": "Sita, saba, nane, tisa, kumi.",
+    "de": "Sechs, sieben, acht, neun, zehn.",
+    "correct": true
+   },
+   {
+    "sw": "Sita, saba, tisa, nane, kumi.",
+    "de": "Sechs, sieben, neun, acht, zehn.",
+    "correct": false,
+    "feedback": "Acht steht vor neun: erst „nane“, dann „tisa“."
+   },
+   {
+    "sw": "Sita, saba, nane, tisa, ishirini.",
+    "de": "Sechs, sieben, acht, neun, zwanzig.",
+    "correct": false,
+    "feedback": "„ishirini“ ist zwanzig. Nach neun kommt zehn: „kumi“."
+   }
+  ],
+  "3": [
+   {
+    "sw": "Hamsini, sitini, sabini, themanini, tisini, mia moja.",
+    "de": "Fünfzig, sechzig, siebzig, achtzig, neunzig, hundert.",
+    "correct": true
+   },
+   {
+    "sw": "Hamsini, sitini, sabini, tisini, themanini, mia moja.",
+    "de": "Fünfzig, sechzig, siebzig, neunzig, achtzig, hundert.",
+    "correct": false,
+    "feedback": "Achtzig steht vor neunzig: erst „themanini“, dann „tisini“."
+   },
+   {
+    "sw": "Hamsini, sitini, saba, themanini, tisini, mia moja.",
+    "de": "Fünfzig, sechzig, sieben, achtzig, neunzig, hundert.",
+    "correct": false,
+    "feedback": "„saba“ ist sieben. Siebzig heißt „sabini“."
+   }
+  ],
+  "5": [
+   {
+    "sw": "Nina miaka thelathini na tano.",
+    "de": "Ich bin fünfunddreißig Jahre alt.",
+    "correct": true
+   },
+   {
+    "sw": "Nina miaka thelathini tano.",
+    "de": "Ich bin dreißig fünf Jahre alt.",
+    "correct": false,
+    "feedback": "Zwischen Zehner und Einer steht „na“: „thelathini na tano“."
+   },
+   {
+    "sw": "Nina mwaka thelathini na tano.",
+    "de": "Ich bin fünfunddreißig Jahr alt.",
+    "correct": false,
+    "feedback": "„mwaka“ ist ein Jahr. Mehrere Jahre sind „miaka“."
+   }
+  ]
+ }
 }

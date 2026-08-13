@@ -278,5 +278,63 @@
    "de": "Fortschritt, Entwicklung"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari za kazi? Tuanze mkutano wetu.",
+    "de": "Wie läuft die Arbeit? Beginnen wir unser Meeting.",
+    "correct": true
+   },
+   {
+    "sw": "Habari za kazi? Tunaanza mkutano wetu.",
+    "de": "Wie läuft die Arbeit? Wir beginnen unser Meeting.",
+    "correct": false,
+    "feedback": "„Tunaanza“ berichtet nur. Zum Auffordern steht der Konjunktiv: „tuanze“."
+   },
+   {
+    "sw": "Habari za kazi? Tuanze mkutano wenu.",
+    "de": "Wie läuft die Arbeit? Beginnen wir euer Meeting.",
+    "correct": false,
+    "feedback": "„wenu“ heißt euer. Du sitzt mit am Tisch: „wetu“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Habari njema. Tunaweza kuajiri watu wengine?",
+    "de": "Gute Nachrichten. Können wir weitere Leute einstellen?",
+    "correct": true
+   },
+   {
+    "sw": "Habari njema. Tunaweza kuajiri watu wengi?",
+    "de": "Gute Nachrichten. Können wir viele Leute einstellen?",
+    "correct": false,
+    "feedback": "„wengi“ heißt viele. Du fragst nach weiteren: „wengine“."
+   },
+   {
+    "sw": "Habari mbaya. Tunaweza kuajiri watu wengine?",
+    "de": "Schlechte Nachrichten. Können wir weitere Leute einstellen?",
+    "correct": false,
+    "feedback": "Das Budget ist gestiegen — das ist eine gute Nachricht: „njema“."
+   }
+  ],
+  "7": [
+   {
+    "sw": "Wiki ijayo. Tafadhali andaeni matangazo ya kazi kabla ya Ijumaa.",
+    "de": "Nächste Woche. Bitte bereitet die Stellenanzeigen vor Freitag vor.",
+    "correct": true
+   },
+   {
+    "sw": "Wiki ijayo. Tafadhali andaa matangazo ya kazi kabla ya Ijumaa.",
+    "de": "Nächste Woche. Bitte bereite die Stellenanzeigen vor Freitag vor.",
+    "correct": false,
+    "feedback": "Du sprichst mehrere an — der Imperativ im Plural heißt „andaeni“."
+   },
+   {
+    "sw": "Wiki iliyopita. Tafadhali andaeni matangazo ya kazi kabla ya Ijumaa.",
+    "de": "Letzte Woche. Bitte bereitet die Stellenanzeigen vor Freitag vor.",
+    "correct": false,
+    "feedback": "„iliyopita“ ist die vergangene Woche. Losgehen soll es in der kommenden: „ijayo“."
+   }
+  ]
+ }
 }

@@ -203,5 +203,82 @@
    "de": "Bus"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Nisaidie tafadhali! Kuna ajali!",
+    "de": "Hilf mir bitte! Es gab einen Unfall!",
+    "correct": true
+   },
+   {
+    "sw": "Nikusaidie tafadhali! Kuna ajali!",
+    "de": "Ich helfe dir bitte! Es gab einen Unfall!",
+    "correct": false,
+    "feedback": "„Nikusaidie“ heißt „ich helfe dir“. Du brauchst Hilfe: „nisaidie“."
+   },
+   {
+    "sw": "Nisaidie tafadhali! Hakuna ajali!",
+    "de": "Hilf mir bitte! Es gab keinen Unfall!",
+    "correct": false,
+    "feedback": "„Hakuna“ heißt es gibt keinen. Genau den Unfall meldest du gerade."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Rafiki yangu ameanguka na anaumwa kichwa.",
+    "de": "Mein Freund ist gestürzt und hat Kopfschmerzen.",
+    "correct": true
+   },
+   {
+    "sw": "Rafiki yangu ataanguka na anaumwa kichwa.",
+    "de": "Mein Freund wird stürzen und hat Kopfschmerzen.",
+    "correct": false,
+    "feedback": "„Ata-“ ist Zukunft. Gestürzt ist er schon: „ame-“."
+   },
+   {
+    "sw": "Rafiki yako ameanguka na anaumwa kichwa.",
+    "de": "Dein Freund ist gestürzt und hat Kopfschmerzen.",
+    "correct": false,
+    "feedback": "„yako“ heißt dein. Es ist dein eigener Freund: „yangu“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Ndiyo, lakini kwa shida. Naomba uite ambulensi.",
+    "de": "Ja, aber mühsam. Bitte ruf einen Krankenwagen.",
+    "correct": true
+   },
+   {
+    "sw": "Ndiyo, lakini kwa shida. Naomba niite ambulensi.",
+    "de": "Ja, aber mühsam. Bitte rufe ich einen Krankenwagen.",
+    "correct": false,
+    "feedback": "„niite“ hieße, du rufst selbst. Du bittest ihn darum: „uite“."
+   },
+   {
+    "sw": "Hapana, lakini kwa shida. Naomba uite ambulensi.",
+    "de": "Nein, aber mühsam. Bitte ruf einen Krankenwagen.",
+    "correct": false,
+    "feedback": "Gefragt war, ob er sprechen kann — er kann es, mühsam. Also „ndiyo“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Tuko mbele ya duka kubwa, karibu na kituo cha basi.",
+    "de": "Wir sind vor dem Supermarkt, nahe der Bushaltestelle.",
+    "correct": true
+   },
+   {
+    "sw": "Niko mbele ya duka kubwa, karibu na kituo cha basi.",
+    "de": "Ich bin vor dem Supermarkt, nahe der Bushaltestelle.",
+    "correct": false,
+    "feedback": "Ihr seid zu zweit — der Rettungsdienst sucht euch beide: „tuko“."
+   },
+   {
+    "sw": "Tuko mbele ya duka kubwa, karibu na kituo ya basi.",
+    "de": "Wir sind vor dem Supermarkt, nahe der Bushaltestelle.",
+    "correct": false,
+    "feedback": "„kituo“ gehört zur Ki-Vi-Klasse — der Genitiv heißt dort „cha“, nicht „ya“."
+   }
+  ]
+ }
 }

@@ -141,5 +141,82 @@
    "de": "sehr"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Una watoto wangapi?",
+    "de": "Wie viele Kinder hast du?",
+    "correct": true
+   },
+   {
+    "sw": "Nina watoto wangapi?",
+    "de": "Wie viele Kinder habe ich?",
+    "correct": false,
+    "feedback": "„Nina“ heißt ich habe. Du fragst dein Gegenüber: „una“."
+   },
+   {
+    "sw": "Una watoto wengi?",
+    "de": "Hast du viele Kinder?",
+    "correct": false,
+    "feedback": "Damit fragst du nur, ob es viele sind. Nach der Zahl fragst du mit „wangapi“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Wana umri gani?",
+    "de": "Wie alt sind sie?",
+    "correct": true
+   },
+   {
+    "sw": "Ana umri gani?",
+    "de": "Wie alt ist er oder sie?",
+    "correct": false,
+    "feedback": "„Ana“ meint eine Person. Es sind zwei Kinder: „wana“."
+   },
+   {
+    "sw": "Wana umri wangapi?",
+    "de": "Wie viele Alter haben sie?",
+    "correct": false,
+    "feedback": "„wangapi“ zählt. Nach dem Alter fragt man mit „umri gani“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Wanasoma shule?",
+    "de": "Gehen sie zur Schule?",
+    "correct": true
+   },
+   {
+    "sw": "Anasoma shule?",
+    "de": "Geht er oder sie zur Schule?",
+    "correct": false,
+    "feedback": "Es geht um beide Kinder — die Wa-Form heißt „wanasoma“."
+   },
+   {
+    "sw": "Walisoma shule?",
+    "de": "Gingen sie zur Schule?",
+    "correct": false,
+    "feedback": "„Wali-“ ist Vergangenheit. Du fragst nach jetzt: „wanasoma“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Familia yako ni nzuri sana.",
+    "de": "Deine Familie ist sehr schön.",
+    "correct": true
+   },
+   {
+    "sw": "Familia yangu ni nzuri sana.",
+    "de": "Meine Familie ist sehr schön.",
+    "correct": false,
+    "feedback": "„yangu“ heißt meine. Du lobst ihre Familie: „yako“."
+   },
+   {
+    "sw": "Familia yako ni mzuri sana.",
+    "de": "Deine Familie ist sehr schön.",
+    "correct": false,
+    "feedback": "„familia“ gehört zur N-Klasse — dort heißt schön „nzuri“, nicht „mzuri“."
+   }
+  ]
+ }
 }

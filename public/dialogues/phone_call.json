@@ -267,5 +267,101 @@
    "structure": true
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Halo, naomba kuongea na Bwana Mwangi.",
+    "de": "Hallo, ich möchte bitte Herrn Mwangi sprechen.",
+    "correct": true
+   },
+   {
+    "sw": "Halo, ninaongea na Bwana Mwangi.",
+    "de": "Hallo, ich spreche mit Herrn Mwangi.",
+    "correct": false,
+    "feedback": "Damit behauptest du, du sprichst schon mit ihm. Höflich bittest du: „naomba kuongea“."
+   },
+   {
+    "sw": "Halo, unaomba kuongea na Bwana Mwangi?",
+    "de": "Hallo, möchtest du Herrn Mwangi sprechen?",
+    "correct": false,
+    "feedback": "„Una-“ ist die Du-Form. Von dir selbst sprichst du mit „naomba“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Atarudi lini?",
+    "de": "Wann kommt er zurück?",
+    "correct": true
+   },
+   {
+    "sw": "Alirudi lini?",
+    "de": "Wann kam er zurück?",
+    "correct": false,
+    "feedback": "„Ali-“ ist Vergangenheit. Er ist noch in der Besprechung: „atarudi“."
+   },
+   {
+    "sw": "Atarudi wapi?",
+    "de": "Wohin kommt er zurück?",
+    "correct": false,
+    "feedback": "„wapi“ fragt nach dem Ort. Nach dem Zeitpunkt fragst du mit „lini“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Ningependa kupanga miadi naye wiki ijayo.",
+    "de": "Ich würde gern einen Termin mit ihm für nächste Woche vereinbaren.",
+    "correct": true
+   },
+   {
+    "sw": "Ningependa kupanga miadi nawe wiki ijayo.",
+    "de": "Ich würde gern einen Termin mit dir für nächste Woche vereinbaren.",
+    "correct": false,
+    "feedback": "„nawe“ heißt mit dir. Der Termin ist mit ihm: „naye“."
+   },
+   {
+    "sw": "Ningependa kupanga miadi naye wiki iliyopita.",
+    "de": "Ich würde gern einen Termin mit ihm für letzte Woche vereinbaren.",
+    "correct": false,
+    "feedback": "„iliyopita“ ist die vergangene Woche. Einen Termin macht man für die kommende."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Jina langu ni Anna Schmidt, simu yangu ni sufuri saba moja mbili...",
+    "de": "Mein Name ist Anna Schmidt, meine Nummer ist null sieben eins zwei...",
+    "correct": true
+   },
+   {
+    "sw": "Jina lako ni Anna Schmidt, simu yangu ni sufuri saba moja mbili...",
+    "de": "Dein Name ist Anna Schmidt, meine Nummer ist null sieben eins zwei...",
+    "correct": false,
+    "feedback": "„lako“ heißt dein. Deinen eigenen Namen nennst du mit „langu“."
+   },
+   {
+    "sw": "Jina langu ni Anna Schmidt, simu lake ni sufuri saba moja mbili...",
+    "de": "Mein Name ist Anna Schmidt, seine Nummer ist null sieben eins zwei...",
+    "correct": false,
+    "feedback": "„lake“ heißt seine und passt auch nicht zur N-Klasse von „simu“: „simu yangu“."
+   }
+  ],
+  "8": [
+   {
+    "sw": "Asante sana kwa msaada wako.",
+    "de": "Vielen Dank für Ihre Hilfe.",
+    "correct": true
+   },
+   {
+    "sw": "Asante sana kwa msaada wangu.",
+    "de": "Vielen Dank für meine Hilfe.",
+    "correct": false,
+    "feedback": "„wangu“ heißt meine. Geholfen hat sie dir: „wako“."
+   },
+   {
+    "sw": "Karibu sana kwa msaada wako.",
+    "de": "Sehr willkommen für Ihre Hilfe.",
+    "correct": false,
+    "feedback": "„Karibu“ antwortet auf einen Dank. Danken tust du mit „asante“."
+   }
+  ]
+ }
 }

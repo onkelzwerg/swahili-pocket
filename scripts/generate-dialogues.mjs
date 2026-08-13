@@ -17,6 +17,7 @@
  * Verwendung:
  *   node scripts/generate-dialogues.mjs                 (was fehlt noch?)
  *   node scripts/generate-dialogues.mjs --brief greet    (Auftrag ausgeben)
+ *   node scripts/generate-dialogues.mjs --brief-choices greet  (Entscheidungspunkte, W4.5)
  *   node scripts/generate-dialogues.mjs --check public/dialogues/greet.json
  *   node scripts/generate-dialogues.mjs --validate       (alles prüfen + Index bauen)
  */
@@ -49,6 +50,7 @@ const value = (flag, fallback) => {
 const validateOnly = has("--validate");
 const gapsOnly = has("--gaps");
 const briefId = has("--brief") ? value("--brief", null) : null;
+const briefChoicesId = has("--brief-choices") ? value("--brief-choices", null) : null;
 const checkFiles = has("--check") ? args.slice(args.indexOf("--check") + 1) : null;
 
 /**
@@ -211,6 +213,113 @@ Die ${tokens.size} Token, die abgedeckt sein müssen:
 ${[...tokens].sort().join(", ")}`;
 }
 
+/**
+ * Auftrag für die Entscheidungspunkte eines Dialogs (W4.5).
+ *
+ * Getrennt vom Glossar-Brief, weil es zwei verschiedene Arbeiten sind: das
+ * Glossar beschreibt den Text, die Entscheidungspunkte machen eine Aufgabe
+ * daraus. Der Text ist Bestand und ändert sich nicht mehr; die Aufgaben können
+ * nachwachsen, ohne dass jemand seed.ts anfasst.
+ */
+function briefChoicesFor(dialogue) {
+  const file = `public/dialogues/${dialogue.id}.json`;
+
+  // Züge je Sprecher — die Rolle bekommt an *jedem* ihrer Züge einen
+  // Entscheidungspunkt. Ein Rollenspiel, in dem man zweimal wählt und viermal
+  // zusieht, fühlt sich an wie Zusehen.
+  const bySpeaker = new Map();
+  dialogue.turns.forEach((turn, i) => {
+    if (!bySpeaker.has(turn.speaker)) bySpeaker.set(turn.speaker, []);
+    bySpeaker.get(turn.speaker).push(i);
+  });
+  const roles = [...bySpeaker]
+    .map(([speaker, idx]) => `  ${speaker}: ${idx.length} Züge — Index ${idx.join(", ")}`)
+    .join("\n");
+
+  const lines = dialogue.turns
+    .map((t, i) => `  ${String(i).padStart(2)}  [${t.speaker}] ${t.sw}\n          ${t.de}`)
+    .join("\n");
+
+  return `Du schreibst die Entscheidungspunkte für das Rollenspiel zu einem
+Swahili-Dialog einer Vokabel-Lern-App.
+
+Im Rollenspiel übernimmt der Lernende eine der Rollen. Die Züge der anderen
+laufen automatisch ab; an jedem eigenen Zug wählt er aus 3–4 Antworten. Beim
+ersten Fehlversuch bekommt er die Begründung und einen zweiten Anlauf, beim
+zweiten die Lösung. Gezählt wird, was beim ersten Versuch saß.
+
+DIALOG: ${dialogue.id} — "${dialogue.title}"${dialogue.titleDe ? ` (${dialogue.titleDe})` : ""}
+${dialogue.level ? `Stufe: ${dialogue.level}\n` : ""}
+${lines}
+
+Züge je Sprecher:
+${roles}
+
+--- REGELN ---
+
+- **Wähle GENAU EINE Rolle** und gib **jedem** ihrer Züge einen
+  Entscheidungspunkt. Nicht die Hälfte, nicht zwei Rollen gemischt. Nimm die
+  Rolle, die der Lernende im Leben selbst hätte: den Gast, nicht den Kellner;
+  den Patienten, nicht den Arzt; den Fragenden, nicht den Ortskundigen.
+- Der Schlüssel ist der **Zug-Index als String**, nullbasiert, wie oben in der
+  linken Spalte. Gültig sind 0 bis ${dialogue.turns.length - 1}.
+- **3 oder 4 Optionen** je Entscheidungspunkt, davon **genau eine richtige**.
+- Die richtige Option ist **zeichengleich mit dem Zug** — dieselben Wörter,
+  dieselbe Zeichensetzung. Sonst spielt die App nach der Wahl eine andere Zeile
+  vor als die angeklickte; beim Testen fällt das kaum auf, beim Hören sofort.
+  Sie bekommt **kein** "feedback": es gibt nichts zu erklären.
+- Jede falsche Option braucht ein **"feedback"** — ein Satz, der sagt, *warum*
+  sie falsch ist. Ein „falsch" ohne Grund lehrt nichts.
+- Die Distraktoren sind **plausibel** falsch, nicht absurd. Was trägt:
+  falsche Zeit (nita- statt nime-), falsche Person oder Kongruenz, falsche
+  Höflichkeitsstufe, die richtige Redewendung zum falschen Anlass, eine
+  Antwort, die nicht auf die gestellte Frage passt. Was nicht trägt: Kauderwelsch,
+  offensichtlicher Unsinn, oder eine Option, die auch richtig wäre.
+- **Keine Ziffern** im Swahili-Text — Zahlen ausschreiben (saa mbili, nicht 2).
+- Keine zwei Optionen mit demselben Swahili-Text innerhalb eines Punktes.
+- Bleib beim Wortschatz des Dialogs und seines Umfelds. Die Distraktoren
+  brauchen keinen Glossareintrag, aber ein Lernender, der den Dialog versteht,
+  soll die Wahl treffen können, ohne ein neues Wort zu raten.
+- "de" ist die Übersetzung **dieser Option**, auch der falschen — der Lernende
+  kann sie sich einblenden lassen.
+
+--- ERGEBNIS ---
+
+${file} existiert bereits und enthält das Glossar. **Ergänze dort nur das Feld
+"choices"** und lass "glosses" unangetastet:
+
+{
+ "id": ${JSON.stringify(dialogue.id)},
+ "glosses": { ... unverändert ... },
+ "choices": {
+  "0": [
+   { "sw": "<zeichengleich mit Zug 0>", "de": "<Übersetzung>", "correct": true },
+   { "sw": "<plausibel falsch>", "de": "<Übersetzung>", "correct": false,
+     "feedback": "<ein Satz: warum falsch>" },
+   { "sw": "<plausibel falsch>", "de": "<Übersetzung>", "correct": false,
+     "feedback": "<ein Satz: warum falsch>" }
+  ]
+ }
+}
+
+public/dialogues/index.json fasst du nicht an; den baut ein späterer Lauf von
+"npm run dialogues:validate".
+
+--- PRÜFUNG ---
+
+    node scripts/generate-dialogues.mjs --check ${file}
+
+Die Ausgabe nennt die Zahl der Entscheidungspunkte. Erwartet sind so viele, wie
+die gewählte Rolle Züge hat. Bessere nach und prüfe erneut, bis nichts mehr
+beanstandet wird.
+
+--- MÄNGEL MELDEN ---
+
+Lehnt die Prüfung etwas ab, das dir richtig vorkommt, oder zwingt dich eine
+Regel oben zu einer unnatürlichen Formulierung: **melde es, statt auszuweichen.**
+Ein Werkzeug, das die Sprache verbiegt, ist schlechter als eine lose Prüfung.`;
+}
+
 async function readEntries() {
   if (!existsSync(OUT_DIR)) return [];
   const files = (await readdir(OUT_DIR)).filter((f) => f.endsWith(".json") && f !== "index.json");
@@ -226,14 +335,15 @@ async function main() {
   const byId = new Map(dialogues.map((d) => [d.id, d]));
   await mkdir(OUT_DIR, { recursive: true });
 
-  if (briefId) {
-    const dialogue = byId.get(briefId);
+  if (briefId || briefChoicesId) {
+    const id = briefId ?? briefChoicesId;
+    const dialogue = byId.get(id);
     if (!dialogue) {
-      console.error(`Fehler: kein Dialog "${briefId}".`);
+      console.error(`Fehler: kein Dialog "${id}".`);
       console.error(`  Vorhanden: ${dialogues.map((d) => d.id).join(", ")}`);
       process.exit(1);
     }
-    console.log(briefFor(dialogue, tokenize));
+    console.log(briefId ? briefFor(dialogue, tokenize) : briefChoicesFor(dialogue));
     return;
   }
 

@@ -231,5 +231,63 @@
    "de": "fünf"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Hodi! Kuna meza kwa watu wawili?",
+    "de": "Hallo! Gibt es einen Tisch für zwei?",
+    "correct": true
+   },
+   {
+    "sw": "Hodi! Kuna meza kwa watu mbili?",
+    "de": "Hallo! Gibt es einen Tisch für zwei?",
+    "correct": false,
+    "feedback": "Personen (M-Wa) zählt man mit „wawili“; „mbili“ gehört zur N-Klasse."
+   },
+   {
+    "sw": "Hodi! Hakuna meza kwa watu wawili?",
+    "de": "Hallo! Gibt es keinen Tisch für zwei?",
+    "correct": false,
+    "feedback": "„Hakuna“ verneint — du fragst aber, ob es einen Tisch gibt."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Asante. Mnao wali na samaki leo?",
+    "de": "Danke. Habt ihr heute Reis mit Fisch?",
+    "correct": true
+   },
+   {
+    "sw": "Asante. Ninao wali na samaki leo?",
+    "de": "Danke. Habe ich heute Reis mit Fisch?",
+    "correct": false,
+    "feedback": "„Ninao“ heißt „habe ich“ — du fragst das Restaurant: „mnao“ (habt ihr)."
+   },
+   {
+    "sw": "Asante. Mlikuwa na wali na samaki leo?",
+    "de": "Danke. Hattet ihr heute Reis mit Fisch?",
+    "correct": false,
+    "feedback": "„Mlikuwa“ ist Vergangenheit — gefragt ist das heutige Angebot."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Chupa mbili za maji baridi.",
+    "de": "Zwei Flaschen Wasser, kalt.",
+    "correct": true
+   },
+   {
+    "sw": "Chupa mbili wa maji baridi.",
+    "de": "Zwei Flaschen Wasser, kalt.",
+    "correct": false,
+    "feedback": "Flaschen gehören zur N-Klasse — der Genitiv heißt dort „za“, nicht „wa“."
+   },
+   {
+    "sw": "Chupa mbili za maji moto.",
+    "de": "Zwei Flaschen Wasser, heiß.",
+    "correct": false,
+    "feedback": "„moto“ heißt heiß. Kaltes Wasser ist „maji baridi“."
+   }
+  ]
+ }
 }

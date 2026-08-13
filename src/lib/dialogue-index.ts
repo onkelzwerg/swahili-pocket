@@ -71,14 +71,16 @@ export interface DialogueGloss {
   structure?: boolean;
 }
 
+/** Zug-Index (als String) → Antwortoptionen. Leer, solange keine gepflegt sind. */
+export type DialogueChoices = Record<string, DialogueChoice[]>;
+
 /** public/dialogues/<id>.json — Glossar und Entscheidungspunkte eines Dialogs. */
 export interface DialogueData {
   id: string;
   lemmas: string[];
   /** Token (kleingeschrieben) → Glossareintrag. Deckt jedes Token jeder Zeile ab. */
   glosses: Record<string, DialogueGloss>;
-  /** Zug-Index (als String) → Antwortoptionen. Leer, solange keine gepflegt sind. */
-  choices: Record<string, DialogueChoice[]>;
+  choices: DialogueChoices;
 }
 
 const dataCache = new Map<string, Promise<DialogueData | null>>();

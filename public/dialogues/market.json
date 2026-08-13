@@ -182,5 +182,82 @@
    "de": "sehr"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari ya asubuhi. Bei gani embe moja?",
+    "de": "Guten Morgen. Was kostet eine Mango?",
+    "correct": true
+   },
+   {
+    "sw": "Habari ya asubuhi. Embe moja ni nzuri.",
+    "de": "Guten Morgen. Eine Mango ist gut.",
+    "correct": false,
+    "feedback": "Das ist keine Frage. Nach dem Preis fragst du mit „bei gani“."
+   },
+   {
+    "sw": "Habari ya jioni. Bei gani embe moja?",
+    "de": "Guten Abend. Was kostet eine Mango?",
+    "correct": false,
+    "feedback": "„ya jioni“ ist der Abendgruß — am Vormittag heißt es „ya asubuhi“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Ni ghali kidogo. Punguza bei tafadhali.",
+    "de": "Das ist etwas teuer. Senke bitte den Preis.",
+    "correct": true
+   },
+   {
+    "sw": "Ni rahisi sana. Punguza bei tafadhali.",
+    "de": "Das ist sehr billig. Senke bitte den Preis.",
+    "correct": false,
+    "feedback": "„rahisi“ heißt billig — dann gäbe es nichts zu handeln."
+   },
+   {
+    "sw": "Ni ghali kidogo. Ninapunguza bei tafadhali.",
+    "de": "Das ist etwas teuer. Ich senke bitte den Preis.",
+    "correct": false,
+    "feedback": "Du bittest jemanden: dafür der Imperativ „punguza“, nicht „ninapunguza“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Nipe matano basi. Na ndizi pia, kilo moja.",
+    "de": "Dann gib mir fünf. Und Bananen auch, ein Kilo.",
+    "correct": true
+   },
+   {
+    "sw": "Nitakupa matano basi. Na ndizi pia, kilo moja.",
+    "de": "Dann gebe ich dir fünf. Und Bananen auch, ein Kilo.",
+    "correct": false,
+    "feedback": "„Nitakupa“ heißt „ich gebe dir“ — du willst kaufen: „nipe“ (gib mir)."
+   },
+   {
+    "sw": "Nipe tano basi. Na ndizi pia, kilo moja.",
+    "de": "Dann gib mir fünf. Und Bananen auch, ein Kilo.",
+    "correct": false,
+    "feedback": "Mangos gehören zur Ji-Ma-Klasse — dort heißt fünf „matano“, nicht „tano“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Chukua. Asante sana.",
+    "de": "Bitte sehr. Vielen Dank.",
+    "correct": true
+   },
+   {
+    "sw": "Chukua. Karibu sana.",
+    "de": "Nimm. Sehr willkommen.",
+    "correct": false,
+    "feedback": "„Karibu“ antwortet auf einen Dank — hier bedankst du dich selbst."
+   },
+   {
+    "sw": "Nichukue. Asante sana.",
+    "de": "Nimm mich. Vielen Dank.",
+    "correct": false,
+    "feedback": "„Nichukue“ heißt „nimm mich“. Gemeint ist das Geld: „chukua“."
+   }
+  ]
+ }
 }

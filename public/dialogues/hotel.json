@@ -185,5 +185,82 @@
    "de": "Anmeldung, Registrierung"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari. Kuna chumba kwa usiku mbili?",
+    "de": "Hallo. Gibt es ein Zimmer für zwei Nächte?",
+    "correct": true
+   },
+   {
+    "sw": "Habari. Kuna chumba kwa usiku wawili?",
+    "de": "Hallo. Gibt es ein Zimmer für zwei Nächte?",
+    "correct": false,
+    "feedback": "„wawili“ zählt Personen. „usiku“ gehört zur N-Klasse und bekommt „mbili“."
+   },
+   {
+    "sw": "Habari. Hakuna chumba kwa usiku mbili?",
+    "de": "Hallo. Gibt es kein Zimmer für zwei Nächte?",
+    "correct": false,
+    "feedback": "„Hakuna“ verneint. Du fragst, ob es ein Zimmer gibt: „kuna“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Bei gani kwa usiku mmoja?",
+    "de": "Was kostet eine Nacht?",
+    "correct": true
+   },
+   {
+    "sw": "Ni ghali kwa usiku mmoja?",
+    "de": "Ist es teuer für eine Nacht?",
+    "correct": false,
+    "feedback": "Damit fragst du nur, ob es teuer ist. Die Zahl bekommst du mit „bei gani“."
+   },
+   {
+    "sw": "Bei nzuri kwa usiku mmoja?",
+    "de": "Ein guter Preis für eine Nacht?",
+    "correct": false,
+    "feedback": "Das ist keine Frage nach dem Preis. „bei gani“ heißt „wie teuer“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Kuna intaneti chumbani?",
+    "de": "Gibt es Internet im Zimmer?",
+    "correct": true
+   },
+   {
+    "sw": "Kuna intaneti chumba?",
+    "de": "Gibt es Internet Zimmer?",
+    "correct": false,
+    "feedback": "„im Zimmer“ verlangt den Lokativ auf -ni: „chumbani“."
+   },
+   {
+    "sw": "Kuna chumba intanetini?",
+    "de": "Gibt es ein Zimmer im Internet?",
+    "correct": false,
+    "feedback": "Das dreht die Frage um. Du fragst nach Internet im Zimmer, nicht umgekehrt."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Vizuri. Nitachukua chumba hicho.",
+    "de": "Schön. Ich nehme dieses Zimmer.",
+    "correct": true
+   },
+   {
+    "sw": "Vizuri. Nilichukua chumba hicho.",
+    "de": "Schön. Ich nahm dieses Zimmer.",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit. Du entscheidest dich gerade jetzt: „nita-“."
+   },
+   {
+    "sw": "Vizuri. Nitachukua chumba hiki.",
+    "de": "Schön. Ich nehme dieses Zimmer hier.",
+    "correct": false,
+    "feedback": "„hiki“ zeigt auf etwas vor dir. Gemeint ist das eben genannte Zimmer: „hicho“."
+   }
+  ]
+ }
 }

@@ -382,5 +382,63 @@
    "de": "überraschend (kushtukiza = überraschen, zu kushtuka)"
   }
  },
- "choices": {}
+ "choices": {
+  "1": [
+   {
+    "sw": "Hapana bwana, naenda tu mjini kukutana na rafiki yangu wa zamani, Juma.",
+    "de": "Nein mein Freund, ich gehe nur in die Stadt, um mich mit meinem alten Freund Juma zu treffen.",
+    "correct": true
+   },
+   {
+    "sw": "Ndiyo bwana, naenda tu mjini kukutana na rafiki yangu wa zamani, Juma.",
+    "de": "Ja mein Freund, ich gehe nur in die Stadt, um mich mit meinem alten Freund Juma zu treffen.",
+    "correct": false,
+    "feedback": "Gefragt war, ob du zu einer Feier gehst. Du gehst in die Stadt — also „hapana“."
+   },
+   {
+    "sw": "Hapana bwana, nilienda tu mjini kukutana na rafiki yangu wa zamani, Juma.",
+    "de": "Nein mein Freund, ich ging nur in die Stadt, um mich mit meinem alten Freund Juma zu treffen.",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit. Du bist gerade unterwegs: „naenda“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Dunia ni ndogo sana! Juma ndiye alitutambulisha mimi na huyu ndugu yetu hapa.",
+    "de": "Die Welt ist echt klein! Juma hat mich und unseren Bruder hier einander vorgestellt.",
+    "correct": true
+   },
+   {
+    "sw": "Dunia ni kubwa sana! Juma ndiye alitutambulisha mimi na huyu ndugu yetu hapa.",
+    "de": "Die Welt ist echt groß! Juma hat mich und unseren Bruder hier einander vorgestellt.",
+    "correct": false,
+    "feedback": "Der Zufall zeigt gerade, wie klein die Welt ist: „ndogo“."
+   },
+   {
+    "sw": "Dunia ni ndogo sana! Juma ndiye alitutambulisha mimi na huyu ndugu yenu hapa.",
+    "de": "Die Welt ist echt klein! Juma hat mich und euren Bruder hier einander vorgestellt.",
+    "correct": false,
+    "feedback": "„yenu“ heißt euer. Er gehört jetzt zu euch allen: „yetu“."
+   }
+  ],
+  "7": [
+   {
+    "sw": "Wazo zuri sana, twendeni tukampige butwaa Juma na habari hizi za kushtukiza!",
+    "de": "Sehr gute Idee, lasst uns gehen und Juma mit diesen überraschenden Neuigkeiten verblüffen!",
+    "correct": true
+   },
+   {
+    "sw": "Wazo zuri sana, tulikwenda tukampige butwaa Juma na habari hizi za kushtukiza!",
+    "de": "Sehr gute Idee, wir gingen und verblüfften Juma mit diesen überraschenden Neuigkeiten!",
+    "correct": false,
+    "feedback": "„Tuli-“ ist Vergangenheit. Ihr brecht gerade erst auf: „twendeni“."
+   },
+   {
+    "sw": "Wazo baya sana, twendeni tukampige butwaa Juma na habari hizi za kushtukiza!",
+    "de": "Sehr schlechte Idee, lasst uns gehen und Juma mit diesen überraschenden Neuigkeiten verblüffen!",
+    "correct": false,
+    "feedback": "„baya“ heißt schlecht — und dann trotzdem loszugehen, passt nicht dazu."
+   }
+  ]
+ }
 }

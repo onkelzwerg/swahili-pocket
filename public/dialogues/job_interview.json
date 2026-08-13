@@ -407,5 +407,82 @@
    "de": "gut (Ji/Ma-Klasse: jibu zuri = gute Antwort)"
   }
  },
- "choices": {}
+ "choices": {
+  "1": [
+   {
+    "sw": "Asante kwa fursa hii. Jina langu ni Hassan, nina uzoefu wa miaka saba katika uongozi wa miradi.",
+    "de": "Danke für diese Gelegenheit. Mein Name ist Hassan, ich habe sieben Jahre Erfahrung im Projektmanagement.",
+    "correct": true
+   },
+   {
+    "sw": "Asante kwa fursa hii. Jina langu ni Hassan, nina uzoefu wa mwaka saba katika uongozi wa miradi.",
+    "de": "Danke für diese Gelegenheit. Mein Name ist Hassan, ich habe sieben Jahr Erfahrung im Projektmanagement.",
+    "correct": false,
+    "feedback": "„mwaka“ ist ein Jahr. Mehrere Jahre sind „miaka“."
+   },
+   {
+    "sw": "Asante kwa fursa hii. Jina lako ni Hassan, nina uzoefu wa miaka saba katika uongozi wa miradi.",
+    "de": "Danke für diese Gelegenheit. Ihr Name ist Hassan, ich habe sieben Jahre Erfahrung im Projektmanagement.",
+    "correct": false,
+    "feedback": "„lako“ heißt dein. Dich selbst stellst du mit „langu“ vor."
+   }
+  ],
+  "3": [
+   {
+    "sw": "Maono yenu kuhusu uvumbuzi na maendeleo endelevu yananivutia sana.",
+    "de": "Ihre Vision von Innovation und nachhaltiger Entwicklung spricht mich sehr an.",
+    "correct": true
+   },
+   {
+    "sw": "Maono yenu kuhusu uvumbuzi na maendeleo endelevu yanakuvutia sana.",
+    "de": "Ihre Vision von Innovation und nachhaltiger Entwicklung spricht Sie sehr an.",
+    "correct": false,
+    "feedback": "„yanakuvutia“ hieße, es spricht *sie* an. Dich spricht es an: „yananivutia“."
+   },
+   {
+    "sw": "Maono yetu kuhusu uvumbuzi na maendeleo endelevu yananivutia sana.",
+    "de": "Unsere Vision von Innovation und nachhaltiger Entwicklung spricht mich sehr an.",
+    "correct": false,
+    "feedback": "„yetu“ heißt unsere. Du bewirbst dich erst — es ist ihre Vision: „yenu“."
+   }
+  ],
+  "5": [
+   {
+    "sw": "Mara moja tulipoteza mteja mkubwa. Niliongoza timu kubuni mkakati mpya, na ndani ya miezi sita tulipata wateja watatu wakubwa zaidi.",
+    "de": "Einmal verloren wir einen Großkunden. Ich führte das Team bei einer neuen Strategie, und in sechs Monaten gewannen wir drei größere Kunden.",
+    "correct": true
+   },
+   {
+    "sw": "Mara moja tulipoteza mteja mkubwa. Nitaongoza timu kubuni mkakati mpya, na ndani ya miezi sita tulipata wateja watatu wakubwa zaidi.",
+    "de": "Einmal verloren wir einen Großkunden. Ich werde das Team bei einer neuen Strategie führen, und in sechs Monaten gewannen wir drei größere Kunden.",
+    "correct": false,
+    "feedback": "„Nita-“ ist Zukunft. Du erzählst von damals: „niliongoza“."
+   },
+   {
+    "sw": "Mara moja tulipoteza mteja mkubwa. Niliongoza timu kubuni mkakati mpya, na ndani ya miezi sita tulipata wateja tatu wakubwa zaidi.",
+    "de": "Einmal verloren wir einen Großkunden. Ich führte das Team bei einer neuen Strategie, und in sechs Monaten gewannen wir drei größere Kunden.",
+    "correct": false,
+    "feedback": "Kunden sind Personen — die M-Wa-Klasse zählt mit „watatu“, nicht „tatu“."
+   }
+  ],
+  "7": [
+   {
+    "sw": "Ningependa kujadili hilo baada ya kuelewa kabisa majukumu yote.",
+    "de": "Das würde ich gern besprechen, nachdem ich alle Aufgaben vollständig verstanden habe.",
+    "correct": true
+   },
+   {
+    "sw": "Ningependa kujadili hilo kabla ya kuelewa kabisa majukumu yote.",
+    "de": "Das würde ich gern besprechen, bevor ich alle Aufgaben vollständig verstanden habe.",
+    "correct": false,
+    "feedback": "„kabla“ heißt vorher — dann wüsstest du noch nicht, worüber du verhandelst."
+   },
+   {
+    "sw": "Ningependa kujadili hilo baada ya kuelewa kabisa majukumu yale.",
+    "de": "Das würde ich gern besprechen, nachdem ich jene Aufgaben vollständig verstanden habe.",
+    "correct": false,
+    "feedback": "„yale“ zeigt auf bestimmte Aufgaben. Du meinst sämtliche: „yote“."
+   }
+  ]
+ }
 }

@@ -88,5 +88,63 @@
    "de": "später, nachher"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari yako?",
+    "de": "Wie geht es dir?",
+    "correct": true
+   },
+   {
+    "sw": "Lala salama.",
+    "de": "Schlaf gut.",
+    "correct": false,
+    "feedback": "Das ist der Gruß zum Schlafengehen, nicht zur Begrüßung."
+   },
+   {
+    "sw": "Kwaheri.",
+    "de": "Auf Wiedersehen.",
+    "correct": false,
+    "feedback": "Damit verabschiedest du dich — das Gespräch fängt gerade erst an."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Nzuri sana. Habari za asubuhi?",
+    "de": "Sehr gut. Wie war dein Morgen?",
+    "correct": true
+   },
+   {
+    "sw": "Nzuri sana. Habari za usiku?",
+    "de": "Sehr gut. Wie war deine Nacht?",
+    "correct": false,
+    "feedback": "„za usiku“ fragt nach der Nacht — am Vormittag fragt man „za asubuhi“."
+   },
+   {
+    "sw": "Nzuri sana. Unatoka wapi?",
+    "de": "Sehr gut. Woher kommst du?",
+    "correct": false,
+    "feedback": "Ihr kennt euch schon — hier geht es weiter um das Befinden."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Ndiyo, nimelala vizuri sana, asante.",
+    "de": "Ja, ich habe sehr gut geschlafen, danke.",
+    "correct": true
+   },
+   {
+    "sw": "Ndiyo, nitalala vizuri sana, asante.",
+    "de": "Ja, ich werde sehr gut schlafen, danke.",
+    "correct": false,
+    "feedback": "„nita-“ ist Zukunft. Gefragt war die vergangene Nacht: „nime-“."
+   },
+   {
+    "sw": "Ndiyo, nimelala vizuri sana, karibu.",
+    "de": "Ja, ich habe sehr gut geschlafen, willkommen.",
+    "correct": false,
+    "feedback": "„karibu“ heißt willkommen. Danken tust du mit „asante“."
+   }
+  ]
+ }
 }

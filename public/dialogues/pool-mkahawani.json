@@ -175,5 +175,63 @@
    "de": "danke"
   }
  },
- "choices": {}
+ "choices": {
+  "1": [
+   {
+    "sw": "Hatujambo sana. Tunaweza kupata meza?",
+    "de": "Uns geht es sehr gut. Können wir einen Tisch bekommen?",
+    "correct": true
+   },
+   {
+    "sw": "Sijambo sana. Tunaweza kupata meza?",
+    "de": "Mir geht es sehr gut. Können wir einen Tisch bekommen?",
+    "correct": false,
+    "feedback": "Gefragt war „Hamjambo?“ — an euch beide. Ihr antwortet mit „hatujambo“."
+   },
+   {
+    "sw": "Hatujambo sana. Tuliweza kupata meza?",
+    "de": "Uns geht es sehr gut. Konnten wir einen Tisch bekommen?",
+    "correct": false,
+    "feedback": "„Tuli-“ ist Vergangenheit. Ihr fragt nach jetzt: „tunaweza“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Mimi nitakula wali na kuku, tafadhali.",
+    "de": "Ich werde Reis mit Hähnchen essen, bitte.",
+    "correct": true
+   },
+   {
+    "sw": "Mimi nilikula wali na kuku, tafadhali.",
+    "de": "Ich habe Reis mit Hähnchen gegessen, bitte.",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit. Du bestellst für gleich: „nita-“."
+   },
+   {
+    "sw": "Mimi nitakula wali na kuku, karibu.",
+    "de": "Ich werde Reis mit Hähnchen essen, willkommen.",
+    "correct": false,
+    "feedback": "„Karibu“ lädt jemanden ein. Höflich bestellst du mit „tafadhali“."
+   }
+  ],
+  "7": [
+   {
+    "sw": "Ndiyo, tuletee maji mawili, asante.",
+    "de": "Ja, bring uns zwei Wasser, danke.",
+    "correct": true
+   },
+   {
+    "sw": "Ndiyo, tuletee maji mbili, asante.",
+    "de": "Ja, bring uns zwei Wasser, danke.",
+    "correct": false,
+    "feedback": "„maji“ gehört zur Ji-Ma-Klasse — dort heißt zwei „mawili“, nicht „mbili“."
+   },
+   {
+    "sw": "Hapana, tuletee maji mawili, asante.",
+    "de": "Nein, bring uns zwei Wasser, danke.",
+    "correct": false,
+    "feedback": "„Hapana“ verneint die Frage — und im selben Satz bestellst du doch."
+   }
+  ]
+ }
 }

@@ -2,8 +2,8 @@ import { dialogues as seedDialogues } from "./seed";
 import { extraDialogues } from "./dialogues-extra";
 import { isContentAvailable } from "./packs";
 import { UNLOCK_AT, coverage, knownLemmas, type CoverageResult } from "./coverage";
-import type { DialogueMeta } from "./dialogue-index";
-import type { Dialogue, DialogueSpeaker, DialogueTurn, VocabEntry } from "./types";
+import type { DialogueChoices, DialogueMeta } from "./dialogue-index";
+import type { Dialogue, DialogueChoice, DialogueSpeaker, VocabEntry } from "./types";
 
 // Zugriff auf den Dialogbestand — eine Stelle für Liste und Detailseite.
 // Die Reihenfolge ist Bestand: Pool-Dialoge zuerst, danach der Seed.
@@ -14,25 +14,48 @@ export function findDialogue(id: string): Dialogue | undefined {
   return allDialogues.find((d) => d.id === id);
 }
 
+// Entscheidungspunkte (W4.5).
+//
+// Sie kommen aus public/dialogues/<id>.json, nicht mehr aus den Zügen. Die
+// folgenden Funktionen nehmen deshalb die geladene Abbildung Zug-Index →
+// Optionen entgegen. Wer nur wissen will, *ob* ein Dialog mitspielbar ist,
+// braucht sie gar nicht: das steht als `choicePoints` im Listen-Index und
+// kostet keinen zweiten Abruf.
+
 /** Hat der Dialog mindestens einen Entscheidungspunkt? */
-export function isPlayable(dialogue: Dialogue): boolean {
-  return dialogue.turns.some((t) => (t.choices?.length ?? 0) > 0);
+export function isPlayable(choices: DialogueChoices | undefined): boolean {
+  return choicePointCount(choices) > 0;
 }
 
 /** Anzahl der Entscheidungspunkte — Nenner der Abschlussquote. */
-export function choicePointCount(dialogue: Dialogue): number {
-  return dialogue.turns.reduce((n, t) => n + ((t.choices?.length ?? 0) > 0 ? 1 : 0), 0);
+export function choicePointCount(choices: DialogueChoices | undefined): number {
+  return Object.keys(choices ?? {}).length;
+}
+
+/** Die Optionen für einen Zug, oder eine leere Liste. */
+export function choicesAt(
+  choices: DialogueChoices | undefined,
+  turnIndex: number,
+): DialogueChoice[] {
+  return choices?.[String(turnIndex)] ?? [];
 }
 
 /**
  * Die Rolle, die der Nutzer im Rollenspiel übernimmt. Wählbar sind nur
  * Sprecher, die auch Entscheidungspunkte haben — sonst wäre „Mitspielen"
  * dasselbe wie Zuhören.
+ *
+ * Ein Index außerhalb des Dialogs wird übersprungen: der Validator schließt das
+ * aus, aber eine veraltete Datei im Cache darf die Rollenwahl nicht sprengen.
  */
-export function playableSpeakers(dialogue: Dialogue): DialogueSpeaker[] {
+export function playableSpeakers(
+  dialogue: Dialogue,
+  choices: DialogueChoices | undefined,
+): DialogueSpeaker[] {
   const speakers = new Set<DialogueSpeaker>();
-  for (const turn of dialogue.turns) {
-    if ((turn.choices?.length ?? 0) > 0) speakers.add(turn.speaker);
+  for (const key of Object.keys(choices ?? {})) {
+    const turn = dialogue.turns[Number(key)];
+    if (turn) speakers.add(turn.speaker);
   }
   return [...speakers];
 }
@@ -43,9 +66,11 @@ export function playableSpeakers(dialogue: Dialogue): DialogueSpeaker[] {
  * `Math.random()` bei jedem Render würde sie bei jedem Fehlversuch springen.
  * Deshalb: deterministisch aus Zug-Index und Text.
  */
-export function orderedChoices(turn: DialogueTurn, turnIndex: number) {
-  const choices = turn.choices ?? [];
-  return [...choices]
+export function orderedChoices(
+  choices: DialogueChoices | undefined,
+  turnIndex: number,
+): DialogueChoice[] {
+  return [...choicesAt(choices, turnIndex)]
     .map((choice, i) => ({ choice, key: hash(`${turnIndex}|${choice.sw}|${i}`) }))
     .sort((a, b) => a.key - b.key)
     .map((x) => x.choice);
@@ -69,6 +94,10 @@ export interface DialogueListItem {
   meta?: DialogueMeta;
   cov: CoverageResult;
   unlocked: boolean;
+  /**
+   * Aus dem Listen-Index, nicht aus den Zügen (W4.5). Die Liste soll nicht 23
+   * Dateien laden, nur um 23 Abzeichen zu setzen.
+   */
   playable: boolean;
 }
 
@@ -114,7 +143,7 @@ export function buildDialogueList(
         meta,
         cov,
         unlocked: cov.ratio >= UNLOCK_AT,
-        playable: isPlayable(dialogue),
+        playable: (meta?.choicePoints ?? 0) > 0,
       };
     })
     .sort(compareDialogues);

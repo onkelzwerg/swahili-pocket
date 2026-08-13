@@ -286,5 +286,63 @@
    "de": "wichtig"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Umesoma habari za uchaguzi ujao?",
+    "de": "Hast du die Nachrichten zur kommenden Wahl gelesen?",
+    "correct": true
+   },
+   {
+    "sw": "Nimesoma habari za uchaguzi ujao?",
+    "de": "Habe ich die Nachrichten zur kommenden Wahl gelesen?",
+    "correct": false,
+    "feedback": "„Nime-“ ist die Ich-Form. Du fragst dein Gegenüber: „umesoma“."
+   },
+   {
+    "sw": "Umesoma habari za uchaguzi uliopita?",
+    "de": "Hast du die Nachrichten zur vergangenen Wahl gelesen?",
+    "correct": false,
+    "feedback": "„uliopita“ ist die vergangene Wahl. Es geht um die kommende: „ujao“."
+   }
+  ],
+  "3": [
+   {
+    "sw": "Lakini lazima tukubali kwamba baadhi yao wameleta mabadiliko ya kweli.",
+    "de": "Aber wir müssen anerkennen, dass einige echte Veränderungen gebracht haben.",
+    "correct": true
+   },
+   {
+    "sw": "Lakini lazima tunakubali kwamba baadhi yao wameleta mabadiliko ya kweli.",
+    "de": "Aber wir müssen anerkennen, dass einige echte Veränderungen gebracht haben.",
+    "correct": false,
+    "feedback": "Nach „lazima“ steht der Konjunktiv: „tukubali“, nicht „tunakubali“."
+   },
+   {
+    "sw": "Lakini lazima tukubali kwamba baadhi yao wataleta mabadiliko ya kweli.",
+    "de": "Aber wir müssen anerkennen, dass einige echte Veränderungen bringen werden.",
+    "correct": false,
+    "feedback": "„wata-“ ist Zukunft. Du sprichst von dem, was sie schon gebracht haben: „wameleta“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Suluhisho ni vijana kushiriki zaidi katika siasa.",
+    "de": "Die Lösung ist, dass junge Leute sich stärker in der Politik engagieren.",
+    "correct": true
+   },
+   {
+    "sw": "Tatizo ni vijana kushiriki zaidi katika siasa.",
+    "de": "Das Problem ist, dass junge Leute sich stärker in der Politik engagieren.",
+    "correct": false,
+    "feedback": "„tatizo“ heißt Problem. Du schlägst einen Ausweg vor: „suluhisho“."
+   },
+   {
+    "sw": "Suluhisho ni vijana kushiriki kidogo katika siasa.",
+    "de": "Die Lösung ist, dass junge Leute sich weniger in der Politik engagieren.",
+    "correct": false,
+    "feedback": "„kidogo“ heißt wenig. Du forderst mehr Beteiligung: „zaidi“."
+   }
+  ]
+ }
 }

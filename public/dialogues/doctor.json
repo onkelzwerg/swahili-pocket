@@ -242,5 +242,101 @@
    "de": "danke"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Daktari, sijisikii vizuri tangu jana usiku.",
+    "de": "Doktor, mir geht es seit gestern Abend nicht gut.",
+    "correct": true
+   },
+   {
+    "sw": "Daktari, ninajisikia vizuri tangu jana usiku.",
+    "de": "Doktor, mir geht es seit gestern Abend gut.",
+    "correct": false,
+    "feedback": "Damit sagst du, dir gehe es gut — dann bräuchtest du keinen Arzt."
+   },
+   {
+    "sw": "Daktari, sijisikii vizuri tangu kesho usiku.",
+    "de": "Doktor, mir geht es seit morgen Abend nicht gut.",
+    "correct": false,
+    "feedback": "„kesho“ heißt morgen. Angefangen hat es gestern: „jana“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Nina homa, kichwa kinauma na sina hamu ya kula.",
+    "de": "Ich habe Fieber, Kopfschmerzen und keinen Appetit.",
+    "correct": true
+   },
+   {
+    "sw": "Nina homa, kichwa kinauma na nina hamu ya kula.",
+    "de": "Ich habe Fieber, Kopfschmerzen und Appetit.",
+    "correct": false,
+    "feedback": "„nina hamu“ heißt, du hast Appetit. Fehlt er dir, sagst du „sina“."
+   },
+   {
+    "sw": "Nina homa, kichwa inauma na sina hamu ya kula.",
+    "de": "Ich habe Fieber, Kopfschmerzen und keinen Appetit.",
+    "correct": false,
+    "feedback": "„kichwa“ gehört zur Ki-Vi-Klasse — es heißt „kinauma“, nicht „inauma“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Ni mbaya?",
+    "de": "Ist das schlimm?",
+    "correct": true
+   },
+   {
+    "sw": "Ni mzuri?",
+    "de": "Ist das gut?",
+    "correct": false,
+    "feedback": "„mzuri“ heißt gut. Du fragst, ob es schlimm ist: „mbaya“."
+   },
+   {
+    "sw": "Ilikuwa mbaya?",
+    "de": "War es schlimm?",
+    "correct": false,
+    "feedback": "„Ili-“ ist Vergangenheit. Du fragst nach deinem Zustand jetzt: „ni“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Nichukue mara ngapi kwa siku?",
+    "de": "Wie oft am Tag soll ich sie nehmen?",
+    "correct": true
+   },
+   {
+    "sw": "Nichukue mara nyingi kwa siku?",
+    "de": "Soll ich sie oft am Tag nehmen?",
+    "correct": false,
+    "feedback": "„nyingi“ heißt viele. Nach der Anzahl fragst du mit „ngapi“."
+   },
+   {
+    "sw": "Nilichukua mara ngapi kwa siku?",
+    "de": "Wie oft am Tag habe ich sie genommen?",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit. Du fragst, was du künftig tun sollst: „nichukue“."
+   }
+  ],
+  "8": [
+   {
+    "sw": "Sawa daktari, asante sana.",
+    "de": "In Ordnung, Doktor, vielen Dank.",
+    "correct": true
+   },
+   {
+    "sw": "Sawa daktari, karibu sana.",
+    "de": "In Ordnung, Doktor, sehr willkommen.",
+    "correct": false,
+    "feedback": "„Karibu“ antwortet auf einen Dank. Hier bedankst du dich selbst: „asante“."
+   },
+   {
+    "sw": "Sawa daktari, samahani sana.",
+    "de": "In Ordnung, Doktor, Entschuldigung.",
+    "correct": false,
+    "feedback": "„Samahani“ ist die Entschuldigung. Für die Behandlung dankst du: „asante“."
+   }
+  ]
+ }
 }

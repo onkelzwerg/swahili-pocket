@@ -324,5 +324,63 @@
    "de": "es ist noch nicht zu spät"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Mabadiliko ya tabianchi yanaathiri sana kilimo nchini mwetu.",
+    "de": "Der Klimawandel beeinflusst die Landwirtschaft in unserem Land stark.",
+    "correct": true
+   },
+   {
+    "sw": "Mabadiliko ya tabianchi yaliathiri sana kilimo nchini mwetu.",
+    "de": "Der Klimawandel beeinflusste die Landwirtschaft in unserem Land stark.",
+    "correct": false,
+    "feedback": "„yali-“ ist Vergangenheit. Der Klimawandel wirkt gerade jetzt: „yanaathiri“."
+   },
+   {
+    "sw": "Mabadiliko ya tabianchi yanaathiri sana kilimo nchini mwenu.",
+    "de": "Der Klimawandel beeinflusst die Landwirtschaft in eurem Land stark.",
+    "correct": false,
+    "feedback": "„mwenu“ heißt bei euch. Ihr sprecht über euer gemeinsames Land: „mwetu“."
+   }
+  ],
+  "3": [
+   {
+    "sw": "Serikali inapaswa kuwekeza katika mbinu za umwagiliaji wa kisasa.",
+    "de": "Die Regierung sollte in moderne Bewässerungsmethoden investieren.",
+    "correct": true
+   },
+   {
+    "sw": "Serikali zinapaswa kuwekeza katika mbinu za umwagiliaji wa kisasa.",
+    "de": "Die Regierungen sollten in moderne Bewässerungsmethoden investieren.",
+    "correct": false,
+    "feedback": "Es geht um die eine Regierung — im Singular nimmt die N-Klasse „inapaswa“."
+   },
+   {
+    "sw": "Serikali inapaswa kuwekeza katika mbinu za umwagiliaji wa zamani.",
+    "de": "Die Regierung sollte in althergebrachte Bewässerungsmethoden investieren.",
+    "correct": false,
+    "feedback": "„wa zamani“ heißt althergebracht. Du forderst moderne Methoden: „wa kisasa“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Tukishirikiana, tunaweza kupunguza athari mbaya kwa kiasi kikubwa.",
+    "de": "Wenn wir zusammenarbeiten, können wir die negativen Auswirkungen deutlich reduzieren.",
+    "correct": true
+   },
+   {
+    "sw": "Tukishirikiana, tunaweza kuongeza athari mbaya kwa kiasi kikubwa.",
+    "de": "Wenn wir zusammenarbeiten, können wir die negativen Auswirkungen deutlich vergrößern.",
+    "correct": false,
+    "feedback": "„kuongeza“ heißt vergrößern. Verringern heißt „kupunguza“."
+   },
+   {
+    "sw": "Tukishirikiana, tunaweza kupunguza athari nzuri kwa kiasi kikubwa.",
+    "de": "Wenn wir zusammenarbeiten, können wir die guten Auswirkungen deutlich reduzieren.",
+    "correct": false,
+    "feedback": "„nzuri“ heißt gut. Verringert werden sollen die schlechten Folgen: „mbaya“."
+   }
+  ]
+ }
 }

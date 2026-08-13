@@ -229,5 +229,82 @@
    "de": "Post / Postamt"
   }
  },
- "choices": {}
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari. Ningependa kufungua akaunti mpya.",
+    "de": "Hallo. Ich möchte ein neues Konto eröffnen.",
+    "correct": true
+   },
+   {
+    "sw": "Habari. Ningependa kufunga akaunti mpya.",
+    "de": "Hallo. Ich möchte ein neues Konto schließen.",
+    "correct": false,
+    "feedback": "„kufunga“ heißt schließen. Eröffnen ist „kufungua“."
+   },
+   {
+    "sw": "Habari. Ninafungua akaunti mpya.",
+    "de": "Hallo. Ich eröffne ein neues Konto.",
+    "correct": false,
+    "feedback": "Damit eröffnest du es selbst. Höflich bittest du darum: „ningependa“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Akaunti ya akiba, tafadhali. Riba yake ni kiasi gani?",
+    "de": "Ein Sparkonto, bitte. Wie hoch ist der Zinssatz?",
+    "correct": true
+   },
+   {
+    "sw": "Akaunti wa akiba, tafadhali. Riba yake ni kiasi gani?",
+    "de": "Ein Sparkonto, bitte. Wie hoch ist der Zinssatz?",
+    "correct": false,
+    "feedback": "„akaunti“ gehört zur N-Klasse — der Genitiv heißt dort „ya“, nicht „wa“."
+   },
+   {
+    "sw": "Akaunti ya akiba, tafadhali. Riba yake ni nani?",
+    "de": "Ein Sparkonto, bitte. Wer ist der Zinssatz?",
+    "correct": false,
+    "feedback": "„nani“ fragt nach einer Person. Nach der Höhe fragst du mit „kiasi gani“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Inafaa. Nahitaji nyaraka zipi?",
+    "de": "Passt. Welche Unterlagen brauche ich?",
+    "correct": true
+   },
+   {
+    "sw": "Inafaa. Unahitaji nyaraka zipi?",
+    "de": "Passt. Welche Unterlagen brauchen Sie?",
+    "correct": false,
+    "feedback": "„Una-“ fragt nach ihr. Die Unterlagen brauchst du: „nahitaji“."
+   },
+   {
+    "sw": "Inafaa. Nahitaji nyaraka ngapi?",
+    "de": "Passt. Wie viele Unterlagen brauche ich?",
+    "correct": false,
+    "feedback": "„ngapi“ fragt nach der Anzahl. Du willst wissen, welche: „zipi“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Naweza kupata kadi ya benki leo?",
+    "de": "Bekomme ich die Bankkarte heute?",
+    "correct": true
+   },
+   {
+    "sw": "Unaweza kupata kadi ya benki leo?",
+    "de": "Bekommen Sie die Bankkarte heute?",
+    "correct": false,
+    "feedback": "„Una-“ fragt nach ihr. Die Karte willst du: „naweza“."
+   },
+   {
+    "sw": "Naweza kupata kadi ya benki jana?",
+    "de": "Bekomme ich die Bankkarte gestern?",
+    "correct": false,
+    "feedback": "„jana“ ist gestern. Du fragst nach heute: „leo“."
+   }
+  ]
+ }
 }

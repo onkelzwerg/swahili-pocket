@@ -16,6 +16,7 @@
     "stories:check": "node scripts/generate-stories.mjs --check",
     "dialogues:validate": "node scripts/generate-dialogues.mjs --validate",
     "dialogues:brief": "node scripts/generate-dialogues.mjs --brief",
+    "dialogues:brief-choices": "node scripts/generate-dialogues.mjs --brief-choices",
     "dialogues:check": "node scripts/generate-dialogues.mjs --check",
     "dialogues:gaps": "node scripts/generate-dialogues.mjs --gaps",
     "test": "vitest run",
