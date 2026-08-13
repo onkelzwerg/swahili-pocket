@@ -1,0 +1,367 @@
+{
+ "id": "phone_call",
+ "lemmas": [
+  "asante",
+  "bwana",
+  "halo",
+  "ipi",
+  "jina",
+  "kuja",
+  "kuomba",
+  "kuongea",
+  "kupanga",
+  "kupenda",
+  "kupiga",
+  "kupokea",
+  "kurudi",
+  "kusaidia",
+  "kuweza",
+  "kwa",
+  "lini",
+  "mara",
+  "mbili",
+  "mchana",
+  "miadi",
+  "mkutano",
+  "moja",
+  "msaada",
+  "na",
+  "nane",
+  "nani",
+  "ni",
+  "ofisi",
+  "saa",
+  "saba",
+  "samahani",
+  "sana",
+  "sasa",
+  "sawa",
+  "sifuri",
+  "simu",
+  "takriban",
+  "wiki"
+ ],
+ "glosses": {
+  "halo": {
+   "lemma": "halo",
+   "de": "hallo (am Telefon)"
+  },
+  "naomba": {
+   "lemma": "kuomba",
+   "de": "ich bitte / ich möchte"
+  },
+  "kuongea": {
+   "lemma": "kuongea",
+   "de": "zu sprechen / sprechen"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "mit / und"
+  },
+  "bwana": {
+   "lemma": "bwana",
+   "de": "Herr"
+  },
+  "mwangi": {
+   "lemma": "mwangi",
+   "de": "Mwangi (Nachname)",
+   "proper": true
+  },
+  "samahani": {
+   "lemma": "samahani",
+   "de": "Entschuldigung"
+  },
+  "hayupo": {
+   "lemma": "-po",
+   "de": "er ist nicht da (verneinte Ortskopula, Klasse 1)",
+   "structure": true
+  },
+  "ofisini": {
+   "lemma": "ofisi",
+   "de": "im Büro (Lokativ von ofisi)"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt (in „sasa hivi\" = gerade jetzt)"
+  },
+  "hivi": {
+   "lemma": "hivi",
+   "de": "diese/so (Demonstrativ Vi-Klasse; in „sasa hivi\" = gerade jetzt)",
+   "structure": true
+  },
+  "yuko": {
+   "lemma": "-ko",
+   "de": "er ist (an einem Ort) (Ortskopula, Klasse 1)",
+   "structure": true
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "in / bei (Lokativpräposition)",
+   "structure": true
+  },
+  "mkutano": {
+   "lemma": "mkutano",
+   "de": "Besprechung / Meeting"
+  },
+  "atarudi": {
+   "lemma": "kurudi",
+   "de": "er wird zurückkommen"
+  },
+  "lini": {
+   "lemma": "lini",
+   "de": "wann"
+  },
+  "takriban": {
+   "lemma": "takriban",
+   "de": "etwa / ungefähr"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr / Stunde (hier: um … Uhr)"
+  },
+  "nane": {
+   "lemma": "nane",
+   "de": "acht (Suaheli-Stunde 8 = 14 Uhr)"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "nachmittags / mittags"
+  },
+  "naweza": {
+   "lemma": "kuweza",
+   "de": "ich kann"
+  },
+  "kukusaidia": {
+   "lemma": "kusaidia",
+   "de": "dir/Ihnen zu helfen"
+  },
+  "ningependa": {
+   "lemma": "kupenda",
+   "de": "ich würde gern"
+  },
+  "kupanga": {
+   "lemma": "kupanga",
+   "de": "zu vereinbaren / zu planen"
+  },
+  "miadi": {
+   "lemma": "miadi",
+   "de": "Termin / Verabredung"
+  },
+  "naye": {
+   "lemma": "na",
+   "de": "mit ihm (na + yeye)"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Woche"
+  },
+  "ijayo": {
+   "lemma": "kuja",
+   "de": "kommende (in „wiki ijayo\" = nächste Woche)"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "gut / in Ordnung"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "lako": {
+   "lemma": "-ako",
+   "de": "dein/Ihr (Possessiv, Ji/Ma-Klasse)",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "nani": {
+   "lemma": "nani",
+   "de": "wer / wie (bei Namen: „jina ni nani\" = wie ist der Name)"
+  },
+  "simu": {
+   "lemma": "simu",
+   "de": "Telefon / Telefonnummer"
+  },
+  "yako": {
+   "lemma": "-ako",
+   "de": "dein/Ihr (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "ipi": {
+   "lemma": "ipi",
+   "de": "welche (Fragewort, N-Klasse)"
+  },
+  "langu": {
+   "lemma": "-angu",
+   "de": "mein (Possessiv, Ji/Ma-Klasse)",
+   "structure": true
+  },
+  "anna": {
+   "lemma": "anna",
+   "de": "Anna (Vorname)",
+   "proper": true
+  },
+  "schmidt": {
+   "lemma": "schmidt",
+   "de": "Schmidt (Nachname)",
+   "proper": true
+  },
+  "yangu": {
+   "lemma": "-angu",
+   "de": "meine (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "sufuri": {
+   "lemma": "sifuri",
+   "de": "null (Variante von sifuri)"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "nimepokea": {
+   "lemma": "kupokea",
+   "de": "ich habe es erhalten / verstanden"
+  },
+  "atakupigia": {
+   "lemma": "kupiga",
+   "de": "er wird dich/Sie anrufen (mit simu)"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "Mal (in „mara …“ = sobald)"
+  },
+  "atakaporudi": {
+   "lemma": "kurudi",
+   "de": "wenn/sobald er zurückkommt"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr / vielen"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "msaada": {
+   "lemma": "msaada",
+   "de": "Hilfe"
+  },
+  "wako": {
+   "lemma": "-ako",
+   "de": "dein/Ihre (Possessiv, M-Wa-Klasse)",
+   "structure": true
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Halo, naomba kuongea na Bwana Mwangi.",
+    "de": "Hallo, ich möchte bitte Herrn Mwangi sprechen.",
+    "correct": true
+   },
+   {
+    "sw": "Halo, ninaongea na Bwana Mwangi.",
+    "de": "Hallo, ich spreche mit Herrn Mwangi.",
+    "correct": false,
+    "feedback": "Damit behauptest du, du sprichst schon mit ihm. Höflich bittest du: „naomba kuongea“."
+   },
+   {
+    "sw": "Halo, unaomba kuongea na Bwana Mwangi?",
+    "de": "Hallo, möchtest du Herrn Mwangi sprechen?",
+    "correct": false,
+    "feedback": "„Una-“ ist die Du-Form. Von dir selbst sprichst du mit „naomba“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Atarudi lini?",
+    "de": "Wann kommt er zurück?",
+    "correct": true
+   },
+   {
+    "sw": "Alirudi lini?",
+    "de": "Wann kam er zurück?",
+    "correct": false,
+    "feedback": "„Ali-“ ist Vergangenheit. Er ist noch in der Besprechung: „atarudi“."
+   },
+   {
+    "sw": "Atarudi wapi?",
+    "de": "Wohin kommt er zurück?",
+    "correct": false,
+    "feedback": "„wapi“ fragt nach dem Ort. Nach dem Zeitpunkt fragst du mit „lini“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Ningependa kupanga miadi naye wiki ijayo.",
+    "de": "Ich würde gern einen Termin mit ihm für nächste Woche vereinbaren.",
+    "correct": true
+   },
+   {
+    "sw": "Ningependa kupanga miadi nawe wiki ijayo.",
+    "de": "Ich würde gern einen Termin mit dir für nächste Woche vereinbaren.",
+    "correct": false,
+    "feedback": "„nawe“ heißt mit dir. Der Termin ist mit ihm: „naye“."
+   },
+   {
+    "sw": "Ningependa kupanga miadi naye wiki iliyopita.",
+    "de": "Ich würde gern einen Termin mit ihm für letzte Woche vereinbaren.",
+    "correct": false,
+    "feedback": "„iliyopita“ ist die vergangene Woche. Einen Termin macht man für die kommende."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Jina langu ni Anna Schmidt, simu yangu ni sufuri saba moja mbili...",
+    "de": "Mein Name ist Anna Schmidt, meine Nummer ist null sieben eins zwei...",
+    "correct": true
+   },
+   {
+    "sw": "Jina lako ni Anna Schmidt, simu yangu ni sufuri saba moja mbili...",
+    "de": "Dein Name ist Anna Schmidt, meine Nummer ist null sieben eins zwei...",
+    "correct": false,
+    "feedback": "„lako“ heißt dein. Deinen eigenen Namen nennst du mit „langu“."
+   },
+   {
+    "sw": "Jina langu ni Anna Schmidt, simu lake ni sufuri saba moja mbili...",
+    "de": "Mein Name ist Anna Schmidt, seine Nummer ist null sieben eins zwei...",
+    "correct": false,
+    "feedback": "„lake“ heißt seine und passt auch nicht zur N-Klasse von „simu“: „simu yangu“."
+   }
+  ],
+  "8": [
+   {
+    "sw": "Asante sana kwa msaada wako.",
+    "de": "Vielen Dank für Ihre Hilfe.",
+    "correct": true
+   },
+   {
+    "sw": "Asante sana kwa msaada wangu.",
+    "de": "Vielen Dank für meine Hilfe.",
+    "correct": false,
+    "feedback": "„wangu“ heißt meine. Geholfen hat sie dir: „wako“."
+   },
+   {
+    "sw": "Karibu sana kwa msaada wako.",
+    "de": "Sehr willkommen für Ihre Hilfe.",
+    "correct": false,
+    "feedback": "„Karibu“ antwortet auf einen Dank. Danken tust du mit „asante“."
+   }
+  ]
+ }
+}

@@ -1,0 +1,283 @@
+{
+ "id": "weekend_plans",
+ "lemmas": [
+  "asubuhi",
+  "bado",
+  "bila shaka",
+  "chakula",
+  "gani",
+  "gari",
+  "jua",
+  "jumamosi",
+  "kinywaji",
+  "kuamua",
+  "kuchukua",
+  "kukutana",
+  "kuleta",
+  "kuoga",
+  "kuondoka",
+  "kupumzika",
+  "kusahau",
+  "kuwa na",
+  "kuweza",
+  "kwa",
+  "kwenda",
+  "mafuta",
+  "mimi",
+  "miwani",
+  "moja",
+  "mpango",
+  "mzuri",
+  "na",
+  "ngapi",
+  "nyumba",
+  "pamoja",
+  "pengine",
+  "pwani",
+  "saa",
+  "sawa",
+  "vizuri",
+  "wazo",
+  "wikendi"
+ ],
+ "glosses": {
+  "una": {
+   "lemma": "kuwa na",
+   "de": "du hast"
+  },
+  "mpango": {
+   "lemma": "mpango",
+   "de": "Plan"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welcher, was für ein"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "wikendi": {
+   "lemma": "wikendi",
+   "de": "Wochenende"
+  },
+  "sijaamua": {
+   "lemma": "kuamua",
+   "de": "ich habe mich nicht entschieden"
+  },
+  "bado": {
+   "lemma": "bado",
+   "de": "noch"
+  },
+  "pengine": {
+   "lemma": "pengine",
+   "de": "vielleicht"
+  },
+  "nitaenda": {
+   "lemma": "kwenda",
+   "de": "ich werde fahren, ich gehe"
+  },
+  "pwani": {
+   "lemma": "pwani",
+   "de": "Küste, Strand"
+  },
+  "kupumzika": {
+   "lemma": "kupumzika",
+   "de": "um auszuruhen, zum Entspannen"
+  },
+  "wazo": {
+   "lemma": "wazo",
+   "de": "Idee"
+  },
+  "zuri": {
+   "lemma": "mzuri",
+   "de": "gut, schön (Form der Ji-Ma-Klasse)"
+  },
+  "tunaweza": {
+   "lemma": "kuweza",
+   "de": "wir können"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "gehen, fahren"
+  },
+  "pamoja": {
+   "lemma": "pamoja",
+   "de": "zusammen"
+  },
+  "bila": {
+   "lemma": "bila shaka",
+   "de": "klar, natürlich (wörtlich: ohne Zweifel)"
+  },
+  "shaka": {
+   "lemma": "bila shaka",
+   "de": "(Teil von: bila shaka = klar, natürlich)"
+  },
+  "tutachukua": {
+   "lemma": "kuchukua",
+   "de": "wir nehmen, wir werden nehmen"
+  },
+  "gari": {
+   "lemma": "gari",
+   "de": "Auto"
+  },
+  "langu": {
+   "lemma": "-angu",
+   "de": "mein (Possessiv, Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "nitaleta": {
+   "lemma": "kuleta",
+   "de": "ich werde mitbringen"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "vinywaji": {
+   "lemma": "kinywaji",
+   "de": "Getränke (Plural von kinywaji)"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "schön, gut"
+  },
+  "tutaondoka": {
+   "lemma": "kuondoka",
+   "de": "wir werden losfahren"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Uhrzeit"
+  },
+  "ngapi": {
+   "lemma": "ngapi",
+   "de": "wie viel (saa ngapi = um wie viel Uhr)"
+  },
+  "jumamosi": {
+   "lemma": "jumamosi",
+   "de": "Samstag, am Samstag"
+  },
+  "tukutane": {
+   "lemma": "kukutana",
+   "de": "treffen wir uns (Subjunktiv)"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins (saa moja = 7 Uhr nach Suaheli-Zählung)"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "morgens, am Morgen"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "zu Hause (Lokativ von nyumba)"
+  },
+  "kwangu": {
+   "lemma": "-angu",
+   "de": "bei mir (Possessiv am Lokativ kwa-)",
+   "structure": true
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "gut, in Ordnung"
+  },
+  "tusisahau": {
+   "lemma": "kusahau",
+   "de": "vergessen wir nicht"
+  },
+  "kuleta": {
+   "lemma": "kuleta",
+   "de": "mitzubringen, bringen"
+  },
+  "miwani": {
+   "lemma": "miwani",
+   "de": "Brille (miwani ya jua = Sonnenbrille)"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von, für (Genitiv, N-/Ma-Klasse)",
+   "structure": true
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  },
+  "mafuta": {
+   "lemma": "mafuta",
+   "de": "Öl, Fett (hier: Creme)"
+  },
+  "kuoga": {
+   "lemma": "kuoga",
+   "de": "baden (kuoga jua = sonnenbaden)"
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Una mpango gani kwa wikendi?",
+    "de": "Was hast du fürs Wochenende geplant?",
+    "correct": true
+   },
+   {
+    "sw": "Nina mpango gani kwa wikendi?",
+    "de": "Was habe ich fürs Wochenende geplant?",
+    "correct": false,
+    "feedback": "„Nina“ heißt ich habe. Du fragst dein Gegenüber: „una“."
+   },
+   {
+    "sw": "Una mpango wapi kwa wikendi?",
+    "de": "Wo hast du fürs Wochenende geplant?",
+    "correct": false,
+    "feedback": "„wapi“ fragt nach dem Ort. Nach dem Vorhaben fragst du mit „gani“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Mimi nitaleta chakula na vinywaji.",
+    "de": "Ich bringe Essen und Getränke mit.",
+    "correct": true
+   },
+   {
+    "sw": "Mimi nilileta chakula na vinywaji.",
+    "de": "Ich brachte Essen und Getränke mit.",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit. Der Ausflug kommt erst: „nita-“."
+   },
+   {
+    "sw": "Mimi nitachukua chakula na vinywaji.",
+    "de": "Ich nehme Essen und Getränke.",
+    "correct": false,
+    "feedback": "„kuchukua“ heißt nehmen. Zum Treffen bringst du etwas mit: „kuleta“."
+   }
+  ],
+  "7": [
+   {
+    "sw": "Sawa. Tusisahau kuleta miwani ya jua na mafuta ya kuoga jua.",
+    "de": "Gut. Vergessen wir nicht Sonnenbrillen und Sonnencreme.",
+    "correct": true
+   },
+   {
+    "sw": "Sawa. Tusahau kuleta miwani ya jua na mafuta ya kuoga jua.",
+    "de": "Gut. Vergessen wir Sonnenbrillen und Sonnencreme.",
+    "correct": false,
+    "feedback": "„Tusahau“ hieße, wir sollen es vergessen. Verneint heißt der Konjunktiv „tusisahau“."
+   },
+   {
+    "sw": "Sawa. Tusisahau kuleta miwani wa jua na mafuta ya kuoga jua.",
+    "de": "Gut. Vergessen wir nicht Sonnenbrillen und Sonnencreme.",
+    "correct": false,
+    "feedback": "„miwani“ nimmt den Genitiv „ya“, nicht „wa“ — wie im Rest des Satzes."
+   }
+  ]
+ }
+}

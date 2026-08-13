@@ -1,0 +1,297 @@
+{
+ "id": "arbeit-und-karriere",
+ "title": "Arbeit & Bewerbung",
+ "emoji": "💼",
+ "description": "Bewerbung, Projekte, Strategie — Wortschatz für „Vorstellungsgespräch“ und „Arbeitsbesprechung“.",
+ "entries": [
+  {
+   "swahili": "asilimia",
+   "german": "Prozent",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Der Preis ist um zehn Prozent gestiegen.",
+     "sw": "Bei imepanda kwa asilimia kumi."
+    },
+    {
+     "de": "Fünfzig Prozent der Angestellten sind Frauen.",
+     "sw": "Asilimia hamsini ya wafanyakazi ni wanawake."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "bajeti",
+   "german": "Budget",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Unser Budget ist klein.",
+     "sw": "Bajeti yetu ni ndogo."
+    },
+    {
+     "de": "Wir haben das Budget für dieses Jahr vorbereitet.",
+     "sw": "Tumeandaa bajeti ya mwaka huu."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "fursa",
+   "german": "Gelegenheit / Chance",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Das ist eine gute Chance für mich.",
+     "sw": "Hii ni fursa nzuri kwangu."
+    },
+    {
+     "de": "Ich möchte die Gelegenheit bekommen, hier zu arbeiten.",
+     "sw": "Nataka kupata fursa ya kufanya kazi hapa."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "jukumu",
+   "german": "Aufgabe / Verantwortung",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Das ist meine Aufgabe.",
+     "sw": "Hili ni jukumu langu."
+    },
+    {
+     "de": "Jeder hat seine eigenen Aufgaben.",
+     "sw": "Kila mtu ana majukumu yake."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kubuni",
+   "german": "entwerfen / entwickeln",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Ich entwerfe neue Kleidung.",
+     "sw": "Ninabuni nguo mpya."
+    },
+    {
+     "de": "Wir haben ein neues Spiel für Kinder entwickelt.",
+     "sw": "Tumebuni mchezo mpya kwa watoto."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kujiunga",
+   "german": "beitreten / sich anschließen",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Ich möchte bei Ihrer Firma anfangen.",
+     "sw": "Nataka kujiunga na kampuni yenu."
+    },
+    {
+     "de": "Sie ist letztes Jahr zu unserem Team gekommen.",
+     "sw": "Alijiunga na timu yetu mwaka jana."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kukabili",
+   "german": "sich stellen / bewältigen",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Bei der Arbeit stehen wir vor vielen Problemen.",
+     "sw": "Tunakabili matatizo mengi kazini."
+    },
+    {
+     "de": "Wir müssen dieses Problem gemeinsam angehen.",
+     "sw": "Lazima tukabili tatizo hili pamoja."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "kuongoza",
+   "german": "führen / leiten",
+   "partOfSpeech": "verb",
+   "nounClass": null,
+   "examples": [
+    {
+     "de": "Mama leitet unsere Gruppe.",
+     "sw": "Mama anaongoza kikundi chetu."
+    },
+    {
+     "de": "Wer leitet heute die Besprechung?",
+     "sw": "Nani ataongoza mkutano leo?"
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "maendeleo",
+   "german": "Entwicklung / Fortschritt",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Unsere Arbeit macht gute Fortschritte.",
+     "sw": "Maendeleo ya kazi yetu ni mazuri."
+    },
+    {
+     "de": "Wir wollen die Entwicklung unseres Dorfes.",
+     "sw": "Tunataka maendeleo ya kijiji chetu."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "mahojiano",
+   "german": "Vorstellungsgespräch / Interview",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Ich habe morgen ein Vorstellungsgespräch.",
+     "sw": "Nina mahojiano ya kazi kesho."
+    },
+    {
+     "de": "Das Gespräch ist sehr gut gelaufen.",
+     "sw": "Mahojiano yalikwenda vizuri sana."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "maono",
+   "german": "Vision / Vorstellung",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Unser Chef hat eine große Vision.",
+     "sw": "Bosi wetu ana maono makubwa."
+    },
+    {
+     "de": "Unsere Vision ist es, Menschen zu helfen.",
+     "sw": "Maono yetu ni kusaidia watu."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "matarajio",
+   "german": "Erwartungen",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Meine Erwartungen sind hoch.",
+     "sw": "Matarajio yangu ni makubwa."
+    },
+    {
+     "de": "Diese Arbeit hat unsere Erwartungen erfüllt.",
+     "sw": "Kazi hii imefikia matarajio yetu."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "mbunifu",
+   "german": "Designer/in / Gestalter/in (auch: kreativ)",
+   "partOfSpeech": "noun",
+   "nounClass": "M-Wa",
+   "examples": [
+    {
+     "de": "Meine Schwester ist Modedesignerin.",
+     "sw": "Dada yangu ni mbunifu wa nguo."
+    },
+    {
+     "de": "Zwei Designer arbeiten hier.",
+     "sw": "Wabunifu wawili wanafanya kazi hapa."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "mkakati",
+   "german": "Strategie",
+   "partOfSpeech": "noun",
+   "nounClass": "M-Mi",
+   "examples": [
+    {
+     "de": "Wir haben eine neue Strategie für die Arbeit.",
+     "sw": "Tuna mkakati mpya wa kazi."
+    },
+    {
+     "de": "Unsere Strategie ist einfach.",
+     "sw": "Mkakati wetu ni rahisi."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "tangazo",
+   "german": "Anzeige / Ausschreibung",
+   "partOfSpeech": "noun",
+   "nounClass": "Ji-Ma",
+   "examples": [
+    {
+     "de": "Ich habe eine Stellenanzeige in der Zeitung gesehen.",
+     "sw": "Nimeona tangazo la kazi kwenye gazeti."
+    },
+    {
+     "de": "Diese Anzeige kam im Radio.",
+     "sw": "Tangazo hilo lilikuwa kwenye redio."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "uongozi",
+   "german": "Leitung / Führung",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "Die Leitung unserer Schule ist gut.",
+     "sw": "Uongozi wa shule yetu ni mzuri."
+    },
+    {
+     "de": "Unsere Firma hat eine neue Leitung.",
+     "sw": "Kampuni yetu ina uongozi mpya."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "uvumbuzi",
+   "german": "Erfindung / Entdeckung",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "Diese Erfindung ist sehr wichtig.",
+     "sw": "Uvumbuzi huu ni muhimu sana."
+    },
+    {
+     "de": "Wir brauchen bei der Arbeit mehr Innovation.",
+     "sw": "Tunahitaji uvumbuzi zaidi kazini."
+    }
+   ],
+   "topics": []
+  }
+ ]
+}

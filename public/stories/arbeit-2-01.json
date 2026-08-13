@@ -1,0 +1,307 @@
+{
+ "id": "arbeit-2-01",
+ "title": "Hesabu ya Bakari",
+ "titleDe": "Bakaris Abrechnung",
+ "band": 2,
+ "topic": "Arbeit",
+ "emoji": "🧮",
+ "lemmas": [
+  "bado",
+  "bidii",
+  "bili",
+  "furaha",
+  "haraka",
+  "hesabu",
+  "jengo",
+  "jioni",
+  "kampuni",
+  "karibu",
+  "katika",
+  "kazi",
+  "kila",
+  "kitu",
+  "kompyuta",
+  "kuanza",
+  "kubwa",
+  "kufanya",
+  "kuharibika",
+  "kujua",
+  "kumaliza",
+  "kuonyesha",
+  "kusaidia",
+  "kusema",
+  "kuwa",
+  "kwa",
+  "kwanza",
+  "kwenda",
+  "lakini",
+  "lazima",
+  "leo",
+  "mbili",
+  "meza",
+  "moja",
+  "na",
+  "ngumu",
+  "ni",
+  "njia",
+  "nyumba",
+  "saa",
+  "sahihi",
+  "sana",
+  "sasa",
+  "si",
+  "siku",
+  "stesheni"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Leo ilikuwa siku ya kwanza ya Bakari kazini. Kampuni ilikuwa katika jengo kubwa karibu na stesheni. Bakari alikuwa na furaha, lakini bado hakujua kila kitu.",
+   "de": "Heute war Bakaris erster Arbeitstag. Die Firma lag in einem großen Gebäude nahe beim Bahnhof. Bakari freute sich, aber er kannte noch nicht alles."
+  },
+  {
+   "sw": "Rehema alimwonyesha meza yake na kompyuta moja. Alisema kazi si ngumu sana, lakini lazima afanye kazi kwa bidii.",
+   "de": "Rehema zeigte ihm seinen Tisch und einen Computer. Sie sagte, die Arbeit sei nicht besonders schwierig, man müsse sie aber fleißig machen."
+  },
+  {
+   "sw": "Bakari alianza kazi yake. Alifanya hesabu ya bili kwa saa mbili. Kompyuta iliharibika, lakini Rehema alimsaidia haraka.",
+   "de": "Bakari machte sich an die Arbeit. Zwei Stunden lang rechnete er die Belege durch. Der Computer ging kaputt, aber Rehema half ihm schnell."
+  },
+  {
+   "sw": "Jioni Bakari alimaliza kazi yake. Rehema alisema hesabu ni sahihi. Bakari alikwenda nyumbani. Sasa alijua njia yake ya kufanya kazi hii.",
+   "de": "Am Abend war Bakari mit seiner Arbeit fertig. Rehema sagte, die Abrechnung stimme genau. Bakari ging nach Hause. Jetzt kannte er seinen Weg, diese Arbeit zu machen."
+  }
+ ],
+ "glosses": {
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "es war / sie war"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von / der (Verbindungswort)",
+   "structure": true
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "erste/r"
+  },
+  "bakari": {
+   "lemma": "bakari",
+   "de": "Bakari (Männername)",
+   "proper": true
+  },
+  "kazini": {
+   "lemma": "kazi",
+   "de": "bei der Arbeit"
+  },
+  "kampuni": {
+   "lemma": "kampuni",
+   "de": "Firma"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "jengo": {
+   "lemma": "jengo",
+   "de": "Gebäude"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "in der Nähe"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und / mit"
+  },
+  "stesheni": {
+   "lemma": "stesheni",
+   "de": "Bahnhof"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "furaha": {
+   "lemma": "furaha",
+   "de": "Freude"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "hakujua": {
+   "lemma": "kujua",
+   "de": "er wusste nicht"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jedes"
+  },
+  "kitu": {
+   "lemma": "kitu",
+   "de": "Ding"
+  },
+  "bado": {
+   "lemma": "bado",
+   "de": "noch"
+  },
+  "rehema": {
+   "lemma": "rehema",
+   "de": "Rehema (Frauenname)",
+   "proper": true
+  },
+  "alimwonyesha": {
+   "lemma": "kuonyesha",
+   "de": "sie zeigte ihm"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "sein/seine",
+   "structure": true
+  },
+  "kompyuta": {
+   "lemma": "kompyuta",
+   "de": "Computer"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "einen"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sie sagte"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "si": {
+   "lemma": "si",
+   "de": "ist nicht"
+  },
+  "ngumu": {
+   "lemma": "ngumu",
+   "de": "schwierig"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "man muss"
+  },
+  "kufanya": {
+   "lemma": "kufanya",
+   "de": "machen"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit / lang"
+  },
+  "bidii": {
+   "lemma": "bidii",
+   "de": "Fleiß"
+  },
+  "alianza": {
+   "lemma": "kuanza",
+   "de": "er begann"
+  },
+  "alifanya": {
+   "lemma": "kufanya",
+   "de": "er machte"
+  },
+  "hesabu": {
+   "lemma": "hesabu",
+   "de": "Abrechnung"
+  },
+  "bili": {
+   "lemma": "bili",
+   "de": "Belege / Rechnungen"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunden"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "iliharibika": {
+   "lemma": "kuharibika",
+   "de": "er ging kaputt"
+  },
+  "alimsaidia": {
+   "lemma": "kusaidia",
+   "de": "sie half ihm"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "alimaliza": {
+   "lemma": "kumaliza",
+   "de": "er beendete"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "sahihi": {
+   "lemma": "sahihi",
+   "de": "genau / richtig"
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "er ging"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "alijua": {
+   "lemma": "kujua",
+   "de": "er wusste / er kannte"
+  },
+  "njia": {
+   "lemma": "njia",
+   "de": "Weg"
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "diese",
+   "structure": true
+  },
+  "afanye": {
+   "lemma": "kufanya",
+   "de": "sie/er soll machen"
+  }
+ },
+ "audio": null
+}

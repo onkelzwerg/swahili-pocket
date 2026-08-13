@@ -1,0 +1,266 @@
+{
+ "id": "hotel",
+ "lemmas": [
+  "arobaini",
+  "asubuhi",
+  "bei",
+  "bure",
+  "chakula",
+  "chumba",
+  "dola",
+  "gani",
+  "habari",
+  "intaneti",
+  "karibu",
+  "kitanda",
+  "kuchukua",
+  "kujumuisha",
+  "kuna",
+  "kuomba",
+  "kuwa na",
+  "kwa",
+  "mbili",
+  "mgeni",
+  "moja",
+  "na",
+  "ndiyo",
+  "ni",
+  "pasipoti",
+  "usajili",
+  "usiku",
+  "vizuri",
+  "wifi"
+ ],
+ "glosses": {
+  "habari": {
+   "lemma": "habari",
+   "de": "Hallo, wie geht's? (wörtlich: Neuigkeit)"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "chumba": {
+   "lemma": "chumba",
+   "de": "Zimmer"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, pro"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht, Nächte"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei (N-Klasse)"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "willkommen!"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (Bejahungspartikel)"
+  },
+  "tunacho": {
+   "lemma": "kuwa na",
+   "de": "wir haben es (Ki-Klasse)"
+  },
+  "cha": {
+   "lemma": "cha",
+   "de": "von, mit (Genitiv, Ki-Klasse)",
+   "structure": true
+  },
+  "kitanda": {
+   "lemma": "kitanda",
+   "de": "Bett"
+  },
+  "kimoja": {
+   "lemma": "moja",
+   "de": "ein, eines (Ki-Klasse)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "vitanda": {
+   "lemma": "kitanda",
+   "de": "Betten"
+  },
+  "viwili": {
+   "lemma": "mbili",
+   "de": "zwei (Vi-Klasse)"
+  },
+  "bei": {
+   "lemma": "bei",
+   "de": "Preis"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s, was für (hier: bei gani = wie viel kostet)"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "eine, eines (M-Wa-/U-Klasse)"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist, kostet (Kopula)"
+  },
+  "dola": {
+   "lemma": "dola",
+   "de": "Dollar"
+  },
+  "arobaini": {
+   "lemma": "arobaini",
+   "de": "vierzig"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen (chakula cha asubuhi = Frühstück)"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "kimejumuishwa": {
+   "lemma": "kujumuisha",
+   "de": "es ist inbegriffen (Ki-Klasse, Passiv)"
+  },
+  "intaneti": {
+   "lemma": "intaneti",
+   "de": "Internet"
+  },
+  "chumbani": {
+   "lemma": "chumba",
+   "de": "im Zimmer"
+  },
+  "wifi": {
+   "lemma": "wifi",
+   "de": "WLAN"
+  },
+  "bure": {
+   "lemma": "bure",
+   "de": "kostenlos, gratis"
+  },
+  "wageni": {
+   "lemma": "mgeni",
+   "de": "Gäste"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle (M-Wa-Klasse Plural)",
+   "structure": true
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, schön"
+  },
+  "nitachukua": {
+   "lemma": "kuchukua",
+   "de": "ich werde nehmen"
+  },
+  "hicho": {
+   "lemma": "hicho",
+   "de": "dieses (Demonstrativ, Ki-Klasse)",
+   "structure": true
+  },
+  "naomba": {
+   "lemma": "kuomba",
+   "de": "ich bitte um, ich brauche"
+  },
+  "pasipoti": {
+   "lemma": "pasipoti",
+   "de": "Pass, Reisepass"
+  },
+  "yako": {
+   "lemma": "-ako",
+   "de": "dein/deine",
+   "structure": true
+  },
+  "usajili": {
+   "lemma": "usajili",
+   "de": "Anmeldung, Registrierung"
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari. Kuna chumba kwa usiku mbili?",
+    "de": "Hallo. Gibt es ein Zimmer für zwei Nächte?",
+    "correct": true
+   },
+   {
+    "sw": "Habari. Kuna chumba kwa usiku wawili?",
+    "de": "Hallo. Gibt es ein Zimmer für zwei Nächte?",
+    "correct": false,
+    "feedback": "„wawili“ zählt Personen. „usiku“ gehört zur N-Klasse und bekommt „mbili“."
+   },
+   {
+    "sw": "Habari. Hakuna chumba kwa usiku mbili?",
+    "de": "Hallo. Gibt es kein Zimmer für zwei Nächte?",
+    "correct": false,
+    "feedback": "„Hakuna“ verneint. Du fragst, ob es ein Zimmer gibt: „kuna“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Bei gani kwa usiku mmoja?",
+    "de": "Was kostet eine Nacht?",
+    "correct": true
+   },
+   {
+    "sw": "Ni ghali kwa usiku mmoja?",
+    "de": "Ist es teuer für eine Nacht?",
+    "correct": false,
+    "feedback": "Damit fragst du nur, ob es teuer ist. Die Zahl bekommst du mit „bei gani“."
+   },
+   {
+    "sw": "Bei nzuri kwa usiku mmoja?",
+    "de": "Ein guter Preis für eine Nacht?",
+    "correct": false,
+    "feedback": "Das ist keine Frage nach dem Preis. „bei gani“ heißt „wie teuer“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Kuna intaneti chumbani?",
+    "de": "Gibt es Internet im Zimmer?",
+    "correct": true
+   },
+   {
+    "sw": "Kuna intaneti chumba?",
+    "de": "Gibt es Internet Zimmer?",
+    "correct": false,
+    "feedback": "„im Zimmer“ verlangt den Lokativ auf -ni: „chumbani“."
+   },
+   {
+    "sw": "Kuna chumba intanetini?",
+    "de": "Gibt es ein Zimmer im Internet?",
+    "correct": false,
+    "feedback": "Das dreht die Frage um. Du fragst nach Internet im Zimmer, nicht umgekehrt."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Vizuri. Nitachukua chumba hicho.",
+    "de": "Schön. Ich nehme dieses Zimmer.",
+    "correct": true
+   },
+   {
+    "sw": "Vizuri. Nilichukua chumba hicho.",
+    "de": "Schön. Ich nahm dieses Zimmer.",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit. Du entscheidest dich gerade jetzt: „nita-“."
+   },
+   {
+    "sw": "Vizuri. Nitachukua chumba hiki.",
+    "de": "Schön. Ich nehme dieses Zimmer hier.",
+    "correct": false,
+    "feedback": "„hiki“ zeigt auf etwas vor dir. Gemeint ist das eben genannte Zimmer: „hicho“."
+   }
+  ]
+ }
+}

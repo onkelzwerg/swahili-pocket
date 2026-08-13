@@ -1,0 +1,488 @@
+{
+ "id": "job_interview",
+ "lemmas": [
+  "asante",
+  "baada ya",
+  "changamoto",
+  "endelevu",
+  "fupi",
+  "fursa",
+  "gani",
+  "jibu",
+  "jina",
+  "jukumu",
+  "kabisa",
+  "kampuni",
+  "karibu",
+  "katika",
+  "kazi",
+  "kubuni",
+  "kubwa",
+  "kuelewa",
+  "kueleza",
+  "kuhusu",
+  "kujadili",
+  "kujitambulisha",
+  "kujiunga",
+  "kukabili",
+  "kuongoza",
+  "kupata",
+  "kupenda",
+  "kupoteza",
+  "kutaka",
+  "kuvutia",
+  "kuwa na",
+  "kuwahi",
+  "kuwasiliana",
+  "kuweza",
+  "kwa",
+  "maendeleo",
+  "mahojiano",
+  "maono",
+  "mara moja",
+  "matarajio",
+  "mbili",
+  "mkakati",
+  "mpya",
+  "mradi",
+  "mshahara",
+  "mteja",
+  "mwaka",
+  "mwezi",
+  "mzuri",
+  "na",
+  "ndani",
+  "ni",
+  "nini",
+  "saba",
+  "sana",
+  "sita",
+  "tafadhali",
+  "tatu",
+  "timu",
+  "uongozi",
+  "uvumbuzi",
+  "uzoefu",
+  "vizuri",
+  "wiki",
+  "zaidi"
+ ],
+ "glosses": {
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  },
+  "baada": {
+   "lemma": "baada ya",
+   "de": "nach, nachdem (in „baada ya kuelewa\")"
+  },
+  "changamoto": {
+   "lemma": "changamoto",
+   "de": "Herausforderung"
+  },
+  "endelevu": {
+   "lemma": "endelevu",
+   "de": "nachhaltig"
+  },
+  "fursa": {
+   "lemma": "fursa",
+   "de": "Gelegenheit, Chance"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s, was für"
+  },
+  "hassan": {
+   "lemma": "hassan",
+   "de": "Hassan (männlicher Vorname)",
+   "proper": true
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "diese (Demonstrativ, N-Klasse)",
+   "structure": true
+  },
+  "hilo": {
+   "lemma": "hilo",
+   "de": "das (Demonstrativ, Ji/Ma-Klasse)",
+   "structure": true
+  },
+  "jibu": {
+   "lemma": "jibu",
+   "de": "Antwort"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "jitambulishe": {
+   "lemma": "kujitambulisha",
+   "de": "stellen Sie sich vor (Aufforderung)"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "ganz, vollständig"
+  },
+  "kampuni": {
+   "lemma": "kampuni",
+   "de": "Firma, Unternehmen"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "willkommen"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in, im"
+  },
+  "kazini": {
+   "lemma": "kazi",
+   "de": "bei der Arbeit, beruflich (Lokativ von kazi)"
+  },
+  "kifupi": {
+   "lemma": "fupi",
+   "de": "kurz (in „kwa kifupi\" = in Kürze)"
+  },
+  "kubuni": {
+   "lemma": "kubuni",
+   "de": "zu entwerfen, zu entwickeln"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß (N-Klasse)"
+  },
+  "kuelewa": {
+   "lemma": "kuelewa",
+   "de": "zu verstehen"
+  },
+  "kuhusu": {
+   "lemma": "kuhusu",
+   "de": "über, bezüglich"
+  },
+  "kujadili": {
+   "lemma": "kujadili",
+   "de": "zu besprechen, zu diskutieren"
+  },
+  "kujiunga": {
+   "lemma": "kujiunga",
+   "de": "beizutreten, sich anzuschließen"
+  },
+  "kukabiliana": {
+   "lemma": "kukabili",
+   "de": "sich zu stellen, sich auseinanderzusetzen (kukabiliana na = sich stellen mit)"
+  },
+  "kutueleza": {
+   "lemma": "kueleza",
+   "de": "uns zu erzählen, uns zu erklären"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, mit (hier auch in „kwa kifupi\" = in Kürze und „kwa nini\" = warum)"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "zu, bei (Lokativpräposition)",
+   "structure": true
+  },
+  "langu": {
+   "lemma": "-angu",
+   "de": "mein (Possessiv, Ji/Ma-Klasse)",
+   "structure": true
+  },
+  "maendeleo": {
+   "lemma": "maendeleo",
+   "de": "Entwicklung, Fortschritt"
+  },
+  "mahojiano": {
+   "lemma": "mahojiano",
+   "de": "Vorstellungsgespräch, Interview"
+  },
+  "majukumu": {
+   "lemma": "jukumu",
+   "de": "Aufgaben, Verantwortlichkeiten (Plural von jukumu)"
+  },
+  "maono": {
+   "lemma": "maono",
+   "de": "Vision, Vorstellung"
+  },
+  "mara": {
+   "lemma": "mara moja",
+   "de": "einmal, einst"
+  },
+  "matarajio": {
+   "lemma": "matarajio",
+   "de": "Erwartungen, Vorstellungen"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahre"
+  },
+  "miezi": {
+   "lemma": "mwezi",
+   "de": "Monate"
+  },
+  "miradi": {
+   "lemma": "mradi",
+   "de": "Projekte"
+  },
+  "mkakati": {
+   "lemma": "mkakati",
+   "de": "Strategie"
+  },
+  "mkubwa": {
+   "lemma": "kubwa",
+   "de": "groß (M-Wa-Klasse; hier: Großkunde)"
+  },
+  "moja": {
+   "lemma": "mara moja",
+   "de": "(Teil von: einmal)"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neu"
+  },
+  "mshahara": {
+   "lemma": "mshahara",
+   "de": "Gehalt"
+  },
+  "mteja": {
+   "lemma": "mteja",
+   "de": "Kunde, Kundin"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und; mit (in „kujiunga na\" = sich anschließen an)"
+  },
+  "nawe": {
+   "lemma": "na",
+   "de": "mit dir, mit Ihnen (na + wewe)"
+  },
+  "nayo": {
+   "lemma": "na",
+   "de": "damit, mit ihr (na + Bezug auf changamoto)"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "innen (in „ndani ya\" = innerhalb von)"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "niliongoza": {
+   "lemma": "kuongoza",
+   "de": "ich führte, ich leitete"
+  },
+  "nina": {
+   "lemma": "kuwa na",
+   "de": "ich habe"
+  },
+  "ningependa": {
+   "lemma": "kupenda",
+   "de": "ich würde gern (Konditional)"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was (hier in „kwa nini\" = warum)"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "sita": {
+   "lemma": "sita",
+   "de": "sechs"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "timu": {
+   "lemma": "timu",
+   "de": "Team, Mannschaft"
+  },
+  "tulipata": {
+   "lemma": "kupata",
+   "de": "wir bekamen, wir gewannen"
+  },
+  "tulipoteza": {
+   "lemma": "kupoteza",
+   "de": "wir verloren"
+  },
+  "tutawasiliana": {
+   "lemma": "kuwasiliana",
+   "de": "wir werden uns melden, wir setzen uns in Verbindung"
+  },
+  "uliyowahi": {
+   "lemma": "kuwahi",
+   "de": "der/die du je …, der Sie sich je … (Relativform)"
+  },
+  "una": {
+   "lemma": "kuwa na",
+   "de": "du hast, Sie haben"
+  },
+  "unataka": {
+   "lemma": "kutaka",
+   "de": "du willst, Sie wollen"
+  },
+  "unaweza": {
+   "lemma": "kuweza",
+   "de": "du kannst, Sie können"
+  },
+  "uongozi": {
+   "lemma": "uongozi",
+   "de": "Leitung, Führung (uongozi wa miradi = Projektleitung)"
+  },
+  "uvumbuzi": {
+   "lemma": "uvumbuzi",
+   "de": "Innovation, Erfindung"
+  },
+  "uzoefu": {
+   "lemma": "uzoefu",
+   "de": "Erfahrung"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, sehr gut"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, U-Klasse)",
+   "structure": true
+  },
+  "wakubwa": {
+   "lemma": "kubwa",
+   "de": "große (M-Wa-Klasse, Plural)"
+  },
+  "watatu": {
+   "lemma": "tatu",
+   "de": "drei (M-Wa-Klasse)"
+  },
+  "wateja": {
+   "lemma": "mteja",
+   "de": "Kunden"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Wochen"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, Ma-/N-Klasse; hier auch in „baada ya\" und „ndani ya\")",
+   "structure": true
+  },
+  "yananivutia": {
+   "lemma": "kuvutia",
+   "de": "sie sprechen mich an, sie ziehen mich an"
+  },
+  "yenu": {
+   "lemma": "-enu",
+   "de": "euer, Ihr (Possessiv, Ma-Klasse)",
+   "structure": true
+  },
+  "yetu": {
+   "lemma": "-etu",
+   "de": "unser (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "yote": {
+   "lemma": "-ote",
+   "de": "alle (Ma-Klasse)",
+   "structure": true
+  },
+  "zaidi": {
+   "lemma": "zaidi",
+   "de": "mehr (hier: wakubwa zaidi = größere)"
+  },
+  "zuri": {
+   "lemma": "mzuri",
+   "de": "gut (Ji/Ma-Klasse: jibu zuri = gute Antwort)"
+  }
+ },
+ "choices": {
+  "1": [
+   {
+    "sw": "Asante kwa fursa hii. Jina langu ni Hassan, nina uzoefu wa miaka saba katika uongozi wa miradi.",
+    "de": "Danke für diese Gelegenheit. Mein Name ist Hassan, ich habe sieben Jahre Erfahrung im Projektmanagement.",
+    "correct": true
+   },
+   {
+    "sw": "Asante kwa fursa hii. Jina langu ni Hassan, nina uzoefu wa mwaka saba katika uongozi wa miradi.",
+    "de": "Danke für diese Gelegenheit. Mein Name ist Hassan, ich habe sieben Jahr Erfahrung im Projektmanagement.",
+    "correct": false,
+    "feedback": "„mwaka“ ist ein Jahr. Mehrere Jahre sind „miaka“."
+   },
+   {
+    "sw": "Asante kwa fursa hii. Jina lako ni Hassan, nina uzoefu wa miaka saba katika uongozi wa miradi.",
+    "de": "Danke für diese Gelegenheit. Ihr Name ist Hassan, ich habe sieben Jahre Erfahrung im Projektmanagement.",
+    "correct": false,
+    "feedback": "„lako“ heißt dein. Dich selbst stellst du mit „langu“ vor."
+   }
+  ],
+  "3": [
+   {
+    "sw": "Maono yenu kuhusu uvumbuzi na maendeleo endelevu yananivutia sana.",
+    "de": "Ihre Vision von Innovation und nachhaltiger Entwicklung spricht mich sehr an.",
+    "correct": true
+   },
+   {
+    "sw": "Maono yenu kuhusu uvumbuzi na maendeleo endelevu yanakuvutia sana.",
+    "de": "Ihre Vision von Innovation und nachhaltiger Entwicklung spricht Sie sehr an.",
+    "correct": false,
+    "feedback": "„yanakuvutia“ hieße, es spricht *sie* an. Dich spricht es an: „yananivutia“."
+   },
+   {
+    "sw": "Maono yetu kuhusu uvumbuzi na maendeleo endelevu yananivutia sana.",
+    "de": "Unsere Vision von Innovation und nachhaltiger Entwicklung spricht mich sehr an.",
+    "correct": false,
+    "feedback": "„yetu“ heißt unsere. Du bewirbst dich erst — es ist ihre Vision: „yenu“."
+   }
+  ],
+  "5": [
+   {
+    "sw": "Mara moja tulipoteza mteja mkubwa. Niliongoza timu kubuni mkakati mpya, na ndani ya miezi sita tulipata wateja watatu wakubwa zaidi.",
+    "de": "Einmal verloren wir einen Großkunden. Ich führte das Team bei einer neuen Strategie, und in sechs Monaten gewannen wir drei größere Kunden.",
+    "correct": true
+   },
+   {
+    "sw": "Mara moja tulipoteza mteja mkubwa. Nitaongoza timu kubuni mkakati mpya, na ndani ya miezi sita tulipata wateja watatu wakubwa zaidi.",
+    "de": "Einmal verloren wir einen Großkunden. Ich werde das Team bei einer neuen Strategie führen, und in sechs Monaten gewannen wir drei größere Kunden.",
+    "correct": false,
+    "feedback": "„Nita-“ ist Zukunft. Du erzählst von damals: „niliongoza“."
+   },
+   {
+    "sw": "Mara moja tulipoteza mteja mkubwa. Niliongoza timu kubuni mkakati mpya, na ndani ya miezi sita tulipata wateja tatu wakubwa zaidi.",
+    "de": "Einmal verloren wir einen Großkunden. Ich führte das Team bei einer neuen Strategie, und in sechs Monaten gewannen wir drei größere Kunden.",
+    "correct": false,
+    "feedback": "Kunden sind Personen — die M-Wa-Klasse zählt mit „watatu“, nicht „tatu“."
+   }
+  ],
+  "7": [
+   {
+    "sw": "Ningependa kujadili hilo baada ya kuelewa kabisa majukumu yote.",
+    "de": "Das würde ich gern besprechen, nachdem ich alle Aufgaben vollständig verstanden habe.",
+    "correct": true
+   },
+   {
+    "sw": "Ningependa kujadili hilo kabla ya kuelewa kabisa majukumu yote.",
+    "de": "Das würde ich gern besprechen, bevor ich alle Aufgaben vollständig verstanden habe.",
+    "correct": false,
+    "feedback": "„kabla“ heißt vorher — dann wüsstest du noch nicht, worüber du verhandelst."
+   },
+   {
+    "sw": "Ningependa kujadili hilo baada ya kuelewa kabisa majukumu yale.",
+    "de": "Das würde ich gern besprechen, nachdem ich jene Aufgaben vollständig verstanden habe.",
+    "correct": false,
+    "feedback": "„yale“ zeigt auf bestimmte Aufgaben. Du meinst sämtliche: „yote“."
+   }
+  ]
+ }
+}

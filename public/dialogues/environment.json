@@ -1,0 +1,386 @@
+{
+ "id": "environment",
+ "lemmas": [
+  "akiba",
+  "athari",
+  "elimu",
+  "kabla",
+  "katika",
+  "kiasi",
+  "kilimo",
+  "kizazi",
+  "kuathiri",
+  "kubwa",
+  "kuchelewa",
+  "kuja",
+  "kuongeza",
+  "kupanda",
+  "kupaswa",
+  "kupunguza",
+  "kushirikiana",
+  "kutabiri",
+  "kutekeleza",
+  "kuumia",
+  "kuwa",
+  "kuwa na",
+  "kuweka",
+  "kuweza",
+  "kuzuia",
+  "kwa",
+  "kwamba",
+  "kweli",
+  "lazima",
+  "mabadiliko",
+  "mazingira",
+  "mbaya",
+  "mbinu",
+  "mdogo",
+  "mkulima",
+  "mmomonyoko",
+  "mpya",
+  "mti",
+  "muhimu",
+  "mvua",
+  "na",
+  "nchi",
+  "ni",
+  "pia",
+  "sababu",
+  "sambamba",
+  "sana",
+  "sera",
+  "serikali",
+  "shule",
+  "tabianchi",
+  "tumaini",
+  "udongo",
+  "ukame",
+  "umwagiliaji",
+  "ya kisasa",
+  "zaidi"
+ ],
+ "glosses": {
+  "mabadiliko": {
+   "lemma": "mabadiliko",
+   "de": "Veränderungen, Wandel"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, Ma-/N-Klasse)",
+   "structure": true
+  },
+  "tabianchi": {
+   "lemma": "tabianchi",
+   "de": "Klima"
+  },
+  "yanaathiri": {
+   "lemma": "kuathiri",
+   "de": "sie beeinflussen"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "stark, sehr"
+  },
+  "kilimo": {
+   "lemma": "kilimo",
+   "de": "Landwirtschaft"
+  },
+  "nchini": {
+   "lemma": "nchi",
+   "de": "im Land"
+  },
+  "mwetu": {
+   "lemma": "-etu",
+   "de": "unser/unsere (Possessiv, Lokativ mu-)",
+   "structure": true
+  },
+  "kweli": {
+   "lemma": "kweli",
+   "de": "wahr, stimmt"
+  },
+  "mvua": {
+   "lemma": "mvua",
+   "de": "Regen, Regenfälle"
+  },
+  "zimekuwa": {
+   "lemma": "kuwa",
+   "de": "sie sind geworden"
+  },
+  "zisizotabirika": {
+   "lemma": "kutabiri",
+   "de": "die nicht vorherzusagen sind, unberechenbar"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und / mit, dazu"
+  },
+  "ukame": {
+   "lemma": "ukame",
+   "de": "Dürre, Trockenheit"
+  },
+  "umeongezeka": {
+   "lemma": "kuongeza",
+   "de": "sie hat zugenommen"
+  },
+  "wakulima": {
+   "lemma": "mkulima",
+   "de": "Bauern, Landwirte"
+  },
+  "wadogo": {
+   "lemma": "mdogo",
+   "de": "kleine (M-Wa-Klasse Plural)"
+  },
+  "ndio": {
+   "lemma": "ndio",
+   "de": "sind es, die (Hervorhebung)",
+   "structure": true
+  },
+  "wanaoumia": {
+   "lemma": "kuumia",
+   "de": "die leiden, die zu Schaden kommen"
+  },
+  "zaidi": {
+   "lemma": "zaidi",
+   "de": "am meisten, mehr"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für / wegen / in (Präposition)"
+  },
+  "sababu": {
+   "lemma": "sababu",
+   "de": "Grund (in „kwa sababu“ = weil)"
+  },
+  "hawana": {
+   "lemma": "kuwa na",
+   "de": "sie haben nicht"
+  },
+  "akiba": {
+   "lemma": "akiba",
+   "de": "Rücklage, Reserve, Ersparnisse"
+  },
+  "serikali": {
+   "lemma": "serikali",
+   "de": "Regierung"
+  },
+  "inapaswa": {
+   "lemma": "kupaswa",
+   "de": "sie sollte, sie muss"
+  },
+  "kuwekeza": {
+   "lemma": "kuweka",
+   "de": "investieren"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "mbinu": {
+   "lemma": "mbinu",
+   "de": "Methoden, Verfahren"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "umwagiliaji": {
+   "lemma": "umwagiliaji",
+   "de": "Bewässerung"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, M-/U-Klasse)",
+   "structure": true
+  },
+  "kisasa": {
+   "lemma": "ya kisasa",
+   "de": "modern"
+  },
+  "sambamba": {
+   "lemma": "sambamba",
+   "de": "parallel, gleichzeitig"
+  },
+  "hilo": {
+   "lemma": "hilo",
+   "de": "das, jenes (Demonstrativ, Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "es ist nötig, wir müssen"
+  },
+  "tupande": {
+   "lemma": "kupanda",
+   "de": "dass wir pflanzen, lass uns pflanzen"
+  },
+  "miti": {
+   "lemma": "mti",
+   "de": "Bäume"
+  },
+  "kuzuia": {
+   "lemma": "kuzuia",
+   "de": "verhindern, um zu verhindern"
+  },
+  "mmomonyoko": {
+   "lemma": "mmomonyoko",
+   "de": "Erosion, Abtragung"
+  },
+  "udongo": {
+   "lemma": "udongo",
+   "de": "Boden, Erde"
+  },
+  "elimu": {
+   "lemma": "elimu",
+   "de": "Bildung, Aufklärung"
+  },
+  "mazingira": {
+   "lemma": "mazingira",
+   "de": "Umwelt"
+  },
+  "shuleni": {
+   "lemma": "shule",
+   "de": "in der Schule, in den Schulen"
+  },
+  "pia": {
+   "lemma": "pia",
+   "de": "auch, ebenfalls"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "muhimu": {
+   "lemma": "muhimu",
+   "de": "wichtig"
+  },
+  "kizazi": {
+   "lemma": "kizazi",
+   "de": "Generation"
+  },
+  "kijacho": {
+   "lemma": "kuja",
+   "de": "kommende, nächste (Ki-Klasse)"
+  },
+  "tukishirikiana": {
+   "lemma": "kushirikiana",
+   "de": "wenn wir zusammenarbeiten"
+  },
+  "tunaweza": {
+   "lemma": "kuweza",
+   "de": "wir können"
+  },
+  "kupunguza": {
+   "lemma": "kupunguza",
+   "de": "verringern, reduzieren"
+  },
+  "athari": {
+   "lemma": "athari",
+   "de": "Auswirkungen, Folgen"
+  },
+  "mbaya": {
+   "lemma": "mbaya",
+   "de": "schlechte, negative (N-Klasse Plural)"
+  },
+  "kiasi": {
+   "lemma": "kiasi",
+   "de": "Maß, Ausmaß (in „kwa kiasi kikubwa“ = in großem Maße)"
+  },
+  "kikubwa": {
+   "lemma": "kubwa",
+   "de": "großes (Ki-Klasse)"
+  },
+  "tumaini": {
+   "lemma": "tumaini",
+   "de": "Hoffnung"
+  },
+  "langu": {
+   "lemma": "-angu",
+   "de": "mein/meine (Possessiv, Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "sera": {
+   "lemma": "sera",
+   "de": "Politik, politische Maßnahmen"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neue (N-Klasse Plural)"
+  },
+  "zitatekelezwa": {
+   "lemma": "kutekeleza",
+   "de": "sie werden umgesetzt"
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "bevor"
+  },
+  "haijachelewa": {
+   "lemma": "kuchelewa",
+   "de": "es ist noch nicht zu spät"
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Mabadiliko ya tabianchi yanaathiri sana kilimo nchini mwetu.",
+    "de": "Der Klimawandel beeinflusst die Landwirtschaft in unserem Land stark.",
+    "correct": true
+   },
+   {
+    "sw": "Mabadiliko ya tabianchi yaliathiri sana kilimo nchini mwetu.",
+    "de": "Der Klimawandel beeinflusste die Landwirtschaft in unserem Land stark.",
+    "correct": false,
+    "feedback": "„yali-“ ist Vergangenheit. Der Klimawandel wirkt gerade jetzt: „yanaathiri“."
+   },
+   {
+    "sw": "Mabadiliko ya tabianchi yanaathiri sana kilimo nchini mwenu.",
+    "de": "Der Klimawandel beeinflusst die Landwirtschaft in eurem Land stark.",
+    "correct": false,
+    "feedback": "„mwenu“ heißt bei euch. Ihr sprecht über euer gemeinsames Land: „mwetu“."
+   }
+  ],
+  "3": [
+   {
+    "sw": "Serikali inapaswa kuwekeza katika mbinu za umwagiliaji wa kisasa.",
+    "de": "Die Regierung sollte in moderne Bewässerungsmethoden investieren.",
+    "correct": true
+   },
+   {
+    "sw": "Serikali zinapaswa kuwekeza katika mbinu za umwagiliaji wa kisasa.",
+    "de": "Die Regierungen sollten in moderne Bewässerungsmethoden investieren.",
+    "correct": false,
+    "feedback": "Es geht um die eine Regierung — im Singular nimmt die N-Klasse „inapaswa“."
+   },
+   {
+    "sw": "Serikali inapaswa kuwekeza katika mbinu za umwagiliaji wa zamani.",
+    "de": "Die Regierung sollte in althergebrachte Bewässerungsmethoden investieren.",
+    "correct": false,
+    "feedback": "„wa zamani“ heißt althergebracht. Du forderst moderne Methoden: „wa kisasa“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Tukishirikiana, tunaweza kupunguza athari mbaya kwa kiasi kikubwa.",
+    "de": "Wenn wir zusammenarbeiten, können wir die negativen Auswirkungen deutlich reduzieren.",
+    "correct": true
+   },
+   {
+    "sw": "Tukishirikiana, tunaweza kuongeza athari mbaya kwa kiasi kikubwa.",
+    "de": "Wenn wir zusammenarbeiten, können wir die negativen Auswirkungen deutlich vergrößern.",
+    "correct": false,
+    "feedback": "„kuongeza“ heißt vergrößern. Verringern heißt „kupunguza“."
+   },
+   {
+    "sw": "Tukishirikiana, tunaweza kupunguza athari nzuri kwa kiasi kikubwa.",
+    "de": "Wenn wir zusammenarbeiten, können wir die guten Auswirkungen deutlich reduzieren.",
+    "correct": false,
+    "feedback": "„nzuri“ heißt gut. Verringert werden sollen die schlechten Folgen: „mbaya“."
+   }
+  ]
+ }
+}

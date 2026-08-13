@@ -1,0 +1,255 @@
+{
+ "id": "directions",
+ "lemmas": [
+  "asante",
+  "barabara",
+  "benki",
+  "hospitali",
+  "karibu",
+  "kisha",
+  "kufanya",
+  "kulia",
+  "kuona",
+  "kupinda",
+  "kushoto",
+  "kwa",
+  "kwenda",
+  "mbili",
+  "mia",
+  "mita",
+  "moja",
+  "mpaka",
+  "msaada",
+  "na",
+  "nini",
+  "nyuma",
+  "samahani",
+  "sana",
+  "sawa",
+  "taa",
+  "tu",
+  "upande",
+  "wapi"
+ ],
+ "glosses": {
+  "samahani": {
+   "lemma": "samahani",
+   "de": "Entschuldigung!"
+  },
+  "hospitali": {
+   "lemma": "hospitali",
+   "de": "Krankenhaus"
+  },
+  "iko": {
+   "lemma": "-ko",
+   "de": "ist/befindet sich (Lokativkopula, N-Klasse)",
+   "structure": true
+  },
+  "wapi": {
+   "lemma": "wapi",
+   "de": "wo"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "in der Nähe, nah"
+  },
+  "nenda": {
+   "lemma": "kwenda",
+   "de": "geh! (Imperativ)"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins (in „moja kwa moja\" = geradeaus)"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, mit (hier auch in „moja kwa moja\" = geradeaus)"
+  },
+  "mpaka": {
+   "lemma": "mpaka",
+   "de": "bis (wörtlich: Grenze)"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "an, bei, zu (Ortspräposition)",
+   "structure": true
+  },
+  "taa": {
+   "lemma": "taa",
+   "de": "Lampen, Lichter (hier: Ampel)"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von/der (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "barabarani": {
+   "lemma": "barabara",
+   "de": "auf der Straße (Lokativ von barabara)"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann, anschließend"
+  },
+  "nifanye": {
+   "lemma": "kufanya",
+   "de": "soll ich machen"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was"
+  },
+  "pinda": {
+   "lemma": "kupinda",
+   "de": "bieg ab! (Imperativ)"
+  },
+  "kushoto": {
+   "lemma": "kushoto",
+   "de": "links"
+  },
+  "utaona": {
+   "lemma": "kuona",
+   "de": "du wirst sehen"
+  },
+  "benki": {
+   "lemma": "benki",
+   "de": "Bank (Geldinstitut)"
+  },
+  "upande": {
+   "lemma": "upande",
+   "de": "Seite, Richtung"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von/der (Genitiv, U-Klasse)",
+   "structure": true
+  },
+  "kulia": {
+   "lemma": "kulia",
+   "de": "rechts"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "okay, in Ordnung"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "nyuma": {
+   "lemma": "nyuma",
+   "de": "hinter, hinten"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "mita": {
+   "lemma": "mita",
+   "de": "Meter"
+  },
+  "mia": {
+   "lemma": "mia",
+   "de": "hundert"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "msaada": {
+   "lemma": "msaada",
+   "de": "Hilfe"
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Samahani, hospitali iko wapi?",
+    "de": "Entschuldigung, wo ist das Krankenhaus?",
+    "correct": true
+   },
+   {
+    "sw": "Samahani, hospitali uko wapi?",
+    "de": "Entschuldigung, wo ist das Krankenhaus?",
+    "correct": false,
+    "feedback": "„uko“ gehört zu einem Menschen. „hospitali“ ist N-Klasse und bekommt „iko“."
+   },
+   {
+    "sw": "Samahani, hospitali iko nini?",
+    "de": "Entschuldigung, was ist das Krankenhaus?",
+    "correct": false,
+    "feedback": "„nini“ fragt nach dem Was. Nach dem Ort fragst du mit „wapi“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Kisha nifanye nini?",
+    "de": "Und dann?",
+    "correct": true
+   },
+   {
+    "sw": "Kisha ninafanya nini?",
+    "de": "Und was mache ich gerade?",
+    "correct": false,
+    "feedback": "„ninafanya“ fragt nach dem Jetzt. Um Rat fragst du im Konjunktiv: „nifanye“."
+   },
+   {
+    "sw": "Kisha nifanye wapi?",
+    "de": "Und wo soll ich es tun?",
+    "correct": false,
+    "feedback": "„wapi“ fragt nach dem Ort. Du willst wissen, *was* zu tun ist: „nini“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Sawa, na hospitali?",
+    "de": "Okay, und das Krankenhaus?",
+    "correct": true
+   },
+   {
+    "sw": "Sawa, na benki?",
+    "de": "Okay, und die Bank?",
+    "correct": false,
+    "feedback": "Die Bank hat er dir gerade beschrieben — du suchst das Krankenhaus."
+   },
+   {
+    "sw": "Sawa, asante sana kwa msaada.",
+    "de": "Okay, vielen Dank für die Hilfe.",
+    "correct": false,
+    "feedback": "Das ist der Abschied — du weißt noch gar nicht, wo das Krankenhaus liegt."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Asante sana kwa msaada.",
+    "de": "Vielen Dank für die Hilfe.",
+    "correct": true
+   },
+   {
+    "sw": "Karibu sana kwa msaada.",
+    "de": "Sehr willkommen für die Hilfe.",
+    "correct": false,
+    "feedback": "„Karibu“ antwortet auf einen Dank. Danken tust du mit „asante“."
+   },
+   {
+    "sw": "Asante sana kwa chakula.",
+    "de": "Vielen Dank für das Essen.",
+    "correct": false,
+    "feedback": "„chakula“ heißt Essen. Geholfen hat er dir: „msaada“."
+   }
+  ]
+ }
+}

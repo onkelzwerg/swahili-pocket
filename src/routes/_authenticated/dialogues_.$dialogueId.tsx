@@ -5,18 +5,27 @@ import confetti from "canvas-confetti";
 import { ArrowLeft, Eye, EyeOff, Play } from "lucide-react";
 import {
   choicePointCount,
+  choicesAt,
   findDialogue,
   isPlayable,
   orderedChoices,
   playableSpeakers,
 } from "@/lib/dialogues";
 import { recordDialogueRun } from "@/lib/dialogue-stats";
+import {
+  loadDialogueData,
+  type DialogueChoices,
+  type DialogueData,
+  type DialogueGloss,
+} from "@/lib/dialogue-index";
+import { groupStorySegments, type StorySegment } from "@/lib/stories";
 import { checkMilestones, type Milestone } from "@/lib/milestones";
-import { awardXp } from "@/lib/store";
+import { awardXp, getVocab } from "@/lib/store";
 import { speak, speakSequence, cancelSpeech, createUnlockedAudio } from "@/lib/tts";
+import { GlossSheet } from "@/components/GlossSheet";
 import { APP_CONFIG } from "@/config/app.config";
 import { T } from "@/config/translations";
-import type { DialogueChoice, DialogueSpeaker, DialogueTurn } from "@/lib/types";
+import type { DialogueChoice, DialogueSpeaker } from "@/lib/types";
 
 export const Route = createFileRoute("/_authenticated/dialogues_/$dialogueId")({
   component: DialoguePage,
@@ -35,8 +44,19 @@ function DialoguePage() {
   const { dialogueId } = Route.useParams();
   const dialogue = findDialogue(dialogueId);
   const [mode, setMode] = useState<"read" | "play">("read");
+  const [data, setData] = useState<DialogueData | null>(null);
 
   useEffect(() => () => cancelSpeech(), []);
+
+  // Glossar und Entscheidungspunkte liegen neben dem Dialog
+  // (public/dialogues/<id>.json) und kommen erst hier dazu — sie stehen bewusst
+  // nicht im JS-Bündel. Fehlt die Datei, bleiben die Wörter eben nicht
+  // antippbar und der Mitspielen-Modus aus; der Dialog selbst funktioniert.
+  useEffect(() => {
+    setData(null);
+    setMode("read");
+    void loadDialogueData(dialogueId).then(setData);
+  }, [dialogueId]);
 
   if (!dialogue) {
     return (
@@ -49,7 +69,7 @@ function DialoguePage() {
     );
   }
 
-  const playable = isPlayable(dialogue);
+  const playable = isPlayable(data?.choices);
 
   return (
     <div className="px-5 pt-6 pb-8">
@@ -98,50 +118,116 @@ function DialoguePage() {
         </div>
       )}
 
-      {mode === "play" && playable ? (
-        <RolePlay dialogue={dialogue} />
+      {mode === "play" && playable && data ? (
+        <RolePlay dialogue={dialogue} choices={data.choices} />
       ) : (
-        <ReadView dialogue={dialogue} />
+        <ReadView dialogue={dialogue} glosses={data?.glosses ?? {}} />
       )}
     </div>
   );
 }
 
-function ReadView({ dialogue }: { dialogue: ReturnType<typeof findDialogue> & object }) {
+/** Reiner Leerraum zwischen zwei Wortgruppen — die einzige Umbruchstelle. */
+function isSpaceGroup(group: StorySegment[]): boolean {
+  return group.length === 1 && !group[0].word && /^\s+$/.test(group[0].text);
+}
+
+/**
+ * Lesemodus. Seit W4.4 ist jedes Wort antippbar — derselbe Tokenizer und
+ * dasselbe Nachschlage-Sheet wie im Story-Reader, damit ein Wort im Dialog
+ * nicht anders funktioniert als dasselbe Wort in einer Geschichte.
+ */
+function ReadView({
+  dialogue,
+  glosses,
+}: {
+  dialogue: NonNullable<ReturnType<typeof findDialogue>>;
+  glosses: Record<string, DialogueGloss>;
+}) {
+  const [openWord, setOpenWord] = useState<string | null>(null);
+  const [ownWords, setOwnWords] = useState<Set<string>>(new Set());
+  const hasGlosses = Object.keys(glosses).length > 0;
+
+  useEffect(() => {
+    void getVocab().then((vocab) =>
+      setOwnWords(new Set(vocab.map((v) => v.swahili.toLowerCase()))),
+    );
+  }, []);
+
+  const gloss = openWord ? (glosses[openWord] ?? null) : null;
+
   return (
-    <ul className="flex flex-col gap-3">
-      {dialogue.turns.map((turn, i) => (
-        <li key={i} className={`flex ${turn.speaker === "B" ? "justify-end" : "justify-start"}`}>
-          <div
-            className={`max-w-[85%] rounded-2xl px-4 py-3 ${
-              turn.speaker === "B"
-                ? "bg-forest text-forest-foreground rounded-br-sm"
-                : bubbleClass(turn.speaker, false)
-            }`}
-          >
-            <div className="flex items-start justify-between gap-2">
-              <div>
-                <p className="text-[10px] font-semibold opacity-70">
-                  {T.dialogues.speaker(turn.speaker)}
-                </p>
-                <p className="font-display text-base font-semibold">{turn.sw}</p>
-              </div>
-              <button
-                onClick={() => void speak(turn.sw, createUnlockedAudio())}
-                className="shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-background/25"
-              >
-                <Play className="h-3 w-3" />
-              </button>
-            </div>
-            <p
-              className={`mt-1 text-xs ${turn.speaker === "B" ? "opacity-80" : "text-muted-foreground"}`}
+    <>
+      {hasGlosses && <p className="mb-3 text-xs text-muted-foreground">{T.dialogues.readerHint}</p>}
+
+      <ul className="flex flex-col gap-3">
+        {dialogue.turns.map((turn, i) => (
+          <li key={i} className={`flex ${turn.speaker === "B" ? "justify-end" : "justify-start"}`}>
+            <div
+              className={`max-w-[85%] rounded-2xl px-4 py-3 ${
+                turn.speaker === "B"
+                  ? "bg-forest text-forest-foreground rounded-br-sm"
+                  : bubbleClass(turn.speaker, false)
+              }`}
             >
-              {turn.de}
-            </p>
-          </div>
-        </li>
-      ))}
-    </ul>
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <p className="text-[10px] font-semibold opacity-70">
+                    {T.dialogues.speaker(turn.speaker)}
+                  </p>
+                  {/* Gruppiert, damit ein Satzzeichen nicht ohne sein Wort umbricht. */}
+                  <p className="font-display text-base font-semibold">
+                    {hasGlosses
+                      ? groupStorySegments(turn.sw).map((group, g) =>
+                          isSpaceGroup(group) ? (
+                            <span key={g}>{group[0].text}</span>
+                          ) : (
+                            <span key={g} className="whitespace-nowrap">
+                              {group.map((segment, j) =>
+                                segment.word && glosses[segment.word] ? (
+                                  <button
+                                    key={j}
+                                    type="button"
+                                    onClick={() => setOpenWord(segment.word)}
+                                    className="rounded underline decoration-current/25 decoration-dotted underline-offset-4 transition-colors active:bg-background/25"
+                                  >
+                                    {segment.text}
+                                  </button>
+                                ) : (
+                                  <span key={j}>{segment.text}</span>
+                                ),
+                              )}
+                            </span>
+                          ),
+                        )
+                      : turn.sw}
+                  </p>
+                </div>
+                <button
+                  onClick={() => void speak(turn.sw, createUnlockedAudio())}
+                  className="shrink-0 inline-flex h-7 w-7 items-center justify-center rounded-full bg-background/25"
+                >
+                  <Play className="h-3 w-3" />
+                </button>
+              </div>
+              <p
+                className={`mt-1 text-xs ${turn.speaker === "B" ? "opacity-80" : "text-muted-foreground"}`}
+              >
+                {turn.de}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <GlossSheet
+        token={openWord}
+        gloss={gloss}
+        inCards={!!gloss && ownWords.has(gloss.lemma)}
+        onClose={() => setOpenWord(null)}
+        onAdded={(lemma) => setOwnWords((prev) => new Set(prev).add(lemma))}
+      />
+    </>
   );
 }
 
@@ -153,8 +239,14 @@ function ReadView({ dialogue }: { dialogue: ReturnType<typeof findDialogue> & ob
  * einen zweiten Anlauf, beim zweiten die Lösung. Gezählt wird, was beim
  * **ersten** Versuch saß — alles andere wäre eine Teilnahmeurkunde.
  */
-function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDialogue>> }) {
-  const speakers = useMemo(() => playableSpeakers(dialogue), [dialogue]);
+function RolePlay({
+  dialogue,
+  choices,
+}: {
+  dialogue: NonNullable<ReturnType<typeof findDialogue>>;
+  choices: DialogueChoices;
+}) {
+  const speakers = useMemo(() => playableSpeakers(dialogue, choices), [dialogue, choices]);
   const [role, setRole] = useState<DialogueSpeaker | null>(
     speakers.length === 1 ? speakers[0] : null,
   );
@@ -167,7 +259,7 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
   const [done, setDone] = useState(false);
   const [milestone, setMilestone] = useState<Milestone | null>(null);
 
-  const total = choicePointCount(dialogue);
+  const total = choicePointCount(choices);
 
   // Fremde Züge abspielen und weiterschalten, bis der eigene Zug kommt.
   useEffect(() => {
@@ -177,7 +269,7 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
       void finish();
       return;
     }
-    const isMine = turn.speaker === role && (turn.choices?.length ?? 0) > 0;
+    const isMine = turn.speaker === role && choicesAt(choices, index).length > 0;
     if (isMine) return;
 
     let alive = true;
@@ -189,7 +281,7 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
     };
     // finish() hängt an firstTry/total und würde den Effekt sonst neu starten.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, role, done, dialogue]);
+  }, [index, role, done, dialogue, choices]);
 
   async function finish() {
     setDone(true);
@@ -267,8 +359,8 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
     );
   }
 
-  const turn = dialogue.turns[index] as DialogueTurn | undefined;
-  const isMyTurn = !!turn && turn.speaker === role && (turn.choices?.length ?? 0) > 0;
+  const turn = dialogue.turns[index];
+  const isMyTurn = !!turn && turn.speaker === role && choicesAt(choices, index).length > 0;
 
   return (
     <div>
@@ -307,7 +399,7 @@ function RolePlay({ dialogue }: { dialogue: NonNullable<ReturnType<typeof findDi
           </div>
 
           <ul className="flex flex-col gap-2">
-            {orderedChoices(turn, index).map((choice) => (
+            {orderedChoices(choices, index).map((choice) => (
               <li key={choice.sw}>
                 <button
                   onClick={() => choose(choice)}

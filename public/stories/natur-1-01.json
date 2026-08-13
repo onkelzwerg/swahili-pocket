@@ -1,0 +1,245 @@
+{
+ "id": "natur-1-01",
+ "title": "Neema na Mvua",
+ "titleDe": "Neema und der Regen",
+ "band": 1,
+ "topic": "Natur",
+ "emoji": "🌦️",
+ "lemmas": [
+  "asubuhi",
+  "baridi",
+  "chai",
+  "chumba",
+  "hapa",
+  "haraka",
+  "jioni",
+  "jua",
+  "katika",
+  "kidogo",
+  "kuanza",
+  "kubwa",
+  "kucheza",
+  "kuhisi",
+  "kuisha",
+  "kukaa",
+  "kula",
+  "kunyesha",
+  "kuona",
+  "kupika",
+  "kupumzika",
+  "kuwaka",
+  "kwa",
+  "kwenda",
+  "leo",
+  "matunda",
+  "mbele",
+  "mbili",
+  "muda",
+  "mvua",
+  "na",
+  "ndege",
+  "nyumba",
+  "pwani",
+  "wakati",
+  "yeye"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Asubuhi ya leo Neema alikwenda pwani kwa muda kidogo. Jua lilianza kuwaka na ndege wawili walicheza mbele yake.",
+   "de": "Heute Vormittag ging Neema für eine kleine Weile an die Küste. Die Sonne fing an zu brennen, und vor ihr spielten zwei Vögel."
+  },
+  {
+   "sw": "Neema alikaa hapa na alikula matunda mawili. Wakati huo mvua ilianza kunyesha na yeye alihisi baridi.",
+   "de": "Neema blieb dort sitzen und aß zwei Früchte. In diesem Moment fing es an zu regnen, und ihr wurde kalt."
+  },
+  {
+   "sw": "Neema alikwenda nyumbani haraka. Alipika chai na alipumzika katika chumba chake. Jioni mvua iliisha na Neema aliona jua kubwa mbele ya nyumba yake.",
+   "de": "Neema ging schnell nach Hause. Sie kochte Tee und ruhte sich in ihrem Zimmer aus. Am Abend hörte der Regen auf, und Neema sah die große Sonne vor ihrem Haus."
+  }
+ ],
+ "glosses": {
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Vormittag, am Vormittag"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "neema": {
+   "lemma": "neema",
+   "de": "Neema (Name)",
+   "proper": true
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "sie ging"
+  },
+  "pwani": {
+   "lemma": "pwani",
+   "de": "Küste, an die Küste"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen, klein"
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  },
+  "lilianza": {
+   "lemma": "kuanza",
+   "de": "sie (die Sonne) fing an"
+  },
+  "kuwaka": {
+   "lemma": "kuwaka",
+   "de": "brennen"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "ndege": {
+   "lemma": "ndege",
+   "de": "Vögel"
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (Wa-Klasse)"
+  },
+  "walicheza": {
+   "lemma": "kucheza",
+   "de": "sie spielten"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor, vorne"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihr, ihre",
+   "structure": true
+  },
+  "alikaa": {
+   "lemma": "kukaa",
+   "de": "sie blieb, sie saß"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier, dort"
+  },
+  "alikula": {
+   "lemma": "kula",
+   "de": "sie aß"
+  },
+  "matunda": {
+   "lemma": "matunda",
+   "de": "Früchte"
+  },
+  "mawili": {
+   "lemma": "mbili",
+   "de": "zwei (Ma-Klasse)"
+  },
+  "wakati": {
+   "lemma": "wakati",
+   "de": "Zeit, Moment"
+  },
+  "huo": {
+   "lemma": "huo",
+   "de": "dieser (M-Mi-Klasse)",
+   "structure": true
+  },
+  "mvua": {
+   "lemma": "mvua",
+   "de": "Regen"
+  },
+  "ilianza": {
+   "lemma": "kuanza",
+   "de": "er (der Regen) fing an"
+  },
+  "kunyesha": {
+   "lemma": "kunyesha",
+   "de": "regnen"
+  },
+  "yeye": {
+   "lemma": "yeye",
+   "de": "sie"
+  },
+  "alihisi": {
+   "lemma": "kuhisi",
+   "de": "sie fühlte"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "Kälte, kalt"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "alipika": {
+   "lemma": "kupika",
+   "de": "sie kochte"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "alipumzika": {
+   "lemma": "kupumzika",
+   "de": "sie ruhte sich aus"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "chumba": {
+   "lemma": "chumba",
+   "de": "Zimmer"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "ihr, ihre (Ki-Vi-Klasse)",
+   "structure": true
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "iliisha": {
+   "lemma": "kuisha",
+   "de": "er (der Regen) hörte auf"
+  },
+  "aliona": {
+   "lemma": "kuona",
+   "de": "sie sah"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "nyumba": {
+   "lemma": "nyumba",
+   "de": "Haus"
+  }
+ },
+ "audio": null
+}

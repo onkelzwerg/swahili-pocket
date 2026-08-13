@@ -1,0 +1,189 @@
+[
+ {
+  "swahili": "pengine",
+  "german": "vielleicht",
+  "partOfSpeech": "adverb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Vielleicht kommt er morgen.",
+    "sw": "Pengine atakuja kesho."
+   },
+   {
+    "de": "Vielleicht regnet es heute.",
+    "sw": "Pengine mvua itanyesha leo."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "mpango",
+  "german": "Plan / Vorhaben",
+  "partOfSpeech": "noun",
+  "nounClass": "M-Mi",
+  "examples": [
+   {
+    "de": "Ich habe einen guten Plan für heute.",
+    "sw": "Nina mpango mzuri wa leo."
+   },
+   {
+    "de": "Wir haben diese Woche viele Pläne.",
+    "sw": "Tuna mipango mingi wiki hii."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "angalau",
+  "german": "mindestens / wenigstens",
+  "partOfSpeech": "adverb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Wir brauchen mindestens fünf Leute.",
+    "sw": "Tunahitaji angalau watu watano."
+   },
+   {
+    "de": "Wenigstens bist du gut angekommen.",
+    "sw": "Angalau umefika salama."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "miadi",
+  "german": "Termin / Verabredung",
+  "partOfSpeech": "noun",
+  "nounClass": "N",
+  "examples": [
+   {
+    "de": "Ich habe morgen einen Termin beim Arzt.",
+    "sw": "Nina miadi na daktari kesho."
+   },
+   {
+    "de": "Wir haben einen Termin für neun Uhr morgens ausgemacht.",
+    "sw": "Tumeweka miadi saa tatu asubuhi."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "halo",
+  "german": "hallo (am Telefon)",
+  "partOfSpeech": "other",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Hallo, wie geht es dir?",
+    "sw": "Halo, habari yako?"
+   },
+   {
+    "de": "Hallo, ich möchte bitte mit Juma sprechen.",
+    "sw": "Halo, naomba kuongea na Juma."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "baadhi",
+  "german": "einige / manche",
+  "partOfSpeech": "other",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Einige Leute sind schon da.",
+    "sw": "Baadhi ya watu wamefika."
+   },
+   {
+    "de": "Ich mag einige von diesen Büchern.",
+    "sw": "Ninapenda baadhi ya vitabu hivi."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "ajabu",
+  "german": "erstaunlich / seltsam; Wunder",
+  "partOfSpeech": "noun",
+  "nounClass": "Ji-Ma",
+  "examples": [
+   {
+    "de": "Dieses Haus ist wirklich erstaunlich.",
+    "sw": "Nyumba hii ni ya ajabu sana."
+   },
+   {
+    "de": "Ich habe unterwegs etwas Seltsames gesehen.",
+    "sw": "Niliona kitu cha ajabu njiani."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "fulani",
+  "german": "irgendein / ein gewisser",
+  "partOfSpeech": "other",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Irgendjemand wartet draußen auf dich.",
+    "sw": "Mtu fulani anakusubiri nje."
+   },
+   {
+    "de": "Ich suche ein bestimmtes Buch.",
+    "sw": "Ninatafuta kitabu fulani."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "tumaini",
+  "german": "Hoffnung",
+  "partOfSpeech": "noun",
+  "nounClass": "Ji-Ma",
+  "examples": [
+   {
+    "de": "Ich habe große Hoffnung für meine Kinder.",
+    "sw": "Nina tumaini kubwa kwa watoto wangu."
+   },
+   {
+    "de": "Verlier die Hoffnung nicht!",
+    "sw": "Usipoteze tumaini!"
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "hamu",
+  "german": "Lust / Verlangen",
+  "partOfSpeech": "noun",
+  "nounClass": "N",
+  "examples": [
+   {
+    "de": "Ich habe Lust auf Obst.",
+    "sw": "Nina hamu ya kula matunda."
+   },
+   {
+    "de": "Ich habe heute keine Lust zu gehen.",
+    "sw": "Sina hamu ya kwenda leo."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "hebu",
+  "german": "sag mal / komm (auffordernd)",
+  "partOfSpeech": "other",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Komm mal her!",
+    "sw": "Hebu njoo hapa!"
+   },
+   {
+    "de": "Sag mir mal die Wahrheit.",
+    "sw": "Hebu niambie ukweli."
+   }
+  ],
+  "topics": []
+ }
+]

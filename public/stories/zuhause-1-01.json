@@ -1,0 +1,257 @@
+{
+ "id": "zuhause-1-01",
+ "title": "Jioni Nyumbani kwa Hamisi",
+ "titleDe": "Abend bei Hamisi zu Hause",
+ "band": 1,
+ "topic": "Zuhause",
+ "emoji": "🏠",
+ "lemmas": [
+  "baridi",
+  "barua",
+  "chai",
+  "chakula",
+  "chumba",
+  "familia",
+  "jioni",
+  "kabisa",
+  "katika",
+  "kidogo",
+  "kila",
+  "kitu",
+  "kufika",
+  "kuhisi",
+  "kukaanga",
+  "kulala",
+  "kuliko",
+  "kunyesha",
+  "kunywa",
+  "kupika",
+  "kusoma",
+  "kuvaa",
+  "kwa",
+  "kwanza",
+  "mafuta",
+  "maziwa",
+  "mtoto",
+  "mvua",
+  "mzuri",
+  "na",
+  "nguo",
+  "ni",
+  "nyama",
+  "nyumba",
+  "safi",
+  "sana",
+  "sasa",
+  "usiku",
+  "vizuri"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jioni Hamisi anafika nyumbani. Mvua inanyesha sana na nguo zake ni baridi kabisa.",
+   "de": "Am Abend kommt Hamisi zu Hause an. Es regnet stark, und seine Kleidung ist eiskalt."
+  },
+  {
+   "sw": "Kwanza anavaa nguo safi. Sasa anapika chakula katika chumba kidogo. Anakaanga nyama kwa mafuta na anakunywa chai ya maziwa.",
+   "de": "Zuerst zieht er saubere Sachen an. Jetzt kocht er im kleinen Zimmer etwas zu essen. Er brät Fleisch in Fett und trinkt Tee mit Milch."
+  },
+  {
+   "sw": "Mtoto wake analala. Hamisi anasoma barua ya familia yake na anahisi vizuri. Usiku huu nyumba yake ni nzuri kuliko kila kitu.",
+   "de": "Sein Kind schläft schon. Hamisi liest einen Brief seiner Familie und fühlt sich wohl. In dieser Nacht ist sein Haus schöner als alles andere."
+  }
+ ],
+ "glosses": {
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "hamisi": {
+   "lemma": "hamisi",
+   "de": "Hamisi (Name)",
+   "proper": true
+  },
+  "anafika": {
+   "lemma": "kufika",
+   "de": "er kommt an"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "zu Hause, im Haus"
+  },
+  "mvua": {
+   "lemma": "mvua",
+   "de": "Regen"
+  },
+  "inanyesha": {
+   "lemma": "kunyesha",
+   "de": "er (der Regen) fällt, es regnet"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr, stark"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "nguo": {
+   "lemma": "nguo",
+   "de": "Kleidung, Sachen"
+  },
+  "zake": {
+   "lemma": "-ake",
+   "de": "seine (N-Klasse, Plural)",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist, sind"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "kalt"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "völlig, ganz"
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "zuerst"
+  },
+  "anavaa": {
+   "lemma": "kuvaa",
+   "de": "er zieht an"
+  },
+  "safi": {
+   "lemma": "safi",
+   "de": "sauber"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt, nun"
+  },
+  "anapika": {
+   "lemma": "kupika",
+   "de": "er kocht"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "chumba": {
+   "lemma": "chumba",
+   "de": "Zimmer"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "klein (Ki-Vi-Klasse)"
+  },
+  "anakaanga": {
+   "lemma": "kukaanga",
+   "de": "er brät"
+  },
+  "nyama": {
+   "lemma": "nyama",
+   "de": "Fleisch"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit, in"
+  },
+  "mafuta": {
+   "lemma": "mafuta",
+   "de": "Fett, Öl"
+  },
+  "anakunywa": {
+   "lemma": "kunywa",
+   "de": "er trinkt"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von, mit (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "maziwa": {
+   "lemma": "maziwa",
+   "de": "Milch"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "sein (M-Wa-Klasse)",
+   "structure": true
+  },
+  "analala": {
+   "lemma": "kulala",
+   "de": "es schläft"
+  },
+  "anasoma": {
+   "lemma": "kusoma",
+   "de": "er liest"
+  },
+  "barua": {
+   "lemma": "barua",
+   "de": "Brief"
+  },
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seine (N-Klasse, Singular)",
+   "structure": true
+  },
+  "anahisi": {
+   "lemma": "kuhisi",
+   "de": "er fühlt sich"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, wohl"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht"
+  },
+  "huu": {
+   "lemma": "huu",
+   "de": "diese (U-Klasse)",
+   "structure": true
+  },
+  "nyumba": {
+   "lemma": "nyumba",
+   "de": "Haus"
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "schön, gut (N-Klasse)"
+  },
+  "kuliko": {
+   "lemma": "kuliko",
+   "de": "als (Vergleich)"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jeder, jedes"
+  },
+  "kitu": {
+   "lemma": "kitu",
+   "de": "Ding, Sache"
+  }
+ },
+ "audio": null
+}

@@ -67,6 +67,18 @@ export function Reference() {
               </span>
             </div>
           </div>
+          <div className="border-b border-border px-4 py-3">
+            <div className="mb-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+              {T.reference.locative}
+            </div>
+            <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1.5 text-sm">
+              <span className="text-xs text-muted-foreground">{T.reference.singular}</span>
+              <span className="font-medium">{c.locative.sg}</span>
+              <span className="text-xs text-muted-foreground">{T.reference.plural}</span>
+              <span className="font-medium">{c.locative.pl}</span>
+            </div>
+            <p className="mt-2 text-xs text-muted-foreground">{T.reference.locativeHint}</p>
+          </div>
           <div className="px-4 py-3">
             <div className="mb-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
               {T.reference.examples}

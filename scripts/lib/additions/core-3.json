@@ -1,0 +1,189 @@
+[
+ {
+  "swahili": "kuuma",
+  "german": "schmerzen / weh tun; beißen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Mein Kopf fängt an weh zu tun.",
+    "sw": "Kichwa changu kimeanza kuuma."
+   },
+   {
+    "de": "Meine Beine tun abends weh.",
+    "sw": "Miguu yangu huuma jioni."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuelekea",
+  "german": "sich hinbewegen zu / unterwegs sein nach",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Ich bin gerade auf dem Weg zum Markt.",
+    "sw": "Ninaelekea sokoni sasa."
+   },
+   {
+    "de": "Der Bus fährt nach Dodoma.",
+    "sw": "Basi linaelekea Dodoma."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kufaa",
+  "german": "passen / taugen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Diese Schuhe könnten passen.",
+    "sw": "Viatu hivi vinaweza kufaa."
+   },
+   {
+    "de": "Dieses Buch ist gut für Kinder.",
+    "sw": "Kitabu hiki hufaa kwa watoto."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuwasiliana",
+  "german": "sich melden / in Verbindung setzen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Ich melde mich morgen bei dir.",
+    "sw": "Nitawasiliana nawe kesho."
+   },
+   {
+    "de": "Wir haben jeden Tag telefonisch Kontakt.",
+    "sw": "Tunawasiliana kwa simu kila siku."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuzungumza",
+  "german": "sich unterhalten / sprechen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Zu Hause sprechen wir Swahili.",
+    "sw": "Tunazungumza Kiswahili nyumbani."
+   },
+   {
+    "de": "Ich möchte mit dem Lehrer sprechen.",
+    "sw": "Nataka kuzungumza na mwalimu."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kueleza",
+  "german": "erklären / schildern",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Der Lehrer erklärt die Lektion gut.",
+    "sw": "Mwalimu anaeleza somo vizuri."
+   },
+   {
+    "de": "Bitte erkläre es noch einmal.",
+    "sw": "Tafadhali eleza tena."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuandaa",
+  "german": "vorbereiten",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Mama bereitet abends das Essen zu.",
+    "sw": "Mama anaandaa chakula jioni."
+   },
+   {
+    "de": "Wir haben alles für die Reise vorbereitet.",
+    "sw": "Tumeandaa kila kitu kwa safari."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuongeza",
+  "german": "erhöhen / hinzufügen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Ich gebe etwas Zucker in den Tee.",
+    "sw": "Ninaongeza sukari kidogo kwenye chai."
+   },
+   {
+    "de": "Der Laden hat den Brotpreis erhöht.",
+    "sw": "Duka limeongeza bei ya mkate."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kupaswa",
+  "german": "sollen / müssen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Du solltest viel Wasser trinken.",
+    "sw": "Unapaswa kunywa maji mengi."
+   },
+   {
+    "de": "Wir müssen jetzt losgehen.",
+    "sw": "Tunapaswa kuondoka sasa."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuwahi",
+  "german": "je(mals) etwas getan haben; rechtzeitig kommen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Warst du schon einmal in Sansibar?",
+    "sw": "Umewahi kwenda Zanzibar?"
+   },
+   {
+    "de": "Lass uns jetzt gehen, damit wir den Bus noch erwischen.",
+    "sw": "Twende sasa ili tuwahi basi."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "mazungumzo",
+  "german": "Gespräch / Unterhaltung",
+  "partOfSpeech": "noun",
+  "nounClass": "Ji-Ma",
+  "examples": [
+   {
+    "de": "Unser Gespräch war schön.",
+    "sw": "Mazungumzo yetu yalikuwa mazuri."
+   },
+   {
+    "de": "Wir hatten gestern ein langes Gespräch.",
+    "sw": "Tulikuwa na mazungumzo marefu jana."
+   }
+  ],
+  "topics": []
+ }
+]

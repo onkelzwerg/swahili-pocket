@@ -1,0 +1,342 @@
+{
+ "id": "doctor",
+ "lemmas": [
+  "asante",
+  "baada ya",
+  "chakula",
+  "daktari",
+  "dalili",
+  "dawa",
+  "digrii",
+  "gani",
+  "hamu",
+  "hasa",
+  "hebu",
+  "homa",
+  "ingi",
+  "jana",
+  "joto",
+  "kichwa",
+  "kuandika",
+  "kuchukua",
+  "kula",
+  "kunywa",
+  "kupima",
+  "kupumzika",
+  "kusikia",
+  "kuuma",
+  "kuwa na",
+  "kwa",
+  "lakini",
+  "lazima",
+  "maji",
+  "mara",
+  "mbaya",
+  "na",
+  "ngapi",
+  "ni",
+  "sana",
+  "sawa",
+  "si",
+  "siku",
+  "tangu",
+  "tatu",
+  "thelathini",
+  "tisa",
+  "usiku",
+  "vizuri"
+ ],
+ "glosses": {
+  "daktari": {
+   "lemma": "daktari",
+   "de": "Doktor (Anrede), Arzt"
+  },
+  "sijisikii": {
+   "lemma": "kusikia",
+   "de": "ich fühle mich nicht (Verneinung, mit Reflexiv -ji-)"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, wohl"
+  },
+  "tangu": {
+   "lemma": "tangu",
+   "de": "seit"
+  },
+  "jana": {
+   "lemma": "jana",
+   "de": "gestern"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht (jana usiku = gestern Abend/Nacht)"
+  },
+  "una": {
+   "lemma": "kuwa na",
+   "de": "du hast"
+  },
+  "dalili": {
+   "lemma": "dalili",
+   "de": "Symptome, Anzeichen"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche, was für"
+  },
+  "hasa": {
+   "lemma": "hasa",
+   "de": "genau, näher gesagt"
+  },
+  "nina": {
+   "lemma": "kuwa na",
+   "de": "ich habe"
+  },
+  "homa": {
+   "lemma": "homa",
+   "de": "Fieber"
+  },
+  "kichwa": {
+   "lemma": "kichwa",
+   "de": "Kopf"
+  },
+  "kinauma": {
+   "lemma": "kuuma",
+   "de": "er/es schmerzt (der Kopf tut weh)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "sina": {
+   "lemma": "kuwa na",
+   "de": "ich habe nicht"
+  },
+  "hamu": {
+   "lemma": "hamu",
+   "de": "Lust, Verlangen (hamu ya kula = Appetit)"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse; hier in „hamu ya kula\" und „baada ya\")",
+   "structure": true
+  },
+  "kula": {
+   "lemma": "kula",
+   "de": "essen (Infinitiv: zu essen)"
+  },
+  "hebu": {
+   "lemma": "hebu",
+   "de": "lass mal, komm (auffordernde Partikel)"
+  },
+  "nikupime": {
+   "lemma": "kupima",
+   "de": "dass ich dich messe (Konjunktiv)"
+  },
+  "joto": {
+   "lemma": "joto",
+   "de": "Temperatur, Hitze"
+  },
+  "lako": {
+   "lemma": "-ako",
+   "de": "dein/deine",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "digrii": {
+   "lemma": "digrii",
+   "de": "Grad"
+  },
+  "thelathini": {
+   "lemma": "thelathini",
+   "de": "dreißig"
+  },
+  "tisa": {
+   "lemma": "tisa",
+   "de": "neun"
+  },
+  "mbaya": {
+   "lemma": "mbaya",
+   "de": "schlimm, schlecht"
+  },
+  "si": {
+   "lemma": "si",
+   "de": "ist nicht (negative Kopula)"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "es ist nötig, man muss"
+  },
+  "upumzike": {
+   "lemma": "kupumzika",
+   "de": "dass du dich ausruhst (Konjunktiv)"
+  },
+  "nakuandikia": {
+   "lemma": "kuandika",
+   "de": "ich schreibe dir auf, ich verschreibe dir"
+  },
+  "dawa": {
+   "lemma": "dawa",
+   "de": "Medikament"
+  },
+  "nichukue": {
+   "lemma": "kuchukua",
+   "de": "dass ich nehme, soll ich nehmen (Konjunktiv)"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "Mal"
+  },
+  "ngapi": {
+   "lemma": "ngapi",
+   "de": "wie viele, wie oft"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "pro, am (kwa siku = pro Tag)"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei"
+  },
+  "baada": {
+   "lemma": "baada ya",
+   "de": "nach (zeitlich)"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen, Mahlzeit"
+  },
+  "unywe": {
+   "lemma": "kunywa",
+   "de": "dass du trinkst, trink (Konjunktiv)"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "mengi": {
+   "lemma": "ingi",
+   "de": "viel (Ma-Klasse)"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "in Ordnung, okay"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Daktari, sijisikii vizuri tangu jana usiku.",
+    "de": "Doktor, mir geht es seit gestern Abend nicht gut.",
+    "correct": true
+   },
+   {
+    "sw": "Daktari, ninajisikia vizuri tangu jana usiku.",
+    "de": "Doktor, mir geht es seit gestern Abend gut.",
+    "correct": false,
+    "feedback": "Damit sagst du, dir gehe es gut — dann bräuchtest du keinen Arzt."
+   },
+   {
+    "sw": "Daktari, sijisikii vizuri tangu kesho usiku.",
+    "de": "Doktor, mir geht es seit morgen Abend nicht gut.",
+    "correct": false,
+    "feedback": "„kesho“ heißt morgen. Angefangen hat es gestern: „jana“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Nina homa, kichwa kinauma na sina hamu ya kula.",
+    "de": "Ich habe Fieber, Kopfschmerzen und keinen Appetit.",
+    "correct": true
+   },
+   {
+    "sw": "Nina homa, kichwa kinauma na nina hamu ya kula.",
+    "de": "Ich habe Fieber, Kopfschmerzen und Appetit.",
+    "correct": false,
+    "feedback": "„nina hamu“ heißt, du hast Appetit. Fehlt er dir, sagst du „sina“."
+   },
+   {
+    "sw": "Nina homa, kichwa inauma na sina hamu ya kula.",
+    "de": "Ich habe Fieber, Kopfschmerzen und keinen Appetit.",
+    "correct": false,
+    "feedback": "„kichwa“ gehört zur Ki-Vi-Klasse — es heißt „kinauma“, nicht „inauma“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Ni mbaya?",
+    "de": "Ist das schlimm?",
+    "correct": true
+   },
+   {
+    "sw": "Ni mzuri?",
+    "de": "Ist das gut?",
+    "correct": false,
+    "feedback": "„mzuri“ heißt gut. Du fragst, ob es schlimm ist: „mbaya“."
+   },
+   {
+    "sw": "Ilikuwa mbaya?",
+    "de": "War es schlimm?",
+    "correct": false,
+    "feedback": "„Ili-“ ist Vergangenheit. Du fragst nach deinem Zustand jetzt: „ni“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Nichukue mara ngapi kwa siku?",
+    "de": "Wie oft am Tag soll ich sie nehmen?",
+    "correct": true
+   },
+   {
+    "sw": "Nichukue mara nyingi kwa siku?",
+    "de": "Soll ich sie oft am Tag nehmen?",
+    "correct": false,
+    "feedback": "„nyingi“ heißt viele. Nach der Anzahl fragst du mit „ngapi“."
+   },
+   {
+    "sw": "Nilichukua mara ngapi kwa siku?",
+    "de": "Wie oft am Tag habe ich sie genommen?",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit. Du fragst, was du künftig tun sollst: „nichukue“."
+   }
+  ],
+  "8": [
+   {
+    "sw": "Sawa daktari, asante sana.",
+    "de": "In Ordnung, Doktor, vielen Dank.",
+    "correct": true
+   },
+   {
+    "sw": "Sawa daktari, karibu sana.",
+    "de": "In Ordnung, Doktor, sehr willkommen.",
+    "correct": false,
+    "feedback": "„Karibu“ antwortet auf einen Dank. Hier bedankst du dich selbst: „asante“."
+   },
+   {
+    "sw": "Sawa daktari, samahani sana.",
+    "de": "In Ordnung, Doktor, Entschuldigung.",
+    "correct": false,
+    "feedback": "„Samahani“ ist die Entschuldigung. Für die Behandlung dankst du: „asante“."
+   }
+  ]
+ }
+}

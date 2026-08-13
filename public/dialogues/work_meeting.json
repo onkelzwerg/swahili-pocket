@@ -1,0 +1,340 @@
+{
+ "id": "work_meeting",
+ "lemmas": [
+  "asilimia",
+  "au",
+  "bajeti",
+  "ema",
+  "habari",
+  "ijumaa",
+  "ingine",
+  "jumatatu",
+  "kabla",
+  "karibu",
+  "kazi",
+  "kuajiri",
+  "kuandaa",
+  "kuangalia",
+  "kuanza",
+  "kuhitaji",
+  "kuhusu",
+  "kuja",
+  "kukutana",
+  "kumi",
+  "kuongeza",
+  "kupungua",
+  "kutafuta",
+  "kuwa na",
+  "kuweza",
+  "kuzungumza",
+  "kwa",
+  "leo",
+  "lini",
+  "maendeleo",
+  "mbunifu",
+  "mkutano",
+  "moja",
+  "mpya",
+  "mradi",
+  "mtaalamu",
+  "mteja",
+  "mtu",
+  "mwezi",
+  "na",
+  "ndiyo",
+  "programu",
+  "sawa",
+  "swali",
+  "tafadhali",
+  "tangazo",
+  "tena",
+  "wiki"
+ ],
+ "glosses": {
+  "habari": {
+   "lemma": "habari",
+   "de": "Wie läuft's? / Nachricht (im Gruß: Wie geht's?)"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "tuanze": {
+   "lemma": "kuanza",
+   "de": "lass uns beginnen"
+  },
+  "mkutano": {
+   "lemma": "mkutano",
+   "de": "Meeting, Besprechung"
+  },
+  "wetu": {
+   "lemma": "-etu",
+   "de": "unser/unsere (Possessiv, M-Klasse)",
+   "structure": true
+  },
+  "karibuni": {
+   "lemma": "karibu",
+   "de": "willkommen! (an mehrere)"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle (Universal-Pronomen, M-Wa-Klasse)",
+   "structure": true
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "tutazungumzia": {
+   "lemma": "kuzungumza",
+   "de": "wir werden sprechen über"
+  },
+  "mradi": {
+   "lemma": "mradi",
+   "de": "Projekt"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neu (M-Klasse)"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "wateja": {
+   "lemma": "mteja",
+   "de": "Kunden"
+  },
+  "nina": {
+   "lemma": "kuwa na",
+   "de": "ich habe"
+  },
+  "swali": {
+   "lemma": "swali",
+   "de": "Frage"
+  },
+  "kuhusu": {
+   "lemma": "kuhusu",
+   "de": "über, bezüglich"
+  },
+  "bajeti": {
+   "lemma": "bajeti",
+   "de": "Budget, Etat"
+  },
+  "imeongezeka": {
+   "lemma": "kuongeza",
+   "de": "es ist gestiegen, wurde erhöht"
+  },
+  "au": {
+   "lemma": "au",
+   "de": "oder"
+  },
+  "imepungua": {
+   "lemma": "kupungua",
+   "de": "es ist gesunken, wurde weniger"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "um, mit (Präposition)"
+  },
+  "asilimia": {
+   "lemma": "asilimia",
+   "de": "Prozent"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "mwezi": {
+   "lemma": "mwezi",
+   "de": "Monat"
+  },
+  "huu": {
+   "lemma": "huu",
+   "de": "dieser (Demonstrativ, M-Klasse)",
+   "structure": true
+  },
+  "njema": {
+   "lemma": "ema",
+   "de": "gut (N-Klasse; habari njema = gute Nachricht)"
+  },
+  "tunaweza": {
+   "lemma": "kuweza",
+   "de": "wir können"
+  },
+  "kuajiri": {
+   "lemma": "kuajiri",
+   "de": "einstellen, anstellen"
+  },
+  "watu": {
+   "lemma": "mtu",
+   "de": "Leute, Menschen"
+  },
+  "wengine": {
+   "lemma": "ingine",
+   "de": "weitere, andere (M-Wa-Klasse)"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (bejahende Antwortpartikel)"
+  },
+  "tunahitaji": {
+   "lemma": "kuhitaji",
+   "de": "wir brauchen"
+  },
+  "mtaalamu": {
+   "lemma": "mtaalamu",
+   "de": "Spezialist/in, Experte/in"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein, einen (M-Wa-Klasse)"
+  },
+  "programu": {
+   "lemma": "programu",
+   "de": "Programm, Software"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "mbunifu": {
+   "lemma": "mbunifu",
+   "de": "Designer/in, Gestalter/in"
+  },
+  "lini": {
+   "lemma": "lini",
+   "de": "wann"
+  },
+  "tutaanza": {
+   "lemma": "kuanza",
+   "de": "wir werden anfangen"
+  },
+  "kuwatafuta": {
+   "lemma": "kutafuta",
+   "de": "sie zu suchen"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Woche"
+  },
+  "ijayo": {
+   "lemma": "kuja",
+   "de": "kommende (wiki ijayo = nächste Woche)"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "andaeni": {
+   "lemma": "kuandaa",
+   "de": "bereitet vor (Imperativ Plural)"
+  },
+  "matangazo": {
+   "lemma": "tangazo",
+   "de": "Anzeigen, Ankündigungen"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv-Verbinder, Ma-/N-Klasse)",
+   "structure": true
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "vor, bevor"
+  },
+  "ijumaa": {
+   "lemma": "ijumaa",
+   "de": "Freitag"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "gut, in Ordnung"
+  },
+  "tukutane": {
+   "lemma": "kukutana",
+   "de": "lass uns treffen"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "wieder, erneut"
+  },
+  "jumatatu": {
+   "lemma": "jumatatu",
+   "de": "Montag"
+  },
+  "kuangalia": {
+   "lemma": "kuangalia",
+   "de": "anschauen, prüfen"
+  },
+  "maendeleo": {
+   "lemma": "maendeleo",
+   "de": "Fortschritt, Entwicklung"
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari za kazi? Tuanze mkutano wetu.",
+    "de": "Wie läuft die Arbeit? Beginnen wir unser Meeting.",
+    "correct": true
+   },
+   {
+    "sw": "Habari za kazi? Tunaanza mkutano wetu.",
+    "de": "Wie läuft die Arbeit? Wir beginnen unser Meeting.",
+    "correct": false,
+    "feedback": "„Tunaanza“ berichtet nur. Zum Auffordern steht der Konjunktiv: „tuanze“."
+   },
+   {
+    "sw": "Habari za kazi? Tuanze mkutano wenu.",
+    "de": "Wie läuft die Arbeit? Beginnen wir euer Meeting.",
+    "correct": false,
+    "feedback": "„wenu“ heißt euer. Du sitzt mit am Tisch: „wetu“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Habari njema. Tunaweza kuajiri watu wengine?",
+    "de": "Gute Nachrichten. Können wir weitere Leute einstellen?",
+    "correct": true
+   },
+   {
+    "sw": "Habari njema. Tunaweza kuajiri watu wengi?",
+    "de": "Gute Nachrichten. Können wir viele Leute einstellen?",
+    "correct": false,
+    "feedback": "„wengi“ heißt viele. Du fragst nach weiteren: „wengine“."
+   },
+   {
+    "sw": "Habari mbaya. Tunaweza kuajiri watu wengine?",
+    "de": "Schlechte Nachrichten. Können wir weitere Leute einstellen?",
+    "correct": false,
+    "feedback": "Das Budget ist gestiegen — das ist eine gute Nachricht: „njema“."
+   }
+  ],
+  "7": [
+   {
+    "sw": "Wiki ijayo. Tafadhali andaeni matangazo ya kazi kabla ya Ijumaa.",
+    "de": "Nächste Woche. Bitte bereitet die Stellenanzeigen vor Freitag vor.",
+    "correct": true
+   },
+   {
+    "sw": "Wiki ijayo. Tafadhali andaa matangazo ya kazi kabla ya Ijumaa.",
+    "de": "Nächste Woche. Bitte bereite die Stellenanzeigen vor Freitag vor.",
+    "correct": false,
+    "feedback": "Du sprichst mehrere an — der Imperativ im Plural heißt „andaeni“."
+   },
+   {
+    "sw": "Wiki iliyopita. Tafadhali andaeni matangazo ya kazi kabla ya Ijumaa.",
+    "de": "Letzte Woche. Bitte bereitet die Stellenanzeigen vor Freitag vor.",
+    "correct": false,
+    "feedback": "„iliyopita“ ist die vergangene Woche. Losgehen soll es in der kommenden: „ijayo“."
+   }
+  ]
+ }
+}

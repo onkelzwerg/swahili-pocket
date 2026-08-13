@@ -295,6 +295,14 @@ export const T = {
       title: "Mitgeredet",
       description: "Einen Dialog mitgespielt und dabei nichts falsch beantwortet.",
     },
+    dialoguesUnlocked: {
+      title: "Zehn Dialoge offen",
+      description: "Zehn Dialoge freigeschaltet — von jedem verstehst du 95 % der Wörter.",
+    },
+    dialoguesPerfect: {
+      title: "Gesprächig",
+      description: "Fünf verschiedene Dialoge fehlerfrei mitgespielt.",
+    },
   },
 
   trainer: {
@@ -462,6 +470,11 @@ export const T = {
       "Alltagsdialoge auf Swahili: Begrüßung, Markt, Restaurant und mehr — mit Audio.",
     eyebrow: "Mazungumzo",
     title: "Dialoge",
+    /** Dieselbe Kernschleife wie bei den Geschichten, in einem Satz (W4.4). */
+    intro:
+      "Freigeschaltet wird, was du zu mindestens 95 % verstehst. Jedes neue Wort öffnet weitere Dialoge.",
+    /** Hinweis über dem Dialogtext — die Wörter sind antippbar (W4.4). */
+    readerHint: "Tippe ein Wort an, um es nachzuschlagen.",
     generateCta: "Generieren",
     aiBadge: "KI",
     deleteAria: "Dialog löschen",
@@ -514,6 +527,11 @@ export const T = {
     demonstratives: "Demonstrativa",
     near: "Dieses (hier)",
     far: "Jenes (dort)",
+    locative: "Ortsangabe („ist da“)",
+    locativeHint:
+      "-po = genau an dieser Stelle · -ko = irgendwo, allgemein · -mo = darin. " +
+      "Die Form richtet sich nach der Klasse dessen, was sich irgendwo befindet: " +
+      "Kitabu kiko wapi? — Wo ist das Buch?",
     examples: "Beispiele",
     monosyllabic: {
       title: "Einsilbige Verben",
@@ -575,16 +593,6 @@ export const T = {
     band: (n: number) => `Stufe ${n}`,
     words: (n: number) => `${n} Wörter`,
     readBadge: "Gelesen",
-    /** Abdeckungs-Badge. */
-    coverage: (percent: number) => `${percent} % bekannt`,
-    newWords: (n: number) =>
-      n === 0 ? "kein neues Wort" : n === 1 ? "1 neues Wort" : `${n} neue Wörter`,
-    lockedProgress: (missing: number) =>
-      missing === 1
-        ? "Noch 1 Wort bis zur Freischaltung"
-        : `Noch ${missing} Wörter bis zur Freischaltung`,
-    learnMissing: "Diese Wörter lernen",
-    lockedAria: "Gesperrt",
     reader: {
       backAria: "Zurück zu den Geschichten",
       showGerman: "Deutsch einblenden",
@@ -598,21 +606,55 @@ export const T = {
       xp: (n: number) => `+${n} XP`,
       newWordHint: "Neues Wort in dieser Geschichte",
     },
-    gloss: {
-      baseForm: (lemma: string) => `Grundform: ${lemma}`,
-      properName: "Eigenname",
-      structure: "Grammatische Form — die lernst du im Grammatik-Gym, nicht als Vokabel.",
-      addCard: "Als Lernkarte übernehmen",
-      inCards: "Schon in deinen Karten",
-      added: "In Lernkarten übernommen",
-      listenAria: "Wort anhören",
-    },
     done: {
       headline: "Umemaliza!",
       body: (title: string) => `„${title}" ist durch.`,
       unaided: "Und das ganz ohne die Übersetzung einzublenden.",
       back: "Zur Bibliothek",
     },
+  },
+
+  /**
+   * Abdeckung und Freischaltung — dieselben Sätze für Geschichten und Dialoge
+   * (W4.4). Die Kernschleife ist in beiden Listen dieselbe; sie zweimal leicht
+   * anders zu formulieren würde sie als zwei Mechaniken erscheinen lassen.
+   */
+  coverage: {
+    known: (percent: number) => `${percent} % bekannt`,
+    newWords: (n: number) =>
+      n === 0 ? "kein neues Wort" : n === 1 ? "1 neues Wort" : `${n} neue Wörter`,
+    lockedProgress: (missing: number) =>
+      missing === 1
+        ? "Noch 1 Wort bis zur Freischaltung"
+        : `Noch ${missing} Wörter bis zur Freischaltung`,
+    learnMissing: "Diese Wörter lernen",
+    lockedAria: "Gesperrt",
+  },
+
+  /** Wort-Nachschlag — im Lesetext wie im Dialog (components/GlossSheet). */
+  gloss: {
+    baseForm: (lemma: string) => `Grundform: ${lemma}`,
+    properName: "Eigenname",
+    structure: "Grammatische Form — die lernst du im Grammatik-Gym, nicht als Vokabel.",
+    addCard: "Als Lernkarte übernehmen",
+    inCards: "Schon in deinen Karten",
+    added: "In Lernkarten übernommen",
+    listenAria: "Wort anhören",
+  },
+
+  packs: {
+    title: "Themenpakete",
+    intro:
+      "Zusätzlicher Wortschatz für einzelne Themen. Eingeschaltet stehen die Wörter im Pool zur Auswahl, und die Dialoge und Geschichten dazu werden sichtbar.",
+    wordCount: (n: number) => (n === 1 ? "1 Wort" : `${n} Wörter`),
+    on: "An",
+    off: "Aus",
+    /** Hinweis an einem Inhalt, dem noch ein Paket fehlt. */
+    locked: (titles: string[]) =>
+      titles.length === 1
+        ? `Braucht das Paket „${titles[0]}"`
+        : `Braucht die Pakete ${titles.map((t) => `„${t}"`).join(" und ")}`,
+    unlockCta: "In der Bibliothek einschalten",
   },
 
   library: {
@@ -629,7 +671,8 @@ export const T = {
     },
     dialogues: {
       title: "Dialoge",
-      subtitle: (playable: number, total: number) => `${total} Dialoge · ${playable} mitspielbar`,
+      subtitle: (unlocked: number, total: number, playable: number) =>
+        `${unlocked} von ${total} freigeschaltet · ${playable} mitspielbar`,
     },
     grammar: {
       title: "Grammatik",

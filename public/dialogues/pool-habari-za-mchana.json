@@ -1,0 +1,170 @@
+{
+ "id": "pool-habari-za-mchana",
+ "lemmas": [
+  "asante",
+  "asubuhi",
+  "habari",
+  "hapa",
+  "jambo",
+  "je",
+  "karibu",
+  "katika",
+  "kukaa",
+  "kutoka",
+  "lakini",
+  "mzuri",
+  "na",
+  "rafiki",
+  "sana",
+  "sasa",
+  "wapi",
+  "wewe"
+ ],
+ "glosses": {
+  "hujambo": {
+   "lemma": "jambo",
+   "de": "Hallo! / Wie geht es dir? (wörtlich: dir fehlt nichts?)"
+  },
+  "rafiki": {
+   "lemma": "rafiki",
+   "de": "Freund"
+  },
+  "yangu": {
+   "lemma": "-angu",
+   "de": "mein/meine (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "habari": {
+   "lemma": "habari",
+   "de": "Wie geht's? (wörtlich: Neuigkeit(en))"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von/des (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "sijambo": {
+   "lemma": "jambo",
+   "de": "Mir geht es gut (wörtlich: mir fehlt nichts)"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "wewe": {
+   "lemma": "wewe",
+   "de": "du"
+  },
+  "yako": {
+   "lemma": "-ako",
+   "de": "dein/deine (Possessiv, N-Klasse)",
+   "structure": true
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "gut, schön"
+  },
+  "je": {
+   "lemma": "je",
+   "de": "Fragepartikel (leitet die Frage ein: sag mal, …?)"
+  },
+  "unatoka": {
+   "lemma": "kutoka",
+   "de": "du kommst (aus)"
+  },
+  "wapi": {
+   "lemma": "wapi",
+   "de": "wo, woher"
+  },
+  "ninatoka": {
+   "lemma": "kutoka",
+   "de": "ich komme (aus)"
+  },
+  "ujerumani": {
+   "lemma": "ujerumani",
+   "de": "Deutschland",
+   "proper": true
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt, nun"
+  },
+  "ninakaa": {
+   "lemma": "kukaa",
+   "de": "ich wohne, ich halte mich auf"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "willkommen!"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "tanzania": {
+   "lemma": "tanzania",
+   "de": "Tansania",
+   "proper": true
+  }
+ },
+ "choices": {
+  "1": [
+   {
+    "sw": "Sijambo sana, asante. Na wewe, habari yako?",
+    "de": "Mir geht es sehr gut, danke. Und dir, wie geht es dir?",
+    "correct": true
+   },
+   {
+    "sw": "Hujambo sana, asante. Na wewe, habari yako?",
+    "de": "Dir geht es sehr gut, danke. Und dir, wie geht es dir?",
+    "correct": false,
+    "feedback": "„Hujambo“ fragt nach deinem Gegenüber. Von dir selbst sagst du „sijambo“."
+   },
+   {
+    "sw": "Sijambo sana, karibu. Na wewe, habari yako?",
+    "de": "Mir geht es sehr gut, willkommen. Und dir, wie geht es dir?",
+    "correct": false,
+    "feedback": "„Karibu“ heißt willkommen. Für den Dank steht „asante“."
+   }
+  ],
+  "3": [
+   {
+    "sw": "Ninatoka Ujerumani, lakini sasa ninakaa hapa.",
+    "de": "Ich komme aus Deutschland, aber jetzt wohne ich hier.",
+    "correct": true
+   },
+   {
+    "sw": "Unatoka Ujerumani, lakini sasa unakaa hapa.",
+    "de": "Du kommst aus Deutschland, aber jetzt wohnst du hier.",
+    "correct": false,
+    "feedback": "„Una-“ ist die Du-Form. Von dir selbst sprichst du mit „nina-“."
+   },
+   {
+    "sw": "Ninatoka Ujerumani, lakini sasa ninakaa huko.",
+    "de": "Ich komme aus Deutschland, aber jetzt wohne ich dort.",
+    "correct": false,
+    "feedback": "„huko“ heißt dort. Du stehst mitten in Tansania — das ist „hapa“."
+   }
+  ]
+ }
+}

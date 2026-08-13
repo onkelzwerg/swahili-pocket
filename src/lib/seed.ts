@@ -172,46 +172,12 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Habari yako?",
         de: "Wie geht es dir?",
-        choices: [
-          { sw: "Habari yako?", de: "Wie geht es dir?", correct: true },
-          {
-            sw: "Lala salama.",
-            de: "Schlaf gut.",
-            correct: false,
-            feedback: "Das ist der Gruß zum Schlafengehen, nicht zur Begrüßung.",
-          },
-          {
-            sw: "Kwaheri.",
-            de: "Auf Wiedersehen.",
-            correct: false,
-            feedback: "Damit verabschiedest du dich — das Gespräch fängt gerade erst an.",
-          },
-        ],
       },
       { speaker: "B", sw: "Nzuri, asante. Na wewe?", de: "Gut, danke. Und dir?" },
       {
         speaker: "A",
         sw: "Nzuri sana. Habari za asubuhi?",
         de: "Sehr gut. Wie war dein Morgen?",
-        choices: [
-          {
-            sw: "Nzuri sana. Habari za asubuhi?",
-            de: "Sehr gut. Wie war dein Morgen?",
-            correct: true,
-          },
-          {
-            sw: "Nzuri sana. Habari za usiku?",
-            de: "Sehr gut. Wie war deine Nacht?",
-            correct: false,
-            feedback: "„za usiku“ fragt nach der Nacht — am Vormittag fragt man „za asubuhi“.",
-          },
-          {
-            sw: "Nzuri sana. Unatoka wapi?",
-            de: "Sehr gut. Woher kommst du?",
-            correct: false,
-            feedback: "Ihr kennt euch schon — hier geht es weiter um das Befinden.",
-          },
-        ],
       },
       {
         speaker: "B",
@@ -222,25 +188,6 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Ndiyo, nimelala vizuri sana, asante.",
         de: "Ja, ich habe sehr gut geschlafen, danke.",
-        choices: [
-          {
-            sw: "Ndiyo, nimelala vizuri sana, asante.",
-            de: "Ja, ich habe sehr gut geschlafen, danke.",
-            correct: true,
-          },
-          {
-            sw: "Ndiyo, nitalala vizuri sana, asante.",
-            de: "Ja, ich werde sehr gut schlafen, danke.",
-            correct: false,
-            feedback: "„nita-“ ist Zukunft. Gefragt war die vergangene Nacht: „nime-“.",
-          },
-          {
-            sw: "Ndiyo, nimelala vizuri sana, karibu.",
-            de: "Ja, ich habe sehr gut geschlafen, willkommen.",
-            correct: false,
-            feedback: "„karibu“ heißt willkommen. Danken tust du mit „asante“.",
-          },
-        ],
       },
       { speaker: "B", sw: "Vizuri. Tuonane baadaye.", de: "Schön. Bis später." },
     ],
@@ -278,25 +225,6 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Habari ya asubuhi. Bei gani embe moja?",
         de: "Guten Morgen. Was kostet eine Mango?",
-        choices: [
-          {
-            sw: "Habari ya asubuhi. Bei gani embe moja?",
-            de: "Guten Morgen. Was kostet eine Mango?",
-            correct: true,
-          },
-          {
-            sw: "Habari ya asubuhi. Embe moja ni nzuri.",
-            de: "Guten Morgen. Eine Mango ist gut.",
-            correct: false,
-            feedback: "Das ist keine Frage. Nach dem Preis fragst du mit „bei gani“.",
-          },
-          {
-            sw: "Habari ya jioni. Bei gani embe moja?",
-            de: "Guten Abend. Was kostet eine Mango?",
-            correct: false,
-            feedback: "„ya jioni“ ist der Abendgruß — am Vormittag heißt es „ya asubuhi“.",
-          },
-        ],
       },
       {
         speaker: "B",
@@ -307,25 +235,6 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Ni ghali kidogo. Punguza bei tafadhali.",
         de: "Das ist etwas teuer. Senke bitte den Preis.",
-        choices: [
-          {
-            sw: "Ni ghali kidogo. Punguza bei tafadhali.",
-            de: "Das ist etwas teuer. Senke bitte den Preis.",
-            correct: true,
-          },
-          {
-            sw: "Ni rahisi sana. Punguza bei tafadhali.",
-            de: "Das ist sehr billig. Senke bitte den Preis.",
-            correct: false,
-            feedback: "„rahisi“ heißt billig — dann gäbe es nichts zu handeln.",
-          },
-          {
-            sw: "Ni ghali kidogo. Ninapunguza bei tafadhali.",
-            de: "Das ist etwas teuer. Ich senke bitte den Preis.",
-            correct: false,
-            feedback: "Du bittest jemanden: dafür der Imperativ „punguza“, nicht „ninapunguza“.",
-          },
-        ],
       },
       {
         speaker: "B",
@@ -336,25 +245,6 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Nipe matano basi. Na ndizi pia, kilo moja.",
         de: "Dann gib mir fünf. Und Bananen auch, ein Kilo.",
-        choices: [
-          {
-            sw: "Nipe matano basi. Na ndizi pia, kilo moja.",
-            de: "Dann gib mir fünf. Und Bananen auch, ein Kilo.",
-            correct: true,
-          },
-          {
-            sw: "Nitakupa matano basi. Na ndizi pia, kilo moja.",
-            de: "Dann gebe ich dir fünf. Und Bananen auch, ein Kilo.",
-            correct: false,
-            feedback: "„Nitakupa“ heißt „ich gebe dir“ — du willst kaufen: „nipe“ (gib mir).",
-          },
-          {
-            sw: "Nipe tano basi. Na ndizi pia, kilo moja.",
-            de: "Dann gib mir fünf. Und Bananen auch, ein Kilo.",
-            correct: false,
-            feedback: "Mangos gehören zur Ji-Ma-Klasse — dort heißt fünf „matano“, nicht „tano“.",
-          },
-        ],
       },
       {
         speaker: "B",
@@ -365,21 +255,6 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Chukua. Asante sana.",
         de: "Bitte sehr. Vielen Dank.",
-        choices: [
-          { sw: "Chukua. Asante sana.", de: "Bitte sehr. Vielen Dank.", correct: true },
-          {
-            sw: "Chukua. Karibu sana.",
-            de: "Nimm. Sehr willkommen.",
-            correct: false,
-            feedback: "„Karibu“ antwortet auf einen Dank — hier bedankst du dich selbst.",
-          },
-          {
-            sw: "Nichukue. Asante sana.",
-            de: "Nimm mich. Vielen Dank.",
-            correct: false,
-            feedback: "„Nichukue“ heißt „nimm mich“. Gemeint ist das Geld: „chukua“.",
-          },
-        ],
       },
     ],
   },
@@ -424,25 +299,6 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Hodi! Kuna meza kwa watu wawili?",
         de: "Hallo! Gibt es einen Tisch für zwei?",
-        choices: [
-          {
-            sw: "Hodi! Kuna meza kwa watu wawili?",
-            de: "Hallo! Gibt es einen Tisch für zwei?",
-            correct: true,
-          },
-          {
-            sw: "Hodi! Kuna meza kwa watu mbili?",
-            de: "Hallo! Gibt es einen Tisch für zwei?",
-            correct: false,
-            feedback: "Personen (M-Wa) zählt man mit „wawili“; „mbili“ gehört zur N-Klasse.",
-          },
-          {
-            sw: "Hodi! Hakuna meza kwa watu wawili?",
-            de: "Hallo! Gibt es keinen Tisch für zwei?",
-            correct: false,
-            feedback: "„Hakuna“ verneint — du fragst aber, ob es einen Tisch gibt.",
-          },
-        ],
       },
       {
         speaker: "B",
@@ -453,25 +309,6 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Asante. Mnao wali na samaki leo?",
         de: "Danke. Habt ihr heute Reis mit Fisch?",
-        choices: [
-          {
-            sw: "Asante. Mnao wali na samaki leo?",
-            de: "Danke. Habt ihr heute Reis mit Fisch?",
-            correct: true,
-          },
-          {
-            sw: "Asante. Ninao wali na samaki leo?",
-            de: "Danke. Habe ich heute Reis mit Fisch?",
-            correct: false,
-            feedback: "„Ninao“ heißt „habe ich“ — du fragst das Restaurant: „mnao“ (habt ihr).",
-          },
-          {
-            sw: "Asante. Mlikuwa na wali na samaki leo?",
-            de: "Danke. Hattet ihr heute Reis mit Fisch?",
-            correct: false,
-            feedback: "„Mlikuwa“ ist Vergangenheit — gefragt ist das heutige Angebot.",
-          },
-        ],
       },
       {
         speaker: "B",
@@ -488,21 +325,6 @@ export const dialogues: Dialogue[] = [
         speaker: "A",
         sw: "Chupa mbili za maji baridi.",
         de: "Zwei Flaschen Wasser, kalt.",
-        choices: [
-          { sw: "Chupa mbili za maji baridi.", de: "Zwei Flaschen Wasser, kalt.", correct: true },
-          {
-            sw: "Chupa mbili wa maji baridi.",
-            de: "Zwei Flaschen Wasser, kalt.",
-            correct: false,
-            feedback: "Flaschen gehören zur N-Klasse — der Genitiv heißt dort „za“, nicht „wa“.",
-          },
-          {
-            sw: "Chupa mbili za maji moto.",
-            de: "Zwei Flaschen Wasser, heiß.",
-            correct: false,
-            feedback: "„moto“ heißt heiß. Kaltes Wasser ist „maji baridi“.",
-          },
-        ],
       },
       {
         speaker: "B",
@@ -1201,6 +1023,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "huyu", pl: "hawa" },
       far: { sg: "yule", pl: "wale" },
     },
+    locative: { sg: "yuko / yupo / yumo", pl: "wako / wapo / wamo" },
     examples: [
       { sw: "mtu / watu", de: "Mensch / Menschen" },
       { sw: "mtoto / watoto", de: "Kind / Kinder" },
@@ -1221,6 +1044,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "huu", pl: "hii" },
       far: { sg: "ule", pl: "ile" },
     },
+    locative: { sg: "uko / upo / umo", pl: "iko / ipo / imo" },
     examples: [
       { sw: "mti / miti", de: "Baum / Bäume" },
       { sw: "mji / miji", de: "Stadt / Städte" },
@@ -1241,6 +1065,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "hiki", pl: "hivi" },
       far: { sg: "kile", pl: "vile" },
     },
+    locative: { sg: "kiko / kipo / kimo", pl: "viko / vipo / vimo" },
     examples: [
       { sw: "kitabu / vitabu", de: "Buch / Bücher" },
       { sw: "kiti / viti", de: "Stuhl / Stühle" },
@@ -1261,6 +1086,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "hii", pl: "hizi" },
       far: { sg: "ile", pl: "zile" },
     },
+    locative: { sg: "iko / ipo / imo", pl: "ziko / zipo / zimo" },
     examples: [
       { sw: "nyumba / nyumba", de: "Haus / Häuser" },
       { sw: "habari / habari", de: "Nachricht" },
@@ -1281,6 +1107,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "hili", pl: "haya" },
       far: { sg: "lile", pl: "yale" },
     },
+    locative: { sg: "liko / lipo / limo", pl: "yako / yapo / yamo" },
     examples: [
       { sw: "jicho / macho", de: "Auge / Augen" },
       { sw: "jina / majina", de: "Name / Namen" },
@@ -1301,6 +1128,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "huu", pl: "—" },
       far: { sg: "ule", pl: "—" },
     },
+    locative: { sg: "uko / upo / umo", pl: "ziko / zipo / zimo" },
     examples: [
       { sw: "uhuru", de: "Freiheit" },
       { sw: "upendo", de: "Liebe" },
@@ -1321,6 +1149,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "hapa / huku / humu", pl: "—" },
       far: { sg: "pale / kule / mle", pl: "—" },
     },
+    locative: { sg: "pako / papo / pamo", pl: "—" },
     examples: [
       { sw: "mahali", de: "Ort, Platz" },
       { sw: "nyumbani", de: "zu Hause" },
@@ -1341,6 +1170,7 @@ export const nounClasses: NounClassInfo[] = [
       near: { sg: "huku", pl: "—" },
       far: { sg: "kule", pl: "—" },
     },
+    locative: { sg: "kuko / kupo / kumo", pl: "—" },
     examples: [
       { sw: "kusoma", de: "lesen / Lesen" },
       { sw: "kula", de: "essen" },

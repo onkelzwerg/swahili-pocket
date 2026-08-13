@@ -1,0 +1,451 @@
+{
+ "id": "renting_apartment",
+ "lemmas": [
+  "asubuhi",
+  "au",
+  "bado",
+  "dhamana",
+  "gani",
+  "idhini",
+  "je",
+  "kabisa",
+  "karibu",
+  "katika",
+  "kesho",
+  "kodi",
+  "kubadilisha",
+  "kuhusu",
+  "kujumuisha",
+  "kukubaliana",
+  "kukutana",
+  "kulingana",
+  "kulipa",
+  "kuna",
+  "kuona",
+  "kupanga",
+  "kupata",
+  "kuruhusiwa",
+  "kusaini",
+  "kutoka",
+  "kuwa na",
+  "kuweka",
+  "kuweza",
+  "kwa",
+  "lakini",
+  "lazima",
+  "maandishi",
+  "maji",
+  "matumizi",
+  "mbili",
+  "mkataba",
+  "moja",
+  "mtandao",
+  "muda",
+  "mwaka",
+  "mwezi",
+  "na",
+  "ndiyo",
+  "ni",
+  "nne",
+  "nyumba",
+  "ofisi",
+  "rangi",
+  "saa",
+  "samani",
+  "sawa",
+  "sharti",
+  "swali",
+  "tangazo",
+  "tofauti",
+  "ukuta",
+  "umeme"
+ ],
+ "glosses": {
+  "nimeona": {
+   "lemma": "kuona",
+   "de": "ich habe gesehen"
+  },
+  "tangazo": {
+   "lemma": "tangazo",
+   "de": "Anzeige, Inserat"
+  },
+  "lako": {
+   "lemma": "-ako",
+   "de": "dein/Ihr (Possessiv, Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "mtandaoni": {
+   "lemma": "mtandao",
+   "de": "im Internet, online (Lokativ von: Netz)"
+  },
+  "kuhusu": {
+   "lemma": "kuhusu",
+   "de": "über, bezüglich"
+  },
+  "nyumba": {
+   "lemma": "nyumba",
+   "de": "Haus, Wohnung"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "kupanga": {
+   "lemma": "kupanga",
+   "de": "mieten (hier: zum Mieten)"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "willkommen!"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (bestätigende Kopula)"
+  },
+  "bado": {
+   "lemma": "bado",
+   "de": "noch"
+  },
+  "ipo": {
+   "lemma": "-po",
+   "de": "sie ist da, sie ist verfügbar (Lokativ-Kopula, N-Klasse)",
+   "structure": true
+  },
+  "una": {
+   "lemma": "kuwa na",
+   "de": "du hast, Sie haben"
+  },
+  "maswali": {
+   "lemma": "swali",
+   "de": "Fragen"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche, was für"
+  },
+  "kodi": {
+   "lemma": "kodi",
+   "de": "Miete"
+  },
+  "mwezi": {
+   "lemma": "mwezi",
+   "de": "Monat"
+  },
+  "imejumuisha": {
+   "lemma": "kujumuisha",
+   "de": "sie schließt ein, sie beinhaltet"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und; mit (in „kulingana na\": nach, gemäß)"
+  },
+  "umeme": {
+   "lemma": "umeme",
+   "de": "Strom"
+  },
+  "yamejumuishwa": {
+   "lemma": "kujumuisha",
+   "de": "es ist eingeschlossen, es ist inbegriffen"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "unalipa": {
+   "lemma": "kulipa",
+   "de": "du zahlst, Sie zahlen"
+  },
+  "tofauti": {
+   "lemma": "tofauti",
+   "de": "getrennt, separat (wörtl.: Unterschied)"
+  },
+  "kulingana": {
+   "lemma": "kulingana",
+   "de": "entsprechend, je nach (mit na)"
+  },
+  "matumizi": {
+   "lemma": "matumizi",
+   "de": "Verbrauch, Nutzung"
+  },
+  "mkataba": {
+   "lemma": "mkataba",
+   "de": "Vertrag"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist, sind (Kopula)"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Zeitraum, Dauer"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "dhamana": {
+   "lemma": "dhamana",
+   "de": "Kaution, Sicherheit"
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein (M-Klasse)"
+  },
+  "miezi": {
+   "lemma": "mwezi",
+   "de": "Monate"
+  },
+  "miwili": {
+   "lemma": "mbili",
+   "de": "zwei (Mi-Klasse)"
+  },
+  "je": {
+   "lemma": "je",
+   "de": "(Fragepartikel am Satzanfang)"
+  },
+  "naruhusiwa": {
+   "lemma": "kuruhusiwa",
+   "de": "darf ich? (wörtl.: mir wird erlaubt)"
+  },
+  "kubadilisha": {
+   "lemma": "kubadilisha",
+   "de": "ändern, wechseln"
+  },
+  "rangi": {
+   "lemma": "rangi",
+   "de": "Farbe, Farben"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "kuta": {
+   "lemma": "ukuta",
+   "de": "Wände"
+  },
+  "au": {
+   "lemma": "au",
+   "de": "oder"
+  },
+  "kuweka": {
+   "lemma": "kuweka",
+   "de": "hinstellen, aufstellen"
+  },
+  "samani": {
+   "lemma": "samani",
+   "de": "Möbel"
+  },
+  "zangu": {
+   "lemma": "-angu",
+   "de": "meine (Possessiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "zako": {
+   "lemma": "-ako",
+   "de": "deine/Ihre (Possessiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "in Ordnung, einverstanden"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, was ... angeht"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "müssen, notwendig"
+  },
+  "upate": {
+   "lemma": "kupata",
+   "de": "du musst bekommen, Sie müssen einholen"
+  },
+  "idhini": {
+   "lemma": "idhini",
+   "de": "Genehmigung, Erlaubnis"
+  },
+  "maandishi": {
+   "lemma": "maandishi",
+   "de": "Schriftliches, Schriftform"
+  },
+  "kutoka": {
+   "lemma": "kutoka",
+   "de": "von, von ... her"
+  },
+  "kwangu": {
+   "lemma": "-angu",
+   "de": "von mir, bei mir (Possessiv am Ku-Lokativ)",
+   "structure": true
+  },
+  "nakubaliana": {
+   "lemma": "kukubaliana",
+   "de": "ich bin einverstanden"
+  },
+  "masharti": {
+   "lemma": "sharti",
+   "de": "Bedingungen"
+  },
+  "tunaweza": {
+   "lemma": "kuweza",
+   "de": "wir können"
+  },
+  "kukutana": {
+   "lemma": "kukutana",
+   "de": "sich treffen"
+  },
+  "kesho": {
+   "lemma": "kesho",
+   "de": "morgen"
+  },
+  "kusaini": {
+   "lemma": "kusaini",
+   "de": "unterschreiben, zum Unterschreiben"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "völlig, ganz (sawa kabisa: bestens)"
+  },
+  "tukutane": {
+   "lemma": "kukutana",
+   "de": "treffen wir uns, lass uns treffen"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde (Uhrzeit-Angabe)"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier (Suaheli-Stunde 4 = 10 Uhr)"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "morgens, am Vormittag"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "ofisi": {
+   "lemma": "ofisi",
+   "de": "Büro"
+  },
+  "yangu": {
+   "lemma": "-angu",
+   "de": "mein/meine (Possessiv, N-Klasse)",
+   "structure": true
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Nimeona tangazo lako mtandaoni kuhusu nyumba ya kupanga.",
+    "de": "Ich habe Ihre Online-Anzeige zur Mietwohnung gesehen.",
+    "correct": true
+   },
+   {
+    "sw": "Nitaona tangazo lako mtandaoni kuhusu nyumba ya kupanga.",
+    "de": "Ich werde Ihre Online-Anzeige zur Mietwohnung sehen.",
+    "correct": false,
+    "feedback": "„Nita-“ ist Zukunft. Gesehen hast du die Anzeige schon: „nimeona“."
+   },
+   {
+    "sw": "Nimeona tangazo langu mtandaoni kuhusu nyumba ya kupanga.",
+    "de": "Ich habe meine Online-Anzeige zur Mietwohnung gesehen.",
+    "correct": false,
+    "feedback": "„langu“ heißt meine. Die Anzeige ist von ihm: „lako“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Kodi ya mwezi imejumuisha maji na umeme?",
+    "de": "Ist die Monatsmiete inklusive Wasser und Strom?",
+    "correct": true
+   },
+   {
+    "sw": "Kodi wa mwezi imejumuisha maji na umeme?",
+    "de": "Ist die Monatsmiete inklusive Wasser und Strom?",
+    "correct": false,
+    "feedback": "„kodi“ gehört zur N-Klasse — der Genitiv heißt dort „ya“, nicht „wa“."
+   },
+   {
+    "sw": "Kodi ya mwaka imejumuisha maji na umeme?",
+    "de": "Ist die Jahresmiete inklusive Wasser und Strom?",
+    "correct": false,
+    "feedback": "„mwaka“ ist das Jahr. Miete zahlst du monatlich: „mwezi“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Mkataba ni wa muda gani na kuna dhamana?",
+    "de": "Wie lang läuft der Vertrag und gibt es eine Kaution?",
+    "correct": true
+   },
+   {
+    "sw": "Mkataba ni ya muda gani na kuna dhamana?",
+    "de": "Wie lang läuft der Vertrag und gibt es eine Kaution?",
+    "correct": false,
+    "feedback": "„mkataba“ gehört zur M-Mi-Klasse — der Genitiv heißt dort „wa“, nicht „ya“."
+   },
+   {
+    "sw": "Mkataba ni wa muda gani na hakuna dhamana?",
+    "de": "Wie lang läuft der Vertrag und gibt es keine Kaution?",
+    "correct": false,
+    "feedback": "„hakuna“ behauptet, es gebe keine. Du fragst danach: „kuna“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Je, naruhusiwa kubadilisha rangi za kuta au kuweka samani zangu?",
+    "de": "Darf ich die Wandfarben ändern oder eigene Möbel reinstellen?",
+    "correct": true
+   },
+   {
+    "sw": "Je, unaruhusiwa kubadilisha rangi za kuta au kuweka samani zangu?",
+    "de": "Dürfen Sie die Wandfarben ändern oder meine Möbel reinstellen?",
+    "correct": false,
+    "feedback": "„Una-“ fragt, was er darf. Du fragst nach dir: „naruhusiwa“."
+   },
+   {
+    "sw": "Je, naruhusiwa kubadilisha rangi za kuta au kuweka samani zako?",
+    "de": "Darf ich die Wandfarben ändern oder Ihre Möbel reinstellen?",
+    "correct": false,
+    "feedback": "„zako“ heißt seine. Es geht um deine eigenen Möbel: „zangu“."
+   }
+  ],
+  "8": [
+   {
+    "sw": "Nakubaliana na masharti. Tunaweza kukutana kesho kusaini?",
+    "de": "Ich bin mit den Bedingungen einverstanden. Können wir uns morgen zum Unterschreiben treffen?",
+    "correct": true
+   },
+   {
+    "sw": "Sikubaliani na masharti. Tunaweza kukutana kesho kusaini?",
+    "de": "Ich bin mit den Bedingungen nicht einverstanden. Können wir uns morgen zum Unterschreiben treffen?",
+    "correct": false,
+    "feedback": "Damit lehnst du die Bedingungen ab — und willst trotzdem unterschreiben."
+   },
+   {
+    "sw": "Nakubaliana na masharti. Tunaweza kukutana jana kusaini?",
+    "de": "Ich bin mit den Bedingungen einverstanden. Können wir uns gestern zum Unterschreiben treffen?",
+    "correct": false,
+    "feedback": "„jana“ ist gestern. Verabreden kannst du dich nur für morgen: „kesho“."
+   }
+  ]
+ }
+}

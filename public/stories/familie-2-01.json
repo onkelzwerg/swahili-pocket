@@ -1,0 +1,322 @@
+{
+ "id": "familie-2-01",
+ "title": "Simu ya Jumapili",
+ "titleDe": "Der Sonntagsanruf",
+ "band": 2,
+ "topic": "Familie",
+ "emoji": "📞",
+ "lemmas": [
+  "bahari",
+  "bibi",
+  "furaha",
+  "hali",
+  "haraka",
+  "jumapili",
+  "karibu",
+  "katika",
+  "kazi",
+  "kidogo",
+  "kila",
+  "krismasi",
+  "kuangalia",
+  "kubwa",
+  "kuchukua",
+  "kufika",
+  "kuhusu",
+  "kuimba",
+  "kujibu",
+  "kujua",
+  "kukaa",
+  "kuliko",
+  "kupiga simu",
+  "kusema",
+  "kutafuta",
+  "kutaka",
+  "kuwa",
+  "kwa",
+  "lakini",
+  "leo",
+  "mama",
+  "mbali",
+  "mchana",
+  "mji",
+  "moja",
+  "mtoto",
+  "mwisho",
+  "mzuri",
+  "na",
+  "ngumu",
+  "ni",
+  "sana",
+  "sauti",
+  "siku",
+  "tayari",
+  "vizuri",
+  "wiki"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jumapili mchana Fatuma alitafuta simu yake. Bibi yake anakaa mbali sana, katika mji mmoja karibu na bahari. Lakini kila wiki Fatuma alipiga simu, na leo alikuwa tayari.",
+   "de": "Am Sonntagmittag suchte Fatuma ihr Telefon. Ihre Großmutter wohnt sehr weit weg, in einer Stadt nahe am Meer. Aber jede Woche ruft Fatuma an, und heute war sie bereit."
+  },
+  {
+   "sw": "Bibi alijibu haraka. Alitaka kujua kuhusu watoto na kuhusu kazi ya Fatuma. Fatuma alisema kazi ni ngumu kidogo, lakini hali ni nzuri.",
+   "de": "Die Großmutter nahm sofort ab. Sie wollte wissen, wie es den Kindern geht und wie Fatumas Arbeit läuft. Fatuma sagte, die Arbeit sei etwas anstrengend, aber sonst sei alles gut."
+  },
+  {
+   "sw": "Mtoto wa Fatuma alikuwa karibu. Alichukua simu na aliimba kwa sauti kubwa. Bibi alikuwa na furaha sana. Alisema mtoto huyu anaimba vizuri kuliko mama yake.",
+   "de": "Fatumas Kind war in der Nähe. Es nahm das Telefon und sang mit lauter Stimme. Die Großmutter freute sich sehr. Sie sagte, dieses Kind singe besser als seine Mutter."
+  },
+  {
+   "sw": "Mwishoni bibi alisema atafika Krismasi. Fatuma aliangalia mtoto wake na alijua siku hiyo itakuwa nzuri sana.",
+   "de": "Zum Schluss sagte die Großmutter, sie komme zu Weihnachten. Fatuma sah ihr Kind an und wusste, dass dieser Tag sehr schön werden würde."
+  }
+ ],
+ "glosses": {
+  "jumapili": {
+   "lemma": "jumapili",
+   "de": "Sonntag"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "Mittag"
+  },
+  "fatuma": {
+   "lemma": "fatuma",
+   "de": "Fatuma (Frauenname)",
+   "proper": true
+  },
+  "alitafuta": {
+   "lemma": "kutafuta",
+   "de": "sie suchte"
+  },
+  "simu": {
+   "lemma": "kupiga simu",
+   "de": "(Teil von: anrufen)"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihr/ihre",
+   "structure": true
+  },
+  "bibi": {
+   "lemma": "bibi",
+   "de": "Großmutter"
+  },
+  "anakaa": {
+   "lemma": "kukaa",
+   "de": "sie wohnt"
+  },
+  "mbali": {
+   "lemma": "mbali",
+   "de": "weit weg"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "mji": {
+   "lemma": "mji",
+   "de": "Stadt"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "eine (M-Wa-Klasse)"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "in der Nähe"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "bahari": {
+   "lemma": "bahari",
+   "de": "Meer"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jede"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Woche"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "tayari": {
+   "lemma": "tayari",
+   "de": "bereit"
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "sie antwortete"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "alitaka": {
+   "lemma": "kutaka",
+   "de": "sie wollte"
+  },
+  "kujua": {
+   "lemma": "kujua",
+   "de": "wissen"
+  },
+  "kuhusu": {
+   "lemma": "kuhusu",
+   "de": "über, bezüglich"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Ji-Ma-/N-Klasse)",
+   "structure": true
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sie sagte"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "ngumu": {
+   "lemma": "ngumu",
+   "de": "schwer, anstrengend"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen"
+  },
+  "hali": {
+   "lemma": "hali",
+   "de": "Lage, Situation"
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "gut, schön"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (M-Wa-Klasse)",
+   "structure": true
+  },
+  "alichukua": {
+   "lemma": "kuchukua",
+   "de": "es nahm"
+  },
+  "aliimba": {
+   "lemma": "kuimba",
+   "de": "es sang"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit"
+  },
+  "sauti": {
+   "lemma": "sauti",
+   "de": "Stimme"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß, laut"
+  },
+  "furaha": {
+   "lemma": "furaha",
+   "de": "Freude"
+  },
+  "huyu": {
+   "lemma": "huyu",
+   "de": "dieses (Person)",
+   "structure": true
+  },
+  "anaimba": {
+   "lemma": "kuimba",
+   "de": "es singt"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut"
+  },
+  "kuliko": {
+   "lemma": "kuliko",
+   "de": "als (Vergleich)"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter"
+  },
+  "mwishoni": {
+   "lemma": "mwisho",
+   "de": "am Ende, zum Schluss"
+  },
+  "atafika": {
+   "lemma": "kufika",
+   "de": "sie wird ankommen"
+  },
+  "krismasi": {
+   "lemma": "krismasi",
+   "de": "Weihnachten"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "sie sah an"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihr/ihre",
+   "structure": true
+  },
+  "alijua": {
+   "lemma": "kujua",
+   "de": "sie wusste"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "hiyo": {
+   "lemma": "hiyo",
+   "de": "dieser, jener",
+   "structure": true
+  },
+  "itakuwa": {
+   "lemma": "kuwa",
+   "de": "er/sie wird sein"
+  },
+  "alipiga": {
+   "lemma": "kupiga simu",
+   "de": "sie rief an"
+  }
+ },
+ "audio": null
+}

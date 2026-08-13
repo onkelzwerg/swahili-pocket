@@ -1,6 +1,7 @@
 import type { Example, NounClass, PartOfSpeech, VocabEntry } from "./types";
 import { getVocab, addVocab, newId } from "./store";
 import { seedVocab } from "./seed";
+import { activePackEntries } from "./packs";
 import { shuffle } from "./utils";
 
 // Re-Export für Bestandsimporte: shuffle() lebt seit P0.3 in utils.ts.
@@ -41,8 +42,21 @@ async function fetchPool(): Promise<PoolEntry[]> {
   }));
 }
 
+/**
+ * Der Wortschatz, aus dem der Nutzer Karten ziehen kann: Kern-Pool plus die
+ * Wörter aller aktivierten Themenpakete (src/lib/packs.ts).
+ *
+ * Nicht zwischengespeichert wie der Kern, weil sich die Paketauswahl zur
+ * Laufzeit ändert — der Kern darunter ist es sehr wohl, und der ist der große
+ * Teil. Ein aktiviertes Paket soll sofort wirken, ohne Neuladen.
+ */
 export async function loadPool(): Promise<PoolEntry[]> {
-  if (poolCache) return poolCache;
+  const [core, extra] = await Promise.all([loadCorePool(), activePackEntries()]);
+  return extra.length > 0 ? [...core, ...extra] : core;
+}
+
+function loadCorePool(): Promise<PoolEntry[]> {
+  if (poolCache) return Promise.resolve(poolCache);
   if (!poolPromise) {
     poolPromise = fetchPool().then((p) => {
       poolCache = p;

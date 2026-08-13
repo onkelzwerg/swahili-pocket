@@ -1,0 +1,237 @@
+{
+ "id": "pool-mkahawani",
+ "lemmas": [
+  "asante",
+  "baridi",
+  "chipsi",
+  "dirisha",
+  "hapa",
+  "jambo",
+  "je",
+  "karibu",
+  "kinywaji",
+  "kuketi",
+  "kuku",
+  "kula",
+  "kuleta",
+  "kupata",
+  "kupenda",
+  "kutaka",
+  "kuweza",
+  "maji",
+  "mbili",
+  "meza",
+  "mimi",
+  "mteja",
+  "na",
+  "ndiyo",
+  "nini",
+  "pia",
+  "samaki",
+  "sana",
+  "sawa",
+  "tafadhali",
+  "wali"
+ ],
+ "glosses": {
+  "karibuni": {
+   "lemma": "karibu",
+   "de": "willkommen! (an mehrere)"
+  },
+  "wateja": {
+   "lemma": "mteja",
+   "de": "Kunden"
+  },
+  "hamjambo": {
+   "lemma": "jambo",
+   "de": "Wie geht es euch? (wörtlich: euch fehlt nichts?)"
+  },
+  "hatujambo": {
+   "lemma": "jambo",
+   "de": "Uns geht es gut (wörtlich: uns fehlt nichts)"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "tunaweza": {
+   "lemma": "kuweza",
+   "de": "wir können"
+  },
+  "kupata": {
+   "lemma": "kupata",
+   "de": "bekommen"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (Bejahungspartikel)"
+  },
+  "tunataka": {
+   "lemma": "kutaka",
+   "de": "wir wollen / wir möchten"
+  },
+  "kuketi": {
+   "lemma": "kuketi",
+   "de": "sitzen / sich setzen"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe, in der Nähe"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und / mit (in „karibu na\": bei, an)"
+  },
+  "dirisha": {
+   "lemma": "dirisha",
+   "de": "Fenster"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "in Ordnung / einverstanden"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier"
+  },
+  "mngependa": {
+   "lemma": "kupenda",
+   "de": "ihr würdet gern / möchtet ihr"
+  },
+  "kula": {
+   "lemma": "kula",
+   "de": "essen (Infinitiv)"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was"
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "nitakula": {
+   "lemma": "kula",
+   "de": "ich werde essen"
+  },
+  "wali": {
+   "lemma": "wali",
+   "de": "Reis"
+  },
+  "kuku": {
+   "lemma": "kuku",
+   "de": "Hähnchen, Huhn"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "samaki": {
+   "lemma": "samaki",
+   "de": "Fisch"
+  },
+  "chipsi": {
+   "lemma": "chipsi",
+   "de": "Pommes"
+  },
+  "je": {
+   "lemma": "je",
+   "de": "Fragepartikel (leitet eine Ja/Nein-Frage ein)"
+  },
+  "mnataka": {
+   "lemma": "kutaka",
+   "de": "ihr wollt"
+  },
+  "vinywaji": {
+   "lemma": "kinywaji",
+   "de": "Getränke"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "kalt"
+  },
+  "pia": {
+   "lemma": "pia",
+   "de": "auch"
+  },
+  "tuletee": {
+   "lemma": "kuleta",
+   "de": "bring uns"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "mawili": {
+   "lemma": "mbili",
+   "de": "zwei (Ji-Ma-Klasse)"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  }
+ },
+ "choices": {
+  "1": [
+   {
+    "sw": "Hatujambo sana. Tunaweza kupata meza?",
+    "de": "Uns geht es sehr gut. Können wir einen Tisch bekommen?",
+    "correct": true
+   },
+   {
+    "sw": "Sijambo sana. Tunaweza kupata meza?",
+    "de": "Mir geht es sehr gut. Können wir einen Tisch bekommen?",
+    "correct": false,
+    "feedback": "Gefragt war „Hamjambo?“ — an euch beide. Ihr antwortet mit „hatujambo“."
+   },
+   {
+    "sw": "Hatujambo sana. Tuliweza kupata meza?",
+    "de": "Uns geht es sehr gut. Konnten wir einen Tisch bekommen?",
+    "correct": false,
+    "feedback": "„Tuli-“ ist Vergangenheit. Ihr fragt nach jetzt: „tunaweza“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Mimi nitakula wali na kuku, tafadhali.",
+    "de": "Ich werde Reis mit Hähnchen essen, bitte.",
+    "correct": true
+   },
+   {
+    "sw": "Mimi nilikula wali na kuku, tafadhali.",
+    "de": "Ich habe Reis mit Hähnchen gegessen, bitte.",
+    "correct": false,
+    "feedback": "„Nili-“ ist Vergangenheit. Du bestellst für gleich: „nita-“."
+   },
+   {
+    "sw": "Mimi nitakula wali na kuku, karibu.",
+    "de": "Ich werde Reis mit Hähnchen essen, willkommen.",
+    "correct": false,
+    "feedback": "„Karibu“ lädt jemanden ein. Höflich bestellst du mit „tafadhali“."
+   }
+  ],
+  "7": [
+   {
+    "sw": "Ndiyo, tuletee maji mawili, asante.",
+    "de": "Ja, bring uns zwei Wasser, danke.",
+    "correct": true
+   },
+   {
+    "sw": "Ndiyo, tuletee maji mbili, asante.",
+    "de": "Ja, bring uns zwei Wasser, danke.",
+    "correct": false,
+    "feedback": "„maji“ gehört zur Ji-Ma-Klasse — dort heißt zwei „mawili“, nicht „mbili“."
+   },
+   {
+    "sw": "Hapana, tuletee maji mawili, asante.",
+    "de": "Nein, bring uns zwei Wasser, danke.",
+    "correct": false,
+    "feedback": "„Hapana“ verneint die Frage — und im selben Satz bestellst du doch."
+   }
+  ]
+ }
+}

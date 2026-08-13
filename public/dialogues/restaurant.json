@@ -1,0 +1,293 @@
+{
+ "id": "restaurant",
+ "lemmas": [
+  "asante",
+  "baada ya",
+  "baridi",
+  "chakula",
+  "chupa",
+  "dakika",
+  "hapa",
+  "hodi",
+  "karibu",
+  "kuchoma",
+  "kuchukua",
+  "kuja",
+  "kukaa",
+  "kumi",
+  "kuna",
+  "kunywa",
+  "kupaka",
+  "kutaka",
+  "kuwa na",
+  "kwa",
+  "leo",
+  "maji",
+  "mbili",
+  "menyu",
+  "meza",
+  "mimi",
+  "mtu",
+  "na",
+  "ndiyo",
+  "ni",
+  "nini",
+  "nyama",
+  "samaki",
+  "sana",
+  "sawa",
+  "tafadhali",
+  "tamu",
+  "tano",
+  "ugali",
+  "wali"
+ ],
+ "glosses": {
+  "hodi": {
+   "lemma": "hodi",
+   "de": "Hallo! (Ruf an der Tür: Darf ich eintreten?)"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "watu": {
+   "lemma": "mtu",
+   "de": "Leute, Personen"
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (M-Wa-Klasse)"
+  },
+  "karibuni": {
+   "lemma": "karibu",
+   "de": "willkommen! (an mehrere)"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "kaeni": {
+   "lemma": "kukaa",
+   "de": "setzt euch! (Imperativ Plural)"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hier"
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "diese, hier ist (Demonstrativ, N-Klasse)",
+   "structure": true
+  },
+  "menyu": {
+   "lemma": "menyu",
+   "de": "Speisekarte"
+  },
+  "asante": {
+   "lemma": "asante",
+   "de": "danke"
+  },
+  "mnao": {
+   "lemma": "kuwa na",
+   "de": "habt ihr (davon)"
+  },
+  "wali": {
+   "lemma": "wali",
+   "de": "Reis (gekocht)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "samaki": {
+   "lemma": "samaki",
+   "de": "Fisch"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "ndiyo": {
+   "lemma": "ndiyo",
+   "de": "ja (Bejahung)"
+  },
+  "tuna": {
+   "lemma": "kuwa na",
+   "de": "wir haben"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von/der (Genitiv, M-Wa-Klasse)",
+   "structure": true
+  },
+  "kupaka": {
+   "lemma": "kupaka",
+   "de": "bestreichen — samaki wa kupaka: Fisch in Kokossoße"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "tamu": {
+   "lemma": "tamu",
+   "de": "lecker, süß"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "nitachukua": {
+   "lemma": "kuchukua",
+   "de": "ich werde nehmen"
+  },
+  "ugali": {
+   "lemma": "ugali",
+   "de": "Ugali (fester Maisbrei)"
+  },
+  "nyama": {
+   "lemma": "nyama",
+   "de": "Fleisch"
+  },
+  "choma": {
+   "lemma": "kuchoma",
+   "de": "gegrillt (wörtl.: grillen)"
+  },
+  "sawa": {
+   "lemma": "sawa",
+   "de": "gut, in Ordnung"
+  },
+  "mnataka": {
+   "lemma": "kutaka",
+   "de": "möchtet ihr, ihr wollt"
+  },
+  "kunywa": {
+   "lemma": "kunywa",
+   "de": "trinken"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was"
+  },
+  "chupa": {
+   "lemma": "chupa",
+   "de": "Flaschen"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von/der (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "kalt"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "das Essen"
+  },
+  "kitakuja": {
+   "lemma": "kuja",
+   "de": "es wird kommen (Ki-Vi-Klasse)"
+  },
+  "baada": {
+   "lemma": "baada ya",
+   "de": "nach (zeitlich)"
+  },
+  "ya": {
+   "lemma": "baada ya",
+   "de": "(Teil von: nach)"
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "tano": {
+   "lemma": "tano",
+   "de": "fünf"
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Hodi! Kuna meza kwa watu wawili?",
+    "de": "Hallo! Gibt es einen Tisch für zwei?",
+    "correct": true
+   },
+   {
+    "sw": "Hodi! Kuna meza kwa watu mbili?",
+    "de": "Hallo! Gibt es einen Tisch für zwei?",
+    "correct": false,
+    "feedback": "Personen (M-Wa) zählt man mit „wawili“; „mbili“ gehört zur N-Klasse."
+   },
+   {
+    "sw": "Hodi! Hakuna meza kwa watu wawili?",
+    "de": "Hallo! Gibt es keinen Tisch für zwei?",
+    "correct": false,
+    "feedback": "„Hakuna“ verneint — du fragst aber, ob es einen Tisch gibt."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Asante. Mnao wali na samaki leo?",
+    "de": "Danke. Habt ihr heute Reis mit Fisch?",
+    "correct": true
+   },
+   {
+    "sw": "Asante. Ninao wali na samaki leo?",
+    "de": "Danke. Habe ich heute Reis mit Fisch?",
+    "correct": false,
+    "feedback": "„Ninao“ heißt „habe ich“ — du fragst das Restaurant: „mnao“ (habt ihr)."
+   },
+   {
+    "sw": "Asante. Mlikuwa na wali na samaki leo?",
+    "de": "Danke. Hattet ihr heute Reis mit Fisch?",
+    "correct": false,
+    "feedback": "„Mlikuwa“ ist Vergangenheit — gefragt ist das heutige Angebot."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Chupa mbili za maji baridi.",
+    "de": "Zwei Flaschen Wasser, kalt.",
+    "correct": true
+   },
+   {
+    "sw": "Chupa mbili wa maji baridi.",
+    "de": "Zwei Flaschen Wasser, kalt.",
+    "correct": false,
+    "feedback": "Flaschen gehören zur N-Klasse — der Genitiv heißt dort „za“, nicht „wa“."
+   },
+   {
+    "sw": "Chupa mbili za maji moto.",
+    "de": "Zwei Flaschen Wasser, heiß.",
+    "correct": false,
+    "feedback": "„moto“ heißt heiß. Kaltes Wasser ist „maji baridi“."
+   }
+  ]
+ }
+}

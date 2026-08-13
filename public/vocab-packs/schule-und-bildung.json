@@ -1,0 +1,42 @@
+{
+ "id": "schule-und-bildung",
+ "title": "Schule & Bildung",
+ "emoji": "🎓",
+ "description": "Schulstufen und Abschlüsse — Wortschatz für „Begegnung auf der Straße“.",
+ "entries": [
+  {
+   "swahili": "butwaa",
+   "german": "Verblüffung (kupiga butwaa = verblüffen)",
+   "partOfSpeech": "noun",
+   "nounClass": "N",
+   "examples": [
+    {
+     "de": "Ich war verblüfft, als ich die Nachricht hörte.",
+     "sw": "Nilipiga butwaa niliposikia habari hizo."
+    },
+    {
+     "de": "Die Kinder staunten, als sie das Geschenk sahen.",
+     "sw": "Watoto walipiga butwaa walipoona zawadi."
+    }
+   ],
+   "topics": []
+  },
+  {
+   "swahili": "upili",
+   "german": "Sekundarstufe (shule ya upili)",
+   "partOfSpeech": "noun",
+   "nounClass": "U",
+   "examples": [
+    {
+     "de": "Meine Schwester geht auf die Sekundarschule.",
+     "sw": "Dada yangu anasoma shule ya upili."
+    },
+    {
+     "de": "Die Sekundarschule ist nah bei unserem Haus.",
+     "sw": "Shule ya upili iko karibu na nyumbani kwetu."
+    }
+   ],
+   "topics": []
+  }
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "id": "transport-2-01",
+ "title": "Baisikeli ya Joseph",
+ "titleDe": "Josephs Fahrrad",
+ "band": 2,
+ "topic": "Transport",
+ "emoji": "🚲",
+ "lemmas": [
+  "asubuhi",
+  "baisikeli",
+  "barabara",
+  "chache",
+  "dakika",
+  "duka",
+  "fundi",
+  "furaha",
+  "gurudumu",
+  "jirani",
+  "jua",
+  "jumatatu",
+  "juu",
+  "katika",
+  "kazi",
+  "kuangalia",
+  "kubwa",
+  "kuchukua",
+  "kuendesha",
+  "kufika",
+  "kuharibika",
+  "kujua",
+  "kukutana",
+  "kulipa",
+  "kupeleka",
+  "kurudi",
+  "kusema",
+  "kutaka",
+  "kutembea",
+  "kutengeneza",
+  "kutoa",
+  "kuwa",
+  "kuweza",
+  "kwa",
+  "mbali",
+  "mbele",
+  "mbili",
+  "mchana",
+  "mia",
+  "mji",
+  "mzigo",
+  "mzuri",
+  "na",
+  "ni",
+  "njia",
+  "nyumba",
+  "polepole",
+  "rahisi",
+  "shilingi",
+  "si"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Asubuhi ya Jumatatu Joseph alichukua baisikeli yake. Alitaka kupeleka mzigo kwa jirani yake katika mji. Njia ilikuwa nzuri, na jua lilikuwa juu.",
+   "de": "Am Montagmorgen nahm Joseph sein Fahrrad. Er wollte ein Paket zu seinem Nachbarn in der Stadt bringen. Der Weg war schön, und die Sonne stand hoch."
+  },
+  {
+   "sw": "Katika barabara kubwa gurudumu la baisikeli liliharibika. Joseph hakuweza kuendesha. Alitembea polepole na baisikeli yake. Alijua kuwa duka la fundi si mbali.",
+   "de": "Auf der großen Straße ging das Rad des Fahrrads kaputt. Joseph konnte nicht mehr fahren. Er ging langsam neben seinem Fahrrad her. Er wusste, dass die Werkstatt nicht weit war."
+  },
+  {
+   "sw": "Mbele ya duka Joseph alikutana na fundi. Fundi aliangalia gurudumu na alisema: „Hii ni kazi rahisi.“ Alitengeneza baisikeli kwa dakika chache. Joseph alilipa shilingi mia mbili.",
+   "de": "Vor der Werkstatt traf Joseph den Handwerker. Der Handwerker sah sich das Rad an und sagte: „Das ist leichte Arbeit.“ In wenigen Minuten hatte er das Fahrrad repariert. Joseph zahlte zweihundert Schilling."
+  },
+  {
+   "sw": "Joseph alifika kwa jirani yake mchana. Alitoa mzigo, na jirani alikuwa na furaha. Njia ya kurudi nyumbani ilikuwa rahisi.",
+   "de": "Mittags kam Joseph bei seinem Nachbarn an. Er gab das Paket ab, und der Nachbar freute sich. Der Weg zurück nach Hause war leicht."
+  }
+ ],
+ "glosses": {
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen, Vormittag"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (N-Klasse)",
+   "structure": true
+  },
+  "jumatatu": {
+   "lemma": "jumatatu",
+   "de": "Montag"
+  },
+  "joseph": {
+   "lemma": "joseph",
+   "de": "Joseph (Männername)",
+   "proper": true
+  },
+  "alichukua": {
+   "lemma": "kuchukua",
+   "de": "er nahm mit"
+  },
+  "baisikeli": {
+   "lemma": "baisikeli",
+   "de": "Fahrrad"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "sein/seine",
+   "structure": true
+  },
+  "alitaka": {
+   "lemma": "kutaka",
+   "de": "er wollte"
+  },
+  "kupeleka": {
+   "lemma": "kupeleka",
+   "de": "hinbringen"
+  },
+  "mzigo": {
+   "lemma": "mzigo",
+   "de": "Paket, Gepäckstück"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "zu, bei, mit"
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbar"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "mji": {
+   "lemma": "mji",
+   "de": "Stadt"
+  },
+  "njia": {
+   "lemma": "njia",
+   "de": "Weg"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "er/sie/es war (N-Klasse)"
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "schön, gut (N-Klasse)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  },
+  "lilikuwa": {
+   "lemma": "kuwa",
+   "de": "es war (Ji-Ma-Klasse)"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "oben, hoch"
+  },
+  "barabara": {
+   "lemma": "barabara",
+   "de": "Straße"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "gurudumu": {
+   "lemma": "gurudumu",
+   "de": "Rad"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Ji-Ma-Klasse)",
+   "structure": true
+  },
+  "liliharibika": {
+   "lemma": "kuharibika",
+   "de": "es ging kaputt"
+  },
+  "hakuweza": {
+   "lemma": "kuweza",
+   "de": "er konnte nicht"
+  },
+  "kuendesha": {
+   "lemma": "kuendesha",
+   "de": "fahren"
+  },
+  "alitembea": {
+   "lemma": "kutembea",
+   "de": "er ging zu Fuß"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "alijua": {
+   "lemma": "kujua",
+   "de": "er wusste"
+  },
+  "kuwa": {
+   "lemma": "kuwa",
+   "de": "dass"
+  },
+  "duka": {
+   "lemma": "duka",
+   "de": "Laden, Werkstatt"
+  },
+  "si": {
+   "lemma": "si",
+   "de": "ist nicht"
+  },
+  "mbali": {
+   "lemma": "mbali",
+   "de": "weit weg"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor, vorne"
+  },
+  "alikutana": {
+   "lemma": "kukutana",
+   "de": "er traf"
+  },
+  "fundi": {
+   "lemma": "fundi",
+   "de": "Handwerker"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "er sah sich an"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "er sagte"
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "diese (N-Klasse)",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "rahisi": {
+   "lemma": "rahisi",
+   "de": "einfach, leicht"
+  },
+  "alitengeneza": {
+   "lemma": "kutengeneza",
+   "de": "er reparierte"
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "chache": {
+   "lemma": "chache",
+   "de": "wenige"
+  },
+  "alilipa": {
+   "lemma": "kulipa",
+   "de": "er zahlte"
+  },
+  "shilingi": {
+   "lemma": "shilingi",
+   "de": "Schilling"
+  },
+  "mia": {
+   "lemma": "mia",
+   "de": "hundert"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "er kam an"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "mittags"
+  },
+  "alitoa": {
+   "lemma": "kutoa",
+   "de": "er gab heraus"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "furaha": {
+   "lemma": "furaha",
+   "de": "Freude"
+  },
+  "kurudi": {
+   "lemma": "kurudi",
+   "de": "zurückkehren"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  }
+ },
+ "audio": null
+}

@@ -1,0 +1,189 @@
+[
+ {
+  "swahili": "kumbe",
+  "german": "ach so! / also doch",
+  "partOfSpeech": "other",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Ach, du bist also Lehrer!",
+    "sw": "Kumbe wewe ni mwalimu!"
+   },
+   {
+    "de": "Ach so, heute gibt es kein Wasser.",
+    "sw": "Kumbe leo hakuna maji."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "undani",
+  "german": "Einzelheit / Tiefe (kwa undani = ausführlich)",
+  "partOfSpeech": "noun",
+  "nounClass": "U",
+  "examples": [
+   {
+    "de": "Der Lehrer hat die Lektion ausführlich erklärt.",
+    "sw": "Mwalimu alieleza somo kwa undani."
+   },
+   {
+    "de": "Ich möchte die Sache genau wissen.",
+    "sw": "Nataka kujua jambo hili kwa undani."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuketi",
+  "german": "sitzen / sich setzen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Ich sitze neben dem Fenster.",
+    "sw": "Ninaketi karibu na dirisha."
+   },
+   {
+    "de": "Die Kinder sitzen unter dem Baum.",
+    "sw": "Watoto wameketi chini ya mti."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kugusa",
+  "german": "berühren / anrühren",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Das Kind fasst das Wasser an.",
+    "sw": "Mtoto anagusa maji."
+   },
+   {
+    "de": "Fass das heiße Essen nicht an!",
+    "sw": "Usigusa chakula cha moto!"
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuvutia",
+  "german": "anlocken / attraktiv sein",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Dieses Buch ist sehr ansprechend.",
+    "sw": "Kitabu hiki kinavutia sana."
+   },
+   {
+    "de": "Sansibar zieht viele Gäste an.",
+    "sw": "Zanzibar inavutia wageni wengi."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuzuia",
+  "german": "verhindern / abhalten",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Der Regen hat unsere Reise verhindert.",
+    "sw": "Mvua ilizuia safari yetu."
+   },
+   {
+    "de": "Der Vater hält das Kind davon ab, auf der Straße zu spielen.",
+    "sw": "Baba anazuia mtoto kucheza barabarani."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kutambua",
+  "german": "erkennen / bemerken",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Ich habe meinen Freund auf dem Markt erkannt.",
+    "sw": "Nilimtambua rafiki yangu sokoni."
+   },
+   {
+    "de": "Ich habe nicht bemerkt, dass du Arzt bist.",
+    "sw": "Sikutambua kwamba wewe ni daktari."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kukaribia",
+  "german": "sich nähern / herankommen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Wir kommen dem Haus näher.",
+    "sw": "Tunakaribia nyumbani."
+   },
+   {
+    "de": "Die Ferien rücken näher.",
+    "sw": "Likizo inakaribia."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kushtuka",
+  "german": "erschrecken / überrascht sein",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Ich bin erschrocken, als ich eine Schlange sah.",
+    "sw": "Nilishtuka nilipoona nyoka."
+   },
+   {
+    "de": "Mama ist wegen des Lärms erschrocken.",
+    "sw": "Mama alishtuka kwa sababu ya kelele."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kushangaza",
+  "german": "erstaunen / verblüffen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Diese Nachrichten sind erstaunlich.",
+    "sw": "Habari hizi zinashangaza."
+   },
+   {
+    "de": "Seine Antwort hat mich überrascht.",
+    "sw": "Jibu lake lilinishangaza."
+   }
+  ],
+  "topics": []
+ },
+ {
+  "swahili": "kuumia",
+  "german": "wehtun / sich verletzen",
+  "partOfSpeech": "verb",
+  "nounClass": null,
+  "examples": [
+   {
+    "de": "Mein Bein tut weh.",
+    "sw": "Mguu wangu unaumia."
+   },
+   {
+    "de": "Das Kind hat sich verletzt, als es hingefallen ist.",
+    "sw": "Mtoto aliumia alipoanguka."
+   }
+  ],
+  "topics": []
+ }
+]

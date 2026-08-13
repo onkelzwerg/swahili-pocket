@@ -1,0 +1,327 @@
+{
+ "id": "gesundheit-2-01",
+ "title": "Chai ya jirani",
+ "titleDe": "Der Tee der Nachbarin",
+ "band": 2,
+ "topic": "Gesundheit",
+ "emoji": "🍵",
+ "lemmas": [
+  "asubuhi",
+  "bora",
+  "chai",
+  "dawa",
+  "hali",
+  "jioni",
+  "jirani",
+  "joto",
+  "kama",
+  "kawaida",
+  "kazi",
+  "kesho",
+  "kidogo",
+  "kuamka",
+  "kufanya",
+  "kufika",
+  "kuhisi",
+  "kuhitaji",
+  "kuisha",
+  "kujibu",
+  "kujua",
+  "kulala",
+  "kuliko",
+  "kunywa",
+  "kupumzika",
+  "kusema",
+  "kusikiliza",
+  "kutaka",
+  "kuwa",
+  "kuweza",
+  "kwa",
+  "kwenda",
+  "lakini",
+  "leo",
+  "mafua",
+  "mbaya",
+  "mbili",
+  "mlango",
+  "moto",
+  "mwili",
+  "na",
+  "ni",
+  "polepole",
+  "saa",
+  "sahihi",
+  "sana",
+  "sasa",
+  "si",
+  "tu",
+  "vizuri",
+  "zaidi"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Halima aliamka asubuhi na mafua. Mwili wake ulikuwa na joto kidogo. Lakini alitaka kwenda kazini kama kawaida.",
+   "de": "Halima wachte morgens mit einer Erkältung auf. Ihr Körper war etwas warm. Trotzdem wollte sie wie immer zur Arbeit gehen."
+  },
+  {
+   "sw": "Jirani yake alifika mlangoni na chai ya moto. Alisema Halima hawezi kufanya kazi leo. Halima alijibu kuwa hali yake si mbaya sana, lakini jirani hakusikiliza.",
+   "de": "Ihre Nachbarin stand mit heißem Tee vor der Tür. Sie sagte, Halima könne heute nicht arbeiten. Halima antwortete, so schlimm sei es gar nicht, aber die Nachbarin hörte gar nicht hin."
+  },
+  {
+   "sw": "Halima alijua jirani yake ni sahihi. Alikunywa chai polepole akalala kwa saa mbili. Hakuhitaji dawa. Alihitaji tu kupumzika.",
+   "de": "Halima wusste, dass die Nachbarin recht hatte. Sie trank den Tee langsam und schlief zwei Stunden. Ein Medikament brauchte sie nicht. Sie brauchte nur Ruhe."
+  },
+  {
+   "sw": "Jioni joto liliisha na Halima alihisi vizuri zaidi kuliko asubuhi. Alijua kesho ataweza kufanya kazi. Sasa chai ya jirani yake ilikuwa dawa bora.",
+   "de": "Am Abend war die Wärme weg, und Halima fühlte sich besser als am Morgen. Sie wusste, morgen würde sie arbeiten können. Der Tee der Nachbarin war jetzt die beste Medizin."
+  }
+ ],
+ "glosses": {
+  "halima": {
+   "lemma": "halima",
+   "de": "Halima (Name)",
+   "proper": true
+  },
+  "aliamka": {
+   "lemma": "kuamka",
+   "de": "sie wachte auf"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "morgens"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "mafua": {
+   "lemma": "mafua",
+   "de": "Erkältung"
+  },
+  "mwili": {
+   "lemma": "mwili",
+   "de": "Körper"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihr (zu mwili)",
+   "structure": true
+  },
+  "ulikuwa": {
+   "lemma": "kuwa",
+   "de": "er war (zu mwili)"
+  },
+  "joto": {
+   "lemma": "joto",
+   "de": "Wärme, erhöhte Temperatur"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "alitaka": {
+   "lemma": "kutaka",
+   "de": "sie wollte"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "gehen"
+  },
+  "kazini": {
+   "lemma": "kazi",
+   "de": "zur Arbeit"
+  },
+  "kama": {
+   "lemma": "kama",
+   "de": "wie"
+  },
+  "kawaida": {
+   "lemma": "kawaida",
+   "de": "gewohnt, üblich"
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbarin"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "sie kam an"
+  },
+  "mlangoni": {
+   "lemma": "mlango",
+   "de": "an der Tür"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv)",
+   "structure": true
+  },
+  "moto": {
+   "lemma": "moto",
+   "de": "heiß"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sie sagte"
+  },
+  "hawezi": {
+   "lemma": "kuweza",
+   "de": "sie kann nicht"
+  },
+  "kufanya": {
+   "lemma": "kufanya",
+   "de": "machen"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "sie antwortete"
+  },
+  "kuwa": {
+   "lemma": "kuwa",
+   "de": "dass"
+  },
+  "hali": {
+   "lemma": "hali",
+   "de": "Zustand"
+  },
+  "si": {
+   "lemma": "si",
+   "de": "ist nicht"
+  },
+  "mbaya": {
+   "lemma": "mbaya",
+   "de": "schlimm"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "hakusikiliza": {
+   "lemma": "kusikiliza",
+   "de": "sie hörte nicht zu"
+  },
+  "alijua": {
+   "lemma": "kujua",
+   "de": "sie wusste"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "sahihi": {
+   "lemma": "sahihi",
+   "de": "im Recht"
+  },
+  "alikunywa": {
+   "lemma": "kunywa",
+   "de": "sie trank"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für (Zeitdauer)"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunden"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "hakuhitaji": {
+   "lemma": "kuhitaji",
+   "de": "sie brauchte nicht"
+  },
+  "dawa": {
+   "lemma": "dawa",
+   "de": "Medikament"
+  },
+  "alihitaji": {
+   "lemma": "kuhitaji",
+   "de": "sie brauchte"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "kupumzika": {
+   "lemma": "kupumzika",
+   "de": "sich ausruhen"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "liliisha": {
+   "lemma": "kuisha",
+   "de": "sie ging vorbei (zu joto)"
+  },
+  "alihisi": {
+   "lemma": "kuhisi",
+   "de": "sie fühlte sich"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut"
+  },
+  "zaidi": {
+   "lemma": "zaidi",
+   "de": "mehr, besser"
+  },
+  "kuliko": {
+   "lemma": "kuliko",
+   "de": "als"
+  },
+  "kesho": {
+   "lemma": "kesho",
+   "de": "morgen"
+  },
+  "ataweza": {
+   "lemma": "kuweza",
+   "de": "sie wird können"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war (zu chai)"
+  },
+  "bora": {
+   "lemma": "bora",
+   "de": "beste"
+  },
+  "akalala": {
+   "lemma": "kulala",
+   "de": "und schlief"
+  }
+ },
+ "audio": null
+}

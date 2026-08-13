@@ -11,6 +11,8 @@
  * — und angetippte Wörter ohne Glossareintrag die Folge.
  */
 
+import { requiredPacks } from "./packs.mjs";
+
 /** Mehr neue Wörter darf eine Geschichte nicht einführen (Plan W3.2). */
 export const MAX_NEW_LEMMAS = 3;
 
@@ -54,10 +56,7 @@ export const STRUCTURE_LEMMAS = new Set([
   "hiki",
   "hivi",
   "hili",
-  "haya",
   "hizi",
-  "huo",
-  "hiyo",
   "huku",
   "humu",
   "yule",
@@ -69,11 +68,50 @@ export const STRUCTURE_LEMMAS = new Set([
   "lile",
   "yale",
   "zile",
-  // Relativ, Kopula-Varianten, Ortspräposition
+  // Die Lokativformen der -le-Reihe. Sie fehlten, obwohl die übrige Reihe
+  // vollständig ist — `pale` bleibt draußen, weil der Pool es als Karte führt.
+  "kule",
+  "mle",
+  // -o-Referenzreihe („jenes bereits Erwähnte"). Sie fehlte bis W4.10 fast
+  // ganz; ohne sie lässt sich nicht auf etwas zurückverweisen, was zwei Sätze
+  // vorher stand — in einer Erzählung also ständig.
+  "huyo",
+  "hao",
+  "huo",
+  "hiyo",
+  "hicho",
+  "hivyo",
+  "hilo",
+  "hayo",
+  "hizo",
+  "hapo",
+  "huko",
+  "humo",
+  // Lokativkopula. „Wo ist mein Buch?" (kitabu changu kiko wapi?) war ohne
+  // diese drei Formen nicht formulierbar; ein Schreibender musste die Szene
+  // umbauen. Sie sind geschlossene Wortklasse und gehören ins Grammatik-Gym,
+  // nicht auf eine Karteikarte — dieselbe Begründung wie bei den Konkordanzen.
+  "-ko",
+  "-po",
+  "-mo",
+  // Quantorenstamm mit Kongruenz: wote, yote, zote, chote, kote …
+  "-ote",
+  // Relativ und Ortspräposition
   "amba-",
-  "ndiyo",
-  "ndio",
   "kwenye",
+  // Die ndi-Kopula in ihren Konkordanzformen: „das ist genau der/die/das".
+  // `ndiyo` steht bewusst NICHT hier, obwohl es zur selben Reihe gehört: es ist
+  // zu „ja" lexikalisiert und der Pool führt es als eigene Karte. Ein Wort, das
+  // man als Vokabel lernen kann, darf nicht gleichzeitig von der Abdeckung
+  // ausgenommen sein — sonst zählt die Karte nie. `ndio` bleibt dagegen hier:
+  // in der hervorhebenden Lesart („sind es, die") ist es reine Grammatik.
+  "ndio",
+  "ndiye",
+  "ndivyo",
+  "ndilo",
+  "ndizo",
+  "ndicho",
+  "ndiwo",
 ]);
 
 function isNonEmptyString(v) {
@@ -198,11 +236,14 @@ export function validateStory(raw, { allowed, tokenize }) {
 }
 
 /** Aus geprüften Geschichten den Listen-Index bauen. */
-export function buildIndex(stories, { tokenize }) {
+export function buildIndex(stories, { tokenize, packOf = new Map() }) {
   return {
     version: 1,
     stories: stories
       .map((s) => ({
+        // Abgeleitet aus den Lemmata, nie gepflegt: benutzt die Geschichte ein
+        // Wort aus einem Themenpaket, ist sie ohne dieses Paket unerreichbar.
+        requiresPacks: requiredPacks(s.lemmas, packOf),
         id: s.id,
         title: s.title,
         titleDe: s.titleDe,

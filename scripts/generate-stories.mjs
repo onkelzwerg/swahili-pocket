@@ -17,9 +17,20 @@
  * Nichts Ungeprüftes wird ausgeliefert: der Validator ist die einzige Instanz,
  * die über Auslieferung entscheidet — das Modell schlägt nur vor.
  *
+ * Zwei Wege zum Text, ein Weg zur Auslieferung:
+ *   A) Die API schreibt (braucht ANTHROPIC_API_KEY) — Schleife s. o.
+ *   B) Ein Mensch oder ein Agent schreibt (braucht keinen Key) — `--brief` gibt
+ *      denselben Auftrag als Klartext aus, `--check` prüft eine einzelne Datei
+ *      und nennt die Beanstandungen. Wer die Schleife von Hand dreht, dreht
+ *      dieselbe Schleife.
+ * Beide Wege enden im selben Validator; er ist die einzige Instanz, die über
+ * Auslieferung entscheidet.
+ *
  * Verwendung:
- *   node scripts/generate-stories.mjs --validate       (nur prüfen + Index neu bauen, kein API-Key)
+ *   node scripts/generate-stories.mjs --validate       (Bestand prüfen + Index neu bauen, kein API-Key)
  *   node scripts/generate-stories.mjs --dry-run        (zeigt, was erzeugt würde)
+ *   node scripts/generate-stories.mjs --brief essen-1-01     (Auftrag ausgeben, kein API-Key)
+ *   node scripts/generate-stories.mjs --check public/stories/essen-1-01.json
  *   ANTHROPIC_API_KEY=sk-ant-... node scripts/generate-stories.mjs
  *   ANTHROPIC_API_KEY=sk-ant-... node scripts/generate-stories.mjs --band 1 --per-topic 2
  *   ANTHROPIC_API_KEY=sk-ant-... node scripts/generate-stories.mjs --limit 5
@@ -34,7 +45,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
 import Anthropic from "@anthropic-ai/sdk";
-import { BAND_LIMITS, allowedLemmas, poolByLemma } from "./lib/story-bands.mjs";
+import { loadPackLemmas } from "./lib/packs.mjs";
+import {
+  BAND_LIMITS,
+  allowedLemmas,
+  danglingCoreLemmas,
+  poolByLemma,
+} from "./lib/story-bands.mjs";
 import {
   MAX_NEW_LEMMAS,
   STRUCTURE_LEMMAS,
@@ -75,6 +92,8 @@ const value = (flag, fallback) => {
 
 const validateOnly = has("--validate");
 const dryRun = has("--dry-run");
+const briefId = has("--brief") ? value("--brief", null) : null;
+const checkFiles = has("--check") ? args.slice(args.indexOf("--check") + 1) : null;
 const perTopic = Number(value("--per-topic", 1));
 const limit = Number(value("--limit", Infinity));
 const bandArg = value("--band", null);
@@ -134,10 +153,35 @@ Feste Regeln:
 - Das Glossar muss JEDES Wort des Textes enthalten — jede gebeugte Form einzeln,
   kleingeschrieben, mit Grundform und deutscher Bedeutung dieser Form.
   Beispiel: {"token":"nilienda","lemma":"kwenda","de":"ich ging","proper":false}
+- Kollokationen stehen als Ganzes in der Wortliste ("kupiga simu = anrufen",
+  "baada ya = nach"). Benutzt du eine, bekommt **das Kopfwort** die Kollokation
+  als Grundform, und die übrigen Bestandteile bekommen gar keinen eigenen
+  Eintrag — sonst zählte das Wortpaar doppelt gegen die Abdeckung:
+    {"token":"anapiga","lemma":"kupiga simu","de":"sie ruft an"}
+    {"token":"simu","lemma":"kupiga simu","de":"(Teil von: anrufen)"}
+  Meinst du dagegen wirklich die Einzelwörter (das Telefon als Gegenstand),
+  glossierst du sie einzeln.
 - Schreibe Zahlen als Wörter aus, niemals als Ziffern.
 - Jeder Absatz bekommt eine natürliche deutsche Übersetzung (nicht Wort für Wort).
 - Erzähle eine kleine, konkrete Geschichte mit Anfang und Ende. Kein Lehrbuchton,
-  keine Aufzählung von Vokabeln, keine Anrede der Lesenden.`;
+  keine Aufzählung von Vokabeln, keine Anrede der Lesenden.
+
+Erzählstil — daran scheiterten die ersten zwanzig Geschichten:
+
+- **Benutze das -ka-Konsekutiv.** Aufeinanderfolgende Handlungen desselben
+  Subjekts stehen im Kiswahili nicht als Kette gleichrangiger Sätze, sondern
+  mit -ka- ab dem zweiten Verb: "Alilipa akachukua maembe akarudi nyumbani",
+  nicht "Alilipa na alichukua maembe na alirudi nyumbani". Ohne -ka- liest sich
+  ein Text wie eine Liste. Das erste Verb trägt die Zeit, die folgenden -ka-.
+- **Nie ein finites Verb mit "na" an einen Infinitiv hängen.** "Alikunywa chai
+  na kulala" ist falsch; richtig ist "Alikunywa chai akalala".
+- **Bleib in einer Zeit.** Eine Erzählung steht durchgehend im Präteritum
+  (li-) oder durchgehend im Präsens — nicht gemischt. Ausgenommen sind
+  Dauerzustände ("Bibi yake anakaa mbali") und wörtliche Rede.
+- **Nach "lazima" steht der Konjunktiv**, nicht der Infinitiv:
+  "lazima afanye kazi", nicht "lazima kufanya kazi".
+- **Anführungszeichen: immer „…"** (unten öffnend, oben schließend). Keine
+  geraden Zoll-Zeichen, kein englisches Format.`;
 
 function systemPrompt(allowedList) {
   return `${SYSTEM_INTRO}
@@ -152,8 +196,14 @@ function taskPrompt({ topic, band, id }) {
 
 - Id: ${id}
 - Länge: ${len.min}–${len.max} Wörter Swahili, verteilt auf ${len.paragraphs} Absätze.
+  Gezählt werden Token, also Wörter ohne Satzzeichen.
 - "title" ist der Swahili-Titel, "titleDe" die deutsche Entsprechung.
-- "emoji" ist ein einzelnes Emoji, das zur Geschichte passt.`;
+  Titel werden **nicht** geprüft: sie brauchen keine Glossareinträge und dürfen
+  Wörter außerhalb der Liste enthalten. Geprüft wird nur "paragraphs".
+- "emoji" ist ein einzelnes Emoji, das zur Geschichte passt.
+- Sieh im Verzeichnis public/stories/ nach, welche Titel und Motive es schon
+  gibt, und wähl etwas anderes. Verlass dich nicht auf eine mitgegebene Liste —
+  es entstehen Geschichten parallel.`;
 }
 
 /**
@@ -208,6 +258,108 @@ function toStory(raw, { id, band, topic }) {
     };
   }
   return { ...raw, id, band, topic, glosses, audio: null };
+}
+
+// ---------------------------------------------------------------------------
+// Auftrag als Klartext (--brief) und Einzelprüfung (--check)
+//
+// Derselbe Auftrag, den die API bekommt — nur an ein Gegenüber gerichtet, das
+// die Datei selbst schreibt. Deshalb beschreibt er die Form auf der Platte und
+// nicht das API-Schema: dort ist `glosses` eine Liste, weil strukturierte
+// Ausgaben keine freien Schlüssel können, hier ist es ein Objekt. `id`, `band`
+// und `topic` setzt auf diesem Weg auch niemand nachträglich ein.
+// ---------------------------------------------------------------------------
+
+/** `essen-1-01` → { id, band, topic } — die Umkehrung der Id-Bildung in main(). */
+function targetFromId(id, topicAreas) {
+  const m = /^(.+)-(\d+)-(\d+)$/.exec(id);
+  if (!m) return null;
+  const topic = topicAreas.find((t) => slug(t) === m[1]);
+  const band = Number(m[2]);
+  if (!topic || !ALL_BANDS.includes(band)) return null;
+  return { id, band, topic };
+}
+
+function briefFor(target, allowedList) {
+  const file = `public/stories/${target.id}.json`;
+  return `${systemPrompt(allowedList)}
+
+--- AUFGABE ---
+
+${taskPrompt(target)}
+
+--- ERGEBNIS ---
+
+Schreib die Geschichte als JSON nach ${file}, genau in dieser Form:
+
+{
+ "id": ${JSON.stringify(target.id)},
+ "title": "<Swahili-Titel>",
+ "titleDe": "<deutscher Titel>",
+ "band": ${target.band},
+ "topic": ${JSON.stringify(target.topic)},
+ "emoji": "<ein Emoji>",
+ "newLemmas": [],
+ "paragraphs": [
+  { "sw": "<Absatz auf Swahili>", "de": "<natürliche deutsche Übersetzung>" }
+ ],
+ "glosses": {
+  "<token, kleingeschrieben>": { "lemma": "<Grundform>", "de": "<Bedeutung genau dieser Form>" },
+  "<eigenname>": { "lemma": "<eigenname>", "de": "<Erklärung>", "proper": true }
+ },
+ "audio": null
+}
+
+Kein Feld "lemmas" — das leitet der Validator aus dem Glossar ab und schreibt
+es selbst. "audio" bleibt null; die Vertonung läuft über scripts/generate-audio.mjs.
+
+Schreib **nur diese eine Datei**. public/stories/index.json fasst du nicht an:
+den Index baut ein späterer Lauf von \`npm run stories:validate\` aus dem
+gesamten Bestand neu. Führ ihn auch nicht selbst aus — er schreibt alle
+Geschichten zurück, und wenn mehrere Leute gleichzeitig schreiben, überholt
+dabei einer den anderen.
+
+--- PRÜFUNG ---
+
+    node scripts/generate-stories.mjs --check ${file}
+
+Die Prüfung ist deterministisch und hat das letzte Wort. Sie meldet jedes Token
+ohne Glossareintrag, jeden Glossareintrag ohne Vorkommen und jede Grundform
+außerhalb des Bandes. Bessere nach und prüfe erneut, bis sie nichts mehr
+beanstandet.`;
+}
+
+/** Einzelne Dateien prüfen, ohne Index und ohne Rückschreiben. */
+async function checkFilesMode(paths, pool, tokenize) {
+  const allowedByBand = new Map(ALL_BANDS.map((b) => [b, allowedLemmas(pool, b)]));
+  let bad = 0;
+
+  for (const rel of paths) {
+    const full = path.isAbsolute(rel) ? rel : path.join(ROOT, rel);
+    let raw;
+    try {
+      raw = JSON.parse(await readFile(full, "utf8"));
+    } catch (e) {
+      console.error(`✗ ${rel}: ${e.message}`);
+      bad++;
+      continue;
+    }
+    const allowed = allowedByBand.get(raw.band) ?? allowedByBand.get(ALL_BANDS.at(-1));
+    const { errors, story } = validateStory(raw, { allowed, tokenize });
+    if (story) {
+      const words = story.paragraphs.reduce((n, p) => n + tokenize(p.sw).length, 0);
+      console.log(
+        `✓ ${rel} — ${words} Wörter, ${story.lemmas.length} Lemmata, ` +
+          `${story.newLemmas.length} neu`,
+      );
+    } else {
+      bad++;
+      console.error(`✗ ${rel} — ${errors.length} Beanstandungen:`);
+      for (const e of errors) console.error(`    ${e}`);
+    }
+  }
+
+  if (bad > 0) process.exitCode = 1;
 }
 
 // ---------------------------------------------------------------------------
@@ -301,6 +453,17 @@ async function readExistingStories() {
  * Läuft ohne API-Key — auch handgeschriebene Geschichten müssen hier durch.
  */
 async function revalidateAll(pool, tokenize) {
+  // Eine kuratierte Bandzuordnung, die auf ein gelöschtes Wort zeigt, wäre ein
+  // stiller Fehler: sie sieht aus, als wäre das Wort erlaubt, und die Prüfung
+  // weist es trotzdem ab.
+  const dangling = danglingCoreLemmas(pool);
+  if (dangling.length > 0) {
+    console.error(
+      `Warnung: ${dangling.length} Einträge in CORE_BAND stehen nicht im Pool: ` +
+        dangling.join(", "),
+    );
+  }
+
   const stories = await readExistingStories();
   const allowedByBand = new Map(
     ALL_BANDS.map((b) => [b, allowedLemmas(pool, b)]),
@@ -325,7 +488,11 @@ async function revalidateAll(pool, tokenize) {
     }
   }
 
-  await writeFile(INDEX_FILE, JSON.stringify(buildIndex(good, { tokenize }), null, 1));
+  const packOf = await loadPackLemmas();
+  await writeFile(
+    INDEX_FILE,
+    JSON.stringify(buildIndex(good, { tokenize, packOf }), null, 1),
+  );
   console.log(`\n${good.length} Geschichten geprüft, Index geschrieben.`);
   if (bad > 0) {
     console.error(`${bad} Geschichten sind durchgefallen und stehen NICHT im Index.`);
@@ -347,6 +514,29 @@ async function main() {
 
   if (validateOnly) {
     await revalidateAll(pool, tokenize);
+    return;
+  }
+
+  if (checkFiles) {
+    if (checkFiles.length === 0) {
+      console.error("Fehler: --check braucht mindestens eine Datei.");
+      process.exit(1);
+    }
+    await checkFilesMode(checkFiles, pool, tokenize);
+    return;
+  }
+
+  if (briefId) {
+    const target = targetFromId(briefId, APP_CONFIG.topicAreas);
+    if (!target) {
+      console.error(`Fehler: "${briefId}" ist keine gültige Id (<thema>-<band>-<nn>).`);
+      console.error(`  Themen: ${APP_CONFIG.topicAreas.map(slug).join(", ")}`);
+      process.exit(1);
+    }
+    const byLemma = poolByLemma(pool);
+    const allowed = allowedLemmas(pool, target.band);
+    const list = [...allowed].sort().map((l) => `${l} = ${byLemma.get(l)?.german ?? "?"}`);
+    console.log(briefFor(target, list));
     return;
   }
 

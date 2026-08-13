@@ -20,8 +20,16 @@ function ctx(patch: Partial<MilestoneContext> = {}): MilestoneContext {
     stories: {},
     retention: [],
     dialogues: {},
+    unlockedDialogues: 0,
     ...patch,
   };
+}
+
+/** Ein fehlerfreier Durchlauf je Dialog — für die Zählmeilensteine. */
+function perfectRuns(count: number): MilestoneContext["dialogues"] {
+  return Object.fromEntries(
+    Array.from({ length: count }, (_, i) => [`d${i}`, { ts: NOW, firstTry: 4, total: 4 }]),
+  );
 }
 
 function logEntry(patch: Partial<ReviewLogEntry> = {}): ReviewLogEntry {
@@ -165,6 +173,29 @@ describe("Kompetenz-Meilensteine", () => {
     expect(ids(findNewMilestones(perfect, {}))).toContain("dialogue-played");
   });
 
+  it('zählt für „Gesprächig" verschiedene Dialoge, nicht Durchläufe', () => {
+    const four = ctx({ dialogues: perfectRuns(4) });
+    expect(ids(findNewMilestones(four, {}))).not.toContain("dialogues-perfect-5");
+
+    const five = ctx({ dialogues: perfectRuns(5) });
+    expect(ids(findNewMilestones(five, {}))).toContain("dialogues-perfect-5");
+
+    // Ein fünfter, aber fehlerhafter Durchlauf zählt nicht mit.
+    const flawed = ctx({
+      dialogues: { ...perfectRuns(4), market: { ts: NOW, firstTry: 3, total: 4 } },
+    });
+    expect(ids(findNewMilestones(flawed, {}))).not.toContain("dialogues-perfect-5");
+  });
+
+  it("vergibt den Abdeckungs-Meilenstein erst ab zehn offenen Dialogen", () => {
+    expect(ids(findNewMilestones(ctx({ unlockedDialogues: 9 }), {}))).not.toContain(
+      "dialogues-unlocked-10",
+    );
+    expect(ids(findNewMilestones(ctx({ unlockedDialogues: 10 }), {}))).toContain(
+      "dialogues-unlocked-10",
+    );
+  });
+
   it("meldet einen komplett gefüllten Stand vollständig", () => {
     const everything = ctx({
       vocab: Array.from({ length: 400 }, (_, i) => makeCard({ id: `c${i}`, maturedAt: NOW })),
@@ -183,7 +214,8 @@ describe("Kompetenz-Meilensteine", () => {
       stories: { "markt-1-01": NOW },
       story: { unaided: true },
       retention: [{ ts: NOW, correct: 10, total: 10 }],
-      dialogues: { greet: { ts: NOW, firstTry: 4, total: 4 } },
+      dialogues: perfectRuns(5),
+      unlockedDialogues: 23,
       log: [logEntry({ elapsedDays: 91, newBox: 5, grade: 3 })],
       session: { total: 6, correct: 6, matured: 0, modes: { typed: { total: 6, correct: 6 } } },
     });

@@ -1,0 +1,257 @@
+{
+ "id": "zuhause-2-01",
+ "title": "Kitabu chini ya mti",
+ "titleDe": "Das Buch unter dem Baum",
+ "band": 2,
+ "topic": "Zuhause",
+ "emoji": "📚",
+ "lemmas": [
+  "chini",
+  "hadithi",
+  "jana",
+  "jumamosi",
+  "juu",
+  "kitabu",
+  "kubwa",
+  "kuchukua",
+  "kujibu",
+  "kujua",
+  "kuona",
+  "kurudi",
+  "kusema",
+  "kusikiliza",
+  "kusoma",
+  "kutafuta",
+  "kutaka",
+  "kuwa",
+  "kwa",
+  "kwenda",
+  "lakini",
+  "mahali",
+  "majani",
+  "mama",
+  "mchana",
+  "meza",
+  "moja",
+  "mpya",
+  "mti",
+  "mzuri",
+  "na",
+  "ndani",
+  "nje",
+  "saa",
+  "sasa"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jumamosi mchana Tatu alitaka kusoma kitabu chake kipya. Alitafuta juu ya meza na chini ya meza, lakini hakuona kitabu.",
+   "de": "Am Samstagmittag wollte Tatu ihr neues Buch lesen. Sie suchte auf dem Tisch und unter dem Tisch, aber sie sah das Buch nicht."
+  },
+  {
+   "sw": "Mama yake alikuwa ndani. Tatu alisema, „Mama, sioni kitabu changu.“ Mama alijibu, „Jana ulisoma nje, chini ya mti.“",
+   "de": "Ihre Mutter war drinnen. Tatu sagte: „Mama, ich sehe mein Buch nicht.“ Die Mutter antwortete: „Gestern hast du draußen gelesen, unter dem Baum.“"
+  },
+  {
+   "sw": "Tatu alikwenda nje. Aliona kitabu chake chini ya mti mkubwa, na majani yalikuwa juu ya kitabu. Alichukua kitabu chake akarudi ndani.",
+   "de": "Tatu ging nach draußen. Sie sah ihr Buch unter dem großen Baum, und Blätter lagen darauf. Sie nahm ihr Buch und ging wieder hinein."
+  },
+  {
+   "sw": "Sasa Tatu alijua mahali pazuri kwa kitabu chake: juu ya meza yake. Alisoma kwa saa moja, na mama alisikiliza hadithi hiyo.",
+   "de": "Jetzt kannte Tatu einen guten Platz für ihr Buch: oben auf ihrem Tisch. Sie las eine Stunde lang, und die Mutter hörte der Geschichte zu."
+  }
+ ],
+ "glosses": {
+  "jumamosi": {
+   "lemma": "jumamosi",
+   "de": "Samstag"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "Mittag"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "Tatu (Mädchenname)",
+   "proper": true
+  },
+  "alitaka": {
+   "lemma": "kutaka",
+   "de": "sie wollte"
+  },
+  "kusoma": {
+   "lemma": "kusoma",
+   "de": "lesen"
+  },
+  "kitabu": {
+   "lemma": "kitabu",
+   "de": "Buch"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "ihr (zu ki-/vi-Wörtern)",
+   "structure": true
+  },
+  "kipya": {
+   "lemma": "mpya",
+   "de": "neu (ki-/vi-Klasse)"
+  },
+  "alitafuta": {
+   "lemma": "kutafuta",
+   "de": "sie suchte"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "oben, auf"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Verbindung bei ya-Wörtern)",
+   "structure": true
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "unten, unter"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "hakuona": {
+   "lemma": "kuona",
+   "de": "sie sah nicht"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihre (zu ya-Wörtern)",
+   "structure": true
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "drinnen"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sie sagte"
+  },
+  "sioni": {
+   "lemma": "kuona",
+   "de": "ich sehe nicht"
+  },
+  "changu": {
+   "lemma": "-angu",
+   "de": "mein (zu ki-/vi-Wörtern)",
+   "structure": true
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "sie antwortete"
+  },
+  "jana": {
+   "lemma": "jana",
+   "de": "gestern"
+  },
+  "ulisoma": {
+   "lemma": "kusoma",
+   "de": "du hast gelesen"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "draußen"
+  },
+  "mti": {
+   "lemma": "mti",
+   "de": "Baum"
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "sie ging"
+  },
+  "aliona": {
+   "lemma": "kuona",
+   "de": "sie sah"
+  },
+  "mkubwa": {
+   "lemma": "kubwa",
+   "de": "groß (m-/mi-Klasse)"
+  },
+  "majani": {
+   "lemma": "majani",
+   "de": "Blätter"
+  },
+  "yalikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren (ma-Klasse)"
+  },
+  "alichukua": {
+   "lemma": "kuchukua",
+   "de": "sie nahm"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "alijua": {
+   "lemma": "kujua",
+   "de": "sie wusste"
+  },
+  "mahali": {
+   "lemma": "mahali",
+   "de": "Ort, Platz"
+  },
+  "pazuri": {
+   "lemma": "mzuri",
+   "de": "gut (pa-Klasse, zu mahali)"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunde"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins"
+  },
+  "alisoma": {
+   "lemma": "kusoma",
+   "de": "sie las"
+  },
+  "alisikiliza": {
+   "lemma": "kusikiliza",
+   "de": "sie hörte zu"
+  },
+  "hadithi": {
+   "lemma": "hadithi",
+   "de": "Geschichte"
+  },
+  "hiyo": {
+   "lemma": "hiyo",
+   "de": "diese (ya-Wörter)",
+   "structure": true
+  },
+  "akarudi": {
+   "lemma": "kurudi",
+   "de": "und ging zurück"
+  }
+ },
+ "audio": null
+}

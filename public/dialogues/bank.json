@@ -1,0 +1,310 @@
+{
+ "id": "bank",
+ "lemmas": [
+  "aina",
+  "akaunti",
+  "akiba",
+  "angalau",
+  "anwani",
+  "asilimia",
+  "awali",
+  "benki",
+  "dola",
+  "gani",
+  "habari",
+  "hamsini",
+  "hapana",
+  "kadi",
+  "karibu",
+  "kiasi",
+  "kuchukua",
+  "kufaa",
+  "kufungua",
+  "kuhitaji",
+  "kupata",
+  "kupenda",
+  "kutaka",
+  "kutoa",
+  "kuweza",
+  "kwa",
+  "leo",
+  "makazi",
+  "mpya",
+  "mwaka",
+  "na",
+  "ni",
+  "nne",
+  "pasipoti",
+  "pesa",
+  "posta",
+  "riba",
+  "saba",
+  "siku",
+  "tafadhali",
+  "waraka",
+  "zipi"
+ ],
+ "glosses": {
+  "habari": {
+   "lemma": "habari",
+   "de": "Hallo / Wie geht's (wörtl. Neuigkeit)"
+  },
+  "ningependa": {
+   "lemma": "kupenda",
+   "de": "ich möchte (Konditional)"
+  },
+  "kufungua": {
+   "lemma": "kufungua",
+   "de": "eröffnen / öffnen"
+  },
+  "akaunti": {
+   "lemma": "akaunti",
+   "de": "Konto"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neu(es)"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "willkommen"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist (Kopula)"
+  },
+  "aina": {
+   "lemma": "aina",
+   "de": "Art / Sorte"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche/r/s / was für"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitiv, N-Klasse)",
+   "structure": true
+  },
+  "unayotaka": {
+   "lemma": "kutaka",
+   "de": "das/die Sie wollen (Relativform)"
+  },
+  "akiba": {
+   "lemma": "akiba",
+   "de": "Ersparnisse (akaunti ya akiba = Sparkonto)"
+  },
+  "tafadhali": {
+   "lemma": "tafadhali",
+   "de": "bitte"
+  },
+  "riba": {
+   "lemma": "riba",
+   "de": "Zins / Zinssatz"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "sein/ihr (Possessiv, hier: davon)",
+   "structure": true
+  },
+  "kiasi": {
+   "lemma": "kiasi",
+   "de": "Betrag / Menge (kiasi gani = wie viel)"
+  },
+  "tunatoa": {
+   "lemma": "kutoa",
+   "de": "wir bieten (wörtl. wir geben)"
+  },
+  "asilimia": {
+   "lemma": "asilimia",
+   "de": "Prozent"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "pro / per"
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "inafaa": {
+   "lemma": "kufaa",
+   "de": "es passt / das ist in Ordnung"
+  },
+  "nahitaji": {
+   "lemma": "kuhitaji",
+   "de": "ich brauche"
+  },
+  "nyaraka": {
+   "lemma": "waraka",
+   "de": "Unterlagen / Dokumente (Plural)"
+  },
+  "zipi": {
+   "lemma": "zipi",
+   "de": "welche (Frageform, N-Klasse Plural)"
+  },
+  "pasipoti": {
+   "lemma": "pasipoti",
+   "de": "Pass / Reisepass"
+  },
+  "anwani": {
+   "lemma": "anwani",
+   "de": "Adresse"
+  },
+  "makazi": {
+   "lemma": "makazi",
+   "de": "Wohnsitz (anwani ya makazi = Wohnadresse)"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "pesa": {
+   "lemma": "pesa",
+   "de": "Geld"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitiv, N-Klasse Plural)",
+   "structure": true
+  },
+  "awali": {
+   "lemma": "awali",
+   "de": "anfänglich / Anfangs- (pesa za awali = Ersteinlage)"
+  },
+  "dola": {
+   "lemma": "dola",
+   "de": "Dollar"
+  },
+  "hamsini": {
+   "lemma": "hamsini",
+   "de": "fünfzig"
+  },
+  "angalau": {
+   "lemma": "angalau",
+   "de": "mindestens / wenigstens"
+  },
+  "naweza": {
+   "lemma": "kuweza",
+   "de": "ich kann"
+  },
+  "kupata": {
+   "lemma": "kupata",
+   "de": "bekommen / erhalten"
+  },
+  "kadi": {
+   "lemma": "kadi",
+   "de": "Karte"
+  },
+  "benki": {
+   "lemma": "benki",
+   "de": "Bank"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "hapana": {
+   "lemma": "hapana",
+   "de": "nein"
+  },
+  "itachukua": {
+   "lemma": "kuchukua",
+   "de": "es wird dauern (wörtl. es wird nehmen)"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tage"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben"
+  },
+  "posta": {
+   "lemma": "posta",
+   "de": "Post / Postamt"
+  }
+ },
+ "choices": {
+  "0": [
+   {
+    "sw": "Habari. Ningependa kufungua akaunti mpya.",
+    "de": "Hallo. Ich möchte ein neues Konto eröffnen.",
+    "correct": true
+   },
+   {
+    "sw": "Habari. Ningependa kufunga akaunti mpya.",
+    "de": "Hallo. Ich möchte ein neues Konto schließen.",
+    "correct": false,
+    "feedback": "„kufunga“ heißt schließen. Eröffnen ist „kufungua“."
+   },
+   {
+    "sw": "Habari. Ninafungua akaunti mpya.",
+    "de": "Hallo. Ich eröffne ein neues Konto.",
+    "correct": false,
+    "feedback": "Damit eröffnest du es selbst. Höflich bittest du darum: „ningependa“."
+   }
+  ],
+  "2": [
+   {
+    "sw": "Akaunti ya akiba, tafadhali. Riba yake ni kiasi gani?",
+    "de": "Ein Sparkonto, bitte. Wie hoch ist der Zinssatz?",
+    "correct": true
+   },
+   {
+    "sw": "Akaunti wa akiba, tafadhali. Riba yake ni kiasi gani?",
+    "de": "Ein Sparkonto, bitte. Wie hoch ist der Zinssatz?",
+    "correct": false,
+    "feedback": "„akaunti“ gehört zur N-Klasse — der Genitiv heißt dort „ya“, nicht „wa“."
+   },
+   {
+    "sw": "Akaunti ya akiba, tafadhali. Riba yake ni nani?",
+    "de": "Ein Sparkonto, bitte. Wer ist der Zinssatz?",
+    "correct": false,
+    "feedback": "„nani“ fragt nach einer Person. Nach der Höhe fragst du mit „kiasi gani“."
+   }
+  ],
+  "4": [
+   {
+    "sw": "Inafaa. Nahitaji nyaraka zipi?",
+    "de": "Passt. Welche Unterlagen brauche ich?",
+    "correct": true
+   },
+   {
+    "sw": "Inafaa. Unahitaji nyaraka zipi?",
+    "de": "Passt. Welche Unterlagen brauchen Sie?",
+    "correct": false,
+    "feedback": "„Una-“ fragt nach ihr. Die Unterlagen brauchst du: „nahitaji“."
+   },
+   {
+    "sw": "Inafaa. Nahitaji nyaraka ngapi?",
+    "de": "Passt. Wie viele Unterlagen brauche ich?",
+    "correct": false,
+    "feedback": "„ngapi“ fragt nach der Anzahl. Du willst wissen, welche: „zipi“."
+   }
+  ],
+  "6": [
+   {
+    "sw": "Naweza kupata kadi ya benki leo?",
+    "de": "Bekomme ich die Bankkarte heute?",
+    "correct": true
+   },
+   {
+    "sw": "Unaweza kupata kadi ya benki leo?",
+    "de": "Bekommen Sie die Bankkarte heute?",
+    "correct": false,
+    "feedback": "„Una-“ fragt nach ihr. Die Karte willst du: „naweza“."
+   },
+   {
+    "sw": "Naweza kupata kadi ya benki jana?",
+    "de": "Bekomme ich die Bankkarte gestern?",
+    "correct": false,
+    "feedback": "„jana“ ist gestern. Du fragst nach heute: „leo“."
+   }
+  ]
+ }
+}

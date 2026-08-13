@@ -1,4 +1,5 @@
 import { get, set } from "idb-keyval";
+import { isContentAvailable } from "./packs";
 import { COMFORT_AT, UNLOCK_AT, coverage, knownLemmas, type CoverageResult } from "./coverage";
 import type { VocabEntry } from "./types";
 
@@ -75,6 +76,12 @@ export interface StoryMeta {
   /** Laufwörter — für die Längenangabe in der Liste. */
   wordCount: number;
   hasAudio: boolean;
+  /**
+   * Themenpakete, ohne die diese Geschichte nicht erreichbar ist (W4.13).
+   * Abgeleitet aus den Lemmata (scripts/lib/packs.mjs), nie von Hand gepflegt.
+   * Ältere Indexdateien haben das Feld nicht — dann gilt „kein Bedarf".
+   */
+  requiresPacks?: string[];
 }
 
 export interface StoryIndex {
@@ -262,13 +269,22 @@ function compareStories(a: StoryListItem, b: StoryListItem): number {
 }
 
 /** Den Index gegen den eigenen Wortschatz auswerten und sortieren. */
+/**
+ * `activePacks` filtert Geschichten heraus, deren Themenpaket nicht
+ * eingeschaltet ist. Sie werden nicht gesperrt angezeigt, sondern gar nicht:
+ * ein Wort außerhalb des aktiven Wortschatzes kann nie als gelernt zählen, die
+ * Geschichte käme also nie über die Schwelle. Eine dauerhaft gesperrte Kachel
+ * wäre ein Versprechen, das die App nicht einlösen kann.
+ */
 export function buildStoryList(
   index: StoryIndex,
   vocab: VocabEntry[],
   read: StoriesRead,
+  activePacks: string[] = [],
 ): StoryListItem[] {
   const known = knownLemmas(vocab);
   return index.stories
+    .filter((meta) => isContentAvailable(meta.requiresPacks, activePacks))
     .map((meta) => {
       const cov = coverage({ lemmas: meta.lemmas }, known);
       return {

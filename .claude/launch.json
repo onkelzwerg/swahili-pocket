@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "vokabel-app",
+      "name": "swahili-pocket",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 8080
