@@ -32,6 +32,7 @@ import {
   type DialogueStats,
 } from "./dialogue-stats";
 import { getRetentionChecks, writeRetentionChecks, resetRetentionCache } from "./retention-check";
+import { activePacks, resetPacksCache } from "./packs";
 import { APP_CONFIG } from "@/config/app.config";
 
 // JSON-Backup der Lerndaten. Schutz gegen IndexedDB-Verlust
@@ -80,16 +81,26 @@ interface BackupFileV4 extends Omit<BackupFileV3, "version"> {
   dialogueStats: DialogueStats;
 }
 
+interface BackupFileV5 extends Omit<BackupFileV4, "version"> {
+  version: 5;
+  /**
+   * Aktivierte Themenpakete (W4.13). Ohne sie fiele der Nutzer nach einem
+   * Import auf den Kern-Wortschatz zurück, und die Inhalte, die er dafür
+   * freigeschaltet hatte, verschwänden wieder aus den Listen.
+   */
+  activePacks: string[];
+}
+
 /**
  * Was der Importer entgegennimmt: v1 bis v4, jedes Feld optional.
  * (Kein `Partial<V1 & V4>` — die Versionsnummern schließen sich aus und
  * die Schnittmenge wäre `never`.)
  */
 type AnyBackup = Partial<Omit<BackupFileV1, "version">> &
-  Partial<Omit<BackupFileV4, "version">> & { version?: number };
+  Partial<Omit<BackupFileV5, "version">> & { version?: number };
 
 /** Aktuelle Backup-Formatversion. */
-const BACKUP_VERSION = 4;
+const BACKUP_VERSION = 5;
 
 export async function exportBackup(): Promise<void> {
   const [
@@ -101,6 +112,7 @@ export async function exportBackup(): Promise<void> {
     storiesRead,
     dialogueStats,
     retentionChecks,
+    packs,
   ] = await Promise.all([
     readCachedVocab(),
     readCachedStats(),
@@ -110,8 +122,9 @@ export async function exportBackup(): Promise<void> {
     getStoriesRead(),
     getDialogueStats(),
     getRetentionChecks(),
+    activePacks(),
   ]);
-  const payload: BackupFileV4 = {
+  const payload: BackupFileV5 = {
     app: APP_CONFIG.appName,
     version: BACKUP_VERSION,
     exportedAt: new Date().toISOString(),
@@ -123,6 +136,7 @@ export async function exportBackup(): Promise<void> {
     storiesRead,
     dialogueStats,
     retentionChecks,
+    activePacks: packs,
     milestones: (await get<Record<string, number>>("milestones:achieved").catch(() => null)) ?? {},
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], {
@@ -164,6 +178,7 @@ export async function importBackup(file: File): Promise<{ vocabCount: number }> 
   resetStoriesReadCache();
   resetDialogueStatsCache();
   resetRetentionCache();
+  resetPacksCache();
 
   if (data.settings) await writeSettings(data.settings);
   await writeReviewLog(Array.isArray(data.reviewLog) ? data.reviewLog : []);
@@ -171,11 +186,14 @@ export async function importBackup(file: File): Promise<{ vocabCount: number }> 
   await writeStoriesRead(data.storiesRead ?? {});
   await writeDialogueStats(normalizeDialogueStats(data.dialogueStats));
   await writeRetentionChecks(Array.isArray(data.retentionChecks) ? data.retentionChecks : []);
+  await set("packs:active", Array.isArray(data.activePacks) ? data.activePacks : []).catch(
+    () => {},
+  );
   if (data.milestones) await set("milestones:achieved", data.milestones).catch(() => {});
 
   // v1-Backup (oder eines ohne Settings) über die Migration schicken, damit
   // FSRS-Zustand, leitnerDue und maturedAt nachgezogen werden.
-  // Ab v2 ist das Datenmodell aktuell; v3 und v4 fügen nur neue Schlüssel
+  // Ab v2 ist das Datenmodell aktuell; v3 bis v5 fügen nur neue Schlüssel
   // hinzu, die eigene Defaults haben — deshalb kein Versionssprung nötig.
   const modelIsCurrent = (data.version ?? 1) >= 2;
   await set(K_VERSION, modelIsCurrent ? DATA_VERSION : 1).catch(() => {});
@@ -195,6 +213,7 @@ export async function resetAllData(): Promise<void> {
   resetStoriesReadCache();
   resetDialogueStatsCache();
   resetRetentionCache();
+  resetPacksCache();
   resetMigrationState();
 }
 

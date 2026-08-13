@@ -26,6 +26,7 @@
     "wapi",
     "wewe"
    ],
+   "requiresPacks": [],
    "turnCount": 5,
    "wordCount": 29,
    "choicePoints": 0,
@@ -96,6 +97,11 @@
     "wazo",
     "zamani"
    ],
+   "requiresPacks": [
+    "arbeit-und-karriere",
+    "geld-und-behoerden",
+    "schule-und-bildung"
+   ],
    "turnCount": 8,
    "wordCount": 90,
    "choicePoints": 0,
@@ -140,6 +146,7 @@
     "tafadhali",
     "wali"
    ],
+   "requiresPacks": [],
    "turnCount": 8,
    "wordCount": 42,
    "choicePoints": 0,
@@ -167,6 +174,7 @@
     "vizuri",
     "wewe"
    ],
+   "requiresPacks": [],
    "turnCount": 6,
    "wordCount": 23,
    "choicePoints": 0,
@@ -203,6 +211,7 @@
     "wapi",
     "wewe"
    ],
+   "requiresPacks": [],
    "turnCount": 7,
    "wordCount": 38,
    "choicePoints": 0,
@@ -249,6 +258,7 @@
     "tatu",
     "wewe"
    ],
+   "requiresPacks": [],
    "turnCount": 7,
    "wordCount": 45,
    "choicePoints": 0,
@@ -291,6 +301,7 @@
     "upande",
     "wapi"
    ],
+   "requiresPacks": [],
    "turnCount": 7,
    "wordCount": 42,
    "choicePoints": 0,
@@ -344,6 +355,7 @@
     "ugali",
     "wali"
    ],
+   "requiresPacks": [],
    "turnCount": 8,
    "wordCount": 51,
    "choicePoints": 0,
@@ -393,6 +405,7 @@
     "uwanja",
     "wapi"
    ],
+   "requiresPacks": [],
    "turnCount": 8,
    "wordCount": 43,
    "choicePoints": 0,
@@ -435,6 +448,7 @@
     "vizuri",
     "wifi"
    ],
+   "requiresPacks": [],
    "turnCount": 8,
    "wordCount": 53,
    "choicePoints": 0,
@@ -475,6 +489,7 @@
     "tisini",
     "umri"
    ],
+   "requiresPacks": [],
    "turnCount": 6,
    "wordCount": 33,
    "choicePoints": 0,
@@ -510,6 +525,7 @@
     "tano",
     "umri"
    ],
+   "requiresPacks": [],
    "turnCount": 7,
    "wordCount": 37,
    "choicePoints": 0,
@@ -557,6 +573,7 @@
     "tano",
     "wapi"
    ],
+   "requiresPacks": [],
    "turnCount": 7,
    "wordCount": 43,
    "choicePoints": 0,
@@ -613,6 +630,9 @@
     "tisa",
     "usiku",
     "vizuri"
+   ],
+   "requiresPacks": [
+    "gesundheit-vertieft"
    ],
    "turnCount": 9,
    "wordCount": 57,
@@ -675,6 +695,9 @@
     "tena",
     "wiki"
    ],
+   "requiresPacks": [
+    "arbeit-und-karriere"
+   ],
    "turnCount": 9,
    "wordCount": 61,
    "choicePoints": 0,
@@ -727,6 +750,7 @@
     "takriban",
     "wiki"
    ],
+   "requiresPacks": [],
    "turnCount": 9,
    "wordCount": 60,
    "choicePoints": 0,
@@ -778,6 +802,7 @@
     "wazo",
     "wikendi"
    ],
+   "requiresPacks": [],
    "turnCount": 8,
    "wordCount": 48,
    "choicePoints": 0,
@@ -832,6 +857,10 @@
     "tafadhali",
     "waraka",
     "zipi"
+   ],
+   "requiresPacks": [
+    "arbeit-und-karriere",
+    "geld-und-behoerden"
    ],
    "turnCount": 8,
    "wordCount": 54,
@@ -911,6 +940,10 @@
     "wiki",
     "zaidi"
    ],
+   "requiresPacks": [
+    "arbeit-und-karriere",
+    "umwelt-und-landwirtschaft"
+   ],
    "turnCount": 9,
    "wordCount": 91,
    "choicePoints": 0,
@@ -971,6 +1004,10 @@
     "ukosefu",
     "uwazi",
     "zaidi"
+   ],
+   "requiresPacks": [
+    "arbeit-und-karriere",
+    "politik-und-gesellschaft"
    ],
    "turnCount": 8,
    "wordCount": 65,
@@ -1043,6 +1080,10 @@
     "ukuta",
     "umeme"
    ],
+   "requiresPacks": [
+    "arbeit-und-karriere",
+    "geld-und-behoerden"
+   ],
    "turnCount": 10,
    "wordCount": 90,
    "choicePoints": 0,
@@ -1113,6 +1154,11 @@
     "ya kisasa",
     "zaidi"
    ],
+   "requiresPacks": [
+    "geld-und-behoerden",
+    "politik-und-gesellschaft",
+    "umwelt-und-landwirtschaft"
+   ],
    "turnCount": 8,
    "wordCount": 71,
    "choicePoints": 0,
@@ -1182,6 +1228,7 @@
     "wakati",
     "zamani"
    ],
+   "requiresPacks": [],
    "turnCount": 10,
    "wordCount": 82,
    "choicePoints": 0,

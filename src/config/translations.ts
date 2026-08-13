@@ -620,6 +620,21 @@ export const T = {
     },
   },
 
+  packs: {
+    title: "Themenpakete",
+    intro:
+      "Zusätzlicher Wortschatz für einzelne Themen. Eingeschaltet stehen die Wörter im Pool zur Auswahl, und die Dialoge und Geschichten dazu werden sichtbar.",
+    wordCount: (n: number) => (n === 1 ? "1 Wort" : `${n} Wörter`),
+    on: "An",
+    off: "Aus",
+    /** Hinweis an einem Inhalt, dem noch ein Paket fehlt. */
+    locked: (titles: string[]) =>
+      titles.length === 1
+        ? `Braucht das Paket „${titles[0]}"`
+        : `Braucht die Pakete ${titles.map((t) => `„${t}"`).join(" und ")}`,
+    unlockCta: "In der Bibliothek einschalten",
+  },
+
   library: {
     metaTitle: "Bibliothek — Swahili Pocket",
     metaDescription: "Geschichten, Dialoge und Grammatik an einem Ort.",

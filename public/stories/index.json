@@ -2,6 +2,7 @@
  "version": 1,
  "stories": [
   {
+   "requiresPacks": [],
    "id": "arbeit-1-01",
    "title": "Asubuhi ya Zawadi",
    "titleDe": "Zawadis Morgen",
@@ -48,6 +49,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "emotionen-1-01",
    "title": "Mvua ya Asubuhi",
    "titleDe": "Regen am Morgen",
@@ -95,6 +97,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "essen-1-01",
    "title": "Chakula cha Jioni",
    "titleDe": "Das Abendessen",
@@ -144,6 +147,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "familie-1-01",
    "title": "Familia ya Juma",
    "titleDe": "Jumas Familie",
@@ -183,6 +187,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "gesundheit-1-01",
    "title": "Amina na daktari",
    "titleDe": "Amina und der Arzt",
@@ -220,6 +225,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "markt-1-01",
    "title": "Dukani",
    "titleDe": "Im Laden",
@@ -259,6 +265,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "natur-1-01",
    "title": "Neema na Mvua",
    "titleDe": "Neema und der Regen",
@@ -308,6 +315,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "reisen-1-01",
    "title": "Siku ya kwanza pwani",
    "titleDe": "Der erste Tag an der Küste",
@@ -366,6 +374,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "transport-1-01",
    "title": "Basi la asubuhi",
    "titleDe": "Der Bus am Morgen",
@@ -408,6 +417,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "zuhause-1-01",
    "title": "Jioni Nyumbani kwa Hamisi",
    "titleDe": "Abend bei Hamisi zu Hause",
@@ -460,6 +470,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "arbeit-2-01",
    "title": "Hesabu ya Bakari",
    "titleDe": "Bakaris Abrechnung",
@@ -519,6 +530,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "emotionen-2-01",
    "title": "Barua Kutoka Mbali",
    "titleDe": "Ein Brief von weit her",
@@ -578,6 +590,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "essen-2-01",
    "title": "Mchuzi wa samaki",
    "titleDe": "Fisch mit Soße",
@@ -622,6 +635,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "familie-2-01",
    "title": "Simu ya Jumapili",
    "titleDe": "Der Sonntagsanruf",
@@ -682,6 +696,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "gesundheit-2-01",
    "title": "Chai ya jirani",
    "titleDe": "Der Tee der Nachbarin",
@@ -746,6 +761,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "markt-2-01",
    "title": "Maembe ya Musa",
    "titleDe": "Musas Mangos",
@@ -803,6 +819,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "natur-2-01",
    "title": "Mti na Bahari",
    "titleDe": "Der Baum und das Meer",
@@ -868,6 +885,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "reisen-2-01",
    "title": "Safari ya basi",
    "titleDe": "Die Busfahrt",
@@ -906,6 +924,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "transport-2-01",
    "title": "Baisikeli ya Joseph",
    "titleDe": "Josephs Fahrrad",
@@ -969,6 +988,7 @@
    "hasAudio": false
   },
   {
+   "requiresPacks": [],
    "id": "zuhause-2-01",
    "title": "Kitabu chini ya mti",
    "titleDe": "Das Buch unter dem Baum",

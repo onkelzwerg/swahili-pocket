@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BookOpen, Check, Lock, Sparkles } from "lucide-react";
 import { getVocab } from "@/lib/store";
 import { buildStoryList, getStoriesRead, loadStoryIndex, type StoryListItem } from "@/lib/stories";
+import { activePacks } from "@/lib/packs";
 import { PoolPickerSheet } from "@/components/PoolPickerSheet";
 import { T } from "@/config/translations";
 
@@ -32,12 +33,13 @@ function StoriesPage() {
 
   const load = useCallback(() => {
     void (async () => {
-      const [index, vocab, read] = await Promise.all([
+      const [index, vocab, read, packs] = await Promise.all([
         loadStoryIndex(),
         getVocab(),
         getStoriesRead(),
+        activePacks(),
       ]);
-      setItems(buildStoryList(index, vocab, read));
+      setItems(buildStoryList(index, vocab, read, packs));
       setLoading(false);
     })();
   }, []);

@@ -1,7 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { allDialogues, isPlayable } from "@/lib/dialogues";
+import { dialogueMetaById, type DialogueMeta } from "@/lib/dialogue-index";
+import { activePacks, isContentAvailable } from "@/lib/packs";
 import { T } from "@/config/translations";
 
 export const Route = createFileRoute("/_authenticated/dialogues")({
@@ -17,8 +20,29 @@ export const Route = createFileRoute("/_authenticated/dialogues")({
 /**
  * Dialogliste. Seit W3.4 führt jede Kachel auf eine eigene Route statt in ein
  * Overlay — Dialoge sind damit verlinkbar (Bibliothek, Lesezeichen, Zurück-Taste).
+ *
+ * Seit W4.13 blendet sie Dialoge aus, deren Themenpaket nicht eingeschaltet
+ * ist. Nicht gesperrt, sondern gar nicht: ihre Wörter liegen außerhalb des
+ * aktiven Wortschatzes, sie könnten die Freischaltschwelle also nie erreichen.
  */
 function DialoguesPage() {
+  const [meta, setMeta] = useState<Map<string, DialogueMeta> | null>(null);
+  const [packs, setPacks] = useState<string[]>([]);
+
+  useEffect(() => {
+    void (async () => {
+      const [byId, on] = await Promise.all([dialogueMetaById(), activePacks()]);
+      setPacks(on);
+      setMeta(byId);
+    })();
+  }, []);
+
+  // Solange der Index nicht da ist, alles zeigen — eine Liste, die beim Laden
+  // erst leer ist und dann Kacheln nachschiebt, wirkt kaputt.
+  const visible = meta
+    ? allDialogues.filter((d) => isContentAvailable(meta.get(d.id)?.requiresPacks, packs))
+    : allDialogues;
+
   return (
     <div className="px-5 pt-8">
       <header className="mb-5">
@@ -27,7 +51,7 @@ function DialoguesPage() {
       </header>
 
       <ul className="grid grid-cols-2 gap-3 pb-4">
-        {allDialogues.map((d) => (
+        {visible.map((d) => (
           <li key={d.id}>
             <Link to="/dialogues/$dialogueId" params={{ dialogueId: d.id }}>
               <motion.div

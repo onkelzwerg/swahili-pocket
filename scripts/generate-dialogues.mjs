@@ -31,6 +31,7 @@ import {
   validateDialogueGloss,
 } from "./lib/dialogue-validate.mjs";
 import { STRUCTURE_LEMMAS } from "./lib/story-validate.mjs";
+import { loadPackLemmas } from "./lib/packs.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT_DIR = path.join(ROOT, "public", "dialogues");
@@ -362,7 +363,8 @@ async function main() {
       }
     }
 
-    const index = buildDialogueIndex(entries, { dialogues, tokenize, manifest });
+    const packOf = await loadPackLemmas();
+    const index = buildDialogueIndex(entries, { dialogues, tokenize, manifest, packOf });
     await writeFile(INDEX_FILE, JSON.stringify(index, null, 1));
     const voiced = index.dialogues.filter((d) => d.hasAudio).length;
     const playable = index.dialogues.filter((d) => d.choicePoints > 0).length;

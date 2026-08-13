@@ -17,6 +17,7 @@
  */
 
 import { STRUCTURE_LEMMAS } from "./story-validate.mjs";
+import { requiredPacks } from "./packs.mjs";
 
 function isNonEmptyString(v) {
   return typeof v === "string" && v.trim().length > 0;
@@ -214,7 +215,10 @@ export function validateDialogueGloss(raw, { dialogue, tokenize, poolLemmas }) {
  * ein halb vertonter Dialog fällt mittendrin auf die Web-Speech-Stimme
  * zurück, und der Wechsel ist deutlicher hörbar als durchgehend synthetisch.
  */
-export function buildDialogueIndex(entries, { dialogues, tokenize, manifest = {} }) {
+export function buildDialogueIndex(
+  entries,
+  { dialogues, tokenize, manifest = {}, packOf = new Map() },
+) {
   const byId = new Map(entries.map((e) => [e.id, e]));
 
   return {
@@ -231,6 +235,9 @@ export function buildDialogueIndex(entries, { dialogues, tokenize, manifest = {}
           titleDe: d.titleDe ?? null,
           level: d.level ?? null,
           lemmas: entry.lemmas,
+          // Abgeleitet, nie gepflegt: benutzt der Dialog ein Wort aus einem
+          // Themenpaket, bleibt er ohne dieses Paket unter der Schwelle.
+          requiresPacks: requiredPacks(entry.lemmas, packOf),
           turnCount: d.turns.length,
           wordCount: lines.reduce((n, sw) => n + tokenize(sw).length, 0),
           choicePoints: choicePoints.length,

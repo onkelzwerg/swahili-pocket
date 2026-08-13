@@ -11,6 +11,8 @@
  * — und angetippte Wörter ohne Glossareintrag die Folge.
  */
 
+import { requiredPacks } from "./packs.mjs";
+
 /** Mehr neue Wörter darf eine Geschichte nicht einführen (Plan W3.2). */
 export const MAX_NEW_LEMMAS = 3;
 
@@ -234,11 +236,14 @@ export function validateStory(raw, { allowed, tokenize }) {
 }
 
 /** Aus geprüften Geschichten den Listen-Index bauen. */
-export function buildIndex(stories, { tokenize }) {
+export function buildIndex(stories, { tokenize, packOf = new Map() }) {
   return {
     version: 1,
     stories: stories
       .map((s) => ({
+        // Abgeleitet aus den Lemmata, nie gepflegt: benutzt die Geschichte ein
+        // Wort aus einem Themenpaket, ist sie ohne dieses Paket unerreichbar.
+        requiresPacks: requiredPacks(s.lemmas, packOf),
         id: s.id,
         title: s.title,
         titleDe: s.titleDe,

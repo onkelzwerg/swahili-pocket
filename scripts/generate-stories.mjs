@@ -45,6 +45,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
 import Anthropic from "@anthropic-ai/sdk";
+import { loadPackLemmas } from "./lib/packs.mjs";
 import {
   BAND_LIMITS,
   allowedLemmas,
@@ -487,7 +488,11 @@ async function revalidateAll(pool, tokenize) {
     }
   }
 
-  await writeFile(INDEX_FILE, JSON.stringify(buildIndex(good, { tokenize }), null, 1));
+  const packOf = await loadPackLemmas();
+  await writeFile(
+    INDEX_FILE,
+    JSON.stringify(buildIndex(good, { tokenize, packOf }), null, 1),
+  );
   console.log(`\n${good.length} Geschichten geprüft, Index geschrieben.`);
   if (bad > 0) {
     console.error(`${bad} Geschichten sind durchgefallen und stehen NICHT im Index.`);
