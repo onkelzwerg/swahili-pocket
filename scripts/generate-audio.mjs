@@ -24,14 +24,33 @@
  * Verwendung:
  *   ELEVENLABS_API_KEY=sk_... node scripts/generate-audio.mjs
  *   ELEVENLABS_API_KEY=sk_... node scripts/generate-audio.mjs --budget 5000
+ *   ELEVENLABS_API_KEY=sk_... node scripts/generate-audio.mjs --band 1
  *   node scripts/generate-audio.mjs --dry-run   (zeigt nur, was passieren würde)
+ *   node scripts/generate-audio.mjs --prune     (Waisen entfernen, kostet nichts)
+ *
+ * --band <1..4> grenzt **nur die Beispielsätze** auf Trägerwörter bis
+ * einschließlich dieses Bandes ein — dieselbe Rangheuristik wie die
+ * Geschichten-Pipeline (scripts/lib/story-bands.mjs), also keine zweite
+ * Wahrheit über den Wortschatz. Nötig, weil der Pool alphabetisch sortiert
+ * ist: ohne Filter vertont der erste Lauf die Sätze zu `abiria` und `ada` und
+ * lässt `kwenda` liegen. Die Bänder sind kumulativ, `--band 2` schließt Band 1
+ * ein; was schon im Manifest steht, wird ohnehin übersprungen.
+ * Wörter, Dialoge, Geschichten und Phrasen filtert `--band` nicht: die Wörter
+ * sind zusammen keine 2 % der Arbeit und schalten die Übungsart „Hören" frei,
+ * der Rest hat gar keinen Bandrang.
+ *
+ * --prune löscht Manifest-Einträge und MP3s, deren Text es in der App nicht
+ * mehr gibt. Das Manifest ist nach exaktem Text geschlüsselt — wird eine
+ * Vokabel oder ein Beispielsatz geändert, bleibt die alte Aufnahme als Waise
+ * liegen. Mit --dry-run kombinierbar, braucht keinen API-Key.
  */
 import { createHash } from "node:crypto";
-import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, readdir, unlink } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
+import { rankPool, bandForRank, CORE_BAND } from "./lib/story-bands.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const POOL_FILE = path.join(ROOT, "public", "vocab-pool.json");
@@ -62,11 +81,22 @@ function voiceByProfile(profile) {
 
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
+const prune = args.includes("--prune");
 const budgetIdx = args.indexOf("--budget");
 const BUDGET = budgetIdx >= 0 ? Number(args[budgetIdx + 1]) : 9000;
+const bandIdx = args.indexOf("--band");
+const MAX_BAND = bandIdx >= 0 ? Number(args[bandIdx + 1]) : null;
 const apiKey = process.env.ELEVENLABS_API_KEY;
 
-if (!dryRun && !apiKey) {
+if (bandIdx >= 0 && !(Number.isInteger(MAX_BAND) && MAX_BAND >= 1 && MAX_BAND <= 4)) {
+  console.error(
+    `Fehler: --band erwartet eine ganze Zahl von 1 bis 4 (bekommen: ${args[bandIdx + 1]}).`,
+  );
+  process.exit(1);
+}
+
+// --prune schreibt keine Audios und braucht deshalb keinen Key.
+if (!dryRun && !prune && !apiKey) {
   console.error("Fehler: ELEVENLABS_API_KEY ist nicht gesetzt.");
   console.error("  ELEVENLABS_API_KEY=sk_... node scripts/generate-audio.mjs");
   process.exit(1);
@@ -152,6 +182,82 @@ async function loadStories() {
   return stories.sort((a, b) => (a.band ?? 9) - (b.band ?? 9) || a.id.localeCompare(b.id));
 }
 
+/**
+ * Schreibweise → Band, für `--band`. Wortgleich mit der Bandzuordnung der
+ * Geschichten-Pipeline: erst der Häufigkeitsrang, dann `CORE_BAND` additiv
+ * darüber — ein Wort kann in ein früheres Band gezogen werden, keines verliert
+ * seinen Platz. Ohne diese Ergänzung lägen `kuwa` und `lakini` außerhalb von
+ * Band 1, und ihre Beispielsätze kämen als Letztes an die Reihe.
+ */
+function bandByWord(pool) {
+  const band = new Map();
+  rankPool(pool).forEach((entry, rank) => band.set(entry.swahili, bandForRank(rank)));
+  for (const [lemma, coreBand] of CORE_BAND) {
+    const entry = pool.find((e) => e.swahili.toLowerCase() === lemma);
+    if (entry) band.set(entry.swahili, Math.min(band.get(entry.swahili) ?? 9, coreBand));
+  }
+  return band;
+}
+
+/**
+ * Waisen entfernen: Manifest-Einträge, deren Text es in der App nicht mehr
+ * gibt, samt ihrer MP3s. Zusätzlich MP3s, auf die kein Eintrag mehr zeigt —
+ * die entstehen, wenn ein Lauf zwischen Datei- und Manifest-Schreiben abbricht.
+ *
+ * Eine Datei wird nur gelöscht, wenn **kein** bleibender Eintrag sie noch
+ * referenziert. Zwei Texte können sich zwar nach Konstruktion keine Datei
+ * teilen (der Dateiname ist der Hash aus Stimme und Text), aber sich darauf zu
+ * verlassen hieße, eine Löschung an eine Annahme zu hängen.
+ */
+async function pruneOrphans(manifest, requiredTexts) {
+  const orphanTexts = Object.keys(manifest).filter((t) => !requiredTexts.has(t));
+  const kept = Object.fromEntries(Object.entries(manifest).filter(([t]) => requiredTexts.has(t)));
+  const stillUsed = new Set(Object.values(kept));
+
+  const onDisk = existsSync(AUDIO_DIR)
+    ? (await readdir(AUDIO_DIR)).filter((f) => f.endsWith(".mp3"))
+    : [];
+  const referenced = new Set(Object.values(manifest));
+  const unreferenced = onDisk.filter((f) => !referenced.has(f));
+
+  const toDelete = [
+    ...orphanTexts.map((t) => manifest[t]).filter((f) => f && !stillUsed.has(f)),
+    ...unreferenced,
+  ];
+
+  const orphanChars = orphanTexts.reduce((n, t) => n + t.length, 0);
+  console.log(
+    `Manifest: ${Object.keys(manifest).length} Einträge, davon ${orphanTexts.length} verwaist.`,
+  );
+  console.log(`MP3s auf der Platte: ${onDisk.length}, davon ${unreferenced.length} ohne Eintrag.`);
+  if (orphanTexts.length === 0 && unreferenced.length === 0) {
+    console.log("\nNichts zu entfernen. 🎉");
+    return;
+  }
+
+  console.log(`\nZu entfernen: ${toDelete.length} Dateien, ${orphanTexts.length} Einträge`);
+  console.log(`(${orphanChars} Zeichen, die einmal bezahlt wurden — verloren, nicht erstattbar)\n`);
+  for (const t of orphanTexts) console.log(`  ${JSON.stringify(t)}`);
+  for (const f of unreferenced) console.log(`  ${f} (ohne Manifest-Eintrag)`);
+
+  if (dryRun) {
+    console.log("\n(Dry-Run — nichts gelöscht.)");
+    return;
+  }
+
+  let removed = 0;
+  for (const file of toDelete) {
+    await unlink(path.join(AUDIO_DIR, file)).then(
+      () => removed++,
+      () => {}, // schon weg — kein Fehlerfall
+    );
+  }
+  await saveManifest(kept);
+  console.log(
+    `\nFertig: ${removed} Dateien gelöscht, Manifest auf ${Object.keys(kept).length} Einträge gekürzt.`,
+  );
+}
+
 async function main() {
   const pool = JSON.parse(await readFile(POOL_FILE, "utf8"));
   const { dialogues, extraDialogues, phraseOfDay, seedVocab } = await loadAppData();
@@ -196,11 +302,15 @@ async function main() {
 
   // 5. Pool: erst alle Wörter (billig, werden am häufigsten abgespielt),
   //    dann alle Beispielsätze — jeweils in Pool-Reihenfolge.
+  //    Wörter laufen immer mit, auch bei --band: sie sind zusammen keine 2 %
+  //    der Arbeit und entscheiden, ob eine Karte im Hörmodus vorkommt.
   for (const entry of pool) {
     const voice = voiceForWord(entry.swahili);
     tasks.push({ text: entry.swahili.trim(), voice, kind: "Wort" });
   }
+  const band = MAX_BAND === null ? null : bandByWord(pool);
   for (const entry of pool) {
+    if (band && (band.get(entry.swahili) ?? 9) > MAX_BAND) continue;
     const voice = voiceForWord(entry.swahili);
     for (const ex of entry.examples ?? []) {
       if (ex.sw) tasks.push({ text: ex.sw.trim(), voice, kind: "Beispiel" });
@@ -215,6 +325,19 @@ async function main() {
     return true;
   });
 
+  if (prune) {
+    // Für die Waisenprüfung zählt der **Gesamtbestand**, nie die gefilterte
+    // Aufgabenliste: sonst löschte `--prune --band 1` jede Aufnahme ab Band 2.
+    // Deshalb die Beispielsätze hier noch einmal vollständig dazu — ohne
+    // --band ist das ein No-op, mit --band die Rettung.
+    const required = new Set(tasks.map((t) => t.text).filter(Boolean));
+    for (const entry of pool) {
+      for (const ex of entry.examples ?? []) if (ex.sw) required.add(ex.sw.trim());
+    }
+    await pruneOrphans(manifest, required);
+    return;
+  }
+
   const openChars = open.reduce((n, t) => n + t.text.length, 0);
   console.log(`Manifest: ${Object.keys(manifest).length} vorhanden.`);
   console.log(`Offen: ${open.length} Texte, ${openChars} Zeichen.`);
@@ -227,6 +350,9 @@ async function main() {
   }
   for (const [kind, s] of byKind) {
     console.log(`  ${kind}: ${s.n} Texte, ${s.chars} Zeichen`);
+  }
+  if (MAX_BAND !== null) {
+    console.log(`Filter: Beispielsätze bis einschließlich Band ${MAX_BAND} (Wörter ungefiltert).`);
   }
   console.log(`Budget dieser Lauf: ${BUDGET} Zeichen.${dryRun ? " (Dry-Run)" : ""}\n`);
 

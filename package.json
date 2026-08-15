@@ -10,6 +10,8 @@
     "preview": "vite preview",
     "deploy": "vite build && wrangler deploy -c wrangler.deploy.jsonc",
     "audio:generate": "node scripts/generate-audio.mjs",
+    "audio:plan": "node scripts/generate-audio.mjs --dry-run",
+    "audio:prune": "node scripts/generate-audio.mjs --prune",
     "stories:generate": "node scripts/generate-stories.mjs",
     "stories:validate": "node scripts/generate-stories.mjs --validate",
     "stories:brief": "node scripts/generate-stories.mjs --brief",
