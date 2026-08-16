@@ -318,11 +318,23 @@ export const T = {
     verb: {
       prompt: (subject: string, tense: string, stem: string) => `${subject} + ${tense} + ${stem}`,
       hint: "Setz die Form zusammen.",
+      negated: "verneint",
       monosyllabic: "Einsilbiges Verb — das ku- bleibt.",
+      /** Verneint übernimmt der Marker (-ku-, -ja-) die Betonung: hamjala, nicht hamjakula. */
+      monosyllabicNegated: "Einsilbiges Verb — hier ersetzt der Marker das ku-.",
+      why: (tense: string, negated: boolean) =>
+        negated ? `Wie verneint man ${tense}?` : `${tense} nachlesen`,
     },
     ngeli: {
-      prompt: (noun: string, adjective: string) => `${noun} ___ (${adjective})`,
-      hint: "Welche Form passt zur Klasse?",
+      prompt: (noun: string, cue: string, tail: string) =>
+        `${noun} ___${tail ? ` ${tail}` : ""} (${cue})`,
+      /** Überschrift der Aufgabe — sagt, welche Konkordanz gefragt ist. */
+      variants: {
+        adjective: "Welche Adjektivform passt?",
+        possessive: "Welches Possessiv passt?",
+        demonstrative: "Welches Demonstrativ passt?",
+        genitive: "Welche Genitivform passt?",
+      },
       why: (nounClass: string) => `Warum ${nounClass}? Klasse ansehen`,
     },
     check: "Prüfen",
@@ -518,15 +530,92 @@ export const T = {
     tabs: { reference: "Übersicht", quiz: "Quiz" },
   },
 
+  verbs: {
+    metaTitle: "Verben & Zeitformen — Swahili Pocket",
+    metaDescription:
+      "Swahili-Verbgrammatik zum Nachlesen: Zeitformen, Verneinung, Imperativ, Konjunktiv, Objektinfix und Relativformen.",
+    eyebrow: "Vitenzi na nyakati",
+    title: "Verben & Zeitformen",
+    examples: "Beispiele",
+    negated: "Verneint",
+    structure: {
+      title: "Der Bauplan",
+      intro: "Jede Verbform entsteht aus denselben Bausteinen — in fester Reihenfolge.",
+      persons: "Personen",
+      subject: "Subjekt",
+      negative: "verneint",
+      object: "Objekt",
+      classHint:
+        "Für Nomen statt Personen gelten die Präfixe der jeweiligen Klasse — siehe Konkordanztafel unter Ngeli.",
+    },
+    negation: {
+      title: "Verneinung",
+      intro: "Jede Zeitform hat ihre eigene verneinte Bildung.",
+      affirmative: "bejaht",
+      negative: "verneint",
+      persons: "Verneintes Präsens, alle Personen",
+    },
+    imperative: {
+      title: "Imperativ",
+      irregular: "Unregelmäßig",
+    },
+    subjunctive: {
+      title: "Konjunktiv (-e)",
+    },
+    object: {
+      title: "Objektinfix",
+    },
+    relative: {
+      title: "Relativformen",
+    },
+  },
+
   reference: {
     singular: "Singular",
     plural: "Plural",
-    subjectPrefix: "Subj.-Präfix",
-    objectPrefix: "Obj.-Präfix",
-    genitive: "Genitiv (-a)",
+    classPrefix: "Klassenpräfix",
+    /** Zeilenbeschriftungen der Konkordanztafel (Spalten 1–5 der Vorlage). */
+    base: {
+      title: "Basis-Konkordanz",
+      subject: "Subjektpräfix",
+      subjectNegative: "verneint (ha-)",
+      genitive: "Genitiv (-a)",
+      object: "Objektpräfix",
+      relative: "Relativsilbe (-o)",
+    },
+    personal: {
+      title: "Personen",
+      hint: "Personen folgen der M-/Wa-Klasse — Possessiv und Demonstrativ sind dieselben.",
+    },
+    possessive: {
+      title: "Possessiv (mein, dein …)",
+      my: "mein",
+      your: "dein, Ihr",
+      his: "sein, ihr",
+      our: "unser",
+      yourPl: "euer, Ihr",
+      their: "ihr (Pl.)",
+    },
     demonstratives: "Demonstrativa",
     near: "Dieses (hier)",
     far: "Jenes (dort)",
+    referential: "Das Erwähnte",
+    any: "Irgendein",
+    emphatic: "Emphatisch (ndi-)",
+    variable: {
+      title: "Adjektive, Zahl- & Fragewörter",
+      zuri: "gut, schön (-zuri)",
+      moja: "ein(e) (-moja)",
+      wili: "zwei (-wili)",
+      ngapi: "wie viele (-ngapi)",
+      ingine: "andere (-ingine)",
+      ote: "alle, ganz (-ote)",
+      eupe: "weiß (-eupe)",
+      pi: "welche (-pi)",
+      enye: "habend (-enye)",
+      enyewe: "selbst (-enyewe)",
+    },
+    verbsHint: "Zeitformen, Verneinung, Imperativ — die Verbgrammatik zum Nachlesen",
     locative: "Ortsangabe („ist da“)",
     locativeHint:
       "-po = genau an dieser Stelle · -ko = irgendwo, allgemein · -mo = darin. " +
@@ -541,7 +630,10 @@ export const T = {
       mainVerbs: "Wichtigste Verben",
       withKu: "Mit ku-",
       withoutKu: "Ohne ku-",
-      rule: "Faustregel: ku- fällt im Imperativ Sg., im Habitual (hu-) und im Negativ-Präsens weg — sonst bleibt es erhalten.",
+      rule:
+        "Faustregel: ku- fällt im Habitual (hu-) und im Negativ-Präsens weg — sonst " +
+        "bleibt es erhalten. Im Imperativ Singular schwankt der Gebrauch: kula! und la! " +
+        "sind beide zu hören.",
     },
   },
 
@@ -675,8 +767,12 @@ export const T = {
         `${unlocked} von ${total} freigeschaltet · ${playable} mitspielbar`,
     },
     grammar: {
-      title: "Grammatik",
-      subtitle: (classes: number) => `${classes} Nomenklassen · Grammatik-Gym`,
+      title: "Ngeli",
+      subtitle: (classes: number) => `${classes} Nomenklassen · volle Konkordanztafel`,
+    },
+    verbs: {
+      title: "Verben & Zeitformen",
+      subtitle: (tenses: number) => `${tenses} Zeitformen · Verneinung, Imperativ, Konjunktiv`,
     },
   },
 

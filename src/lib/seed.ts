@@ -1,4 +1,4 @@
-import type { VocabEntry, Dialogue, NounClassInfo } from "./types";
+import type { VocabEntry, Dialogue, NounClassInfo, ConcordSet } from "./types";
 
 export function seedVocab(): VocabEntry[] {
   const now = Date.now();
@@ -1009,6 +1009,96 @@ export const dialogues: Dialogue[] = [
   },
 ];
 
+/**
+ * Baut eine Spalte der Konkordanztafel aus vier Tupeln — in genau der
+ * Reihenfolge, in der die gedruckte Tafel ihre Spalten führt. Der Bauer spart
+ * hier gegenüber ausgeschriebenen Objekten rund 400 Zeilen und lässt sich
+ * Zeile für Zeile gegen die Vorlage prüfen.
+ *
+ * Leerer String = die Tafel führt für diese Zelle keine Form.
+ */
+function concord(
+  label: string,
+  /** [Subjekt, verneint, Genitiv, Objekt, Relativsilbe] */
+  base: [string, string, string, string, string],
+  /** [mein, dein, sein/ihr, unser, euer, ihr] */
+  possessive: [string, string, string, string, string, string],
+  /** [dieses, jenes, erwähnt, irgendein, emphatisch] */
+  demonstrative: [string, string, string, string, string],
+  /** [-zuri, -moja, -wili, -ngapi, -ingine, -ote, -eupe, -pi, -enye, -enyewe] */
+  variable: [string, string, string, string, string, string, string, string, string, string],
+): ConcordSet {
+  return {
+    label,
+    subject: base[0],
+    subjectNegative: base[1],
+    genitive: base[2],
+    object: base[3],
+    relative: base[4],
+    possessive: {
+      my: possessive[0],
+      your: possessive[1],
+      his: possessive[2],
+      our: possessive[3],
+      yourPl: possessive[4],
+      their: possessive[5],
+    },
+    demonstrative: {
+      near: demonstrative[0],
+      far: demonstrative[1],
+      referential: demonstrative[2],
+      any: demonstrative[3],
+      emphatic: demonstrative[4],
+    },
+    variable: {
+      zuri: variable[0],
+      moja: variable[1],
+      wili: variable[2],
+      ngapi: variable[3],
+      ingine: variable[4],
+      ote: variable[5],
+      eupe: variable[6],
+      pi: variable[7],
+      enye: variable[8],
+      enyewe: variable[9],
+    },
+  };
+}
+
+/** Possessiva sind für Personen und Klasse 1/2 dieselben — einmal notiert. */
+const POSS_WA: [string, string, string, string, string, string] = [
+  "wangu",
+  "wako",
+  "wake",
+  "wetu",
+  "wenu",
+  "wao",
+];
+const POSS_YA: [string, string, string, string, string, string] = [
+  "yangu",
+  "yako",
+  "yake",
+  "yetu",
+  "yenu",
+  "yao",
+];
+const POSS_ZA: [string, string, string, string, string, string] = [
+  "zangu",
+  "zako",
+  "zake",
+  "zetu",
+  "zenu",
+  "zao",
+];
+const POSS_KWA: [string, string, string, string, string, string] = [
+  "kwangu",
+  "kwako",
+  "kwake",
+  "kwetu",
+  "kwenu",
+  "kwao",
+];
+
 export const nounClasses: NounClassInfo[] = [
   {
     id: "M-Wa",
@@ -1016,13 +1106,41 @@ export const nounClasses: NounClassInfo[] = [
     singular: "m-",
     plural: "wa-",
     meaning: "Personen, Lebewesen",
-    subjectPrefix: { sg: "a-", pl: "wa-" },
-    objectPrefix: { sg: "-m-", pl: "-wa-" },
-    genitive: { sg: "wa", pl: "wa" },
-    demonstratives: {
-      near: { sg: "huyu", pl: "hawa" },
-      far: { sg: "yule", pl: "wale" },
-    },
+    concords: [
+      concord(
+        "Singular",
+        ["a- / yu-", "ha-", "wa", "-m-", "-ye-"],
+        POSS_WA,
+        ["huyu", "yule", "huyo", "ye yote", "ndiye"],
+        ["mzuri", "mmoja", "", "", "mwingine", "", "mweupe", "yupi", "mwenye", "mwenyewe"],
+      ),
+      concord(
+        "Plural",
+        ["wa-", "hawa-", "wa", "-wa-", "-o-"],
+        POSS_WA,
+        ["hawa", "wale", "hao", "wo wote", "ndio"],
+        [
+          "wazuri",
+          "",
+          "wawili",
+          "wangapi",
+          "wengine",
+          "wote",
+          "weupe",
+          "wepi / wapi",
+          "wenye",
+          "wenyewe",
+        ],
+      ),
+    ],
+    // Personen folgen der M-/Wa-Klasse; nur Subjekt, Objekt und Relativsilbe
+    // weichen von Klasse 1/2 ab.
+    personal: [
+      { label: "ich", subject: "ni-", subjectNegative: "si-", object: "-ni-", relative: "-ye-" },
+      { label: "du", subject: "u-", subjectNegative: "hu-", object: "-ku-", relative: "-ye-" },
+      { label: "wir", subject: "tu-", subjectNegative: "hatu-", object: "-tu-", relative: "-o-" },
+      { label: "ihr", subject: "m-", subjectNegative: "ham-", object: "-wa-", relative: "-o-" },
+    ],
     locative: { sg: "yuko / yupo / yumo", pl: "wako / wapo / wamo" },
     examples: [
       { sw: "mtu / watu", de: "Mensch / Menschen" },
@@ -1037,13 +1155,22 @@ export const nounClasses: NounClassInfo[] = [
     singular: "m-",
     plural: "mi-",
     meaning: "Pflanzen, längliche Dinge",
-    subjectPrefix: { sg: "u-", pl: "i-" },
-    objectPrefix: { sg: "-u-", pl: "-i-" },
-    genitive: { sg: "wa", pl: "ya" },
-    demonstratives: {
-      near: { sg: "huu", pl: "hii" },
-      far: { sg: "ule", pl: "ile" },
-    },
+    concords: [
+      concord(
+        "Singular",
+        ["u-", "hau-", "wa", "-u-", "-o-"],
+        POSS_WA,
+        ["huu", "ule", "huo", "wo wote", "ndio"],
+        ["mzuri", "mmoja", "", "", "mwingine", "wote", "mweupe", "upi", "wenye", "wenyewe"],
+      ),
+      concord(
+        "Plural",
+        ["i-", "hai-", "ya", "-i-", "-yo-"],
+        POSS_YA,
+        ["hii", "ile", "hiyo", "yo yote", "ndiyo"],
+        ["mizuri", "", "miwili", "mingapi", "mingine", "yote", "myeupe", "ipi", "yenye", "yenyewe"],
+      ),
+    ],
     locative: { sg: "uko / upo / umo", pl: "iko / ipo / imo" },
     examples: [
       { sw: "mti / miti", de: "Baum / Bäume" },
@@ -1058,13 +1185,33 @@ export const nounClasses: NounClassInfo[] = [
     singular: "ki-",
     plural: "vi-",
     meaning: "Gegenstände, Werkzeuge",
-    subjectPrefix: { sg: "ki-", pl: "vi-" },
-    objectPrefix: { sg: "-ki-", pl: "-vi-" },
-    genitive: { sg: "cha", pl: "vya" },
-    demonstratives: {
-      near: { sg: "hiki", pl: "hivi" },
-      far: { sg: "kile", pl: "vile" },
-    },
+    concords: [
+      concord(
+        "Singular",
+        ["ki-", "haki-", "cha", "-ki-", "-cho-"],
+        ["changu", "chako", "chake", "chetu", "chenu", "chao"],
+        ["hiki", "kile", "hicho", "cho chote", "ndicho"],
+        ["kizuri", "kimoja", "", "", "kingine", "chote", "cheupe", "kipi", "chenye", "chenyewe"],
+      ),
+      concord(
+        "Plural",
+        ["vi-", "havi-", "vya", "-vi-", "-vyo-"],
+        ["vyangu", "vyako", "vyake", "vyetu", "vyenu", "vyao"],
+        ["hivi", "vile", "hivyo", "vyo vyote", "ndivyo"],
+        [
+          "vizuri",
+          "",
+          "viwili",
+          "vingapi",
+          "vingine",
+          "vyote",
+          "vyeupe",
+          "vipi",
+          "vyenye",
+          "vyenyewe",
+        ],
+      ),
+    ],
     locative: { sg: "kiko / kipo / kimo", pl: "viko / vipo / vimo" },
     examples: [
       { sw: "kitabu / vitabu", de: "Buch / Bücher" },
@@ -1079,13 +1226,22 @@ export const nounClasses: NounClassInfo[] = [
     singular: "n-/—",
     plural: "n-/—",
     meaning: "Tiere, Lehnwörter, Abstrakta",
-    subjectPrefix: { sg: "i-", pl: "zi-" },
-    objectPrefix: { sg: "-i-", pl: "-zi-" },
-    genitive: { sg: "ya", pl: "za" },
-    demonstratives: {
-      near: { sg: "hii", pl: "hizi" },
-      far: { sg: "ile", pl: "zile" },
-    },
+    concords: [
+      concord(
+        "Singular",
+        ["i-", "hai-", "ya", "-i-", "-yo-"],
+        POSS_YA,
+        ["hii", "ile", "hiyo", "yo yote", "ndiyo"],
+        ["nzuri", "moja", "", "", "nyingine", "yote", "nyeupe", "ipi", "yenye", "yenyewe"],
+      ),
+      concord(
+        "Plural",
+        ["zi-", "hazi-", "za", "-zi-", "-zo-"],
+        POSS_ZA,
+        ["hizi", "zile", "hizo", "zo zote", "ndizo"],
+        ["nzuri", "", "mbili", "ngapi", "nyingine", "zote", "nyeupe", "zipi", "zenye", "zenyewe"],
+      ),
+    ],
     locative: { sg: "iko / ipo / imo", pl: "ziko / zipo / zimo" },
     examples: [
       { sw: "nyumba / nyumba", de: "Haus / Häuser" },
@@ -1100,13 +1256,22 @@ export const nounClasses: NounClassInfo[] = [
     singular: "(ji-)",
     plural: "ma-",
     meaning: "Augmentativ, Paare, Flüssigkeiten",
-    subjectPrefix: { sg: "li-", pl: "ya-" },
-    objectPrefix: { sg: "-li-", pl: "-ya-" },
-    genitive: { sg: "la", pl: "ya" },
-    demonstratives: {
-      near: { sg: "hili", pl: "haya" },
-      far: { sg: "lile", pl: "yale" },
-    },
+    concords: [
+      concord(
+        "Singular",
+        ["li-", "hali-", "la", "-li-", "-lo-"],
+        ["langu", "lako", "lake", "letu", "lenu", "lao"],
+        ["hili", "lile", "hilo", "lo lote", "ndilo"],
+        ["zuri", "moja", "", "", "lingine", "lote", "jeupe", "lipi", "lenye", "lenyewe"],
+      ),
+      concord(
+        "Plural",
+        ["ya-", "haya-", "ya", "-ya-", "-yo-"],
+        POSS_YA,
+        ["haya", "yale", "hayo", "yo yote", "ndiyo"],
+        ["mazuri", "", "mawili", "mangapi", "mengine", "yote", "meupe", "yapi", "yenye", "yenyewe"],
+      ),
+    ],
     locative: { sg: "liko / lipo / limo", pl: "yako / yapo / yamo" },
     examples: [
       { sw: "jicho / macho", de: "Auge / Augen" },
@@ -1121,13 +1286,24 @@ export const nounClasses: NounClassInfo[] = [
     singular: "u-",
     plural: "(N- oder Ma-)",
     meaning: "Abstrakte Begriffe, Materialien",
-    subjectPrefix: { sg: "u-", pl: "zi-" },
-    objectPrefix: { sg: "-u-", pl: "-zi-" },
-    genitive: { sg: "wa", pl: "za" },
-    demonstratives: {
-      near: { sg: "huu", pl: "—" },
-      far: { sg: "ule", pl: "—" },
-    },
+    // Der Plural zählbarer U-Wörter (uso → nyuso) läuft über die N-Klasse —
+    // deshalb sind die Pluralformen hier mit denen der N-Klasse identisch.
+    concords: [
+      concord(
+        "Singular",
+        ["u-", "hau-", "wa", "-u-", "-o-"],
+        POSS_WA,
+        ["huu", "ule", "huo", "wo wote", "ndio"],
+        ["mzuri", "mmoja", "", "", "mwingine", "wote", "mweupe", "upi", "wenye", "wenyewe"],
+      ),
+      concord(
+        "Plural",
+        ["zi-", "hazi-", "za", "-zi-", "-zo-"],
+        POSS_ZA,
+        ["hizi", "zile", "hizo", "zo zote", "ndizo"],
+        ["nzuri", "", "mbili", "ngapi", "nyingine", "zote", "nyeupe", "zipi", "zenye", "zenyewe"],
+      ),
+    ],
     locative: { sg: "uko / upo / umo", pl: "ziko / zipo / zimo" },
     examples: [
       { sw: "uhuru", de: "Freiheit" },
@@ -1142,13 +1318,62 @@ export const nounClasses: NounClassInfo[] = [
     singular: "—",
     plural: "—",
     meaning: "Orte (definit / unbestimmt / innerhalb)",
-    subjectPrefix: { sg: "pa-/ku-/m-", pl: "—" },
-    objectPrefix: { sg: "-pa-/-ku-/-m-", pl: "—" },
-    genitive: { sg: "pa / kwa / mwa", pl: "—" },
-    demonstratives: {
-      near: { sg: "hapa / huku / humu", pl: "—" },
-      far: { sg: "pale / kule / mle", pl: "—" },
-    },
+    concords: [
+      concord(
+        "Pa-",
+        ["pa-", "hapa-", "pa", "-pa-", "-po-"],
+        ["pangu", "pako", "pake", "petu", "penu", "pao"],
+        ["hapa", "pale", "hapo", "po pote", "ndipo"],
+        [
+          "pazuri",
+          "pamoja",
+          "pawili",
+          "pangapi",
+          "pengine",
+          "pote",
+          "peupe",
+          "papi",
+          "penye",
+          "penyewe",
+        ],
+      ),
+      concord(
+        "Ku-",
+        ["ku-", "haku-", "kwa", "-ku-", "-ko-"],
+        POSS_KWA,
+        ["huku", "kule", "huko", "ko kote", "ndiko"],
+        [
+          "kuzuri",
+          "kumoja",
+          "kuwili",
+          "kungapi",
+          "kwingine",
+          "kote",
+          "kweupe",
+          "kupi",
+          "kwenye",
+          "kwenyewe",
+        ],
+      ),
+      concord(
+        "Mu-",
+        ["m-", "ham-", "mwa", "-m-", "-mo-"],
+        ["mwangu", "mwako", "mwake", "mwetu", "mwenu", "mwao"],
+        ["humu", "mle", "humo", "mo mote", "ndimo"],
+        [
+          "mzuri",
+          "mmoja",
+          "mwili",
+          "mngapi",
+          "mwingine",
+          "mote",
+          "mweupe",
+          "mpi",
+          "mwenye",
+          "mwenyewe",
+        ],
+      ),
+    ],
     locative: { sg: "pako / papo / pamo", pl: "—" },
     examples: [
       { sw: "mahali", de: "Ort, Platz" },
@@ -1163,13 +1388,15 @@ export const nounClasses: NounClassInfo[] = [
     singular: "ku-",
     plural: "—",
     meaning: "Verbalnomen / Infinitiv",
-    subjectPrefix: { sg: "ku-", pl: "—" },
-    objectPrefix: { sg: "-ku-", pl: "—" },
-    genitive: { sg: "kwa", pl: "—" },
-    demonstratives: {
-      near: { sg: "huku", pl: "—" },
-      far: { sg: "kule", pl: "—" },
-    },
+    concords: [
+      concord(
+        "Infinitiv",
+        ["ku-", "haku-", "kwa", "-ku-", "-ko-"],
+        POSS_KWA,
+        ["huku", "kule", "huko", "ko kote", "ndiko"],
+        ["kuzuri", "", "", "", "kwingine", "kote", "kweupe", "kupi", "kwenye", "kwenyewe"],
+      ),
+    ],
     locative: { sg: "kuko / kupo / kumo", pl: "—" },
     examples: [
       { sw: "kusoma", de: "lesen / Lesen" },
@@ -1208,7 +1435,7 @@ export const monosyllabicVerbsInfo = {
     { sw: "angekuwa", de: "er/sie wäre" },
   ],
   withoutKu: [
-    { sw: "la!", de: "iss! (Imperativ Sg.)" },
+    { sw: "la!", de: "iss! (Imperativ Sg. — daneben auch kula!)" },
     { sw: "hula chakula", de: "er/sie isst (gewohnheitsmäßig)" },
     { sw: "hali nyama", de: "er/sie isst kein Fleisch (Negativ-Präsens)" },
     { sw: "njoo!", de: "komm! (Imperativ — Suppletivform von kuja)" },

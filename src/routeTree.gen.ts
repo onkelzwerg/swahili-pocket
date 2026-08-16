@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
 import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
+import { Route as AuthenticatedVerbsRouteImport } from './routes/_authenticated/verbs'
 import { Route as AuthenticatedTrainerRouteImport } from './routes/_authenticated/trainer'
 import { Route as AuthenticatedStoriesRouteImport } from './routes/_authenticated/stories'
 import { Route as AuthenticatedReviewRouteImport } from './routes/_authenticated/review'
@@ -32,6 +33,11 @@ const AuthenticatedRoute = AuthenticatedRouteImport.update({
 const AuthenticatedIndexRoute = AuthenticatedIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedVerbsRoute = AuthenticatedVerbsRouteImport.update({
+  id: '/verbs',
+  path: '/verbs',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
 const AuthenticatedTrainerRoute = AuthenticatedTrainerRouteImport.update({
@@ -113,6 +119,7 @@ export interface FileRoutesByFullPath {
   '/review': typeof AuthenticatedReviewRoute
   '/stories': typeof AuthenticatedStoriesRoute
   '/trainer': typeof AuthenticatedTrainerRoute
+  '/verbs': typeof AuthenticatedVerbsRoute
   '/dialogues/$dialogueId': typeof AuthenticatedDialoguesDialogueIdRoute
   '/lexicon/new': typeof AuthenticatedLexiconNewRoute
   '/stories/$storyId': typeof AuthenticatedStoriesStoryIdRoute
@@ -128,6 +135,7 @@ export interface FileRoutesByTo {
   '/review': typeof AuthenticatedReviewRoute
   '/stories': typeof AuthenticatedStoriesRoute
   '/trainer': typeof AuthenticatedTrainerRoute
+  '/verbs': typeof AuthenticatedVerbsRoute
   '/': typeof AuthenticatedIndexRoute
   '/dialogues/$dialogueId': typeof AuthenticatedDialoguesDialogueIdRoute
   '/lexicon/new': typeof AuthenticatedLexiconNewRoute
@@ -146,6 +154,7 @@ export interface FileRoutesById {
   '/_authenticated/review': typeof AuthenticatedReviewRoute
   '/_authenticated/stories': typeof AuthenticatedStoriesRoute
   '/_authenticated/trainer': typeof AuthenticatedTrainerRoute
+  '/_authenticated/verbs': typeof AuthenticatedVerbsRoute
   '/_authenticated/': typeof AuthenticatedIndexRoute
   '/_authenticated/dialogues_/$dialogueId': typeof AuthenticatedDialoguesDialogueIdRoute
   '/_authenticated/lexicon_/new': typeof AuthenticatedLexiconNewRoute
@@ -165,6 +174,7 @@ export interface FileRouteTypes {
     | '/review'
     | '/stories'
     | '/trainer'
+    | '/verbs'
     | '/dialogues/$dialogueId'
     | '/lexicon/new'
     | '/stories/$storyId'
@@ -180,6 +190,7 @@ export interface FileRouteTypes {
     | '/review'
     | '/stories'
     | '/trainer'
+    | '/verbs'
     | '/'
     | '/dialogues/$dialogueId'
     | '/lexicon/new'
@@ -197,6 +208,7 @@ export interface FileRouteTypes {
     | '/_authenticated/review'
     | '/_authenticated/stories'
     | '/_authenticated/trainer'
+    | '/_authenticated/verbs'
     | '/_authenticated/'
     | '/_authenticated/dialogues_/$dialogueId'
     | '/_authenticated/lexicon_/new'
@@ -223,6 +235,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof AuthenticatedIndexRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/verbs': {
+      id: '/_authenticated/verbs'
+      path: '/verbs'
+      fullPath: '/verbs'
+      preLoaderRoute: typeof AuthenticatedVerbsRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
     '/_authenticated/trainer': {
@@ -328,6 +347,7 @@ interface AuthenticatedRouteChildren {
   AuthenticatedReviewRoute: typeof AuthenticatedReviewRoute
   AuthenticatedStoriesRoute: typeof AuthenticatedStoriesRoute
   AuthenticatedTrainerRoute: typeof AuthenticatedTrainerRoute
+  AuthenticatedVerbsRoute: typeof AuthenticatedVerbsRoute
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
   AuthenticatedDialoguesDialogueIdRoute: typeof AuthenticatedDialoguesDialogueIdRoute
   AuthenticatedLexiconNewRoute: typeof AuthenticatedLexiconNewRoute
@@ -345,6 +365,7 @@ const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
   AuthenticatedReviewRoute: AuthenticatedReviewRoute,
   AuthenticatedStoriesRoute: AuthenticatedStoriesRoute,
   AuthenticatedTrainerRoute: AuthenticatedTrainerRoute,
+  AuthenticatedVerbsRoute: AuthenticatedVerbsRoute,
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
   AuthenticatedDialoguesDialogueIdRoute: AuthenticatedDialoguesDialogueIdRoute,
   AuthenticatedLexiconNewRoute: AuthenticatedLexiconNewRoute,

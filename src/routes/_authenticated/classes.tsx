@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Reference } from "@/components/classes/Reference";
+import { useHashTarget } from "@/hooks/use-hash-target";
 import { T } from "@/config/translations";
 
 export const Route = createFileRoute("/_authenticated/classes")({
@@ -14,6 +15,10 @@ export const Route = createFileRoute("/_authenticated/classes")({
 });
 
 function ClassesPage() {
+  // Der Trainer verlinkt auf einzelne Klassen und Abschnitte — der Hook klappt
+  // den passenden Abschnitt auf und springt hin.
+  useHashTarget();
+
   return (
     <div className="px-5 pt-8">
       <header className="mb-4">

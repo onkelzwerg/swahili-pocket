@@ -150,19 +150,98 @@ export interface Dialogue {
   level?: "beginner" | "intermediate" | "advanced";
 }
 
+/**
+ * Eine Spalte der Konkordanztafel — in der Regel Singular und Plural einer
+ * Klasse, bei den Ortsklassen die drei Varianten Pa-/Ku-/Mu-.
+ *
+ * Leerer String heißt: Die Tafel führt für diese Zelle keine Form. Das ist
+ * keine Lücke in den Daten, sondern die Aussage „gibt es so nicht" (etwa
+ * `-moja` im Plural).
+ */
+export interface ConcordSet {
+  /** Spaltenkopf, z. B. „Singular" oder „Pa- (bestimmte Stelle)". */
+  label: string;
+  /** Subjektpräfix [S-], bejaht. */
+  subject: string;
+  /** Subjektpräfix, verneint (`ha` + S). */
+  subjectNegative: string;
+  /** Genitiv-Konkordanz S+a — „des/der/von". */
+  genitive: string;
+  /** Objektaffix im Verb. */
+  object: string;
+  /** Relativsilbe S+o — die Silbe im Relativsatz und in `amba-`. */
+  relative: string;
+  /** Possessiva S+ -angu … -ao. */
+  possessive: {
+    my: string;
+    your: string;
+    his: string;
+    our: string;
+    yourPl: string;
+    their: string;
+  };
+  /** Demonstrativa und Verwandtes. */
+  demonstrative: {
+    /** h+S — „dieses (hier)". */
+    near: string;
+    /** S+le — „jenes (dort)". */
+    far: string;
+    /** h+R — das bereits Erwähnte. */
+    referential: string;
+    /** R bzw. R+te — „irgendein", „welcher auch immer". */
+    any: string;
+    /** ndi+R — emphatische Form („genau der/das"). */
+    emphatic: string;
+  };
+  /** Veränderliche Adjektive, Zahl- und Fragewörter. */
+  variable: {
+    /** -zuri „gut, schön" (Klassenpräfix [K-]). */
+    zuri: string;
+    /** -moja „ein(e)". */
+    moja: string;
+    /** -wili „zwei". */
+    wili: string;
+    /** -ngapi „wie viele". */
+    ngapi: string;
+    /** -ingine „andere, einige". */
+    ingine: string;
+    /** -ote „alle, ganz" (Subjektkonkordanz [S-]). */
+    ote: string;
+    /** -eupe „weiß". */
+    eupe: string;
+    /** -pi „welche". */
+    pi: string;
+    /** -enye „habend, besitzend". */
+    enye: string;
+    /** -enyewe „selbst, selber". */
+    enyewe: string;
+  };
+}
+
+/**
+ * Personalkonkordanz (ich, du, wir, ihr) — in der Tafel stehen sie als eigene
+ * Zeilen in der M-/Wa-Klasse, weil Personen dieser Klasse folgen. Possessiv,
+ * Demonstrativ und Adjektiv sind dort identisch mit Klasse 1 bzw. 2, nur
+ * Subjekt-, Objekt- und Relativform unterscheiden sich.
+ */
+export interface PersonalConcord {
+  label: string;
+  subject: string;
+  subjectNegative: string;
+  object: string;
+  relative: string;
+}
+
 export interface NounClassInfo {
   id: NounClass;
   name: string;
   singular: string;
   plural: string;
   meaning: string;
-  subjectPrefix: { sg: string; pl: string };
-  objectPrefix: { sg: string; pl: string };
-  genitive: { sg: string; pl: string };
-  demonstratives: {
-    near: { sg: string; pl: string };
-    far: { sg: string; pl: string };
-  };
+  /** Die vollständige Konkordanztafel dieser Klasse. */
+  concords: ConcordSet[];
+  /** Nur M-/Wa-: die Personalformen ich/du/wir/ihr. */
+  personal?: PersonalConcord[];
   /**
    * Lokativkopula „ist (da)" — die -ko/-po/-mo-Formen dieser Klasse.
    *
