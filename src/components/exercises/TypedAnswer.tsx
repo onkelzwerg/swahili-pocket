@@ -38,7 +38,13 @@ export function TypedAnswer({ card, onResult, speak }: ExerciseProps) {
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-5 text-center">
+      {/*
+       * Bei offener Tastatur bleibt für diesen Block wenig Platz (siehe
+       * useKeyboardInset im Review-Screen). Er schrumpft mit — und wenn selbst
+       * das nicht reicht, weil das Wort lang ist, wird er scrollbar, statt die
+       * Eingabe darunter aus dem Bild zu schieben.
+       */}
+      <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-5 overflow-y-auto text-center">
         <span className="rounded-full bg-muted px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
           {T.exercises.typed.prompt}
         </span>

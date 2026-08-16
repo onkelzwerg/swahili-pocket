@@ -18,6 +18,7 @@ import { buildSession, type SessionItem } from "@/lib/session";
 import { checkMilestones, type Milestone, type SessionSummary } from "@/lib/milestones";
 import { speak, createUnlockedAudio } from "@/lib/tts";
 import { useSettings } from "@/lib/settings";
+import { useKeyboardInset } from "@/lib/keyboard";
 import { isoDay } from "@/lib/dates";
 import { PoolPickerSheet } from "@/components/PoolPickerSheet";
 import { FlipCard } from "@/components/exercises/FlipCard";
@@ -71,6 +72,9 @@ const CONFETTI_COLORS = [
   APP_CONFIG.secondaryColor,
 ];
 
+/** Luft zwischen Eingabefeld und Tastaturkante. */
+const KEYBOARD_GAP = 12;
+
 /**
  * Session-Host (W2.1): hält Queue, Fortschritt und Statistik und rendert pro
  * Item die Modus-Komponente. Er rechnet selbst nichts am Lernstand —
@@ -79,6 +83,7 @@ const CONFETTI_COLORS = [
 function Review() {
   const { comeback, retention } = Route.useSearch();
   const settings = useSettings();
+  const keyboardInset = useKeyboardInset();
   const [items, setItems] = useState<SessionItem[]>([]);
   const [pauseDays, setPauseDays] = useState(0);
   const [checks, setChecks] = useState<RetentionCheckEntry[]>([]);
@@ -294,7 +299,14 @@ function Review() {
   const Exercise = item ? EXERCISE_COMPONENTS[item.mode] : null;
 
   return (
-    <div className="flex h-[100svh] flex-col px-5 pt-6 pb-[calc(env(safe-area-inset-bottom)+5.5rem)] overscroll-contain">
+    <div
+      className="flex h-[100svh] flex-col px-5 pt-6 pb-[calc(env(safe-area-inset-bottom)+5.5rem)] overscroll-contain"
+      // Offene Tastatur: der Platz darunter gehört ihr. Die feste Höhe bleibt,
+      // nur der Inhalt bekommt weniger davon — die Übung schiebt sich nach
+      // oben, statt hinter der Tastatur zu verschwinden. Ohne Tastatur zählt
+      // die Klasse oben (Platz für die TabBar).
+      style={keyboardInset > 0 ? { paddingBottom: `${keyboardInset + KEYBOARD_GAP}px` } : undefined}
+    >
       <div className="mb-4 flex items-center justify-between">
         <Link
           to="/"
