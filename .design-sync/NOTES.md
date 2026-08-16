@@ -104,6 +104,11 @@ so that div becomes the containing block. Radix overlays (Dialog, Sheet, Drawer,
 - Content convention: the app's UI language is **German** with Swahili
   vocabulary (see `src/config/translations.ts`). Previews follow that — it's what
   the design agent should imitate.
+- A component that fetches its own content shows its empty state in the harness
+  (`PoolTab`). Where that state is the whole point of the card — `PackPreviewSheet`
+  is a word list and nothing else — the preview installs a `fetch` stub for its
+  one path at module scope and delegates every other URL to the real `fetch`.
+  Patching globally without that delegation would break the other cells.
 
 ## Component defects found while building previews
 

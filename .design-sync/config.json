@@ -67,6 +67,10 @@
       "cardMode": "single",
       "viewport": "520x680"
     },
+    "PackPreviewSheet": {
+      "cardMode": "single",
+      "viewport": "520x680"
+    },
     "PoolPickerSheet": {
       "cardMode": "single",
       "viewport": "520x680"
@@ -108,6 +112,7 @@
   "readmeHeader": ".design-sync/conventions.md",
   "componentSrcMap": {
     "BottomSheet": "src/components/BottomSheet.tsx",
+    "PackPreviewSheet": "src/components/PackPreviewSheet.tsx",
     "PoolPickerSheet": "src/components/PoolPickerSheet.tsx",
     "SpeakButton": "src/components/SpeakButton.tsx",
     "TabBar": "src/components/TabBar.tsx",
