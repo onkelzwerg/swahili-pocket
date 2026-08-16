@@ -2,6 +2,7 @@
 // Design-system barrel: every component module this repo ships.
 
 export * from "../src/components/BottomSheet";
+export * from "../src/components/PackPreviewSheet";
 export * from "../src/components/PoolPickerSheet";
 export * from "../src/components/SpeakButton";
 export * from "../src/components/TabBar";

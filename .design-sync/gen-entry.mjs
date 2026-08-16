@@ -77,6 +77,7 @@ const ROOTS = {
   'ui/toggle.tsx': 'Toggle',
   'ui/tooltip.tsx': 'Tooltip',
   'BottomSheet.tsx': 'BottomSheet',
+  'PackPreviewSheet.tsx': 'PackPreviewSheet',
   'PoolPickerSheet.tsx': 'PoolPickerSheet',
   'SpeakButton.tsx': 'SpeakButton',
   'TabBar.tsx': 'TabBar',

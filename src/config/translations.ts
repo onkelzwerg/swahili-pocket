@@ -649,6 +649,19 @@ export const T = {
     wordCount: (n: number) => (n === 1 ? "1 Wort" : `${n} Wörter`),
     on: "An",
     off: "Aus",
+    /** Der Schalter steht jetzt neben der Karte, braucht also einen eigenen Namen. */
+    toggleAria: (title: string, on: boolean) =>
+      on ? `Paket „${title}" ausschalten` : `Paket „${title}" einschalten`,
+    /** Vorschau: erst sehen, was drin ist, dann einschalten. */
+    openPreview: "Wörter ansehen",
+    previewEyebrow: "Themenpaket",
+    previewHint: (n: number, on: boolean) =>
+      on
+        ? `${n === 1 ? "Dieses Wort steht" : `Diese ${n} Wörter stehen`} im Pool zur Auswahl.`
+        : `${n === 1 ? "Dieses Wort kommt" : `Diese ${n} Wörter kommen`} dazu, wenn du das Paket einschaltest.`,
+    previewFailed: "Die Wörter dieses Pakets lassen sich gerade nicht laden.",
+    turnOn: "Einschalten",
+    turnOff: "Ausschalten",
     /** Hinweis an einem Inhalt, dem noch ein Paket fehlt. */
     locked: (titles: string[]) =>
       titles.length === 1

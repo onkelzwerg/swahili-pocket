@@ -8,6 +8,7 @@ import { allDialogues, buildDialogueList } from "@/lib/dialogues";
 import { nounClasses } from "@/lib/seed";
 import { dialogueMetaById } from "@/lib/dialogue-index";
 import { activePacks, loadPackIndex, setPackActive, type PackMeta } from "@/lib/packs";
+import { PackPreviewSheet } from "@/components/PackPreviewSheet";
 import { T } from "@/config/translations";
 
 export const Route = createFileRoute("/_authenticated/library")({
@@ -118,6 +119,10 @@ function LibraryPage() {
  * dann stehen seine Wörter im Pool zur Auswahl, und die Inhalte, die sie
  * benutzen, tauchen in den Listen auf. Ausgeschaltet verschwinden sie wieder;
  * die Karten, die man schon gezogen hat, bleiben natürlich.
+ *
+ * Die Karte hat zwei Ziele: der Rumpf öffnet die Vorschau auf die Wörter, der
+ * Schalter rechts schaltet direkt um. Titel und Beschreibung sagen nur, worum
+ * es geht — was man sich einhandelt, steht in der Wortliste.
  */
 function PackSection({
   active,
@@ -128,6 +133,7 @@ function PackSection({
 }) {
   const [packs, setPacks] = useState<PackMeta[]>([]);
   const [busy, setBusy] = useState<string | null>(null);
+  const [preview, setPreview] = useState<PackMeta | null>(null);
 
   useEffect(() => {
     void loadPackIndex().then(setPacks);
@@ -153,36 +159,50 @@ function PackSection({
         {packs.map((pack) => {
           const on = active.includes(pack.id);
           return (
-            <li key={pack.id}>
+            <li
+              key={pack.id}
+              className={`flex items-center gap-3 rounded-2xl border p-4 transition-colors ${
+                on ? "border-primary bg-primary/5" : "border-border bg-card"
+              }`}
+            >
               <button
                 type="button"
-                disabled={busy === pack.id}
-                onClick={() => void toggle(pack.id, !on)}
-                aria-pressed={on}
-                className={`flex w-full items-center gap-3 rounded-2xl border p-4 text-left transition-colors disabled:opacity-60 ${
-                  on ? "border-primary bg-primary/5" : "border-border bg-card"
-                }`}
+                onClick={() => setPreview(pack)}
+                className="flex min-w-0 flex-1 items-center gap-3 text-left"
               >
                 <span className="text-2xl">{pack.emoji}</span>
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-semibold leading-tight">{pack.title}</p>
                   <p className="mt-0.5 text-xs text-muted-foreground">{pack.description}</p>
                   <p className="mt-1 text-[11px] text-muted-foreground">
-                    {T.packs.wordCount(pack.wordCount)}
+                    {T.packs.wordCount(pack.wordCount)} · {T.packs.openPreview}
                   </p>
                 </div>
-                <span
-                  className={`shrink-0 rounded-full px-3 py-1 text-xs font-semibold ${
-                    on ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
-                  }`}
-                >
-                  {on ? T.packs.on : T.packs.off}
-                </span>
+              </button>
+              <button
+                type="button"
+                disabled={busy === pack.id}
+                onClick={() => void toggle(pack.id, !on)}
+                aria-pressed={on}
+                aria-label={T.packs.toggleAria(pack.title, on)}
+                className={`shrink-0 rounded-full px-3 py-2 text-xs font-semibold transition-colors disabled:opacity-60 ${
+                  on ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
+                }`}
+              >
+                {on ? T.packs.on : T.packs.off}
               </button>
             </li>
           );
         })}
       </ul>
+
+      <PackPreviewSheet
+        pack={preview}
+        active={preview ? active.includes(preview.id) : false}
+        busy={busy !== null}
+        onToggle={(id, next) => void toggle(id, next)}
+        onClose={() => setPreview(null)}
+      />
     </section>
   );
 }
