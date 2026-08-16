@@ -192,6 +192,11 @@ function TrainerPage() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   {T.trainer.verb.hint}
                 </p>
+                {task.polarity === "negative" && (
+                  <p className="mt-2 inline-block rounded-full bg-destructive/10 px-3 py-1 text-xs font-bold text-destructive">
+                    {T.trainer.verb.negated}
+                  </p>
+                )}
                 <p className="mt-3 font-display text-2xl font-bold leading-snug">
                   {T.trainer.verb.prompt(task.subject.de, task.tense.de, task.stem)}
                 </p>
@@ -200,17 +205,19 @@ function TrainerPage() {
                 </p>
                 {task.monosyllabic && (
                   <p className="mt-2 text-xs text-ochre-foreground">
-                    {T.trainer.verb.monosyllabic}
+                    {task.polarity === "negative" && task.tense.sw !== "ta"
+                      ? T.trainer.verb.monosyllabicNegated
+                      : T.trainer.verb.monosyllabic}
                   </p>
                 )}
               </>
             ) : (
               <>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  {T.trainer.ngeli.hint}
+                  {T.trainer.ngeli.variants[task.variant]}
                 </p>
                 <p className="mt-3 font-display text-2xl font-bold leading-snug">
-                  {T.trainer.ngeli.prompt(task.noun, task.adjective.de)}
+                  {T.trainer.ngeli.prompt(task.noun, task.cue, task.tail)}
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {task.nounGerman} · {task.nounClass}
@@ -226,14 +233,15 @@ function TrainerPage() {
               answer={task.answer}
               onNext={() => nextTask(vocab, kind)}
               extra={
-                task.kind === "ngeli" ? (
-                  <Link
-                    to="/classes"
-                    className="text-xs font-medium text-muted-foreground underline underline-offset-4"
-                  >
-                    {T.trainer.ngeli.why(task.nounClass)}
-                  </Link>
-                ) : null
+                <Link
+                  to={task.explain.to}
+                  hash={task.explain.hash}
+                  className="text-xs font-medium text-muted-foreground underline underline-offset-4"
+                >
+                  {task.kind === "ngeli"
+                    ? T.trainer.ngeli.why(task.nounClass)
+                    : T.trainer.verb.why(task.tense.de, task.polarity === "negative")}
+                </Link>
               }
             />
           ) : inputMode === "typing" ? (

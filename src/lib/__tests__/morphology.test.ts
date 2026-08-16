@@ -2,11 +2,15 @@ import { describe, expect, it } from "vitest";
 import {
   ADJECTIVE_STEMS,
   NGELI_TRAINABLE_CLASSES,
+  NGELI_VARIANTS,
   SUBJECTS,
   TENSES,
   adjectiveForm,
   buildNgeliTask,
   buildVerbTask,
+  canNegate,
+  negativeParts,
+  negativeStem,
   trainableNouns,
   trainableVerbs,
   verbStem,
@@ -60,7 +64,7 @@ describe("buildVerbTask", () => {
   });
 
   it("behält bei einsilbigen Verben das ku-", () => {
-    const task = buildVerbTask([verb("kula", "essen")], seededRng(1));
+    const task = buildVerbTask([verb("kula", "essen")], seededRng(1), "affirmative");
     expect(task).not.toBeNull();
     expect(task!.monosyllabic).toBe(true);
     expect(task!.answer).toBe(`${task!.subject.sw}${task!.tense.sw}kula`);
@@ -68,7 +72,7 @@ describe("buildVerbTask", () => {
   });
 
   it("setzt die Antwort aus genau den drei Lösungsbausteinen zusammen", () => {
-    const task = buildVerbTask([verb("kusoma", "lesen")], seededRng(99))!;
+    const task = buildVerbTask([verb("kusoma", "lesen")], seededRng(99), "affirmative")!;
     expect(task.solution.join("")).toBe(task.answer);
     expect(task.chips).toHaveLength(5);
     for (const part of task.solution) expect(task.chips).toContain(part);
@@ -123,10 +127,10 @@ describe("adjectiveForm", () => {
 
 describe("buildNgeliTask", () => {
   it("erzeugt vier Optionen mit der Lösung darunter", () => {
-    const task = buildNgeliTask([noun("kitabu", "Ki-Vi")], seededRng(4))!;
+    const task = buildNgeliTask([noun("kitabu", "Ki-Vi")], seededRng(4), "adjective")!;
     expect(task.options).toHaveLength(4);
     expect(task.options).toContain(task.answer);
-    expect(task.answer).toBe(adjectiveForm("Ki-Vi", task.adjective));
+    expect(task.answer).toBe(adjectiveForm("Ki-Vi", task.adjective!));
   });
 
   it("liefert nie einen Distraktor gleich der Lösung", () => {
@@ -143,5 +147,126 @@ describe("buildNgeliTask", () => {
 
   it("liefert null ohne Nomen", () => {
     expect(buildNgeliTask([], seededRng(1))).toBeNull();
+  });
+});
+
+describe("Verneinung", () => {
+  it("wechselt im Präsens die Endung -a → -i", () => {
+    expect(negativeStem("soma")).toBe("somi");
+    expect(negativeStem("fanya")).toBe("fanyi");
+  });
+
+  it("lässt Lehnwörter auf anderem Vokal unverändert", () => {
+    expect(negativeStem("sahau")).toBe("sahau");
+    expect(negativeStem("samehe")).toBe("samehe");
+    expect(negativeStem("fikiri")).toBe("fikiri");
+  });
+
+  it("baut die Formen aller Zeiten nach der Tafel", () => {
+    expect(negativeParts("ni", "na", "soma").join("")).toBe("sisomi");
+    expect(negativeParts("ni", "li", "soma").join("")).toBe("sikusoma");
+    expect(negativeParts("ni", "me", "soma").join("")).toBe("sijasoma");
+    expect(negativeParts("ni", "ta", "soma").join("")).toBe("sitasoma");
+    expect(negativeParts("wa", "na", "soma").join("")).toBe("hawasomi");
+    expect(negativeParts("tu", "li", "soma").join("")).toBe("hatukusoma");
+  });
+
+  it("erzeugt verneinte Aufgaben mit passenden Bausteinen", () => {
+    for (let seed = 1; seed <= 30; seed++) {
+      const task = buildVerbTask([verb("kusoma", "lesen")], seededRng(seed), "negative")!;
+      expect(task.polarity).toBe("negative");
+      expect(task.answer).toBe(negativeParts(task.subject.sw, task.tense.sw, task.stem).join(""));
+      expect(task.solution.join("")).toBe(task.answer);
+      for (const part of task.solution) expect(task.chips).toContain(part);
+      // Die bejahten Bausteine liegen als Distraktoren daneben.
+      expect(task.chips).toContain(task.subject.sw);
+      expect(task.explain).toEqual({ to: "/verbs", hash: `neg-${task.tense.sw}` });
+    }
+  });
+
+  it("verneint einsilbige Verben nur dort, wo die Bildung regelmäßig ist", () => {
+    // kula: Präsens bleibt bejaht (sili wäre unregelmäßig), Vergangenheit,
+    // Perfekt und Futur werden verneint — mit korrektem ku-Verhalten.
+    expect(negativeParts("ni", "li", "kula", true).join("")).toBe("sikula");
+    expect(negativeParts("ni", "me", "kula", true).join("")).toBe("sijala");
+    expect(negativeParts("ni", "ta", "kula", true).join("")).toBe("sitakula");
+    expect(negativeParts("ni", "me", "kunywa", true).join("")).toBe("sijanywa");
+
+    expect(canNegate("kula", true, "na")).toBe(false);
+    expect(canNegate("kula", true, "li")).toBe(true);
+    // kwenda verschmilzt (si+ku+enda → sikwenda) und bleibt außen vor.
+    expect(canNegate("kwenda", true, "li")).toBe(false);
+    expect(canNegate("kusoma", false, "na")).toBe(true);
+
+    for (let seed = 1; seed <= 50; seed++) {
+      const task = buildVerbTask([verb("kwenda", "gehen")], seededRng(seed))!;
+      expect(task.polarity).toBe("affirmative");
+      const monoPresent = buildVerbTask([verb("kula", "essen")], seededRng(seed), "negative")!;
+      if (monoPresent.tense.sw === "na") expect(monoPresent.polarity).toBe("affirmative");
+      else expect(monoPresent.polarity).toBe("negative");
+    }
+  });
+
+  it("verlinkt bejahte Aufgaben auf die Zeitform", () => {
+    const task = buildVerbTask([verb("kusoma", "lesen")], seededRng(7), "affirmative")!;
+    expect(task.explain).toEqual({ to: "/verbs", hash: `tense-${task.tense.sw}` });
+  });
+});
+
+describe("Ngeli-Varianten", () => {
+  const nouns = [
+    noun("kitabu", "Ki-Vi"),
+    noun("mtoto", "M-Wa"),
+    noun("nyumba", "N"),
+    noun("jina", "Ji-Ma"),
+    noun("mti", "M-Mi"),
+    noun("uhuru", "U"),
+  ];
+
+  it("liefert für jede Variante und Klasse eine Aufgabe mit vier Optionen", () => {
+    for (const variant of NGELI_VARIANTS) {
+      for (let seed = 1; seed <= 20; seed++) {
+        const task = buildNgeliTask(nouns, seededRng(seed), variant)!;
+        expect(task, `${variant} seed ${seed}`).not.toBeNull();
+        expect(task.variant).toBe(variant);
+        expect(task.options).toHaveLength(4);
+        expect(task.options).toContain(task.answer);
+        expect(new Set(task.options).size).toBe(4);
+      }
+    }
+  });
+
+  it("nimmt die Formen aus der Konkordanztafel", () => {
+    const kitabu = [noun("kitabu", "Ki-Vi")];
+    expect(buildNgeliTask(kitabu, seededRng(3), "possessive")!.answer).toBe("changu");
+    expect(buildNgeliTask(kitabu, seededRng(3), "demonstrative")!.answer).toBe("hiki");
+    expect(buildNgeliTask(kitabu, seededRng(3), "genitive")!.answer).toBe("cha");
+
+    const nyumba = [noun("nyumba", "N")];
+    expect(buildNgeliTask(nyumba, seededRng(3), "possessive")!.answer).toBe("yangu");
+    expect(buildNgeliTask(nyumba, seededRng(3), "demonstrative")!.answer).toBe("hii");
+    expect(buildNgeliTask(nyumba, seededRng(3), "genitive")!.answer).toBe("ya");
+  });
+
+  it("verlinkt jede Variante auf ihren Abschnitt der Klasse", () => {
+    const kitabu = [noun("kitabu", "Ki-Vi")];
+    expect(buildNgeliTask(kitabu, seededRng(1), "possessive")!.explain).toEqual({
+      to: "/classes",
+      hash: "ngeli-ki-vi-possessive",
+    });
+    expect(buildNgeliTask(kitabu, seededRng(1), "genitive")!.explain).toEqual({
+      to: "/classes",
+      hash: "ngeli-ki-vi-base",
+    });
+    expect(buildNgeliTask(kitabu, seededRng(1), "adjective")!.explain).toEqual({
+      to: "/classes",
+      hash: "ngeli-ki-vi-variable",
+    });
+  });
+
+  it("stellt dem Genitiv einen Possessor nach", () => {
+    const task = buildNgeliTask([noun("kitabu", "Ki-Vi")], seededRng(1), "genitive")!;
+    expect(task.tail).toBe("mwalimu");
+    expect(buildNgeliTask([noun("kitabu", "Ki-Vi")], seededRng(1), "possessive")!.tail).toBe("");
   });
 });

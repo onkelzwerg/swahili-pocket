@@ -6,6 +6,7 @@ import { getVocab } from "@/lib/store";
 import { buildStoryList, getStoriesRead, loadStoryIndex } from "@/lib/stories";
 import { allDialogues, buildDialogueList } from "@/lib/dialogues";
 import { nounClasses } from "@/lib/seed";
+import { verbTenses } from "@/lib/verb-grammar";
 import { dialogueMetaById } from "@/lib/dialogue-index";
 import { activePacks, loadPackIndex, setPackActive, type PackMeta } from "@/lib/packs";
 import { PackPreviewSheet } from "@/components/PackPreviewSheet";
@@ -102,6 +103,14 @@ function LibraryPage() {
             emoji="🧩"
             title={T.library.grammar.title}
             subtitle={T.library.grammar.subtitle(nounClasses.length)}
+          />
+        </li>
+        <li>
+          <Tile
+            to="/verbs"
+            emoji="🗣️"
+            title={T.library.verbs.title}
+            subtitle={T.library.verbs.subtitle(verbTenses.length)}
           />
         </li>
       </ul>
@@ -213,7 +222,7 @@ function Tile({
   title,
   subtitle,
 }: {
-  to: "/stories" | "/dialogues" | "/classes";
+  to: "/stories" | "/dialogues" | "/classes" | "/verbs";
   emoji: string;
   title: string;
   subtitle: string;
