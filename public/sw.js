@@ -2,7 +2,7 @@
  * Handgeschrieben, keine Workbox. Drei Caches mit eigenen Strategien.
  * Beim Bump von SW_VERSION werden alte Caches beim activate-Event entfernt.
  */
-const SW_VERSION = "v4";
+const SW_VERSION = "v5";
 const HTML_CACHE = `html-${SW_VERSION}`;
 const ASSET_CACHE = `assets-${SW_VERSION}`;
 const OFFLINE_URL = "/offline.html";
@@ -97,13 +97,24 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // JS/CSS/Bilder/Fonts/Icons/Audio/Vokabel-Pool → stale-while-revalidate
+  // JS/CSS/Bilder/Fonts/Icons/Audio/Inhalte → stale-while-revalidate
+  //
+  // Die Inhaltsverzeichnisse gehören zwingend dazu: Geschichten, Dialogdaten
+  // und Vokabelpakete werden zur Laufzeit per fetch() geholt, und ihre Lader
+  // fangen Fehler ab und liefern Leerwerte. Ohne Cache ist die Bibliothek
+  // offline also nicht kaputt, sondern *leer* — schlimmer, weil es wie ein
+  // leerer Bestand aussieht statt wie fehlendes Netz. Leitplanke 1 des Plans
+  // (offline-first) hängt an genau diesen vier Präfixen.
   const dest = req.destination;
   if (
     ["script", "style", "image", "font", "manifest"].includes(dest) ||
     url.pathname.startsWith("/icons/") ||
     url.pathname.startsWith("/assets/") ||
+    url.pathname.startsWith("/fonts/") ||
     url.pathname.startsWith("/audio/") ||
+    url.pathname.startsWith("/stories/") ||
+    url.pathname.startsWith("/dialogues/") ||
+    url.pathname.startsWith("/vocab-packs/") ||
     url.pathname === "/vocab-pool.json"
   ) {
     event.respondWith(staleWhileRevalidate(req));

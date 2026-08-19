@@ -119,11 +119,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "icon", href: "/icons/icon-192.png", type: "image/png" },
       { rel: "apple-touch-icon", href: "/icons/icon-192.png" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
+      // Schriften kommen aus public/fonts/ (@font-face in styles.css), nicht
+      // von fonts.googleapis.com: kein Fremdaufruf beim Seitenaufruf, und die
+      // Display-Schrift steht auch offline. Bitte keine CDN-Links zurückholen.
+      // Die beiden Familien vorladen — sie stehen im ersten sichtbaren Text.
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/plus-jakarta-sans-latin.woff2",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/fraunces-latin.woff2",
+        crossOrigin: "anonymous",
       },
     ],
   }),

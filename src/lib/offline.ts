@@ -1,8 +1,10 @@
-import { get, set } from "idb-keyval";
+import { clear, del, get, set, setMany, values } from "idb-keyval";
 import type { VocabEntry, UserStats } from "./types";
 import { isoDay, daysBetween, weekStart } from "./dates";
+import { cardStore } from "./db";
 
-const K_VOCAB = "vocab:list";
+/** Bis Datenversion 2 lag hier der komplette Bestand als ein Array (siehe db.ts). */
+export const K_VOCAB_LEGACY = "vocab:list";
 const K_VOCAB_AT = "vocab:syncedAt";
 const K_STATS = "stats:current";
 
@@ -21,16 +23,90 @@ export const EMPTY_STATS: UserStats = {
   totalDaysLearned: 0,
 };
 
+/**
+ * Alle Lese-Ändern-Schreiben-Folgen laufen nacheinander, nie überlappend.
+ *
+ * Der Review-Screen speichert bewusst im Hintergrund (`void applyReview(...)`,
+ * damit das UI sofort weiterschaltet). Ohne Serialisierung liest die zweite
+ * Antwort die Kartenliste, bevor die erste sie zurückgeschrieben hat — die
+ * erste Antwort ist dann weg, samt Boxaufstieg, XP und Zähler. Genau das
+ * verbietet Leitplanke 2 („keine stillen Datenverluste"), und genau das
+ * passiert bei einem großen Review-Log, weil dessen Schreibvorgang das
+ * Zeitfenster aufzieht.
+ *
+ * Bewusst eine einzige Kette statt Sperren je Schlüssel: die Abschnitte sind
+ * kurz, alles liegt lokal, und ein Sperr-Zoo wäre mehr Risiko als Nutzen.
+ *
+ * WICHTIG: Aufrufe dürfen sich nicht verschachteln — eine Funktion innerhalb
+ * der Kette darf `serializeWrite` nicht erneut aufrufen, sonst steht sie.
+ * Die Bausteine hier (`readCachedVocab`, `cacheVocab`, `readCachedStats`,
+ * `cacheStats`) sind deshalb ungesperrt und bleiben es.
+ */
+let writeChain: Promise<unknown> = Promise.resolve();
+
+export function serializeWrite<T>(task: () => Promise<T>): Promise<T> {
+  const run = writeChain.then(task, task);
+  // Ein Fehler darf die Kette nicht blockieren: der nächste Auftrag läuft.
+  writeChain = run.then(
+    () => undefined,
+    () => undefined,
+  );
+  return run;
+}
+
+/**
+ * Kartenbestand ersetzen. Teuer (löscht und schreibt alles) und deshalb den
+ * seltenen Fällen vorbehalten: Seed, Backup-Import, Methodenwechsel.
+ * Für die Änderung einer einzelnen Karte gibt es `patchCachedVocab()`.
+ */
 export async function cacheVocab(list: VocabEntry[]) {
-  await set(K_VOCAB, list).catch(() => {});
+  const store = cardStore();
+  await clear(store).catch(() => {});
+  await setMany(
+    list.map((card) => [card.id, card] as [string, VocabEntry]),
+    store,
+  ).catch(() => {});
   await set(K_VOCAB_AT, Date.now()).catch(() => {});
 }
+
+/**
+ * Alle Karten, neueste zuerst.
+ *
+ * IndexedDB liefert nach Schlüssel sortiert — bei zufälligen UUIDs also in
+ * zufälliger Reihenfolge. Bis Datenversion 2 lag der Bestand als ein Array
+ * vor, und diese Reihenfolge war sichtbar: neue Karten standen im Wortschatz
+ * oben. `createdAt` absteigend stellt genau das wieder her (der Seed vergibt
+ * `now - i * 1000`, Neuzugänge `Date.now()`), nur eben ausgesprochen statt
+ * zufällig mitgeschleppt.
+ */
 export async function readCachedVocab(): Promise<VocabEntry[] | null> {
-  return (await get<VocabEntry[]>(K_VOCAB).catch(() => null)) ?? null;
+  const list = await values<VocabEntry>(cardStore()).catch(() => null);
+  if (!list) return null;
+  return list.sort((a, b) => b.createdAt - a.createdAt);
 }
+
+/** Eine einzelne Karte ändern — ein Schlüssel, ein Schreibvorgang. */
 export async function patchCachedVocab(id: string, patch: Partial<VocabEntry>) {
-  const cur = (await readCachedVocab()) ?? [];
-  await cacheVocab(cur.map((v) => (v.id === id ? { ...v, ...patch } : v)));
+  await serializeWrite(async () => {
+    const store = cardStore();
+    const current = await get<VocabEntry>(id, store).catch(() => undefined);
+    if (!current) return;
+    await set(id, { ...current, ...patch }, store).catch(() => {});
+  });
+}
+
+/** Eine einzelne Karte anlegen oder ersetzen. */
+export async function putCard(card: VocabEntry) {
+  await serializeWrite(async () => {
+    await set(card.id, card, cardStore()).catch(() => {});
+  });
+}
+
+/** Eine einzelne Karte löschen. */
+export async function removeCard(id: string) {
+  await serializeWrite(async () => {
+    await del(id, cardStore()).catch(() => {});
+  });
 }
 
 /**

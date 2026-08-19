@@ -1,14 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { UserStats, VocabEntry } from "../types";
 
-const db = new Map<string, unknown>();
-vi.mock("idb-keyval", () => ({
-  get: async (k: string) => db.get(k),
-  set: async (k: string, v: unknown) => void db.set(k, v),
-  clear: async () => db.clear(),
-}));
+vi.mock("idb-keyval", async () => (await import("./idb-fake")).fake);
 
-const { importBackup } = await import("../backup");
+const { resetDb, kv, setKv, seedCards, allCards, cardById, allLogEntries } =
+  await import("./idb-fake");
+
+const { importBackup, sanitizeVocab } = await import("../backup");
 const { getSettings, resetSettingsCache } = await import("../settings");
 const { resetMigrationState, DATA_VERSION } = await import("../migrations");
 const { resetReviewLogCache, readReviewLog } = await import("../review-log");
@@ -23,7 +21,7 @@ function fileOf(payload: unknown): File {
 }
 
 beforeEach(() => {
-  db.clear();
+  resetDb();
   resetSettingsCache();
   resetMigrationState();
   resetReviewLogCache();
@@ -46,14 +44,14 @@ describe("importBackup", () => {
     );
 
     expect(vocabCount).toBe(1);
-    expect(db.get("data:version")).toBe(DATA_VERSION);
+    expect(kv("data:version")).toBe(DATA_VERSION);
 
-    const [saved] = db.get("vocab:list") as VocabEntry[];
+    const [saved] = allCards();
     expect(saved.leitnerDue).toBe(555);
     expect(saved.fsrs).toBeDefined();
     expect(saved.maturedAt).toBeDefined();
 
-    const savedStats = db.get("stats:current") as UserStats;
+    const savedStats = kv<UserStats>("stats:current")!;
     expect(savedStats.streak).toBe(3);
     expect(savedStats.freezes).toBe(1);
     expect(savedStats.weekDays).toEqual([]);
@@ -94,10 +92,10 @@ describe("importBackup", () => {
     expect(settings.dailyGoalCards).toBe(20);
     expect(settings.weeklyGoalDays).toBe(6);
     expect(await readReviewLog()).toEqual(reviewLog);
-    expect(db.get("milestones:achieved")).toEqual({ "first-session": 123 });
-    expect(db.get("retention:checks")).toEqual([{ ts: 1, correct: 8, total: 10 }]);
+    expect(kv("milestones:achieved")).toEqual({ "first-session": 123 });
+    expect(kv("retention:checks")).toEqual([{ ts: 1, correct: 8, total: 10 }]);
     // v2 ist schon migriert: leitnerDue bleibt unangetastet.
-    expect((db.get("vocab:list") as VocabEntry[])[0].leitnerDue).toBe(777);
+    expect(allCards()[0].leitnerDue).toBe(777);
   });
 
   it("stellt aus einem v4-Backup Geschichten und Dialoge wieder her", async () => {
@@ -112,9 +110,9 @@ describe("importBackup", () => {
       }),
     );
 
-    expect(db.get("stories:read")).toEqual({ "markt-1-01": 4242 });
-    expect(db.get("dialogues:played")).toEqual({ greet: { ts: 99, firstTry: 3, total: 3 } });
-    expect(db.get("retention:checks")).toEqual([{ ts: 7, correct: 12, total: 15 }]);
+    expect(kv("stories:read")).toEqual({ "markt-1-01": 4242 });
+    expect(kv("dialogues:played")).toEqual({ greet: { ts: 99, firstTry: 3, total: 3 } });
+    expect(kv("retention:checks")).toEqual([{ ts: 7, correct: 12, total: 15 }]);
   });
 
   it("füllt die Welle-3-Schlüssel bei älteren Backups mit Defaults", async () => {
@@ -122,9 +120,9 @@ describe("importBackup", () => {
     // nicht scheitern und muss die Schlüssel leer anlegen (Leitplanke 2).
     await importBackup(fileOf({ app: "Swahili Pocket", version: 3, vocab: [makeCard()] }));
 
-    expect(db.get("stories:read")).toEqual({});
-    expect(db.get("dialogues:played")).toEqual({});
-    expect(db.get("retention:checks")).toEqual([]);
+    expect(kv("stories:read")).toEqual({});
+    expect(kv("dialogues:played")).toEqual({});
+    expect(kv("retention:checks")).toEqual([]);
   });
 
   it("lehnt eine Datei ohne Vokabelbestand ab", async () => {
@@ -136,5 +134,51 @@ describe("importBackup", () => {
       fileOf({ version: 1, vocab: [makeCard(), { id: "kaputt" }] }),
     );
     expect(vocabCount).toBe(1);
+  });
+});
+
+// Eine Backup-Datei kann alt, halb geschrieben oder von Hand bearbeitet sein.
+// Was hier durchrutscht, fällt nicht auf — es wird nur still nie wieder fällig.
+describe("Eingangsprüfung kaputter Karten", () => {
+  it("klemmt eine Box außerhalb von 1..5", () => {
+    expect(sanitizeVocab([makeCard({ id: "a", box: 99 as VocabEntry["box"] })])[0].box).toBe(5);
+    expect(sanitizeVocab([makeCard({ id: "b", box: 0 as VocabEntry["box"] })])[0].box).toBe(1);
+  });
+
+  it("ersetzt eine unbrauchbare Fälligkeit statt NaN zu erzeugen", () => {
+    const [card] = sanitizeVocab([
+      { ...makeCard({ id: "a" }), nextReview: "morgen" as unknown as number },
+    ]);
+    expect(Number.isFinite(card.nextReview)).toBe(true);
+    expect(card.nextReview).toBe(card.createdAt);
+  });
+
+  it("macht aus fehlenden oder falsch getypten Beispielen eine leere Liste", () => {
+    const [card] = sanitizeVocab([
+      { ...makeCard({ id: "a" }), examples: "kein Array" as unknown as [] },
+    ]);
+    expect(card.examples).toEqual([]);
+  });
+
+  it("wirft einen unbrauchbaren FSRS-Zustand weg, statt ihn zu rechnen", () => {
+    const [card] = sanitizeVocab([
+      { ...makeCard({ id: "a" }), fsrs: { stability: null } as unknown as VocabEntry["fsrs"] },
+    ]);
+    expect(card.fsrs).toBeUndefined();
+  });
+
+  it("behält bei doppelten Ids nur den ersten Treffer", () => {
+    const cards = sanitizeVocab([
+      makeCard({ id: "a", german: "Kind" }),
+      makeCard({ id: "a", german: "Doppelgänger" }),
+    ]);
+    expect(cards).toHaveLength(1);
+    expect(cards[0].german).toBe("Kind");
+  });
+
+  it("lehnt eine Datei ab, in der keine einzige Karte brauchbar ist", async () => {
+    await expect(
+      importBackup(fileOf({ version: 2, vocab: [{ id: "nur-id" }, null] })),
+    ).rejects.toThrow(/brauchbaren Karten/);
   });
 });

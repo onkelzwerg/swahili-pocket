@@ -440,7 +440,9 @@ async function main() {
     }
 
     console.log(`\n${perLemma.size} verschiedene Grundformen fehlen im Pool:\n`);
-    const sorted = [...perLemma].sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+    const sorted = [...perLemma].sort(
+      (a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]),
+    );
     for (const [lemma, ids] of sorted) {
       console.log(`  ${lemma.padEnd(16)} ${ids.length}× — ${ids.join(", ")}`);
     }
@@ -462,10 +464,7 @@ async function main() {
       const { errors, entry } = validateDialogueGloss(raw, { dialogue, tokenize, poolLemmas });
       if (entry) {
         entries.push(entry);
-        await writeFile(
-          path.join(OUT_DIR, `${entry.id}.json`),
-          JSON.stringify(entry, null, 1),
-        );
+        await writeFile(path.join(OUT_DIR, `${entry.id}.json`), JSON.stringify(entry, null, 1));
       } else {
         bad++;
         console.error(`✗ ${raw.id}:`);

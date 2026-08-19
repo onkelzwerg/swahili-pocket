@@ -324,13 +324,17 @@ Bessere nach, bis nichts mehr beanstandet wird.`);
   );
 } else {
   // Bestandsaufnahme.
-  console.log(`Auftragsliste: ${plan.core.length} Kernwörter, ` +
-    `${Object.keys(plan.packs).length} Pakete mit ` +
-    `${Object.values(plan.packs).reduce((n, p) => n + p.words.length, 0)} Wörtern.\n`);
+  console.log(
+    `Auftragsliste: ${plan.core.length} Kernwörter, ` +
+      `${Object.keys(plan.packs).length} Pakete mit ` +
+      `${Object.values(plan.packs).reduce((n, p) => n + p.words.length, 0)} Wörtern.\n`,
+  );
   console.log("Gruppe                      Wörter  Lieferung");
   for (const g of ALL) {
     const done = existsSync(path.join(ROOT, g.target));
-    console.log(`  ${g.id.padEnd(26)} ${String(g.words.length).padStart(4)}  ${done ? "da" : "offen"}`);
+    console.log(
+      `  ${g.id.padEnd(26)} ${String(g.words.length).padStart(4)}  ${done ? "da" : "offen"}`,
+    );
   }
   await mkdir(WORK_DIR, { recursive: true });
 }

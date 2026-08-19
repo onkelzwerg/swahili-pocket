@@ -2,7 +2,7 @@ import type { ExerciseModeId, ReviewLogEntry, UserStats, VocabEntry } from "../t
 import { getSettings } from "../settings";
 import { appendReviewLog } from "../review-log";
 import { updateVocab, recordReview, getVocab, newId } from "../store";
-import { cacheVocab } from "../offline";
+import { cacheVocab, serializeWrite } from "../offline";
 import { leitnerScheduler } from "./leitner";
 import { fsrsScheduler, readFsrsState } from "./fsrs";
 import { DAY_MS, type Grade, type GradePreview, type Scheduler, type SchedulerId } from "./types";
@@ -107,6 +107,14 @@ export async function recomputeDue(
 ): Promise<{ dueCount: number }> {
   const scheduler = SCHEDULERS[target];
   const vocab = await getVocab();
+  return serializeWrite(async () => recompute(scheduler, vocab, now));
+}
+
+async function recompute(
+  scheduler: Scheduler,
+  vocab: VocabEntry[],
+  now: number,
+): Promise<{ dueCount: number }> {
   const next = vocab.map((card) => {
     // Fehlende Teilzustände werden beim Wechsel einmalig festgeschrieben,
     // statt sie bei jedem Aufruf neu zu schätzen — sonst wandert die
