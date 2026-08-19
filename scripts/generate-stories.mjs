@@ -46,12 +46,7 @@ import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
 import Anthropic from "@anthropic-ai/sdk";
 import { loadPackLemmas } from "./lib/packs.mjs";
-import {
-  BAND_LIMITS,
-  allowedLemmas,
-  danglingCoreLemmas,
-  poolByLemma,
-} from "./lib/story-bands.mjs";
+import { BAND_LIMITS, allowedLemmas, danglingCoreLemmas, poolByLemma } from "./lib/story-bands.mjs";
 import {
   MAX_NEW_LEMMAS,
   STRUCTURE_LEMMAS,
@@ -465,9 +460,7 @@ async function revalidateAll(pool, tokenize) {
   }
 
   const stories = await readExistingStories();
-  const allowedByBand = new Map(
-    ALL_BANDS.map((b) => [b, allowedLemmas(pool, b)]),
-  );
+  const allowedByBand = new Map(ALL_BANDS.map((b) => [b, allowedLemmas(pool, b)]));
 
   const good = [];
   let bad = 0;
@@ -477,10 +470,7 @@ async function revalidateAll(pool, tokenize) {
     if (story) {
       good.push(story);
       // Normalisierte Fassung zurückschreiben (Lemma-Liste wird abgeleitet).
-      await writeFile(
-        path.join(STORIES_DIR, `${story.id}.json`),
-        JSON.stringify(story, null, 1),
-      );
+      await writeFile(path.join(STORIES_DIR, `${story.id}.json`), JSON.stringify(story, null, 1));
     } else {
       bad++;
       console.error(`✗ ${raw.id ?? "(ohne id)"}:`);
@@ -489,10 +479,7 @@ async function revalidateAll(pool, tokenize) {
   }
 
   const packOf = await loadPackLemmas();
-  await writeFile(
-    INDEX_FILE,
-    JSON.stringify(buildIndex(good, { tokenize, packOf }), null, 1),
-  );
+  await writeFile(INDEX_FILE, JSON.stringify(buildIndex(good, { tokenize, packOf }), null, 1));
   console.log(`\n${good.length} Geschichten geprüft, Index geschrieben.`);
   if (bad > 0) {
     console.error(`${bad} Geschichten sind durchgefallen und stehen NICHT im Index.`);
@@ -612,10 +599,7 @@ async function main() {
         for (const e of errors.slice(0, 5)) console.error(`      ${e}`);
         continue;
       }
-      await writeFile(
-        path.join(STORIES_DIR, `${story.id}.json`),
-        JSON.stringify(story, null, 1),
-      );
+      await writeFile(path.join(STORIES_DIR, `${story.id}.json`), JSON.stringify(story, null, 1));
       done++;
       const words = story.paragraphs.reduce((n, p) => n + tokenize(p.sw).length, 0);
       console.log(

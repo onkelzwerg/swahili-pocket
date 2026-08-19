@@ -126,7 +126,7 @@ const MIN_STEM = 3;
 const TOKEN_RE = /[a-zà-ÿ]+(?:'[a-zà-ÿ]+)*/gi;
 
 function tokenize(text) {
-  return (text.toLowerCase().match(TOKEN_RE) ?? []);
+  return text.toLowerCase().match(TOKEN_RE) ?? [];
 }
 
 /** Alle Token aller Beispielsätze des Pools. */

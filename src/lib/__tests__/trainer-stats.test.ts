@@ -3,12 +3,10 @@ import type { ReviewLogEntry } from "../types";
 
 // IndexedDB gibt es im Node-Runner nicht — idb-keyval wird durch eine
 // In-Memory-Map ersetzt (gleiches Muster wie migrations.test.ts).
-const db = new Map<string, unknown>();
-vi.mock("idb-keyval", () => ({
-  get: async (k: string) => db.get(k),
-  set: async (k: string, v: unknown) => void db.set(k, v),
-  clear: async () => db.clear(),
-}));
+vi.mock("idb-keyval", async () => (await import("./idb-fake")).fake);
+
+const { resetDb, kv, setKv, seedCards, allCards, cardById, allLogEntries } =
+  await import("./idb-fake");
 
 const { getTrainerStats, recordTrainerTask, resetTrainerStatsCache } =
   await import("../trainer-stats");
@@ -16,7 +14,7 @@ const { countReviewsOnDay } = await import("../review-log");
 const { isoDay } = await import("../dates");
 
 beforeEach(() => {
-  db.clear();
+  resetDb();
   resetTrainerStatsCache();
 });
 

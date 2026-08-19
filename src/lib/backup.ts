@@ -1,11 +1,11 @@
 import { clear, get, set } from "idb-keyval";
 import type { ReviewLogEntry, UserStats, VocabEntry } from "./types";
 import {
-  cacheVocab,
   cacheStats,
   readCachedVocab,
   readCachedStats,
   normalizeStats,
+  K_VOCAB_LEGACY,
 } from "./offline";
 import { readReviewLog, writeReviewLog, resetReviewLogCache } from "./review-log";
 import { getSettings, writeSettings, resetSettingsCache, type AppSettings } from "./settings";
@@ -33,6 +33,7 @@ import {
 } from "./dialogue-stats";
 import { getRetentionChecks, writeRetentionChecks, resetRetentionCache } from "./retention-check";
 import { activePacks, resetPacksCache } from "./packs";
+import { cardStore, logArchiveStore, logStore } from "./db";
 import { APP_CONFIG } from "@/config/app.config";
 
 // JSON-Backup der Lerndaten. Schutz gegen IndexedDB-Verlust
@@ -102,6 +103,75 @@ type AnyBackup = Partial<Omit<BackupFileV1, "version">> &
 /** Aktuelle Backup-Formatversion. */
 const BACKUP_VERSION = 5;
 
+// ---------------------------------------------------------------------------
+// Eingangsprüfung
+// ---------------------------------------------------------------------------
+
+/**
+ * Eine Karte aus einer Backup-Datei geradeziehen — oder verwerfen.
+ *
+ * Die Datei kommt vom Nutzer selbst, das ist kein Angriffsszenario. Sie kann
+ * aber alt, halb geschrieben oder von Hand bearbeitet sein, und dann sind die
+ * Folgen still: eine `box` außerhalb von 1..5 indiziert BOX_INTERVALS_DAYS ins
+ * Leere und macht die Fälligkeit zu NaN — die Karte ist danach nie mehr fällig
+ * und fehlt einfach, ohne Fehlermeldung. Deshalb hier klemmen statt hoffen.
+ */
+function sanitizeVocabEntry(raw: unknown): VocabEntry | null {
+  if (!raw || typeof raw !== "object") return null;
+  const v = raw as Partial<VocabEntry>;
+  if (typeof v.id !== "string" || !v.id) return null;
+  if (typeof v.swahili !== "string" || !v.swahili.trim()) return null;
+  if (typeof v.german !== "string" || !v.german.trim()) return null;
+
+  const num = (value: unknown, fallback: number): number =>
+    typeof value === "number" && Number.isFinite(value) ? value : fallback;
+
+  const createdAt = num(v.createdAt, Date.now());
+  const box = Math.min(5, Math.max(1, Math.round(num(v.box, 1)))) as VocabEntry["box"];
+  // `fsrs` aus dem Rest herauslösen: sonst brächte das Spread unten den
+  // ungeprüften Zustand wieder herein und die Prüfung liefe ins Leere.
+  const { fsrs: rawFsrs, ...rest } = v;
+  const fsrs =
+    rawFsrs &&
+    typeof rawFsrs === "object" &&
+    Number.isFinite(rawFsrs.stability) &&
+    Number.isFinite(rawFsrs.due)
+      ? rawFsrs
+      : undefined;
+
+  return {
+    ...rest,
+    id: v.id,
+    swahili: v.swahili,
+    german: v.german,
+    partOfSpeech: v.partOfSpeech ?? "other",
+    examples: Array.isArray(v.examples)
+      ? v.examples.filter((e) => e && typeof e.sw === "string")
+      : [],
+    box,
+    nextReview: num(v.nextReview, createdAt),
+    createdAt,
+    ...(fsrs ? { fsrs } : {}),
+  };
+}
+
+/**
+ * Kartenliste einer Backup-Datei prüfen. Doppelte Ids fliegen raus: sie würden
+ * bei jedem Patch gemeinsam beschrieben und wären in der Liste nicht mehr
+ * auseinanderzuhalten. Der erste Treffer gewinnt.
+ */
+export function sanitizeVocab(raw: unknown[]): VocabEntry[] {
+  const seen = new Set<string>();
+  const out: VocabEntry[] = [];
+  for (const item of raw) {
+    const entry = sanitizeVocabEntry(item);
+    if (!entry || seen.has(entry.id)) continue;
+    seen.add(entry.id);
+    out.push(entry);
+  }
+  return out;
+}
+
 export async function exportBackup(): Promise<void> {
   const [
     vocab,
@@ -156,15 +226,17 @@ export async function importBackup(file: File): Promise<{ vocabCount: number }> 
   if (!Array.isArray(data.vocab)) {
     throw new Error("Ungültige Backup-Datei: kein Vokabel-Bestand gefunden.");
   }
-  // Minimale Plausibilitätsprüfung pro Eintrag.
-  const vocab = data.vocab.filter(
-    (v): v is VocabEntry =>
-      !!v &&
-      typeof v.id === "string" &&
-      typeof v.swahili === "string" &&
-      typeof v.german === "string",
-  );
-  await cacheVocab(vocab);
+  const vocab = sanitizeVocab(data.vocab);
+  if (vocab.length === 0) {
+    throw new Error("Ungültige Backup-Datei: keine brauchbaren Karten enthalten.");
+  }
+  // Der Bestand geht an den Alt-Schlüssel, nicht direkt in den Kartenstore:
+  // eine Backup-Datei bringt das Datenmodell ihrer Zeit mit, und die
+  // Migrationskette unten hebt es an. Ein v1-Backup braucht migrateTo2
+  // (FSRS-Zustand, leitnerDue, maturedAt), und erst migrateTo3 räumt in den
+  // Store um. Direkt in den Store geschrieben liefe migrateTo2 ins Leere und
+  // die Karten kämen ohne Scheduler-Zustand an.
+  await set(K_VOCAB_LEGACY, vocab).catch(() => {});
 
   if (data.stats && typeof data.stats.totalReviewed === "number") {
     await cacheStats(normalizeStats(data.stats));
@@ -193,10 +265,14 @@ export async function importBackup(file: File): Promise<{ vocabCount: number }> 
 
   // v1-Backup (oder eines ohne Settings) über die Migration schicken, damit
   // FSRS-Zustand, leitnerDue und maturedAt nachgezogen werden.
-  // Ab v2 ist das Datenmodell aktuell; v3 bis v5 fügen nur neue Schlüssel
-  // hinzu, die eigene Defaults haben — deshalb kein Versionssprung nötig.
-  const modelIsCurrent = (data.version ?? 1) >= 2;
-  await set(K_VERSION, modelIsCurrent ? DATA_VERSION : 1).catch(() => {});
+  // Datenversion der *Datei* setzen und die Kette laufen lassen — sie hebt den
+  // Bestand von dort auf den aktuellen Stand. Eine v1-Datei braucht den vollen
+  // Weg (Scheduler-Zustand ergänzen, dann umräumen), ab Backup-v2 entspricht
+  // das Kartenmodell der Datenversion 2 und es fehlt nur noch der Umzug in die
+  // eigenen Stores (Datenversion 3). Die Backup-Versionen 3 bis 5 fügen nur
+  // neue, eigenständige Schlüssel mit eigenen Defaults hinzu.
+  const cardModelVersion = (data.version ?? 1) >= 2 ? 2 : 1;
+  await set(K_VERSION, cardModelVersion).catch(() => {});
   resetMigrationState();
   await runMigrations();
 
@@ -205,7 +281,14 @@ export async function importBackup(file: File): Promise<{ vocabCount: number }> 
 
 /** Alle lokalen Daten löschen (Werkseinstellungen). */
 export async function resetAllData(): Promise<void> {
+  // Drei Stores, drei Aufrufe: `clear()` ohne Argument räumt nur den
+  // Standard-Store. Karten, Log und Archiv liegen seit Datenversion 3 in
+  // eigenen Datenbanken (siehe db.ts) und blieben sonst stehen — die App
+  // sähe nach dem Zurücksetzen den alten Bestand wieder.
   await clear();
+  await clear(cardStore()).catch(() => {});
+  await clear(logStore()).catch(() => {});
+  await clear(logArchiveStore()).catch(() => {});
   resetSettingsCache();
   resetReviewLogCache();
   resetTrainerStatsCache();

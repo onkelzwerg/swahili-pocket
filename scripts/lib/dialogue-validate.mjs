@@ -64,7 +64,9 @@ function validateChoices(rawChoices, { dialogue, fail }) {
       continue;
     }
     if (!Array.isArray(list) || list.length < MIN_CHOICES || list.length > MAX_CHOICES) {
-      fail(`${where}: ${Array.isArray(list) ? list.length : 0} Optionen, erlaubt sind ${MIN_CHOICES}–${MAX_CHOICES}.`);
+      fail(
+        `${where}: ${Array.isArray(list) ? list.length : 0} Optionen, erlaubt sind ${MIN_CHOICES}–${MAX_CHOICES}.`,
+      );
       continue;
     }
 
@@ -195,9 +197,7 @@ export function validateDialogueGloss(raw, { dialogue, tokenize, poolLemmas }) {
   // Lemma nicht auf eine Pool-Schreibweise trifft, kann die Abdeckung es nie
   // als „gelernt" verbuchen, und der häufigste Grund dafür ist ein Tippfehler
   // oder eine unübliche Grundform, kein echtes Loch im Pool.
-  const unknownLemmas = poolLemmas
-    ? [...lemmas].filter((l) => !poolLemmas.has(l)).sort()
-    : [];
+  const unknownLemmas = poolLemmas ? [...lemmas].filter((l) => !poolLemmas.has(l)).sort() : [];
 
   return {
     errors: [],

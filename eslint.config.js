@@ -6,7 +6,22 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist", ".output", ".vinxi"] },
+  // Alles Erzeugte und alles Eingekaufte bleibt draußen. Ohne ds-bundle/,
+  // .ds-sync/, .design-sync/ und .tanstack/ erzeugt `eslint .` so viel
+  // Ausgabe, dass der Formatter mit `RangeError: Invalid string length`
+  // abbricht — der Lauf war damit faktisch tot.
+  {
+    ignores: [
+      "dist",
+      ".output",
+      ".vinxi",
+      ".tanstack",
+      "ds-bundle",
+      ".ds-sync",
+      ".design-sync",
+      "src/routeTree.gen.ts",
+    ],
+  },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],

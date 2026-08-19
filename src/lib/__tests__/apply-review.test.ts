@@ -1,12 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { ReviewLogEntry, SchedulerId, VocabEntry } from "../types";
 
-const db = new Map<string, unknown>();
-vi.mock("idb-keyval", () => ({
-  get: async (k: string) => db.get(k),
-  set: async (k: string, v: unknown) => void db.set(k, v),
-  clear: async () => db.clear(),
-}));
+vi.mock("idb-keyval", async () => (await import("./idb-fake")).fake);
+
+const { resetDb, kv, setKv, seedCards, allCards, cardById, allLogEntries } =
+  await import("./idb-fake");
 
 // crypto.randomUUID gibt es in Node ≥ 19; für ältere Runner nachrüsten.
 if (!globalThis.crypto?.randomUUID) {
@@ -27,25 +25,25 @@ const { makeCard } = await import("./helpers");
 const NOW = Date.parse("2026-03-01T10:00:00Z");
 
 async function setup(cards: VocabEntry[], scheduler: SchedulerId) {
-  db.clear();
+  resetDb();
   resetSettingsCache();
   resetReviewLogCache();
   resetMigrationState();
-  db.set("data:version", DATA_VERSION);
-  db.set("vocab:list", cards);
+  setKv("data:version", DATA_VERSION);
+  seedCards(cards);
   await writeSettings({ ...DEFAULT_SETTINGS, scheduler });
 }
 
 function storedCard(id: string): VocabEntry {
-  return (db.get("vocab:list") as VocabEntry[]).find((c) => c.id === id)!;
+  return allCards().find((c) => c.id === id)!;
 }
 
 function log(): ReviewLogEntry[] {
-  return (db.get("log:reviews") as ReviewLogEntry[]) ?? [];
+  return allLogEntries();
 }
 
 beforeEach(() => {
-  db.clear();
+  resetDb();
 });
 
 describe("applyReview", () => {
@@ -157,7 +155,7 @@ describe("recomputeDue", () => {
     await applyReview(storedCard("a"), 3, "flip", NOW);
     await applyReview(storedCard("b"), 2, "flip", NOW);
 
-    const before = (db.get("vocab:list") as VocabEntry[]).map((c) => ({
+    const before = allCards().map((c) => ({
       id: c.id,
       box: c.box,
       leitnerDue: c.leitnerDue,
@@ -165,16 +163,16 @@ describe("recomputeDue", () => {
     }));
 
     await recomputeDue("fsrs", NOW);
-    for (const c of db.get("vocab:list") as VocabEntry[]) {
+    for (const c of allCards()) {
       expect(c.nextReview).toBe(c.fsrs!.due);
     }
 
     await recomputeDue("leitner", NOW);
-    for (const c of db.get("vocab:list") as VocabEntry[]) {
+    for (const c of allCards()) {
       expect(c.nextReview).toBe(c.leitnerDue);
     }
 
-    const after = (db.get("vocab:list") as VocabEntry[]).map((c) => ({
+    const after = allCards().map((c) => ({
       id: c.id,
       box: c.box,
       leitnerDue: c.leitnerDue,

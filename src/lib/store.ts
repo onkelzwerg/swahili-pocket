@@ -7,10 +7,13 @@ import {
   cacheVocab,
   readCachedVocab,
   patchCachedVocab,
+  putCard,
+  removeCard,
   cacheStats,
   readCachedStats,
   applyReviewToStats,
   expireStreak,
+  serializeWrite,
   EMPTY_STATS,
 } from "./offline";
 
@@ -42,14 +45,19 @@ export async function getVocab(): Promise<VocabEntry[]> {
   return ensureSeeded();
 }
 
+// Lesen-Ändern-Schreiben läuft durch serializeWrite() (siehe offline.ts):
+// sonst überholen sich zwei kurz aufeinanderfolgende Antworten und die
+// frühere geht verloren. `getVocab()` selbst ist ungesperrt — es liest nur
+// (und stößt beim allerersten Mal Seed/Migration an), darf hier also
+// innerhalb der Kette aufgerufen werden.
+
 export async function addVocab(entry: VocabEntry) {
-  const list = await getVocab();
-  await cacheVocab([{ ...entry, isPrivate: entry.isPrivate ?? true }, ...list]);
+  await getVocab(); // stellt Seed und Migration sicher
+  await putCard({ ...entry, isPrivate: entry.isPrivate ?? true });
 }
 
 export async function deleteVocab(id: string) {
-  const list = await getVocab();
-  await cacheVocab(list.filter((e) => e.id !== id));
+  await removeCard(id);
 }
 
 export async function updateVocab(id: string, patch: Partial<VocabEntry>) {
@@ -57,17 +65,25 @@ export async function updateVocab(id: string, patch: Partial<VocabEntry>) {
 }
 
 export async function getStats(): Promise<UserStats> {
-  const raw = (await readCachedStats()) ?? EMPTY_STATS;
-  const { stats, changed } = expireStreak(raw);
-  if (changed) await cacheStats(stats);
-  return stats;
+  // Wie getVocab(): erst migrieren, dann lesen. Der Home-Screen holt Stats und
+  // Karten in einem Promise.all — ohne dieses Tor läse getStats() beim ersten
+  // Start nach einem Update an der Migration vorbei.
+  await runMigrations();
+  return serializeWrite(async () => {
+    const raw = (await readCachedStats()) ?? EMPTY_STATS;
+    const { stats, changed } = expireStreak(raw);
+    if (changed) await cacheStats(stats);
+    return stats;
+  });
 }
 
 export async function recordReview(correct: boolean, now: number = Date.now()): Promise<UserStats> {
-  const prev = (await readCachedStats()) ?? EMPTY_STATS;
-  const next = applyReviewToStats(prev, correct, now);
-  await cacheStats(next);
-  return next;
+  return serializeWrite(async () => {
+    const prev = (await readCachedStats()) ?? EMPTY_STATS;
+    const next = applyReviewToStats(prev, correct, now);
+    await cacheStats(next);
+    return next;
+  });
 }
 
 /**
@@ -76,10 +92,12 @@ export async function recordReview(correct: boolean, now: number = Date.now()): 
  * `totalReviewed` und die Lerntage bleiben deshalb den Karten vorbehalten.
  */
 export async function awardXp(amount: number): Promise<UserStats> {
-  const prev = (await readCachedStats()) ?? EMPTY_STATS;
-  const next: UserStats = { ...prev, xp: prev.xp + amount };
-  await cacheStats(next);
-  return next;
+  return serializeWrite(async () => {
+    const prev = (await readCachedStats()) ?? EMPTY_STATS;
+    const next: UserStats = { ...prev, xp: prev.xp + amount };
+    await cacheStats(next);
+    return next;
+  });
 }
 
 /**

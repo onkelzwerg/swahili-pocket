@@ -136,7 +136,7 @@ export function validateStory(raw, { allowed, tokenize }) {
   for (const field of ["id", "title", "titleDe", "topic"]) {
     if (!isNonEmptyString(raw[field])) fail(`Feld "${field}" fehlt oder ist leer.`);
   }
-  if (!Number.isInteger(raw.band)) fail("Feld \"band\" ist keine ganze Zahl.");
+  if (!Number.isInteger(raw.band)) fail('Feld "band" ist keine ganze Zahl.');
   if (!Array.isArray(raw.paragraphs) || raw.paragraphs.length === 0) {
     fail("Keine Absätze.");
   }
