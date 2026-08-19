@@ -1,0 +1,592 @@
+{
+ "id": "zuhause-4-01",
+ "title": "Kochi Kwenye Ngazi",
+ "titleDe": "Das Sofa im Treppenhaus",
+ "band": 4,
+ "topic": "Zuhause",
+ "emoji": "🛋️",
+ "lemmas": [
+  "asubuhi",
+  "baadaye",
+  "bila",
+  "chini",
+  "chumba",
+  "dakika",
+  "dirisha",
+  "familia",
+  "flati",
+  "fundi",
+  "ghorofa",
+  "hakuna",
+  "harusi",
+  "ingine",
+  "jioni",
+  "jirani",
+  "juu",
+  "katika",
+  "kazi",
+  "kisha",
+  "kitanda",
+  "kochi",
+  "kuangalia",
+  "kubwa",
+  "kuchukua",
+  "kufika",
+  "kufurahi",
+  "kuhama",
+  "kujaribu",
+  "kukaa",
+  "kuketi",
+  "kulala",
+  "kumi",
+  "kupeleka",
+  "kupita",
+  "kurudisha",
+  "kusema",
+  "kushika",
+  "kushuka",
+  "kusimama",
+  "kutaka",
+  "kutazama",
+  "kutoa",
+  "kutoka",
+  "kuwa",
+  "kuweza",
+  "kwa",
+  "kwanza",
+  "kwenda",
+  "lakini",
+  "lifti",
+  "lori",
+  "mahali",
+  "mama",
+  "mara",
+  "mbili",
+  "mdogo",
+  "meza",
+  "mguu",
+  "mkono",
+  "mlango",
+  "moja",
+  "mtaa",
+  "mtoto",
+  "mtu",
+  "mwanzo",
+  "na",
+  "ngazi",
+  "nje",
+  "nne",
+  "nyumba",
+  "pale",
+  "rahisi",
+  "saa",
+  "samani",
+  "sana",
+  "sanduku",
+  "sebule",
+  "tatizo",
+  "tatu",
+  "tena",
+  "upande",
+  "wafanyakazi",
+  "watu",
+  "wazazi",
+  "zawadi"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Familia ya Juma ilihama kutoka nyumba ndogo ya mtaa wa Buguruni kwenda flati katika ghorofa ya tatu. Watoto walifurahi sana; flati ilikuwa na lifti na dirisha kubwa la sebule.",
+   "de": "Jumas Familie zog aus einem kleinen Haus im Viertel Buguruni in eine Wohnung im dritten Stock. Die Kinder freuten sich sehr; die Wohnung hatte einen Aufzug und ein großes Wohnzimmerfenster."
+  },
+  {
+   "sw": "Lori lilifika asubuhi. Wafanyakazi wawili walichukua masanduku, meza na vitanda juu kwa ngazi bila tatizo. Kazi yao ilikuwa rahisi mwanzoni.",
+   "de": "Der Lastwagen kam am Morgen. Zwei Arbeiter trugen Kisten, Tische und Betten ohne Schwierigkeiten die Treppe hinauf. Am Anfang war ihre Arbeit leicht."
+  },
+  {
+   "sw": "Lakini kochi kubwa halikuweza kupita mlangoni. Walijaribu upande huu na upande ule, wakalirudisha chini, wakajaribu tena. Watu wa ghorofa nyingine walisimama nje wakiangalia.",
+   "de": "Aber das große Sofa passte nicht durch die Tür. Sie versuchten es auf dieser Seite und auf jener, trugen es wieder hinunter und versuchten es noch einmal. Die Leute aus den anderen Stockwerken standen draußen und schauten zu."
+  },
+  {
+   "sw": "Saa moja baadaye wafanyakazi walisema hawawezi. Mama alikaa kwenye ngazi akiangalia kochi lile. Kochi lilikuwa zawadi ya harusi kutoka kwa wazazi wake.",
+   "de": "Eine Stunde später sagten die Arbeiter, sie schafften es nicht. Die Mutter setzte sich auf die Treppe und sah das Sofa an. Es war ein Hochzeitsgeschenk ihrer Eltern."
+  },
+  {
+   "sw": "Jirani wa ghorofa ya nne alishuka akaangalia. Alikuwa fundi wa samani. Alishika kochi kwa mikono yote miwili akalitazama. „Toeni miguu yake,“ alisema. „Kisha kochi litapita.“",
+   "de": "Der Nachbar aus dem vierten Stock kam herunter und schaute sich die Sache an. Er war Möbeltischler. Er fasste das Sofa mit beiden Händen und betrachtete es. „Nehmt die Füße ab“, sagte er. „Dann geht das Sofa durch.“"
+  },
+  {
+   "sw": "Walitoa miguu minne kwa dakika kumi, wakapeleka kochi sebuleni, kisha wakairudisha miguu mahali pake. Jioni familia iliketi juu ya kochi lile kwa mara ya kwanza. Watoto walilala pale pale, na hakuna mtu aliyetaka kwenda chumbani.",
+   "de": "In zehn Minuten schraubten sie die vier Füße ab, brachten das Sofa ins Wohnzimmer und setzten die Füße wieder an ihren Platz. Am Abend saß die Familie zum ersten Mal auf diesem Sofa. Die Kinder schliefen gleich dort ein, und niemand wollte mehr ins Schlafzimmer."
+  }
+ ],
+ "glosses": {
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "juma": {
+   "lemma": "juma",
+   "de": "Juma (Name)",
+   "proper": true
+  },
+  "ilihama": {
+   "lemma": "kuhama",
+   "de": "sie zog um"
+  },
+  "kutoka": {
+   "lemma": "kutoka",
+   "de": "aus, von"
+  },
+  "nyumba": {
+   "lemma": "nyumba",
+   "de": "Haus"
+  },
+  "ndogo": {
+   "lemma": "mdogo",
+   "de": "klein (N-Klasse)"
+  },
+  "mtaa": {
+   "lemma": "mtaa",
+   "de": "Viertel"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von, aus (Genitivkonkordanz)",
+   "structure": true
+  },
+  "buguruni": {
+   "lemma": "buguruni",
+   "de": "Buguruni (Stadtteil von Daressalam)",
+   "proper": true
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "in, nach"
+  },
+  "flati": {
+   "lemma": "flati",
+   "de": "Wohnung"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "ghorofa": {
+   "lemma": "ghorofa",
+   "de": "Stockwerk"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei, dritten"
+  },
+  "lori": {
+   "lemma": "lori",
+   "de": "Lastwagen"
+  },
+  "lilifika": {
+   "lemma": "kufika",
+   "de": "er kam an"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen"
+  },
+  "wafanyakazi": {
+   "lemma": "wafanyakazi",
+   "de": "Arbeiter"
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (M-Wa-Klasse)"
+  },
+  "walichukua": {
+   "lemma": "kuchukua",
+   "de": "sie trugen"
+  },
+  "masanduku": {
+   "lemma": "sanduku",
+   "de": "Kisten"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tische"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "vitanda": {
+   "lemma": "kitanda",
+   "de": "Betten"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "hinauf, oben"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "über, mit, für"
+  },
+  "ngazi": {
+   "lemma": "ngazi",
+   "de": "Treppe"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "tatizo": {
+   "lemma": "tatizo",
+   "de": "Schwierigkeit"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "kochi": {
+   "lemma": "kochi",
+   "de": "Sofa"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "halikuweza": {
+   "lemma": "kuweza",
+   "de": "es konnte nicht"
+  },
+  "kupita": {
+   "lemma": "kupita",
+   "de": "durchzukommen"
+  },
+  "mlangoni": {
+   "lemma": "mlango",
+   "de": "durch die Tür"
+  },
+  "walijaribu": {
+   "lemma": "kujaribu",
+   "de": "sie versuchten"
+  },
+  "upande": {
+   "lemma": "upande",
+   "de": "Seite"
+  },
+  "huu": {
+   "lemma": "huu",
+   "de": "diese",
+   "structure": true
+  },
+  "ule": {
+   "lemma": "ule",
+   "de": "jene",
+   "structure": true
+  },
+  "wakalirudisha": {
+   "lemma": "kurudisha",
+   "de": "und brachten es zurück"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "hinunter"
+  },
+  "wakajaribu": {
+   "lemma": "kujaribu",
+   "de": "und versuchten"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "noch einmal"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunde"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eine"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später"
+  },
+  "walisema": {
+   "lemma": "kusema",
+   "de": "sie sagten"
+  },
+  "hawawezi": {
+   "lemma": "kuweza",
+   "de": "sie können nicht"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter"
+  },
+  "alikaa": {
+   "lemma": "kukaa",
+   "de": "sie setzte sich"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "auf",
+   "structure": true
+  },
+  "akiangalia": {
+   "lemma": "kuangalia",
+   "de": "und sah an"
+  },
+  "lile": {
+   "lemma": "lile",
+   "de": "jenes, dieses",
+   "structure": true
+  },
+  "lilikuwa": {
+   "lemma": "kuwa",
+   "de": "es war"
+  },
+  "zawadi": {
+   "lemma": "zawadi",
+   "de": "Geschenk"
+  },
+  "harusi": {
+   "lemma": "harusi",
+   "de": "Hochzeit"
+  },
+  "wazazi": {
+   "lemma": "wazazi",
+   "de": "Eltern"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihrer",
+   "structure": true
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbar"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier, vierten"
+  },
+  "alishuka": {
+   "lemma": "kushuka",
+   "de": "er kam herunter"
+  },
+  "akaangalia": {
+   "lemma": "kuangalia",
+   "de": "und schaute"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "fundi": {
+   "lemma": "fundi",
+   "de": "Handwerker, Tischler"
+  },
+  "samani": {
+   "lemma": "samani",
+   "de": "Möbel"
+  },
+  "toeni": {
+   "lemma": "kutoa",
+   "de": "nehmt ab (Aufforderung, Plural)"
+  },
+  "miguu": {
+   "lemma": "mguu",
+   "de": "Füße, Beine"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seine",
+   "structure": true
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "litapita": {
+   "lemma": "kupita",
+   "de": "es wird durchgehen"
+  },
+  "walitoa": {
+   "lemma": "kutoa",
+   "de": "sie nahmen ab"
+  },
+  "minne": {
+   "lemma": "nne",
+   "de": "vier (Mi-Klasse)"
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "wakapeleka": {
+   "lemma": "kupeleka",
+   "de": "und brachten"
+  },
+  "sebuleni": {
+   "lemma": "sebule",
+   "de": "ins Wohnzimmer"
+  },
+  "wakairudisha": {
+   "lemma": "kurudisha",
+   "de": "und setzten sie zurück"
+  },
+  "mahali": {
+   "lemma": "mahali",
+   "de": "Platz, Stelle"
+  },
+  "pake": {
+   "lemma": "-ake",
+   "de": "ihren",
+   "structure": true
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "iliketi": {
+   "lemma": "kuketi",
+   "de": "sie saß"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "Mal"
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "erste"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "walilala": {
+   "lemma": "kulala",
+   "de": "sie schliefen ein"
+  },
+  "pale": {
+   "lemma": "pale",
+   "de": "dort (pale pale: gleich dort)"
+  },
+  "hakuna": {
+   "lemma": "hakuna",
+   "de": "es gibt kein, niemand"
+  },
+  "mtu": {
+   "lemma": "mtu",
+   "de": "Mensch"
+  },
+  "aliyetaka": {
+   "lemma": "kutaka",
+   "de": "der wollte"
+  },
+  "chumbani": {
+   "lemma": "chumba",
+   "de": "ins Zimmer"
+  },
+  "walifurahi": {
+   "lemma": "kufurahi",
+   "de": "sie freuten sich"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie hatte, sie war"
+  },
+  "lifti": {
+   "lemma": "lifti",
+   "de": "Aufzug"
+  },
+  "dirisha": {
+   "lemma": "dirisha",
+   "de": "Fenster"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "sebule": {
+   "lemma": "sebule",
+   "de": "Wohnzimmer"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "yao": {
+   "lemma": "-ao",
+   "de": "ihre",
+   "structure": true
+  },
+  "rahisi": {
+   "lemma": "rahisi",
+   "de": "leicht"
+  },
+  "mwanzoni": {
+   "lemma": "mwanzo",
+   "de": "am Anfang"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "nyingine": {
+   "lemma": "ingine",
+   "de": "anderen"
+  },
+  "walisimama": {
+   "lemma": "kusimama",
+   "de": "sie standen"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "draußen"
+  },
+  "wakiangalia": {
+   "lemma": "kuangalia",
+   "de": "und schauten zu"
+  },
+  "alishika": {
+   "lemma": "kushika",
+   "de": "er fasste"
+  },
+  "mikono": {
+   "lemma": "mkono",
+   "de": "Händen"
+  },
+  "yote": {
+   "lemma": "-ote",
+   "de": "beiden",
+   "structure": true
+  },
+  "miwili": {
+   "lemma": "mbili",
+   "de": "zwei (Mi-Klasse)"
+  },
+  "akalitazama": {
+   "lemma": "kutazama",
+   "de": "und betrachtete es"
+  }
+ },
+ "audio": null
+}

@@ -12,7 +12,8 @@
  *      die spricht Swahili zu unzuverlässig aus, um einen Text zu tragen.
  *   3. Phrasen des Tages (seed.ts phraseOfDay)
  *   4. Seed-Vokabeln inkl. Beispiele (seed.ts seedVocab)
- *   5. Pool-Vokabeln (public/vocab-pool.json): erst Wörter, dann Beispielsätze.
+ *   5. Pool-Vokabeln (public/vocab-pool.json): erst Wörter, dann Beispielsätze,
+ *      beides nach Häufigkeit sortiert (nicht alphabetisch wie der Pool selbst).
  *
  * - Ziel: public/audio/<hash>.mp3 + public/audio/manifest.json
  *   (Manifest: Text → Dateiname; wird von src/lib/tts.ts geladen).
@@ -31,13 +32,16 @@
  * --band <1..4> grenzt **nur die Beispielsätze** auf Trägerwörter bis
  * einschließlich dieses Bandes ein — dieselbe Rangheuristik wie die
  * Geschichten-Pipeline (scripts/lib/story-bands.mjs), also keine zweite
- * Wahrheit über den Wortschatz. Nötig, weil der Pool alphabetisch sortiert
- * ist: ohne Filter vertont der erste Lauf die Sätze zu `abiria` und `ada` und
- * lässt `kwenda` liegen. Die Bänder sind kumulativ, `--band 2` schließt Band 1
- * ein; was schon im Manifest steht, wird ohnehin übersprungen.
+ * Wahrheit über den Wortschatz. Die Bänder sind kumulativ, `--band 2` schließt
+ * Band 1 ein; was schon im Manifest steht, wird ohnehin übersprungen.
  * Wörter, Dialoge, Geschichten und Phrasen filtert `--band` nicht: die Wörter
  * sind zusammen keine 2 % der Arbeit und schalten die Übungsart „Hören" frei,
  * der Rest hat gar keinen Bandrang.
+ *
+ * Für die Reihenfolge braucht man `--band` nicht mehr: seit die Aufgabenliste
+ * nach Häufigkeit sortiert ist, steht das Wichtigste ohnehin vorn, und ein
+ * Budget-Abbruch schneidet hinten ab. `--band` ist jetzt eine harte Grenze für
+ * den Fall, dass ein Lauf bewusst nur den Kernwortschatz abdecken soll.
  *
  * --prune löscht Manifest-Einträge und MP3s, deren Text es in der App nicht
  * mehr gibt. Das Manifest ist nach exaktem Text geschlüsselt — wird eine
@@ -57,6 +61,7 @@ const POOL_FILE = path.join(ROOT, "public", "vocab-pool.json");
 const STORIES_DIR = path.join(ROOT, "public", "stories");
 const AUDIO_DIR = path.join(ROOT, "public", "audio");
 const MANIFEST_FILE = path.join(AUDIO_DIR, "manifest.json");
+const DICT_FILE = path.join(ROOT, "scripts", "lib", "pronunciation-dict.json");
 
 // Eleven v3 ist das einzige ElevenLabs-Modell mit Swahili-Support.
 const MODEL_ID = "eleven_v3";
@@ -121,13 +126,36 @@ async function saveManifest(manifest) {
   await writeFile(MANIFEST_FILE, JSON.stringify(manifest, null, 1));
 }
 
+/**
+ * Aussprachewörterbücher aus scripts/build-pronunciation-dict.mjs --upload.
+ *
+ * Sie zwingen `eleven_v3` auf die IPA-Transkription aus swahili-g2p.mjs, statt
+ * den Text mit der Lautzuordnung einer anderen Sprache zu lesen. Die Datei ist
+ * optional: fehlt sie, wird wie bisher ohne Wörterbuch vertont — ein Lauf soll
+ * nicht daran scheitern, dass jemand den Upload-Schritt nicht gemacht hat.
+ *
+ * Wichtig fürs Budget: der Locator kostet keine Zeichen. Abgerechnet wird der
+ * Klartext, die Ersetzung passiert serverseitig.
+ */
+async function loadDictLocators() {
+  if (!existsSync(DICT_FILE)) return [];
+  const { locators } = JSON.parse(await readFile(DICT_FILE, "utf8"));
+  return locators ?? [];
+}
+
+let dictLocators = [];
+
 async function ttsRequest(text, voiceId) {
   const url = `${API_BASE}/text-to-speech/${voiceId}?output_format=${OUTPUT_FORMAT}`;
+  // Nicht `body` nennen: die Fehlerbehandlung unten deklariert ein eigenes
+  // `const body` im Schleifenblock, das diesen Namen dort verschatten würde.
+  const payload = { text, model_id: MODEL_ID };
+  if (dictLocators.length) payload.pronunciation_dictionary_locators = dictLocators;
   for (let attempt = 1; attempt <= 3; attempt++) {
     const res = await fetch(url, {
       method: "POST",
       headers: { "xi-api-key": apiKey, "content-type": "application/json" },
-      body: JSON.stringify({ text, model_id: MODEL_ID }),
+      body: JSON.stringify(payload),
     });
     if (res.ok) return Buffer.from(await res.arrayBuffer());
 
@@ -183,20 +211,32 @@ async function loadStories() {
 }
 
 /**
- * Schreibweise → Band, für `--band`. Wortgleich mit der Bandzuordnung der
- * Geschichten-Pipeline: erst der Häufigkeitsrang, dann `CORE_BAND` additiv
- * darüber — ein Wort kann in ein früheres Band gezogen werden, keines verliert
- * seinen Platz. Ohne diese Ergänzung lägen `kuwa` und `lakini` außerhalb von
- * Band 1, und ihre Beispielsätze kämen als Letztes an die Reihe.
+ * Pool nach Wichtigkeit sortiert, plus die Bandzuordnung für `--band`.
+ *
+ * Wortgleich mit der Bandzuordnung der Geschichten-Pipeline: erst der
+ * Häufigkeitsrang aus `rankPool`, dann `CORE_BAND` additiv darüber — ein Wort
+ * kann in ein früheres Band gezogen werden, keines verliert seinen Platz. Ohne
+ * diese Ergänzung lägen `kuwa` und `lakini` außerhalb von Band 1.
+ *
+ * Sortiert wird nach effektivem Band, darin nach Häufigkeitsrang. Nicht bloß
+ * nach Rang: sonst fiele die `CORE_BAND`-Korrektur bei der Reihenfolge unter
+ * den Tisch, und genau die Wörter, die einen Text zusammenhalten, kämen wieder
+ * zu spät. Damit stimmen Reihenfolge und `--band`-Filter überein — was der
+ * Filter durchlässt, steht auch vorn.
  */
-function bandByWord(pool) {
-  const band = new Map();
-  rankPool(pool).forEach((entry, rank) => band.set(entry.swahili, bandForRank(rank)));
+function poolByImportance(pool) {
+  const ranked = rankPool(pool);
+  const rank = new Map(ranked.map((entry, i) => [entry.swahili, i]));
+  const band = new Map(ranked.map((entry, i) => [entry.swahili, bandForRank(i)]));
   for (const [lemma, coreBand] of CORE_BAND) {
     const entry = pool.find((e) => e.swahili.toLowerCase() === lemma);
     if (entry) band.set(entry.swahili, Math.min(band.get(entry.swahili) ?? 9, coreBand));
   }
-  return band;
+  const ordered = [...ranked].sort(
+    (a, b) =>
+      band.get(a.swahili) - band.get(b.swahili) || rank.get(a.swahili) - rank.get(b.swahili),
+  );
+  return { band, ordered };
 }
 
 /**
@@ -301,16 +341,19 @@ async function main() {
   }
 
   // 5. Pool: erst alle Wörter (billig, werden am häufigsten abgespielt),
-  //    dann alle Beispielsätze — jeweils in Pool-Reihenfolge.
+  //    dann alle Beispielsätze — beides **nach Häufigkeit**, nicht in
+  //    Pool-Reihenfolge. Der Pool ist alphabetisch sortiert; wer ihn so
+  //    abarbeitet, vertont `abiria` und `ada` und lässt `kwenda` liegen.
+  //    Bricht ein Lauf am Budget ab, ist damit das Wichtigste schon drin.
   //    Wörter laufen immer mit, auch bei --band: sie sind zusammen keine 2 %
   //    der Arbeit und entscheiden, ob eine Karte im Hörmodus vorkommt.
-  for (const entry of pool) {
+  const { band, ordered } = poolByImportance(pool);
+  for (const entry of ordered) {
     const voice = voiceForWord(entry.swahili);
     tasks.push({ text: entry.swahili.trim(), voice, kind: "Wort" });
   }
-  const band = MAX_BAND === null ? null : bandByWord(pool);
-  for (const entry of pool) {
-    if (band && (band.get(entry.swahili) ?? 9) > MAX_BAND) continue;
+  for (const entry of ordered) {
+    if (MAX_BAND !== null && (band.get(entry.swahili) ?? 9) > MAX_BAND) continue;
     const voice = voiceForWord(entry.swahili);
     for (const ex of entry.examples ?? []) {
       if (ex.sw) tasks.push({ text: ex.sw.trim(), voice, kind: "Beispiel" });
@@ -354,7 +397,15 @@ async function main() {
   if (MAX_BAND !== null) {
     console.log(`Filter: Beispielsätze bis einschließlich Band ${MAX_BAND} (Wörter ungefiltert).`);
   }
-  console.log(`Budget dieser Lauf: ${BUDGET} Zeichen.${dryRun ? " (Dry-Run)" : ""}\n`);
+  console.log(`Budget dieser Lauf: ${BUDGET} Zeichen.${dryRun ? " (Dry-Run)" : ""}`);
+
+  dictLocators = await loadDictLocators();
+  console.log(
+    dictLocators.length
+      ? `Aussprache: ${dictLocators.length} Wörterbuch/Wörterbücher aktiv (kostet keine Zeichen).`
+      : "Aussprache: kein Wörterbuch — scripts/build-pronunciation-dict.mjs --upload legt eins an.",
+  );
+  console.log();
 
   await mkdir(AUDIO_DIR, { recursive: true });
 

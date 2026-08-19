@@ -1,0 +1,419 @@
+{
+ "id": "reisen-3-01",
+ "title": "Treni ya Dodoma",
+ "titleDe": "Der Zug nach Dodoma",
+ "band": 3,
+ "topic": "Reisen",
+ "emoji": "🚂",
+ "lemmas": [
+  "asubuhi",
+  "baba",
+  "bila",
+  "chai",
+  "dirisha",
+  "ingi",
+  "ingine",
+  "jioni",
+  "juu",
+  "karibu",
+  "kelele",
+  "kuamka",
+  "kuangalia",
+  "kuanza",
+  "kuchelewa",
+  "kuchukua",
+  "kueleza",
+  "kufika",
+  "kufurahi",
+  "kuketi",
+  "kulala",
+  "kumi",
+  "kungoja",
+  "kununua",
+  "kuona",
+  "kushuka",
+  "kusimama",
+  "kusubiri",
+  "kutembelea",
+  "kuuliza",
+  "kuwa",
+  "kuzungumza",
+  "kwa",
+  "kwamba",
+  "kwenda",
+  "lakini",
+  "mahindi",
+  "mbele",
+  "mbili",
+  "mgonjwa",
+  "mji",
+  "mkate",
+  "mlima",
+  "moja",
+  "mwanamke",
+  "mzee",
+  "mzigo",
+  "na",
+  "ng'ombe",
+  "nini",
+  "nje",
+  "nne",
+  "peke",
+  "saa",
+  "safari",
+  "sana",
+  "sanduku",
+  "shamba",
+  "stesheni",
+  "tayari",
+  "tikiti",
+  "treni",
+  "wapi",
+  "watu"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Rashidi alinunua tikiti ya treni ya kwenda Dodoma. Aliamka saa kumi na moja asubuhi, akachukua sanduku lake akaenda stesheni.",
+   "de": "Rashidi kaufte eine Zugfahrkarte nach Dodoma. Er stand um fünf Uhr morgens auf, nahm seinen Koffer und ging zum Bahnhof."
+  },
+  {
+   "sw": "Stesheni kulikuwa na watu wengi. Wengine walilala juu ya mizigo yao, wengine walinunua chai na mikate. Treni ilichelewa kwa saa mbili, lakini watu wote walisubiri bila kelele.",
+   "de": "Am Bahnhof waren viele Leute. Die einen schliefen auf ihrem Gepäck, die anderen kauften Tee und Brot. Der Zug hatte zwei Stunden Verspätung, aber alle warteten still."
+  },
+  {
+   "sw": "Safari ilianza saa nne. Rashidi aliketi karibu na dirisha akaangalia nje. Nje ya mji kulikuwa na mashamba ya mahindi, milima na ng'ombe wengi.",
+   "de": "Um zehn Uhr ging die Fahrt los. Rashidi setzte sich ans Fenster und sah hinaus. Außerhalb der Stadt lagen Maisfelder, Berge und viele Rinder."
+  },
+  {
+   "sw": "Mwanamke mzee aliketi karibu naye akaanza kuzungumza. Alimwuliza Rashidi anakwenda wapi na kwa nini. Rashidi alieleza kwamba anakwenda kutembelea baba yake mgonjwa.",
+   "de": "Eine alte Frau setzte sich neben ihn und fing an zu reden. Sie fragte Rashidi, wohin er fahre und warum. Rashidi erzählte, dass er seinen kranken Vater besuchen wolle."
+  },
+  {
+   "sw": "Jioni treni ilifika Dodoma. Rashidi alishuka akaona baba yake amesimama mbele ya stesheni, tayari akimngoja. Baba alikuwa mzee, lakini alisimama peke yake, na Rashidi alifurahi sana.",
+   "de": "Am Abend kam der Zug in Dodoma an. Rashidi stieg aus und sah seinen Vater vor dem Bahnhof stehen, der schon auf ihn wartete. Der Vater war alt, aber er stand aus eigener Kraft da, und Rashidi freute sich sehr."
+  }
+ ],
+ "glosses": {
+  "rashidi": {
+   "lemma": "rashidi",
+   "de": "Rashidi (Name)",
+   "proper": true
+  },
+  "alinunua": {
+   "lemma": "kununua",
+   "de": "er kaufte"
+  },
+  "tikiti": {
+   "lemma": "tikiti",
+   "de": "Fahrkarte"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "treni": {
+   "lemma": "treni",
+   "de": "Zug"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "fahren, gehen"
+  },
+  "dodoma": {
+   "lemma": "dodoma",
+   "de": "Dodoma (Stadt in Tansania)",
+   "proper": true
+  },
+  "aliamka": {
+   "lemma": "kuamka",
+   "de": "er stand auf"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins (saa kumi na moja: fünf Uhr)"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "morgens"
+  },
+  "akachukua": {
+   "lemma": "kuchukua",
+   "de": "und nahm mit"
+  },
+  "sanduku": {
+   "lemma": "sanduku",
+   "de": "Koffer"
+  },
+  "lake": {
+   "lemma": "-ake",
+   "de": "seinen",
+   "structure": true
+  },
+  "akaenda": {
+   "lemma": "kwenda",
+   "de": "und ging"
+  },
+  "stesheni": {
+   "lemma": "stesheni",
+   "de": "Bahnhof"
+  },
+  "kulikuwa": {
+   "lemma": "kuwa",
+   "de": "es gab, es waren"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "wengi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "wengine": {
+   "lemma": "ingine",
+   "de": "die einen, die anderen"
+  },
+  "walilala": {
+   "lemma": "kulala",
+   "de": "sie schliefen"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "auf, oben"
+  },
+  "mizigo": {
+   "lemma": "mzigo",
+   "de": "Gepäck"
+  },
+  "yao": {
+   "lemma": "-ao",
+   "de": "ihrem",
+   "structure": true
+  },
+  "walinunua": {
+   "lemma": "kununua",
+   "de": "sie kauften"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "mikate": {
+   "lemma": "mkate",
+   "de": "Brote"
+  },
+  "ilichelewa": {
+   "lemma": "kuchelewa",
+   "de": "er hatte Verspätung"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, um (kwa nini: warum)"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "walisubiri": {
+   "lemma": "kusubiri",
+   "de": "sie warteten"
+  },
+  "safari": {
+   "lemma": "safari",
+   "de": "Fahrt, Reise"
+  },
+  "ilianza": {
+   "lemma": "kuanza",
+   "de": "sie begann"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier (saa nne: zehn Uhr)"
+  },
+  "aliketi": {
+   "lemma": "kuketi",
+   "de": "er setzte sich"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe bei, neben"
+  },
+  "dirisha": {
+   "lemma": "dirisha",
+   "de": "Fenster"
+  },
+  "akaangalia": {
+   "lemma": "kuangalia",
+   "de": "und sah"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "hinaus, außerhalb"
+  },
+  "mji": {
+   "lemma": "mji",
+   "de": "Stadt"
+  },
+  "mashamba": {
+   "lemma": "shamba",
+   "de": "Felder"
+  },
+  "mahindi": {
+   "lemma": "mahindi",
+   "de": "Mais"
+  },
+  "milima": {
+   "lemma": "mlima",
+   "de": "Berge"
+  },
+  "ng'ombe": {
+   "lemma": "ng'ombe",
+   "de": "Rinder"
+  },
+  "mwanamke": {
+   "lemma": "mwanamke",
+   "de": "Frau"
+  },
+  "mzee": {
+   "lemma": "mzee",
+   "de": "alt, alte Person"
+  },
+  "naye": {
+   "lemma": "na",
+   "de": "neben ihn, mit ihm"
+  },
+  "akaanza": {
+   "lemma": "kuanza",
+   "de": "und fing an"
+  },
+  "kuzungumza": {
+   "lemma": "kuzungumza",
+   "de": "zu reden"
+  },
+  "alimwuliza": {
+   "lemma": "kuuliza",
+   "de": "sie fragte ihn"
+  },
+  "anakwenda": {
+   "lemma": "kwenda",
+   "de": "er fährt"
+  },
+  "wapi": {
+   "lemma": "wapi",
+   "de": "wohin, wo"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was (kwa nini: warum)"
+  },
+  "alieleza": {
+   "lemma": "kueleza",
+   "de": "er erzählte"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "kutembelea": {
+   "lemma": "kutembelea",
+   "de": "zu besuchen"
+  },
+  "baba": {
+   "lemma": "baba",
+   "de": "Vater"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seinen, sein",
+   "structure": true
+  },
+  "mgonjwa": {
+   "lemma": "mgonjwa",
+   "de": "krank"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "ilifika": {
+   "lemma": "kufika",
+   "de": "er kam an"
+  },
+  "alishuka": {
+   "lemma": "kushuka",
+   "de": "er stieg aus"
+  },
+  "akaona": {
+   "lemma": "kuona",
+   "de": "und sah"
+  },
+  "amesimama": {
+   "lemma": "kusimama",
+   "de": "stehen, er steht"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor"
+  },
+  "tayari": {
+   "lemma": "tayari",
+   "de": "schon, bereit"
+  },
+  "akimngoja": {
+   "lemma": "kungoja",
+   "de": "während er auf ihn wartete"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "alisimama": {
+   "lemma": "kusimama",
+   "de": "er stand"
+  },
+  "peke": {
+   "lemma": "peke",
+   "de": "allein"
+  },
+  "alifurahi": {
+   "lemma": "kufurahi",
+   "de": "er freute sich"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "kelele": {
+   "lemma": "kelele",
+   "de": "Lärm"
+  }
+ },
+ "audio": null
+}

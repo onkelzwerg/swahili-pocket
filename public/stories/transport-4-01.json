@@ -1,0 +1,626 @@
+{
+ "id": "transport-4-01",
+ "title": "Foleni ya Barabara ya Morogoro",
+ "titleDe": "Der Stau auf der Morogoro-Straße",
+ "band": 4,
+ "topic": "Transport",
+ "emoji": "🚐",
+ "lemmas": [
+  "abiria",
+  "baadaye",
+  "barabara",
+  "bila",
+  "dakika",
+  "daktari",
+  "daladala",
+  "dereva",
+  "dirisha",
+  "foleni",
+  "gari",
+  "ghafla",
+  "hadithi",
+  "hakuna",
+  "hali",
+  "hata",
+  "hospitali",
+  "ingine",
+  "ishirini",
+  "jina",
+  "jioni",
+  "joto",
+  "kali",
+  "kama",
+  "karibu",
+  "kati",
+  "katika",
+  "kidogo",
+  "kike",
+  "kila",
+  "kondakta",
+  "kuambia",
+  "kuangalia",
+  "kuanza",
+  "kubwa",
+  "kuchukua",
+  "kueleza",
+  "kufanya",
+  "kufika",
+  "kujibu",
+  "kujua",
+  "kuketi",
+  "kulala",
+  "kulia",
+  "kumi",
+  "kuna",
+  "kupa",
+  "kupiga kelele",
+  "kupiga simu",
+  "kupinda",
+  "kusaidia",
+  "kusema",
+  "kushika",
+  "kusimama",
+  "kusimulia",
+  "kusubiri",
+  "kutoa",
+  "kutulia",
+  "kuuliza",
+  "kuwa",
+  "kuzaa",
+  "kwa",
+  "kwenda",
+  "lakini",
+  "maji",
+  "mama",
+  "maumivu",
+  "mbele",
+  "mbili",
+  "mjamzito",
+  "mkono",
+  "mlango",
+  "moja",
+  "msongamano",
+  "mtoto",
+  "mtu",
+  "mwanamke",
+  "mwuguzi",
+  "mzee",
+  "na",
+  "nauli",
+  "ndani",
+  "neno",
+  "nje",
+  "njia",
+  "nusu",
+  "nyuma",
+  "nyumba",
+  "saa",
+  "usiku",
+  "vizuri",
+  "watu"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Saa kumi na mbili jioni barabara ya Morogoro ilikuwa na msongamano mkubwa. Daladala ya Neema ilisimama katika foleni kwa nusu saa bila kwenda mbele hata kidogo.",
+   "de": "Um sechs Uhr abends herrschte auf der Morogoro-Straße dichter Verkehr. Neemas Minibus stand eine halbe Stunde im Stau, ohne auch nur ein Stück vorwärtszukommen."
+  },
+  {
+   "sw": "Ndani ya gari kulikuwa na joto kali. Abiria hawakusema neno; wengine walilala, wengine waliangalia nje ya dirisha. Mtoto mmoja alilia kwa joto, na mama yake alimpa maji.",
+   "de": "Im Wagen war es sehr heiß. Die Fahrgäste sagten kein Wort; die einen schliefen, die anderen sahen aus dem Fenster. Ein Kind weinte vor Hitze, und seine Mutter gab ihm Wasser."
+  },
+  {
+   "sw": "Ghafla mwanamke aliyeketi nyuma alianza kupiga kelele. Alikuwa mjamzito, na maumivu yalikuwa makali. Watu waliokuwa karibu naye walimwangalia bila kujua la kufanya.",
+   "de": "Plötzlich fing eine Frau, die hinten saß, an zu schreien. Sie war schwanger, und die Schmerzen waren heftig. Die Leute neben ihr sahen sie an, ohne zu wissen, was sie tun sollten."
+  },
+  {
+   "sw": "Kondakta alisimama akauliza kama kuna daktari ndani ya gari. Hakuna mtu aliyejibu. Dereva alitoa gari nje ya barabara akaanza kupinda kati ya magari mengine.",
+   "de": "Der Schaffner stand auf und fragte, ob ein Arzt im Wagen sei. Niemand antwortete. Der Fahrer lenkte den Wagen von der Straße herunter und schlängelte sich zwischen den anderen Autos hindurch."
+  },
+  {
+   "sw": "Abiria wawili walimsaidia mwanamke kuketi vizuri. Mmoja alimpigia simu hospitali akaeleza hali ya njia. Mzee mmoja alishika mkono wake akamwambia atulie.",
+   "de": "Zwei Fahrgäste halfen der Frau, bequem zu sitzen. Einer rief im Krankenhaus an und schilderte die Lage auf der Straße. Ein alter Mann hielt ihre Hand und sagte ihr, sie solle ruhig bleiben."
+  },
+  {
+   "sw": "Dakika ishirini baadaye daladala ilifika mlangoni mwa hospitali, na wauguzi walikuwa wakisubiri nje. Dereva hakuchukua nauli yake. Usiku ule mtoto wa kike alizaliwa. Abiria hawakujua jina lake, lakini kila mmoja alifika nyumbani akiwa na hadithi ya kusimulia.",
+   "de": "Zwanzig Minuten später hielt der Minibus vor der Tür des Krankenhauses, und die Pflegekräfte warteten schon draußen. Der Fahrer nahm ihren Fahrpreis nicht an. In jener Nacht kam ein Mädchen zur Welt. Die Fahrgäste erfuhren ihren Namen nie, aber jeder kam mit einer Geschichte zum Erzählen nach Hause."
+  }
+ ],
+ "glosses": {
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei (saa kumi na mbili: sechs Uhr)"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "abends"
+  },
+  "barabara": {
+   "lemma": "barabara",
+   "de": "Straße"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "morogoro": {
+   "lemma": "morogoro",
+   "de": "Morogoro (Stadt und Straßenname)",
+   "proper": true
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war, es herrschte"
+  },
+  "msongamano": {
+   "lemma": "msongamano",
+   "de": "Stau"
+  },
+  "mkubwa": {
+   "lemma": "kubwa",
+   "de": "groß, dicht"
+  },
+  "daladala": {
+   "lemma": "daladala",
+   "de": "Minibus"
+  },
+  "neema": {
+   "lemma": "neema",
+   "de": "Neema (Name)",
+   "proper": true
+  },
+  "ilisimama": {
+   "lemma": "kusimama",
+   "de": "er stand"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "foleni": {
+   "lemma": "foleni",
+   "de": "Stau, Schlange"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für (Zeitdauer)"
+  },
+  "nusu": {
+   "lemma": "nusu",
+   "de": "halbe"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "zu fahren"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vorwärts, vorn"
+  },
+  "hata": {
+   "lemma": "hata",
+   "de": "auch nur, sogar"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein Stück, ein bisschen"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "drinnen, in"
+  },
+  "gari": {
+   "lemma": "gari",
+   "de": "Wagen"
+  },
+  "kulikuwa": {
+   "lemma": "kuwa",
+   "de": "es war, es gab"
+  },
+  "joto": {
+   "lemma": "joto",
+   "de": "Hitze"
+  },
+  "kali": {
+   "lemma": "kali",
+   "de": "stark, scharf"
+  },
+  "abiria": {
+   "lemma": "abiria",
+   "de": "Fahrgäste"
+  },
+  "hawakusema": {
+   "lemma": "kusema",
+   "de": "sie sagten nicht"
+  },
+  "neno": {
+   "lemma": "neno",
+   "de": "Wort"
+  },
+  "wengine": {
+   "lemma": "ingine",
+   "de": "die einen, die anderen"
+  },
+  "walilala": {
+   "lemma": "kulala",
+   "de": "sie schliefen"
+  },
+  "waliangalia": {
+   "lemma": "kuangalia",
+   "de": "sie sahen"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "hinaus, draußen"
+  },
+  "dirisha": {
+   "lemma": "dirisha",
+   "de": "Fenster"
+  },
+  "ghafla": {
+   "lemma": "ghafla",
+   "de": "plötzlich"
+  },
+  "mwanamke": {
+   "lemma": "mwanamke",
+   "de": "Frau"
+  },
+  "aliyeketi": {
+   "lemma": "kuketi",
+   "de": "die saß"
+  },
+  "nyuma": {
+   "lemma": "nyuma",
+   "de": "hinten"
+  },
+  "alianza": {
+   "lemma": "kuanza",
+   "de": "sie fing an"
+  },
+  "kupiga": {
+   "lemma": "kupiga kelele",
+   "de": "zu schreien"
+  },
+  "kelele": {
+   "lemma": "kupiga kelele",
+   "de": "(Teil von: schreien)"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "mjamzito": {
+   "lemma": "mjamzito",
+   "de": "schwanger"
+  },
+  "maumivu": {
+   "lemma": "maumivu",
+   "de": "Schmerzen"
+  },
+  "yalikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "makali": {
+   "lemma": "kali",
+   "de": "heftig (Ma-Klasse)"
+  },
+  "kondakta": {
+   "lemma": "kondakta",
+   "de": "Schaffner"
+  },
+  "alisimama": {
+   "lemma": "kusimama",
+   "de": "er stand auf"
+  },
+  "akauliza": {
+   "lemma": "kuuliza",
+   "de": "und fragte"
+  },
+  "kama": {
+   "lemma": "kama",
+   "de": "ob"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "daktari": {
+   "lemma": "daktari",
+   "de": "Arzt"
+  },
+  "hakuna": {
+   "lemma": "hakuna",
+   "de": "es gibt kein"
+  },
+  "mtu": {
+   "lemma": "mtu",
+   "de": "Mensch, niemand"
+  },
+  "aliyejibu": {
+   "lemma": "kujibu",
+   "de": "der antwortete"
+  },
+  "dereva": {
+   "lemma": "dereva",
+   "de": "Fahrer"
+  },
+  "alitoa": {
+   "lemma": "kutoa",
+   "de": "er lenkte heraus"
+  },
+  "akaanza": {
+   "lemma": "kuanza",
+   "de": "und fing an"
+  },
+  "kupinda": {
+   "lemma": "kupinda",
+   "de": "abzubiegen"
+  },
+  "kati": {
+   "lemma": "kati",
+   "de": "zwischen"
+  },
+  "magari": {
+   "lemma": "gari",
+   "de": "Autos"
+  },
+  "mengine": {
+   "lemma": "ingine",
+   "de": "andere"
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (M-Wa-Klasse)"
+  },
+  "walimsaidia": {
+   "lemma": "kusaidia",
+   "de": "sie halfen ihr"
+  },
+  "kuketi": {
+   "lemma": "kuketi",
+   "de": "zu sitzen"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, bequem"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "einer"
+  },
+  "alimpigia": {
+   "lemma": "kupiga simu",
+   "de": "er rief an"
+  },
+  "simu": {
+   "lemma": "kupiga simu",
+   "de": "(Teil von: anrufen)"
+  },
+  "hospitali": {
+   "lemma": "hospitali",
+   "de": "Krankenhaus"
+  },
+  "akaeleza": {
+   "lemma": "kueleza",
+   "de": "und schilderte"
+  },
+  "hali": {
+   "lemma": "hali",
+   "de": "Lage"
+  },
+  "njia": {
+   "lemma": "njia",
+   "de": "Weg, Straße"
+  },
+  "mzee": {
+   "lemma": "mzee",
+   "de": "alter Mann"
+  },
+  "alishika": {
+   "lemma": "kushika",
+   "de": "er hielt"
+  },
+  "mkono": {
+   "lemma": "mkono",
+   "de": "Hand"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "akamwambia": {
+   "lemma": "kuambia",
+   "de": "und sagte ihr"
+  },
+  "atulie": {
+   "lemma": "kutulia",
+   "de": "sie solle ruhig bleiben (Konjunktiv)"
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "ishirini": {
+   "lemma": "ishirini",
+   "de": "zwanzig"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später"
+  },
+  "ilifika": {
+   "lemma": "kufika",
+   "de": "er kam an"
+  },
+  "mlangoni": {
+   "lemma": "mlango",
+   "de": "an der Tür"
+  },
+  "mwa": {
+   "lemma": "mwa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "wauguzi": {
+   "lemma": "mwuguzi",
+   "de": "Pflegekräfte"
+  },
+  "walikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "wakisubiri": {
+   "lemma": "kusubiri",
+   "de": "am Warten"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht"
+  },
+  "ule": {
+   "lemma": "ule",
+   "de": "jene",
+   "structure": true
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "kike": {
+   "lemma": "kike",
+   "de": "weiblich"
+  },
+  "alizaliwa": {
+   "lemma": "kuzaa",
+   "de": "es wurde geboren"
+  },
+  "hawakujua": {
+   "lemma": "kujua",
+   "de": "sie wussten nicht"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "lake": {
+   "lemma": "-ake",
+   "de": "ihren",
+   "structure": true
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jeder"
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "er kam an"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  },
+  "akiwa": {
+   "lemma": "kuwa",
+   "de": "während er hatte"
+  },
+  "hadithi": {
+   "lemma": "hadithi",
+   "de": "Geschichte"
+  },
+  "kusimulia": {
+   "lemma": "kusimulia",
+   "de": "zu erzählen"
+  },
+  "alilia": {
+   "lemma": "kulia",
+   "de": "es weinte"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seine, ihren",
+   "structure": true
+  },
+  "alimpa": {
+   "lemma": "kupa",
+   "de": "sie gab ihm"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "waliokuwa": {
+   "lemma": "kuwa",
+   "de": "die waren"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "neben, nahe"
+  },
+  "naye": {
+   "lemma": "na",
+   "de": "bei ihr"
+  },
+  "walimwangalia": {
+   "lemma": "kuangalia",
+   "de": "sie sahen sie an"
+  },
+  "kujua": {
+   "lemma": "kujua",
+   "de": "zu wissen"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "das (Genitivkonkordanz)",
+   "structure": true
+  },
+  "kufanya": {
+   "lemma": "kufanya",
+   "de": "zu tun"
+  },
+  "hakuchukua": {
+   "lemma": "kuchukua",
+   "de": "er nahm nicht"
+  },
+  "nauli": {
+   "lemma": "nauli",
+   "de": "Fahrpreis"
+  }
+ },
+ "audio": null
+}

@@ -1,0 +1,624 @@
+{
+ "id": "essen-4-01",
+ "title": "Kibanda cha Saidi",
+ "titleDe": "Saidis Imbissstand",
+ "band": 4,
+ "topic": "Essen",
+ "emoji": "🍟",
+ "lemmas": [
+  "ajira",
+  "baa",
+  "basi",
+  "bila",
+  "chipsi",
+  "hadi",
+  "haraka",
+  "hodari",
+  "hoteli",
+  "ingi",
+  "jana",
+  "jiko",
+  "jina",
+  "jioni",
+  "jumapili",
+  "kampuni",
+  "karibu",
+  "katika",
+  "kazi",
+  "kiazi",
+  "kibanda",
+  "kidogo",
+  "kituo",
+  "kuambia",
+  "kuandika",
+  "kuangalia",
+  "kuanza",
+  "kubwa",
+  "kufanikiwa",
+  "kufanya",
+  "kufikiri",
+  "kufungua",
+  "kuisha",
+  "kuja",
+  "kujenga",
+  "kukaa",
+  "kukaanga",
+  "kununua",
+  "kupika",
+  "kupoteza",
+  "kupunguza",
+  "kurudi",
+  "kusubiri",
+  "kutafuta",
+  "kutumia",
+  "kuuza",
+  "kuwa",
+  "kwa",
+  "kwamba",
+  "kwanza",
+  "labda",
+  "lakini",
+  "makosa",
+  "mbili",
+  "mchezo",
+  "meza",
+  "mfuko",
+  "mji",
+  "mke",
+  "moja",
+  "mpira",
+  "mpishi",
+  "mtoto",
+  "mwaka",
+  "mwezi",
+  "na",
+  "ni",
+  "nini",
+  "njaa",
+  "nje",
+  "nyumba",
+  "pesa",
+  "pili",
+  "saa",
+  "saba",
+  "siku",
+  "sita",
+  "sufuria",
+  "tangu",
+  "tano",
+  "tatu",
+  "televisheni",
+  "tena",
+  "tu",
+  "tupu",
+  "ubao",
+  "usiku",
+  "wafanyakazi",
+  "watu",
+  "wewe",
+  "zito"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Saidi alifanya kazi katika hoteli kubwa mjini kwa miaka saba. Alikuwa mpishi wa pili jikoni. Mwaka jana kampuni ilipunguza wafanyakazi, na Saidi alipoteza kazi yake.",
+   "de": "Saidi arbeitete sieben Jahre lang in einem großen Hotel in der Stadt. Er war dort zweiter Koch. Im vergangenen Jahr baute die Firma Personal ab, und Saidi verlor seine Stelle."
+  },
+  {
+   "sw": "Kwa miezi miwili alitafuta ajira bila kufanikiwa. Siku moja mkewe alimwambia, „Wewe ni mpishi hodari. Kwa nini usifungue kibanda chako?“",
+   "de": "Zwei Monate lang suchte er ohne Erfolg eine Anstellung. Eines Tages sagte seine Frau zu ihm: „Du bist ein tüchtiger Koch. Warum machst du nicht deinen eigenen Stand auf?“"
+  },
+  {
+   "sw": "Walitumia pesa zao zote kununua jiko, sufuria kubwa na meza mbili. Saidi alijenga kibanda kidogo karibu na kituo cha basi, na mtoto wao aliandika jina la kibanda kwenye ubao.",
+   "de": "Sie gaben ihr ganzes Geld für einen Herd, einen großen Topf und zwei Tische aus. Saidi baute einen kleinen Stand nahe der Bushaltestelle, und ihr Kind schrieb den Namen des Standes auf ein Schild."
+  },
+  {
+   "sw": "Siku ya kwanza aliuza chipsi tatu tu. Siku ya pili aliuza tano. Jioni alikaa nje ya kibanda akifikiri kwamba labda alifanya makosa, lakini mkewe alimwambia asubiri kidogo.",
+   "de": "Am ersten Tag verkaufte er nur drei Portionen Pommes. Am zweiten Tag verkaufte er fünf. Abends saß er vor dem Stand und dachte, dass er vielleicht einen Fehler gemacht hatte, doch seine Frau sagte ihm, er solle ein wenig abwarten."
+  },
+  {
+   "sw": "Siku ya Jumapili kulikuwa na mchezo mkubwa wa mpira. Watu wengi walikuja kituoni kuangalia televisheni ya baa iliyokuwa karibu, na wote walikuwa na njaa. Saidi alifungua kibanda haraka akaanza kukaanga viazi.",
+   "de": "Am Sonntag aber war ein großes Fußballspiel. Viele Leute kamen zur Haltestelle, um im Fernseher der nahen Bar zuzuschauen, und alle hatten Hunger. Saidi öffnete schnell seinen Stand und fing an, Kartoffeln zu braten."
+  },
+  {
+   "sw": "Usiku ule Saidi na mkewe walipika hadi saa sita. Viazi vyote viliisha, na mfuko wake ulikuwa mzito aliporudi nyumbani. Tangu siku ile kibanda chake hakikuwa tupu tena.",
+   "de": "In jener Nacht kochten Saidi und seine Frau bis Mitternacht. Die Kartoffeln gingen alle aus, und seine Tasche war schwer, als er nach Hause kam. Seit jenem Tag stand sein Imbiss nie wieder leer."
+  }
+ ],
+ "glosses": {
+  "saidi": {
+   "lemma": "saidi",
+   "de": "Saidi (Name)",
+   "proper": true
+  },
+  "alifanya": {
+   "lemma": "kufanya",
+   "de": "er machte, er arbeitete"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit, Stelle"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "hoteli": {
+   "lemma": "hoteli",
+   "de": "Hotel"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "mjini": {
+   "lemma": "mji",
+   "de": "in der Stadt"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, warum (kwa nini)"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahre"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben"
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "jana": {
+   "lemma": "jana",
+   "de": "vergangen, gestern"
+  },
+  "kampuni": {
+   "lemma": "kampuni",
+   "de": "Firma"
+  },
+  "ilipunguza": {
+   "lemma": "kupunguza",
+   "de": "sie verringerte"
+  },
+  "wafanyakazi": {
+   "lemma": "wafanyakazi",
+   "de": "Personal"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "alipoteza": {
+   "lemma": "kupoteza",
+   "de": "er verlor"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seine",
+   "structure": true
+  },
+  "miezi": {
+   "lemma": "mwezi",
+   "de": "Monate"
+  },
+  "miwili": {
+   "lemma": "mbili",
+   "de": "zwei (Mi-Klasse)"
+  },
+  "alitafuta": {
+   "lemma": "kutafuta",
+   "de": "er suchte"
+  },
+  "ajira": {
+   "lemma": "ajira",
+   "de": "Anstellung"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "kufanikiwa": {
+   "lemma": "kufanikiwa",
+   "de": "Erfolg zu haben"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eines"
+  },
+  "mkewe": {
+   "lemma": "mke",
+   "de": "seine Ehefrau"
+  },
+  "alimwambia": {
+   "lemma": "kuambia",
+   "de": "sie sagte ihm"
+  },
+  "wewe": {
+   "lemma": "wewe",
+   "de": "du"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "bist"
+  },
+  "mpishi": {
+   "lemma": "mpishi",
+   "de": "Koch"
+  },
+  "hodari": {
+   "lemma": "hodari",
+   "de": "tüchtig"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was (kwa nini: warum)"
+  },
+  "usifungue": {
+   "lemma": "kufungua",
+   "de": "machst du nicht auf"
+  },
+  "kibanda": {
+   "lemma": "kibanda",
+   "de": "Stand, Hütte"
+  },
+  "chako": {
+   "lemma": "-ako",
+   "de": "deinen",
+   "structure": true
+  },
+  "walitumia": {
+   "lemma": "kutumia",
+   "de": "sie verwendeten"
+  },
+  "pesa": {
+   "lemma": "pesa",
+   "de": "Geld"
+  },
+  "zao": {
+   "lemma": "-ao",
+   "de": "ihr",
+   "structure": true
+  },
+  "zote": {
+   "lemma": "-ote",
+   "de": "ganzes, alle",
+   "structure": true
+  },
+  "kununua": {
+   "lemma": "kununua",
+   "de": "zu kaufen"
+  },
+  "jiko": {
+   "lemma": "jiko",
+   "de": "Herd"
+  },
+  "sufuria": {
+   "lemma": "sufuria",
+   "de": "Topf"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tische"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "alijenga": {
+   "lemma": "kujenga",
+   "de": "er baute"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "klein"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe bei"
+  },
+  "kituo": {
+   "lemma": "kituo",
+   "de": "Haltestelle"
+  },
+  "cha": {
+   "lemma": "cha",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "Bus"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "erste"
+  },
+  "aliuza": {
+   "lemma": "kuuza",
+   "de": "er verkaufte"
+  },
+  "chipsi": {
+   "lemma": "chipsi",
+   "de": "Pommes"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "pili": {
+   "lemma": "pili",
+   "de": "zweite"
+  },
+  "tano": {
+   "lemma": "tano",
+   "de": "fünf"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "abends"
+  },
+  "alikaa": {
+   "lemma": "kukaa",
+   "de": "er saß"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "draußen, vor"
+  },
+  "akifikiri": {
+   "lemma": "kufikiri",
+   "de": "und dachte"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "labda": {
+   "lemma": "labda",
+   "de": "vielleicht"
+  },
+  "makosa": {
+   "lemma": "makosa",
+   "de": "Fehler"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "jumapili": {
+   "lemma": "jumapili",
+   "de": "Sonntag"
+  },
+  "kulikuwa": {
+   "lemma": "kuwa",
+   "de": "es gab"
+  },
+  "mchezo": {
+   "lemma": "mchezo",
+   "de": "Spiel"
+  },
+  "mkubwa": {
+   "lemma": "kubwa",
+   "de": "groß (M-Klasse)"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "mpira": {
+   "lemma": "mpira",
+   "de": "Ball, Fußball"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "wengi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "walikuja": {
+   "lemma": "kuja",
+   "de": "sie kamen"
+  },
+  "kituoni": {
+   "lemma": "kituo",
+   "de": "zur Haltestelle"
+  },
+  "kuangalia": {
+   "lemma": "kuangalia",
+   "de": "zuzuschauen"
+  },
+  "televisheni": {
+   "lemma": "televisheni",
+   "de": "Fernseher"
+  },
+  "baa": {
+   "lemma": "baa",
+   "de": "Bar"
+  },
+  "iliyokuwa": {
+   "lemma": "kuwa",
+   "de": "die war"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "walikuwa": {
+   "lemma": "kuwa",
+   "de": "sie hatten, sie waren"
+  },
+  "njaa": {
+   "lemma": "njaa",
+   "de": "Hunger"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht"
+  },
+  "ule": {
+   "lemma": "ule",
+   "de": "jene",
+   "structure": true
+  },
+  "walipika": {
+   "lemma": "kupika",
+   "de": "sie kochten"
+  },
+  "hadi": {
+   "lemma": "hadi",
+   "de": "bis"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde"
+  },
+  "sita": {
+   "lemma": "sita",
+   "de": "sechs (saa sita usiku: Mitternacht)"
+  },
+  "viazi": {
+   "lemma": "kiazi",
+   "de": "Kartoffeln"
+  },
+  "vyote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "viliisha": {
+   "lemma": "kuisha",
+   "de": "sie gingen aus"
+  },
+  "mfuko": {
+   "lemma": "mfuko",
+   "de": "Tasche"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "seine",
+   "structure": true
+  },
+  "ulikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "mzito": {
+   "lemma": "zito",
+   "de": "schwer"
+  },
+  "aliporudi": {
+   "lemma": "kurudi",
+   "de": "als er zurückkam"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  },
+  "tangu": {
+   "lemma": "tangu",
+   "de": "seit"
+  },
+  "ile": {
+   "lemma": "ile",
+   "de": "jenem",
+   "structure": true
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "sein",
+   "structure": true
+  },
+  "hakikuwa": {
+   "lemma": "kuwa",
+   "de": "er war nicht"
+  },
+  "tupu": {
+   "lemma": "tupu",
+   "de": "leer"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "wieder"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "jikoni": {
+   "lemma": "jiko",
+   "de": "in der Küche"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "wao": {
+   "lemma": "-ao",
+   "de": "ihr",
+   "structure": true
+  },
+  "aliandika": {
+   "lemma": "kuandika",
+   "de": "es schrieb"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "auf",
+   "structure": true
+  },
+  "ubao": {
+   "lemma": "ubao",
+   "de": "Schild, Tafel"
+  },
+  "asubiri": {
+   "lemma": "kusubiri",
+   "de": "er solle warten (Konjunktiv)"
+  },
+  "alifungua": {
+   "lemma": "kufungua",
+   "de": "er öffnete"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "akaanza": {
+   "lemma": "kuanza",
+   "de": "und fing an"
+  },
+  "kukaanga": {
+   "lemma": "kukaanga",
+   "de": "zu braten"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  }
+ },
+ "audio": null
+}

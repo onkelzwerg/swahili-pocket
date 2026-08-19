@@ -1,0 +1,611 @@
+{
+ "id": "gesundheit-4-01",
+ "title": "Jino la Bakari",
+ "titleDe": "Bakaris Zahn",
+ "band": 4,
+ "topic": "Gesundheit",
+ "emoji": "🦷",
+ "lemmas": [
+  "asubuhi",
+  "baadaye",
+  "bado",
+  "baridi",
+  "bila",
+  "binti",
+  "chache",
+  "chai",
+  "dakika",
+  "daktari",
+  "hata",
+  "hospitali",
+  "jicho",
+  "jino",
+  "jioni",
+  "jumatatu",
+  "kali",
+  "kama",
+  "kazi",
+  "kidogo",
+  "kidonge",
+  "kila",
+  "kinywa",
+  "kisha",
+  "kiti",
+  "kuambia",
+  "kuanza",
+  "kubwa",
+  "kucheka",
+  "kuchelewa",
+  "kuchukua",
+  "kuendelea",
+  "kufunga",
+  "kufungua",
+  "kujibu",
+  "kuketi",
+  "kula",
+  "kulala",
+  "kuleta",
+  "kununua",
+  "kunywa",
+  "kuongeza",
+  "kupanga",
+  "kupiga simu",
+  "kupima",
+  "kusema",
+  "kutaka",
+  "kutibu",
+  "kutoka",
+  "kuuliza",
+  "kuuma",
+  "kuwa",
+  "kuweza",
+  "kwa",
+  "kwanza",
+  "kwenda",
+  "lakini",
+  "maji",
+  "mara",
+  "matunda",
+  "maumivu",
+  "mbele",
+  "mchana",
+  "miadi",
+  "mimi",
+  "mkono",
+  "moja",
+  "moto",
+  "mpya",
+  "mswaki",
+  "mtoto",
+  "mwaka",
+  "mzee",
+  "na",
+  "neno",
+  "ngumu",
+  "ni",
+  "nje",
+  "njia",
+  "nusu",
+  "nyama",
+  "rahisi",
+  "saa",
+  "siku",
+  "sitini",
+  "tangu",
+  "tatu",
+  "teksi",
+  "tena",
+  "tu",
+  "upande",
+  "usiku",
+  "uso",
+  "vizuri",
+  "wakati",
+  "wala",
+  "wiki"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Kwa wiki tatu jino moja la Bakari lilimuuma. Usiku hakuweza kulala vizuri, na mchana hakuweza kula nyama wala matunda magumu.",
+   "de": "Drei Wochen lang schmerzte Bakari ein Zahn. Nachts konnte er nicht gut schlafen, und tagsüber konnte er weder Fleisch noch hartes Obst essen."
+  },
+  {
+   "sw": "Binti yake alimwambia aende hospitali, lakini Bakari alicheka. „Mimi ni mzee wa miaka sitini,“ alisema. „Sitaki kuketi mbele ya daktari kama mtoto.“ Aliendelea kunywa chai ya moto tu, na maumivu yaliongezeka kila siku.",
+   "de": "Seine Tochter sagte ihm, er solle ins Krankenhaus gehen, aber Bakari lachte nur. „Ich bin ein Mann von sechzig Jahren“, sagte er. „Ich will nicht wie ein Kind vor einem Arzt sitzen.“ Er trank weiter nur heißen Tee, und die Schmerzen wurden jeden Tag stärker."
+  },
+  {
+   "sw": "Jumatatu asubuhi uso wake ulikuwa mkubwa upande mmoja. Hakuweza kufungua kinywa chake vizuri, na hata maji baridi yalimletea maumivu makali.",
+   "de": "Am Montagmorgen war sein Gesicht auf einer Seite dick geschwollen. Er konnte den Mund nicht mehr richtig öffnen, und sogar kaltes Wasser bereitete ihm heftige Schmerzen."
+  },
+  {
+   "sw": "Binti yake hakuuliza tena. Alimpigia simu daktari, akapanga miadi, kisha akamchukua kwa teksi. Bakari hakusema neno njiani.",
+   "de": "Seine Tochter fragte nicht noch einmal. Sie rief beim Arzt an, machte einen Termin aus und brachte ihn dann mit dem Taxi hin. Bakari sagte unterwegs kein Wort."
+  },
+  {
+   "sw": "Daktari alipima jino kwa dakika chache tu. „Umechelewa kidogo, lakini bado tunaweza kulitibu,“ alisema. Bakari aliketi kwenye kiti kile bila kusema neno. Alifunga macho yake wakati daktari alipoanza kazi.",
+   "de": "Der Arzt untersuchte den Zahn nur ein paar Minuten. „Sie sind ein wenig spät dran, aber wir können ihn noch behandeln“, sagte er. Bakari saß auf jenem Stuhl, ohne ein Wort zu sagen. Er schloss die Augen, als der Arzt zu arbeiten begann."
+  },
+  {
+   "sw": "Nusu saa baadaye Bakari alitoka nje akiwa na vidonge mkononi. Njiani alinunua mswaki mpya. „Ilikuwa rahisi,“ binti yake alisema. Bakari hakujibu, lakini jioni ile alikula nyama kwa mara ya kwanza tangu wiki tatu.",
+   "de": "Eine halbe Stunde später kam Bakari mit Tabletten in der Hand heraus. Unterwegs kaufte er eine neue Zahnbürste. „Das war doch einfach“, sagte seine Tochter. Bakari antwortete nicht, aber an jenem Abend aß er zum ersten Mal seit drei Wochen wieder Fleisch."
+  }
+ ],
+ "glosses": {
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, mit"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Wochen"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei"
+  },
+  "jino": {
+   "lemma": "jino",
+   "de": "Zahn"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "ein"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "bakari": {
+   "lemma": "bakari",
+   "de": "Bakari (Name)",
+   "proper": true
+  },
+  "lilimuuma": {
+   "lemma": "kuuma",
+   "de": "er schmerzte ihn"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "nachts"
+  },
+  "hakuweza": {
+   "lemma": "kuweza",
+   "de": "er konnte nicht"
+  },
+  "kulala": {
+   "lemma": "kulala",
+   "de": "schlafen"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut, richtig"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "tagsüber"
+  },
+  "kula": {
+   "lemma": "kula",
+   "de": "essen"
+  },
+  "nyama": {
+   "lemma": "nyama",
+   "de": "Fleisch"
+  },
+  "wala": {
+   "lemma": "wala",
+   "de": "noch (weder ... noch)"
+  },
+  "matunda": {
+   "lemma": "matunda",
+   "de": "Obst"
+  },
+  "magumu": {
+   "lemma": "ngumu",
+   "de": "hart (Ma-Klasse)"
+  },
+  "binti": {
+   "lemma": "binti",
+   "de": "Tochter"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seine",
+   "structure": true
+  },
+  "alimwambia": {
+   "lemma": "kuambia",
+   "de": "sie sagte ihm"
+  },
+  "aende": {
+   "lemma": "kwenda",
+   "de": "er solle gehen (Konjunktiv)"
+  },
+  "hospitali": {
+   "lemma": "hospitali",
+   "de": "Krankenhaus"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "alicheka": {
+   "lemma": "kucheka",
+   "de": "er lachte"
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "bin"
+  },
+  "mzee": {
+   "lemma": "mzee",
+   "de": "älterer Mann"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahren"
+  },
+  "sitini": {
+   "lemma": "sitini",
+   "de": "sechzig"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er, sagte sie"
+  },
+  "sitaki": {
+   "lemma": "kutaka",
+   "de": "ich will nicht"
+  },
+  "kuketi": {
+   "lemma": "kuketi",
+   "de": "zu sitzen"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "daktari": {
+   "lemma": "daktari",
+   "de": "Arzt"
+  },
+  "kama": {
+   "lemma": "kama",
+   "de": "wie"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "jumatatu": {
+   "lemma": "jumatatu",
+   "de": "Montag"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen"
+  },
+  "uso": {
+   "lemma": "uso",
+   "de": "Gesicht"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "sein",
+   "structure": true
+  },
+  "ulikuwa": {
+   "lemma": "kuwa",
+   "de": "es war"
+  },
+  "mkubwa": {
+   "lemma": "kubwa",
+   "de": "groß, geschwollen"
+  },
+  "upande": {
+   "lemma": "upande",
+   "de": "Seite"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "einer"
+  },
+  "kufungua": {
+   "lemma": "kufungua",
+   "de": "zu öffnen"
+  },
+  "kinywa": {
+   "lemma": "kinywa",
+   "de": "Mund"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "seinen",
+   "structure": true
+  },
+  "hata": {
+   "lemma": "hata",
+   "de": "sogar"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "kalt"
+  },
+  "yalimletea": {
+   "lemma": "kuleta",
+   "de": "es bereitete ihm"
+  },
+  "maumivu": {
+   "lemma": "maumivu",
+   "de": "Schmerzen"
+  },
+  "makali": {
+   "lemma": "kali",
+   "de": "heftig (Ma-Klasse)"
+  },
+  "hakuuliza": {
+   "lemma": "kuuliza",
+   "de": "sie fragte nicht"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "noch einmal"
+  },
+  "alimpigia": {
+   "lemma": "kupiga simu",
+   "de": "sie rief an"
+  },
+  "simu": {
+   "lemma": "kupiga simu",
+   "de": "(Teil von: anrufen)"
+  },
+  "akapanga": {
+   "lemma": "kupanga",
+   "de": "und machte aus"
+  },
+  "miadi": {
+   "lemma": "miadi",
+   "de": "Termin"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "akamchukua": {
+   "lemma": "kuchukua",
+   "de": "und nahm ihn mit"
+  },
+  "teksi": {
+   "lemma": "teksi",
+   "de": "Taxi"
+  },
+  "alipima": {
+   "lemma": "kupima",
+   "de": "er untersuchte"
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "chache": {
+   "lemma": "chache",
+   "de": "wenige, ein paar"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "umechelewa": {
+   "lemma": "kuchelewa",
+   "de": "Sie sind spät dran"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein wenig"
+  },
+  "bado": {
+   "lemma": "bado",
+   "de": "noch"
+  },
+  "tunaweza": {
+   "lemma": "kuweza",
+   "de": "wir können"
+  },
+  "kulitibu": {
+   "lemma": "kutibu",
+   "de": "ihn zu behandeln"
+  },
+  "aliketi": {
+   "lemma": "kuketi",
+   "de": "er setzte sich"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "auf",
+   "structure": true
+  },
+  "kiti": {
+   "lemma": "kiti",
+   "de": "Stuhl"
+  },
+  "kile": {
+   "lemma": "kile",
+   "de": "jener",
+   "structure": true
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "kusema": {
+   "lemma": "kusema",
+   "de": "zu sagen"
+  },
+  "neno": {
+   "lemma": "neno",
+   "de": "Wort"
+  },
+  "nusu": {
+   "lemma": "nusu",
+   "de": "halbe"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunde"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später"
+  },
+  "alitoka": {
+   "lemma": "kutoka",
+   "de": "er kam heraus"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "nach draußen"
+  },
+  "akiwa": {
+   "lemma": "kuwa",
+   "de": "während er hatte"
+  },
+  "vidonge": {
+   "lemma": "kidonge",
+   "de": "Tabletten"
+  },
+  "mkononi": {
+   "lemma": "mkono",
+   "de": "in der Hand"
+  },
+  "njiani": {
+   "lemma": "njia",
+   "de": "unterwegs"
+  },
+  "alinunua": {
+   "lemma": "kununua",
+   "de": "er kaufte"
+  },
+  "mswaki": {
+   "lemma": "mswaki",
+   "de": "Zahnbürste"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neue"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "das war"
+  },
+  "rahisi": {
+   "lemma": "rahisi",
+   "de": "einfach"
+  },
+  "hakujibu": {
+   "lemma": "kujibu",
+   "de": "er antwortete nicht"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "Abend"
+  },
+  "ile": {
+   "lemma": "ile",
+   "de": "jenem",
+   "structure": true
+  },
+  "alikula": {
+   "lemma": "kula",
+   "de": "er aß"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "Mal"
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "erste"
+  },
+  "tangu": {
+   "lemma": "tangu",
+   "de": "seit"
+  },
+  "aliendelea": {
+   "lemma": "kuendelea",
+   "de": "er machte weiter"
+  },
+  "kunywa": {
+   "lemma": "kunywa",
+   "de": "zu trinken"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "moto": {
+   "lemma": "moto",
+   "de": "heiß"
+  },
+  "yaliongezeka": {
+   "lemma": "kuongeza",
+   "de": "sie wurden stärker"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jeden"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "hakusema": {
+   "lemma": "kusema",
+   "de": "er sagte nicht"
+  },
+  "alifunga": {
+   "lemma": "kufunga",
+   "de": "er schloss"
+  },
+  "macho": {
+   "lemma": "jicho",
+   "de": "Augen"
+  },
+  "wakati": {
+   "lemma": "wakati",
+   "de": "als, während"
+  },
+  "alipoanza": {
+   "lemma": "kuanza",
+   "de": "als er anfing"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  }
+ },
+ "audio": null
+}

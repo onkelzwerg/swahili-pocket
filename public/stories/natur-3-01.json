@@ -1,0 +1,420 @@
+{
+ "id": "natur-3-01",
+ "title": "Miti ya Kiwanja",
+ "titleDe": "Die Bäume auf dem Schulhof",
+ "band": 3,
+ "topic": "Natur",
+ "emoji": "🌱",
+ "lemmas": [
+  "asubuhi",
+  "bila",
+  "chini",
+  "hata",
+  "ingi",
+  "ingine",
+  "jioni",
+  "jua",
+  "kabla",
+  "kali",
+  "katika",
+  "kavu",
+  "kazi",
+  "kila",
+  "kivuli",
+  "kiwanja",
+  "kubwa",
+  "kucheka",
+  "kufanya",
+  "kufuata",
+  "kukaa",
+  "kuleta",
+  "kumi",
+  "kunyesha",
+  "kupanda",
+  "kupata",
+  "kupoteza",
+  "kusaidia",
+  "kusema",
+  "kutwa",
+  "kuwa",
+  "kuweka",
+  "kwa",
+  "lakini",
+  "leo",
+  "majani",
+  "maji",
+  "mapumziko",
+  "masomo",
+  "mbili",
+  "mchana",
+  "mdogo",
+  "mkono",
+  "moja",
+  "mti",
+  "mtoto",
+  "mvua",
+  "mwaka",
+  "mwalimu",
+  "mwezi",
+  "na",
+  "ndani",
+  "nguvu",
+  "shule",
+  "si",
+  "siku",
+  "tano",
+  "tena",
+  "uchafu",
+  "wakati"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Katika shule ya Mlimani kulikuwa na kiwanja kikubwa bila mti hata mmoja. Jua lilikuwa kali, na watoto walikaa ndani wakati wa mapumziko.",
+   "de": "In der Mlimani-Schule gab es einen großen Hof ohne einen einzigen Baum. Die Sonne brannte, und die Kinder blieben in der Pause drinnen."
+  },
+  {
+   "sw": "Siku moja mwalimu wao alileta miti midogo kumi. „Kila mtoto atapanda mti wake,“ alisema. „Katika miaka mitano tutakuwa na kivuli.“",
+   "de": "Eines Tages brachte ihr Lehrer zehn kleine Bäume mit. „Jedes Kind pflanzt seinen eigenen Baum“, sagte er. „In fünf Jahren haben wir Schatten.“"
+  },
+  {
+   "sw": "Watoto walifanya kazi kutwa. Kila mmoja alipanda mti wake akaweka maji chini yake. Jioni mikono yao ilikuwa na uchafu, lakini wote walicheka.",
+   "de": "Die Kinder arbeiteten den ganzen Tag. Jedes pflanzte seinen Baum und goss Wasser darauf. Am Abend hatten sie schmutzige Hände, aber alle lachten."
+  },
+  {
+   "sw": "Mvua haikunyesha kwa miezi miwili. Miti mingine ilipoteza majani yake. Watoto walileta maji kila asubuhi kabla ya masomo, na mwalimu wao aliwasaidia.",
+   "de": "Zwei Monate lang fiel kein Regen. Einige Bäume verloren ihre Blätter. Die Kinder brachten jeden Morgen vor dem Unterricht Wasser, und ihr Lehrer half ihnen dabei."
+  },
+  {
+   "sw": "Mwaka uliofuata mvua ilinyesha kwa siku nyingi, na miti ilipata nguvu. Leo watoto hukaa chini ya kivuli kila mchana, na kiwanja si kikavu tena.",
+   "de": "Im Jahr darauf regnete es viele Tage lang, und die Bäume wurden kräftig. Heute sitzen die Kinder jeden Mittag im Schatten, und der Hof ist nicht mehr ausgedörrt."
+  }
+ ],
+ "glosses": {
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "shule": {
+   "lemma": "shule",
+   "de": "Schule"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "mlimani": {
+   "lemma": "mlimani",
+   "de": "Mlimani (Ortsname)",
+   "proper": true
+  },
+  "kulikuwa": {
+   "lemma": "kuwa",
+   "de": "es gab"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "kiwanja": {
+   "lemma": "kiwanja",
+   "de": "Hof, Platz"
+  },
+  "kikubwa": {
+   "lemma": "kubwa",
+   "de": "groß (Ki-Klasse)"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "mti": {
+   "lemma": "mti",
+   "de": "Baum"
+  },
+  "hata": {
+   "lemma": "hata",
+   "de": "sogar, auch nur"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein einziger"
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  },
+  "lilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "kali": {
+   "lemma": "kali",
+   "de": "scharf, brennend"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "walikaa": {
+   "lemma": "kukaa",
+   "de": "sie blieben"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "drinnen"
+  },
+  "wakati": {
+   "lemma": "wakati",
+   "de": "Zeit, während"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "mapumziko": {
+   "lemma": "mapumziko",
+   "de": "Pause"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag, Tage"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eines"
+  },
+  "mwalimu": {
+   "lemma": "mwalimu",
+   "de": "Lehrer"
+  },
+  "wao": {
+   "lemma": "-ao",
+   "de": "ihr",
+   "structure": true
+  },
+  "alileta": {
+   "lemma": "kuleta",
+   "de": "er brachte"
+  },
+  "miti": {
+   "lemma": "mti",
+   "de": "Bäume"
+  },
+  "midogo": {
+   "lemma": "mdogo",
+   "de": "kleine (Mi-Klasse)"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jedes, jeden"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "atapanda": {
+   "lemma": "kupanda",
+   "de": "es wird pflanzen"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "seinen",
+   "structure": true
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahre"
+  },
+  "mitano": {
+   "lemma": "tano",
+   "de": "fünf (Mi-Klasse)"
+  },
+  "tutakuwa": {
+   "lemma": "kuwa",
+   "de": "wir werden haben"
+  },
+  "kivuli": {
+   "lemma": "kivuli",
+   "de": "Schatten"
+  },
+  "walifanya": {
+   "lemma": "kufanya",
+   "de": "sie machten"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "kutwa": {
+   "lemma": "kutwa",
+   "de": "den ganzen Tag"
+  },
+  "alipanda": {
+   "lemma": "kupanda",
+   "de": "es pflanzte"
+  },
+  "akaweka": {
+   "lemma": "kuweka",
+   "de": "und goss, und legte"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "unten, darunter"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seines, ihre",
+   "structure": true
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "mikono": {
+   "lemma": "mkono",
+   "de": "Hände"
+  },
+  "yao": {
+   "lemma": "-ao",
+   "de": "ihre",
+   "structure": true
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "uchafu": {
+   "lemma": "uchafu",
+   "de": "Schmutz"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "walicheka": {
+   "lemma": "kucheka",
+   "de": "sie lachten"
+  },
+  "mvua": {
+   "lemma": "mvua",
+   "de": "Regen"
+  },
+  "haikunyesha": {
+   "lemma": "kunyesha",
+   "de": "er fiel nicht, es regnete nicht"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, lang (Zeitdauer)"
+  },
+  "miezi": {
+   "lemma": "mwezi",
+   "de": "Monate"
+  },
+  "miwili": {
+   "lemma": "mbili",
+   "de": "zwei (Mi-Klasse)"
+  },
+  "mingine": {
+   "lemma": "ingine",
+   "de": "einige, andere"
+  },
+  "ilipoteza": {
+   "lemma": "kupoteza",
+   "de": "sie verloren"
+  },
+  "majani": {
+   "lemma": "majani",
+   "de": "Blätter"
+  },
+  "walileta": {
+   "lemma": "kuleta",
+   "de": "sie brachten"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen"
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "vor"
+  },
+  "masomo": {
+   "lemma": "masomo",
+   "de": "Unterricht"
+  },
+  "aliwasaidia": {
+   "lemma": "kusaidia",
+   "de": "er half ihnen"
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "uliofuata": {
+   "lemma": "kufuata",
+   "de": "das folgte, darauf"
+  },
+  "ilinyesha": {
+   "lemma": "kunyesha",
+   "de": "er fiel, es regnete"
+  },
+  "nyingi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "ilipata": {
+   "lemma": "kupata",
+   "de": "sie bekamen"
+  },
+  "nguvu": {
+   "lemma": "nguvu",
+   "de": "Kraft"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "hukaa": {
+   "lemma": "kukaa",
+   "de": "sie sitzen (gewöhnlich)"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "Mittag"
+  },
+  "si": {
+   "lemma": "si",
+   "de": "ist nicht"
+  },
+  "kikavu": {
+   "lemma": "kavu",
+   "de": "trocken (Ki-Klasse)"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "mehr, wieder"
+  }
+ },
+ "audio": null
+}

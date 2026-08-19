@@ -1,0 +1,589 @@
+{
+ "id": "reisen-4-01",
+ "title": "Mawimbi ya Kwenda Unguja",
+ "titleDe": "Wellen auf dem Weg nach Sansibar",
+ "band": 4,
+ "topic": "Reisen",
+ "emoji": "⛴️",
+ "lemmas": [
+  "abiria",
+  "asubuhi",
+  "baadaye",
+  "bahari",
+  "baridi",
+  "chuo kikuu",
+  "dakika",
+  "feri",
+  "ingi",
+  "ingine",
+  "jengo",
+  "jicho",
+  "jua",
+  "jumamosi",
+  "juu",
+  "kabla",
+  "karibu",
+  "kijani",
+  "kila",
+  "kisha",
+  "kiti",
+  "kuambia",
+  "kuangalia",
+  "kuanza",
+  "kubwa",
+  "kucheka",
+  "kufika",
+  "kufunga",
+  "kukaribisha",
+  "kuketi",
+  "kuliko",
+  "kuna",
+  "kuona",
+  "kuongeza",
+  "kupa",
+  "kupanda",
+  "kupiga",
+  "kusahau",
+  "kusaidia",
+  "kusema",
+  "kushika",
+  "kushuka",
+  "kusimama",
+  "kuumwa",
+  "kuwa",
+  "kuwahi",
+  "kuweka",
+  "kuzaa",
+  "kwa",
+  "kwamba",
+  "likizo",
+  "limau",
+  "mahali",
+  "maji",
+  "maumivu",
+  "mdomo",
+  "mji",
+  "mkoba",
+  "mlima",
+  "moja",
+  "muda",
+  "mvua",
+  "mwaka",
+  "mwanamke",
+  "mzigo",
+  "mzuri",
+  "na",
+  "ndani",
+  "nguo",
+  "nguvu",
+  "ni",
+  "nusu",
+  "nyuma",
+  "pamoja",
+  "polepole",
+  "rafiki",
+  "refu",
+  "saa",
+  "safari",
+  "sakafu",
+  "tano",
+  "tatu",
+  "tu",
+  "unguja",
+  "upepo",
+  "watu",
+  "wiki",
+  "wimbi",
+  "ziwa"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Neema hakuwahi kuona bahari kabla ya mwaka huu. Alizaliwa Mbeya, mahali ambapo kuna milima, mvua na baridi tu. Marafiki zake walimwambia kwamba bahari ni kubwa kuliko ziwa lolote.",
+   "de": "Neema hatte das Meer vor diesem Jahr nie gesehen. Sie wurde in Mbeya geboren, wo es nur Berge, Regen und Kälte gibt. Ihre Freunde hatten ihr gesagt, das Meer sei größer als jeder See."
+  },
+  {
+   "sw": "Rafiki yake wa chuo kikuu alimkaribisha Unguja kwa likizo ya wiki moja. Neema aliweka nguo zake ndani ya mkoba mmoja tu.",
+   "de": "Eine Freundin von der Universität lud sie für eine Woche Urlaub nach Sansibar ein. Neema packte ihre Kleider in einen einzigen Rucksack."
+  },
+  {
+   "sw": "Asubuhi ya Jumamosi walipanda feri pamoja na abiria wengine wengi. Feri ilikuwa kubwa kuliko majengo mengi ya mjini. Neema alisimama juu akaangalia maji kwa muda mrefu.",
+   "de": "Am Samstagmorgen gingen sie zusammen mit vielen anderen Passagieren an Bord der Fähre. Die Fähre war größer als die meisten Gebäude der Stadt. Neema stellte sich nach oben und sah lange auf das Wasser."
+  },
+  {
+   "sw": "Nusu ya safari ilikuwa nzuri. Kisha upepo uliongezeka, na mawimbi makubwa yalianza kupiga feri. Sakafu ilikuwa na maji baridi kila mahali, na watu wengi walianza kuumwa.",
+   "de": "Die halbe Fahrt über war es schön. Dann wurde der Wind stärker, und große Wellen begannen gegen die Fähre zu schlagen. Überall stand kaltes Wasser auf dem Boden, und vielen Leuten wurde schlecht."
+  },
+  {
+   "sw": "Neema alishika kiti chake kwa nguvu akafunga macho. Mwanamke aliyeketi karibu naye alimpa limau akasema, „Weka mdomoni. Itasaidia.“",
+   "de": "Neema hielt sich fest an ihrem Sitz und schloss die Augen. Eine Frau, die neben ihr saß, gab ihr eine Zitrone und sagte: „Nimm sie in den Mund. Das hilft.“"
+  },
+  {
+   "sw": "Saa tatu baadaye feri ilifika Unguja. Neema alishuka polepole akaketi juu ya mzigo wake kwa dakika tano. Alipoangalia nyuma akaona bahari ya kijani na jua juu yake, akasahau maumivu yote. Rafiki yake alicheka akasema, „Karibu Unguja.“",
+   "de": "Drei Stunden später legte die Fähre in Sansibar an. Neema stieg langsam aus und setzte sich fünf Minuten lang auf ihr Gepäck. Als sie zurückblickte und das grüne Meer mit der Sonne darüber sah, vergaß sie alle Beschwerden. Ihre Freundin lachte und sagte: „Willkommen auf Sansibar.“"
+  }
+ ],
+ "glosses": {
+  "neema": {
+   "lemma": "neema",
+   "de": "Neema (Name)",
+   "proper": true
+  },
+  "hakuwahi": {
+   "lemma": "kuwahi",
+   "de": "sie hatte nie"
+  },
+  "kuona": {
+   "lemma": "kuona",
+   "de": "gesehen, sehen"
+  },
+  "bahari": {
+   "lemma": "bahari",
+   "de": "Meer"
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "vor"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "huu": {
+   "lemma": "huu",
+   "de": "diesem",
+   "structure": true
+  },
+  "alizaliwa": {
+   "lemma": "kuzaa",
+   "de": "sie wurde geboren"
+  },
+  "mbeya": {
+   "lemma": "mbeya",
+   "de": "Mbeya (Stadt im Hochland Tansanias)",
+   "proper": true
+  },
+  "mahali": {
+   "lemma": "mahali",
+   "de": "Ort"
+  },
+  "ambapo": {
+   "lemma": "amba-",
+   "de": "wo",
+   "structure": true
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "milima": {
+   "lemma": "mlima",
+   "de": "Berge"
+  },
+  "mvua": {
+   "lemma": "mvua",
+   "de": "Regen"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "Kälte, kalt"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "rafiki": {
+   "lemma": "rafiki",
+   "de": "Freundin"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihre, ihr",
+   "structure": true
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "chuo": {
+   "lemma": "chuo kikuu",
+   "de": "Universität"
+  },
+  "kikuu": {
+   "lemma": "chuo kikuu",
+   "de": "(Teil von: Universität)"
+  },
+  "alimkaribisha": {
+   "lemma": "kukaribisha",
+   "de": "sie lud sie ein"
+  },
+  "unguja": {
+   "lemma": "unguja",
+   "de": "Sansibar"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, mit"
+  },
+  "likizo": {
+   "lemma": "likizo",
+   "de": "Urlaub"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Woche"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eine"
+  },
+  "aliweka": {
+   "lemma": "kuweka",
+   "de": "sie packte, sie legte"
+  },
+  "nguo": {
+   "lemma": "nguo",
+   "de": "Kleider"
+  },
+  "zake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "in, hinein"
+  },
+  "mkoba": {
+   "lemma": "mkoba",
+   "de": "Rucksack"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "einen einzigen"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen"
+  },
+  "jumamosi": {
+   "lemma": "jumamosi",
+   "de": "Samstag"
+  },
+  "walipanda": {
+   "lemma": "kupanda",
+   "de": "sie stiegen ein"
+  },
+  "feri": {
+   "lemma": "feri",
+   "de": "Fähre"
+  },
+  "pamoja": {
+   "lemma": "pamoja",
+   "de": "zusammen"
+  },
+  "abiria": {
+   "lemma": "abiria",
+   "de": "Passagiere"
+  },
+  "wengine": {
+   "lemma": "ingine",
+   "de": "andere"
+  },
+  "wengi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "kuliko": {
+   "lemma": "kuliko",
+   "de": "als (Vergleich)"
+  },
+  "majengo": {
+   "lemma": "jengo",
+   "de": "Gebäude"
+  },
+  "mengi": {
+   "lemma": "ingi",
+   "de": "die meisten, viele"
+  },
+  "mjini": {
+   "lemma": "mji",
+   "de": "der Stadt"
+  },
+  "nusu": {
+   "lemma": "nusu",
+   "de": "Hälfte"
+  },
+  "safari": {
+   "lemma": "safari",
+   "de": "Fahrt"
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "schön (N-Klasse)"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "upepo": {
+   "lemma": "upepo",
+   "de": "Wind"
+  },
+  "uliongezeka": {
+   "lemma": "kuongeza",
+   "de": "er wurde stärker"
+  },
+  "mawimbi": {
+   "lemma": "wimbi",
+   "de": "Wellen"
+  },
+  "makubwa": {
+   "lemma": "kubwa",
+   "de": "große (Ma-Klasse)"
+  },
+  "yalianza": {
+   "lemma": "kuanza",
+   "de": "sie begannen"
+  },
+  "kupiga": {
+   "lemma": "kupiga",
+   "de": "zu schlagen"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "walianza": {
+   "lemma": "kuanza",
+   "de": "sie begannen"
+  },
+  "kuumwa": {
+   "lemma": "kuumwa",
+   "de": "sich schlecht zu fühlen, krank zu sein"
+  },
+  "alishika": {
+   "lemma": "kushika",
+   "de": "sie hielt sich fest"
+  },
+  "kiti": {
+   "lemma": "kiti",
+   "de": "Sitz, Stuhl"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "ihrem",
+   "structure": true
+  },
+  "nguvu": {
+   "lemma": "nguvu",
+   "de": "Kraft"
+  },
+  "akafunga": {
+   "lemma": "kufunga",
+   "de": "und schloss"
+  },
+  "macho": {
+   "lemma": "jicho",
+   "de": "Augen"
+  },
+  "mwanamke": {
+   "lemma": "mwanamke",
+   "de": "Frau"
+  },
+  "aliyeketi": {
+   "lemma": "kuketi",
+   "de": "die saß"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "neben, nahe; willkommen!"
+  },
+  "naye": {
+   "lemma": "na",
+   "de": "bei ihr"
+  },
+  "alimpa": {
+   "lemma": "kupa",
+   "de": "sie gab ihr"
+  },
+  "limau": {
+   "lemma": "limau",
+   "de": "Zitrone"
+  },
+  "akasema": {
+   "lemma": "kusema",
+   "de": "und sagte"
+  },
+  "weka": {
+   "lemma": "kuweka",
+   "de": "nimm, leg (Aufforderung)"
+  },
+  "mdomoni": {
+   "lemma": "mdomo",
+   "de": "in den Mund"
+  },
+  "itasaidia": {
+   "lemma": "kusaidia",
+   "de": "das wird helfen"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunden"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später"
+  },
+  "ilifika": {
+   "lemma": "kufika",
+   "de": "sie kam an"
+  },
+  "alishuka": {
+   "lemma": "kushuka",
+   "de": "sie stieg aus"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "akaketi": {
+   "lemma": "kuketi",
+   "de": "und setzte sich"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "auf, über"
+  },
+  "mzigo": {
+   "lemma": "mzigo",
+   "de": "Gepäck"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihr",
+   "structure": true
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "tano": {
+   "lemma": "tano",
+   "de": "fünf"
+  },
+  "alipoangalia": {
+   "lemma": "kuangalia",
+   "de": "als sie schaute"
+  },
+  "nyuma": {
+   "lemma": "nyuma",
+   "de": "zurück"
+  },
+  "akaona": {
+   "lemma": "kuona",
+   "de": "und sah"
+  },
+  "kijani": {
+   "lemma": "kijani",
+   "de": "grün"
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  },
+  "akasahau": {
+   "lemma": "kusahau",
+   "de": "und vergaß"
+  },
+  "maumivu": {
+   "lemma": "maumivu",
+   "de": "Beschwerden, Schmerzen"
+  },
+  "yote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "marafiki": {
+   "lemma": "rafiki",
+   "de": "Freunde"
+  },
+  "walimwambia": {
+   "lemma": "kuambia",
+   "de": "sie hatten ihr gesagt"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "ziwa": {
+   "lemma": "ziwa",
+   "de": "See"
+  },
+  "lolote": {
+   "lemma": "-ote",
+   "de": "irgendein, jeder",
+   "structure": true
+  },
+  "alisimama": {
+   "lemma": "kusimama",
+   "de": "sie stellte sich"
+  },
+  "akaangalia": {
+   "lemma": "kuangalia",
+   "de": "und sah"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "mrefu": {
+   "lemma": "refu",
+   "de": "lang"
+  },
+  "sakafu": {
+   "lemma": "sakafu",
+   "de": "Boden"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jede"
+  },
+  "alicheka": {
+   "lemma": "kucheka",
+   "de": "sie lachte"
+  }
+ },
+ "audio": null
+}
