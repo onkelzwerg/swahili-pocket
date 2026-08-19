@@ -1,0 +1,469 @@
+{
+ "id": "essen-3-01",
+ "title": "Pilau ya Hamisi",
+ "titleDe": "Hamisis Pilau",
+ "band": 3,
+ "topic": "Essen",
+ "emoji": "🍛",
+ "lemmas": [
+  "asubuhi",
+  "baadaye",
+  "chakula",
+  "chini",
+  "chumvi",
+  "dakika",
+  "ingi",
+  "jioni",
+  "jirani",
+  "jumapili",
+  "kaka",
+  "kazi",
+  "kidogo",
+  "kisha",
+  "kuambia",
+  "kuanza",
+  "kucheka",
+  "kueleza",
+  "kufanya",
+  "kufika",
+  "kuingia",
+  "kuja",
+  "kujibu",
+  "kujua",
+  "kukaa",
+  "kula",
+  "kumi",
+  "kuna",
+  "kununua",
+  "kuomba",
+  "kuongeza",
+  "kupika",
+  "kurudi",
+  "kusema",
+  "kutaka",
+  "kutazama",
+  "kutoka",
+  "kuuliza",
+  "kuwa",
+  "kuwahi",
+  "kwa",
+  "kwenda",
+  "lakini",
+  "lazima",
+  "mafuta",
+  "maji",
+  "makosa",
+  "mbele",
+  "mbili",
+  "mgeni",
+  "mimi",
+  "muda",
+  "mwanamke",
+  "na",
+  "ndani",
+  "nini",
+  "nje",
+  "nyama",
+  "nyanya",
+  "nyumba",
+  "pilau",
+  "pilipili",
+  "polepole",
+  "refu",
+  "saa",
+  "sana",
+  "sasa",
+  "soko",
+  "tatizo",
+  "tayari",
+  "tena",
+  "tu",
+  "zaidi"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jumapili asubuhi Rehema alimwambia kaka yake, „Jioni wageni watakuja. Lazima upike pilau.“ Hamisi alijibu, „Mimi? Sijawahi kupika pilau.“ Lakini Rehema alicheka tu akatoka nje akaenda kazini.",
+   "de": "Am Sonntagmorgen sagte Rehema zu ihrem Bruder: „Heute Abend kommen Gäste. Du musst Pilau kochen.“ Hamisi antwortete: „Ich? Ich habe noch nie Pilau gekocht.“ Doch Rehema lachte nur, ging hinaus und fuhr zur Arbeit."
+  },
+  {
+   "sw": "Hamisi alikwenda sokoni akanunua nyama, nyanya, pilipili na mafuta. Aliporudi nyumbani alianza kupika polepole sana. Hakutaka kufanya makosa mbele ya wageni.",
+   "de": "Hamisi ging zum Markt und kaufte Fleisch, Tomaten, Pfeffer und Öl. Als er nach Hause kam, fing er ganz langsam zu kochen an. Er wollte vor den Gästen keinen Fehler machen."
+  },
+  {
+   "sw": "Saa mbili baadaye chakula kilikuwa tayari. Hamisi alikula kidogo akakaa chini. Chumvi ilikuwa nyingi sana. „Wageni watacheka,“ alisema.",
+   "de": "Zwei Stunden später war das Essen fertig. Hamisi probierte einen Bissen und setzte sich hin. Es war viel zu viel Salz darin. „Die Gäste werden lachen“, sagte er."
+  },
+  {
+   "sw": "Jirani wake aliingia ndani akauliza, „Kuna nini?“ Hamisi alieleza tatizo lake. Mwanamke huyo alicheka akasema, „Ongeza maji na nyanya zaidi, kisha pika tena kwa dakika kumi.“",
+   "de": "Seine Nachbarin kam herein und fragte: „Was ist denn los?“ Hamisi erklärte ihr sein Problem. Die Frau lachte und sagte: „Gib mehr Wasser und Tomaten dazu und koch es noch zehn Minuten weiter.“"
+  },
+  {
+   "sw": "Jioni wageni walifika. Walikula pilau yote wakaomba zaidi. Rehema alimtazama kaka yake kwa muda mrefu. „Sasa unajua kupika,“ alisema.",
+   "de": "Am Abend kamen die Gäste. Sie aßen das ganze Pilau auf und baten um mehr. Rehema sah ihren Bruder lange an. „Jetzt kannst du kochen“, sagte sie."
+  }
+ ],
+ "glosses": {
+  "jumapili": {
+   "lemma": "jumapili",
+   "de": "Sonntag"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen"
+  },
+  "rehema": {
+   "lemma": "rehema",
+   "de": "Rehema (Name)",
+   "proper": true
+  },
+  "alimwambia": {
+   "lemma": "kuambia",
+   "de": "sie sagte ihm"
+  },
+  "kaka": {
+   "lemma": "kaka",
+   "de": "Bruder"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihr, sein",
+   "structure": true
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "wageni": {
+   "lemma": "mgeni",
+   "de": "Gäste"
+  },
+  "watakuja": {
+   "lemma": "kuja",
+   "de": "sie werden kommen"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "du musst"
+  },
+  "upike": {
+   "lemma": "kupika",
+   "de": "dass du kochst (Konjunktiv)"
+  },
+  "pilau": {
+   "lemma": "pilau",
+   "de": "Pilau (Gewürzreisgericht)"
+  },
+  "hamisi": {
+   "lemma": "hamisi",
+   "de": "Hamisi (Name)",
+   "proper": true
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "er antwortete"
+  },
+  "mimi": {
+   "lemma": "mimi",
+   "de": "ich"
+  },
+  "sijawahi": {
+   "lemma": "kuwahi",
+   "de": "ich habe noch nie"
+  },
+  "kupika": {
+   "lemma": "kupika",
+   "de": "kochen"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "alicheka": {
+   "lemma": "kucheka",
+   "de": "sie lachte"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "akatoka": {
+   "lemma": "kutoka",
+   "de": "und ging hinaus"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "nach draußen"
+  },
+  "akaenda": {
+   "lemma": "kwenda",
+   "de": "und ging"
+  },
+  "kazini": {
+   "lemma": "kazi",
+   "de": "zur Arbeit"
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "er ging"
+  },
+  "sokoni": {
+   "lemma": "soko",
+   "de": "zum Markt"
+  },
+  "akanunua": {
+   "lemma": "kununua",
+   "de": "und kaufte"
+  },
+  "nyama": {
+   "lemma": "nyama",
+   "de": "Fleisch"
+  },
+  "nyanya": {
+   "lemma": "nyanya",
+   "de": "Tomaten"
+  },
+  "pilipili": {
+   "lemma": "pilipili",
+   "de": "Pfeffer"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "mafuta": {
+   "lemma": "mafuta",
+   "de": "Öl, Fett"
+  },
+  "aliporudi": {
+   "lemma": "kurudi",
+   "de": "als er zurückkam"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  },
+  "alianza": {
+   "lemma": "kuanza",
+   "de": "er fing an"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "hakutaka": {
+   "lemma": "kutaka",
+   "de": "er wollte nicht"
+  },
+  "kufanya": {
+   "lemma": "kufanya",
+   "de": "machen"
+  },
+  "makosa": {
+   "lemma": "makosa",
+   "de": "Fehler"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunden"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "kilikuwa": {
+   "lemma": "kuwa",
+   "de": "es war (Ki-Klasse)"
+  },
+  "tayari": {
+   "lemma": "tayari",
+   "de": "fertig"
+  },
+  "alikula": {
+   "lemma": "kula",
+   "de": "er aß"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein bisschen"
+  },
+  "akakaa": {
+   "lemma": "kukaa",
+   "de": "und setzte sich"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "hin, unten"
+  },
+  "chumvi": {
+   "lemma": "chumvi",
+   "de": "Salz"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "es war"
+  },
+  "nyingi": {
+   "lemma": "ingi",
+   "de": "viel"
+  },
+  "watacheka": {
+   "lemma": "kucheka",
+   "de": "sie werden lachen"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbarin"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "seine",
+   "structure": true
+  },
+  "aliingia": {
+   "lemma": "kuingia",
+   "de": "sie kam herein"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "hinein, drinnen"
+  },
+  "akauliza": {
+   "lemma": "kuuliza",
+   "de": "und fragte"
+  },
+  "kuna": {
+   "lemma": "kuna",
+   "de": "es gibt"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was"
+  },
+  "alieleza": {
+   "lemma": "kueleza",
+   "de": "er erklärte"
+  },
+  "tatizo": {
+   "lemma": "tatizo",
+   "de": "Problem"
+  },
+  "lake": {
+   "lemma": "-ake",
+   "de": "sein",
+   "structure": true
+  },
+  "mwanamke": {
+   "lemma": "mwanamke",
+   "de": "Frau"
+  },
+  "huyo": {
+   "lemma": "huyo",
+   "de": "diese (genannte)",
+   "structure": true
+  },
+  "akasema": {
+   "lemma": "kusema",
+   "de": "und sagte"
+  },
+  "ongeza": {
+   "lemma": "kuongeza",
+   "de": "gib dazu (Aufforderung)"
+  },
+  "maji": {
+   "lemma": "maji",
+   "de": "Wasser"
+  },
+  "zaidi": {
+   "lemma": "zaidi",
+   "de": "mehr"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann, anschließend"
+  },
+  "pika": {
+   "lemma": "kupika",
+   "de": "koch (Aufforderung)"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "noch einmal, weiter"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für"
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "walifika": {
+   "lemma": "kufika",
+   "de": "sie kamen an"
+  },
+  "walikula": {
+   "lemma": "kula",
+   "de": "sie aßen"
+  },
+  "yote": {
+   "lemma": "-ote",
+   "de": "ganz, alles",
+   "structure": true
+  },
+  "wakaomba": {
+   "lemma": "kuomba",
+   "de": "und baten um"
+  },
+  "alimtazama": {
+   "lemma": "kutazama",
+   "de": "sie schaute ihn an"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "mrefu": {
+   "lemma": "refu",
+   "de": "lang"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "unajua": {
+   "lemma": "kujua",
+   "de": "du kannst, du weißt"
+  }
+ },
+ "audio": null
+}

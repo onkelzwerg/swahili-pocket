@@ -1,0 +1,566 @@
+{
+ "id": "emotionen-4-01",
+ "title": "Maneno ya Musa",
+ "titleDe": "Musas Worte",
+ "band": 4,
+ "topic": "Emotionen",
+ "emoji": "😰",
+ "lemmas": [
+  "asubuhi",
+  "baba",
+  "bado",
+  "bila",
+  "chini",
+  "dada",
+  "daima",
+  "hadithi",
+  "haraka",
+  "harusi",
+  "hata",
+  "ingine",
+  "jasho",
+  "jicho",
+  "jina",
+  "jioni",
+  "jumamosi",
+  "karatasi",
+  "kidogo",
+  "kikaratasi",
+  "kila",
+  "kiongozi",
+  "kiti",
+  "kuambia",
+  "kuandika",
+  "kuangalia",
+  "kuanguka",
+  "kuanza",
+  "kucheka",
+  "kufa",
+  "kuisha",
+  "kuita",
+  "kujifunza",
+  "kujua",
+  "kukaa",
+  "kuketi",
+  "kulia",
+  "kuongea",
+  "kupaswa",
+  "kupiga",
+  "kupita",
+  "kurudi",
+  "kusaidia",
+  "kusema",
+  "kushika",
+  "kusimama",
+  "kusimulia",
+  "kusoma",
+  "kutazama",
+  "kuwa",
+  "kuweza",
+  "kwa",
+  "kwamba",
+  "kwanza",
+  "lakini",
+  "mara",
+  "mbele",
+  "mbili",
+  "meza",
+  "mgeni",
+  "mia",
+  "mke",
+  "mkono",
+  "moyo",
+  "mtu",
+  "muziki",
+  "mwaka",
+  "mzuri",
+  "na",
+  "ndani",
+  "neno",
+  "ni",
+  "nyuma",
+  "sasa",
+  "sherehe",
+  "shule",
+  "siku",
+  "tatu",
+  "thelathini",
+  "tumaini",
+  "usiku",
+  "wasiwasi",
+  "watu",
+  "zima"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Harusi ya dada yake ilikuwa siku ya Jumamosi. Baba yao alikufa miaka mitatu iliyopita, kwa hiyo Musa alipaswa kusema maneno mbele ya wageni mia mbili.",
+   "de": "Die Hochzeit seiner Schwester war an einem Samstag. Ihr Vater war vor drei Jahren gestorben, deshalb sollte Musa vor zweihundert Gästen ein paar Worte sagen."
+  },
+  {
+   "sw": "Kwa siku tatu aliandika maneno yale kwenye kikaratasi kidogo. Aliyasoma usiku, aliyasoma asubuhi, lakini kila mara moyo wake ulipiga haraka. Mkewe alimwambia kwamba maneno yake ni mazuri.",
+   "de": "Drei Tage lang schrieb er diese Worte auf einen kleinen Zettel. Er las sie nachts, er las sie morgens, aber jedes Mal schlug sein Herz schneller. Seine Frau sagte ihm, seine Worte seien gut."
+  },
+  {
+   "sw": "Musa hakuwa mtu wa kuongea mbele ya watu. Shuleni alikaa nyuma daima. Hata sasa, akiwa na miaka thelathini, wasiwasi ule ulikuwa bado ndani yake.",
+   "de": "Musa war kein Mensch, der vor anderen redete. In der Schule hatte er immer hinten gesessen. Selbst jetzt, mit dreißig Jahren, steckte diese Nervosität noch in ihm."
+  },
+  {
+   "sw": "Jioni ya harusi watu wote waliketi mezani, na muziki uliisha. Kiongozi wa sherehe alimwita Musa kwa jina.",
+   "de": "Am Abend der Hochzeit saßen alle an den Tischen, und die Musik verstummte. Der Leiter der Feier rief Musa beim Namen auf."
+  },
+  {
+   "sw": "Musa alisimama. Mikono yake ilikuwa na jasho, na kikaratasi kilianguka chini. Aliangalia dada yake aliyekuwa akimtazama kwa macho ya tumaini. Akaanza kuongea bila karatasi.",
+   "de": "Musa stand auf. Seine Hände waren schweißnass, und der Zettel fiel zu Boden. Er sah seine Schwester an, die ihn mit hoffnungsvollen Augen ansah. Und er fing an zu reden, ohne Zettel."
+  },
+  {
+   "sw": "Alisimulia hadithi ya siku ambayo dada yake alimsaidia kujifunza kusoma. Watu walicheka, na wengine walilia. Aliporudi kwenye kiti chake, dada yake alimshika mkono akasema, „Nilijua unaweza.“ Musa alicheka kwa mara ya kwanza siku ile nzima.",
+   "de": "Er erzählte die Geschichte von dem Tag, an dem seine Schwester ihm das Lesen beigebracht hatte. Die Leute lachten, und manche weinten. Als er zu seinem Stuhl zurückkam, nahm seine Schwester seine Hand und sagte: „Ich wusste, dass du das kannst.“ Musa lachte zum ersten Mal an diesem ganzen Tag."
+  }
+ ],
+ "glosses": {
+  "harusi": {
+   "lemma": "harusi",
+   "de": "Hochzeit"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "dada": {
+   "lemma": "dada",
+   "de": "Schwester"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seiner, seine",
+   "structure": true
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag, Tage"
+  },
+  "jumamosi": {
+   "lemma": "jumamosi",
+   "de": "Samstag"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "musa": {
+   "lemma": "musa",
+   "de": "Musa (Name)",
+   "proper": true
+  },
+  "alipaswa": {
+   "lemma": "kupaswa",
+   "de": "er sollte"
+  },
+  "kusema": {
+   "lemma": "kusema",
+   "de": "zu sagen"
+  },
+  "maneno": {
+   "lemma": "neno",
+   "de": "Worte"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor"
+  },
+  "wageni": {
+   "lemma": "mgeni",
+   "de": "Gästen"
+  },
+  "mia": {
+   "lemma": "mia",
+   "de": "hundert"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei (mia mbili: zweihundert)"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, mit, bei"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei"
+  },
+  "aliandika": {
+   "lemma": "kuandika",
+   "de": "er schrieb"
+  },
+  "yale": {
+   "lemma": "yale",
+   "de": "jene, diese",
+   "structure": true
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "auf",
+   "structure": true
+  },
+  "kikaratasi": {
+   "lemma": "kikaratasi",
+   "de": "Zettel"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "klein"
+  },
+  "aliyasoma": {
+   "lemma": "kusoma",
+   "de": "er las sie"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "nachts"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "morgens"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jedes"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "Mal"
+  },
+  "moyo": {
+   "lemma": "moyo",
+   "de": "Herz"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "sein, seine",
+   "structure": true
+  },
+  "ulipiga": {
+   "lemma": "kupiga",
+   "de": "es schlug"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "hakuwa": {
+   "lemma": "kuwa",
+   "de": "er war nicht"
+  },
+  "mtu": {
+   "lemma": "mtu",
+   "de": "Mensch"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "kuongea": {
+   "lemma": "kuongea",
+   "de": "zu reden"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute, anderen"
+  },
+  "shuleni": {
+   "lemma": "shule",
+   "de": "in der Schule"
+  },
+  "alikaa": {
+   "lemma": "kukaa",
+   "de": "er saß"
+  },
+  "nyuma": {
+   "lemma": "nyuma",
+   "de": "hinten"
+  },
+  "daima": {
+   "lemma": "daima",
+   "de": "immer"
+  },
+  "hata": {
+   "lemma": "hata",
+   "de": "sogar, selbst"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "akiwa": {
+   "lemma": "kuwa",
+   "de": "während er hat"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahren"
+  },
+  "thelathini": {
+   "lemma": "thelathini",
+   "de": "dreißig"
+  },
+  "wasiwasi": {
+   "lemma": "wasiwasi",
+   "de": "Nervosität, Sorge"
+  },
+  "ule": {
+   "lemma": "ule",
+   "de": "jene, diese",
+   "structure": true
+  },
+  "ulikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war, sie steckte"
+  },
+  "bado": {
+   "lemma": "bado",
+   "de": "noch"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "in, drinnen"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "Abend"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "waliketi": {
+   "lemma": "kuketi",
+   "de": "sie saßen"
+  },
+  "mezani": {
+   "lemma": "meza",
+   "de": "an den Tischen"
+  },
+  "muziki": {
+   "lemma": "muziki",
+   "de": "Musik"
+  },
+  "kiongozi": {
+   "lemma": "kiongozi",
+   "de": "Leiter"
+  },
+  "sherehe": {
+   "lemma": "sherehe",
+   "de": "Feier"
+  },
+  "alimwita": {
+   "lemma": "kuita",
+   "de": "er rief ihn auf"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "alisimama": {
+   "lemma": "kusimama",
+   "de": "er stand auf"
+  },
+  "mikono": {
+   "lemma": "mkono",
+   "de": "Hände"
+  },
+  "jasho": {
+   "lemma": "jasho",
+   "de": "Schweiß"
+  },
+  "kilianguka": {
+   "lemma": "kuanguka",
+   "de": "er fiel"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "zu Boden"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "er sah an"
+  },
+  "aliyekuwa": {
+   "lemma": "kuwa",
+   "de": "die war"
+  },
+  "akimtazama": {
+   "lemma": "kutazama",
+   "de": "ihn ansah"
+  },
+  "macho": {
+   "lemma": "jicho",
+   "de": "Augen"
+  },
+  "tumaini": {
+   "lemma": "tumaini",
+   "de": "Hoffnung"
+  },
+  "akaanza": {
+   "lemma": "kuanza",
+   "de": "und fing an"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "karatasi": {
+   "lemma": "karatasi",
+   "de": "Papier, Zettel"
+  },
+  "alisimulia": {
+   "lemma": "kusimulia",
+   "de": "er erzählte"
+  },
+  "hadithi": {
+   "lemma": "hadithi",
+   "de": "Geschichte"
+  },
+  "ambayo": {
+   "lemma": "amba-",
+   "de": "an dem, die",
+   "structure": true
+  },
+  "alimsaidia": {
+   "lemma": "kusaidia",
+   "de": "sie half ihm"
+  },
+  "kujifunza": {
+   "lemma": "kujifunza",
+   "de": "zu lernen"
+  },
+  "kusoma": {
+   "lemma": "kusoma",
+   "de": "lesen"
+  },
+  "walicheka": {
+   "lemma": "kucheka",
+   "de": "sie lachten"
+  },
+  "wengine": {
+   "lemma": "ingine",
+   "de": "manche, andere"
+  },
+  "walilia": {
+   "lemma": "kulia",
+   "de": "sie weinten"
+  },
+  "aliporudi": {
+   "lemma": "kurudi",
+   "de": "als er zurückkam"
+  },
+  "kiti": {
+   "lemma": "kiti",
+   "de": "Stuhl"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "seinem",
+   "structure": true
+  },
+  "alimshika": {
+   "lemma": "kushika",
+   "de": "sie nahm, sie hielt"
+  },
+  "mkono": {
+   "lemma": "mkono",
+   "de": "Hand"
+  },
+  "akasema": {
+   "lemma": "kusema",
+   "de": "und sagte"
+  },
+  "nilijua": {
+   "lemma": "kujua",
+   "de": "ich wusste"
+  },
+  "unaweza": {
+   "lemma": "kuweza",
+   "de": "du kannst"
+  },
+  "alicheka": {
+   "lemma": "kucheka",
+   "de": "er lachte"
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "erste"
+  },
+  "ile": {
+   "lemma": "ile",
+   "de": "jenem, diesem",
+   "structure": true
+  },
+  "nzima": {
+   "lemma": "zima",
+   "de": "ganzen"
+  },
+  "baba": {
+   "lemma": "baba",
+   "de": "Vater"
+  },
+  "yao": {
+   "lemma": "-ao",
+   "de": "ihr",
+   "structure": true
+  },
+  "alikufa": {
+   "lemma": "kufa",
+   "de": "er war gestorben"
+  },
+  "mitatu": {
+   "lemma": "tatu",
+   "de": "drei (Mi-Klasse)"
+  },
+  "iliyopita": {
+   "lemma": "kupita",
+   "de": "vergangen, zuvor"
+  },
+  "hiyo": {
+   "lemma": "hiyo",
+   "de": "das (kwa hiyo: deshalb)",
+   "structure": true
+  },
+  "mkewe": {
+   "lemma": "mke",
+   "de": "seine Ehefrau"
+  },
+  "alimwambia": {
+   "lemma": "kuambia",
+   "de": "sie sagte ihm"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "sind"
+  },
+  "mazuri": {
+   "lemma": "mzuri",
+   "de": "gut (Ma-Klasse)"
+  },
+  "uliisha": {
+   "lemma": "kuisha",
+   "de": "sie verstummte, sie hörte auf"
+  }
+ },
+ "audio": null
+}

@@ -1,0 +1,420 @@
+{
+ "id": "emotionen-3-01",
+ "title": "Wiki Mbili za Kimya",
+ "titleDe": "Zwei stille Wochen",
+ "band": 3,
+ "topic": "Emotionen",
+ "emoji": "💔",
+ "lemmas": [
+  "bila",
+  "chakula",
+  "hadi",
+  "haraka",
+  "hasira",
+  "hospitali",
+  "ingi",
+  "jioni",
+  "karibu",
+  "kidogo",
+  "kila",
+  "kisha",
+  "kuambia",
+  "kucheka",
+  "kuendelea",
+  "kufanya",
+  "kufuata",
+  "kuhisi",
+  "kuja",
+  "kujua",
+  "kukaa",
+  "kuketi",
+  "kulia",
+  "kungoja",
+  "kuongea",
+  "kupanga",
+  "kupika",
+  "kupita",
+  "kusema",
+  "kushika",
+  "kusimama",
+  "kutaka",
+  "kutoka",
+  "kutwa",
+  "kuwa",
+  "kuzungumza",
+  "kwa",
+  "kwanza",
+  "kwenda",
+  "lakini",
+  "mama",
+  "mara",
+  "mazungumzo",
+  "mbaya",
+  "mbili",
+  "mdogo",
+  "meza",
+  "mkono",
+  "mlango",
+  "moja",
+  "na",
+  "neno",
+  "nje",
+  "nyumba",
+  "pamoja",
+  "peke",
+  "rafiki",
+  "safari",
+  "samahani",
+  "sherehe",
+  "siku",
+  "siri",
+  "usiku",
+  "vizuri",
+  "wiki"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Neema alifanya sherehe ndogo nyumbani kwake. Alipika chakula kingi akapanga meza vizuri. Alimngoja rafiki yake Asha kutwa, lakini Asha hakuja.",
+   "de": "Neema richtete bei sich zu Hause ein kleines Fest aus. Sie kochte viel Essen und deckte den Tisch schön ein. Den ganzen Tag wartete sie auf ihre Freundin Asha, aber Asha kam nicht."
+  },
+  {
+   "sw": "Neema alikuwa na hasira. Alipopita nyumbani kwa Asha siku iliyofuata, hakusimama na hakusema neno. Aliendelea na safari yake kwa haraka.",
+   "de": "Neema war wütend. Als sie am nächsten Tag an Ashas Haus vorbeikam, blieb sie nicht stehen und sagte kein Wort. Sie ging schnellen Schrittes weiter."
+  },
+  {
+   "sw": "Wiki mbili zilipita bila mazungumzo. Neema alihisi vibaya, lakini hakutaka kuwa wa kwanza kuongea. Kila jioni aliketi peke yake mlangoni akingoja, lakini rafiki yake hakuja.",
+   "de": "Zwei Wochen vergingen ohne ein Gespräch. Neema fühlte sich schlecht, wollte aber nicht die Erste sein, die redet. Jeden Abend saß sie allein an der Tür und wartete, doch ihre Freundin kam nicht."
+  },
+  {
+   "sw": "Siku moja mama yake alimwambia siri: mama wa Asha alikuwa hospitalini kwa wiki mbili, na Asha alikaa naye kila siku.",
+   "de": "Eines Tages verriet ihr die Mutter etwas: Ashas Mutter hatte zwei Wochen im Krankenhaus gelegen, und Asha war jeden Tag bei ihr geblieben."
+  },
+  {
+   "sw": "Neema alitoka nje mara moja akaenda kwa Asha. Aliketi karibu naye akashika mkono wake. „Samahani,“ alisema. „Sikujua.“ Asha alilia kidogo kisha akacheka. Jioni ile waliketi pamoja mlangoni wakazungumza hadi usiku.",
+   "de": "Neema lief sofort hinaus und ging zu Asha. Sie setzte sich neben sie und nahm ihre Hand. „Entschuldige“, sagte sie. „Ich wusste es nicht.“ Asha weinte ein wenig und lachte dann. An jenem Abend saßen sie zusammen an der Tür und redeten bis in die Nacht."
+  }
+ ],
+ "glosses": {
+  "neema": {
+   "lemma": "neema",
+   "de": "Neema (Name)",
+   "proper": true
+  },
+  "alifanya": {
+   "lemma": "kufanya",
+   "de": "sie machte, sie richtete aus"
+  },
+  "sherehe": {
+   "lemma": "sherehe",
+   "de": "Fest"
+  },
+  "ndogo": {
+   "lemma": "mdogo",
+   "de": "klein (N-Klasse)"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "zu Hause, zum Haus"
+  },
+  "kwake": {
+   "lemma": "-ake",
+   "de": "bei sich, bei ihr",
+   "structure": true
+  },
+  "alimngoja": {
+   "lemma": "kungoja",
+   "de": "sie wartete auf sie"
+  },
+  "rafiki": {
+   "lemma": "rafiki",
+   "de": "Freundin"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "asha": {
+   "lemma": "asha",
+   "de": "Asha (Name)",
+   "proper": true
+  },
+  "kutwa": {
+   "lemma": "kutwa",
+   "de": "den ganzen Tag"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "hakuja": {
+   "lemma": "kuja",
+   "de": "sie kam nicht"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "hasira": {
+   "lemma": "hasira",
+   "de": "Wut"
+  },
+  "alipopita": {
+   "lemma": "kupita",
+   "de": "als sie vorbeikam"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "bei, zu"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "iliyofuata": {
+   "lemma": "kufuata",
+   "de": "der folgte, am nächsten"
+  },
+  "hakusimama": {
+   "lemma": "kusimama",
+   "de": "sie blieb nicht stehen"
+  },
+  "hakusema": {
+   "lemma": "kusema",
+   "de": "sie sagte nicht"
+  },
+  "neno": {
+   "lemma": "neno",
+   "de": "Wort"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Wochen"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "zilipita": {
+   "lemma": "kupita",
+   "de": "sie vergingen"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "mazungumzo": {
+   "lemma": "mazungumzo",
+   "de": "Gespräch"
+  },
+  "alihisi": {
+   "lemma": "kuhisi",
+   "de": "sie fühlte sich"
+  },
+  "vibaya": {
+   "lemma": "mbaya",
+   "de": "schlecht (Adverb)"
+  },
+  "hakutaka": {
+   "lemma": "kutaka",
+   "de": "sie wollte nicht"
+  },
+  "kuwa": {
+   "lemma": "kuwa",
+   "de": "sein"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "die (Genitivkonkordanz)",
+   "structure": true
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "erste"
+  },
+  "kuongea": {
+   "lemma": "kuongea",
+   "de": "zu reden"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eines"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter"
+  },
+  "alimwambia": {
+   "lemma": "kuambia",
+   "de": "sie erzählte ihr"
+  },
+  "siri": {
+   "lemma": "siri",
+   "de": "Geheimnis"
+  },
+  "hospitalini": {
+   "lemma": "hospitali",
+   "de": "im Krankenhaus"
+  },
+  "alikaa": {
+   "lemma": "kukaa",
+   "de": "sie blieb"
+  },
+  "naye": {
+   "lemma": "na",
+   "de": "bei ihr, mit ihr"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jeden"
+  },
+  "alitoka": {
+   "lemma": "kutoka",
+   "de": "sie ging hinaus"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "nach draußen"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "sofort (mara moja)"
+  },
+  "akaenda": {
+   "lemma": "kwenda",
+   "de": "und ging"
+  },
+  "aliketi": {
+   "lemma": "kuketi",
+   "de": "sie setzte sich"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "neben, nahe"
+  },
+  "akashika": {
+   "lemma": "kushika",
+   "de": "und nahm, und hielt"
+  },
+  "mkono": {
+   "lemma": "mkono",
+   "de": "Hand"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "samahani": {
+   "lemma": "samahani",
+   "de": "Entschuldige"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte sie"
+  },
+  "sikujua": {
+   "lemma": "kujua",
+   "de": "ich wusste es nicht"
+  },
+  "alilia": {
+   "lemma": "kulia",
+   "de": "sie weinte"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein wenig"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "akacheka": {
+   "lemma": "kucheka",
+   "de": "und lachte"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "Abend"
+  },
+  "ile": {
+   "lemma": "ile",
+   "de": "jener",
+   "structure": true
+  },
+  "waliketi": {
+   "lemma": "kuketi",
+   "de": "sie saßen"
+  },
+  "pamoja": {
+   "lemma": "pamoja",
+   "de": "zusammen"
+  },
+  "mlangoni": {
+   "lemma": "mlango",
+   "de": "an der Tür"
+  },
+  "wakazungumza": {
+   "lemma": "kuzungumza",
+   "de": "und redeten"
+  },
+  "hadi": {
+   "lemma": "hadi",
+   "de": "bis"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "in die Nacht"
+  },
+  "alipika": {
+   "lemma": "kupika",
+   "de": "sie kochte"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "kingi": {
+   "lemma": "ingi",
+   "de": "viel (Ki-Klasse)"
+  },
+  "akapanga": {
+   "lemma": "kupanga",
+   "de": "und deckte, und ordnete"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "schön, gut"
+  },
+  "aliendelea": {
+   "lemma": "kuendelea",
+   "de": "sie ging weiter"
+  },
+  "safari": {
+   "lemma": "safari",
+   "de": "Weg, Reise"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "akingoja": {
+   "lemma": "kungoja",
+   "de": "und wartete"
+  },
+  "peke": {
+   "lemma": "peke",
+   "de": "allein"
+  }
+ },
+ "audio": null
+}

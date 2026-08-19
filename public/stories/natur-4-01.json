@@ -1,0 +1,577 @@
+{
+ "id": "natur-4-01",
+ "title": "Tembo wa Mto Ruvu",
+ "titleDe": "Die Elefanten vom Ruvu",
+ "band": 4,
+ "topic": "Natur",
+ "emoji": "🐘",
+ "lemmas": [
+  "alhamisi",
+  "asubuhi",
+  "baridi",
+  "chini",
+  "hadi",
+  "hadithi",
+  "hewa",
+  "ingine",
+  "jirani",
+  "jiwe",
+  "juu",
+  "karibu",
+  "kila",
+  "kisha",
+  "kuanza",
+  "kubwa",
+  "kuendelea",
+  "kufa",
+  "kufika",
+  "kufundisha",
+  "kuingia",
+  "kuishi",
+  "kuja",
+  "kukaa",
+  "kuliko",
+  "kupiga kelele",
+  "kupita",
+  "kurudi",
+  "kusema",
+  "kushika",
+  "kusikia",
+  "kusimama",
+  "kusimulia",
+  "kusubiri",
+  "kutaka",
+  "kutoka",
+  "kuvuka",
+  "kuwa",
+  "kuwaka",
+  "kuwasha",
+  "kwa",
+  "kwenda",
+  "lakini",
+  "mahindi",
+  "maji",
+  "mama",
+  "mbele",
+  "mbili",
+  "mdogo",
+  "mke",
+  "mkono",
+  "mkulima",
+  "moto",
+  "mto",
+  "mtoto",
+  "muda",
+  "mvulana",
+  "mwaka",
+  "mwezi",
+  "mzee",
+  "mzuri",
+  "na",
+  "pale",
+  "peke",
+  "pembeni",
+  "polepole",
+  "refu",
+  "saa",
+  "salama",
+  "sauti",
+  "sehemu",
+  "shamba",
+  "shule",
+  "sita",
+  "tangu",
+  "tano",
+  "tatu",
+  "tembo",
+  "tena",
+  "upande",
+  "usiku",
+  "wiki",
+  "zima",
+  "zito"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Shamba la Mzee Kombo lilikuwa karibu na mto Ruvu. Aliishi pale peke yake tangu mke wake alipokufa. Kila mwaka mahindi yake yalikuwa mazuri kuliko ya wakulima wengine.",
+   "de": "Das Feld des alten Kombo lag nahe am Fluss Ruvu. Seit dem Tod seiner Frau lebte er dort allein. Jedes Jahr stand sein Mais besser als der der anderen Bauern."
+  },
+  {
+   "sw": "Lakini mwaka huu tembo walianza kuja usiku. Walivuka mto wakaingia shambani, na asubuhi sehemu kubwa ya mahindi ilikuwa chini.",
+   "de": "Doch dieses Jahr begannen Elefanten, nachts zu kommen. Sie durchquerten den Fluss und drangen auf das Feld vor, und am Morgen lag ein großer Teil des Maises am Boden."
+  },
+  {
+   "sw": "Usiku wa Alhamisi Kombo na mvulana wa jirani walikaa juu ya jiwe kubwa wakisubiri. Mwezi ulikuwa mkubwa, na hewa ilikuwa baridi.",
+   "de": "In der Donnerstagnacht saßen Kombo und der Junge des Nachbarn auf einem großen Stein und warteten. Der Mond war groß, und die Luft war kalt."
+  },
+  {
+   "sw": "Saa sita usiku walisikia sauti nzito upande wa mto. Tembo watano walitoka majini polepole: watatu wakubwa na wawili wadogo. Watoto wa tembo walikuwa karibu na mama zao.",
+   "de": "Um Mitternacht hörten sie ein schweres Geräusch von der Flussseite her. Fünf Elefanten kamen langsam aus dem Wasser: drei große und zwei kleine. Die Jungtiere blieben dicht bei ihren Müttern."
+  },
+  {
+   "sw": "Mvulana alitaka kupiga kelele, lakini mzee alimshika mkono. „Subiri,“ alisema kwa sauti ndogo. Tembo walikwenda mbele hadi walipofika kwenye moto mdogo uliokuwa ukiwaka pembeni mwa shamba. Walisimama kwa muda mrefu kisha wakarudi majini.",
+   "de": "Der Junge wollte schreien, aber der Alte hielt seine Hand fest. „Warte“, sagte er mit leiser Stimme. Die Elefanten gingen weiter, bis sie zu einem kleinen Feuer kamen, das am Rand des Feldes brannte. Sie blieben lange stehen und kehrten dann ins Wasser zurück."
+  },
+  {
+   "sw": "Asubuhi mahindi yalikuwa salama. Kombo alifundisha wakulima wengine kuwasha moto mdogo kila usiku. Tembo waliendelea kupita, lakini hawakuingia tena shambani. Mvulana yule alisimulia hadithi ile shuleni kwa wiki nzima.",
+   "de": "Am Morgen war der Mais unversehrt. Kombo brachte den anderen Bauern bei, jede Nacht ein kleines Feuer anzuzünden. Die Elefanten zogen weiter vorbei, aber sie kamen nie wieder auf die Felder. Der Junge erzählte die Geschichte eine ganze Woche lang in der Schule."
+  }
+ ],
+ "glosses": {
+  "shamba": {
+   "lemma": "shamba",
+   "de": "Feld"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "mzee": {
+   "lemma": "mzee",
+   "de": "der Alte"
+  },
+  "kombo": {
+   "lemma": "kombo",
+   "de": "Kombo (Name)",
+   "proper": true
+  },
+  "lilikuwa": {
+   "lemma": "kuwa",
+   "de": "es lag, es war"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe bei"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "mto": {
+   "lemma": "mto",
+   "de": "Fluss"
+  },
+  "ruvu": {
+   "lemma": "ruvu",
+   "de": "Ruvu (Fluss in Tansania)",
+   "proper": true
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jedes, jede"
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "mahindi": {
+   "lemma": "mahindi",
+   "de": "Mais"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "sein",
+   "structure": true
+  },
+  "yalikuwa": {
+   "lemma": "kuwa",
+   "de": "er war, sie waren"
+  },
+  "mazuri": {
+   "lemma": "mzuri",
+   "de": "gut (Ma-Klasse)"
+  },
+  "kuliko": {
+   "lemma": "kuliko",
+   "de": "als (Vergleich)"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "der, von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "wakulima": {
+   "lemma": "mkulima",
+   "de": "Bauern"
+  },
+  "wengine": {
+   "lemma": "ingine",
+   "de": "anderen"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "huu": {
+   "lemma": "huu",
+   "de": "dieses",
+   "structure": true
+  },
+  "tembo": {
+   "lemma": "tembo",
+   "de": "Elefanten"
+  },
+  "walianza": {
+   "lemma": "kuanza",
+   "de": "sie begannen"
+  },
+  "kuja": {
+   "lemma": "kuja",
+   "de": "zu kommen"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "nachts, Nacht"
+  },
+  "walivuka": {
+   "lemma": "kuvuka",
+   "de": "sie überquerten"
+  },
+  "wakaingia": {
+   "lemma": "kuingia",
+   "de": "und drangen ein"
+  },
+  "shambani": {
+   "lemma": "shamba",
+   "de": "auf das Feld"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen"
+  },
+  "sehemu": {
+   "lemma": "sehemu",
+   "de": "Teil"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "am Boden"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "alhamisi": {
+   "lemma": "alhamisi",
+   "de": "Donnerstag"
+  },
+  "mvulana": {
+   "lemma": "mvulana",
+   "de": "Junge"
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbar"
+  },
+  "walikaa": {
+   "lemma": "kukaa",
+   "de": "sie saßen"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "auf, oben"
+  },
+  "jiwe": {
+   "lemma": "jiwe",
+   "de": "Stein"
+  },
+  "wakisubiri": {
+   "lemma": "kusubiri",
+   "de": "und warteten"
+  },
+  "mwezi": {
+   "lemma": "mwezi",
+   "de": "Mond"
+  },
+  "ulikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "mkubwa": {
+   "lemma": "kubwa",
+   "de": "groß (M-Klasse)"
+  },
+  "hewa": {
+   "lemma": "hewa",
+   "de": "Luft"
+  },
+  "baridi": {
+   "lemma": "baridi",
+   "de": "kalt"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde"
+  },
+  "sita": {
+   "lemma": "sita",
+   "de": "sechs (saa sita usiku: Mitternacht)"
+  },
+  "walisikia": {
+   "lemma": "kusikia",
+   "de": "sie hörten"
+  },
+  "sauti": {
+   "lemma": "sauti",
+   "de": "Geräusch, Stimme"
+  },
+  "nzito": {
+   "lemma": "zito",
+   "de": "schwer"
+  },
+  "upande": {
+   "lemma": "upande",
+   "de": "Seite, Richtung"
+  },
+  "watano": {
+   "lemma": "tano",
+   "de": "fünf (M-Wa-Klasse)"
+  },
+  "walitoka": {
+   "lemma": "kutoka",
+   "de": "sie kamen heraus"
+  },
+  "majini": {
+   "lemma": "maji",
+   "de": "aus dem Wasser, ins Wasser"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "watatu": {
+   "lemma": "tatu",
+   "de": "drei (M-Wa-Klasse)"
+  },
+  "wakubwa": {
+   "lemma": "kubwa",
+   "de": "große (M-Wa-Klasse)"
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (M-Wa-Klasse)"
+  },
+  "wadogo": {
+   "lemma": "mdogo",
+   "de": "kleine (M-Wa-Klasse)"
+  },
+  "alitaka": {
+   "lemma": "kutaka",
+   "de": "er wollte"
+  },
+  "kupiga": {
+   "lemma": "kupiga kelele",
+   "de": "zu schreien"
+  },
+  "kelele": {
+   "lemma": "kupiga kelele",
+   "de": "(Teil von: schreien)"
+  },
+  "alimshika": {
+   "lemma": "kushika",
+   "de": "er hielt ihn fest"
+  },
+  "mkono": {
+   "lemma": "mkono",
+   "de": "Hand"
+  },
+  "subiri": {
+   "lemma": "kusubiri",
+   "de": "warte (Aufforderung)"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit, für"
+  },
+  "ndogo": {
+   "lemma": "mdogo",
+   "de": "leise, klein (N-Klasse)"
+  },
+  "walikwenda": {
+   "lemma": "kwenda",
+   "de": "sie gingen"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "weiter, nach vorn"
+  },
+  "hadi": {
+   "lemma": "hadi",
+   "de": "bis"
+  },
+  "walipofika": {
+   "lemma": "kufika",
+   "de": "als sie ankamen"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "zu, an",
+   "structure": true
+  },
+  "moto": {
+   "lemma": "moto",
+   "de": "Feuer"
+  },
+  "mdogo": {
+   "lemma": "mdogo",
+   "de": "klein"
+  },
+  "uliokuwa": {
+   "lemma": "kuwa",
+   "de": "das war"
+  },
+  "ukiwaka": {
+   "lemma": "kuwaka",
+   "de": "am Brennen"
+  },
+  "pembeni": {
+   "lemma": "pembeni",
+   "de": "am Rand"
+  },
+  "mwa": {
+   "lemma": "mwa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "walisimama": {
+   "lemma": "kusimama",
+   "de": "sie blieben stehen"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "mrefu": {
+   "lemma": "refu",
+   "de": "lang"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "salama": {
+   "lemma": "salama",
+   "de": "unversehrt, sicher"
+  },
+  "alifundisha": {
+   "lemma": "kufundisha",
+   "de": "er brachte bei"
+  },
+  "kuwasha": {
+   "lemma": "kuwasha",
+   "de": "anzuzünden"
+  },
+  "waliendelea": {
+   "lemma": "kuendelea",
+   "de": "sie zogen weiter"
+  },
+  "kupita": {
+   "lemma": "kupita",
+   "de": "vorbeizukommen"
+  },
+  "hawakuingia": {
+   "lemma": "kuingia",
+   "de": "sie drangen nicht ein"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "wieder"
+  },
+  "yule": {
+   "lemma": "yule",
+   "de": "jener",
+   "structure": true
+  },
+  "alisimulia": {
+   "lemma": "kusimulia",
+   "de": "er erzählte"
+  },
+  "hadithi": {
+   "lemma": "hadithi",
+   "de": "Geschichte"
+  },
+  "ile": {
+   "lemma": "ile",
+   "de": "jene",
+   "structure": true
+  },
+  "shuleni": {
+   "lemma": "shule",
+   "de": "in der Schule"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Woche"
+  },
+  "nzima": {
+   "lemma": "zima",
+   "de": "ganz"
+  },
+  "aliishi": {
+   "lemma": "kuishi",
+   "de": "er lebte"
+  },
+  "pale": {
+   "lemma": "pale",
+   "de": "dort"
+  },
+  "peke": {
+   "lemma": "peke",
+   "de": "allein"
+  },
+  "tangu": {
+   "lemma": "tangu",
+   "de": "seit"
+  },
+  "mke": {
+   "lemma": "mke",
+   "de": "Ehefrau"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "seine",
+   "structure": true
+  },
+  "alipokufa": {
+   "lemma": "kufa",
+   "de": "als sie starb"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder, Jungtiere"
+  },
+  "walikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mütter"
+  },
+  "zao": {
+   "lemma": "-ao",
+   "de": "ihren",
+   "structure": true
+  },
+  "wakarudi": {
+   "lemma": "kurudi",
+   "de": "und kehrten zurück"
+  }
+ },
+ "audio": null
+}

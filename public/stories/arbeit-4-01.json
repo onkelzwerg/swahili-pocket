@@ -1,0 +1,574 @@
+{
+ "id": "arbeit-4-01",
+ "title": "Siku ya Mwisho ya Mama Grace",
+ "titleDe": "Mama Graces letzter Tag",
+ "band": 4,
+ "topic": "Arbeit",
+ "emoji": "📇",
+ "lemmas": [
+  "darasa",
+  "desemba",
+  "elfu",
+  "hadi",
+  "ingi",
+  "kabati",
+  "kabla",
+  "kadi",
+  "kama",
+  "karatasi",
+  "katibu",
+  "katika",
+  "kazi",
+  "kidogo",
+  "kila",
+  "kisha",
+  "kitu",
+  "kompyuta",
+  "kuamua",
+  "kubaki",
+  "kubwa",
+  "kucheka",
+  "kuchukua",
+  "kufanya",
+  "kufika",
+  "kufikiri",
+  "kufuata",
+  "kufundisha",
+  "kufungua",
+  "kuimba",
+  "kujibu",
+  "kujifunza",
+  "kujua",
+  "kuketi",
+  "kukubali",
+  "kukusanya",
+  "kulia",
+  "kuondoka",
+  "kusaini",
+  "kusema",
+  "kustaafu",
+  "kutaka",
+  "kutoa",
+  "kutoka",
+  "kutumia",
+  "kuuliza",
+  "kuwa",
+  "kwa",
+  "kwamba",
+  "kwanza",
+  "kweli",
+  "kwenda",
+  "lakini",
+  "lango",
+  "mama",
+  "mara",
+  "mbili",
+  "meneja",
+  "mkoba",
+  "mkurugenzi",
+  "mlango",
+  "moja",
+  "mpya",
+  "msichana",
+  "mtu",
+  "mwaka",
+  "mwalimu",
+  "mwanafunzi",
+  "mwezi",
+  "mwisho",
+  "na",
+  "ndani",
+  "nje",
+  "ofisi",
+  "polepole",
+  "saba",
+  "sherehe",
+  "shule",
+  "siku",
+  "sitini",
+  "tangu",
+  "thelathini",
+  "tu",
+  "wakati",
+  "walimu",
+  "wiki",
+  "wimbo",
+  "zaidi",
+  "zawadi"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Mama Grace alifanya kazi katika ofisi ya shule ya Azania kwa miaka thelathini. Alikuwa katibu wa kwanza tangu shule ilipofunguliwa.",
+   "de": "Mama Grace arbeitete dreißig Jahre lang im Sekretariat der Azania-Schule. Sie war die erste Sekretärin, seit die Schule eröffnet worden war."
+  },
+  {
+   "sw": "Alijua kila mwalimu, kila mwanafunzi na kila karatasi ndani ya makabati yale. Wakati kompyuta zilipofika mwaka wa elfu mbili, alijifunza kuzitumia kwa wiki mbili tu.",
+   "de": "Sie kannte jeden Lehrer, jede Schülerin und jedes Blatt Papier in diesen Schränken. Als im Jahr zweitausend die Computer kamen, lernte sie in nur zwei Wochen, damit umzugehen."
+  },
+  {
+   "sw": "Mwezi wa Desemba alikuwa na miaka sitini akaamua kustaafu. Walimu wengi walifikiri kwamba atabaki mwaka mmoja zaidi.",
+   "de": "Im Dezember wurde sie sechzig und entschied sich, in Rente zu gehen. Viele Lehrer dachten, sie werde noch ein Jahr länger bleiben."
+  },
+  {
+   "sw": "Meneja alimwuliza kama anataka sherehe kubwa. Mama Grace alijibu kwamba anataka kitu kimoja tu: kufundisha msichana mpya kwa wiki mbili kabla ya kuondoka. Meneja alikubali mara moja.",
+   "de": "Der Geschäftsführer fragte sie, ob sie ein großes Fest wolle. Mama Grace antwortete, sie wolle nur eines: das neue Mädchen zwei Wochen lang einarbeiten, bevor sie geht. Der Geschäftsführer stimmte sofort zu."
+  },
+  {
+   "sw": "Siku ya mwisho walimu wote walikusanyika ofisini. Mkurugenzi alitoa zawadi na kadi iliyosainiwa na kila mtu. Wanafunzi wa darasa la saba waliimba wimbo mmoja mlangoni. Mama Grace alilia kidogo kisha akacheka.",
+   "de": "Am letzten Tag versammelten sich alle Lehrerinnen und Lehrer im Sekretariat. Der Direktor überreichte ein Geschenk und eine Karte, die jeder unterschrieben hatte. Die Schüler der siebten Klasse sangen ein Lied an der Tür. Mama Grace weinte ein wenig und lachte dann."
+  },
+  {
+   "sw": "Kabla ya kwenda aliketi na msichana yule mara ya mwisho. „Karatasi zote ziko ndani ya makabati,“ alisema. „Lakini kazi ya kweli iko nje ya mlango huu.“ Kisha alichukua mkoba wake akatoka polepole, na wanafunzi walimfuata hadi langoni.",
+   "de": "Bevor sie ging, setzte sie sich ein letztes Mal mit dem Mädchen zusammen. „Alle Papiere sind in den Schränken“, sagte sie. „Aber die eigentliche Arbeit ist draußen vor dieser Tür.“ Dann nahm sie ihre Tasche und ging langsam hinaus, und die Schüler begleiteten sie bis zum Tor."
+  }
+ ],
+ "glosses": {
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter, Frau (Anrede)"
+  },
+  "grace": {
+   "lemma": "grace",
+   "de": "Grace (Name)",
+   "proper": true
+  },
+  "alifanya": {
+   "lemma": "kufanya",
+   "de": "sie machte, sie arbeitete"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "ofisi": {
+   "lemma": "ofisi",
+   "de": "Büro, Sekretariat"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "shule": {
+   "lemma": "shule",
+   "de": "Schule"
+  },
+  "azania": {
+   "lemma": "azania",
+   "de": "Azania (Schulname)",
+   "proper": true
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, in"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahre"
+  },
+  "thelathini": {
+   "lemma": "thelathini",
+   "de": "dreißig"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war, sie wurde"
+  },
+  "katibu": {
+   "lemma": "katibu",
+   "de": "Sekretärin"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "erste"
+  },
+  "tangu": {
+   "lemma": "tangu",
+   "de": "seit"
+  },
+  "ilipofunguliwa": {
+   "lemma": "kufungua",
+   "de": "als sie eröffnet wurde"
+  },
+  "alijua": {
+   "lemma": "kujua",
+   "de": "sie kannte"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jeden, jede, jedes"
+  },
+  "mwalimu": {
+   "lemma": "mwalimu",
+   "de": "Lehrer"
+  },
+  "mwanafunzi": {
+   "lemma": "mwanafunzi",
+   "de": "Schülerin"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, von"
+  },
+  "karatasi": {
+   "lemma": "karatasi",
+   "de": "Papier, Blatt"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "in, drin"
+  },
+  "makabati": {
+   "lemma": "kabati",
+   "de": "Schränke"
+  },
+  "yale": {
+   "lemma": "yale",
+   "de": "jene, diese",
+   "structure": true
+  },
+  "wakati": {
+   "lemma": "wakati",
+   "de": "als"
+  },
+  "kompyuta": {
+   "lemma": "kompyuta",
+   "de": "Computer"
+  },
+  "zilipofika": {
+   "lemma": "kufika",
+   "de": "als sie ankamen"
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "elfu": {
+   "lemma": "elfu",
+   "de": "tausend"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei"
+  },
+  "alijifunza": {
+   "lemma": "kujifunza",
+   "de": "sie lernte"
+  },
+  "kuzitumia": {
+   "lemma": "kutumia",
+   "de": "sie zu benutzen"
+  },
+  "wiki": {
+   "lemma": "wiki",
+   "de": "Wochen"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "mwezi": {
+   "lemma": "mwezi",
+   "de": "Monat"
+  },
+  "desemba": {
+   "lemma": "desemba",
+   "de": "Dezember"
+  },
+  "sitini": {
+   "lemma": "sitini",
+   "de": "sechzig"
+  },
+  "akaamua": {
+   "lemma": "kuamua",
+   "de": "und entschied sich"
+  },
+  "kustaafu": {
+   "lemma": "kustaafu",
+   "de": "in Rente zu gehen"
+  },
+  "meneja": {
+   "lemma": "meneja",
+   "de": "Geschäftsführer"
+  },
+  "alimwuliza": {
+   "lemma": "kuuliza",
+   "de": "er fragte sie"
+  },
+  "kama": {
+   "lemma": "kama",
+   "de": "ob"
+  },
+  "anataka": {
+   "lemma": "kutaka",
+   "de": "sie will"
+  },
+  "sherehe": {
+   "lemma": "sherehe",
+   "de": "Fest"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "sie antwortete"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "kitu": {
+   "lemma": "kitu",
+   "de": "Sache, Ding"
+  },
+  "kimoja": {
+   "lemma": "moja",
+   "de": "eines (Ki-Klasse)"
+  },
+  "kufundisha": {
+   "lemma": "kufundisha",
+   "de": "einzuarbeiten, zu unterrichten"
+  },
+  "msichana": {
+   "lemma": "msichana",
+   "de": "Mädchen"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neue"
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "bevor"
+  },
+  "kuondoka": {
+   "lemma": "kuondoka",
+   "de": "zu gehen"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "mwisho": {
+   "lemma": "mwisho",
+   "de": "letzte, Ende"
+  },
+  "walimu": {
+   "lemma": "walimu",
+   "de": "Lehrerinnen und Lehrer"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "walikusanyika": {
+   "lemma": "kukusanya",
+   "de": "sie versammelten sich"
+  },
+  "ofisini": {
+   "lemma": "ofisi",
+   "de": "im Büro"
+  },
+  "mkurugenzi": {
+   "lemma": "mkurugenzi",
+   "de": "Direktor"
+  },
+  "alitoa": {
+   "lemma": "kutoa",
+   "de": "er überreichte"
+  },
+  "zawadi": {
+   "lemma": "zawadi",
+   "de": "Geschenk"
+  },
+  "kadi": {
+   "lemma": "kadi",
+   "de": "Karte"
+  },
+  "iliyosainiwa": {
+   "lemma": "kusaini",
+   "de": "die unterschrieben war"
+  },
+  "mtu": {
+   "lemma": "mtu",
+   "de": "Mensch, jeder"
+  },
+  "alilia": {
+   "lemma": "kulia",
+   "de": "sie weinte"
+  },
+  "kidogo": {
+   "lemma": "kidogo",
+   "de": "ein wenig"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "akacheka": {
+   "lemma": "kucheka",
+   "de": "und lachte"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "zu gehen"
+  },
+  "yule": {
+   "lemma": "yule",
+   "de": "jenes, dieses",
+   "structure": true
+  },
+  "zote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "ziko": {
+   "lemma": "-ko",
+   "de": "sie sind (an einem Ort)",
+   "structure": true
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "kweli": {
+   "lemma": "kweli",
+   "de": "wahr, eigentlich"
+  },
+  "iko": {
+   "lemma": "-ko",
+   "de": "sie ist (an einem Ort)",
+   "structure": true
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "draußen"
+  },
+  "mlango": {
+   "lemma": "mlango",
+   "de": "Tür"
+  },
+  "huu": {
+   "lemma": "huu",
+   "de": "diese",
+   "structure": true
+  },
+  "wengi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "walifikiri": {
+   "lemma": "kufikiri",
+   "de": "sie dachten"
+  },
+  "atabaki": {
+   "lemma": "kubaki",
+   "de": "sie werde bleiben"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein"
+  },
+  "zaidi": {
+   "lemma": "zaidi",
+   "de": "länger, mehr"
+  },
+  "alikubali": {
+   "lemma": "kukubali",
+   "de": "er stimmte zu"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "Mal (mara moja: sofort)"
+  },
+  "wanafunzi": {
+   "lemma": "mwanafunzi",
+   "de": "Schüler"
+  },
+  "darasa": {
+   "lemma": "darasa",
+   "de": "Klasse"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben, siebten"
+  },
+  "waliimba": {
+   "lemma": "kuimba",
+   "de": "sie sangen"
+  },
+  "wimbo": {
+   "lemma": "wimbo",
+   "de": "Lied"
+  },
+  "mlangoni": {
+   "lemma": "mlango",
+   "de": "an der Tür"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "eins (mara moja: sofort)"
+  },
+  "aliketi": {
+   "lemma": "kuketi",
+   "de": "sie setzte sich"
+  },
+  "alichukua": {
+   "lemma": "kuchukua",
+   "de": "sie nahm"
+  },
+  "mkoba": {
+   "lemma": "mkoba",
+   "de": "Tasche"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "akatoka": {
+   "lemma": "kutoka",
+   "de": "und ging hinaus"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "walimfuata": {
+   "lemma": "kufuata",
+   "de": "sie begleiteten sie"
+  },
+  "hadi": {
+   "lemma": "hadi",
+   "de": "bis"
+  },
+  "langoni": {
+   "lemma": "lango",
+   "de": "zum Tor"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte sie"
+  }
+ },
+ "audio": null
+}

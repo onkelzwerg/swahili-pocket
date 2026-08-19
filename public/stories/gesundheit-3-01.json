@@ -1,0 +1,444 @@
+{
+ "id": "gesundheit-3-01",
+ "title": "Homa ya Usiku",
+ "titleDe": "Fieber in der Nacht",
+ "band": 3,
+ "topic": "Gesundheit",
+ "emoji": "🌡️",
+ "lemmas": [
+  "asubuhi",
+  "baadaye",
+  "chandarua",
+  "chumba",
+  "daktari",
+  "dawa",
+  "hadi",
+  "haraka",
+  "homa",
+  "hospitali",
+  "ingi",
+  "jasho",
+  "jioni",
+  "jirani",
+  "juu",
+  "kila",
+  "kitanda",
+  "kuamka",
+  "kuangalia",
+  "kuanza",
+  "kucheza",
+  "kuchukua",
+  "kuisha",
+  "kujua",
+  "kuketi",
+  "kulala",
+  "kulia",
+  "kunywa",
+  "kurudi",
+  "kusema",
+  "kushika",
+  "kusikia",
+  "kusubiri",
+  "kutibu",
+  "kutoa",
+  "kuuliza",
+  "kuwa",
+  "kwa",
+  "kwamba",
+  "kwenda",
+  "lazima",
+  "malaria",
+  "mama",
+  "mapema",
+  "mara",
+  "mkono",
+  "moto",
+  "mpya",
+  "mtoto",
+  "muda",
+  "mwili",
+  "mwisho",
+  "na",
+  "ndani",
+  "ni",
+  "nje",
+  "nyeupe",
+  "nyumba",
+  "refu",
+  "salama",
+  "sana",
+  "siku",
+  "swali",
+  "tatu",
+  "tena",
+  "usiku",
+  "vizuri"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Usiku Fatuma alimsikia mtoto wake akilia. Aliamka haraka akaenda chumbani kwake. Mwili wa Juma ulikuwa moto sana, na alikuwa na jasho jingi.",
+   "de": "In der Nacht hörte Fatuma ihr Kind weinen. Sie stand schnell auf und ging in sein Zimmer. Jumas Körper war sehr heiß, und er war voller Schweiß."
+  },
+  {
+   "sw": "Asubuhi na mapema mama alimchukua mtoto hadi hospitali. Waliketi nje ya chumba cha daktari wakasubiri kwa muda mrefu.",
+   "de": "Früh am Morgen brachte die Mutter das Kind ins Krankenhaus. Sie setzten sich vor das Zimmer des Arztes und warteten lange."
+  },
+  {
+   "sw": "Daktari alimwangalia mtoto kwa muda, akauliza maswali mengi. Mwishowe alisema, „Ni malaria. Tumeanza mapema, kwa hiyo tutamtibu vizuri.“",
+   "de": "Der Arzt untersuchte das Kind eine Weile und stellte viele Fragen. Am Ende sagte er: „Es ist Malaria. Wir haben früh angefangen, deshalb bekommen wir das gut behandelt.“"
+  },
+  {
+   "sw": "Daktari alitoa dawa nyeupe akasema, „Anywe mara tatu kila siku. Lazima alale ndani ya chandarua kila usiku.“ Fatuma alishika mkono wa mtoto wake wakarudi nyumbani.",
+   "de": "Der Arzt gab ihnen ein weißes Medikament und sagte: „Er soll es dreimal am Tag nehmen. Und er muss jede Nacht unter einem Moskitonetz schlafen.“ Fatuma nahm ihr Kind an der Hand, und sie gingen nach Hause."
+  },
+  {
+   "sw": "Siku tatu baadaye homa iliisha. Juma alianza kucheza tena nje na watoto wa jirani. Jioni Fatuma aliangalia chandarua kipya juu ya kitanda akajua kwamba mtoto wake yuko salama.",
+   "de": "Drei Tage später war das Fieber weg. Juma fing wieder an, draußen mit den Nachbarskindern zu spielen. Am Abend betrachtete Fatuma das neue Moskitonetz über dem Bett und wusste, dass ihr Kind in Sicherheit war."
+  }
+ ],
+ "glosses": {
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht"
+  },
+  "fatuma": {
+   "lemma": "fatuma",
+   "de": "Fatuma (Name)",
+   "proper": true
+  },
+  "alimsikia": {
+   "lemma": "kusikia",
+   "de": "sie hörte ihn"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihr",
+   "structure": true
+  },
+  "akilia": {
+   "lemma": "kulia",
+   "de": "wie er weinte"
+  },
+  "aliamka": {
+   "lemma": "kuamka",
+   "de": "sie stand auf"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "akaenda": {
+   "lemma": "kwenda",
+   "de": "und ging"
+  },
+  "chumbani": {
+   "lemma": "chumba",
+   "de": "ins Zimmer"
+  },
+  "kwake": {
+   "lemma": "-ake",
+   "de": "zu ihm, seines",
+   "structure": true
+  },
+  "mwili": {
+   "lemma": "mwili",
+   "de": "Körper"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "juma": {
+   "lemma": "juma",
+   "de": "Juma (Name)",
+   "proper": true
+  },
+  "ulikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "moto": {
+   "lemma": "moto",
+   "de": "heiß"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er war, er hatte"
+  },
+  "jasho": {
+   "lemma": "jasho",
+   "de": "Schweiß"
+  },
+  "jingi": {
+   "lemma": "ingi",
+   "de": "viel"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter"
+  },
+  "alimchukua": {
+   "lemma": "kuchukua",
+   "de": "sie nahm ihn mit"
+  },
+  "hadi": {
+   "lemma": "hadi",
+   "de": "bis, nach"
+  },
+  "hospitali": {
+   "lemma": "hospitali",
+   "de": "Krankenhaus"
+  },
+  "waliketi": {
+   "lemma": "kuketi",
+   "de": "sie setzten sich"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "draußen, vor"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "chumba": {
+   "lemma": "chumba",
+   "de": "Zimmer"
+  },
+  "cha": {
+   "lemma": "cha",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "daktari": {
+   "lemma": "daktari",
+   "de": "Arzt"
+  },
+  "wakasubiri": {
+   "lemma": "kusubiri",
+   "de": "und warteten"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, deshalb (kwa hiyo)"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "mrefu": {
+   "lemma": "refu",
+   "de": "lang"
+  },
+  "alimwangalia": {
+   "lemma": "kuangalia",
+   "de": "er sah ihn an, er untersuchte ihn"
+  },
+  "akauliza": {
+   "lemma": "kuuliza",
+   "de": "und fragte"
+  },
+  "maswali": {
+   "lemma": "swali",
+   "de": "Fragen"
+  },
+  "mengi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "mwishowe": {
+   "lemma": "mwisho",
+   "de": "am Ende, schließlich"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "es ist"
+  },
+  "malaria": {
+   "lemma": "malaria",
+   "de": "Malaria"
+  },
+  "tumeanza": {
+   "lemma": "kuanza",
+   "de": "wir haben angefangen"
+  },
+  "hiyo": {
+   "lemma": "hiyo",
+   "de": "das, dieses",
+   "structure": true
+  },
+  "tutamtibu": {
+   "lemma": "kutibu",
+   "de": "wir werden ihn behandeln"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut"
+  },
+  "alitoa": {
+   "lemma": "kutoa",
+   "de": "er gab"
+  },
+  "dawa": {
+   "lemma": "dawa",
+   "de": "Medikament"
+  },
+  "nyeupe": {
+   "lemma": "nyeupe",
+   "de": "weiß"
+  },
+  "akasema": {
+   "lemma": "kusema",
+   "de": "und sagte"
+  },
+  "anywe": {
+   "lemma": "kunywa",
+   "de": "er soll trinken, er soll einnehmen"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "Mal"
+  },
+  "tatu": {
+   "lemma": "tatu",
+   "de": "drei"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jeden, jede"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag, Tage"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "er muss"
+  },
+  "alale": {
+   "lemma": "kulala",
+   "de": "dass er schläft (Konjunktiv)"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "innerhalb, unter"
+  },
+  "chandarua": {
+   "lemma": "chandarua",
+   "de": "Moskitonetz"
+  },
+  "alishika": {
+   "lemma": "kushika",
+   "de": "sie nahm, sie hielt"
+  },
+  "mkono": {
+   "lemma": "mkono",
+   "de": "Hand"
+  },
+  "wakarudi": {
+   "lemma": "kurudi",
+   "de": "und sie kehrten zurück"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später"
+  },
+  "homa": {
+   "lemma": "homa",
+   "de": "Fieber"
+  },
+  "iliisha": {
+   "lemma": "kuisha",
+   "de": "es war vorbei"
+  },
+  "alianza": {
+   "lemma": "kuanza",
+   "de": "er fing an"
+  },
+  "kucheza": {
+   "lemma": "kucheza",
+   "de": "spielen"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "wieder"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbarn"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "sie betrachtete"
+  },
+  "kipya": {
+   "lemma": "mpya",
+   "de": "neu (Ki-Klasse)"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "über, oben"
+  },
+  "kitanda": {
+   "lemma": "kitanda",
+   "de": "Bett"
+  },
+  "akajua": {
+   "lemma": "kujua",
+   "de": "und wusste"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "yuko": {
+   "lemma": "-ko",
+   "de": "er ist (an einem Ort)",
+   "structure": true
+  },
+  "salama": {
+   "lemma": "salama",
+   "de": "sicher, in Sicherheit"
+  }
+ },
+ "audio": null
+}

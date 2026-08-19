@@ -1,0 +1,562 @@
+{
+ "id": "markt-4-01",
+ "title": "Pochi Nyeusi",
+ "titleDe": "Die schwarze Geldbörse",
+ "band": 4,
+ "topic": "Markt",
+ "emoji": "👛",
+ "lemmas": [
+  "ada",
+  "asubuhi",
+  "bure",
+  "chini",
+  "hata",
+  "ingawa",
+  "ingi",
+  "jina",
+  "jioni",
+  "jumanne",
+  "juu",
+  "karibu",
+  "katika",
+  "kawaida",
+  "kichwa",
+  "kila",
+  "kisha",
+  "kitambulisho",
+  "kitu",
+  "kitunguu",
+  "kodi",
+  "kuangalia",
+  "kuanza",
+  "kucheka",
+  "kufika",
+  "kufikiri",
+  "kufungua",
+  "kujibu",
+  "kuketi",
+  "kuliko",
+  "kumi",
+  "kuona",
+  "kupanga",
+  "kupata",
+  "kupungua",
+  "kusema",
+  "kushika",
+  "kusikiliza",
+  "kusimama",
+  "kutaka",
+  "kutambua",
+  "kuuliza",
+  "kuuza",
+  "kuwa",
+  "kwa",
+  "kwamba",
+  "kwenda",
+  "lakini",
+  "lango",
+  "mama",
+  "mbele",
+  "mbili",
+  "mboga",
+  "mchana",
+  "mchicha",
+  "meza",
+  "mfuko",
+  "mkono",
+  "moja",
+  "mteja",
+  "mtoto",
+  "muda",
+  "mvulana",
+  "mwaka",
+  "na",
+  "ndani",
+  "ni",
+  "nyanya",
+  "nyeusi",
+  "nyumba",
+  "pesa",
+  "pochi",
+  "refu",
+  "saa",
+  "senti",
+  "shule",
+  "siku",
+  "soko",
+  "tajiri",
+  "tangu",
+  "watu",
+  "zima"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Kila Jumanne Mama Zuhura aliuza mboga katika soko la Mwenge. Alifika saa kumi na mbili asubuhi akapanga nyanya, vitunguu na mchicha juu ya meza yake.",
+   "de": "Jeden Dienstag verkaufte Mama Zuhura Gemüse auf dem Markt von Mwenge. Sie kam um sechs Uhr morgens an und legte Tomaten, Zwiebeln und Spinat auf ihrem Tisch aus."
+  },
+  {
+   "sw": "Siku ile wateja walikuwa wengi kuliko kawaida. Mchana Mama Zuhura alitambua kwamba pochi yake haipo mfukoni.",
+   "de": "An jenem Tag waren mehr Kunden da als sonst. Mittags bemerkte Mama Zuhura, dass ihre Geldbörse nicht mehr in der Tasche war."
+  },
+  {
+   "sw": "Ndani ya pochi kulikuwa na pesa za siku nzima na kitambulisho chake. Aliketi chini akashika kichwa chake. Alifikiri juu ya kodi ya nyumba na ada ya shule ya watoto wake.",
+   "de": "In der Börse war das Geld eines ganzen Tages und ihr Ausweis. Sie setzte sich hin und stützte den Kopf. Sie dachte an die Miete und an das Schulgeld ihrer Kinder."
+  },
+  {
+   "sw": "Jioni mvulana mmoja wa miaka kumi na miwili alisimama mbele ya meza yake. Mkononi alikuwa na pochi nyeusi. „Niliiona chini karibu na lango,“ alisema.",
+   "de": "Am Abend stand ein Junge von zwölf Jahren vor ihrem Tisch. In der Hand hielt er eine schwarze Geldbörse. „Ich habe sie unten beim Tor gesehen“, sagte er."
+  },
+  {
+   "sw": "Mama Zuhura alifungua pochi. Pesa zote zilikuwa ndani; hata senti moja haikupungua. Alimwangalia mvulana yule kwa muda mrefu akamwuliza jina lake. „Rajabu,“ alijibu, kisha akaanza kwenda.",
+   "de": "Mama Zuhura öffnete die Börse. Das ganze Geld war darin; nicht ein Cent fehlte. Sie sah den Jungen lange an und fragte ihn nach seinem Namen. „Rajabu“, antwortete er und wollte schon gehen."
+  },
+  {
+   "sw": "Tangu siku ile Rajabu alipata mboga bure kila Jumanne. Alicheka akasema kwamba hataki, lakini Mama Zuhura hakumsikiliza. Watu wa soko walisema kwamba mvulana yule ni tajiri kuliko wote, ingawa hana kitu.",
+   "de": "Seit jenem Tag bekam Rajabu jeden Dienstag Gemüse umsonst. Er lachte und sagte, er wolle es nicht, aber Mama Zuhura hörte gar nicht hin. Die Leute auf dem Markt sagten, dieser Junge sei reicher als alle anderen, obwohl er nichts besitzt."
+  }
+ ],
+ "glosses": {
+  "kila": {
+   "lemma": "kila",
+   "de": "jeden"
+  },
+  "jumanne": {
+   "lemma": "jumanne",
+   "de": "Dienstag"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter, Frau (Anrede)"
+  },
+  "zuhura": {
+   "lemma": "zuhura",
+   "de": "Zuhura (Name)",
+   "proper": true
+  },
+  "aliuza": {
+   "lemma": "kuuza",
+   "de": "sie verkaufte"
+  },
+  "mboga": {
+   "lemma": "mboga",
+   "de": "Gemüse"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "auf, in"
+  },
+  "soko": {
+   "lemma": "soko",
+   "de": "Markt"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "mwenge": {
+   "lemma": "mwenge",
+   "de": "Mwenge (Stadtteil von Daressalam)",
+   "proper": true
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "sie kam an"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "mbili": {
+   "lemma": "mbili",
+   "de": "zwei (saa kumi na mbili: sechs Uhr)"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "morgens"
+  },
+  "akapanga": {
+   "lemma": "kupanga",
+   "de": "und legte aus, und ordnete"
+  },
+  "nyanya": {
+   "lemma": "nyanya",
+   "de": "Tomaten"
+  },
+  "vitunguu": {
+   "lemma": "kitunguu",
+   "de": "Zwiebeln"
+  },
+  "mchicha": {
+   "lemma": "mchicha",
+   "de": "Spinat"
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "auf, oben"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihrem, ihre",
+   "structure": true
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "ile": {
+   "lemma": "ile",
+   "de": "jenem",
+   "structure": true
+  },
+  "wateja": {
+   "lemma": "mteja",
+   "de": "Kunden"
+  },
+  "walikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "wengi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "kuliko": {
+   "lemma": "kuliko",
+   "de": "als (Vergleich)"
+  },
+  "kawaida": {
+   "lemma": "kawaida",
+   "de": "gewöhnlich, sonst"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "mittags"
+  },
+  "alitambua": {
+   "lemma": "kutambua",
+   "de": "sie bemerkte"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "pochi": {
+   "lemma": "pochi",
+   "de": "Geldbörse"
+  },
+  "haipo": {
+   "lemma": "-po",
+   "de": "sie ist nicht da",
+   "structure": true
+  },
+  "mfukoni": {
+   "lemma": "mfuko",
+   "de": "in der Tasche"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "in, darin"
+  },
+  "kulikuwa": {
+   "lemma": "kuwa",
+   "de": "es war, es gab"
+  },
+  "pesa": {
+   "lemma": "pesa",
+   "de": "Geld"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "nzima": {
+   "lemma": "zima",
+   "de": "ganz"
+  },
+  "kitambulisho": {
+   "lemma": "kitambulisho",
+   "de": "Ausweis"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "ihr",
+   "structure": true
+  },
+  "aliketi": {
+   "lemma": "kuketi",
+   "de": "sie setzte sich"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "hin, unten"
+  },
+  "akashika": {
+   "lemma": "kushika",
+   "de": "und hielt, und stützte"
+  },
+  "kichwa": {
+   "lemma": "kichwa",
+   "de": "Kopf"
+  },
+  "alifikiri": {
+   "lemma": "kufikiri",
+   "de": "sie dachte"
+  },
+  "kodi": {
+   "lemma": "kodi",
+   "de": "Miete"
+  },
+  "nyumba": {
+   "lemma": "nyumba",
+   "de": "Haus"
+  },
+  "ada": {
+   "lemma": "ada",
+   "de": "Gebühr, Schulgeld"
+  },
+  "shule": {
+   "lemma": "shule",
+   "de": "Schule"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihrer",
+   "structure": true
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "mvulana": {
+   "lemma": "mvulana",
+   "de": "Junge"
+  },
+  "mmoja": {
+   "lemma": "moja",
+   "de": "ein"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahren"
+  },
+  "miwili": {
+   "lemma": "mbili",
+   "de": "zwei (kumi na miwili: zwölf)"
+  },
+  "alisimama": {
+   "lemma": "kusimama",
+   "de": "er stand"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor"
+  },
+  "mkononi": {
+   "lemma": "mkono",
+   "de": "in der Hand"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "er hatte, er war"
+  },
+  "nyeusi": {
+   "lemma": "nyeusi",
+   "de": "schwarz"
+  },
+  "niliiona": {
+   "lemma": "kuona",
+   "de": "ich habe sie gesehen"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe bei"
+  },
+  "lango": {
+   "lemma": "lango",
+   "de": "Tor"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "alifungua": {
+   "lemma": "kufungua",
+   "de": "sie öffnete"
+  },
+  "zote": {
+   "lemma": "-ote",
+   "de": "ganz, alle",
+   "structure": true
+  },
+  "zilikuwa": {
+   "lemma": "kuwa",
+   "de": "es war, sie waren"
+  },
+  "hata": {
+   "lemma": "hata",
+   "de": "sogar, nicht einmal"
+  },
+  "senti": {
+   "lemma": "senti",
+   "de": "Cent"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "ein"
+  },
+  "haikupungua": {
+   "lemma": "kupungua",
+   "de": "es fehlte nicht"
+  },
+  "alimwangalia": {
+   "lemma": "kuangalia",
+   "de": "sie sah ihn an"
+  },
+  "yule": {
+   "lemma": "yule",
+   "de": "jener, dieser",
+   "structure": true
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, nach"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "mrefu": {
+   "lemma": "refu",
+   "de": "lang"
+  },
+  "akamwuliza": {
+   "lemma": "kuuliza",
+   "de": "und fragte ihn"
+  },
+  "jina": {
+   "lemma": "jina",
+   "de": "Name"
+  },
+  "lake": {
+   "lemma": "-ake",
+   "de": "seinem",
+   "structure": true
+  },
+  "rajabu": {
+   "lemma": "rajabu",
+   "de": "Rajabu (Name)",
+   "proper": true
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "antwortete er"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "akaanza": {
+   "lemma": "kuanza",
+   "de": "und begann"
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "zu gehen"
+  },
+  "tangu": {
+   "lemma": "tangu",
+   "de": "seit"
+  },
+  "alipata": {
+   "lemma": "kupata",
+   "de": "er bekam"
+  },
+  "bure": {
+   "lemma": "bure",
+   "de": "umsonst"
+  },
+  "alicheka": {
+   "lemma": "kucheka",
+   "de": "er lachte"
+  },
+  "akasema": {
+   "lemma": "kusema",
+   "de": "und sagte"
+  },
+  "hataki": {
+   "lemma": "kutaka",
+   "de": "er will nicht"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "hakumsikiliza": {
+   "lemma": "kusikiliza",
+   "de": "sie hörte ihm nicht zu"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "walisema": {
+   "lemma": "kusema",
+   "de": "sie sagten"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "tajiri": {
+   "lemma": "tajiri",
+   "de": "reich"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "ingawa": {
+   "lemma": "ingawa",
+   "de": "obwohl"
+  },
+  "hana": {
+   "lemma": "kuwa",
+   "de": "er hat nicht"
+  },
+  "kitu": {
+   "lemma": "kitu",
+   "de": "etwas, Ding"
+  }
+ },
+ "audio": null
+}

@@ -1,0 +1,443 @@
+{
+ "id": "arbeit-3-01",
+ "title": "Ripoti ya Kwanza",
+ "titleDe": "Der erste Bericht",
+ "band": 3,
+ "topic": "Arbeit",
+ "emoji": "💼",
+ "lemmas": [
+  "bahari",
+  "bidii",
+  "bora",
+  "bosi",
+  "haraka",
+  "jioni",
+  "jumatatu",
+  "kabla",
+  "kampuni",
+  "katika",
+  "kazi",
+  "kesho",
+  "kila",
+  "kisha",
+  "kitu",
+  "kompyuta",
+  "kuambia",
+  "kuandika",
+  "kueleza",
+  "kuendelea",
+  "kufanya",
+  "kufika",
+  "kuhusu",
+  "kuingia",
+  "kuisha",
+  "kujibu",
+  "kuketi",
+  "kukusanya",
+  "kuliko",
+  "kumaliza",
+  "kuona",
+  "kuonyesha",
+  "kupiga",
+  "kurudi",
+  "kusahau",
+  "kusema",
+  "kusikiliza",
+  "kuwa",
+  "kwa",
+  "kwamba",
+  "kwanza",
+  "lakini",
+  "lazima",
+  "leo",
+  "mapema",
+  "mbaya",
+  "mbele",
+  "meza",
+  "moja",
+  "moyo",
+  "mpya",
+  "mteja",
+  "muda",
+  "mzuri",
+  "na",
+  "namba",
+  "ni",
+  "ofisi",
+  "polepole",
+  "ripoti",
+  "saa",
+  "saba",
+  "sehemu",
+  "siku",
+  "tatizo",
+  "tayari",
+  "vizuri"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jumatatu ilikuwa siku ya kwanza ya Neema katika kampuni ya Bahari. Alifika ofisini mapema akaketi mbele ya kompyuta yake mpya.",
+   "de": "Der Montag war Neemas erster Tag in der Firma Bahari. Sie kam früh im Büro an und setzte sich vor ihren neuen Computer."
+  },
+  {
+   "sw": "Bosi wake alimwambia aandike ripoti kuhusu wateja wapya. „Lazima iwe tayari kabla ya saa saba,“ alisema.",
+   "de": "Ihr Chef trug ihr auf, einen Bericht über die neuen Kunden zu schreiben. „Er muss vor ein Uhr fertig sein“, sagte er."
+  },
+  {
+   "sw": "Neema alifanya kazi kwa bidii. Alikusanya namba zote akaandika kila kitu kwenye kompyuta. Lakini alipomaliza aliona kwamba alikuwa amesahau sehemu moja.",
+   "de": "Neema arbeitete fleißig. Sie sammelte alle Zahlen und schrieb alles in den Computer. Doch als sie fertig war, sah sie, dass sie einen Teil vergessen hatte."
+  },
+  {
+   "sw": "Saa saba ilifika, na ripoti haikuwa tayari. Neema aliingia ofisi ya bosi akaeleza tatizo lake. Moyo wake ulipiga haraka. Bosi alimsikiliza kwa muda kisha akajibu polepole.",
+   "de": "Ein Uhr kam, und der Bericht war nicht fertig. Neema ging ins Büro des Chefs und erklärte ihm ihr Problem. Ihr Herz schlug schnell. Der Chef hörte ihr eine Weile zu und antwortete dann langsam."
+  },
+  {
+   "sw": "„Ripoti nzuri ya kesho ni bora kuliko ripoti mbaya ya leo,“ alisema. „Maliza kazi yako, kisha nionyeshe.“ Neema alirudi mezani akaendelea. Jioni ripoti ilikuwa tayari, na siku ya kwanza iliisha vizuri.",
+   "de": "„Ein guter Bericht von morgen ist besser als ein schlechter von heute“, sagte er. „Mach deine Arbeit fertig und zeig sie mir dann.“ Neema ging an ihren Tisch zurück und machte weiter. Am Abend war der Bericht fertig, und der erste Tag ging gut zu Ende."
+  }
+ ],
+ "glosses": {
+  "jumatatu": {
+   "lemma": "jumatatu",
+   "de": "Montag"
+  },
+  "ilikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "kwanza": {
+   "lemma": "kwanza",
+   "de": "erste"
+  },
+  "neema": {
+   "lemma": "neema",
+   "de": "Neema (Name)",
+   "proper": true
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "kampuni": {
+   "lemma": "kampuni",
+   "de": "Firma"
+  },
+  "bahari": {
+   "lemma": "bahari",
+   "de": "Meer (hier: Name der Firma)"
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "sie kam an"
+  },
+  "ofisini": {
+   "lemma": "ofisi",
+   "de": "im Büro"
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "akaketi": {
+   "lemma": "kuketi",
+   "de": "und setzte sich"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor"
+  },
+  "kompyuta": {
+   "lemma": "kompyuta",
+   "de": "Computer"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihren",
+   "structure": true
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neu"
+  },
+  "bosi": {
+   "lemma": "bosi",
+   "de": "Chef"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihr",
+   "structure": true
+  },
+  "alimwambia": {
+   "lemma": "kuambia",
+   "de": "er sagte ihr"
+  },
+  "aandike": {
+   "lemma": "kuandika",
+   "de": "dass sie schreibt (Konjunktiv)"
+  },
+  "ripoti": {
+   "lemma": "ripoti",
+   "de": "Bericht"
+  },
+  "kuhusu": {
+   "lemma": "kuhusu",
+   "de": "über"
+  },
+  "wateja": {
+   "lemma": "mteja",
+   "de": "Kunden"
+  },
+  "wapya": {
+   "lemma": "mpya",
+   "de": "neue (M-Wa-Klasse)"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "er muss"
+  },
+  "iwe": {
+   "lemma": "kuwa",
+   "de": "dass er ist (Konjunktiv)"
+  },
+  "tayari": {
+   "lemma": "tayari",
+   "de": "fertig"
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "vor"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben (Suaheli-Stundenzählung: ein Uhr)"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "alifanya": {
+   "lemma": "kufanya",
+   "de": "sie machte"
+  },
+  "kazi": {
+   "lemma": "kazi",
+   "de": "Arbeit"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit"
+  },
+  "bidii": {
+   "lemma": "bidii",
+   "de": "Fleiß"
+  },
+  "alikusanya": {
+   "lemma": "kukusanya",
+   "de": "sie sammelte"
+  },
+  "namba": {
+   "lemma": "namba",
+   "de": "Zahlen"
+  },
+  "zote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "akaandika": {
+   "lemma": "kuandika",
+   "de": "und schrieb"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jedes"
+  },
+  "kitu": {
+   "lemma": "kitu",
+   "de": "Ding"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "in",
+   "structure": true
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "alipomaliza": {
+   "lemma": "kumaliza",
+   "de": "als sie fertig war"
+  },
+  "aliona": {
+   "lemma": "kuona",
+   "de": "sie sah"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war, sie hatte"
+  },
+  "amesahau": {
+   "lemma": "kusahau",
+   "de": "sie hatte vergessen"
+  },
+  "sehemu": {
+   "lemma": "sehemu",
+   "de": "Teil"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "einen"
+  },
+  "ilifika": {
+   "lemma": "kufika",
+   "de": "sie kam"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "haikuwa": {
+   "lemma": "kuwa",
+   "de": "er war nicht"
+  },
+  "aliingia": {
+   "lemma": "kuingia",
+   "de": "sie ging hinein"
+  },
+  "ofisi": {
+   "lemma": "ofisi",
+   "de": "Büro"
+  },
+  "akaeleza": {
+   "lemma": "kueleza",
+   "de": "und erklärte"
+  },
+  "tatizo": {
+   "lemma": "tatizo",
+   "de": "Problem"
+  },
+  "lake": {
+   "lemma": "-ake",
+   "de": "ihr",
+   "structure": true
+  },
+  "moyo": {
+   "lemma": "moyo",
+   "de": "Herz"
+  },
+  "ulipiga": {
+   "lemma": "kupiga",
+   "de": "es schlug"
+  },
+  "haraka": {
+   "lemma": "haraka",
+   "de": "schnell"
+  },
+  "alimsikiliza": {
+   "lemma": "kusikiliza",
+   "de": "er hörte ihr zu"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "akajibu": {
+   "lemma": "kujibu",
+   "de": "und antwortete"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "nzuri": {
+   "lemma": "mzuri",
+   "de": "gut (N-Klasse)"
+  },
+  "kesho": {
+   "lemma": "kesho",
+   "de": "morgen"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "bora": {
+   "lemma": "bora",
+   "de": "besser"
+  },
+  "kuliko": {
+   "lemma": "kuliko",
+   "de": "als (Vergleich)"
+  },
+  "mbaya": {
+   "lemma": "mbaya",
+   "de": "schlecht"
+  },
+  "leo": {
+   "lemma": "leo",
+   "de": "heute"
+  },
+  "maliza": {
+   "lemma": "kumaliza",
+   "de": "mach fertig (Aufforderung)"
+  },
+  "yako": {
+   "lemma": "-ako",
+   "de": "deine",
+   "structure": true
+  },
+  "nionyeshe": {
+   "lemma": "kuonyesha",
+   "de": "zeig sie mir (Konjunktiv)"
+  },
+  "alirudi": {
+   "lemma": "kurudi",
+   "de": "sie kehrte zurück"
+  },
+  "mezani": {
+   "lemma": "meza",
+   "de": "an den Tisch"
+  },
+  "akaendelea": {
+   "lemma": "kuendelea",
+   "de": "und machte weiter"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "iliisha": {
+   "lemma": "kuisha",
+   "de": "er ging zu Ende"
+  },
+  "vizuri": {
+   "lemma": "vizuri",
+   "de": "gut"
+  }
+ },
+ "audio": null
+}

@@ -1,0 +1,462 @@
+{
+ "id": "markt-3-01",
+ "title": "Kitambaa cha Harusi",
+ "titleDe": "Der Stoff für die Hochzeit",
+ "band": 3,
+ "topic": "Markt",
+ "emoji": "🧵",
+ "lemmas": [
+  "bado",
+  "chache",
+  "dada",
+  "duka",
+  "elfu",
+  "fundi",
+  "furaha",
+  "ghali",
+  "harusi",
+  "ijumaa",
+  "ingi",
+  "jua",
+  "kali",
+  "katika",
+  "kijani",
+  "kitambaa",
+  "kuangalia",
+  "kucheka",
+  "kuchukua",
+  "kuhitaji",
+  "kujibu",
+  "kujua",
+  "kulipa",
+  "kumi",
+  "kuona",
+  "kuonyesha",
+  "kupenda",
+  "kupita",
+  "kurudi",
+  "kusema",
+  "kushika",
+  "kuvutia",
+  "kuwa",
+  "kuweka",
+  "kwa",
+  "kwamba",
+  "kwenda",
+  "mapema",
+  "mbili",
+  "mkoba",
+  "moja",
+  "mpya",
+  "muda",
+  "mwanamke",
+  "mwisho",
+  "na",
+  "nane",
+  "ndani",
+  "nguo",
+  "ni",
+  "njia",
+  "nyekundu",
+  "nyumba",
+  "rangi",
+  "saa",
+  "saba",
+  "sana",
+  "shilingi",
+  "si",
+  "siku",
+  "soko",
+  "tayari",
+  "tu",
+  "wakati",
+  "watu"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Halima alihitaji nguo mpya kwa harusi ya dada yake. Alikwenda sokoni Kariakoo mapema, wakati jua bado halikuwa kali. Saa hiyo kulikuwa na watu wachache tu.",
+   "de": "Halima brauchte ein neues Kleid für die Hochzeit ihrer Schwester. Sie ging früh zum Kariakoo-Markt, als die Sonne noch nicht stach. Um diese Zeit waren nur wenige Leute da."
+  },
+  {
+   "sw": "Katika duka moja aliona vitambaa vya rangi nyingi. Kimoja kilikuwa kijani na nyekundu, na kilimvutia sana.",
+   "de": "In einem Laden sah sie Stoffe in vielen Farben. Einer war grün und rot, und der gefiel ihr sehr."
+  },
+  {
+   "sw": "„Kitambaa hiki ni shilingi elfu kumi,“ mwanamke wa duka alisema. „Ni ghali sana,“ Halima alijibu. „Nina elfu saba tu.“ Mwanamke huyo alishika kitambaa akakiangalia kwa muda.",
+   "de": "„Dieser Stoff kostet zehntausend Schilling“, sagte die Frau im Laden. „Das ist sehr teuer“, antwortete Halima. „Ich habe nur siebentausend.“ Die Frau nahm den Stoff und betrachtete ihn eine Weile."
+  },
+  {
+   "sw": "„Chukua kwa elfu nane,“ alisema mwishowe. „Harusi ni ya dada yako, si yako.“ Wote wawili walicheka. Halima alilipa akaweka kitambaa ndani ya mkoba wake.",
+   "de": "„Nimm ihn für achttausend“, sagte sie schließlich. „Es ist ja die Hochzeit deiner Schwester, nicht deine.“ Beide lachten. Halima bezahlte und steckte den Stoff in ihren Rucksack."
+  },
+  {
+   "sw": "Njiani alipita kwa fundi wa nguo akamwonyesha kitambaa. Fundi aliangalia akasema, „Nguo yako itakuwa tayari siku ya Ijumaa.“ Halima alirudi nyumbani akiwa na furaha. Alijua kwamba dada yake atapenda rangi hizo.",
+   "de": "Unterwegs kam sie beim Schneider vorbei und zeigte ihm den Stoff. Der Schneider sah ihn an und sagte: „Dein Kleid ist am Freitag fertig.“ Halima ging glücklich nach Hause. Sie wusste, dass ihrer Schwester diese Farben gefallen würden."
+  }
+ ],
+ "glosses": {
+  "halima": {
+   "lemma": "halima",
+   "de": "Halima (Name)",
+   "proper": true
+  },
+  "alihitaji": {
+   "lemma": "kuhitaji",
+   "de": "sie brauchte"
+  },
+  "nguo": {
+   "lemma": "nguo",
+   "de": "Kleid, Kleidung"
+  },
+  "mpya": {
+   "lemma": "mpya",
+   "de": "neu"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, bei"
+  },
+  "harusi": {
+   "lemma": "harusi",
+   "de": "Hochzeit"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "dada": {
+   "lemma": "dada",
+   "de": "Schwester"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihrer",
+   "structure": true
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "sie ging"
+  },
+  "sokoni": {
+   "lemma": "soko",
+   "de": "zum Markt"
+  },
+  "kariakoo": {
+   "lemma": "kariakoo",
+   "de": "Kariakoo (großer Markt in Daressalam)",
+   "proper": true
+  },
+  "mapema": {
+   "lemma": "mapema",
+   "de": "früh"
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  },
+  "kali": {
+   "lemma": "kali",
+   "de": "scharf, stechend"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "duka": {
+   "lemma": "duka",
+   "de": "Laden"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "ein"
+  },
+  "aliona": {
+   "lemma": "kuona",
+   "de": "sie sah"
+  },
+  "vitambaa": {
+   "lemma": "kitambaa",
+   "de": "Stoffe"
+  },
+  "vya": {
+   "lemma": "vya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "rangi": {
+   "lemma": "rangi",
+   "de": "Farben"
+  },
+  "nyingi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "kimoja": {
+   "lemma": "moja",
+   "de": "einer (Ki-Klasse)"
+  },
+  "kilikuwa": {
+   "lemma": "kuwa",
+   "de": "er war"
+  },
+  "kijani": {
+   "lemma": "kijani",
+   "de": "grün"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und"
+  },
+  "nyekundu": {
+   "lemma": "nyekundu",
+   "de": "rot"
+  },
+  "kilimvutia": {
+   "lemma": "kuvutia",
+   "de": "er gefiel ihr"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "kitambaa": {
+   "lemma": "kitambaa",
+   "de": "Stoff"
+  },
+  "hiki": {
+   "lemma": "hiki",
+   "de": "dieser (Ki-Klasse)",
+   "structure": true
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "shilingi": {
+   "lemma": "shilingi",
+   "de": "Schilling"
+  },
+  "elfu": {
+   "lemma": "elfu",
+   "de": "tausend"
+  },
+  "kumi": {
+   "lemma": "kumi",
+   "de": "zehn"
+  },
+  "mwanamke": {
+   "lemma": "mwanamke",
+   "de": "Frau"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte sie"
+  },
+  "ghali": {
+   "lemma": "ghali",
+   "de": "teuer"
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "antwortete sie"
+  },
+  "nina": {
+   "lemma": "kuwa",
+   "de": "ich habe"
+  },
+  "saba": {
+   "lemma": "saba",
+   "de": "sieben"
+  },
+  "tu": {
+   "lemma": "tu",
+   "de": "nur"
+  },
+  "huyo": {
+   "lemma": "huyo",
+   "de": "diese (genannte)",
+   "structure": true
+  },
+  "alishika": {
+   "lemma": "kushika",
+   "de": "sie nahm, sie hielt"
+  },
+  "akakiangalia": {
+   "lemma": "kuangalia",
+   "de": "und betrachtete ihn"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "chukua": {
+   "lemma": "kuchukua",
+   "de": "nimm (Aufforderung)"
+  },
+  "nane": {
+   "lemma": "nane",
+   "de": "acht"
+  },
+  "mwishowe": {
+   "lemma": "mwisho",
+   "de": "schließlich"
+  },
+  "yako": {
+   "lemma": "-ako",
+   "de": "deine",
+   "structure": true
+  },
+  "si": {
+   "lemma": "si",
+   "de": "nicht"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "beide, alle",
+   "structure": true
+  },
+  "wawili": {
+   "lemma": "mbili",
+   "de": "zwei (M-Wa-Klasse)"
+  },
+  "walicheka": {
+   "lemma": "kucheka",
+   "de": "sie lachten"
+  },
+  "alilipa": {
+   "lemma": "kulipa",
+   "de": "sie bezahlte"
+  },
+  "akaweka": {
+   "lemma": "kuweka",
+   "de": "und steckte"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "hinein"
+  },
+  "mkoba": {
+   "lemma": "mkoba",
+   "de": "Rucksack, Tasche"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihren",
+   "structure": true
+  },
+  "njiani": {
+   "lemma": "njia",
+   "de": "unterwegs"
+  },
+  "alipita": {
+   "lemma": "kupita",
+   "de": "sie kam vorbei"
+  },
+  "fundi": {
+   "lemma": "fundi",
+   "de": "Schneider, Handwerker"
+  },
+  "akamwonyesha": {
+   "lemma": "kuonyesha",
+   "de": "und zeigte ihm"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "er sah an"
+  },
+  "akasema": {
+   "lemma": "kusema",
+   "de": "und sagte"
+  },
+  "itakuwa": {
+   "lemma": "kuwa",
+   "de": "es wird sein"
+  },
+  "tayari": {
+   "lemma": "tayari",
+   "de": "fertig"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "ijumaa": {
+   "lemma": "ijumaa",
+   "de": "Freitag"
+  },
+  "alirudi": {
+   "lemma": "kurudi",
+   "de": "sie kehrte zurück"
+  },
+  "nyumbani": {
+   "lemma": "nyumba",
+   "de": "nach Hause"
+  },
+  "akiwa": {
+   "lemma": "kuwa",
+   "de": "während sie war"
+  },
+  "furaha": {
+   "lemma": "furaha",
+   "de": "Freude"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Stunde, Uhrzeit"
+  },
+  "hiyo": {
+   "lemma": "hiyo",
+   "de": "diese (genannte)",
+   "structure": true
+  },
+  "kulikuwa": {
+   "lemma": "kuwa",
+   "de": "es gab, es waren"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "wachache": {
+   "lemma": "chache",
+   "de": "wenige"
+  },
+  "alijua": {
+   "lemma": "kujua",
+   "de": "sie wusste"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "atapenda": {
+   "lemma": "kupenda",
+   "de": "sie wird lieben, ihr wird gefallen"
+  },
+  "hizo": {
+   "lemma": "hizo",
+   "de": "diese (genannten)",
+   "structure": true
+  },
+  "wakati": {
+   "lemma": "wakati",
+   "de": "als"
+  },
+  "bado": {
+   "lemma": "bado",
+   "de": "noch"
+  },
+  "halikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war nicht"
+  }
+ },
+ "audio": null
+}

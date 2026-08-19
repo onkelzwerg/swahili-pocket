@@ -1,0 +1,442 @@
+{
+ "id": "familie-3-01",
+ "title": "Chumba cha Bibi",
+ "titleDe": "Das Zimmer der Großmutter",
+ "band": 3,
+ "topic": "Familie",
+ "emoji": "🏠",
+ "lemmas": [
+  "asubuhi",
+  "baba",
+  "basi",
+  "bibi",
+  "bila",
+  "chumba",
+  "dirisha",
+  "familia",
+  "gani",
+  "hadi",
+  "hadithi",
+  "jioni",
+  "jua",
+  "jumamosi",
+  "kabla",
+  "karibu",
+  "kelele",
+  "kila",
+  "kitanda",
+  "kuangalia",
+  "kucheka",
+  "kueleza",
+  "kufika",
+  "kufungua",
+  "kufurahi",
+  "kuingia",
+  "kuita",
+  "kuja",
+  "kujibu",
+  "kukaa",
+  "kuketi",
+  "kulala",
+  "kuona",
+  "kuosha",
+  "kupanga",
+  "kupika",
+  "kusema",
+  "kushika",
+  "kushuka",
+  "kusikiliza",
+  "kutoa",
+  "kuuliza",
+  "kuwa",
+  "kuweka",
+  "kwa",
+  "kwenda",
+  "lazima",
+  "mama",
+  "mbao",
+  "mchana",
+  "meza",
+  "mkono",
+  "mpya",
+  "mtoto",
+  "muda",
+  "mzigo",
+  "na",
+  "nje",
+  "nyumba",
+  "pembeni",
+  "polepole",
+  "refu",
+  "samaki",
+  "sana",
+  "sasa",
+  "usiku",
+  "wali",
+  "zamani"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jumamosi asubuhi mama aliwaita watoto wake wote. „Bibi atakuja kukaa nasi,“ alisema. „Lazima tupange chumba chake kabla ya jioni.“",
+   "de": "Am Samstagmorgen rief die Mutter alle ihre Kinder zusammen. „Die Großmutter kommt und wird bei uns wohnen“, sagte sie. „Wir müssen ihr Zimmer vor dem Abend herrichten.“"
+  },
+  {
+   "sw": "Neema alifungua dirisha akatoa mzigo wote nje. Juma aliosha meza akaiweka pembeni. Baba aliingia na kitanda kipya cha mbao akakiweka karibu na dirisha.",
+   "de": "Neema öffnete das Fenster und trug das ganze Gerümpel nach draußen. Juma wusch den Tisch ab und stellte ihn zur Seite. Der Vater kam mit einem neuen Holzbett herein und stellte es ans Fenster."
+  },
+  {
+   "sw": "Mchana bibi alifika kwa basi. Alishuka polepole akaangalia nyumba kwa muda mrefu. „Chumba changu kina dirisha,“ alisema akacheka. „Sasa nitaona jua kila asubuhi.“",
+   "de": "Mittags kam die Großmutter mit dem Bus an. Sie stieg langsam aus und betrachtete das Haus eine ganze Weile. „Mein Zimmer hat ein Fenster“, sagte sie und lachte. „Jetzt sehe ich jeden Morgen die Sonne.“"
+  },
+  {
+   "sw": "Jioni familia yote iliketi mezani. Mama alipika wali na samaki. Bibi alieleza hadithi za zamani, na watoto walisikiliza bila kelele hadi usiku.",
+   "de": "Am Abend saß die ganze Familie am Tisch. Die Mutter kochte Reis mit Fisch. Die Großmutter erzählte Geschichten von früher, und die Kinder hörten ohne ein Geräusch zu, bis es Nacht wurde."
+  },
+  {
+   "sw": "Kabla ya kulala Juma alimuuliza, „Bibi, utakaa nasi kwa muda gani?“ Bibi alimshika mkono akajibu, „Kwa muda mrefu sana.“ Juma alifurahi akaenda kulala.",
+   "de": "Vor dem Schlafengehen fragte Juma sie: „Großmutter, wie lange bleibst du bei uns?“ Die Großmutter nahm seine Hand und antwortete: „Sehr, sehr lange.“ Juma freute sich und ging schlafen."
+  }
+ ],
+ "glosses": {
+  "jumamosi": {
+   "lemma": "jumamosi",
+   "de": "Samstag"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen"
+  },
+  "mama": {
+   "lemma": "mama",
+   "de": "Mutter"
+  },
+  "aliwaita": {
+   "lemma": "kuita",
+   "de": "sie rief sie"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle, ganz",
+   "structure": true
+  },
+  "bibi": {
+   "lemma": "bibi",
+   "de": "Großmutter"
+  },
+  "atakuja": {
+   "lemma": "kuja",
+   "de": "sie wird kommen"
+  },
+  "kukaa": {
+   "lemma": "kukaa",
+   "de": "wohnen, bleiben"
+  },
+  "nasi": {
+   "lemma": "na",
+   "de": "mit uns"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte sie"
+  },
+  "lazima": {
+   "lemma": "lazima",
+   "de": "wir müssen"
+  },
+  "tupange": {
+   "lemma": "kupanga",
+   "de": "dass wir herrichten (Konjunktiv)"
+  },
+  "chumba": {
+   "lemma": "chumba",
+   "de": "Zimmer"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "ihr",
+   "structure": true
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "vor, bevor"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "Abend"
+  },
+  "neema": {
+   "lemma": "neema",
+   "de": "Neema (Name)",
+   "proper": true
+  },
+  "alifungua": {
+   "lemma": "kufungua",
+   "de": "sie öffnete"
+  },
+  "dirisha": {
+   "lemma": "dirisha",
+   "de": "Fenster"
+  },
+  "akatoa": {
+   "lemma": "kutoa",
+   "de": "und trug hinaus"
+  },
+  "mzigo": {
+   "lemma": "mzigo",
+   "de": "Gerümpel, Last"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "nach draußen"
+  },
+  "juma": {
+   "lemma": "juma",
+   "de": "Juma (Name)",
+   "proper": true
+  },
+  "aliosha": {
+   "lemma": "kuosha",
+   "de": "er wusch ab"
+  },
+  "meza": {
+   "lemma": "meza",
+   "de": "Tisch"
+  },
+  "akaiweka": {
+   "lemma": "kuweka",
+   "de": "und stellte ihn"
+  },
+  "pembeni": {
+   "lemma": "pembeni",
+   "de": "zur Seite"
+  },
+  "baba": {
+   "lemma": "baba",
+   "de": "Vater"
+  },
+  "aliingia": {
+   "lemma": "kuingia",
+   "de": "er kam herein"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "kitanda": {
+   "lemma": "kitanda",
+   "de": "Bett"
+  },
+  "kipya": {
+   "lemma": "mpya",
+   "de": "neues (Ki-Klasse)"
+  },
+  "cha": {
+   "lemma": "cha",
+   "de": "aus, von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "mbao": {
+   "lemma": "mbao",
+   "de": "Holz"
+  },
+  "akakiweka": {
+   "lemma": "kuweka",
+   "de": "und stellte es"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe bei"
+  },
+  "mchana": {
+   "lemma": "mchana",
+   "de": "am Mittag"
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "sie kam an"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit, für"
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "Bus"
+  },
+  "alishuka": {
+   "lemma": "kushuka",
+   "de": "sie stieg aus"
+  },
+  "polepole": {
+   "lemma": "polepole",
+   "de": "langsam"
+  },
+  "akaangalia": {
+   "lemma": "kuangalia",
+   "de": "und betrachtete"
+  },
+  "nyumba": {
+   "lemma": "nyumba",
+   "de": "Haus"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile, Zeitraum"
+  },
+  "mrefu": {
+   "lemma": "refu",
+   "de": "lang"
+  },
+  "changu": {
+   "lemma": "-angu",
+   "de": "mein",
+   "structure": true
+  },
+  "kina": {
+   "lemma": "kuwa",
+   "de": "es hat (Ki-Klasse)"
+  },
+  "akacheka": {
+   "lemma": "kucheka",
+   "de": "und lachte"
+  },
+  "sasa": {
+   "lemma": "sasa",
+   "de": "jetzt"
+  },
+  "nitaona": {
+   "lemma": "kuona",
+   "de": "ich werde sehen"
+  },
+  "jua": {
+   "lemma": "jua",
+   "de": "Sonne"
+  },
+  "kila": {
+   "lemma": "kila",
+   "de": "jeden"
+  },
+  "familia": {
+   "lemma": "familia",
+   "de": "Familie"
+  },
+  "yote": {
+   "lemma": "-ote",
+   "de": "ganze",
+   "structure": true
+  },
+  "iliketi": {
+   "lemma": "kuketi",
+   "de": "sie setzte sich"
+  },
+  "mezani": {
+   "lemma": "meza",
+   "de": "am Tisch"
+  },
+  "alipika": {
+   "lemma": "kupika",
+   "de": "sie kochte"
+  },
+  "wali": {
+   "lemma": "wali",
+   "de": "Reis"
+  },
+  "samaki": {
+   "lemma": "samaki",
+   "de": "Fisch"
+  },
+  "alieleza": {
+   "lemma": "kueleza",
+   "de": "sie erzählte"
+  },
+  "hadithi": {
+   "lemma": "hadithi",
+   "de": "Geschichten"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "zamani": {
+   "lemma": "zamani",
+   "de": "früher, damals"
+  },
+  "walisikiliza": {
+   "lemma": "kusikiliza",
+   "de": "sie hörten zu"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "kelele": {
+   "lemma": "kelele",
+   "de": "Lärm, Geräusch"
+  },
+  "hadi": {
+   "lemma": "hadi",
+   "de": "bis"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht"
+  },
+  "kulala": {
+   "lemma": "kulala",
+   "de": "schlafen"
+  },
+  "alimuuliza": {
+   "lemma": "kuuliza",
+   "de": "er fragte sie"
+  },
+  "utakaa": {
+   "lemma": "kukaa",
+   "de": "du wirst bleiben"
+  },
+  "gani": {
+   "lemma": "gani",
+   "de": "welche, was für"
+  },
+  "alimshika": {
+   "lemma": "kushika",
+   "de": "sie hielt ihn"
+  },
+  "mkono": {
+   "lemma": "mkono",
+   "de": "Hand, Arm"
+  },
+  "akajibu": {
+   "lemma": "kujibu",
+   "de": "und antwortete"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "alifurahi": {
+   "lemma": "kufurahi",
+   "de": "er freute sich"
+  },
+  "akaenda": {
+   "lemma": "kwenda",
+   "de": "und ging"
+  }
+ },
+ "audio": null
+}

@@ -1,0 +1,608 @@
+{
+ "id": "familie-4-01",
+ "title": "Ufunguo wa Babu",
+ "titleDe": "Der Schlüssel des Großvaters",
+ "band": 4,
+ "topic": "Familie",
+ "emoji": "🔑",
+ "lemmas": [
+  "asubuhi",
+  "babu",
+  "bibi",
+  "bila",
+  "binti",
+  "chuma",
+  "daktari",
+  "dirisha",
+  "gari",
+  "hadi",
+  "hapa",
+  "hata",
+  "ili",
+  "ingi",
+  "jioni",
+  "jumamosi",
+  "kabisa",
+  "kabla",
+  "kati",
+  "katika",
+  "kijiji",
+  "kitabu",
+  "kuangalia",
+  "kuanza",
+  "kubwa",
+  "kufa",
+  "kufika",
+  "kufungasha",
+  "kufungua",
+  "kuhama",
+  "kuishi",
+  "kuita",
+  "kukaa",
+  "kuketi",
+  "kulala",
+  "kuona",
+  "kuondoka",
+  "kupa",
+  "kupita",
+  "kurudi",
+  "kusema",
+  "kushika",
+  "kusimama",
+  "kusumbua",
+  "kutoa",
+  "kuuza",
+  "kuwa",
+  "kuweza",
+  "kwa",
+  "kwamba",
+  "kwenda",
+  "lakini",
+  "mara",
+  "mbali",
+  "mbele",
+  "mbili",
+  "mdogo",
+  "mguu",
+  "mji",
+  "mkeka",
+  "mkono",
+  "mlango",
+  "moja",
+  "msichana",
+  "mtoto",
+  "muda",
+  "mume",
+  "mvulana",
+  "mwaka",
+  "na",
+  "ndani",
+  "neno",
+  "nyuma",
+  "nyumba",
+  "pale",
+  "pamoja",
+  "peke",
+  "picha",
+  "refu",
+  "sana",
+  "sanduku",
+  "sauti",
+  "tano",
+  "tatu",
+  "tayari",
+  "tena",
+  "ufunguo",
+  "ukuta",
+  "usiku",
+  "zamani",
+  "zito"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Babu Mwinyi aliishi peke yake katika kijiji cha Kisiwani kwa miaka mingi. Mwaka huu miguu yake ilianza kumsumbua, na daktari alisema kwamba hawezi kukaa peke yake tena.",
+   "de": "Großvater Mwinyi lebte viele Jahre allein im Dorf Kisiwani. Dieses Jahr fingen seine Beine an, ihm zu schaffen zu machen, und der Arzt sagte, er könne nicht länger allein wohnen."
+  },
+  {
+   "sw": "Jumamosi moja binti yake alikwenda kijijini pamoja na mumewe ili kumhamisha babu mjini. Walifika asubuhi wakamwona ameketi mbele ya nyumba, tayari amefungasha masanduku yake mawili.",
+   "de": "An einem Samstag fuhr seine Tochter mit ihrem Mann ins Dorf, um den Großvater in die Stadt zu holen. Sie kamen am Morgen an und sahen ihn vor dem Haus sitzen, seine zwei Koffer schon gepackt."
+  },
+  {
+   "sw": "Ndani hakukuwa na sauti yoyote. Babu alisimama mbele ya ukuta kwa muda mrefu. Pale palikuwa na picha ya bibi aliyekufa miaka mitano iliyopita.",
+   "de": "Drinnen war kein Laut zu hören. Der Großvater stand lange vor einer Wand. Dort hing ein Bild der Großmutter, die vor fünf Jahren gestorben war."
+  },
+  {
+   "sw": "Kabla ya kuondoka, babu aliwaita watoto watatu wa binti yake. Alimpa msichana mkubwa mkeka wa bibi. Alimpa mvulana wa kati kitabu chake cha zamani. Kwa mdogo kabisa alitoa ufunguo mzito wa chuma.",
+   "de": "Vor der Abfahrt rief der Großvater die drei Kinder seiner Tochter zu sich. Dem großen Mädchen gab er die Matte der Großmutter. Dem mittleren Jungen gab er sein altes Buch. Dem Kleinsten reichte er einen schweren Schlüssel aus Eisen."
+  },
+  {
+   "sw": "„Nyumba hii haitauzwa,“ babu alisema. „Utakapokuwa mkubwa, utarudi hapa ukafungue mlango.“ Mvulana mdogo alishika ufunguo kwa mikono miwili akauangalia kwa muda mrefu bila kusema neno.",
+   "de": "„Dieses Haus wird nicht verkauft“, sagte der Großvater. „Wenn du groß bist, kommst du hierher zurück und schließt die Tür auf.“ Der kleine Junge nahm den Schlüssel mit beiden Händen und betrachtete ihn lange, ohne ein Wort zu sagen."
+  },
+  {
+   "sw": "Gari liliondoka jioni. Babu hakuangalia nyuma hata mara moja, lakini mtoto mdogo aliangalia dirishani hadi nyumba ile ilipokuwa mbali sana. Usiku ule alilala na ufunguo mkononi mwake.",
+   "de": "Am Abend fuhr das Auto los. Der Großvater sah kein einziges Mal zurück, aber das kleine Kind schaute aus dem Fenster, bis das Haus weit entfernt war. In jener Nacht schlief es mit dem Schlüssel in der Hand ein."
+  }
+ ],
+ "glosses": {
+  "babu": {
+   "lemma": "babu",
+   "de": "Großvater"
+  },
+  "mwinyi": {
+   "lemma": "mwinyi",
+   "de": "Mwinyi (Name)",
+   "proper": true
+  },
+  "aliishi": {
+   "lemma": "kuishi",
+   "de": "er lebte"
+  },
+  "peke": {
+   "lemma": "peke",
+   "de": "allein"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "seine, sein",
+   "structure": true
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "kijiji": {
+   "lemma": "kijiji",
+   "de": "Dorf"
+  },
+  "cha": {
+   "lemma": "cha",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "kisiwani": {
+   "lemma": "kisiwani",
+   "de": "Kisiwani (Dorfname)",
+   "proper": true
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für, mit, aus"
+  },
+  "miaka": {
+   "lemma": "mwaka",
+   "de": "Jahre"
+  },
+  "mingi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "mwaka": {
+   "lemma": "mwaka",
+   "de": "Jahr"
+  },
+  "huu": {
+   "lemma": "huu",
+   "de": "dieses",
+   "structure": true
+  },
+  "miguu": {
+   "lemma": "mguu",
+   "de": "Beine"
+  },
+  "ilianza": {
+   "lemma": "kuanza",
+   "de": "sie fingen an"
+  },
+  "kumsumbua": {
+   "lemma": "kusumbua",
+   "de": "ihm zu schaffen zu machen"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "daktari": {
+   "lemma": "daktari",
+   "de": "Arzt"
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "hawezi": {
+   "lemma": "kuweza",
+   "de": "er kann nicht"
+  },
+  "kukaa": {
+   "lemma": "kukaa",
+   "de": "wohnen"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "mehr, wieder"
+  },
+  "jumamosi": {
+   "lemma": "jumamosi",
+   "de": "Samstag"
+  },
+  "moja": {
+   "lemma": "moja",
+   "de": "ein, einmal"
+  },
+  "binti": {
+   "lemma": "binti",
+   "de": "Tochter"
+  },
+  "alikwenda": {
+   "lemma": "kwenda",
+   "de": "sie fuhr"
+  },
+  "kijijini": {
+   "lemma": "kijiji",
+   "de": "ins Dorf"
+  },
+  "pamoja": {
+   "lemma": "pamoja",
+   "de": "zusammen"
+  },
+  "mumewe": {
+   "lemma": "mume",
+   "de": "ihr Ehemann"
+  },
+  "ili": {
+   "lemma": "ili",
+   "de": "um zu"
+  },
+  "kumhamisha": {
+   "lemma": "kuhama",
+   "de": "ihn umziehen zu lassen"
+  },
+  "mjini": {
+   "lemma": "mji",
+   "de": "in die Stadt"
+  },
+  "walifika": {
+   "lemma": "kufika",
+   "de": "sie kamen an"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "am Morgen"
+  },
+  "wakamwona": {
+   "lemma": "kuona",
+   "de": "und sahen ihn"
+  },
+  "ameketi": {
+   "lemma": "kuketi",
+   "de": "sitzen, er sitzt"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "vor"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "nyumba": {
+   "lemma": "nyumba",
+   "de": "Haus"
+  },
+  "tayari": {
+   "lemma": "tayari",
+   "de": "schon, bereit"
+  },
+  "amefungasha": {
+   "lemma": "kufungasha",
+   "de": "er hat gepackt"
+  },
+  "masanduku": {
+   "lemma": "sanduku",
+   "de": "Koffer (Plural)"
+  },
+  "mawili": {
+   "lemma": "mbili",
+   "de": "zwei (Ma-Klasse)"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "drinnen"
+  },
+  "hakukuwa": {
+   "lemma": "kuwa",
+   "de": "es gab nicht"
+  },
+  "sauti": {
+   "lemma": "sauti",
+   "de": "Laut, Geräusch"
+  },
+  "yoyote": {
+   "lemma": "-ote",
+   "de": "irgendein",
+   "structure": true
+  },
+  "alisimama": {
+   "lemma": "kusimama",
+   "de": "er stand"
+  },
+  "ukuta": {
+   "lemma": "ukuta",
+   "de": "Wand"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "Weile"
+  },
+  "mrefu": {
+   "lemma": "refu",
+   "de": "lang"
+  },
+  "pale": {
+   "lemma": "pale",
+   "de": "dort"
+  },
+  "palikuwa": {
+   "lemma": "kuwa",
+   "de": "es gab, dort war"
+  },
+  "picha": {
+   "lemma": "picha",
+   "de": "Bild"
+  },
+  "bibi": {
+   "lemma": "bibi",
+   "de": "Großmutter"
+  },
+  "aliyekufa": {
+   "lemma": "kufa",
+   "de": "die gestorben war"
+  },
+  "mitano": {
+   "lemma": "tano",
+   "de": "fünf (Mi-Klasse)"
+  },
+  "iliyopita": {
+   "lemma": "kupita",
+   "de": "vergangen, zurückliegend"
+  },
+  "kabla": {
+   "lemma": "kabla",
+   "de": "vor"
+  },
+  "kuondoka": {
+   "lemma": "kuondoka",
+   "de": "der Abfahrt"
+  },
+  "aliwaita": {
+   "lemma": "kuita",
+   "de": "er rief sie"
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "watatu": {
+   "lemma": "tatu",
+   "de": "drei (M-Wa-Klasse)"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von, aus (Genitivkonkordanz)",
+   "structure": true
+  },
+  "msichana": {
+   "lemma": "msichana",
+   "de": "Mädchen"
+  },
+  "mkubwa": {
+   "lemma": "kubwa",
+   "de": "groß"
+  },
+  "mkeka": {
+   "lemma": "mkeka",
+   "de": "Matte"
+  },
+  "alimpa": {
+   "lemma": "kupa",
+   "de": "er gab ihm, er gab ihr"
+  },
+  "mvulana": {
+   "lemma": "mvulana",
+   "de": "Junge"
+  },
+  "kati": {
+   "lemma": "kati",
+   "de": "mittlere, zwischen"
+  },
+  "kitabu": {
+   "lemma": "kitabu",
+   "de": "Buch"
+  },
+  "chake": {
+   "lemma": "-ake",
+   "de": "sein",
+   "structure": true
+  },
+  "zamani": {
+   "lemma": "zamani",
+   "de": "alt, von früher"
+  },
+  "mdogo": {
+   "lemma": "mdogo",
+   "de": "klein, der Kleine"
+  },
+  "kabisa": {
+   "lemma": "kabisa",
+   "de": "ganz, am allermeisten"
+  },
+  "alitoa": {
+   "lemma": "kutoa",
+   "de": "er reichte, er gab"
+  },
+  "ufunguo": {
+   "lemma": "ufunguo",
+   "de": "Schlüssel"
+  },
+  "mzito": {
+   "lemma": "zito",
+   "de": "schwer"
+  },
+  "chuma": {
+   "lemma": "chuma",
+   "de": "Eisen"
+  },
+  "hii": {
+   "lemma": "hii",
+   "de": "dieses",
+   "structure": true
+  },
+  "haitauzwa": {
+   "lemma": "kuuza",
+   "de": "es wird nicht verkauft"
+  },
+  "utakapokuwa": {
+   "lemma": "kuwa",
+   "de": "wenn du sein wirst"
+  },
+  "utarudi": {
+   "lemma": "kurudi",
+   "de": "du wirst zurückkommen"
+  },
+  "hapa": {
+   "lemma": "hapa",
+   "de": "hierher"
+  },
+  "ukafungue": {
+   "lemma": "kufungua",
+   "de": "und schließt auf"
+  },
+  "mlango": {
+   "lemma": "mlango",
+   "de": "Tür"
+  },
+  "alishika": {
+   "lemma": "kushika",
+   "de": "er nahm, er hielt"
+  },
+  "mikono": {
+   "lemma": "mkono",
+   "de": "Hände"
+  },
+  "miwili": {
+   "lemma": "mbili",
+   "de": "zwei (Mi-Klasse)"
+  },
+  "akauangalia": {
+   "lemma": "kuangalia",
+   "de": "und betrachtete ihn"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "kusema": {
+   "lemma": "kusema",
+   "de": "zu sagen"
+  },
+  "neno": {
+   "lemma": "neno",
+   "de": "Wort"
+  },
+  "gari": {
+   "lemma": "gari",
+   "de": "Auto"
+  },
+  "liliondoka": {
+   "lemma": "kuondoka",
+   "de": "es fuhr los"
+  },
+  "jioni": {
+   "lemma": "jioni",
+   "de": "am Abend"
+  },
+  "hakuangalia": {
+   "lemma": "kuangalia",
+   "de": "er sah nicht"
+  },
+  "nyuma": {
+   "lemma": "nyuma",
+   "de": "zurück, hinten"
+  },
+  "hata": {
+   "lemma": "hata",
+   "de": "auch nur, sogar"
+  },
+  "mara": {
+   "lemma": "mara",
+   "de": "Mal"
+  },
+  "lakini": {
+   "lemma": "lakini",
+   "de": "aber"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "es schaute"
+  },
+  "hadi": {
+   "lemma": "hadi",
+   "de": "bis"
+  },
+  "ile": {
+   "lemma": "ile",
+   "de": "jenes",
+   "structure": true
+  },
+  "ilipokuwa": {
+   "lemma": "kuwa",
+   "de": "als es war"
+  },
+  "mbali": {
+   "lemma": "mbali",
+   "de": "weit weg"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht"
+  },
+  "ule": {
+   "lemma": "ule",
+   "de": "jene",
+   "structure": true
+  },
+  "alilala": {
+   "lemma": "kulala",
+   "de": "es schlief"
+  },
+  "mkononi": {
+   "lemma": "mkono",
+   "de": "in der Hand"
+  },
+  "mwake": {
+   "lemma": "-ake",
+   "de": "seiner",
+   "structure": true
+  },
+  "dirishani": {
+   "lemma": "dirisha",
+   "de": "aus dem Fenster, am Fenster"
+  }
+ },
+ "audio": null
+}

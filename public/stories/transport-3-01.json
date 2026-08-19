@@ -1,0 +1,464 @@
+{
+ "id": "transport-3-01",
+ "title": "Betri ya Bwana Salum",
+ "titleDe": "Bwana Salums Batterie",
+ "band": 3,
+ "topic": "Transport",
+ "emoji": "🚌",
+ "lemmas": [
+  "abiria",
+  "asubuhi",
+  "baadaye",
+  "baisikeli",
+  "barabara",
+  "basi",
+  "betri",
+  "bila",
+  "bosi",
+  "bwana",
+  "chini",
+  "fundi",
+  "gari",
+  "gereji",
+  "hewa",
+  "ingi",
+  "ingine",
+  "injini",
+  "kamili",
+  "karibu",
+  "katikati",
+  "kila",
+  "kisha",
+  "kuangalia",
+  "kuanza",
+  "kubadilisha",
+  "kubwa",
+  "kuendelea",
+  "kufika",
+  "kufungua",
+  "kuisha",
+  "kujibu",
+  "kujua",
+  "kuketi",
+  "kupanda",
+  "kupiga simu",
+  "kushuka",
+  "kusimama",
+  "kutafuta",
+  "kutembea",
+  "kutoa",
+  "kutoka",
+  "kuuliza",
+  "kuwa",
+  "kuwaka",
+  "kuweza",
+  "kwa",
+  "kwamba",
+  "kwenda",
+  "mbele",
+  "mji",
+  "mkutano",
+  "mlango",
+  "moto",
+  "mti",
+  "na",
+  "namba",
+  "ndani",
+  "ni",
+  "nini",
+  "njia",
+  "nne",
+  "nusu",
+  "ofisi",
+  "saa",
+  "sana",
+  "sauti",
+  "shida",
+  "siku",
+  "tatizo",
+  "tena"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Kila asubuhi Zawadi alipanda basi la Bwana Salum kwenda mjini. Siku ile abiria walikuwa wengi sana, na Zawadi alisimama karibu na mlango.",
+   "de": "Jeden Morgen stieg Zawadi in den Bus von Bwana Salum und fuhr in die Stadt. An jenem Tag waren sehr viele Fahrgäste da, und Zawadi stand nahe bei der Tür."
+  },
+  {
+   "sw": "Njiani injini ilitoa sauti kubwa, kisha basi lilisimama katikati ya barabara. Bwana Salum alishuka akafungua mbele ya gari. Hewa ya moto ilitoka ndani.",
+   "de": "Unterwegs gab der Motor ein lautes Geräusch von sich, dann blieb der Bus mitten auf der Straße stehen. Bwana Salum stieg aus und öffnete die Front des Wagens. Heiße Luft kam heraus."
+  },
+  {
+   "sw": "Abiria wote walishuka. Wengine walianza kutembea, wengine waliketi chini ya mti. Zawadi aliangalia saa yake. Mkutano wake ulikuwa saa nne.",
+   "de": "Alle Fahrgäste stiegen aus. Die einen machten sich zu Fuß auf den Weg, die anderen setzten sich unter einen Baum. Zawadi sah auf ihre Uhr. Ihre Besprechung war um zehn."
+  },
+  {
+   "sw": "Zawadi alimwendea Bwana Salum akauliza, „Tatizo ni nini?“ „Betri imeisha,“ alijibu. „Bila fundi hatuwezi kuendelea.“ Zawadi alitafuta namba akampigia simu fundi wa gereji ya karibu.",
+   "de": "Zawadi ging zu Bwana Salum und fragte: „Was ist das Problem?“ „Die Batterie ist leer“, antwortete er. „Ohne einen Handwerker kommen wir nicht weiter.“ Zawadi suchte eine Nummer heraus und rief den Mechaniker der nahen Werkstatt an."
+  },
+  {
+   "sw": "Nusu saa baadaye fundi alifika kwa baisikeli akabadilisha betri. Injini iliwaka tena na abiria wote wakapanda. Zawadi alifika ofisini saa nne kamili, na bosi wake hakujua kwamba siku ile ilianza kwa shida.",
+   "de": "Eine halbe Stunde später kam der Mechaniker mit dem Fahrrad und wechselte die Batterie. Der Motor sprang wieder an, und alle Fahrgäste stiegen ein. Zawadi kam Punkt zehn im Büro an, und ihr Chef erfuhr nie, dass dieser Tag mühsam begonnen hatte."
+  }
+ ],
+ "glosses": {
+  "kila": {
+   "lemma": "kila",
+   "de": "jeden"
+  },
+  "asubuhi": {
+   "lemma": "asubuhi",
+   "de": "Morgen"
+  },
+  "zawadi": {
+   "lemma": "zawadi",
+   "de": "Zawadi (Name)",
+   "proper": true
+  },
+  "alipanda": {
+   "lemma": "kupanda",
+   "de": "sie stieg ein"
+  },
+  "basi": {
+   "lemma": "basi",
+   "de": "Bus"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "bwana": {
+   "lemma": "bwana",
+   "de": "Herr"
+  },
+  "salum": {
+   "lemma": "salum",
+   "de": "Salum (Name)",
+   "proper": true
+  },
+  "kwenda": {
+   "lemma": "kwenda",
+   "de": "um zu fahren"
+  },
+  "mjini": {
+   "lemma": "mji",
+   "de": "in die Stadt"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tag"
+  },
+  "ile": {
+   "lemma": "ile",
+   "de": "jener, dieser",
+   "structure": true
+  },
+  "abiria": {
+   "lemma": "abiria",
+   "de": "Fahrgäste"
+  },
+  "walikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "wengi": {
+   "lemma": "ingi",
+   "de": "viele"
+  },
+  "sana": {
+   "lemma": "sana",
+   "de": "sehr"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "alisimama": {
+   "lemma": "kusimama",
+   "de": "sie stand"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe bei"
+  },
+  "mlango": {
+   "lemma": "mlango",
+   "de": "Tür"
+  },
+  "njiani": {
+   "lemma": "njia",
+   "de": "unterwegs"
+  },
+  "injini": {
+   "lemma": "injini",
+   "de": "Motor"
+  },
+  "ilitoa": {
+   "lemma": "kutoa",
+   "de": "er gab von sich"
+  },
+  "sauti": {
+   "lemma": "sauti",
+   "de": "Geräusch, Stimme"
+  },
+  "kubwa": {
+   "lemma": "kubwa",
+   "de": "groß, laut"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "lilisimama": {
+   "lemma": "kusimama",
+   "de": "er blieb stehen"
+  },
+  "katikati": {
+   "lemma": "katikati",
+   "de": "mitten"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von, auf (Genitivkonkordanz)",
+   "structure": true
+  },
+  "barabara": {
+   "lemma": "barabara",
+   "de": "Straße"
+  },
+  "alishuka": {
+   "lemma": "kushuka",
+   "de": "er stieg aus"
+  },
+  "akafungua": {
+   "lemma": "kufungua",
+   "de": "und öffnete"
+  },
+  "mbele": {
+   "lemma": "mbele",
+   "de": "Front, vorn"
+  },
+  "gari": {
+   "lemma": "gari",
+   "de": "Wagen, Auto"
+  },
+  "hewa": {
+   "lemma": "hewa",
+   "de": "Luft"
+  },
+  "moto": {
+   "lemma": "moto",
+   "de": "heiß"
+  },
+  "ilitoka": {
+   "lemma": "kutoka",
+   "de": "sie kam heraus"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "aus dem Inneren"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "walishuka": {
+   "lemma": "kushuka",
+   "de": "sie stiegen aus"
+  },
+  "wengine": {
+   "lemma": "ingine",
+   "de": "die einen, die anderen"
+  },
+  "walianza": {
+   "lemma": "kuanza",
+   "de": "sie begannen"
+  },
+  "kutembea": {
+   "lemma": "kutembea",
+   "de": "zu Fuß gehen"
+  },
+  "waliketi": {
+   "lemma": "kuketi",
+   "de": "sie setzten sich"
+  },
+  "chini": {
+   "lemma": "chini",
+   "de": "unter"
+  },
+  "mti": {
+   "lemma": "mti",
+   "de": "Baum"
+  },
+  "aliangalia": {
+   "lemma": "kuangalia",
+   "de": "sie sah auf"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde"
+  },
+  "yake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "mkutano": {
+   "lemma": "mkutano",
+   "de": "Besprechung"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihr",
+   "structure": true
+  },
+  "ulikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier (Suaheli-Stundenzählung: zehn Uhr)"
+  },
+  "alimwendea": {
+   "lemma": "kwenda",
+   "de": "sie ging zu ihm"
+  },
+  "akauliza": {
+   "lemma": "kuuliza",
+   "de": "und fragte"
+  },
+  "tatizo": {
+   "lemma": "tatizo",
+   "de": "Problem"
+  },
+  "ni": {
+   "lemma": "ni",
+   "de": "ist"
+  },
+  "nini": {
+   "lemma": "nini",
+   "de": "was"
+  },
+  "betri": {
+   "lemma": "betri",
+   "de": "Batterie"
+  },
+  "imeisha": {
+   "lemma": "kuisha",
+   "de": "sie ist leer, sie ist zu Ende"
+  },
+  "alijibu": {
+   "lemma": "kujibu",
+   "de": "antwortete er"
+  },
+  "bila": {
+   "lemma": "bila",
+   "de": "ohne"
+  },
+  "fundi": {
+   "lemma": "fundi",
+   "de": "Handwerker, Mechaniker"
+  },
+  "hatuwezi": {
+   "lemma": "kuweza",
+   "de": "wir können nicht"
+  },
+  "kuendelea": {
+   "lemma": "kuendelea",
+   "de": "weiterkommen"
+  },
+  "namba": {
+   "lemma": "namba",
+   "de": "Nummer"
+  },
+  "akampigia": {
+   "lemma": "kupiga simu",
+   "de": "und rief ihn an"
+  },
+  "simu": {
+   "lemma": "kupiga simu",
+   "de": "(Teil von: anrufen)"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "gereji": {
+   "lemma": "gereji",
+   "de": "Werkstatt, Garage"
+  },
+  "nusu": {
+   "lemma": "nusu",
+   "de": "halbe"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später"
+  },
+  "alifika": {
+   "lemma": "kufika",
+   "de": "er kam an"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "mit, durch"
+  },
+  "baisikeli": {
+   "lemma": "baisikeli",
+   "de": "Fahrrad"
+  },
+  "akabadilisha": {
+   "lemma": "kubadilisha",
+   "de": "und wechselte"
+  },
+  "iliwaka": {
+   "lemma": "kuwaka",
+   "de": "er sprang an"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "wieder"
+  },
+  "wakapanda": {
+   "lemma": "kupanda",
+   "de": "und stiegen ein"
+  },
+  "ofisini": {
+   "lemma": "ofisi",
+   "de": "im Büro"
+  },
+  "kamili": {
+   "lemma": "kamili",
+   "de": "genau, Punkt"
+  },
+  "bosi": {
+   "lemma": "bosi",
+   "de": "Chef"
+  },
+  "hakujua": {
+   "lemma": "kujua",
+   "de": "er wusste nicht"
+  },
+  "kwamba": {
+   "lemma": "kwamba",
+   "de": "dass"
+  },
+  "ilianza": {
+   "lemma": "kuanza",
+   "de": "er begann"
+  },
+  "shida": {
+   "lemma": "shida",
+   "de": "Mühe, Schwierigkeit"
+  },
+  "alitafuta": {
+   "lemma": "kutafuta",
+   "de": "sie suchte heraus"
+  }
+ },
+ "audio": null
+}

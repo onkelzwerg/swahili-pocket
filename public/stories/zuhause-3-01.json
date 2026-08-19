@@ -1,0 +1,473 @@
+{
+ "id": "zuhause-3-01",
+ "title": "Usiku Bila Umeme",
+ "titleDe": "Der Abend ohne Strom",
+ "band": 3,
+ "topic": "Zuhause",
+ "emoji": "🕯️",
+ "lemmas": [
+  "baadaye",
+  "betri",
+  "chache",
+  "chai",
+  "chakula",
+  "dakika",
+  "ghafla",
+  "hakuna",
+  "hatari",
+  "ingi",
+  "ingine",
+  "jengo",
+  "jioni",
+  "jirani",
+  "jumatano",
+  "juu",
+  "karibu",
+  "katika",
+  "kisha",
+  "kiwanja",
+  "kuangalia",
+  "kuanza",
+  "kucheka",
+  "kucheza",
+  "kuisha",
+  "kuita",
+  "kuketi",
+  "kuleta",
+  "kulia",
+  "kuliko",
+  "kupika",
+  "kurudi",
+  "kusema",
+  "kushika",
+  "kusimama",
+  "kusoma",
+  "kutafuta",
+  "kutoa",
+  "kuwa",
+  "kuwaka",
+  "kuzima",
+  "kwa",
+  "kwenda",
+  "mafuta",
+  "mdogo",
+  "meza",
+  "mkono",
+  "mlango",
+  "mtaa",
+  "mtoto",
+  "muda",
+  "mzuri",
+  "na",
+  "ndani",
+  "nje",
+  "nne",
+  "nyota",
+  "redio",
+  "saa",
+  "sanduku",
+  "siku",
+  "taa",
+  "tena",
+  "umeme",
+  "usiku",
+  "watu",
+  "wazazi",
+  "wimbo",
+  "zamani"
+ ],
+ "newLemmas": [],
+ "paragraphs": [
+  {
+   "sw": "Jioni ya Jumatano umeme uliisha ghafla, na taa zote zilizima. Amina alikuwa akipika chakula cha jioni, na watoto wake walikuwa wakisoma mezani.",
+   "de": "Am Mittwochabend fiel plötzlich der Strom aus, und alle Lampen gingen aus. Amina war gerade beim Kochen, und ihre Kinder saßen lesend am Tisch."
+  },
+  {
+   "sw": "Mtoto mdogo alianza kulia. Amina alimshika mkono akasema, „Hakuna hatari.“ Kisha alitafuta taa ya mafuta katika sanduku la juu.",
+   "de": "Das kleine Kind fing an zu weinen. Amina nahm es an der Hand und sagte: „Es ist keine Gefahr.“ Dann suchte sie die Öllampe in der Kiste oben."
+  },
+  {
+   "sw": "Dakika chache baadaye jirani wao aliita mlangoni. „Umeme umeisha mtaa wote,“ alisema. „Nina redio na betri. Twende nje.“",
+   "de": "Ein paar Minuten später rief ihr Nachbar an der Tür. „Im ganzen Viertel ist der Strom weg“, sagte er. „Ich habe ein Radio und Batterien. Kommt mit nach draußen.“"
+  },
+  {
+   "sw": "Watu wote wa jengo waliketi nje kwenye kiwanja. Wengine walileta chai, wengine walileta chakula. Redio ilitoa nyimbo za zamani, na watoto walicheza karibu na wazazi wao.",
+   "de": "Alle Leute aus dem Haus setzten sich draußen auf den Platz. Die einen brachten Tee, die anderen Essen. Aus dem Radio kamen alte Lieder, und die Kinder spielten neben ihren Eltern."
+  },
+  {
+   "sw": "Saa nne usiku umeme ulirudi, na taa zote ziliwaka tena. Watu walicheka wakaanza kurudi ndani. Amina alisimama nje kwa muda akiangalia nyota. Usiku ule ulikuwa mzuri kuliko siku nyingi.",
+   "de": "Um zehn Uhr abends kam der Strom zurück, und alle Lampen brannten wieder. Die Leute lachten und gingen langsam wieder hinein. Amina blieb noch eine Weile draußen stehen und schaute zu den Sternen. Dieser Abend war schöner als viele Tage zuvor."
+  }
+ ],
+ "glosses": {
+  "jioni": {
+   "lemma": "jioni",
+   "de": "Abend"
+  },
+  "ya": {
+   "lemma": "ya",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "jumatano": {
+   "lemma": "jumatano",
+   "de": "Mittwoch"
+  },
+  "umeme": {
+   "lemma": "umeme",
+   "de": "Strom"
+  },
+  "uliisha": {
+   "lemma": "kuisha",
+   "de": "er fiel aus, er ging zu Ende"
+  },
+  "ghafla": {
+   "lemma": "ghafla",
+   "de": "plötzlich"
+  },
+  "na": {
+   "lemma": "na",
+   "de": "und, mit"
+  },
+  "taa": {
+   "lemma": "taa",
+   "de": "Lampe, Lampen"
+  },
+  "zote": {
+   "lemma": "-ote",
+   "de": "alle",
+   "structure": true
+  },
+  "zilizima": {
+   "lemma": "kuzima",
+   "de": "sie gingen aus"
+  },
+  "amina": {
+   "lemma": "amina",
+   "de": "Amina (Name)",
+   "proper": true
+  },
+  "alikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "akipika": {
+   "lemma": "kupika",
+   "de": "gerade am Kochen"
+  },
+  "chakula": {
+   "lemma": "chakula",
+   "de": "Essen"
+  },
+  "cha": {
+   "lemma": "cha",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "watoto": {
+   "lemma": "mtoto",
+   "de": "Kinder"
+  },
+  "wake": {
+   "lemma": "-ake",
+   "de": "ihre",
+   "structure": true
+  },
+  "walikuwa": {
+   "lemma": "kuwa",
+   "de": "sie waren"
+  },
+  "wakisoma": {
+   "lemma": "kusoma",
+   "de": "gerade am Lesen"
+  },
+  "mezani": {
+   "lemma": "meza",
+   "de": "am Tisch"
+  },
+  "mtoto": {
+   "lemma": "mtoto",
+   "de": "Kind"
+  },
+  "mdogo": {
+   "lemma": "mdogo",
+   "de": "klein"
+  },
+  "alianza": {
+   "lemma": "kuanza",
+   "de": "es fing an"
+  },
+  "kulia": {
+   "lemma": "kulia",
+   "de": "zu weinen"
+  },
+  "alimshika": {
+   "lemma": "kushika",
+   "de": "sie nahm es, sie hielt es"
+  },
+  "mkono": {
+   "lemma": "mkono",
+   "de": "Hand"
+  },
+  "akasema": {
+   "lemma": "kusema",
+   "de": "und sagte"
+  },
+  "hakuna": {
+   "lemma": "hakuna",
+   "de": "es gibt kein"
+  },
+  "hatari": {
+   "lemma": "hatari",
+   "de": "Gefahr"
+  },
+  "kisha": {
+   "lemma": "kisha",
+   "de": "dann"
+  },
+  "alitafuta": {
+   "lemma": "kutafuta",
+   "de": "sie suchte"
+  },
+  "mafuta": {
+   "lemma": "mafuta",
+   "de": "Öl"
+  },
+  "katika": {
+   "lemma": "katika",
+   "de": "in"
+  },
+  "sanduku": {
+   "lemma": "sanduku",
+   "de": "Kiste, Koffer"
+  },
+  "la": {
+   "lemma": "la",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "juu": {
+   "lemma": "juu",
+   "de": "oben"
+  },
+  "dakika": {
+   "lemma": "dakika",
+   "de": "Minuten"
+  },
+  "chache": {
+   "lemma": "chache",
+   "de": "ein paar, wenige"
+  },
+  "baadaye": {
+   "lemma": "baadaye",
+   "de": "später"
+  },
+  "jirani": {
+   "lemma": "jirani",
+   "de": "Nachbar"
+  },
+  "wao": {
+   "lemma": "-ao",
+   "de": "ihr, ihren",
+   "structure": true
+  },
+  "aliita": {
+   "lemma": "kuita",
+   "de": "er rief"
+  },
+  "mlangoni": {
+   "lemma": "mlango",
+   "de": "an der Tür"
+  },
+  "umeisha": {
+   "lemma": "kuisha",
+   "de": "er ist weg, er ist zu Ende"
+  },
+  "mtaa": {
+   "lemma": "mtaa",
+   "de": "Viertel, Stadtteil"
+  },
+  "wote": {
+   "lemma": "-ote",
+   "de": "ganz, alle",
+   "structure": true
+  },
+  "alisema": {
+   "lemma": "kusema",
+   "de": "sagte er"
+  },
+  "nina": {
+   "lemma": "kuwa",
+   "de": "ich habe"
+  },
+  "redio": {
+   "lemma": "redio",
+   "de": "Radio"
+  },
+  "betri": {
+   "lemma": "betri",
+   "de": "Batterien"
+  },
+  "twende": {
+   "lemma": "kwenda",
+   "de": "lasst uns gehen"
+  },
+  "nje": {
+   "lemma": "nje",
+   "de": "nach draußen, draußen"
+  },
+  "watu": {
+   "lemma": "watu",
+   "de": "Leute"
+  },
+  "jengo": {
+   "lemma": "jengo",
+   "de": "Gebäude, Haus"
+  },
+  "waliketi": {
+   "lemma": "kuketi",
+   "de": "sie setzten sich"
+  },
+  "kwenye": {
+   "lemma": "kwenye",
+   "de": "auf, an",
+   "structure": true
+  },
+  "kiwanja": {
+   "lemma": "kiwanja",
+   "de": "Platz"
+  },
+  "wengine": {
+   "lemma": "ingine",
+   "de": "die einen, die anderen"
+  },
+  "walileta": {
+   "lemma": "kuleta",
+   "de": "sie brachten"
+  },
+  "chai": {
+   "lemma": "chai",
+   "de": "Tee"
+  },
+  "nyimbo": {
+   "lemma": "wimbo",
+   "de": "Lieder"
+  },
+  "za": {
+   "lemma": "za",
+   "de": "von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "zamani": {
+   "lemma": "zamani",
+   "de": "früher, alt"
+  },
+  "walicheza": {
+   "lemma": "kucheza",
+   "de": "sie spielten"
+  },
+  "karibu": {
+   "lemma": "karibu",
+   "de": "nahe, neben"
+  },
+  "wazazi": {
+   "lemma": "wazazi",
+   "de": "Eltern"
+  },
+  "saa": {
+   "lemma": "saa",
+   "de": "Uhr, Stunde"
+  },
+  "nne": {
+   "lemma": "nne",
+   "de": "vier (Suaheli-Stundenzählung: zehn Uhr)"
+  },
+  "usiku": {
+   "lemma": "usiku",
+   "de": "Nacht, abends"
+  },
+  "ulirudi": {
+   "lemma": "kurudi",
+   "de": "er kam zurück"
+  },
+  "ziliwaka": {
+   "lemma": "kuwaka",
+   "de": "sie brannten"
+  },
+  "tena": {
+   "lemma": "tena",
+   "de": "wieder"
+  },
+  "walicheka": {
+   "lemma": "kucheka",
+   "de": "sie lachten"
+  },
+  "wakaanza": {
+   "lemma": "kuanza",
+   "de": "und begannen"
+  },
+  "kurudi": {
+   "lemma": "kurudi",
+   "de": "zurückzugehen"
+  },
+  "ndani": {
+   "lemma": "ndani",
+   "de": "hinein"
+  },
+  "alisimama": {
+   "lemma": "kusimama",
+   "de": "sie blieb stehen"
+  },
+  "kwa": {
+   "lemma": "kwa",
+   "de": "für (Zeitdauer)"
+  },
+  "muda": {
+   "lemma": "muda",
+   "de": "eine Weile"
+  },
+  "akiangalia": {
+   "lemma": "kuangalia",
+   "de": "und schaute"
+  },
+  "nyota": {
+   "lemma": "nyota",
+   "de": "Sterne"
+  },
+  "ule": {
+   "lemma": "ule",
+   "de": "jener, dieser",
+   "structure": true
+  },
+  "ulikuwa": {
+   "lemma": "kuwa",
+   "de": "sie war"
+  },
+  "mzuri": {
+   "lemma": "mzuri",
+   "de": "schön"
+  },
+  "kuliko": {
+   "lemma": "kuliko",
+   "de": "als (Vergleich)"
+  },
+  "wa": {
+   "lemma": "wa",
+   "de": "aus, von (Genitivkonkordanz)",
+   "structure": true
+  },
+  "ilitoa": {
+   "lemma": "kutoa",
+   "de": "es gab von sich, es spielte"
+  },
+  "siku": {
+   "lemma": "siku",
+   "de": "Tage"
+  },
+  "nyingi": {
+   "lemma": "ingi",
+   "de": "viele"
+  }
+ },
+ "audio": null
+}
