@@ -30,6 +30,14 @@ jobs:
 
       # Schlägt fehl, wenn package.json und package-lock.json auseinanderlaufen —
       # genau der Fehler, an dem der Cloudflare-Build hing.
+      #
+      # ACHTUNG bei Änderungen an den Abhängigkeiten: Die Lockfile muss mit der
+      # npm-Version aufgelöst werden, die hier läuft (Node 22 bringt npm 10 mit).
+      # npm 11 löst automatisch installierte peerDependencies anders auf und
+      # lässt verschachtelte Einträge weg — `nitro` → `unstorage` verlangt
+      # `chokidar: "^4 || ^5"` als Peer, und npm 10 vermisst dann chokidar,
+      # readdirp und lru-cache. Wer lokal npm 11 hat, richtet die Lockfile mit
+      # `npx npm@10 install --package-lock-only` wieder her.
       - run: npm ci
 
       - run: npm run build
