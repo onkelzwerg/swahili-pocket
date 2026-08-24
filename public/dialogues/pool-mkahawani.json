@@ -6,7 +6,6 @@
   "chipsi",
   "dirisha",
   "hapa",
-  "jambo",
   "je",
   "karibu",
   "kinywaji",
@@ -44,11 +43,13 @@
   },
   "hamjambo": {
    "lemma": "jambo",
-   "de": "Wie geht es euch? (wörtlich: euch fehlt nichts?)"
+   "de": "Wie geht es euch? (wörtlich: euch fehlt nichts?)",
+   "structure": true
   },
   "hatujambo": {
    "lemma": "jambo",
-   "de": "Uns geht es gut (wörtlich: uns fehlt nichts)"
+   "de": "Uns geht es gut (wörtlich: uns fehlt nichts)",
+   "structure": true
   },
   "sana": {
    "lemma": "sana",

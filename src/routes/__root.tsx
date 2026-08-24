@@ -14,6 +14,7 @@ import { TabBar } from "@/components/TabBar";
 import { Toaster } from "@/components/ui/sonner";
 import { APP_CONFIG } from "@/config/app.config";
 import { T } from "@/config/translations";
+import { startRouteWarmup } from "@/lib/route-warmup";
 
 const NATIVE_LANG_CODES: Record<string, string> = { Deutsch: "de", English: "en" };
 const HTML_LANG = NATIVE_LANG_CODES[APP_CONFIG.nativeLanguage] ?? "de";
@@ -182,6 +183,16 @@ function ChunkReloadGuard() {
   return null;
 }
 
+/**
+ * Holt die Route-Bündel im Leerlauf in den Cache, damit auch nie besuchte
+ * Bereiche offline erreichbar sind (Begründung in lib/route-warmup.ts).
+ */
+function RouteWarmup() {
+  const router = useRouter();
+  useEffect(() => startRouteWarmup(router), [router]);
+  return null;
+}
+
 function PwaInit() {
   useEffect(() => {
     void import("@/lib/pwa").then((m) => m.initPwa());
@@ -196,6 +207,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <ChunkReloadGuard />
+      <RouteWarmup />
       <PwaInit />
       <div className="mx-auto flex min-h-screen max-w-md flex-col bg-background">
         <main className="flex-1 pb-24">

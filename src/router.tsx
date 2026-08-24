@@ -10,6 +10,10 @@ export const getRouter = () => {
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
+    // Beim Antippen/Überfahren schon laden. Zusammen mit dem Vorwärmen im
+    // Leerlauf (lib/route-warmup.ts) verhindert das den Fall, in dem ein Tipp
+    // ins Leere läuft, weil das Bündel der Zielroute noch nirgends liegt.
+    defaultPreload: "intent",
   });
 
   return router;

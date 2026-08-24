@@ -1,4 +1,4 @@
-import { del, get, set, setMany } from "idb-keyval";
+import { del, get, set, setMany, values } from "idb-keyval";
 import type { ReviewLogEntry, UserStats, VocabEntry } from "./types";
 import {
   readCachedStats,
@@ -22,7 +22,7 @@ import { DEFAULT_SETTINGS, writeSettings, type AppSettings } from "./settings";
 const K_VERSION = "data:version";
 
 /** Aktuelle Zielversion des lokalen Datenmodells. */
-export const DATA_VERSION = 3;
+export const DATA_VERSION = 4;
 
 /** Ab dieser Box galt eine Bestandskarte als gefestigt (Grandfathering, siehe unten). */
 const GRANDFATHER_MATURED_FROM_BOX = 4;
@@ -125,9 +125,39 @@ async function migrateTo3(): Promise<void> {
   resetReviewLogCache();
 }
 
+/**
+ * Wörter, die aus dem Pool zurückgezogen wurden und deshalb auch aus dem
+ * Bestand verschwinden sollen — kleingeschrieben.
+ *
+ * „Jambo" und „Hakuna matata" sind Touristenfloskeln: im Reiseführer allgegen-
+ * wärtig, im gesprochenen Swahili praktisch nicht. Wer sie als Vokabel lernt,
+ * lernt das Falsche und grüßt danach an jedem Gespräch vorbei. Die echten
+ * Formeln (`hujambo`, `sijambo`) bleiben — sie stehen weiter im Glossar der
+ * Dialoge, nur eben nicht mehr als Karteikarte.
+ */
+const RETIRED_WORDS = new Set(["jambo", "matata"]);
+
+/**
+ * v3 → v4: die zurückgezogenen Wörter aus dem Kartenbestand nehmen.
+ *
+ * Sonst wären sie nur für Neuinstallationen weg, und genau die Nutzer, die sie
+ * schon falsch gelernt haben, behielten sie. Ausdrücklich **nur** Karten aus
+ * dem geteilten Pool: was jemand selbst angelegt hat (`isPrivate`), bleibt
+ * stehen — Leitplanke 2 verbietet, ungefragt eigene Einträge zu löschen.
+ */
+async function migrateTo4(): Promise<void> {
+  const store = cardStore();
+  const cards = (await values<VocabEntry>(store).catch(() => null)) ?? [];
+  const doomed = cards.filter(
+    (c) => !c.isPrivate && RETIRED_WORDS.has(c.swahili.trim().toLowerCase()),
+  );
+  for (const card of doomed) await del(card.id, store).catch(() => {});
+}
+
 const MIGRATIONS: Record<number, () => Promise<void>> = {
   2: migrateTo2,
   3: migrateTo3,
+  4: migrateTo4,
 };
 
 let running: Promise<void> | null = null;

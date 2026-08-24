@@ -137,16 +137,6 @@ export function seedVocab(): VocabEntry[] {
         { sw: "Tutaonana leo.", de: "Wir sehen uns heute." },
       ],
     },
-    {
-      swahili: "jambo",
-      german: "Hallo / Sache",
-      partOfSpeech: "noun",
-      nounClass: "Ji-Ma",
-      examples: [
-        { sw: "Jambo, rafiki!", de: "Hallo, Freund!" },
-        { sw: "Hakuna jambo.", de: "Kein Problem." },
-      ],
-    },
   ];
   return base.map((b, i) => ({
     ...b,

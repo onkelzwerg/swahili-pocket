@@ -208,6 +208,7 @@ describe("Kompetenz-Meilensteine", () => {
       trainer: {
         verbTasks: 500,
         ngeliTasks: 500,
+        sentenceTasks: 500,
         bestStreakRun: 50,
         ngeliCorrectByClass: Object.fromEntries(NGELI_TRAINABLE_CLASSES.map((c) => [c, 99])),
       },

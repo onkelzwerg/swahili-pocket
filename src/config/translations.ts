@@ -308,12 +308,12 @@ export const T = {
   trainer: {
     metaTitle: "Grammatik-Gym — Swahili Pocket",
     metaDescription:
-      "Verbformen und Ngeli-Kongruenz üben — Aufgaben aus deinem eigenen Wortschatz.",
+      "Verbformen, Ngeli-Kongruenz und ganze Sätze üben — Aufgaben aus deinem eigenen Wortschatz.",
     eyebrow: "Mazoezi ya sarufi",
     title: "Grammatik-Gym",
     subtitle: "Bausteine statt Vokabeln — hier übst du, Formen selbst zu bilden.",
     homeCta: "Grammatik üben",
-    tabs: { verb: "Verbformen", ngeli: "Ngeli" },
+    tabs: { verb: "Verbformen", ngeli: "Ngeli", sentence: "Sätze" },
     difficulty: { chips: "Bausteine", typing: "Frei tippen" },
     verb: {
       prompt: (subject: string, tense: string, stem: string) => `${subject} + ${tense} + ${stem}`,
@@ -337,6 +337,17 @@ export const T = {
       },
       why: (nounClass: string) => `Warum ${nounClass}? Klasse ansehen`,
     },
+    sentence: {
+      hint: "Setz den ganzen Satz in die richtige Form.",
+      /** Die deutsche Vorgabe: Nomen · Adjektiv · Verb, plus Numerus und Zeit. */
+      prompt: (noun: string, adjective: string, verb: string) => `${noun} · ${adjective} · ${verb}`,
+      numerus: { sg: "Singular", pl: "Plural" },
+      /** Überschrift je Lücke, damit klar ist, was gerade gewählt wird. */
+      slots: { noun: "Nomen", adjective: "Adjektiv", verb: "Verb" },
+      /** Platzhalter einer noch leeren Lücke. */
+      blank: "___",
+      why: (nounClass: string) => `Kongruenz von ${nounClass} nachlesen`,
+    },
     check: "Prüfen",
     next: "Nächste Aufgabe",
     clear: "Zurücksetzen",
@@ -347,10 +358,12 @@ export const T = {
     empty: {
       verb: "Noch keine Verben in deinen Lernkarten. Nimm ein paar aus dem Lexikon dazu.",
       ngeli: "Noch keine Nomen mit Nomenklasse in deinen Lernkarten.",
+      sentence:
+        "Für ganze Sätze fehlt noch etwas: ein Nomen der Klassen M-/Wa-, M-/Mi-, Ki-/Vi- oder Ji-/Ma- und ein Verb, das ohne Objekt stehen kann — fallen, schlafen, ankommen, bleiben.",
       cta: "Zum Lexikon",
     },
-    stats: (verbs: number, ngeli: number, best: number) =>
-      `${verbs} Verbformen · ${ngeli} Ngeli-Aufgaben · beste Serie ${best}`,
+    stats: (verbs: number, ngeli: number, sentences: number, best: number) =>
+      `${verbs} Verbformen · ${ngeli} Ngeli · ${sentences} ${sentences === 1 ? "Satz" : "Sätze"} · beste Serie ${best}`,
   },
 
   lexicon: {

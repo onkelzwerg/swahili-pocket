@@ -24,7 +24,7 @@ export type SessionModeId = "flip" | "typed" | "audio" | "cloze";
  * Aufgabentypen des Morphologie-Trainers (W2.7). Sie laufen nicht über den
  * Scheduler — sie stehen nur im Log, damit Meilensteine sie sehen.
  */
-export type TrainerModeId = "morph-verb" | "morph-ngeli";
+export type TrainerModeId = "morph-verb" | "morph-ngeli" | "morph-sentence";
 
 /** Übungsmodus eines Log-Eintrags. */
 export type ExerciseModeId = SessionModeId | TrainerModeId;

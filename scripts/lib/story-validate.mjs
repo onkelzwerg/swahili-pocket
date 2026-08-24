@@ -112,6 +112,15 @@ export const STRUCTURE_LEMMAS = new Set([
   "ndizo",
   "ndicho",
   "ndiwo",
+  // Die -jambo-Grußformeln (hujambo, sijambo, hamjambo, hatujambo). Sie sind
+  // echtes Swahili und gehören ins Glossar — aber der Pool führt `jambo` seit
+  // W4.x nicht mehr als Karte, weil die nackte Touristenanrede „Jambo!" mehr
+  // Verwirrung stiftet als sie nützt. Nach der Regel oben, nur andersherum
+  // gelesen: ein Wort, das man **nicht** mehr als Vokabel lernen kann, darf
+  // nicht in der Abdeckung stehen — sonst bliebe „Habari za mchana" (18
+  // Lemmata, eines davon unerreichbar → max. 94 %) für immer unter der
+  // 95-%-Schwelle und damit gesperrt.
+  "jambo",
 ]);
 
 function isNonEmptyString(v) {

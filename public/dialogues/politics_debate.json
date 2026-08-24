@@ -10,7 +10,6 @@
   "hata hivyo",
   "inawezekana",
   "ingi",
-  "jambo",
   "katika",
   "kijana",
   "kikwazo",
@@ -32,6 +31,7 @@
   "lazima",
   "mabadiliko",
   "maendeleo",
+  "mambo",
   "mgombea",
   "muhimu",
   "na",
@@ -93,7 +93,7 @@
    "de": "sie versprechen"
   },
   "mambo": {
-   "lemma": "jambo",
+   "lemma": "mambo",
    "de": "Dinge, Sachen"
   },
   "yasiyowezekana": {

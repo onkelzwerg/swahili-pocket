@@ -29,6 +29,7 @@ function VerbsPage() {
       </header>
       <Link
         to="/trainer"
+        search={{ tab: "verb" }}
         className="mb-4 flex items-center gap-3 rounded-2xl border border-border bg-card p-4 active:scale-[0.98]"
       >
         <span className="text-2xl">🏋️</span>

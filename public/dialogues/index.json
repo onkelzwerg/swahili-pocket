@@ -11,7 +11,6 @@
     "asubuhi",
     "habari",
     "hapa",
-    "jambo",
     "je",
     "karibu",
     "katika",
@@ -123,7 +122,6 @@
     "chipsi",
     "dirisha",
     "hapa",
-    "jambo",
     "je",
     "karibu",
     "kinywaji",
@@ -376,7 +374,7 @@
    "playableSpeakers": [
     "A"
    ],
-   "hasAudio": false
+   "hasAudio": true
   },
   {
    "id": "taxi",
@@ -1003,7 +1001,6 @@
     "hata hivyo",
     "inawezekana",
     "ingi",
-    "jambo",
     "katika",
     "kijana",
     "kikwazo",
@@ -1025,6 +1022,7 @@
     "lazima",
     "mabadiliko",
     "maendeleo",
+    "mambo",
     "mgombea",
     "muhimu",
     "na",
@@ -1222,7 +1220,6 @@
     "hadithi",
     "hapana",
     "hata",
-    "jambo",
     "jana",
     "jina",
     "kidogo",
@@ -1247,6 +1244,7 @@
     "kuwa",
     "kwa",
     "lazima",
+    "mambo",
     "mdogo",
     "mimi",
     "moja",
