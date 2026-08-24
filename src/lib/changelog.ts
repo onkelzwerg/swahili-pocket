@@ -7,6 +7,18 @@ export type ChangelogEntry = {
 
 export const changelog: ChangelogEntry[] = [
   {
+    version: "0.8.0",
+    date: "2026-08-23",
+    title: "Ganze Sätze üben",
+    changes: [
+      "Neu im Grammatik-Gym: der Reiter „Sätze“. Statt einer einzelnen Form baust du den ganzen Satz — Nomen, Adjektiv und Verb müssen zusammenpassen. Du entscheidest einmal über Singular oder Plural und musst ihn dann durch den Satz durchhalten: aus „kitabu kizuri kinaanguka“ wird „vitabu vizuri vinaanguka“. Die falschen Antworten sind echte Formen — nur eben die einer anderen Klasse.",
+      "Die Sätze ergeben auch etwas: Nomen und Verb werden nicht wahllos zusammengewürfelt. Ein Kind isst, schläft und lacht, ein Gerät geht kaputt und brennt, fallen kann beides — „die Bücher essen“ kommt nicht vor. Dafür stehen im Satztrainer nur Verben, die ohne Objekt einen ganzen Satz ergeben.",
+      "„Jambo“ und „Hakuna matata“ sind raus. Beides sind Reiseführer-Floskeln, die im gesprochenen Swahili kaum vorkommen; gegrüßt wird mit „hujambo“ oder „habari“. Die echten Formeln stehen weiterhin im Glossar der Dialoge, nur nicht mehr als Vokabelkarte. Wer die Karten schon hatte, verliert sie beim nächsten Start.",
+      "Ngeli und Verben & Zeitformen ließen sich aus der Bibliothek heraus manchmal nicht öffnen — ein Tipp, und nichts passierte. Grund war ein Bereich, dessen Programmteil noch nirgends zwischengespeichert war; ohne Netz lief der Aufruf ins Leere. Die App lädt jetzt alle Bereiche im Hintergrund vor, sobald sie Netz hat, und ist damit auch offline vollständig bedienbar.",
+      "„Grammatik üben“ öffnet jetzt den Reiter, den die Kachel verspricht: von der Ngeli-Seite die Ngeli-Aufgaben, von den Verben die Verbformen.",
+    ],
+  },
+  {
     version: "0.7.0",
     date: "2026-08-13",
     title: "Zwanzig Geschichten, dreiundzwanzig Dialoge zum Mitreden",

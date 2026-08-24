@@ -14,6 +14,7 @@ import {
   TYPING_UNLOCK_RUN,
   type TrainerTask,
 } from "@/lib/morphology";
+import { buildSentenceTask, type SentenceTask } from "@/lib/sentence";
 import type { VocabEntry } from "@/lib/types";
 import { useAutoFocus } from "@/components/exercises/useAutoFocus";
 import { T } from "@/config/translations";
@@ -23,6 +24,13 @@ import { T } from "@/config/translations";
 // wiederholt, sondern Formen gebaut. Der Stoff kommt aus dem eigenen
 // Wortschatz, deshalb geht er nie aus.
 
+const KINDS = ["verb", "ngeli", "sentence"] as const;
+type Kind = (typeof KINDS)[number];
+
+function isKind(v: unknown): v is Kind {
+  return typeof v === "string" && (KINDS as readonly string[]).includes(v);
+}
+
 export const Route = createFileRoute("/_authenticated/trainer")({
   head: () => ({
     meta: [
@@ -30,32 +38,61 @@ export const Route = createFileRoute("/_authenticated/trainer")({
       { name: "description", content: T.trainer.metaDescription },
     ],
   }),
+  /**
+   * Der Aufgabentyp steht in der Adresse (`/trainer?tab=ngeli`).
+   *
+   * Die Ngeli- und die Verbseite verlinken beide hierher und versprechen dabei
+   * ihren eigenen Stoff — ohne Parameter landeten beide auf „Verbformen", und
+   * die Kachel „Grammatik üben · Ngeli" führte ins Verbtraining.
+   */
+  validateSearch: (search: Record<string, unknown>): { tab?: Kind } =>
+    isKind(search.tab) ? { tab: search.tab } : {},
   component: TrainerPage,
 });
-
-type Kind = "verb" | "ngeli";
 type InputMode = "chips" | "typing";
 type Verdict = "correct" | "wrong";
+
+/** Alles, was der Trainer stellen kann. */
+type AnyTask = TrainerTask | SentenceTask;
+
+/** Aufgabentyp → Modus im Review-Log. */
+const TRAINER_MODE = {
+  verb: "morph-verb",
+  ngeli: "morph-ngeli",
+  sentence: "morph-sentence",
+} as const;
 
 /** XP pro gelöster Aufgabe — gleich viel wie ein Review. */
 const TRAINER_XP = 10;
 
 function TrainerPage() {
-  const [kind, setKind] = useState<Kind>("verb");
+  const navigate = Route.useNavigate();
+  const { tab } = Route.useSearch();
+  const kind: Kind = tab ?? "verb";
+
   const [inputMode, setInputMode] = useState<InputMode>("chips");
   const [vocab, setVocab] = useState<VocabEntry[]>([]);
-  const [task, setTask] = useState<TrainerTask | null>(null);
+  const [task, setTask] = useState<AnyTask | null>(null);
   const [placed, setPlaced] = useState<number[]>([]);
   const [typed, setTyped] = useState("");
+  // Gewählte Form je Satzlücke; `null`, solange die Lücke offen ist.
+  const [filled, setFilled] = useState<(string | null)[]>([]);
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   const [run, setRun] = useState(0);
   const [stats, setStats] = useState<TrainerStats | null>(null);
   const [typingOffered, setTypingOffered] = useState(false);
 
   const nextTask = useCallback((list: VocabEntry[], forKind: Kind) => {
-    setTask(forKind === "verb" ? buildVerbTask(list) : buildNgeliTask(list));
+    const next =
+      forKind === "verb"
+        ? buildVerbTask(list)
+        : forKind === "ngeli"
+          ? buildNgeliTask(list)
+          : buildSentenceTask(list);
+    setTask(next);
     setPlaced([]);
     setTyped("");
+    setFilled(next?.kind === "sentence" ? next.slots.map(() => null) : []);
     setVerdict(null);
   }, []);
 
@@ -71,7 +108,9 @@ function TrainerPage() {
 
   function switchKind(next: Kind) {
     if (next === kind) return;
-    setKind(next);
+    // `replace`, damit der Zurück-Knopf aus dem Trainer herausführt und nicht
+    // durch die Reiter zurückblättert.
+    void navigate({ search: { tab: next }, replace: true });
     setRun(0);
     setTypingOffered(false);
     setInputMode("chips");
@@ -96,13 +135,13 @@ function TrainerPage() {
       recordTrainerTask({
         kind: task.kind,
         correct,
-        nounClass: task.kind === "ngeli" ? task.nounClass : undefined,
+        nounClass: task.kind === "verb" ? undefined : task.nounClass,
         runLength: nextRun,
       }),
       card
         ? appendTrainerResult({
             cardId: card.id,
-            mode: task.kind === "verb" ? "morph-verb" : "morph-ngeli",
+            mode: TRAINER_MODE[task.kind],
             correct,
             scheduler: settings.scheduler,
             box: card.box,
@@ -142,6 +181,7 @@ function TrainerPage() {
         options={[
           { value: "verb", label: T.trainer.tabs.verb },
           { value: "ngeli", label: T.trainer.tabs.ngeli },
+          { value: "sentence", label: T.trainer.tabs.sentence },
         ]}
         value={kind}
         onChange={(v) => switchKind(v as Kind)}
@@ -149,9 +189,7 @@ function TrainerPage() {
 
       {empty ? (
         <div className="mt-8 rounded-3xl border border-border bg-card p-6 text-center">
-          <p className="text-sm text-muted-foreground">
-            {kind === "verb" ? T.trainer.empty.verb : T.trainer.empty.ngeli}
-          </p>
+          <p className="text-sm text-muted-foreground">{T.trainer.empty[kind]}</p>
           <Link
             to="/lexicon"
             className="mt-4 inline-block rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
@@ -161,7 +199,7 @@ function TrainerPage() {
         </div>
       ) : (
         <>
-          {(inputMode === "typing" || typingOffered) && (
+          {task.kind !== "sentence" && (inputMode === "typing" || typingOffered) && (
             <div className="mt-3">
               <Segmented
                 options={[
@@ -211,6 +249,25 @@ function TrainerPage() {
                   </p>
                 )}
               </>
+            ) : task.kind === "sentence" ? (
+              <>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  {T.trainer.sentence.hint}
+                </p>
+                <p className="mt-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+                  {T.trainer.sentence.numerus[task.numerus]}
+                </p>
+                <p className="mt-3 font-display text-2xl font-bold leading-snug">
+                  {T.trainer.sentence.prompt(
+                    task.gloss.noun,
+                    task.gloss.adjective,
+                    task.gloss.verb,
+                  )}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {task.tense.de} · {task.nounClass}
+                </p>
+              </>
             ) : (
               <>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -240,9 +297,21 @@ function TrainerPage() {
                 >
                   {task.kind === "ngeli"
                     ? T.trainer.ngeli.why(task.nounClass)
-                    : T.trainer.verb.why(task.tense.de, task.polarity === "negative")}
+                    : task.kind === "sentence"
+                      ? T.trainer.sentence.why(task.nounClass)
+                      : T.trainer.verb.why(task.tense.de, task.polarity === "negative")}
                 </Link>
               }
+            />
+          ) : task.kind === "sentence" ? (
+            <SentenceBuilder
+              task={task}
+              filled={filled}
+              onPick={(slot, form) =>
+                setFilled((prev) => prev.map((v, i) => (i === slot ? form : v)))
+              }
+              onClear={() => setFilled(task.slots.map(() => null))}
+              onSubmit={() => void submit(filled.join(" "))}
             />
           ) : inputMode === "typing" ? (
             <form
@@ -286,7 +355,7 @@ function TrainerPage() {
             />
           ) : (
             <div className="mt-4 grid grid-cols-2 gap-2">
-              {task.options.map((opt) => (
+              {task.options.map((opt: string) => (
                 <button
                   key={opt}
                   type="button"
@@ -303,9 +372,100 @@ function TrainerPage() {
 
       {stats && (
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          {T.trainer.stats(stats.verbTasks, stats.ngeliTasks, stats.bestStreakRun)}
+          {T.trainer.stats(
+            stats.verbTasks,
+            stats.ngeliTasks,
+            stats.sentenceTasks,
+            stats.bestStreakRun,
+          )}
         </p>
       )}
+    </div>
+  );
+}
+
+/**
+ * Den ganzen Satz zusammenstellen (W4.x).
+ *
+ * Alle drei Lücken liegen gleichzeitig offen, und geprüft wird erst am Ende.
+ * Das ist der Punkt der Übung: Die Kongruenz entscheidet sich nicht Lücke für
+ * Lücke, sondern einmal für den Satz — wer den Numerus im Nomen setzt, muss
+ * ihn bei Adjektiv und Verb durchhalten. Würde jede Lücke sofort quittiert,
+ * ließe sich der Satz durchraten, ohne den Zusammenhang je zu sehen.
+ */
+function SentenceBuilder({
+  task,
+  filled,
+  onPick,
+  onClear,
+  onSubmit,
+}: {
+  task: SentenceTask;
+  filled: (string | null)[];
+  onPick(slot: number, form: string): void;
+  onClear(): void;
+  onSubmit(): void;
+}) {
+  const complete = filled.length === task.slots.length && filled.every(Boolean);
+
+  return (
+    <div className="mt-4 flex flex-col gap-3">
+      {/* Der Satz, wie er gerade steht — die Vorschau ist das Lernmittel. */}
+      <div className="flex min-h-[3.5rem] flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-2xl border border-dashed border-border bg-muted/40 px-4 py-3">
+        {task.slots.map((slot, i) => (
+          <span
+            key={slot.role}
+            className={`font-display text-xl font-bold ${filled[i] ? "" : "text-muted-foreground"}`}
+          >
+            {filled[i] ?? T.trainer.sentence.blank}
+          </span>
+        ))}
+      </div>
+
+      {task.slots.map((slot, i) => (
+        <div key={slot.role}>
+          <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            {T.trainer.sentence.slots[slot.role]}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {slot.options.map((option) => {
+              const chosen = filled[i] === option;
+              return (
+                <button
+                  key={option}
+                  type="button"
+                  aria-pressed={chosen}
+                  onClick={() => onPick(i, option)}
+                  className={`rounded-xl border px-4 py-2.5 text-sm font-semibold active:scale-95 ${
+                    chosen ? "border-primary bg-primary/10 text-primary" : "border-border bg-card"
+                  }`}
+                >
+                  {option}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+
+      <div className="flex gap-2">
+        <button
+          type="button"
+          onClick={onClear}
+          className="inline-flex items-center gap-1.5 rounded-2xl bg-muted px-4 py-3.5 text-sm font-semibold text-muted-foreground active:scale-95"
+        >
+          <RotateCcw className="h-4 w-4" />
+          {T.trainer.clear}
+        </button>
+        <button
+          type="button"
+          disabled={!complete}
+          onClick={onSubmit}
+          className="flex-1 rounded-2xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground disabled:opacity-40 active:scale-95"
+        >
+          {T.trainer.check}
+        </button>
+      </div>
     </div>
   );
 }
